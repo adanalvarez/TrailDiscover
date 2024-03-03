@@ -37,9 +37,10 @@ This is just the start, and there's a lot of manual work behind it, so there mig
 
 ## How to Contribute
 
-Prs are welcome. Here’s how you can contribute:
+PRs are welcome. Here’s how you can contribute:
 
 **Adding New Events**: You can contribute by adding new event files to the `events` folder within the respective service directory. Make sure to include all the relevant details as described in the event structure section.
+
 **Update Event Details:** Add any new findings or details that can provide a better understanding of the event's implications, use in real-world attacks, or links to researchs where the event is mentioned.
 
 **Updating The Web**: After adding or updating events, use the tools in the `tools` folder to generate the updated CSV and JSON files for the web. This ensures that the website stays up-to-date with the latest event information.
