@@ -10,13 +10,13 @@ I started TrailDiscover because I often wondered if certain AWS commands had bee
 
 ## Website
 
-The easiest way to consume this information is via the website: https://cloudtrail.cloud/
+The easiest way to consume this information is via the website: https://traildiscover.cloud/
 
 ## What's in the Project
 
 Here's what you'll find in TrailDiscover:
 - **Events Folder**: This is the main folder, here each AWS service has its own folder and inside you will find a JSON file for each event, like `CloudTrail/DeleteTrail.json` or `Cognito/GetCredentialsForIdentity.json`.
-- **Docs Folder**: This folder contains a website where you can search through the events easily. You can access the website via: https://cloudtrail.cloud/
+- **Docs Folder**: This folder contains a website where you can search through the events easily. You can access the website via: https://traildiscover.cloud/
 - **Tools Folder**: This folder contains tools to put all the event JSONs into one file for the website, make a list of all events in a CSV file, and a tool to help figure out security risks with OpenAI (An OpenAI apikey is needed).
 
 ### How Events Are Structured
