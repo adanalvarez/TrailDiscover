@@ -1,0 +1,32 @@
+{
+    "eventName": "SendCommand",
+    "eventSource": "ssm.amazonaws.com",
+    "awsService": "SSM",
+    "description": "Runs commands on one or more managed nodes.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement",
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services",
+        "T1651 - Cloud Administration Command"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "Run Shell Commands on EC2 with Send Command or Session Manager",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/run_shell_commands_on_ec2/"
+        }
+    ],
+    "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances."
+}

@@ -1,0 +1,21 @@
+{
+    "eventName": "StopMonitoringMembers",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Stops GuardDuty monitoring for the specified member accounts.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use StopMonitoringMembers to halt the surveillance of specific AWS accounts, reducing security visibility."
+}

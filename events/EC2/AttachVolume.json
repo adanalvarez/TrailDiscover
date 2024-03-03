@@ -1,0 +1,21 @@
+{
+    "eventName": "AttachVolume",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AttachVolume to mount a volume to an EC2 instance under their control."
+}

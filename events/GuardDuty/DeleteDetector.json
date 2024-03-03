@@ -1,0 +1,29 @@
+{
+    "eventName": "DeleteDetector",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Deletes an Amazon GuardDuty detector that is specified by the detector ID.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS GuardDuty detector deleted",
+            "link": "https://docs.datadoghq.com/security/default_rules/cloudtrail-aws-guardduty-detector-deleted/"
+        },
+        {
+            "description": "AWS GuardDuty Evasion",
+            "link": "https://medium.com/@cloud_tips/aws-guardduty-evasion-c181e55f3af1"
+        },
+        {
+            "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteDetector to disable GuardDuty, thereby evading detection of malicious activity."
+}

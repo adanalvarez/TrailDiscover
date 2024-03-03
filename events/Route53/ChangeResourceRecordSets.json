@@ -1,0 +1,26 @@
+{
+    "eventName": "ChangeResourceRecordSets",
+    "eventSource": "route53.amazonaws.com",
+    "awsService": "Route53",
+    "description": "Creates, changes, or deletes a resource record set, which contains authoritative DNS information for a specified domain name or subdomain name.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "AWS API Call Hijacking via ACM-PCA",
+            "link": "https://hackingthe.cloud/aws/exploitation/route53_modification_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use ChangeResourceRecordSets to redirect traffic to malicious websites."
+}

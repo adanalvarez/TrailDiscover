@@ -1,0 +1,21 @@
+{
+    "eventName": "UpdateIPSet",
+    "eventSource": "wafv2.amazonaws.com",
+    "awsService": "WAFV2",
+    "description": "Updates the specified IPSet.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Incident Response",
+            "link": "https://easttimor.github.io/aws-incident-response/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateIPSet to modify IP address rules, potentially allowing unauthorized access from IPs they control."
+}

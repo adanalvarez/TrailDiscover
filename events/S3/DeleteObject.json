@@ -1,0 +1,33 @@
+{
+    "eventName": "DeleteObject",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Removes an object from a bucket. The behavior depends on the bucket's versioning state.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        },
+        {
+            "description": "The attack on ONUS \u2013 A real-life case of the Log4Shell vulnerability",
+            "link": "https://cystack.net/research/the-attack-on-onus-a-real-life-case-of-the-log4shell-vulnerability"
+        },
+        {
+            "description": "20/20 Eye Care Network and Hearing Care Network notify 3,253,822 health plan members of breach that deleted contents of AWS buckets",
+            "link": "https://www.databreaches.net/20-20-eye-care-network-and-hearing-care-network-notify-3253822-health-plan-members-of-breach-that-deleted-contents-of-aws-buckets/"
+        },
+        {
+            "description": "Hacker Puts Hosting Service Code Spaces Out of Business",
+            "link": "https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets."
+}

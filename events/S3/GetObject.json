@@ -1,0 +1,66 @@
+{
+    "eventName": "GetObject",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Retrieves an object from Amazon S3.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1048 - Exfiltration Over Alternative Protocol"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        },
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Incident 2 - Additional details of the attack",
+            "link": "https://support.lastpass.com/s/document-item?language=en_US&bundleId=lastpass&topicId=LastPass/incident-2-details.html&_LANG=enus"
+        },
+        {
+            "description": "Aruba Central Security Incident",
+            "link": "https://www.arubanetworks.com/support-services/security-bulletins/central-incident-faq/"
+        },
+        {
+            "description": "Sendtech Pte. Ltd",
+            "link": "https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Commissions-Decisions/Decision---Sendtech-Pte-Ltd---220721.ashx?la=en"
+        },
+        {
+            "description": "GotRoot! AWS root Account Takeover",
+            "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+        },
+        {
+            "description": "A Technical Analysis of the Capital One Cloud Misconfiguration Breach",
+            "link": "https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach"
+        },
+        {
+            "description": "Chegg, Inc",
+            "link": "https://www.ftc.gov/system/files/ftc_gov/pdf/2023151-Chegg-Complaint.pdf"
+        },
+        {
+            "description": "Scattered Spider Attack Analysis",
+            "link": "https://www.reliaquest.com/blog/scattered-spider-attack-analysis-account-compromise/"
+        },
+        {
+            "description": "Enumerate AWS Account ID from a Public S3 Bucket",
+            "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Data Exfiltration through S3 Server Access Logs",
+            "link": "https://hackingthe.cloud/aws/exploitation/s3_server_access_logs/"
+        },
+        {
+            "description": "S3 Streaming Copy",
+            "link": "https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetObject to download data from S3 buckets."
+}

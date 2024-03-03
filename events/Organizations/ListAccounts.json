@@ -1,0 +1,21 @@
+{
+    "eventName": "ListAccounts",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Lists all the accounts in the organization.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAccounts to gather information about the structure and resources of an organization's AWS environment."
+}

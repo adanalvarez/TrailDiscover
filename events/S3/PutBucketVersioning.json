@@ -1,0 +1,28 @@
+{
+    "eventName": "PutBucketVersioning",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Sets the versioning state of an existing bucket.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1490 - Inhibit System Recovery",
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Exfiltrating S3 Data with Bucket Replication Policies",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "securityImplications": "Attackers might set the versioning to 'Suspended' before deleting data. Attackers might enable versioning to add bucket replication to exfiltrate data."
+}

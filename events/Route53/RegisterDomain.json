@@ -1,0 +1,21 @@
+{
+    "eventName": "RegisterDomain",
+    "eventSource": "route53.amazonaws.com",
+    "awsService": "Route53",
+    "description": "This operation registers a domain. For some top-level domains (TLDs), this operation requires extra parameters.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use RegisterDomain to register malicious domains for phishing or malware distribution."
+}

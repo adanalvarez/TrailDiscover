@@ -1,0 +1,86 @@
+{
+    "eventName": "CreateUser",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "This event is called when a new IAM user is created.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        },
+        {
+            "description": "Responding to an attack in AWS",
+            "link": "https://awstip.com/responding-to-an-attack-in-aws-9048a1a551ac"
+        },
+        {
+            "description": "Incident report: From CLI to console, chasing an attacker in AWS",
+            "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "Trouble in Paradise",
+            "link": "https://blog.darklab.hk/2021/07/06/trouble-in-paradise/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Exposed long-lived access key resulted in unauthorized access",
+            "link": "https://twitter.com/jhencinski/status/1578371249792724992?t=6oYeGYgGZq1B-LXFZzIqhQ"
+        },
+        {
+            "description": "SCARLETEEL 2.0: Fargate, Kubernetes, and Crypto",
+            "link": "https://sysdig.com/blog/scarleteel-2-0/"
+        },
+        {
+            "description": "Insider Threat Risks to Flat Environments",
+            "link": "https://www.mandiant.com/sites/default/files/2021-09/rpt-mtrends-2021-3.pdf"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        },
+        {
+            "description": "Sendtech Pte. Ltd",
+            "link": "https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Commissions-Decisions/Decision---Sendtech-Pte-Ltd---220721.ashx?la=en"
+        },
+        {
+            "description": "BrowserStack analysis: unpatched inactive machine compromised by shellshock vulnerability",
+            "link": "https://www.databreaches.net/browserstack-analysis-unpatched-inactive-machine-compromised-by-shellshock-vulnerability/"
+        },
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Creating a new IAM user",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/creating-new-iam-user/"
+        },
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        }
+    ],
+    "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions."
+}

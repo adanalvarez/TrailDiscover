@@ -1,0 +1,21 @@
+{
+    "eventName": "VerifyEmailIdentity",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Adds an email address to the list of identities for your Amazon SES account in the current AWS Region and attempts to verify it.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use VerifyEmailIdentity to send phishing emails or spam from a verified email address."
+}

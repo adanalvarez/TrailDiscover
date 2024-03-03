@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateImage",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateImage to create images from running EC2s and use them after adding their own keys"
+}

@@ -1,0 +1,58 @@
+{
+    "eventName": "ConsoleLogin",
+    "eventSource": "signin.amazonaws.com",
+    "awsService": "SignIn",
+    "description": "This is the CloudTrail event generated when you sign-in.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Responding to an attack in AWS",
+            "link": "https://awstip.com/responding-to-an-attack-in-aws-9048a1a551ac"
+        },
+        {
+            "description": "Credential Phishing",
+            "link": "https://ramimac.me/aws-phishing#credential-phishing"
+        },
+        {
+            "description": "Incident report: From CLI to console, chasing an attacker in AWS",
+            "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "Not a SIMulation: CrowdStrike Investigations Reveal Intrusion Campaign Targeting Telco and BPO Companies",
+            "link": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Compromising AWS Console credentials",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/compromising-aws-console-credentials/"
+        },
+        {
+            "description": "Create a Console Session from IAM Credentials",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/create_a_console_session_from_iam_credentials/"
+        },
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        }
+    ],
+    "securityImplications": "Attackers might access via AWS console (generating a ConsoleLogin event)."
+}

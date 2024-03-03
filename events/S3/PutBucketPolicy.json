@@ -1,0 +1,21 @@
+{
+    "eventName": "PutBucketPolicy",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Applies an Amazon S3 bucket policy to an Amazon S3 bucket.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1048 - Exfiltration Over Alternative Protocol"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Detecting and removing risky actions out of your IAM security policies",
+            "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        }
+    ],
+    "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data."
+}

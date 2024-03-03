@@ -1,0 +1,21 @@
+{
+    "eventName": "IssueCertificate",
+    "eventSource": "acm-pca.amazonaws.com",
+    "awsService": "ACM-PCA",
+    "description": "Uses your private certificate authority (CA), or one that has been shared with you, to issue a client certificate.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1040- Network Sniffing"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS API Call Hijacking via ACM-PCA",
+            "link": "https://hackingthe.cloud/aws/exploitation/route53_modification_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use IssueCertificate combined with Route 53 control to intercept and read data from AWS API calls."
+}

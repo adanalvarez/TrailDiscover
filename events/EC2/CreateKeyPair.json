@@ -1,0 +1,34 @@
+{
+    "eventName": "CreateKeyPair",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates an ED25519 or 2048-bit RSA key pair with the specified name and in the specified PEM or PPK format.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateKeyPair to generate keys that can latter be used to access EC2s."
+}

@@ -1,0 +1,25 @@
+{
+    "eventName": "CreateRole",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates a new role for your AWS account.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Attack Scenario 2: From Misconfigured Firewall to Cryptojacking Botnet",
+            "link": "https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/unit42-cloud-threat-report-volume7.pdf"
+        },
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access."
+}

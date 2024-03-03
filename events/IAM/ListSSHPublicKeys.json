@@ -1,0 +1,21 @@
+{
+    "eventName": "ListSSHPublicKeys",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Returns information about the SSH public keys associated with the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListSSHPublicKeys to get information about the user and the potential use of CodeCommit."
+}

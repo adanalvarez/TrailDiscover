@@ -1,0 +1,21 @@
+{
+    "eventName": "LeaveOrganization",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Removes a member account from its parent organization.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "An AWS account attempted to leave the AWS Organization",
+            "link": "hhttps://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
+        }
+    ],
+    "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations."
+}

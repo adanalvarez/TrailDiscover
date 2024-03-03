@@ -1,0 +1,26 @@
+{
+    "eventName": "CreateDBSnapshot",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Creates a snapshot of a DB instance.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Stealing an RDS database by creating a snapshot and sharing it",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/sharing-rds-snapshot/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateDBSnapshot to create unauthorized backups of sensitive databases for data theft."
+}

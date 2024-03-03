@@ -1,0 +1,29 @@
+{
+    "eventName": "UpdateFunctionConfiguration",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Modify the version-specific settings of a Lambda function.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        },
+        {
+            "description": "LambdaSpy - Implanting the Lambda execution environment (Part two)",
+            "link": "https://www.clearvector.com/blog/lambda-spy/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration."
+}

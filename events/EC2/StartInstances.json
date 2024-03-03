@@ -1,0 +1,28 @@
+{
+    "eventName": "StartInstances",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Starts an Amazon EBS-backed instance that you've previously stopped.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Executing commands through EC2 user data",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+        }
+    ],
+    "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands."
+}

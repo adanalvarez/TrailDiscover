@@ -1,0 +1,21 @@
+{
+    "eventName": "SendSerialConsoleSSHPublicKey",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Pushes an SSH public key to the specified EC2 instance.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use SendSerialConsoleSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control."
+}

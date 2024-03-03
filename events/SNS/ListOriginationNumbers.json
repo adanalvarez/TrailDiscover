@@ -1,0 +1,21 @@
+{
+    "eventName": "ListOriginationNumbers",
+    "eventSource": "sns.amazonaws.com",
+    "awsService": "SNS",
+    "description": "Lists the calling AWS account's dedicated origination numbers and their metadata.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",
+            "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
+        }
+    ],
+    "securityImplications": "Attackers might use ListOriginationNumbers to identify origination numbers for potential smishing campaings."
+}

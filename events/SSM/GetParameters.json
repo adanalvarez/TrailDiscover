@@ -1,0 +1,23 @@
+{
+    "eventName": "GetParameters",
+    "eventSource": "ssm.amazonaws.com",
+    "awsService": "SSM",
+    "description": "Get information about one or more parameters by specifying multiple parameter names.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery",
+        "T1552 - Unsecured Credentials"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Detecting and removing risky actions out of your IAM security policies",
+            "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetParameters to gather sensitive information such as api keys or other secrets."
+}

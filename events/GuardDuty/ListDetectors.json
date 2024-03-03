@@ -1,0 +1,26 @@
+{
+    "eventName": "ListDetectors",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Lists detectorIds of all the existing Amazon GuardDuty detector resources.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty."
+}

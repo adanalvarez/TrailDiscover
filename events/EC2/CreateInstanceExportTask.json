@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateInstanceExportTask",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Exports a running or stopped instance to an Amazon S3 bucket.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1005 - Data from Local System"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS EC2 VM Export Failure",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-ec2-vm-export-failure.html"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateInstanceExportTask to extract or exfiltrate information"
+}

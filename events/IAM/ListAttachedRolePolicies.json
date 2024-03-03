@@ -1,0 +1,21 @@
+{
+    "eventName": "ListAttachedRolePolicies",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists all managed policies that are attached to the specified IAM role.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAttachedRolePolicies to identify and exploit permissions associated with various roles in AWS."
+}

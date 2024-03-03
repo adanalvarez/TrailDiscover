@@ -1,0 +1,48 @@
+{
+    "eventName": "CreateSecurityGroup",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a security group.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
+            "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+        },
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        },
+        {
+            "description": "Abusing VPC Traffic Mirroring in AWS",
+            "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateSecurityGroup to establish new security groups with lax rules, facilitating unauthorized access or resource exploitation within AWS environments."
+}

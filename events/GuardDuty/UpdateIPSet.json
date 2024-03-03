@@ -1,0 +1,21 @@
+{
+    "eventName": "UpdateIPSet",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Updates the IPSet specified by the IPSet ID.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateIPSet to modify the IP address filters, potentially allowing malicious traffic to bypass detection."
+}

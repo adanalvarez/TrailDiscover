@@ -1,0 +1,25 @@
+{
+    "eventName": "SendSSHPublicKey",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Pushes an SSH public key to the specified EC2 instance for use by the specified user.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use SendSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control."
+}

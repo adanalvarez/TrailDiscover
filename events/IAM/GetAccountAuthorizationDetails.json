@@ -1,0 +1,21 @@
+{
+    "eventName": "GetAccountAuthorizationDetails",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Retrieves information about all IAM users, groups, roles, and policies in your AWS account, including their relationships to one another.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - IAM Enum",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum"
+        }
+    ],
+    "securityImplications": "Attackers might use GetAccountAuthorizationDetails to gather information about IAM users, groups, roles, and policies in a targeted AWS account."
+}

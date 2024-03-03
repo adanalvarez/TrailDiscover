@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeOrganization",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Retrieves information about the organization that the user's account belongs to.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeOrganization to gather information about the structure and details of an AWS organization."
+}

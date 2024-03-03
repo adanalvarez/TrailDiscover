@@ -1,0 +1,21 @@
+{
+    "eventName": "AssociateAccessPolicy",
+    "eventSource": "eks.amazonaws.com",
+    "awsService": "EKS",
+    "description": "Associates an access policy and its scope to an access entry.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "New attack vectors in EKS",
+            "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
+        }
+    ],
+    "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters."
+}

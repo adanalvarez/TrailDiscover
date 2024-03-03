@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateGroup",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates a new group.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Group Creation",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-iam-group-creation.html"
+        }
+    ],
+    "securityImplications": "Attackers use CreateGroup to create a group that they can use to escalate privileges."
+}

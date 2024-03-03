@@ -1,0 +1,50 @@
+{
+    "eventName": "ListBuckets",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Returns a list of all buckets owned by the authenticated sender of the request.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        },
+        {
+            "description": "A Technical Analysis of the Capital One Cloud Misconfiguration Breach",
+            "link": "https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach"
+        },
+        {
+            "description": "Enumerate AWS Account ID from a Public S3 Bucket",
+            "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/"
+        },
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        }
+    ],
+    "securityImplications": "Attackers might use ListAllMyBuckets to identify potential targets for data breaches or unauthorized access."
+}

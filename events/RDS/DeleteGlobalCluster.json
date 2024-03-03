@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteGlobalCluster",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Deletes a global database cluster. The primary and secondary clusters must already be detached or destroyed first.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Deletion of RDS Instance or Cluster",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-deletion-of-rds-instance-or-cluster.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteGlobalCluster to disrupt database services by deleting global clusters in AWS RDS."
+}

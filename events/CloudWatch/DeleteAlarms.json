@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteAlarms",
+    "eventSource": "monitoring.amazonaws.com",
+    "awsService": "CloudWatch",
+    "description": "Deletes the specified alarms. You can delete up to 100 alarms in one operation.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS CloudWatch Alarm Deletion",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-cloudwatch-alarm-deletion.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteAlarms to disable critical CloudWatch alerts, undermining AWS environment monitoring"
+}

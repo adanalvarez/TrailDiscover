@@ -1,0 +1,21 @@
+{
+    "eventName": "UpdateJob",
+    "eventSource": "glue.amazonaws.com",
+    "awsService": "Glue",
+    "description": "Updates an existing job definition.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateJob to modify Glue job parameters, potentially disrupting data processing or injecting malicious code."
+}

@@ -1,0 +1,23 @@
+{
+    "eventName": "PutRule",
+    "eventSource": "events.amazonaws.com",
+    "awsService": "EventBridge",
+    "description": "Creates or updates the specified rule.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1489 - Service Stop",
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions or triggering unwarranted responses within the environment."
+}

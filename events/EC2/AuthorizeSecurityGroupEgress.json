@@ -1,0 +1,21 @@
+{
+    "eventName": "AuthorizeSecurityGroupEgress",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Adds the specified outbound (egress) rules to a security group.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1048 - Exfiltration Over Alternative Protocol"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trouble in Paradise",
+            "link": "https://blog.darklab.hk/2021/07/06/trouble-in-paradise/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AuthorizeSecurityGroupEgress to allow exfiltration."
+}

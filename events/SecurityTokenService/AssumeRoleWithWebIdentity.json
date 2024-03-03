@@ -1,0 +1,23 @@
+{
+    "eventName": "AssumeRoleWithWebIdentity",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application with a web identity provider.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access",
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1199 - Trusted Relationship",
+        "T1550 - Use Alternate Authentication Material"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "From GitHub To Account Takeover: Misconfigured Actions Place GCP & AWS Accounts At Risk",
+            "link": "https://www.rezonate.io/blog/github-misconfigurations-put-gcp-aws-in-account-takeover-risk/"
+        }
+    ],
+    "securityImplications": "Attackers might use AssumeRoleWithWebIdentity to impersonate legitimate users and gain unauthorized access to an AWS role."
+}

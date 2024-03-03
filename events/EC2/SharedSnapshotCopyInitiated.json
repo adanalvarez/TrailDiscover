@@ -1,0 +1,30 @@
+{
+    "eventName": "SharedSnapshotCopyInitiated",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Modifies the specified attribute of the specified instance.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "M-Trends Report - 2020",
+            "link": "https://www.mandiant.com/sites/default/files/2021-09/mtrends-2020.pdf"
+        },
+        {
+            "description": "Democratic National Committee hack",
+            "link": "https://www.politico.com/f/?id=00000168-6161-de11-af7d-ef7327ea0000"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Detecting exfiltration of EBS snapshots in AWS",
+            "link": "https://twitter.com/christophetd/status/1574681313218506753"
+        }
+    ],
+    "securityImplications": "SharedSnapshotCopyInitiated might be a signal of an attacker copying a snapshot to their account."
+}

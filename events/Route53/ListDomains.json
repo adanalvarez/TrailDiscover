@@ -1,0 +1,21 @@
+{
+    "eventName": "ListDomains",
+    "eventSource": "route53.amazonaws.com",
+    "awsService": "Route53",
+    "description": "This operation returns all the domain names registered with Amazon Route 53 for the current AWS account if no filtering conditions are used.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        }
+    ],
+    "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks."
+}

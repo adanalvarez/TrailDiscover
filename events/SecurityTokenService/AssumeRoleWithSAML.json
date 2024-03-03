@@ -1,0 +1,21 @@
+{
+    "eventName": "AssumeRoleWithSAML",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of temporary security credentials for users who have been authenticated via a SAML authentication response.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1199 - Trusted Relationship"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - STS Privesc",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-sts-privesc"
+        }
+    ],
+    "securityImplications": "Attackers might use AssumeRoleWithSAML to impersonate legitimate users and gain unauthorized access to an AWS role."
+}

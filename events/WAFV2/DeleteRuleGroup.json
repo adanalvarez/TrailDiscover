@@ -1,0 +1,25 @@
+{
+    "eventName": "DeleteRuleGroup",
+    "eventSource": "wafv2.amazonaws.com",
+    "awsService": "WAFV2",
+    "description": "Deletes the specified RuleGroup.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS WAF Rule or Rule Group Deletion",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-waf-rule-or-rule-group-deletion.html"
+        },
+        {
+            "description": "AWS Incident Response",
+            "link": "https://easttimor.github.io/aws-incident-response/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteRuleGroup to disable security rules, making the system vulnerable to cyber attacks."
+}

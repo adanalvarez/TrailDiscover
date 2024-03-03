@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateAccessEntry",
+    "eventSource": "eks.amazonaws.com",
+    "awsService": "EKS",
+    "description": "Creates an access entry.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "New attack vectors in EKS",
+            "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateAccessEntry to craft access entries that link to high-privileged policies, effectively granting themselves unauthorized admin-level access to clusters."
+}

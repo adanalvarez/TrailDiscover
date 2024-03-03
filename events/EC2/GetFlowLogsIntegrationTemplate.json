@@ -1,0 +1,21 @@
+{
+    "eventName": "GetFlowLogsIntegrationTemplate",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Generates a CloudFormation template that streamlines and automates the integration of VPC flow logs with Amazon Athena.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetFlowLogsIntegrationTemplate to create templates for integrating VPC flow logs with external monitoring solutions, potentially to configure exfiltration pathways for gathered data or to understand security monitoring setups."
+}

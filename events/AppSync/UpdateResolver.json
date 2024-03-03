@@ -1,0 +1,23 @@
+{
+    "eventName": "UpdateResolver",
+    "eventSource": "appsync.amazonaws.com",
+    "awsService": "AppSync",
+    "description": "Updates a Resolver object.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion",
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure",
+        "T1556 - Modify Authentication Process"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Distorting the Sync: How AWS AppSync Can Be Turned into an Attacker\u2019s Backdoor",
+            "link": "https://medium.com/@adan.alvarez/distorting-the-sync-how-aws-appsync-can-be-turned-into-an-attackers-backdoor-8c015b8e52b8"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateResolver to execute custom code that could allow potential access to data and bypass protections."
+}

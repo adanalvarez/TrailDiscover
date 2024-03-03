@@ -1,0 +1,28 @@
+{
+    "eventName": "StopInstances",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Stops an Amazon EBS-backed instance.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1499 - Endpoint Denial of Service",
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Executing commands through EC2 user data",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+        }
+    ],
+    "securityImplications": "Attackers might use StopInstances to avoid being detected or to do changes that will be executed when the EC2 is started."
+}

@@ -1,0 +1,21 @@
+{
+    "eventName": "GetEbsDefaultKmsKeyId",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Describes the default AWS KMS key for EBS encryption by default for your account in this Region.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetEbsDefaultKmsKeyId to identify the default AWS Key Management Service (KMS) key used for encrypting new Amazon EBS volumes."
+}

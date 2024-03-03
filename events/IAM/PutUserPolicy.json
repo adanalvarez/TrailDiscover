@@ -1,0 +1,35 @@
+{
+    "eventName": "PutUserPolicy",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Adds or updates an inline policy document that is embedded in the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources."
+}

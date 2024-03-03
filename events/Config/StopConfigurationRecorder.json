@@ -1,0 +1,29 @@
+{
+    "eventName": "StopConfigurationRecorder",
+    "eventSource": "config.amazonaws.com",
+    "awsService": "Config",
+    "description": "Stops recording configurations of the AWS resources you have selected to record in your AWS account.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Configuration Recorder Stopped",
+            "link": "https://www.elastic.co/guide/en/security/current/prebuilt-rule-8-2-1-aws-configuration-recorder-stopped.html#prebuilt-rule-8-2-1-aws-configuration-recorder-stopped"
+        },
+        {
+            "description": "AWS Config modified",
+            "link": "https://docs.datadoghq.com/security/default_rules/cloudtrail-aws-config-disabled/"
+        },
+        {
+            "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use StopConfigurationRecorder to halt the recording of AWS resource configurations, hindering audit trails."
+}

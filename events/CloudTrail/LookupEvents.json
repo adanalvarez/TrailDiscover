@@ -1,0 +1,21 @@
+{
+    "eventName": "LookupEvents",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Looks up management events or CloudTrail Insights events that are captured by CloudTrail.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1654 - Log Enumeration"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use LookupEvents to monitoring CloudTrail logs for changes that might affect the attack."
+}

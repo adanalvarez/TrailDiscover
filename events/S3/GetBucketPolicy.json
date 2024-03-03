@@ -1,0 +1,21 @@
+{
+    "eventName": "GetBucketPolicy",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Returns the policy of a specified bucket.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetBucketPolicy to identify weak security policies and exploit them for unauthorized access to S3 buckets."
+}

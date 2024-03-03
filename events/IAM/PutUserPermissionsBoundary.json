@@ -1,0 +1,21 @@
+{
+    "eventName": "PutUserPermissionsBoundary",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Adds or updates the policy that is specified as the IAM user's permissions boundary.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use PutUserPermissionsBoundary to modify the permissions boundary for an IAM user, potentially escalating privileges or enabling unauthorized access."
+}

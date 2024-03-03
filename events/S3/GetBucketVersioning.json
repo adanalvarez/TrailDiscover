@@ -1,0 +1,21 @@
+{
+    "eventName": "GetBucketVersioning",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Returns the versioning state of a bucket.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetBucketVersioning to identify unsecured S3 buckets with versioning disabled, making it easier to manipulate or delete data."
+}

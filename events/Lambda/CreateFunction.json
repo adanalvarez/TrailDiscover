@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateFunction",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Creates a Lambda function.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation",
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Mining Crypto",
+            "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources."
+}

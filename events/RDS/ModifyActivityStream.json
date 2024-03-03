@@ -1,0 +1,21 @@
+{
+    "eventName": "ModifyActivityStream",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Changes the audit policy state of a database activity stream to either locked (default) or unlocked.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Uncovering Hybrid Cloud Attacks Through Intelligence-Driven Incident Response: Part 3 \u2013 The Response",
+            "link": "https://www.gem.security/post/uncovering-hybrid-cloud-attacks-through-intelligence-driven-incident-response-part-3-the-response"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ModifyActivityStream to alter the configuration of the activity stream, potentially hiding malicious activities or causing disruptions in the database operations."
+}

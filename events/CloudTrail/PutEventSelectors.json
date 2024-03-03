@@ -1,0 +1,25 @@
+{
+    "eventName": "PutEventSelectors",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Configures an event selector or advanced event selectors for your trail.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "cloudtrail_guardduty_bypass",
+            "link": "https://github.com/RhinoSecurityLabs/Cloud-Security-Research/tree/master/AWS/cloudtrail_guardduty_bypass"
+        },
+        {
+            "description": "Detecting and removing risky actions out of your IAM security policies",
+            "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        }
+    ],
+    "securityImplications": "Attackers might use PutEventSelectors to disrupting AWS logging."
+}

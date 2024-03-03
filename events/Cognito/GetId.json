@@ -1,0 +1,21 @@
+{
+    "eventName": "GetId",
+    "eventSource": "cognito-identity.amazonaws.com",
+    "awsService": "Cognito",
+    "description": "Generates (or retrieves) IdentityID. Supplying multiple logins will create an implicit linked account.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Overpermissioned AWS Cognito Identity Pools",
+            "link": "https://hackingthe.cloud/aws/exploitation/cognito_identity_pool_excessive_privileges/#exploitation"
+        }
+    ],
+    "securityImplications": "Attackers might use GetId to get an IdentityID that might be then used to get AWS credentials."
+}

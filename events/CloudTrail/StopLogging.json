@@ -1,0 +1,37 @@
+{
+    "eventName": "StopLogging",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Suspends the recording of AWS API calls and log file delivery for the specified trail.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Stopping a CloudTrail trail",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/stopping-cloudtrail-trail/"
+        },
+        {
+            "description": "AWS Defense Evasion Stop Logging Cloudtrail",
+            "link": "https://research.splunk.com/cloud/8a2f3ca2-4eb5-4389-a549-14063882e537/"
+        },
+        {
+            "description": "AWS Defense Evasion and Centralized Multi-Account Logging",
+            "link": "https://logrhythm.com/blog/aws-defense-evasion-and-centralized-multi-account-logging/"
+        },
+        {
+            "description": "Disrupting AWS logging",
+            "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+        },
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        }
+    ],
+    "securityImplications": "Attackers might use StopLogging to disrupting AWS logging."
+}

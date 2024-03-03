@@ -1,0 +1,21 @@
+{
+    "eventName": "ListGroupsForUser",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the IAM groups that the specified IAM user belongs to.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListGroupsForUser to identify privileged groups and target specific users for access escalation."
+}

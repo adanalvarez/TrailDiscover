@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteWebACL",
+    "eventSource": "wafv2.amazonaws.com",
+    "awsService": "WAFV2",
+    "description": "Deletes the specified WebACL.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Incident Response",
+            "link": "https://easttimor.github.io/aws-incident-response/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteWebACL to remove web access control lists, thereby disrupting web application firewall protections."
+}

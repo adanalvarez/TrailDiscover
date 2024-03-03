@@ -1,0 +1,25 @@
+{
+    "eventName": "AuthorizeDBSecurityGroupIngress",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Enables ingress to a DBSecurityGroup using one of two forms of authorization.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        },
+        {
+            "description": "Hunting AWS RDS security events with Sysdig",
+            "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
+        }
+    ],
+    "securityImplications": "Attackers might use AuthorizeDBSecurityGroupIngress to allow unauthorized access to the database by modifying security group rules."
+}

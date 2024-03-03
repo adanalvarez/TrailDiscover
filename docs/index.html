@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailDiscover</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <img src="logo.png" alt="CloudUncover" class="logo">
+        <div class="filter-controls">
+            <button id="toggleUsedInWild" class="btn btn-wild">Used in the Wild</button>
+            <select id="mitreAttackTacticFilter" class="form-control">
+                <option value="">All Tactics</option>
+                <option value="TA0001 - Initial Access">Initial Access</option>
+                <option value="TA0002 - Execution">Execution</option>
+                <option value="TA0003 - Persistence">Persistence</option>
+                <option value="TA0004 - Privilege Escalation">Privilege Escalation</option>
+                <option value="TA0005 - Defense Evasion">Defense Evasion</option>
+                <option value="TA0006 - Credential Access">Credential Access</option>
+                <option value="TA0007 - Discovery">Discovery</option>
+                <option value="TA0008 - Lateral Movement">Lateral Movement</option>
+                <option value="TA0009 - Collection">Collection</option>
+                <option value="TA0010 - Exfiltration">Exfiltration</option>
+                <option value="TA0011 - Command and Control">Command and Control</option>
+                <option value="TA0040 - Impact">Impact</option>
+            </select>
+        </div>
+        <div id="grid" class="gridjs"></div>
+    </div>
+    
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" id="eventModalBody">
+            <!-- Event data will be inserted here -->
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="initializeGrid.js"></script>
+    <a href="https://github.com/adanalvarez/TrailDiscover" class="btn btn-secondary edit-on-github">
+        <i class="fa fa-github"></i> Edit on GitHub
+    </a>
+</body>
+</html>

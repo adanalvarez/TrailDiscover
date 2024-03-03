@@ -1,0 +1,29 @@
+{
+    "eventName": "DeleteDeliveryChannel",
+    "eventSource": "config.amazonaws.com",
+    "awsService": "Config",
+    "description": "Deletes the delivery channel.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Config Resource Deletion",
+            "link": "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-4-aws-config-resource-deletion.html#prebuilt-rule-7-16-4-aws-config-resource-deletion"
+        },
+        {
+            "description": "AWS Config modified",
+            "link": "https://docs.datadoghq.com/security/default_rules/cloudtrail-aws-config-disabled/"
+        },
+        {
+            "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteDeliveryChannel to disrupt the flow of configuration history and compliance data in AWS."
+}

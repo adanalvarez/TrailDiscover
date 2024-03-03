@@ -1,0 +1,21 @@
+{
+    "eventName": "ModifySnapshotAttribute",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Adds or removes permission settings for the specified snapshot.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "CrowdStrike\u2019s work with the Democratic National Committee: Setting the record straight",
+            "link": "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ModifySnapshotAttribute to change permissions on Amazon EBS snapshots, potentially making them accessible to unauthorized users or public."
+}

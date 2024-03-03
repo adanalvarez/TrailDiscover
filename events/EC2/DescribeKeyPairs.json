@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeKeyPairs",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Describes the specified key pairs or all of your key pairs.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
+            "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeKeyPairs to audit the SSH key pairs associated with EC2 instances"
+}

@@ -1,0 +1,25 @@
+{
+    "eventName": "PutObject",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Adds an object to a bucket.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1565 - Data Manipulation"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Incident Report: TaskRouter JS SDK Security Incident - July 19, 2020",
+            "link": "https://www.twilio.com/en-us/blog/incident-report-taskrouter-js-sdk-july-2020"
+        },
+        {
+            "description": "LA Times homicide website throttles cryptojacking attack",
+            "link": "https://www.tripwire.com/state-of-security/la-times-website-cryptojacking-attack"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets."
+}

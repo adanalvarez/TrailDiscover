@@ -1,0 +1,21 @@
+{
+    "eventName": "EnableSerialConsoleAccess",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Enables access to the EC2 serial console of all instances for your account.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "How to detect EC2 Serial Console enabled",
+            "link": "https://sysdig.com/blog/ec2-serial-console-enabled/"
+        }
+    ],
+    "securityImplications": "Attackers might use EnableSerialConsoleAccess to enable the serial console access and bypass security group rules and gain access to EC2 instances."
+}

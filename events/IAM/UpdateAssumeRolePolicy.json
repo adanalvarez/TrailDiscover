@@ -1,0 +1,26 @@
+{
+    "eventName": "UpdateAssumeRolePolicy",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Updates the policy that grants an IAM entity permission to assume a role.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "AWS IAM Persistence Methods",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account."
+}

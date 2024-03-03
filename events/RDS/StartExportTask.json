@@ -1,0 +1,21 @@
+{
+    "eventName": "StartExportTask",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Starts an export of DB snapshot or DB cluster data to Amazon S3.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - RDS Post Exploitation",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-post-exploitation/aws-rds-post-exploitation"
+        }
+    ],
+    "securityImplications": "Attackers might use StartExportTask to export database snapshots to an S3 they control and gain access to the data."
+}

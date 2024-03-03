@@ -1,0 +1,21 @@
+{
+    "eventName": "AddUserToGroup",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Adds the specified user to the specified group.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use AddUserToGroup to add unauthorized users to privileged groups, gaining unauthorized access or escalating privileges."
+}

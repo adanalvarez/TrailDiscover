@@ -1,0 +1,21 @@
+{
+    "eventName": "GetIdentityVerificationAttributes",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities) the verification token for each identity.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "SES-PIONAGE",
+            "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetIdentityVerificationAttributes to gather sensitive information about the verification status of email addresses and domains."
+}

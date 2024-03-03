@@ -1,0 +1,25 @@
+{
+    "eventName": "CreateRoute",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a route in a route table within a VPC.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1074 - Data Staged"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Ensure CloudWatch has an Alarm for Route Table Changes",
+            "link": "https://www.intelligentdiscovery.io/controls/cloudwatch/cloudwatch-alarm-route-table-change"
+        },
+        {
+            "description": "AWS Incident Response",
+            "link": "https://easttimor.github.io/aws-incident-response/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateRoute to redirect network traffic within AWS VPCs to eavesdrop or exfiltrate data."
+}

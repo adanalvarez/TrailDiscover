@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateTrafficMirrorFilterRule",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a Traffic Mirror filter rule.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1074 - Data Staged"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Abusing VPC Traffic Mirroring in AWS",
+            "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateTrafficMirrorFilterRule to fine-tune traffic mirroring for selective interception."
+}

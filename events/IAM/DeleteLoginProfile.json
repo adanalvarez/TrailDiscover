@@ -1,0 +1,22 @@
+{
+    "eventName": "DeleteLoginProfile",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Deletes the password for the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure",
+        "T1070 - Indicator Removal"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteLoginProfile to remove user's login credentials, preventing legitimate access to AWS services. Also, it might be used to delete a previously added profile to avoid detection."
+}

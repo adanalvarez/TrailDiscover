@@ -1,0 +1,34 @@
+{
+    "eventName": "GetAccount",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Lists the applied quota values for the specified AWS service.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        },
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        },
+        {
+            "description": "SES-PIONAGE",
+            "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetAccount to gather sensitive information about the AWS SES account for malicious purposes."
+}

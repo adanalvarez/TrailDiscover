@@ -1,0 +1,21 @@
+{
+    "eventName": "ListAssociatedAccessPolicies",
+    "eventSource": "eks.amazonaws.com",
+    "awsService": "EKS",
+    "description": "Lists the access policies associated with an access entry.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "New attack vectors in EKS",
+            "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
+        }
+    ],
+    "securityImplications": "Attackers might use ListAssociatedAccessPolicies to enumerate policies associated with resources in AWS services, identifying overly permissive access that can be exploited to escalate privileges."
+}

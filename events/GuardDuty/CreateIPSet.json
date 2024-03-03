@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateIPSet",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Creates a new IPSet, which is called a trusted IP list in the console user interface.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures."
+}

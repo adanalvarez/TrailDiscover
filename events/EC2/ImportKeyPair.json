@@ -1,0 +1,34 @@
+{
+    "eventName": "ImportKeyPair",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Imports the public key from an RSA or ED25519 key pair that you created with a third-party tool.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
+            "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+        },
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        }
+    ],
+    "securityImplications": "Attackers might use ImportKeyPair to upload malicious SSH keys to AWS EC2 instances, granting unauthorized access."
+}

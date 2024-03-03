@@ -1,0 +1,35 @@
+{
+    "eventName": "UpdateLoginProfile",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Changes the password for the specified IAM user. You can use the AWS CLI, the AWS API, or the Users page in the IAM console to change the password for any IAM user.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Incident report: From CLI to console, chasing an attacker in AWS",
+            "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it."
+}

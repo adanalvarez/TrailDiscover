@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteNetworkAcl",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Deletes the specified network ACL.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Ensure CloudWatch has an Alarm for Network ACL Changes",
+            "link": "https://www.intelligentdiscovery.io/controls/cloudwatch/cloudwatch-alarm-network-acl-change"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteNetworkAcl to remove network access control lists, potentially opening up network segments for unauthorized access."
+}

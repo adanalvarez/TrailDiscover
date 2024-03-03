@@ -1,0 +1,23 @@
+{
+    "eventName": "RemoveTargets",
+    "eventSource": "events.amazonaws.com",
+    "awsService": "EventBridge",
+    "description": "Removes the specified targets from the specified rule.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1489 - Service Stop",
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use RemoveTargets in AWS EventBridge to eliminate crucial targets from event rules, effectively disabling intended actions or notifications triggered by specific events."
+}

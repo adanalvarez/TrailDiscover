@@ -1,0 +1,25 @@
+{
+    "eventName": "CreateDBSecurityGroup",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Creates a new DB security group. DB security groups control access to a DB instance.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        },
+        {
+            "description": "Hunting AWS RDS security events with Sysdig",
+            "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateDBSecurityGroup to create new security groups with lax rules, potentially allowing unauthorized access to the database."
+}

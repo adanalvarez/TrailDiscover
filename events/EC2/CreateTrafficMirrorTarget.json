@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateTrafficMirrorTarget",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a target for your Traffic Mirror session.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1074 - Data Staged"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Abusing VPC Traffic Mirroring in AWS",
+            "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateTrafficMirrorTarget to establish destinations for mirrored traffic, potentially facilitating the unauthorized observation or capture of sensitive information."
+}

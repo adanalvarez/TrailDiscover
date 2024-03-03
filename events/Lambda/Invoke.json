@@ -1,0 +1,27 @@
+{
+    "eventName": "Invoke",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Invokes a Lambda function.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Mining Crypto",
+            "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use Invoke to execute previously modified functions in AWS Lambda."
+}

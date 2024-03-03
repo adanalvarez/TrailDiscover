@@ -1,0 +1,21 @@
+{
+    "eventName": "ListInstanceProfiles",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the instance profiles that have the specified path prefix. If there are none, the operation returns an empty list.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListInstanceProfiles to identify potential targets for privilege escalation attacks in AWS."
+}

@@ -1,0 +1,21 @@
+{
+    "eventName": "GetUser",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Retrieves information about the specified IAM user, including the user's creation date, path, unique ID, and ARN.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GotRoot! AWS root Account Takeover",
+            "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetUser to obtain user information."
+}

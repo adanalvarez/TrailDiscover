@@ -1,0 +1,21 @@
+{
+    "eventName": "PutBucketReplication",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Creates a replication configuration or replaces an existing one.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Exfiltrating S3 Data with Bucket Replication Policies",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "securityImplications": "Attackers might use PutBucketReplication to replicate sensitive data to unauthorized S3 buckets controlled by the attacker."
+}

@@ -1,0 +1,25 @@
+{
+    "eventName": "RequestServiceQuotaIncrease",
+    "eventSource": "servicequotas.amazonaws.com",
+    "awsService": "ServiceQuotas",
+    "description": "Submits a quota increase request for the specified quota at the account or resource level.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Incident report: From CLI to console, chasing an attacker in AWS",
+            "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use RequestServiceQuotaIncrease to increase the quotas and so resource hijacking will have a bigger impact."
+}

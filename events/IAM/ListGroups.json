@@ -1,0 +1,21 @@
+{
+    "eventName": "ListGroups",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the IAM groups that have the specified path prefix.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - IAM Enum",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum"
+        }
+    ],
+    "securityImplications": "Attackers might use ListGroups to identify potential targets by gathering information about IAM groups and their permissions."
+}

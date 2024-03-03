@@ -1,0 +1,21 @@
+{
+    "eventName": "UpdateAccessKey",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Changes the status of the specified access key from Active to Inactive, or vice versa.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - IAM Privesc",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-iam-privesc"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateAccessKey to modify existing IAM user access keys, potentially gaining unauthorized access to AWS services."
+}

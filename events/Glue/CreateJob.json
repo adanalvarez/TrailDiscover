@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateJob",
+    "eventSource": "glue.amazonaws.com",
+    "awsService": "Glue",
+    "description": "Creates a new job definition.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateJob to create a glue job with a role with higer privileges to gain these privileges."
+}

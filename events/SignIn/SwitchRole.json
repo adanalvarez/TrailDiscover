@@ -1,0 +1,21 @@
+{
+    "eventName": "SwitchRole",
+    "eventSource": "signin.amazonaws.com",
+    "awsService": "SignIn",
+    "description": "This event is recorded when a user manually switches to a different IAM role within the AWS Management Console.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS CloudTrail cheat sheet",
+            "link": "https://www.invictus-ir.com/news/aws-cloudtrail-cheat-sheet"
+        }
+    ],
+    "securityImplications": "Attackers might use SwitchRole when using the console to escalate privileges and gain unauthorized access to AWS resources."
+}

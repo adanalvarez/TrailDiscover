@@ -1,0 +1,35 @@
+{
+    "eventName": "TerminateInstances",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Shuts down the specified instances. This operation is idempotent; if you terminate an instance more than once, each call succeeds.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction",
+        "T1070 - Indicator Removal"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        },
+        {
+            "description": "Former Cisco engineer sentenced to prison for deleting 16k Webex accounts",
+            "link": "https://www.zdnet.com/article/former-cisco-engineer-sentenced-to-prison-for-deleting-16k-webex-accounts/"
+        },
+        {
+            "description": "Hacker Puts Hosting Service Code Spaces Out of Business",
+            "link": "https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use TerminateInstances to permanently delete EC2 instances, resulting in irreversible data loss and service disruption or for defense evasion."
+}

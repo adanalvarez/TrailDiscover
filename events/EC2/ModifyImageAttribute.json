@@ -1,0 +1,21 @@
+{
+    "eventName": "ModifyImageAttribute",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Modifies the specified attribute of the specified AMI.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS AMI Atttribute Modification for Exfiltration",
+            "link": "https://research.splunk.com/cloud/f2132d74-cf81-4c5e-8799-ab069e67dc9f/"
+        }
+    ],
+    "securityImplications": "Attackers might use ModifyImageAttribute to alter permissions or settings of Amazon Machine Images (AMIs), potentially exposing them to unauthorized users or making them public."
+}

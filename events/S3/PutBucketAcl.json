@@ -1,0 +1,21 @@
+{
+    "eventName": "PutBucketAcl",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Sets the permissions on an existing bucket using access control lists (ACL).",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1048 - Exfiltration Over Alternative Protocol"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS S3 Bucket ACL made public",
+            "link": "https://docs.datadoghq.com/security/default_rules/aws-bucket-acl-made-public/"
+        }
+    ],
+    "securityImplications": "Attackers might use SetBucketAccessControlPolicy to modify access control lists, potentially granting unauthorized access to S3 buckets."
+}

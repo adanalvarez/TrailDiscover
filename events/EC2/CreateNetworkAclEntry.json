@@ -1,0 +1,25 @@
+{
+    "eventName": "CreateNetworkAclEntry",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates an entry (a rule) in a network ACL with the specified rule number.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS EC2 Network Access Control List Creation",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-ec2-network-access-control-list-creation.html"
+        },
+        {
+            "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+            "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateNetworkAclEntry to allow traffic to the network from an IP they control."
+}

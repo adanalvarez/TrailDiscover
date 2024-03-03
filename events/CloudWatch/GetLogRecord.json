@@ -1,0 +1,21 @@
+{
+    "eventName": "GetLogRecord",
+    "eventSource": "logs.amazonaws.com",
+    "awsService": "CloudWatch",
+    "description": "Retrieves all of the fields and values of a single log event.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetLogRecord to precisely extract information from CloudWatch logs, potentially exposing sensitive data or insights into AWS operational activities."
+}

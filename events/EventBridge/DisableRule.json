@@ -1,0 +1,27 @@
+{
+    "eventName": "DisableRule",
+    "eventSource": "events.amazonaws.com",
+    "awsService": "EventBridge",
+    "description": "Disables the specified rule.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1489 - Service Stop",
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS EventBridge Rule Disabled or Deleted",
+            "link": "https://www.elastic.co/guide/en/security/7.17/rules-api-delete.html"
+        },
+        {
+            "description": "AWS EventBridge rule disabled or deleted",
+            "link": "https://docs.datadoghq.com/security/default_rules/aws-eventbridge-rule-disabled-or-deleted/"
+        }
+    ],
+    "securityImplications": "Attackers might use DisableRule to deactivate AWS EventBridge rules, effectively silencing alarms and automated responses designed for incident detection and mitigation."
+}

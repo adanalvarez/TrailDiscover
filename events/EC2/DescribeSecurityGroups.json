@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeSecurityGroups",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Describes the specified security groups or all of your security groups.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Case Study: Responding to an Attack in AWS",
+            "link": "https://www.cadosecurity.com/case-study-responding-to-an-attack-in-aws/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeSecurityGroups to review AWS VPC security group configurations, seeking misconfigurations that could be exploited for unauthorized access or to bypass network security controls."
+}

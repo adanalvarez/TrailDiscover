@@ -1,0 +1,21 @@
+{
+    "eventName": "GetCostAndUsage",
+    "eventSource": "ce.amazonaws.com",
+    "awsService": "CostExplorer",
+    "description": "Retrieves cost and usage metrics for your account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetCostAndUsage to determine how active an account is by understanding the cost within a cloud account."
+}

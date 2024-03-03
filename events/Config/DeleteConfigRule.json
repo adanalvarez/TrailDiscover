@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteConfigRule",
+    "eventSource": "config.amazonaws.com",
+    "awsService": "Config",
+    "description": "Deletes the specified AWS Config rule and all of its evaluation results.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Config Resource Deletion",
+            "link": "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-4-aws-config-resource-deletion.html#prebuilt-rule-7-16-4-aws-config-resource-deletion"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteConfigRule to remove compliance rules, potentially affecting the response plan."
+}

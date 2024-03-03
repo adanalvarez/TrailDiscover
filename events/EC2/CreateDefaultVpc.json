@@ -1,0 +1,23 @@
+{
+    "eventName": "CreateDefaultVpc",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a default VPC with a size /16 IPv4 CIDR block and a default subnet in each Availability Zone.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateDefaultVpc to create a VPC and lauch EC2 instances."
+}

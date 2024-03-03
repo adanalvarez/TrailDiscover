@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8ECAE6;
+    color: #333;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    height: auto;
+    padding: 10px;
+}
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-controls .btn, .filter-controls .form-control {
+    flex: 1;
+    max-width: 200px;
+}
+#grid .gridjs-table {
+    width: 100%;
+    margin-top: 10px;
+}
+.gridjs-search input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.gridjs-th {
+    background-color: #023047 !important;
+    color: white !important;
+    font-size: 15px;
+}
+.gridjs-td {
+    border-top: 1px solid #eee !important;
+    font-size: 14px;
+}
+
+.btn-wild{
+    background-color: #023047;
+    color: #FFFFFF;
+}
+
+.btn-wild:hover{
+    background-color: #219EBC;
+    color: #FFFFFF;
+}
+
+.my-tr-class:hover {
+    cursor: pointer;
+}
+.gridjs-table tr:hover td {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.edit-on-github {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    margin: 20px;
+}
+@media (max-width: 1200px) { 
+    .gridjs-td, .gridjs-th {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 1000px) { 
+    .filter-controls {
+        flex-direction: column; 
+    }
+
+    .filter-controls .btn, .filter-controls .form-control {
+        max-width: none;
+        margin-bottom: 10px;
+    }
+
+    .gridjs-td, .gridjs-th {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .edit-on-github {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-controls .btn, .filter-controls .form-control {
+        max-width: none; 
+        margin-bottom: 10px;
+    }
+
+    .gridjs-td, .gridjs-th {
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    .edit-on-github {
+        display: none;
+    }
+}

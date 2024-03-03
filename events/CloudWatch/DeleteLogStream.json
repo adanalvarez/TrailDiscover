@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteLogStream",
+    "eventSource": "logs.amazonaws.com",
+    "awsService": "CloudWatch",
+    "description": "Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail",
+            "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS."
+}

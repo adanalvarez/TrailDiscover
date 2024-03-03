@@ -1,0 +1,29 @@
+{
+    "eventName": "DeleteFlowLogs",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Deletes one or more flow logs.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1089 - Disabling Security Tools"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Removing VPC flow logs",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/removing-vpc-flow-logs/"
+        },
+        {
+            "description": "AWS Incident Response",
+            "link": "https://github.com/easttimor/aws-incident-response"
+        },
+        {
+            "description": "Proactive Cloud Security w/ AWS Organizations",
+            "link": "https://witoff.medium.com/proactive-cloud-security-w-aws-organizations-d58695bcae16"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteFlowLogs to remove records of network traffic within AWS."
+}

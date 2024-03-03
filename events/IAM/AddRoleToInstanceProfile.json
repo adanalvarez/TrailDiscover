@@ -1,0 +1,21 @@
+{
+    "eventName": "AddRoleToInstanceProfile",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Adds the specified IAM role to the specified instance profile.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Cloudgoat AWS CTF solution- Scenerio 5 (iam_privesc_by_attachment)",
+            "link": "https://pswalia2u.medium.com/cloudgoat-aws-ctf-solution-scenerio-5-iam-privesc-by-attachment-22145650f5f5"
+        }
+    ],
+    "securityImplications": "Attackers might use AddRoleToInstanceProfile to escalate privileges or gain unauthorized access to AWS resources."
+}

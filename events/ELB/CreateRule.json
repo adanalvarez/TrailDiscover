@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateRule",
+    "eventSource": "elasticloadbalancing.amazonaws.com",
+    "awsService": "ELB",
+    "description": "Creates a rule for the specified listener.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Rigging the Rules: Manipulating AWS ALB to Mine Sensitive Data",
+            "link": "https://medium.com/@adan.alvarez/rigging-the-rules-manipulating-aws-alb-to-mine-sensitive-data-20e33dbc4994"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateRule to add rules that allow them access bypassing potential restrictions such as authentication."
+}

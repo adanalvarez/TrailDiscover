@@ -1,0 +1,21 @@
+{
+    "eventName": "Search",
+    "eventSource": "resource-explorer-2.amazonaws.com",
+    "awsService": "ResourceExplorer",
+    "description": "Searches for resources and displays details about all resources that match the specified criteria.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use Search to list resorces."
+}

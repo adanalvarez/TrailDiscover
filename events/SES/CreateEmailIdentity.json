@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateEmailIdentity",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Starts the process of verifying an email identity. An identity is an email address or domain that you use when you send email.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers use CreateEmailIdentity to create its own identity for sending spam or phishing emails later."
+}

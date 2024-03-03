@@ -1,0 +1,21 @@
+{
+    "eventName": "GetSMSSandboxAccountStatus",
+    "eventSource": "sns.amazonaws.com",
+    "awsService": "SNS",
+    "description": "Retrieves the SMS sandbox status for the calling AWS account in the target AWS Region.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",
+            "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetSMSSandboxAccountStatus to monitor the status of a target's AWS SNS sandbox account for potential usage for smishing."
+}

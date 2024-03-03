@@ -1,0 +1,21 @@
+{
+    "eventName": "HeadObject",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "The HEAD operation retrieves metadata from an object without returning the object itself.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1619 - Cloud Storage Object Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use HeadObject to gather metadata about sensitive files stored in S3."
+}

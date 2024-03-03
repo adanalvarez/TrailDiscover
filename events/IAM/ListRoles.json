@@ -1,0 +1,21 @@
+{
+    "eventName": "ListRoles",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the IAM roles that have the specified path prefix. ",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS - IAM Enum",
+            "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum"
+        }
+    ],
+    "securityImplications": "Attackers might use ListRoles to identify potential targets for privilege escalation attacks in AWS."
+}

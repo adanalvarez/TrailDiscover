@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteNetworkAclEntry",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Deletes the specified ingress or egress entry (rule) from the specified network ACL.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Ensure CloudWatch has an Alarm for Network ACL Changes",
+            "link": "https://www.intelligentdiscovery.io/controls/cloudwatch/cloudwatch-alarm-network-acl-change"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteNetworkAclEntry to remove specific rules from network access control lists, potentially opening network paths for unauthorized access."
+}

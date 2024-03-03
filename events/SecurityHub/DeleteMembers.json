@@ -1,0 +1,25 @@
+{
+    "eventName": "DeleteMembers",
+    "eventSource": "securityhub.amazonaws.com",
+    "awsService": "SecurityHub",
+    "description": "Deletes the specified member accounts from Security Hub.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS CloudTrail cheat sheet",
+            "link": "https://www.invictus-ir.com/news/aws-cloudtrail-cheat-sheet"
+        },
+        {
+            "description": "AWS Incident Response",
+            "link": "https://easttimor.github.io/aws-incident-response/"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteMembers to remove specific members from the SecurityHub, disrupting security management and monitoring."
+}

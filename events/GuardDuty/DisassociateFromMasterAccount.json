@@ -1,0 +1,21 @@
+{
+    "eventName": "DisassociateFromMasterAccount",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Disassociates the current GuardDuty member account from its administrator account.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use DisassociateFromMasterAccount to remove the link to the master GuardDuty account, disrupting centralized security monitoring and analysis."
+}

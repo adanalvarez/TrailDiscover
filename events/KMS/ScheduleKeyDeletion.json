@@ -1,0 +1,21 @@
+{
+    "eventName": "ScheduleKeyDeletion",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Schedules the deletion of a KMS key.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": " Threat Hunting with CloudTrail and GuardDuty in Splunk",
+            "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+        }
+    ],
+    "securityImplications": "Attackers might use ScheduleKeyDeletion to schedule the deletion of crucial encryption keys, disrupting data security and access."
+}

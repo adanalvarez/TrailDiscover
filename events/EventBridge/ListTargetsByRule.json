@@ -1,0 +1,21 @@
+{
+    "eventName": "ListTargetsByRule",
+    "eventSource": "events.amazonaws.com",
+    "awsService": "EventBridge",
+    "description": "Lists the targets assigned to the specified rule.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Modify GuardDuty Configuration",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
+        }
+    ],
+    "securityImplications": "Attackers might use ListTargetsByRule in AWS EventBridge to enumerate the targets of specific rules, gaining insights into the architecture and response mechanisms of an environment."
+}

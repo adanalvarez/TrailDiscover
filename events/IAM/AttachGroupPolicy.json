@@ -1,0 +1,21 @@
+{
+    "eventName": "AttachGroupPolicy",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Attaches the specified managed policy to the specified IAM group.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use AttachGroupPolicy to assign malicious policies to a group, escalating privileges or enabling unauthorized access."
+}

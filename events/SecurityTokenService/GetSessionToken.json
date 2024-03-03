@@ -1,0 +1,21 @@
+{
+    "eventName": "GetSessionToken",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of temporary credentials for an AWS account or IAM user.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1199 - Trusted Relationship"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS STS GetSessionToken Abuse",
+            "link": "https://www.elastic.co/guide/en/security/7.17/aws-sts-getsessiontoken-abuse.html"
+        }
+    ],
+    "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials."
+}

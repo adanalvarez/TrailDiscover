@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteBucketPolicy",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Deletes the policy of a specified bucket.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS S3 Bucket Configuration Deletion",
+            "link": "https://www.elastic.co/guide/en/security/7.17/aws-s3-bucket-configuration-deletion.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteBucketPolicy to remove security policies and gain unauthorized access to S3 buckets."
+}

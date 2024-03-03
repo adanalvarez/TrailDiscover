@@ -1,0 +1,21 @@
+{
+    "eventName": "PublishFunction",
+    "eventSource": "cloudfront.amazonaws.com",
+    "awsService": "CloudFront",
+    "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1119 - Automated Collection"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
+            "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
+        }
+    ],
+    "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data."
+}

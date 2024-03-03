@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeCluster",
+    "eventSource": "eks.amazonaws.com",
+    "awsService": "EKS",
+    "description": "Describes an Amazon EKS cluster.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "New attack vectors in EKS",
+            "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
+        }
+    ],
+    "securityImplications": "Attackers might use DescribeCluster to gain insights into the configuration and status of AWS EKS clusters."
+}

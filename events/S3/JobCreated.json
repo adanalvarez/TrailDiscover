@@ -1,0 +1,21 @@
+{
+    "eventName": "JobCreated",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "When a Batch Operations job is created, it is recorded as a JobCreated event in CloudTrail.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Exfiltrating S3 Data with Bucket Replication Policies",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "securityImplications": "Attackers might use Batch Operations jobs to initiate unauthorized data transfer or manipulation tasks in S3."
+}

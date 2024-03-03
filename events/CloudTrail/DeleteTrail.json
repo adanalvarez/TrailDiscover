@@ -1,0 +1,29 @@
+{
+    "eventName": "DeleteTrail",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Deletes a trail.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Defense Evasion Delete Cloudtrail",
+            "link": "https://research.splunk.com/cloud/82092925-9ca1-4e06-98b8-85a2d3889552/"
+        },
+        {
+            "description": "Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail",
+            "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
+        },
+        {
+            "description": "Disrupting AWS logging",
+            "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteTrail to disrupting AWS logging."
+}

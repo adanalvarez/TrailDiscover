@@ -1,0 +1,21 @@
+{
+    "eventName": "ListAccessKeys",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Returns information about the access key IDs associated with the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Ransomware in the cloud",
+            "link": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAccessKeys to identify and exploit unused or unmonitored AWS IAM access keys."
+}

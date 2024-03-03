@@ -1,0 +1,37 @@
+{
+    "eventName": "AssumeRole",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of temporary security credentials that you can use to access AWS resources.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access",
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1199 - Trusted Relationship",
+        "T1078 - Valid Accounts"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "Trouble in Paradise",
+            "link": "https://blog.darklab.hk/2021/07/06/trouble-in-paradise/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Role Chain Juggling",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/role-chain-juggling/"
+        },
+        {
+            "description": "Detecting and removing risky actions out of your IAM security policies",
+            "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        }
+    ],
+    "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence."
+}

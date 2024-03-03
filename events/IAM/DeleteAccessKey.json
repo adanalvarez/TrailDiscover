@@ -1,0 +1,26 @@
+{
+    "eventName": "DeleteAccessKey",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Deletes the access key pair associated with the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure",
+        "T1070 - Indicator Removal"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteAccessKey to revoke legitimate user access to AWS services. Also, it can be used to delete previously used keys to avoid detection."
+}

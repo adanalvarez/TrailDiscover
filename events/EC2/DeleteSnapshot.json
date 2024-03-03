@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteSnapshot",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Deletes the specified snapshot.",
+    "mitreAttackTactics": [
+        "T1485 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Hacker Puts Hosting Service Code Spaces Out of Business",
+            "link": "https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteSnapshot to erase Amazon EBS snapshots, potentially destroying backup data and hampering recovery efforts after an attack."
+}

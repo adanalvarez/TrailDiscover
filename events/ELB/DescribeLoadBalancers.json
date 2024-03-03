@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeLoadBalancers",
+    "eventSource": "elasticloadbalancing.amazonaws.com",
+    "awsService": "ELB",
+    "description": "Describes the specified load balancers or all of your load balancers.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Rigging the Rules: Manipulating AWS ALB to Mine Sensitive Data",
+            "link": "https://medium.com/@adan.alvarez/rigging-the-rules-manipulating-aws-alb-to-mine-sensitive-data-20e33dbc4994"
+        }
+    ],
+    "securityImplications": "Attackers might use DescribeLoadBalancers to get information about the load balancers for potential future attacks."
+}

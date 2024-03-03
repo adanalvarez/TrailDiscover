@@ -1,0 +1,21 @@
+{
+    "eventName": "GetLoginProfile",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Retrieves the user name for the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetLoginProfile to know if the account has a login profile or to get its user name."
+}

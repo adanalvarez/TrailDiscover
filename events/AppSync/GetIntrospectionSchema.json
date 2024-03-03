@@ -1,0 +1,21 @@
+{
+    "eventName": "GetIntrospectionSchema",
+    "eventSource": "appsync.amazonaws.com",
+    "awsService": "AppSync",
+    "description": "Retrieves the introspection schema for a GraphQL API.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Distorting the Sync: How AWS AppSync Can Be Turned into an Attacker\u2019s Backdoor",
+            "link": "https://medium.com/@adan.alvarez/distorting-the-sync-how-aws-appsync-can-be-turned-into-an-attackers-backdoor-8c015b8e52b8"
+        }
+    ],
+    "securityImplications": "Attackers might use GetIntrospectionSchema to understand the API for future attacks or use the configuration for future modifications."
+}

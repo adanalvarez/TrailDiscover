@@ -1,0 +1,42 @@
+{
+    "eventName": "GetCallerIdentity",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns details about the IAM user or role whose credentials are used to call the operation.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "GotRoot! AWS root Account Takeover",
+            "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+        },
+        {
+            "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
+            "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
+            "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+        },
+        {
+            "description": "New attack vectors in EKS",
+            "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
+        },
+        {
+            "description": "Enumerate AWS Account ID from an EC2 Instance",
+            "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_ec2/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission."
+}

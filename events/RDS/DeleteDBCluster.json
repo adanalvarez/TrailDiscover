@@ -1,0 +1,25 @@
+{
+    "eventName": "DeleteDBCluster",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "The DeleteDBCluster action deletes a previously provisioned DB cluster.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Hunting AWS RDS security events with Sysdig",
+            "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
+        },
+        {
+            "description": "AWS Deletion of RDS Instance or Cluster",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-deletion-of-rds-instance-or-cluster.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteDBCluster to delete crucial databases, causing data loss and service disruption."
+}

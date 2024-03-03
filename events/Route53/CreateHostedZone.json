@@ -1,0 +1,26 @@
+{
+    "eventName": "CreateHostedZone",
+    "eventSource": "route53.amazonaws.com",
+    "awsService": "Route53",
+    "description": "Creates a new public or private hosted zone. You create records in a public hosted zone to define how you want to route traffic on the internet for a domain, such as example.com, and its subdomains.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "AWS API Call Hijacking via ACM-PCA",
+            "link": "https://hackingthe.cloud/aws/exploitation/route53_modification_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateHostedZone to create malicious DNS zones for phishing or redirecting traffic."
+}

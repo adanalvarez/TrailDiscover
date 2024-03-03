@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeInstanceInformation",
+    "eventSource": "ssm.amazonaws.com",
+    "awsService": "SSM",
+    "description": "Provides information about one or more of your managed nodes, including the operating system platform, SSM Agent version, association status, and IP address.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeInstanceInformation to gather sensitive information about the instances, potentially leading to unauthorized access."
+}

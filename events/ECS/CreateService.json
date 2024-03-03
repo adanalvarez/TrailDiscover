@@ -1,0 +1,21 @@
+{
+    "eventName": "CreateService",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Runs and maintains your desired number of tasks from a specified task definition.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateService in AWS ECS to orchestrate and deploy unauthorized services, potentially for malicious activities such as resource hijacking."
+}

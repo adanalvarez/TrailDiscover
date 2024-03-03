@@ -1,0 +1,21 @@
+{
+    "eventName": "GetBucketAcl",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "This implementation of the GET action uses the acl subresource to return the access control list (ACL) of a bucket.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Public S3 bucket through bucket ACL",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/vulnerabilities/s3-bucket-public-acl/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetBucketAccessControlPolicy to gain unauthorized access to sensitive data stored in S3 buckets."
+}

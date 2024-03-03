@@ -1,0 +1,21 @@
+{
+    "eventName": "DeleteFileSystem",
+    "eventSource": "elasticfilesystem.amazonaws.com",
+    "awsService": "EFS",
+    "description": "Deletes a file system, permanently severing access to its contents.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS EFS File System or Mount Deleted",
+            "link": "https://www.elastic.co/guide/en/security/7.17/aws-efs-file-system-or-mount-deleted.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteFileSystem in AWS EFS to deliberately erase file systems, leading to data loss."
+}

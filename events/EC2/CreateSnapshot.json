@@ -1,0 +1,36 @@
+{
+    "eventName": "ModifySnapshotAttribute",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a snapshot of an EBS volume and stores it in Amazon S3.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement",
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account",
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "CrowdStrike\u2019s work with the Democratic National Committee: Setting the record straight",
+            "link": "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
+        },
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Stealing an EBS snapshot by creating a snapshot and sharing it",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/sharing-ebs-snapshot/"
+        },
+        {
+            "description": "Exfiltrate EBS Snapshot by Sharing It",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-snapshot/"
+        }
+    ],
+    "securityImplications": "Attackers might use ModifySnapshotAttribute to alter permissions on EBS snapshots, potentially exposing sensitive data to unauthorized parties."
+}

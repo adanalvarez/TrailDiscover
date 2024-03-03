@@ -1,0 +1,30 @@
+{
+    "eventName": "GetFederationToken",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security token) for a user.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "usedInWild": false,
+    "incidents": [
+        {
+            "description": "How Adversaries Can Persist with AWS User Federation",
+            "link": "https://www.crowdstrike.com/blog/how-adversaries-persist-with-aws-user-federation/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Create a Console Session from IAM Credentials",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/create_a_console_session_from_iam_credentials/"
+        },
+        {
+            "description": "Survive Access Key Deletion with sts:GetFederationToken",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/survive_access_key_deletion_with_sts_getfederationtoken/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetFederationToken to gain temporary access credentials."
+}

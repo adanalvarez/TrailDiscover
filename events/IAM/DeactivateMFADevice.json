@@ -1,0 +1,21 @@
+{
+    "eventName": "DeactivateMFADevice",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Deactivates the specified MFA device and removes it from association with the user name for which it was originally enabled.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Deactivation of MFA Device",
+            "link": "https://www.elastic.co/guide/en/security/current/aws-iam-deactivation-of-mfa-device.html"
+        }
+    ],
+    "securityImplications": "Attackers might use DeactivateMFADevice to disable multi-factor authentication, potentially weakening account security."
+}

@@ -1,0 +1,25 @@
+{
+    "eventName": "UpdateTrail",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Updates trail settings that control what events you are logging, and how to handle log files.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Defense Evasion and Centralized Multi-Account Logging",
+            "link": "https://logrhythm.com/blog/aws-defense-evasion-and-centralized-multi-account-logging/"
+        },
+        {
+            "description": "Disrupting AWS logging",
+            "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateTrail to disrupting AWS logging."
+}

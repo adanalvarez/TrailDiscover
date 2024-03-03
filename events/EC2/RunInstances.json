@@ -1,0 +1,86 @@
+{
+    "eventName": "RunInstances",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Launches the specified number of instances using an AMI for which you have permissions.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0040 - Impact",
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1496 - Resource Hijacking",
+        "T1021 - Remote Services"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "The curious case of DangerDev@protonmail.me",
+            "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+        },
+        {
+            "description": "DXC spills AWS private keys on public GitHub",
+            "link": "https://www.theregister.com/2017/11/14/dxc_github_aws_keys_leaked/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
+            "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+        },
+        {
+            "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
+            "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "SCARLETEEL 2.0: Fargate, Kubernetes, and Crypto",
+            "link": "https://sysdig.com/blog/scarleteel-2-0/"
+        },
+        {
+            "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
+            "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
+            "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+        },
+        {
+            "description": "Clear and Uncommon Story About Overcoming Issues With AWS",
+            "link": "https://topdigital.agency/clear-and-uncommon-story-about-overcoming-issues-with-aws/"
+        },
+        {
+            "description": "onelogin 2017 Security Incident",
+            "link": "https://web.archive.org/web/20210620180614/https://www.onelogin.com/blog/may-31-2017-security-incident"
+        },
+        {
+            "description": "BrowserStack analysis: unpatched inactive machine compromised by shellshock vulnerability",
+            "link": "https://www.databreaches.net/browserstack-analysis-unpatched-inactive-machine-compromised-by-shellshock-vulnerability/"
+        },
+        {
+            "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
+            "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Launching EC2 instances",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/launching-ec2-instances/"
+        },
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Abusing VPC Traffic Mirroring in AWS",
+            "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
+        }
+    ],
+    "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation."
+}

@@ -1,0 +1,21 @@
+{
+    "eventName": "DescribeListeners",
+    "eventSource": "elasticloadbalancing.amazonaws.com",
+    "awsService": "ELB",
+    "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Rigging the Rules: Manipulating AWS ALB to Mine Sensitive Data",
+            "link": "https://medium.com/@adan.alvarez/rigging-the-rules-manipulating-aws-alb-to-mine-sensitive-data-20e33dbc4994"
+        }
+    ],
+    "securityImplications": "Attackers might use DescribeListeners to get information about the load balancers listeners for potential future modifications."
+}

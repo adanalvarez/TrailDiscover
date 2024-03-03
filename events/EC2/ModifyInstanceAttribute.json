@@ -1,0 +1,33 @@
+{
+    "eventName": "ModifyInstanceAttribute",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Modifies the specified attribute of the specified instance.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Executing commands through EC2 user data",
+            "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+        },
+        {
+            "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+            "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+        },
+        {
+            "description": "EC2 Privilege Escalation Through User Data",
+            "link": "https://hackingthe.cloud/aws/exploitation/local_ec2_priv_esc_through_user_data/"
+        },
+        {
+            "description": "User Data Script Persistence",
+            "link": "https://hackingthe.cloud/aws/post_exploitation/user_data_script_persistence/"
+        }
+    ],
+    "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts."
+}

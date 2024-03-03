@@ -1,0 +1,21 @@
+{
+    "eventName": "GetAccountSendingEnabled",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Returns the email sending status of the Amazon SES account for the current Region.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "SES-PIONAGE",
+            "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetAccountSendingEnabled to identify if an AWS account's email sending capabilities are enabled, potentially exploiting it for spamming or phishing activities."
+}
