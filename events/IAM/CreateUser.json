@@ -2,7 +2,7 @@
     "eventName": "CreateUser",
     "eventSource": "iam.amazonaws.com",
     "awsService": "IAM",
-    "description": "This event is called when a new IAM user is created.",
+    "description": "Creates a new IAM user for your AWS account.",
     "mitreAttackTactics": [
         "TA0003 - Persistence"
     ],
