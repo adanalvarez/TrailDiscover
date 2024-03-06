@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetLaunchTemplateData to obtain configurations of EC2 launch templates, identifying predefined instance settings or network configuration."
+    "securityImplications": "Attackers might use GetLaunchTemplateData to obtain configurations of EC2 launch templates, identifying predefined instance settings or network configuration.",
+    "commandLineSimulation": "aws ec2 get-launch-template-data --instance-id TrailDiscoverInstanceId"
 }

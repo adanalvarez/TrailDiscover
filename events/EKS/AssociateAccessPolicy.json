@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters."
+    "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters.",
+    "commandLineSimulation": "N/A"
 }

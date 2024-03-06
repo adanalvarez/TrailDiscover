@@ -21,5 +21,6 @@
             "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
         }
     ],
-    "securityImplications": "Attackers might use PutEventSelectors to disrupting AWS logging."
+    "securityImplications": "Attackers might use PutEventSelectors to disrupting AWS logging.",
+    "commandLineSimulation": "aws cloudtrail put-event-selectors --trail-name TrailDiscover --event-selectors '[{\"ReadWriteType\": \"All\", \"IncludeManagementEvents\":true, \"DataResources\": [{\"Type\": \"AWS::S3::Object\", \"Values\": [\"arn:aws:s3\"]}] }]'"
 }

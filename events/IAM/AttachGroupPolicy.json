@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use AttachGroupPolicy to assign malicious policies to a group, escalating privileges or enabling unauthorized access."
+    "securityImplications": "Attackers might use AttachGroupPolicy to assign malicious policies to a group, escalating privileges or enabling unauthorized access.",
+    "commandLineSimulation": "N/A"
 }

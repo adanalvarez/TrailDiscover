@@ -82,5 +82,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation."
+    "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation.",
+    "commandLineSimulation": "N/A"
 }

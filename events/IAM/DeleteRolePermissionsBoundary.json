@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteRolePermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources."
+    "securityImplications": "Attackers might use DeleteRolePermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources.",
+    "commandLineSimulation": "N/A"
 }

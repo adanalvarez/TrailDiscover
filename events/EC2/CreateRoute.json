@@ -21,5 +21,6 @@
             "link": "https://easttimor.github.io/aws-incident-response/"
         }
     ],
-    "securityImplications": "Attackers might use CreateRoute to redirect network traffic within AWS VPCs to eavesdrop or exfiltrate data."
+    "securityImplications": "Attackers might use CreateRoute to redirect network traffic within AWS VPCs to eavesdrop or exfiltrate data.",
+    "commandLineSimulation": "aws ec2 create-route --route-table-id TrailDiscoverRouteTableId --destination-cidr-block TrailDiscoverDestinationCidrBlock --gateway-id TrailDiscoverGatewayId"
 }

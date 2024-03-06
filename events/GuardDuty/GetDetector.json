@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetDetector to identify active threat detection systems in AWS GuardDuty."
+    "securityImplications": "Attackers might use GetDetector to identify active threat detection systems in AWS GuardDuty.",
+    "commandLineSimulation": "aws guardduty get-detector --detector-id TrailDiscoverDetectorId"
 }

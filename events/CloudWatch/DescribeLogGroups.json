@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeLogGroups to discover CloudWatch log configurations."
+    "securityImplications": "Attackers might use DescribeLogGroups to discover CloudWatch log configurations.",
+    "commandLineSimulation": "aws logs describe-log-groups --log-group-name-prefix TrailDiscover"
 }

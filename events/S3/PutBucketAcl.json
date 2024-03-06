@@ -17,5 +17,6 @@
             "link": "https://docs.datadoghq.com/security/default_rules/aws-bucket-acl-made-public/"
         }
     ],
-    "securityImplications": "Attackers might use SetBucketAccessControlPolicy to modify access control lists, potentially granting unauthorized access to S3 buckets."
+    "securityImplications": "Attackers might use SetBucketAccessControlPolicy to modify access control lists, potentially granting unauthorized access to S3 buckets.",
+    "commandLineSimulation": "aws s3api put-bucket-acl --bucket TrailDiscoverBucket --acl TrailDiscoverAcl"
 }

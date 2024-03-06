@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteRolePolicy to remove security policies, potentially escalating their privileges."
+    "securityImplications": "Attackers might use DeleteRolePolicy to remove security policies, potentially escalating their privileges.",
+    "commandLineSimulation": "N/A"
 }

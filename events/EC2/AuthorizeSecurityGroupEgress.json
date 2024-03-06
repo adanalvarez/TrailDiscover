@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use AuthorizeSecurityGroupEgress to allow exfiltration."
+    "securityImplications": "Attackers might use AuthorizeSecurityGroupEgress to allow exfiltration.",
+    "commandLineSimulation": "N/A"
 }

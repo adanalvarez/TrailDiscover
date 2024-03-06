@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateDevEndpoint to modify the settings of a development endpoint, potentially disrupting data processing tasks or gaining unauthorized access to data."
+    "securityImplications": "Attackers might use UpdateDevEndpoint to modify the settings of a development endpoint, potentially disrupting data processing tasks or gaining unauthorized access to data.",
+    "commandLineSimulation": "N/A"
 }

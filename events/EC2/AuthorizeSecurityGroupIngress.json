@@ -52,5 +52,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/opening-security-group-port/"
         }
     ],
-    "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally."
+    "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",
+    "commandLineSimulation": "N/A"
 }

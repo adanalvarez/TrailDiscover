@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use ListRules in AWS EventBridge to catalog active event rules, identifying critical automated security mechanisms or logging functions to target for disruption or evasion."
+    "securityImplications": "Attackers might use ListRules in AWS EventBridge to catalog active event rules, identifying critical automated security mechanisms or logging functions to target for disruption or evasion.",
+    "commandLineSimulation": "aws events list-rules --name-prefix TrailDiscover"
 }

@@ -22,5 +22,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/sharing-rds-snapshot/"
         }
     ],
-    "securityImplications": "Attackers might use CreateDBSnapshot to create unauthorized backups of sensitive databases for data theft."
+    "securityImplications": "Attackers might use CreateDBSnapshot to create unauthorized backups of sensitive databases for data theft.",
+    "commandLineSimulation": "aws rds create-db-snapshot --db-instance-identifier TrailDiscoverDBInstance --db-snapshot-identifier TrailDiscoverDBSnapshot"
 }

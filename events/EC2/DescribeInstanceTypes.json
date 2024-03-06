@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeInstanceTypes to assess the capabilities and resources of EC2 instance types."
+    "securityImplications": "Attackers might use DescribeInstanceTypes to assess the capabilities and resources of EC2 instance types.",
+    "commandLineSimulation": "aws ec2 describe-instance-types --instance-types TrailDiscoverInstanceType"
 }

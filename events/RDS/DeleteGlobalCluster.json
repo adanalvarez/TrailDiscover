@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/current/aws-deletion-of-rds-instance-or-cluster.html"
         }
     ],
-    "securityImplications": "Attackers might use DeleteGlobalCluster to disrupt database services by deleting global clusters in AWS RDS."
+    "securityImplications": "Attackers might use DeleteGlobalCluster to disrupt database services by deleting global clusters in AWS RDS.",
+    "commandLineSimulation": "aws rds delete-global-cluster --global-cluster-identifier TrailDiscoverGlobalClusterIdentifier"
 }

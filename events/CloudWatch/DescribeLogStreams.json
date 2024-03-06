@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeLogStreams to discover CloudWatch log configurations."
+    "securityImplications": "Attackers might use DescribeLogStreams to discover CloudWatch log configurations.",
+    "commandLineSimulation": "aws logs describe-log-streams --log-group-name TrailDiscoverLogGroupName"
 }

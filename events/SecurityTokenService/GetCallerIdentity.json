@@ -38,5 +38,6 @@
             "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_ec2/"
         }
     ],
-    "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission."
+    "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",
+    "commandLineSimulation": "aws sts get-caller-identity"
 }

@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks."
+    "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks.",
+    "commandLineSimulation": "N/A"
 }

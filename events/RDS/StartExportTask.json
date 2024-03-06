@@ -17,5 +17,6 @@
             "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-post-exploitation/aws-rds-post-exploitation"
         }
     ],
-    "securityImplications": "Attackers might use StartExportTask to export database snapshots to an S3 they control and gain access to the data."
+    "securityImplications": "Attackers might use StartExportTask to export database snapshots to an S3 they control and gain access to the data.",
+    "commandLineSimulation": "N/A"
 }

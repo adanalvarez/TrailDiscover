@@ -21,5 +21,6 @@
             "link": "https://www.elastic.co/guide/en/security/current/aws-deletion-of-rds-instance-or-cluster.html"
         }
     ],
-    "securityImplications": "Attackers might use DeleteDBCluster to delete crucial databases, causing data loss and service disruption."
+    "securityImplications": "Attackers might use DeleteDBCluster to delete crucial databases, causing data loss and service disruption.",
+    "commandLineSimulation": "aws rds delete-db-cluster --db-cluster-identifier TrailDiscoverDBCluster"
 }

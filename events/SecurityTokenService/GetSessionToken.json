@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/7.17/aws-sts-getsessiontoken-abuse.html"
         }
     ],
-    "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials."
+    "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",
+    "commandLineSimulation": "N/A"
 }

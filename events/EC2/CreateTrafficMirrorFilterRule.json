@@ -17,5 +17,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use CreateTrafficMirrorFilterRule to fine-tune traffic mirroring for selective interception."
+    "securityImplications": "Attackers might use CreateTrafficMirrorFilterRule to fine-tune traffic mirroring for selective interception.",
+    "commandLineSimulation": "N/A"
 }

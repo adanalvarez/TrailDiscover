@@ -44,5 +44,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
         }
     ],
-    "securityImplications": "Attackers use CreateLoginProfile to create login credentials for IAM users, allowing them access to the user via the AWS console."
+    "securityImplications": "Attackers use CreateLoginProfile to create login credentials for IAM users, allowing them access to the user via the AWS console.",
+    "commandLineSimulation": "N/A"
 }

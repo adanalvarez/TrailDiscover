@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetBucketVersioning to identify unsecured S3 buckets with versioning disabled, making it easier to manipulate or delete data."
+    "securityImplications": "Attackers might use GetBucketVersioning to identify unsecured S3 buckets with versioning disabled, making it easier to manipulate or delete data.",
+    "commandLineSimulation": "aws s3api get-bucket-versioning --bucket TrailDiscoverBucket"
 }

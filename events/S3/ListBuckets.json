@@ -46,5 +46,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use ListAllMyBuckets to identify potential targets for data breaches or unauthorized access."
+    "securityImplications": "Attackers might use ListAllMyBuckets to identify potential targets for data breaches or unauthorized access.",
+    "commandLineSimulation": "aws s3api list-buckets --query \"Buckets[].Name\""
 }

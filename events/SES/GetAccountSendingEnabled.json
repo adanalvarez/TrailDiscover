@@ -17,5 +17,6 @@
             "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
         }
     ],
-    "securityImplications": "Attackers might use GetAccountSendingEnabled to identify if an AWS account's email sending capabilities are enabled, potentially exploiting it for spamming or phishing activities."
+    "securityImplications": "Attackers might use GetAccountSendingEnabled to identify if an AWS account's email sending capabilities are enabled, potentially exploiting it for spamming or phishing activities.",
+    "commandLineSimulation": "aws ses get-account-sending-enabled"
 }

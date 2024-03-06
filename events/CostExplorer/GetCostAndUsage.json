@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetCostAndUsage to determine how active an account is by understanding the cost within a cloud account."
+    "securityImplications": "Attackers might use GetCostAndUsage to determine how active an account is by understanding the cost within a cloud account.",
+    "commandLineSimulation": "N/A"
 }

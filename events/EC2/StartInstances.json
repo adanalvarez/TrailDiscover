@@ -24,5 +24,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
         }
     ],
-    "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands."
+    "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands.",
+    "commandLineSimulation": "aws ec2 start-instances --instance-ids TrailDiscoverInstanceID"
 }

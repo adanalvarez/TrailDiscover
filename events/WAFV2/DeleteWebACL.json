@@ -17,5 +17,6 @@
             "link": "https://easttimor.github.io/aws-incident-response/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteWebACL to remove web access control lists, thereby disrupting web application firewall protections."
+    "securityImplications": "Attackers might use DeleteWebACL to remove web access control lists, thereby disrupting web application firewall protections.",
+    "commandLineSimulation": "aws wafv2 delete-web-acl --name TrailDiscoverWebACL --scope REGIONAL --id TrailDiscoverId --lock-token TrailDiscoverLockToken"
 }

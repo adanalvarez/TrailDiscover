@@ -25,5 +25,6 @@
             "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteDetector to disable GuardDuty, thereby evading detection of malicious activity."
+    "securityImplications": "Attackers might use DeleteDetector to disable GuardDuty, thereby evading detection of malicious activity.",
+    "commandLineSimulation": "aws guardduty delete-detector --detector-id TrailDiscoverDetectorId"
 }

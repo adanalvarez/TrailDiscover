@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateIPSet to modify the IP address filters, potentially allowing malicious traffic to bypass detection."
+    "securityImplications": "Attackers might use UpdateIPSet to modify the IP address filters, potentially allowing malicious traffic to bypass detection.",
+    "commandLineSimulation": "N/A"
 }

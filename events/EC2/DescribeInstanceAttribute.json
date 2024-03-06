@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeInstanceAttribute to inspect detailed configurations of EC2 instances."
+    "securityImplications": "Attackers might use DescribeInstanceAttribute to inspect detailed configurations of EC2 instances.",
+    "commandLineSimulation": "aws ec2 describe-instance-attribute --instance-id TrailDiscoverInstanceId --attribute TrailDiscoverAttribute"
 }

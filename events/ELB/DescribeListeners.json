@@ -17,5 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/rigging-the-rules-manipulating-aws-alb-to-mine-sensitive-data-20e33dbc4994"
         }
     ],
-    "securityImplications": "Attackers might use DescribeListeners to get information about the load balancers listeners for potential future modifications."
+    "securityImplications": "Attackers might use DescribeListeners to get information about the load balancers listeners for potential future modifications.",
+    "commandLineSimulation": "aws elbv2 describe-listeners"
 }

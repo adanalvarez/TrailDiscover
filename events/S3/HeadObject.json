@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use HeadObject to gather metadata about sensitive files stored in S3."
+    "securityImplications": "Attackers might use HeadObject to gather metadata about sensitive files stored in S3.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
             "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-iam-privesc"
         }
     ],
-    "securityImplications": "Attackers might use UpdateAccessKey to modify existing IAM user access keys, potentially gaining unauthorized access to AWS services."
+    "securityImplications": "Attackers might use UpdateAccessKey to modify existing IAM user access keys, potentially gaining unauthorized access to AWS services.",
+    "commandLineSimulation": "N/A"
 }

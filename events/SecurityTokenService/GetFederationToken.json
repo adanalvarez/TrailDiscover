@@ -26,5 +26,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/survive_access_key_deletion_with_sts_getfederationtoken/"
         }
     ],
-    "securityImplications": "Attackers might use GetFederationToken to gain temporary access credentials."
+    "securityImplications": "Attackers might use GetFederationToken to gain temporary access credentials.",
+    "commandLineSimulation": "aws sts get-federation-token --name TrailDiscover --policy TrailDiscoverPolicy"
 }

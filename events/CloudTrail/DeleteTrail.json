@@ -25,5 +25,6 @@
             "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
         }
     ],
-    "securityImplications": "Attackers might use DeleteTrail to disrupting AWS logging."
+    "securityImplications": "Attackers might use DeleteTrail to disrupting AWS logging.",
+    "commandLineSimulation": "aws cloudtrail delete-trail --name TrailDiscoverTrailName"
 }

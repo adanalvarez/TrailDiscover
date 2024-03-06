@@ -22,5 +22,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty."
+    "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty.",
+    "commandLineSimulation": "N/A"
 }

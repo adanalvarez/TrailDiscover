@@ -30,5 +30,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use CreateKeyPair to generate keys that can latter be used to access EC2s."
+    "securityImplications": "Attackers might use CreateKeyPair to generate keys that can latter be used to access EC2s.",
+    "commandLineSimulation": "aws ec2 create-key-pair --key-name TrailDiscoverKeyPair"
 }

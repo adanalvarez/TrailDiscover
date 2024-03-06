@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use GetRegions to identify potential targets in different geographical locations on AWS LightSail."
+    "securityImplications": "Attackers might use GetRegions to identify potential targets in different geographical locations on AWS LightSail.",
+    "commandLineSimulation": "N/A"
 }

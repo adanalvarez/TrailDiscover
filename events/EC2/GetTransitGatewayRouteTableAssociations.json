@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetTransitGatewayRouteTableAssociations to examine the associations between transit gateway route tables and attached resources, potentially to understand network routing policies."
+    "securityImplications": "Attackers might use GetTransitGatewayRouteTableAssociations to examine the associations between transit gateway route tables and attached resources, potentially to understand network routing policies.",
+    "commandLineSimulation": "N/A"
 }

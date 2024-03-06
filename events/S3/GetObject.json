@@ -62,5 +62,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/"
         }
     ],
-    "securityImplications": "Attackers might use GetObject to download data from S3 buckets."
+    "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/current/aws-iam-deactivation-of-mfa-device.html"
         }
     ],
-    "securityImplications": "Attackers might use DeactivateMFADevice to disable multi-factor authentication, potentially weakening account security."
+    "securityImplications": "Attackers might use DeactivateMFADevice to disable multi-factor authentication, potentially weakening account security.",
+    "commandLineSimulation": "N/A"
 }

@@ -21,5 +21,6 @@
             "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
         }
     ],
-    "securityImplications": "Attackers might use CreateDBSecurityGroup to create new security groups with lax rules, potentially allowing unauthorized access to the database."
+    "securityImplications": "Attackers might use CreateDBSecurityGroup to create new security groups with lax rules, potentially allowing unauthorized access to the database.",
+    "commandLineSimulation": "aws rds create-db-security-group --db-security-group-name TrailDiscoverSecurityGroupName --db-security-group-description TrailDiscoverDescription"
 }

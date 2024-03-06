@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetEbsEncryptionByDefault to determine if new Amazon EBS volumes are encrypted by default, seeking to exploit unencrypted volumes."
+    "securityImplications": "Attackers might use GetEbsEncryptionByDefault to determine if new Amazon EBS volumes are encrypted by default, seeking to exploit unencrypted volumes.",
+    "commandLineSimulation": "aws ec2 get-ebs-encryption-by-default"
 }

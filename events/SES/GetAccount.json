@@ -30,5 +30,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use GetAccount to gather sensitive information about the AWS SES account for malicious purposes."
+    "securityImplications": "Attackers might use GetAccount to gather sensitive information about the AWS SES account for malicious purposes.",
+    "commandLineSimulation": "aws sesv2 get-account"
 }

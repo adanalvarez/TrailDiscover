@@ -19,5 +19,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use RemoveTargets in AWS EventBridge to eliminate crucial targets from event rules, effectively disabling intended actions or notifications triggered by specific events."
+    "securityImplications": "Attackers might use RemoveTargets in AWS EventBridge to eliminate crucial targets from event rules, effectively disabling intended actions or notifications triggered by specific events.",
+    "commandLineSimulation": "aws events remove-targets --rule TrailDiscoverRule --ids TrailDiscoverTargetId"
 }

@@ -21,5 +21,6 @@
             "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteLogGroup to erase CloudWatch logs, erasing evidence of their activities within AWS."
+    "securityImplications": "Attackers might use DeleteLogGroup to erase CloudWatch logs, erasing evidence of their activities within AWS.",
+    "commandLineSimulation": "aws logs delete-log-group --log-group-name TrailDiscoverLogGroup"
 }

@@ -17,5 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/rigging-the-rules-manipulating-aws-alb-to-mine-sensitive-data-20e33dbc4994"
         }
     ],
-    "securityImplications": "Attackers might use CreateRule to add rules that allow them access bypassing potential restrictions such as authentication."
+    "securityImplications": "Attackers might use CreateRule to add rules that allow them access bypassing potential restrictions such as authentication.",
+    "commandLineSimulation": "N/A"
 }

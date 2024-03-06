@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation."
+    "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation.",
+    "commandLineSimulation": "N/A"
 }

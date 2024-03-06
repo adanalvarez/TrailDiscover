@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use CreateVolume to create a volume from a snapshot and mount it to an EC2 instance under their control."
+    "securityImplications": "Attackers might use CreateVolume to create a volume from a snapshot and mount it to an EC2 instance under their control.",
+    "commandLineSimulation": "N/A"
 }

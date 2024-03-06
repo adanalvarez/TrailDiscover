@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures."
+    "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
             "link": "hhttps://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
         }
     ],
-    "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations."
+    "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations.",
+    "commandLineSimulation": "N/A"
 }

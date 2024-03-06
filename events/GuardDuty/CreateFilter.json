@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use CreateFilter to manipulate GuardDuty settings, potentially allowing malicious activity to go undetected."
+    "securityImplications": "Attackers might use CreateFilter to manipulate GuardDuty settings, potentially allowing malicious activity to go undetected.",
+    "commandLineSimulation": "aws guardduty create-filter --detector-id TrailDiscoverDetectorId --name TrailDiscoverFilterName --finding-criteria '{\"Criterion\": {\"service.action.actionType\": {\"Eq\": [\"TrailDiscover\"]}}}' --action NOOP"
 }

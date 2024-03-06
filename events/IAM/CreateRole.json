@@ -21,5 +21,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access."
+    "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateJob to modify Glue job parameters, potentially disrupting data processing or injecting malicious code."
+    "securityImplications": "Attackers might use UpdateJob to modify Glue job parameters, potentially disrupting data processing or injecting malicious code.",
+    "commandLineSimulation": "aws glue update-job --job-name TrailDiscoverJob --job-update '{\"Role\": \"TrailDiscoverRole\", \"Command\": {\"Name\": \"glueetl\", \"ScriptLocation\": \"s3://mybucket/myscript.py\"}}'"
 }

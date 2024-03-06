@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-4-aws-config-resource-deletion.html#prebuilt-rule-7-16-4-aws-config-resource-deletion"
         }
     ],
-    "securityImplications": "Attackers might use DeleteConfigurationRecorder to disrupt AWS configuration auditing."
+    "securityImplications": "Attackers might use DeleteConfigurationRecorder to disrupt AWS configuration auditing.",
+    "commandLineSimulation": "aws configservice delete-configuration-recorder --configuration-recorder-name TrailDiscoverRecorder"
 }

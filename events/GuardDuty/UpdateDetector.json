@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateDetector to modify the settings of GuardDuty, potentially disabling or weakening security monitoring."
+    "securityImplications": "Attackers might use UpdateDetector to modify the settings of GuardDuty, potentially disabling or weakening security monitoring.",
+    "commandLineSimulation": "aws guardduty update-detector --detector-id TrailDiscoverDetectorId --enable --finding-publishing-frequency TrailDiscoverFrequency"
 }

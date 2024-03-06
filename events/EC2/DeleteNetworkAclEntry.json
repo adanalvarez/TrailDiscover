@@ -17,5 +17,6 @@
             "link": "https://www.intelligentdiscovery.io/controls/cloudwatch/cloudwatch-alarm-network-acl-change"
         }
     ],
-    "securityImplications": "Attackers might use DeleteNetworkAclEntry to remove specific rules from network access control lists, potentially opening network paths for unauthorized access."
+    "securityImplications": "Attackers might use DeleteNetworkAclEntry to remove specific rules from network access control lists, potentially opening network paths for unauthorized access.",
+    "commandLineSimulation": "N/A"
 }

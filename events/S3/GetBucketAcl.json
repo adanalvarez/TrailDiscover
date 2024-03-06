@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/vulnerabilities/s3-bucket-public-acl/"
         }
     ],
-    "securityImplications": "Attackers might use GetBucketAccessControlPolicy to gain unauthorized access to sensitive data stored in S3 buckets."
+    "securityImplications": "Attackers might use GetBucketAccessControlPolicy to gain unauthorized access to sensitive data stored in S3 buckets.",
+    "commandLineSimulation": "aws s3api get-bucket-acl --bucket TrailDiscoverBucket"
 }

@@ -17,5 +17,6 @@
             "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
         }
     ],
-    "securityImplications": "Attackers might use ListOriginationNumbers to identify origination numbers for potential smishing campaings."
+    "securityImplications": "Attackers might use ListOriginationNumbers to identify origination numbers for potential smishing campaings.",
+    "commandLineSimulation": "aws sns list-origination-numbers"
 }

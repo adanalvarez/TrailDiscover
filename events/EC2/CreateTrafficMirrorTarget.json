@@ -17,5 +17,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use CreateTrafficMirrorTarget to establish destinations for mirrored traffic, potentially facilitating the unauthorized observation or capture of sensitive information."
+    "securityImplications": "Attackers might use CreateTrafficMirrorTarget to establish destinations for mirrored traffic, potentially facilitating the unauthorized observation or capture of sensitive information.",
+    "commandLineSimulation": "aws ec2 create-traffic-mirror-target --description TrailDiscoverDescription --network-interface-id TrailDiscoverNetworkInterfaceId --network-load-balancer-arn TrailDiscoverNetworkLoadBalancerArn"
 }

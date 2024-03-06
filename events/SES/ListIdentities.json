@@ -38,5 +38,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers use ListIdentities from SES to enumerate email addresses or domains verified under the AWS account."
+    "securityImplications": "Attackers use ListIdentities from SES to enumerate email addresses or domains verified under the AWS account.",
+    "commandLineSimulation": "aws ses list-identities --identity-type \"EmailAddress\""
 }

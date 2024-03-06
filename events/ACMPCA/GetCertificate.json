@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/route53_modification_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use GetCertificate combined with Route 53 control to intercept and read data from AWS API calls."
+    "securityImplications": "Attackers might use GetCertificate combined with Route 53 control to intercept and read data from AWS API calls.",
+    "commandLineSimulation": "N/A"
 }

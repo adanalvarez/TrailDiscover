@@ -17,5 +17,6 @@
             "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
         }
     ],
-    "securityImplications": "Attackers might use ListTopics to identify potential SNS topics for unauthorized access or disruption."
+    "securityImplications": "Attackers might use ListTopics to identify potential SNS topics for unauthorized access or disruption.",
+    "commandLineSimulation": "N/A"
 }

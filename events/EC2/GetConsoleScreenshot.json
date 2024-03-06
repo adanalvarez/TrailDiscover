@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetConsoleScreenshot to capture the current state of an EC2 instance's console, potentially revealing sensitive information displayed on the screen or identifying misconfigurations."
+    "securityImplications": "Attackers might use GetConsoleScreenshot to capture the current state of an EC2 instance's console, potentially revealing sensitive information displayed on the screen or identifying misconfigurations.",
+    "commandLineSimulation": "aws ec2 get-console-screenshot --instance-id TrailDiscoverInstanceId"
 }

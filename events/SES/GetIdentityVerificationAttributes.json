@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetIdentityVerificationAttributes to gather sensitive information about the verification status of email addresses and domains."
+    "securityImplications": "Attackers might use GetIdentityVerificationAttributes to gather sensitive information about the verification status of email addresses and domains.",
+    "commandLineSimulation": "aws ses get-identity-verification-attributes --identities TrailDiscoverIdentity"
 }

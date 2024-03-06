@@ -17,5 +17,6 @@
             "link": "https://easttimor.github.io/aws-incident-response/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateIPSet to modify IP address rules, potentially allowing unauthorized access from IPs they control."
+    "securityImplications": "Attackers might use UpdateIPSet to modify IP address rules, potentially allowing unauthorized access from IPs they control.",
+    "commandLineSimulation": "N/A"
 }

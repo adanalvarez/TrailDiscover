@@ -17,5 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
         }
     ],
-    "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date."
+    "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date.",
+    "commandLineSimulation": "N/A"
 }

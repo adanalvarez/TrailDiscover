@@ -17,5 +17,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use CreateTrafficMirrorSession to initiate a session for mirroring network traffic, potentially for malicious monitoring or data exfiltration."
+    "securityImplications": "Attackers might use CreateTrafficMirrorSession to initiate a session for mirroring network traffic, potentially for malicious monitoring or data exfiltration.",
+    "commandLineSimulation": "N/A"
 }

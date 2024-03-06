@@ -25,5 +25,6 @@
             "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteDeliveryChannel to disrupt the flow of configuration history and compliance data in AWS."
+    "securityImplications": "Attackers might use DeleteDeliveryChannel to disrupt the flow of configuration history and compliance data in AWS.",
+    "commandLineSimulation": "aws configservice delete-delivery-channel --delivery-channel-name TrailDiscoverDeliveryChannel"
 }

@@ -17,5 +17,6 @@
             "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
         }
     ],
-    "securityImplications": "Attackers might use ScheduleKeyDeletion to schedule the deletion of crucial encryption keys, disrupting data security and access."
+    "securityImplications": "Attackers might use ScheduleKeyDeletion to schedule the deletion of crucial encryption keys, disrupting data security and access.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetBucketPolicy to identify weak security policies and exploit them for unauthorized access to S3 buckets."
+    "securityImplications": "Attackers might use GetBucketPolicy to identify weak security policies and exploit them for unauthorized access to S3 buckets.",
+    "commandLineSimulation": "aws s3api get-bucket-policy --bucket TrailDiscoverBucket"
 }

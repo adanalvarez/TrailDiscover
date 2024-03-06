@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetQueryResults from Amazon Athena to illicitly access and read potential sensitive data."
+    "securityImplications": "Attackers might use GetQueryResults from Amazon Athena to illicitly access and read potential sensitive data.",
+    "commandLineSimulation": "N/A"
 }

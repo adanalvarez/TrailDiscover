@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use SetDefaultPolicyVersion to revert IAM policies to less secure versions, potentially exposing sensitive resources."
+    "securityImplications": "Attackers might use SetDefaultPolicyVersion to revert IAM policies to less secure versions, potentially exposing sensitive resources.",
+    "commandLineSimulation": "N/A"
 }

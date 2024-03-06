@@ -17,5 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
         }
     ],
-    "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data."
+    "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data.",
+    "commandLineSimulation": "N/A"
 }

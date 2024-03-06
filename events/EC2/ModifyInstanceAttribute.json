@@ -29,5 +29,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/user_data_script_persistence/"
         }
     ],
-    "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts."
+    "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts.",
+    "commandLineSimulation": "aws ec2 modify-instance-attribute --instance-id TrailDiscoverInstanceId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
 }

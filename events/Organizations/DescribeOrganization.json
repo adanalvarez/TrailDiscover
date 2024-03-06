@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeOrganization to gather information about the structure and details of an AWS organization."
+    "securityImplications": "Attackers might use DescribeOrganization to gather information about the structure and details of an AWS organization.",
+    "commandLineSimulation": "N/A"
 }

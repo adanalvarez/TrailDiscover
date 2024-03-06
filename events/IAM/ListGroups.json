@@ -17,5 +17,6 @@
             "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum"
         }
     ],
-    "securityImplications": "Attackers might use ListGroups to identify potential targets by gathering information about IAM groups and their permissions."
+    "securityImplications": "Attackers might use ListGroups to identify potential targets by gathering information about IAM groups and their permissions.",
+    "commandLineSimulation": "N/A"
 }

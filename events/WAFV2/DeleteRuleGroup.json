@@ -21,5 +21,6 @@
             "link": "https://easttimor.github.io/aws-incident-response/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteRuleGroup to disable security rules, making the system vulnerable to cyber attacks."
+    "securityImplications": "Attackers might use DeleteRuleGroup to disable security rules, making the system vulnerable to cyber attacks.",
+    "commandLineSimulation": "N/A"
 }

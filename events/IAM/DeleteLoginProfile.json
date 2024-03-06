@@ -18,5 +18,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DeleteLoginProfile to remove user's login credentials, preventing legitimate access to AWS services. Also, it might be used to delete a previously added profile to avoid detection."
+    "securityImplications": "Attackers might use DeleteLoginProfile to remove user's login credentials, preventing legitimate access to AWS services. Also, it might be used to delete a previously added profile to avoid detection.",
+    "commandLineSimulation": "N/A"
 }

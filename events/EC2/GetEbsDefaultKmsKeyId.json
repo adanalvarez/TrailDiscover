@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetEbsDefaultKmsKeyId to identify the default AWS Key Management Service (KMS) key used for encrypting new Amazon EBS volumes."
+    "securityImplications": "Attackers might use GetEbsDefaultKmsKeyId to identify the default AWS Key Management Service (KMS) key used for encrypting new Amazon EBS volumes.",
+    "commandLineSimulation": "aws ec2 get-ebs-default-kms-key-id"
 }

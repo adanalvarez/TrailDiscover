@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers use CreateEmailIdentity to create its own identity for sending spam or phishing emails later."
+    "securityImplications": "Attackers use CreateEmailIdentity to create its own identity for sending spam or phishing emails later.",
+    "commandLineSimulation": "N/A"
 }

@@ -25,5 +25,6 @@
             "link": "https://www.clearvector.com/blog/lambda-spy/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration."
+    "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration.",
+    "commandLineSimulation": "N/A"
 }

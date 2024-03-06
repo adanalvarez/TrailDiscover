@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use RegisterTaskDefinition to deploy containers with malicious tasks in AWS ECS."
+    "securityImplications": "Attackers might use RegisterTaskDefinition to deploy containers with malicious tasks in AWS ECS.",
+    "commandLineSimulation": "N/A"
 }
