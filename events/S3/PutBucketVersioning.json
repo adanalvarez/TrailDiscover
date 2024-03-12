@@ -24,5 +24,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
         }
     ],
-    "securityImplications": "Attackers might set the versioning to 'Suspended' before deleting data. Attackers might enable versioning to add bucket replication to exfiltrate data."
+    "securityImplications": "Attackers might set the versioning to 'Suspended' before deleting data. Attackers might enable versioning to add bucket replication to exfiltrate data.",
+    "commandLineSimulation": "aws s3api put-bucket-versioning --bucket TrailDiscoverBucket --versioning-configuration Status=Enabled"
 }

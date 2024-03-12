@@ -28,5 +28,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteUserPolicy to remove security policies and gain unauthorized access to AWS resources."
+    "securityImplications": "Attackers might use DeleteUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
+    "commandLineSimulation": "aws iam delete-user-policy --user-name TrailDiscover --policy-name TrailDiscover"
 }

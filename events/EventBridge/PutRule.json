@@ -19,5 +19,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions or triggering unwarranted responses within the environment."
+    "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions or triggering unwarranted responses within the environment.",
+    "commandLineSimulation": "aws events put-rule --name TrailDiscoverRule --schedule-expression 'rate(5 minutes)' --state ENABLED --description \"TrailDiscover rule\""
 }

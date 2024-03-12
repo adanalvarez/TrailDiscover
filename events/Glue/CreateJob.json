@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use CreateJob to create a glue job with a role with higer privileges to gain these privileges."
+    "securityImplications": "Attackers might use CreateJob to create a glue job with a role with higer privileges to gain these privileges.",
+    "commandLineSimulation": "aws glue create-job --name TrailDiscoverJob --role TrailDiscoverRole --command Name=pythonshell,ScriptLocation=s3://TrailDiscoverBucket/TrailDiscoverScript.py --default-arguments '{\"--job-language\": \"python\"}'"
 }

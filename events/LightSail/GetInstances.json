@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use GetInstances to gather information about running instances for potential exploitation."
+    "securityImplications": "Attackers might use GetInstances to gather information about running instances for potential exploitation.",
+    "commandLineSimulation": "aws lightsail get-instances"
 }

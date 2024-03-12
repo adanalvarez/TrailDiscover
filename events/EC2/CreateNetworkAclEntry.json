@@ -21,5 +21,6 @@
             "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
         }
     ],
-    "securityImplications": "Attackers might use CreateNetworkAclEntry to allow traffic to the network from an IP they control."
+    "securityImplications": "Attackers might use CreateNetworkAclEntry to allow traffic to the network from an IP they control.",
+    "commandLineSimulation": "aws ec2 create-network-acl-entry --network-acl-id acl-5fb85d36 --ingress --rule-number 100 --protocol udp --port-range From=53,To=53 --cidr-block 0.0.0.0/0 --rule-action allow"
 }

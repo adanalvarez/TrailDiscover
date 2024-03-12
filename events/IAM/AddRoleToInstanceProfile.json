@@ -17,5 +17,6 @@
             "link": "https://pswalia2u.medium.com/cloudgoat-aws-ctf-solution-scenerio-5-iam-privesc-by-attachment-22145650f5f5"
         }
     ],
-    "securityImplications": "Attackers might use AddRoleToInstanceProfile to escalate privileges or gain unauthorized access to AWS resources."
+    "securityImplications": "Attackers might use AddRoleToInstanceProfile to escalate privileges or gain unauthorized access to AWS resources.",
+    "commandLineSimulation": "aws iam add-role-to-instance-profile --role-name TrailDiscover --instance-profile-name TrailDiscover"
 }

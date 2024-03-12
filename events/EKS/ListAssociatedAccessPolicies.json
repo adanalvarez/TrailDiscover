@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use ListAssociatedAccessPolicies to enumerate policies associated with resources in AWS services, identifying overly permissive access that can be exploited to escalate privileges."
+    "securityImplications": "Attackers might use ListAssociatedAccessPolicies to enumerate policies associated with resources in AWS services, identifying overly permissive access that can be exploited to escalate privileges.",
+    "commandLineSimulation": "aws eks list-associated-access-policies --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
 }

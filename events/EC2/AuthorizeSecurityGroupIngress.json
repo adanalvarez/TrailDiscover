@@ -52,5 +52,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/opening-security-group-port/"
         }
     ],
-    "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally."
+    "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",
+    "commandLineSimulation": "aws ec2 authorize-security-group-ingress --group-id sg-0683fcf7a41c82593 --protocol tcp --port 22 --cidr 203.0.113.0/24"
 }

@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use CreateDevEndpoint in AWS Glue to escalate privileges or provision development endpoints, potentially exploiting them."
+    "securityImplications": "Attackers might use CreateDevEndpoint in AWS Glue to escalate privileges or provision development endpoints, potentially exploiting them.",
+    "commandLineSimulation": "aws glue create-dev-endpoint --endpoint-name TrailDiscover --role-arn arn:aws:iam::111122223333:role/TrailDiscover"
 }

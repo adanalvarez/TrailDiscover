@@ -17,5 +17,6 @@
             "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
         }
     ],
-    "securityImplications": "Attackers might use GetSMSSandboxAccountStatus to monitor the status of a target's AWS SNS sandbox account for potential usage for smishing."
+    "securityImplications": "Attackers might use GetSMSSandboxAccountStatus to monitor the status of a target's AWS SNS sandbox account for potential usage for smishing.",
+    "commandLineSimulation": "aws sns get-sms-sandbox-account-status"
 }

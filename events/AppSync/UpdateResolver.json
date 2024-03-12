@@ -19,5 +19,6 @@
             "link": "https://medium.com/@adan.alvarez/distorting-the-sync-how-aws-appsync-can-be-turned-into-an-attackers-backdoor-8c015b8e52b8"
         }
     ],
-    "securityImplications": "Attackers might use UpdateResolver to execute custom code that could allow potential access to data and bypass protections."
+    "securityImplications": "Attackers might use UpdateResolver to execute custom code that could allow potential access to data and bypass protections.",
+    "commandLineSimulation": "aws appsync update-resolver --api-id TrailDiscoverApiId --type-name TrailDiscoverTypeName --field-name TrailDiscoverFieldName --pipeline-config functions=TrailDiscoverFunctions --request-mapping-template TrailDiscoverRequestMappingTemplate --response-mapping-template TrailDiscoverResponseMappingTemplate"
 }

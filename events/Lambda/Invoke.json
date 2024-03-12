@@ -23,5 +23,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use Invoke to execute previously modified functions in AWS Lambda."
+    "securityImplications": "Attackers might use Invoke to execute previously modified functions in AWS Lambda.",
+    "commandLineSimulation": "N/A"
 }

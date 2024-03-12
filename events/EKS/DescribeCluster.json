@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use DescribeCluster to gain insights into the configuration and status of AWS EKS clusters."
+    "securityImplications": "Attackers might use DescribeCluster to gain insights into the configuration and status of AWS EKS clusters.",
+    "commandLineSimulation": "aws eks describe-cluster --name TrailDiscoverCluster"
 }

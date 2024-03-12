@@ -17,5 +17,6 @@
             "link": "https://www.intelligentdiscovery.io/controls/cloudwatch/cloudwatch-alarm-network-acl-change"
         }
     ],
-    "securityImplications": "Attackers might use DeleteNetworkAcl to remove network access control lists, potentially opening up network segments for unauthorized access."
+    "securityImplications": "Attackers might use DeleteNetworkAcl to remove network access control lists, potentially opening up network segments for unauthorized access.",
+    "commandLineSimulation": "aws ec2 delete-network-acl --network-acl-id TrailDiscoverNetworkAclId"
 }

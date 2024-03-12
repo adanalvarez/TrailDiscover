@@ -82,5 +82,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions."
+    "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions.",
+    "commandLineSimulation": "aws iam create-user --user-name TrailDiscover"
 }

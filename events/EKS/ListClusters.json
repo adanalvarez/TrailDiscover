@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use ListClusters to inventory AWS EKS clusters, identifying active clusters for further exploration or to pinpoint potential targets for subsequent attacks."
+    "securityImplications": "Attackers might use ListClusters to inventory AWS EKS clusters, identifying active clusters for further exploration or to pinpoint potential targets for subsequent attacks.",
+    "commandLineSimulation": "aws eks list-clusters"
 }

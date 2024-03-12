@@ -34,5 +34,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use ListUsers to enumerate IAM users for further attacks, such as adding keys or creating a login profile for persistence."
+    "securityImplications": "Attackers might use ListUsers to enumerate IAM users for further attacks, such as adding keys or creating a login profile for persistence.",
+    "commandLineSimulation": "aws iam list-users"
 }

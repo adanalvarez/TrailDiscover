@@ -22,5 +22,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/route53_modification_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use ChangeResourceRecordSets to redirect traffic to malicious websites."
+    "securityImplications": "Attackers might use ChangeResourceRecordSets to redirect traffic to malicious websites.",
+    "commandLineSimulation": "N/A"
 }

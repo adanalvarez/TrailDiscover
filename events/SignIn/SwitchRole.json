@@ -17,5 +17,6 @@
             "link": "https://www.invictus-ir.com/news/aws-cloudtrail-cheat-sheet"
         }
     ],
-    "securityImplications": "Attackers might use SwitchRole when using the console to escalate privileges and gain unauthorized access to AWS resources."
+    "securityImplications": "Attackers might use SwitchRole when using the console to escalate privileges and gain unauthorized access to AWS resources.",
+    "commandLineSimulation": "N/A"
 }

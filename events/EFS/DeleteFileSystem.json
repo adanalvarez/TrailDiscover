@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/7.17/aws-efs-file-system-or-mount-deleted.html"
         }
     ],
-    "securityImplications": "Attackers might use DeleteFileSystem in AWS EFS to deliberately erase file systems, leading to data loss."
+    "securityImplications": "Attackers might use DeleteFileSystem in AWS EFS to deliberately erase file systems, leading to data loss.",
+    "commandLineSimulation": "aws efs delete-file-system --file-system-id fs-c7a0456e"
 }

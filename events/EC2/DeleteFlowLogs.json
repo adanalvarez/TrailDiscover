@@ -25,5 +25,6 @@
             "link": "https://witoff.medium.com/proactive-cloud-security-w-aws-organizations-d58695bcae16"
         }
     ],
-    "securityImplications": "Attackers might use DeleteFlowLogs to remove records of network traffic within AWS."
+    "securityImplications": "Attackers might use DeleteFlowLogs to remove records of network traffic within AWS.",
+    "commandLineSimulation": "aws ec2 delete-flow-logs --flow-log-ids TrailDiscoverFlowLogId"
 }

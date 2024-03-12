@@ -31,5 +31,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources."
+    "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
+    "commandLineSimulation": "aws iam put-user-policy --user-name TrailDiscover --policy-name TrailDiscover --policy-document {}"
 }

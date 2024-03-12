@@ -1,8 +1,8 @@
 {
-    "eventName": "UpdateDistribution",
+    "eventName": "PublishFunction2020_05_31",
     "eventSource": "cloudfront.amazonaws.com",
     "awsService": "CloudFront",
-    "description": "Updates the configuration for a CloudFront distribution.",
+    "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
     "mitreAttackTactics": [
         "TA0009 - Collection"
     ],
@@ -17,5 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
         }
     ],
-    "securityImplications": "Attackers might use UpdateDistribution to add a malicious configuration such as a function to exfiltrate data."
+    "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data.",
+    "commandLineSimulation": "aws cloudfront publish-function --name trail-discover-function --if-match trail-discover-function"
 }

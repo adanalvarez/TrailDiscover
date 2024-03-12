@@ -22,5 +22,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DeleteAccessKey to revoke legitimate user access to AWS services. Also, it can be used to delete previously used keys to avoid detection."
+    "securityImplications": "Attackers might use DeleteAccessKey to revoke legitimate user access to AWS services. Also, it can be used to delete previously used keys to avoid detection.",
+    "commandLineSimulation": "aws iam delete-access-key --access-key-id AKIDPMS9RO4H3FEXAMPLE --user-name TrailDiscover"
 }

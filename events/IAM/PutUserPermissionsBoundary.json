@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use PutUserPermissionsBoundary to modify the permissions boundary for an IAM user, potentially escalating privileges or enabling unauthorized access."
+    "securityImplications": "Attackers might use PutUserPermissionsBoundary to modify the permissions boundary for an IAM user, potentially escalating privileges or enabling unauthorized access.",
+    "commandLineSimulation": "aws iam put-user-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --user-name TrailDiscover"
 }

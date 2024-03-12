@@ -29,5 +29,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets."
+    "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets.",
+    "commandLineSimulation": "N/A"
 }

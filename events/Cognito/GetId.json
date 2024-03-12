@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/cognito_identity_pool_excessive_privileges/#exploitation"
         }
     ],
-    "securityImplications": "Attackers might use GetId to get an IdentityID that might be then used to get AWS credentials."
+    "securityImplications": "Attackers might use GetId to get an IdentityID that might be then used to get AWS credentials.",
+    "commandLineSimulation": "N/A"
 }

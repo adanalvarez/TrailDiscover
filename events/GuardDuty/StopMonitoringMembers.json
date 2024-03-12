@@ -17,5 +17,6 @@
             "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
         }
     ],
-    "securityImplications": "Attackers might use StopMonitoringMembers to halt the surveillance of specific AWS accounts, reducing security visibility."
+    "securityImplications": "Attackers might use StopMonitoringMembers to halt the surveillance of specific AWS accounts, reducing security visibility.",
+    "commandLineSimulation": "aws guardduty stop-monitoring-members --account-ids TrailDiscoverAccountIds --detector-id TrailDiscoverDetectorId"
 }

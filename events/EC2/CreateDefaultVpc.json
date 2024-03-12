@@ -19,5 +19,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use CreateDefaultVpc to create a VPC and lauch EC2 instances."
+    "securityImplications": "Attackers might use CreateDefaultVpc to create a VPC and lauch EC2 instances.",
+    "commandLineSimulation": "aws ec2 create-default-vpc"
 }

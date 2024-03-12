@@ -19,5 +19,6 @@
             "link": "https://medium.com/@adan.alvarez/distorting-the-sync-how-aws-appsync-can-be-turned-into-an-attackers-backdoor-8c015b8e52b8"
         }
     ],
-    "securityImplications": "Attackers might use UpdateGraphqlApi to add additional authentications options. Bypassing current authentication and potentially allowing persistent access to data."
+    "securityImplications": "Attackers might use UpdateGraphqlApi to add additional authentications options. Bypassing current authentication and potentially allowing persistent access to data.",
+    "commandLineSimulation": "aws appsync update-graphql-api --api-id TrailDiscoverApiId --name TrailDiscoverName --log-config cloudWatchLogsRoleArn=TrailDiscoverRoleArn,fieldLogLevel=TrailDiscoverLogLevel"
 }

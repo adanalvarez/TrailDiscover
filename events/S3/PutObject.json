@@ -21,5 +21,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets."
+    "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",
+    "commandLineSimulation": "N/A"
 }

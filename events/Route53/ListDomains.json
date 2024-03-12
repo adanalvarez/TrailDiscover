@@ -1,6 +1,6 @@
 {
     "eventName": "ListDomains",
-    "eventSource": "route53.amazonaws.com",
+    "eventSource": "route53domains.amazonaws.com",
     "awsService": "Route53",
     "description": "This operation returns all the domain names registered with Amazon Route 53 for the current AWS account if no filtering conditions are used.",
     "mitreAttackTactics": [
@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks."
+    "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks.",
+    "commandLineSimulation": "aws route53domains list-domains --region us-east-1"
 }

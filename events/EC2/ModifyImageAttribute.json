@@ -17,5 +17,6 @@
             "link": "https://research.splunk.com/cloud/f2132d74-cf81-4c5e-8799-ab069e67dc9f/"
         }
     ],
-    "securityImplications": "Attackers might use ModifyImageAttribute to alter permissions or settings of Amazon Machine Images (AMIs), potentially exposing them to unauthorized users or making them public."
+    "securityImplications": "Attackers might use ModifyImageAttribute to alter permissions or settings of Amazon Machine Images (AMIs), potentially exposing them to unauthorized users or making them public.",
+    "commandLineSimulation": "aws ec2 modify-image-attribute --image-id TrailDiscoverImageId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
 }

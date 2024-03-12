@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeCarrierGateways to uncover details about carrier gateways in an AWS environment, which could reveal network configurations."
+    "securityImplications": "Attackers might use DescribeCarrierGateways to uncover details about carrier gateways in an AWS environment, which could reveal network configurations.",
+    "commandLineSimulation": "aws ec2 describe-carrier-gateways --carrier-gateway-ids TrailDiscoverCarrierGatewayId"
 }

@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use ListInstanceProfiles to identify potential targets for privilege escalation attacks in AWS."
+    "securityImplications": "Attackers might use ListInstanceProfiles to identify potential targets for privilege escalation attacks in AWS.",
+    "commandLineSimulation": "aws iam list-instance-profiles"
 }

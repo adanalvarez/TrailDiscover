@@ -52,5 +52,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
         }
     ],
-    "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources."
+    "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",
+    "commandLineSimulation": "aws iam create-access-key --user-name TrailDiscover"
 }

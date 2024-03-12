@@ -17,5 +17,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use CreateTrafficMirrorFilter to clandestinely mirror network traffic for analysis or exfiltration."
+    "securityImplications": "Attackers might use CreateTrafficMirrorFilter to clandestinely mirror network traffic for analysis or exfiltration.",
+    "commandLineSimulation": "aws ec2 create-traffic-mirror-filter --description 'TCP Filter'"
 }

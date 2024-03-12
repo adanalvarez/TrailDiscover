@@ -26,5 +26,6 @@
             "link": "https://twitter.com/christophetd/status/1574681313218506753"
         }
     ],
-    "securityImplications": "SharedSnapshotCopyInitiated might be a signal of an attacker copying a snapshot to their account."
+    "securityImplications": "SharedSnapshotCopyInitiated might be a signal of an attacker copying a snapshot to their account.",
+    "commandLineSimulation": "N/A"
 }

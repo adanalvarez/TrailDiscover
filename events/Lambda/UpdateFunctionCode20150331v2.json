@@ -1,5 +1,5 @@
 {
-    "eventName": "UpdateFunctionCode",
+    "eventName": "UpdateFunctionCode20150331v2",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.",
@@ -33,5 +33,6 @@
             "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
         }
     ],
-    "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code."
+    "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
+    "commandLineSimulation": "aws lambda update-function-code --function-name  my-function"
 }

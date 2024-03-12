@@ -31,5 +31,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers use AttachUserPolicy to grant malicious policies to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources."
+    "securityImplications": "Attackers use AttachUserPolicy to grant malicious policies to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
+    "commandLineSimulation": "aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AdministratorAccess --user-name TrailDiscover"
 }

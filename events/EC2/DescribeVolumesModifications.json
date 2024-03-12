@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeVolumesModifications to track changes in EBS volumes."
+    "securityImplications": "Attackers might use DescribeVolumesModifications to track changes in EBS volumes.",
+    "commandLineSimulation": "aws ec2 describe-volumes-modifications --volume-ids TrailDiscoverVolumeId"
 }

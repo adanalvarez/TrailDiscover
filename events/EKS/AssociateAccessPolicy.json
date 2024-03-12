@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters."
+    "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters.",
+    "commandLineSimulation": "aws eks associate-access-policy --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy --access-scope type=cluster"
 }

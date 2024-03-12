@@ -21,5 +21,6 @@
             "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
         }
     ],
-    "securityImplications": "Attackers might use AuthorizeDBSecurityGroupIngress to allow unauthorized access to the database by modifying security group rules."
+    "securityImplications": "Attackers might use AuthorizeDBSecurityGroupIngress to allow unauthorized access to the database by modifying security group rules.",
+    "commandLineSimulation": "aws rds authorize-db-security-group-ingress --db-security-group-name TrailDiscoverDBSecurityGroupName --cidrip TrailDiscoverCIDRIP"
 }

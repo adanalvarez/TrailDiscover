@@ -30,5 +30,6 @@
             "link": "https://sysdig.com/blog/aws-rds-security-events-sysdig/"
         }
     ],
-    "securityImplications": "Attackers might use ModifyDBSnapshotAttribute to alter database snapshot permissions, potentially gaining unauthorized access to sensitive data via sharing it."
+    "securityImplications": "Attackers might use ModifyDBSnapshotAttribute to alter database snapshot permissions, potentially gaining unauthorized access to sensitive data via sharing it.",
+    "commandLineSimulation": "aws rds modify-db-snapshot-attribute --db-snapshot-identifier TrailDiscoverDBSnapshotIdentifier --attribute-name TrailDiscoverAttributeName --values-to-add TrailDiscoverValuesToAdd"
 }

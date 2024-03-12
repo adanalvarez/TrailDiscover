@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/7.17/aws-s3-bucket-configuration-deletion.html"
         }
     ],
-    "securityImplications": "Attackers might use DeleteBucketPolicy to remove security policies and gain unauthorized access to S3 buckets."
+    "securityImplications": "Attackers might use DeleteBucketPolicy to remove security policies and gain unauthorized access to S3 buckets.",
+    "commandLineSimulation": "aws s3api delete-bucket-policy --bucket TrailDiscoverBucketName"
 }

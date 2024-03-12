@@ -54,5 +54,6 @@
             "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
         }
     ],
-    "securityImplications": "Attackers might access via AWS console (generating a ConsoleLogin event)."
+    "securityImplications": "Attackers might access via AWS console (generating a ConsoleLogin event).",
+    "commandLineSimulation": "N/A"
 }

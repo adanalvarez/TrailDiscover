@@ -19,5 +19,6 @@
             "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
         }
     ],
-    "securityImplications": "Attackers might use GetParameters to gather sensitive information such as api keys or other secrets."
+    "securityImplications": "Attackers might use GetParameters to gather sensitive information such as api keys or other secrets.",
+    "commandLineSimulation": "aws ssm get-parameters --names TrailDiscoverParameters"
 }

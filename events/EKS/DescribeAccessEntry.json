@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use DescribeAccessEntry for reconnaissance, gathering detailed information about access configurations within AWS EKS."
+    "securityImplications": "Attackers might use DescribeAccessEntry for reconnaissance, gathering detailed information about access configurations within AWS EKS.",
+    "commandLineSimulation": "aws eks describe-access-entry --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
 }

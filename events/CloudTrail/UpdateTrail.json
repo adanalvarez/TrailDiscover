@@ -21,5 +21,6 @@
             "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
         }
     ],
-    "securityImplications": "Attackers might use UpdateTrail to disrupting AWS logging."
+    "securityImplications": "Attackers might use UpdateTrail to disrupting AWS logging.",
+    "commandLineSimulation": "aws cloudtrail update-trail --name TrailDiscoverName --s3-bucket-name TrailDiscoverBucketName"
 }

@@ -26,5 +26,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use ListServiceQuotas to identify potential services to exploit by understanding their usage limits."
+    "securityImplications": "Attackers might use ListServiceQuotas to identify potential services to exploit by understanding their usage limits.",
+    "commandLineSimulation": "aws service-quotas list-service-quotas --service-code TrailDiscoverServiceCode"
 }

@@ -22,5 +22,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account."
+    "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account.",
+    "commandLineSimulation": "aws iam update-assume-role-policy --role-name TrailDiscover-Role --policy-document {}"
 }

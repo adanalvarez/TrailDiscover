@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
         }
     ],
-    "securityImplications": "Attackers might use GetHostedZoneCount to gather information about the number of hosted zones, potentially identifying targets for DNS attacks."
+    "securityImplications": "Attackers might use GetHostedZoneCount to gather information about the number of hosted zones, potentially identifying targets for DNS attacks.",
+    "commandLineSimulation": "aws route53 get-hosted-zone-count"
 }

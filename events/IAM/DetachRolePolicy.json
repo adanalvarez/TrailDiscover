@@ -24,5 +24,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use DetachRolePolicy to remove crucial permissions from IAM roles, disrupting AWS services."
+    "securityImplications": "Attackers might use DetachRolePolicy to remove crucial permissions from IAM roles, disrupting AWS services.",
+    "commandLineSimulation": "aws iam detach-role-policy --role-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/FederatedTesterAccessPolicy"
 }

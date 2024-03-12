@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeDhcpOptions to inspect DHCP configurations in an AWS VPC."
+    "securityImplications": "Attackers might use DescribeDhcpOptions to inspect DHCP configurations in an AWS VPC.",
+    "commandLineSimulation": "aws ec2 describe-dhcp-options --dhcp-options-ids TrailDiscoverDhcpOptionsId"
 }

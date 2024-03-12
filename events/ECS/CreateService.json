@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use CreateService in AWS ECS to orchestrate and deploy unauthorized services, potentially for malicious activities such as resource hijacking."
+    "securityImplications": "Attackers might use CreateService in AWS ECS to orchestrate and deploy unauthorized services, potentially for malicious activities such as resource hijacking.",
+    "commandLineSimulation": "aws ecs create-service --service-name TrailDiscoverService --task-definition TrailDiscoverTaskDefinition"
 }

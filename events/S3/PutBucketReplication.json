@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
         }
     ],
-    "securityImplications": "Attackers might use PutBucketReplication to replicate sensitive data to unauthorized S3 buckets controlled by the attacker."
+    "securityImplications": "Attackers might use PutBucketReplication to replicate sensitive data to unauthorized S3 buckets controlled by the attacker.",
+    "commandLineSimulation": "aws s3api put-bucket-replication --bucket AWSDOC-EXAMPLE-BUCKET1 --replication-configuration '{\"Role\":\"\",\"Rules\":[]}'"
 }

@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetLogRecord to precisely extract information from CloudWatch logs, potentially exposing sensitive data or insights into AWS operational activities."
+    "securityImplications": "Attackers might use GetLogRecord to precisely extract information from CloudWatch logs, potentially exposing sensitive data or insights into AWS operational activities.",
+    "commandLineSimulation": "N/A"
 }

@@ -17,5 +17,6 @@
             "link": "https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features"
         }
     ],
-    "securityImplications": "Attackers might use CreateAccessEntry to craft access entries that link to high-privileged policies, effectively granting themselves unauthorized admin-level access to clusters."
+    "securityImplications": "Attackers might use CreateAccessEntry to craft access entries that link to high-privileged policies, effectively granting themselves unauthorized admin-level access to clusters.",
+    "commandLineSimulation": "aws eks create-access-entry --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
 }

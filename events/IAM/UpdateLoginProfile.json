@@ -31,5 +31,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it."
+    "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it.",
+    "commandLineSimulation": "aws iam update-login-profile --user-name TrailDiscover --password TrailDiscover"
 }

@@ -28,5 +28,6 @@
             "link": "https://hackingthe.cloud/aws/post_exploitation/run_shell_commands_on_ec2/"
         }
     ],
-    "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances."
+    "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances.",
+    "commandLineSimulation": "aws ssm send-command --instance-ids \"TrailDiscoverInstanceID\" --document-name \"AWS-RunShellScript\" --parameters commands=ls --output text"
 }

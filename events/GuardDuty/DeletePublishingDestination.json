@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use DeletePublishingDestination to disrupt the security monitoring and incident response process in AWS GuardDuty."
+    "securityImplications": "Attackers might use DeletePublishingDestination to disrupt the security monitoring and incident response process in AWS GuardDuty.",
+    "commandLineSimulation": "aws guardduty delete-publishing-destination --detector-id TrailDiscoverDetectorId --destination-id TrailDiscoverDestinationId"
 }

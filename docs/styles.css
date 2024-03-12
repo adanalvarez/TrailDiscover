@@ -3,6 +3,11 @@ body {
     background-color: #8ECAE6;
     color: #333;
 }
+
+pre {
+    margin-bottom: 0px;
+}
+
 .logo {
     display: block;
     margin: 0 auto;
@@ -65,6 +70,11 @@ body {
     padding: 10px;
     margin: 20px;
 }
+
+.command-line-container { background-color: #f7f7f7; padding: 10px; position: relative; }
+
+.copy-icon { cursor: pointer; position: absolute; top: 10px; right: 10px; }
+
 @media (max-width: 1200px) { 
     .gridjs-td, .gridjs-th {
         padding: 10px; 

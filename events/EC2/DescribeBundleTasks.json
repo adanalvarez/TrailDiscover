@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use DescribeBundleTasks to gain insights into the bundling tasks of EC2 instances."
+    "securityImplications": "Attackers might use DescribeBundleTasks to gain insights into the bundling tasks of EC2 instances.",
+    "commandLineSimulation": "aws ec2 describe-bundle-tasks --bundle-ids TrailDiscoverBundleId"
 }

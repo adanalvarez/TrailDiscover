@@ -19,5 +19,6 @@
             "link": "https://www.rezonate.io/blog/github-misconfigurations-put-gcp-aws-in-account-takeover-risk/"
         }
     ],
-    "securityImplications": "Attackers might use AssumeRoleWithWebIdentity to impersonate legitimate users and gain unauthorized access to an AWS role."
+    "securityImplications": "Attackers might use AssumeRoleWithWebIdentity to impersonate legitimate users and gain unauthorized access to an AWS role.",
+    "commandLineSimulation": "N/A"
 }

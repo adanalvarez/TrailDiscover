@@ -17,5 +17,6 @@
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use ListIPSets to identify what IPs won't generate an alert."
+    "securityImplications": "Attackers might use ListIPSets to identify what IPs won't generate an alert.",
+    "commandLineSimulation": "aws guardduty list-ip-sets --detector-id TrailDiscoverDetectorId"
 }

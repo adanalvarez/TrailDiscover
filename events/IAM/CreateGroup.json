@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/current/aws-iam-group-creation.html"
         }
     ],
-    "securityImplications": "Attackers use CreateGroup to create a group that they can use to escalate privileges."
+    "securityImplications": "Attackers use CreateGroup to create a group that they can use to escalate privileges.",
+    "commandLineSimulation": "aws iam create-group --group-name TrailDiscover"
 }

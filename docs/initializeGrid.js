@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     {
                         name: "Security Implications",
                         hidden: true,                   
+                    },
+                    {
+                        name: "Command Line Simulation",
+                        hidden: true,                   
                     }
                 ],
                 data: eventsData,
@@ -103,7 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     event.researchLinks ? event.researchLinks.length : 0,
                     event.researchLinks,
                     event.usedInWild ? "True" : "Unknown",
-                    event.securityImplications
+                    event.securityImplications,
+                    event.commandLineSimulation
                 ]);
                 renderGrid(mappedData);
             })
@@ -185,9 +190,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         // Security Implications
+        
         const securityImplications = document.createElement('p');
-        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${data[data.length - 1]}`;
+        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${data[11]}`;
         modalBody.appendChild(securityImplications);
+
+        // Command Line
+        const commandLine = document.createElement('p');
+        commandLine.innerHTML = `<strong>Command Line:</strong>`;
+        modalBody.appendChild(commandLine);
+
+        const commandLineContainer = document.createElement('div');
+        commandLineContainer.className = 'command-line-container';
+
+        const commandLineText = document.createElement('pre');
+        commandLineText.textContent = data[12];
+        commandLineContainer.appendChild(commandLineText);
+
+        const copyIcon = document.createElement('i');
+        copyIcon.className = 'copy-icon fas fa-copy';
+        copyIcon.onclick = function() {
+            navigator.clipboard.writeText(commandLineText.textContent);
+        };
+
+        commandLineContainer.appendChild(copyIcon);
+        modalBody.appendChild(commandLineContainer);
+
     
         // Create a new instance of the Modal and show it
         const eventModal = new bootstrap.Modal(document.getElementById('eventModal'));

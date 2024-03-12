@@ -30,5 +30,6 @@
             "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
         }
     ],
-    "securityImplications": "Attackers might use ImportKeyPair to upload malicious SSH keys to AWS EC2 instances, granting unauthorized access."
+    "securityImplications": "Attackers might use ImportKeyPair to upload malicious SSH keys to AWS EC2 instances, granting unauthorized access.",
+    "commandLineSimulation": "N/A"
 }

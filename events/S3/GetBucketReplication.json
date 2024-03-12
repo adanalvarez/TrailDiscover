@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use GetBucketReplication to identify replication configurations and target specific data for theft or corruption."
+    "securityImplications": "Attackers might use GetBucketReplication to identify replication configurations and target specific data for theft or corruption.",
+    "commandLineSimulation": "aws s3api get-bucket-replication --bucket TrailDiscoverBucket"
 }

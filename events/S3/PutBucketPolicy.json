@@ -17,5 +17,6 @@
             "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
         }
     ],
-    "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data."
+    "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data.",
+    "commandLineSimulation": "aws s3api put-bucket-policy --bucket TrailDiscover --policy {}"
 }

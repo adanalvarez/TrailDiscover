@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use CreateCluster to provision unauthorized cluster resources, aiming to deploy malicious workloads or use compute resources for cryptojacking"
+    "securityImplications": "Attackers might use CreateCluster to provision unauthorized cluster resources, aiming to deploy malicious workloads or use compute resources for cryptojacking",
+    "commandLineSimulation": "aws ecs create-cluster --cluster-name TrailDiscoverCluster"
 }

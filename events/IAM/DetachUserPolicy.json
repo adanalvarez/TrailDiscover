@@ -24,5 +24,6 @@
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
         }
     ],
-    "securityImplications": "Attackers might use DetachUserPolicy to remove security policies and gain unauthorized access to AWS resources."
+    "securityImplications": "Attackers might use DetachUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
+    "commandLineSimulation": "aws iam detach-user-policy --user-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/TesterPolicy"
 }

@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use CreateImage to create images from running EC2s and use them after adding their own keys"
+    "securityImplications": "Attackers might use CreateImage to create images from running EC2s and use them after adding their own keys",
+    "commandLineSimulation": "aws ec2 create-image --instance-id TrailDiscoverInstanceId --name \"TrailDiscoverImageName\" --description \"TrailDiscoverImageDescription\""
 }

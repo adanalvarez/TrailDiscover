@@ -17,5 +17,6 @@
             "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
         }
     ],
-    "securityImplications": "Attackers might use DisassociateFromMasterAccount to remove the link to the master GuardDuty account, disrupting centralized security monitoring and analysis."
+    "securityImplications": "Attackers might use DisassociateFromMasterAccount to remove the link to the master GuardDuty account, disrupting centralized security monitoring and analysis.",
+    "commandLineSimulation": "aws guardduty disassociate-from-master-account --detector-id TrailDiscoverDetectorId"
 }

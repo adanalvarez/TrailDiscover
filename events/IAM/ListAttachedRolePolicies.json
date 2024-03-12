@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use ListAttachedRolePolicies to identify and exploit permissions associated with various roles in AWS."
+    "securityImplications": "Attackers might use ListAttachedRolePolicies to identify and exploit permissions associated with various roles in AWS.",
+    "commandLineSimulation": "aws iam list-attached-role-policies --role-name TrailDiscover"
 }

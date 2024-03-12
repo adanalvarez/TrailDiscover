@@ -23,5 +23,6 @@
             "link": "https://docs.datadoghq.com/security/default_rules/aws-eventbridge-rule-disabled-or-deleted/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteRule to disrupt automated security responses and event logging in AWS EventBridge, potentially masking unauthorized activities or compromising system integrity."
+    "securityImplications": "Attackers might use DeleteRule to disrupt automated security responses and event logging in AWS EventBridge, potentially masking unauthorized activities or compromising system integrity.",
+    "commandLineSimulation": "aws events delete-rule --name TrailDiscoverRule"
 }

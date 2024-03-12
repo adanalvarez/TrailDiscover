@@ -23,5 +23,6 @@
             "link": "https://docs.datadoghq.com/security/default_rules/aws-eventbridge-rule-disabled-or-deleted/"
         }
     ],
-    "securityImplications": "Attackers might use DisableRule to deactivate AWS EventBridge rules, effectively silencing alarms and automated responses designed for incident detection and mitigation."
+    "securityImplications": "Attackers might use DisableRule to deactivate AWS EventBridge rules, effectively silencing alarms and automated responses designed for incident detection and mitigation.",
+    "commandLineSimulation": "aws events disable-rule --name TrailDiscoverRule --event-bus-name TrailDiscoverBus"
 }

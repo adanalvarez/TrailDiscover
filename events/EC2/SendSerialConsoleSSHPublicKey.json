@@ -1,6 +1,6 @@
 {
     "eventName": "SendSerialConsoleSSHPublicKey",
-    "eventSource": "ec2.amazonaws.com",
+    "eventSource": "ec2-instance-connect.amazonaws.com",
     "awsService": "EC2",
     "description": "Pushes an SSH public key to the specified EC2 instance.",
     "mitreAttackTactics": [
@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use SendSerialConsoleSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control."
+    "securityImplications": "Attackers might use SendSerialConsoleSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control.",
+    "commandLineSimulation": "N/A"
 }

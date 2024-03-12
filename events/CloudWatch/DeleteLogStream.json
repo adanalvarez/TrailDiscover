@@ -17,5 +17,6 @@
             "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
         }
     ],
-    "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS."
+    "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS.",
+    "commandLineSimulation": "aws logs delete-log-stream --log-group-name TrailDiscoverLogGroupName --log-stream-name TrailDiscoverLogStreamName"
 }

@@ -17,5 +17,6 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use ListAccounts to gather information about the structure and resources of an organization's AWS environment."
+    "securityImplications": "Attackers might use ListAccounts to gather information about the structure and resources of an organization's AWS environment.",
+    "commandLineSimulation": "aws organizations list-accounts"
 }

@@ -24,7 +24,7 @@ def compile_events(directory):
 
 def generate_csv():
     # Define CSV headers
-    headers = ["eventName", "eventSource", "awsService", "description", "mitreAttackTactics", "mitreAttackTechniques", "usedInWild", "incidents", "researchLinks", "securityImplications"]
+    headers = ["eventName", "eventSource", "awsService", "description", "mitreAttackTactics", "mitreAttackTechniques", "usedInWild", "incidents", "researchLinks", "securityImplications", "commandLineSimulation"]
 
     with open(csv_file, mode='w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=headers)

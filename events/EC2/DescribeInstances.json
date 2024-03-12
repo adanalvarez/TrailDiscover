@@ -22,5 +22,6 @@
             "link": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/"
         }
     ],
-    "securityImplications": "Attackers might use DescribeInstances to inventory EC2 instances within an AWS environment."
+    "securityImplications": "Attackers might use DescribeInstances to inventory EC2 instances within an AWS environment.",
+    "commandLineSimulation": "aws ec2 describe-instances --instance-ids TrailDiscoverInstanceID"
 }

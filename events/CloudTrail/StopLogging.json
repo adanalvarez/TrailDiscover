@@ -33,5 +33,6 @@
             "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
         }
     ],
-    "securityImplications": "Attackers might use StopLogging to disrupting AWS logging."
+    "securityImplications": "Attackers might use StopLogging to disrupting AWS logging.",
+    "commandLineSimulation": "aws cloudtrail stop-logging --name TrailDiscover"
 }

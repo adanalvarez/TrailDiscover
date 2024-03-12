@@ -24,5 +24,6 @@
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
         }
     ],
-    "securityImplications": "Attackers might use StopInstances to avoid being detected or to do changes that will be executed when the EC2 is started."
+    "securityImplications": "Attackers might use StopInstances to avoid being detected or to do changes that will be executed when the EC2 is started.",
+    "commandLineSimulation": "aws ec2 stop-instances --instance-ids TrailDiscoverInstanceID"
 }

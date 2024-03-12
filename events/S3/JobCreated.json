@@ -17,5 +17,6 @@
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
         }
     ],
-    "securityImplications": "Attackers might use Batch Operations jobs to initiate unauthorized data transfer or manipulation tasks in S3."
+    "securityImplications": "Attackers might use Batch Operations jobs to initiate unauthorized data transfer or manipulation tasks in S3.",
+    "commandLineSimulation": "N/A"
 }

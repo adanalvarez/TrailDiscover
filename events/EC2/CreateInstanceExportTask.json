@@ -17,5 +17,6 @@
             "link": "https://www.elastic.co/guide/en/security/current/aws-ec2-vm-export-failure.html"
         }
     ],
-    "securityImplications": "Attackers might use CreateInstanceExportTask to extract or exfiltrate information"
+    "securityImplications": "Attackers might use CreateInstanceExportTask to extract or exfiltrate information",
+    "commandLineSimulation": "aws ec2 create-instance-export-task --instance-id TrailDiscoverInstanceId --target-environment TrailDiscoverTargetEnvironment --export-to-s3-task DiskImageFormat=TrailDiscoverDiskImageFormat,ContainerFormat=TrailDiscoverContainerFormat,S3Bucket=TrailDiscoverS3Bucket,S3Prefix=TrailDiscoverS3Prefix"
 }
