@@ -1,0 +1,22 @@
+{
+    "eventName": "CreateEventSourceMapping20150331",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Creates a mapping between an event source and an AWS Lambda function.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS IAM Privilege Escalation Techniques",
+            "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateEventSourceMapping to trigger unauthorized Lambda functions with malicious code.",
+    "commandLineSimulation": "aws lambda create-event-source-mapping --function-name my-function --batch-size 5 --event-source-arn arn:aws:sqs:us-west-2:123456789012:mySQSqueue"
+}
