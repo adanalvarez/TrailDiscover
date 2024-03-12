@@ -23,5 +23,5 @@
         }
     ],
     "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws guardduty list-detectors"
 }

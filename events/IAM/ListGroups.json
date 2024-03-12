@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use ListGroups to identify potential targets by gathering information about IAM groups and their permissions.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam list-groups"
 }

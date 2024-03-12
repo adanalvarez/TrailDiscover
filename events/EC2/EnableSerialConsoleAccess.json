@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use EnableSerialConsoleAccess to enable the serial console access and bypass security group rules and gain access to EC2 instances.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws ec2 enable-serial-console-access"
 }

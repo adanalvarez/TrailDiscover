@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use ListRoles to identify potential targets for privilege escalation attacks in AWS.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam list-roles"
 }

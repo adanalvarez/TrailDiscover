@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListAccessKeys to identify and exploit unused or unmonitored AWS IAM access keys.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam list-access-keys --user-name TrailDiscover"
 }

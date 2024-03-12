@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use CreateAccessEntry to craft access entries that link to high-privileged policies, effectively granting themselves unauthorized admin-level access to clusters.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws eks create-access-entry --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
 }

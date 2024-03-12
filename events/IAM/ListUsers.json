@@ -35,5 +35,5 @@
         }
     ],
     "securityImplications": "Attackers might use ListUsers to enumerate IAM users for further attacks, such as adding keys or creating a login profile for persistence.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam list-users"
 }

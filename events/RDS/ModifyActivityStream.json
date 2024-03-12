@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ModifyActivityStream to alter the configuration of the activity stream, potentially hiding malicious activities or causing disruptions in the database operations.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws rds modify-activity-stream"
 }

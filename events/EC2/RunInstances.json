@@ -83,5 +83,5 @@
         }
     ],
     "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws ec2 run-instances --image-id ami-0b98a32b1c5e0d105 --instance-type t2.micro --key-name MyKeyPair"
 }

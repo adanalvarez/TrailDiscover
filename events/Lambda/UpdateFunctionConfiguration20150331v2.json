@@ -1,5 +1,5 @@
 {
-    "eventName": "UpdateFunctionConfiguration",
+    "eventName": "UpdateFunctionConfiguration20150331v2",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Modify the version-specific settings of a Lambda function.",
@@ -26,5 +26,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws lambda update-function-configuration  --function-name  my-function --memory-size 256"
 }

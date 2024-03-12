@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ModifySnapshotAttribute to change permissions on Amazon EBS snapshots, potentially making them accessible to unauthorized users or public.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-046281ab24d756c50 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
 }

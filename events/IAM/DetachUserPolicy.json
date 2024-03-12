@@ -25,5 +25,5 @@
         }
     ],
     "securityImplications": "Attackers might use DetachUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam detach-user-policy --user-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/TesterPolicy"
 }

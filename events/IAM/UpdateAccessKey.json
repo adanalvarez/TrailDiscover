@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateAccessKey to modify existing IAM user access keys, potentially gaining unauthorized access to AWS services.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam update-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --status Inactive --user-name TrailDiscover"
 }

@@ -23,5 +23,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam update-assume-role-policy --role-name TrailDiscover-Role --policy-document {}"
 }

@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use SimulatePrincipalPolicy to understand the permissions of a principal, to later potentially exploiting any over-permissive policies. Using this technique might allow attackers to evade defenses while enumerating permissions.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam simulate-principal-policy --policy-source-arn arn:aws:iam::123456789012:user/TrailDiscover --action-names codecommit:ListRepositories"
 }

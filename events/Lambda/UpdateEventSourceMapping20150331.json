@@ -1,5 +1,5 @@
 {
-    "eventName": "UpdateEventSourceMapping",
+    "eventName": "UpdateEventSourceMapping20150331",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume later from the same location.",
@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateEventSourceMapping to pull data from a different source, leading to incorrect function results.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws lambda update-event-source-mapping --uuid 'a1b2c3d4-5678-90ab-cdef-11111EXAMPLE' --batch-size 8"
 }

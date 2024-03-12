@@ -1,5 +1,5 @@
 {
-    "eventName": "AddPermission",
+    "eventName": "AddPermission20150331v2",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Grants an AWS service, AWS account, or AWS organization permission to use a function.",
@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws lambda add-permission --function-name my-function --action lambda:InvokeFunction --statement-id sns --principal sns.amazonaws.com"
 }

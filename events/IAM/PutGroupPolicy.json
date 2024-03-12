@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use PutGroupPolicy to modify permissions of a group, potentially granting unauthorized access to sensitive resources.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam put-group-policy --group-name TrailDiscover --policy-document {} --policy-name TrailDiscover"
 }

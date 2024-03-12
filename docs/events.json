@@ -28,7 +28,7 @@
     },
     {
         "eventName": "ListDomains",
-        "eventSource": "route53.amazonaws.com",
+        "eventSource": "route53domains.amazonaws.com",
         "awsService": "Route53",
         "description": "This operation returns all the domain names registered with Amazon Route 53 for the current AWS account if no filtering conditions are used.",
         "mitreAttackTactics": [
@@ -46,7 +46,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws route53domains list-domains --region us-east-1"
     },
     {
         "eventName": "GetHostedZoneCount",
@@ -68,7 +68,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetHostedZoneCount to gather information about the number of hosted zones, potentially identifying targets for DNS attacks.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws route53 get-hosted-zone-count"
     },
     {
         "eventName": "RegisterDomain",
@@ -90,7 +90,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use RegisterDomain to register malicious domains for phishing or malware distribution.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws route53domains register-domain --region us-east-1 --cli-input-json '{\"DomainName\": \"\", \"DurationInYears\": 1, \"AdminContact\": { \"FirstName\": \"\", \"LastName\": \"\"}, \"RegistrantContact\": {\"FirstName\": \"\", \"LastName\": \"\" }, \"TechContact\": {\"FirstName\": \"\", \"LastName\": \"\"}}'"
     },
     {
         "eventName": "CreateHostedZone",
@@ -117,7 +117,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateHostedZone to create malicious DNS zones for phishing or redirecting traffic.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws route53 create-hosted-zone --name traildiscover.cloud --caller-reference 2014-04-01-18:47 --hosted-zone-config Comment='traildiscover'"
     },
     {
         "eventName": "DescribeOrganization",
@@ -139,7 +139,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use DescribeOrganization to gather information about the structure and details of an AWS organization.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws organizations describe-organization"
     },
     {
         "eventName": "ListOrganizationalUnitsForParent",
@@ -161,7 +161,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListOrganizationalUnitsForParent to map the structure of an organization's AWS environment for potential vulnerabilities.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws organizations list-organizational-units-for-parent --parent-id r-traildiscover"
     },
     {
         "eventName": "LeaveOrganization",
@@ -183,7 +183,7 @@
             }
         ],
         "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws organizations leave-organization"
     },
     {
         "eventName": "ListAccounts",
@@ -205,7 +205,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListAccounts to gather information about the structure and resources of an organization's AWS environment.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws organizations list-accounts"
     },
     {
         "eventName": "AssumeRoleWithWebIdentity",
@@ -282,7 +282,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws sts get-session-token --duration-seconds 900 --serial-number 'YourMFADeviceSerialNumber' --token-code 123456"
     },
     {
         "eventName": "AssumeRole",
@@ -320,7 +320,7 @@
             }
         ],
         "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws sts assume-role --role-arn arn:aws:iam::123456789012:role/TrailDiscover --role-session-name TrailDiscover"
     },
     {
         "eventName": "AssumeRoleWithSAML",
@@ -407,7 +407,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListTopics to identify potential SNS topics for unauthorized access or disruption.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws sns list-topics"
     },
     {
         "eventName": "ListSubscriptions",
@@ -429,7 +429,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListSubscriptions to identify origination numbers for potential smishing campaings.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws sns list-subscriptions"
     },
     {
         "eventName": "ListOriginationNumbers",
@@ -544,7 +544,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetCertificate combined with Route 53 control to intercept and read data from AWS API calls.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws acm-pca get-certificate --certificate-authority-arn arn:aws:acm-pca:us-west-2:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012 --certificate-arn arn:aws:acm-pca:us-west-2:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012/certificate/6707447683a9b7f4055627ffd55cebcc"
     },
     {
         "eventName": "GetCredentialsForIdentity",
@@ -856,7 +856,41 @@
         "commandLineSimulation": "N/A"
     },
     {
-        "eventName": "UpdateFunctionConfiguration",
+        "eventName": "CreateFunction20150331",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Creates a Lambda function.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence",
+            "TA0004 - Privilege Escalation",
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation",
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Mining Crypto",
+                "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
+            }
+        ],
+        "researchLinks": [
+            {
+                "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
+                "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
+            },
+            {
+                "description": "AWS IAM Privilege Escalation Techniques",
+                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources.",
+        "commandLineSimulation": "aws lambda create-function --function-name my-function --runtime nodejs18.x --code S3Bucket=string --role arn:aws:iam::123456789012:role/service-role/MyTestFunction-role-tges6bf4"
+    },
+    {
+        "eventName": "UpdateFunctionConfiguration20150331v2",
         "eventSource": "lambda.amazonaws.com",
         "awsService": "Lambda",
         "description": "Modify the version-specific settings of a Lambda function.",
@@ -883,13 +917,13 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws lambda update-function-configuration  --function-name  my-function --memory-size 256"
     },
     {
-        "eventName": "UpdateEventSourceMapping",
+        "eventName": "AddPermission20150331v2",
         "eventSource": "lambda.amazonaws.com",
         "awsService": "Lambda",
-        "description": "Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume later from the same location.",
+        "description": "Grants an AWS service, AWS account, or AWS organization permission to use a function.",
         "mitreAttackTactics": [
             "TA0004 - Privilege Escalation"
         ],
@@ -900,15 +934,37 @@
         "incidents": [],
         "researchLinks": [
             {
-                "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
-                "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+                "description": "AWS IAM Privilege Escalation Techniques",
+                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
             }
         ],
-        "securityImplications": "Attackers might use UpdateEventSourceMapping to pull data from a different source, leading to incorrect function results.",
-        "commandLineSimulation": "N/A"
+        "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation.",
+        "commandLineSimulation": "aws lambda add-permission --function-name my-function --action lambda:InvokeFunction --statement-id sns --principal sns.amazonaws.com"
     },
     {
-        "eventName": "UpdateFunctionCode",
+        "eventName": "CreateEventSourceMapping20150331",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Creates a mapping between an event source and an AWS Lambda function.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "AWS IAM Privilege Escalation Techniques",
+                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateEventSourceMapping to trigger unauthorized Lambda functions with malicious code.",
+        "commandLineSimulation": "aws lambda create-event-source-mapping --function-name my-function --batch-size 5 --event-source-arn arn:aws:sqs:us-west-2:123456789012:mySQSqueue"
+    },
+    {
+        "eventName": "UpdateFunctionCode20150331v2",
         "eventSource": "lambda.amazonaws.com",
         "awsService": "Lambda",
         "description": "Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.",
@@ -943,85 +999,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
-        "commandLineSimulation": "N/A"
-    },
-    {
-        "eventName": "CreateFunction",
-        "eventSource": "lambda.amazonaws.com",
-        "awsService": "Lambda",
-        "description": "Creates a Lambda function.",
-        "mitreAttackTactics": [
-            "TA0003 - Persistence",
-            "TA0004 - Privilege Escalation",
-            "TA0040 - Impact"
-        ],
-        "mitreAttackTechniques": [
-            "T1098 - Account Manipulation",
-            "T1496 - Resource Hijacking"
-        ],
-        "usedInWild": true,
-        "incidents": [
-            {
-                "description": "Mining Crypto",
-                "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
-            }
-        ],
-        "researchLinks": [
-            {
-                "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
-                "link": "https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide"
-            },
-            {
-                "description": "AWS IAM Privilege Escalation Techniques",
-                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
-            }
-        ],
-        "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources.",
-        "commandLineSimulation": "N/A"
-    },
-    {
-        "eventName": "CreateEventSourceMapping",
-        "eventSource": "lambda.amazonaws.com",
-        "awsService": "Lambda",
-        "description": "Creates a mapping between an event source and an AWS Lambda function.",
-        "mitreAttackTactics": [
-            "TA0004 - Privilege Escalation"
-        ],
-        "mitreAttackTechniques": [
-            "T1098 - Account Manipulation"
-        ],
-        "usedInWild": false,
-        "incidents": [],
-        "researchLinks": [
-            {
-                "description": "AWS IAM Privilege Escalation Techniques",
-                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
-            }
-        ],
-        "securityImplications": "Attackers might use CreateEventSourceMapping to trigger unauthorized Lambda functions with malicious code.",
-        "commandLineSimulation": "N/A"
-    },
-    {
-        "eventName": "AddPermission",
-        "eventSource": "lambda.amazonaws.com",
-        "awsService": "Lambda",
-        "description": "Grants an AWS service, AWS account, or AWS organization permission to use a function.",
-        "mitreAttackTactics": [
-            "TA0004 - Privilege Escalation"
-        ],
-        "mitreAttackTechniques": [
-            "T1098 - Account Manipulation"
-        ],
-        "usedInWild": false,
-        "incidents": [],
-        "researchLinks": [
-            {
-                "description": "AWS IAM Privilege Escalation Techniques",
-                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
-            }
-        ],
-        "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws lambda update-function-code --function-name  my-function"
     },
     {
         "eventName": "Invoke",
@@ -1052,6 +1030,28 @@
         "commandLineSimulation": "N/A"
     },
     {
+        "eventName": "UpdateEventSourceMapping20150331",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume later from the same location.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
+                "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateEventSourceMapping to pull data from a different source, leading to incorrect function results.",
+        "commandLineSimulation": "aws lambda update-event-source-mapping --uuid 'a1b2c3d4-5678-90ab-cdef-11111EXAMPLE' --batch-size 8"
+    },
+    {
         "eventName": "GetQueryResults",
         "eventSource": "athena.amazonaws.com",
         "awsService": "Athena",
@@ -1074,51 +1074,7 @@
         "commandLineSimulation": "N/A"
     },
     {
-        "eventName": "PublishFunction",
-        "eventSource": "cloudfront.amazonaws.com",
-        "awsService": "CloudFront",
-        "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
-        "mitreAttackTactics": [
-            "TA0009 - Collection"
-        ],
-        "mitreAttackTechniques": [
-            "T1119 - Automated Collection"
-        ],
-        "usedInWild": false,
-        "incidents": [],
-        "researchLinks": [
-            {
-                "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
-                "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
-            }
-        ],
-        "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data.",
-        "commandLineSimulation": "N/A"
-    },
-    {
-        "eventName": "CreateFunction",
-        "eventSource": "cloudfront.amazonaws.com",
-        "awsService": "CloudFront",
-        "description": "Creates a CloudFront function.",
-        "mitreAttackTactics": [
-            "TA0009 - Collection"
-        ],
-        "mitreAttackTechniques": [
-            "T1119 - Automated Collection"
-        ],
-        "usedInWild": false,
-        "incidents": [],
-        "researchLinks": [
-            {
-                "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
-                "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
-            }
-        ],
-        "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date.",
-        "commandLineSimulation": "N/A"
-    },
-    {
-        "eventName": "UpdateDistribution",
+        "eventName": "UpdateDistribution2020_05_31",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Updates the configuration for a CloudFront distribution.",
@@ -1137,7 +1093,51 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateDistribution to add a malicious configuration such as a function to exfiltrate data.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws cloudfront update-distribution --id EDFDVBD6EXAMPLE --distribution-config '{\"CallerReference\":\"\", \"Origins\":{\"Quantity\":1,\"Items\":[{\"Id\":\"\", \"DomainName\":\"\"}]}, \"DefaultCacheBehavior\":{\"TargetOriginId\":\"\", \"ViewerProtocolPolicy\":\"\"}, \"Comment\":\"\", \"Enabled\":false }'"
+    },
+    {
+        "eventName": "PublishFunction2020_05_31",
+        "eventSource": "cloudfront.amazonaws.com",
+        "awsService": "CloudFront",
+        "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1119 - Automated Collection"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
+                "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
+            }
+        ],
+        "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data.",
+        "commandLineSimulation": "aws cloudfront publish-function --name trail-discover-function --if-match trail-discover-function"
+    },
+    {
+        "eventName": "CreateFunction2020_05_31",
+        "eventSource": "cloudfront.amazonaws.com",
+        "awsService": "CloudFront",
+        "description": "Creates a CloudFront function.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1119 - Automated Collection"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
+                "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date.",
+        "commandLineSimulation": "aws cloudfront create-function --name trail-discover-function --function-config Comment='TrailDiscover',Runtime=cloudfront-js-1.0 --function-code VHJhaWxEaXNjb3Zlcgo="
     },
     {
         "eventName": "DeleteFileSystem",
@@ -1159,7 +1159,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteFileSystem in AWS EFS to deliberately erase file systems, leading to data loss.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws efs delete-file-system --file-system-id fs-c7a0456e"
     },
     {
         "eventName": "DeleteMountTarget",
@@ -1181,7 +1181,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteMountTarget in AWS EFS to remove mount targets, disrupting access to file system and as a preliminary phase before data deletion.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws efs delete-mount-target --mount-target-id fsmt-f9a14450"
     },
     {
         "eventName": "DeleteRule",
@@ -1351,7 +1351,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetInstances to gather information about running instances for potential exploitation.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws lightsail get-instances"
     },
     {
         "eventName": "CreateInstances",
@@ -1375,7 +1375,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use CreateInstances to rapidly deploy malicious instances, causing financial loss and resource exhaustion. The use of lightsail might not be monitored.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws lightsail create-instances --instance-names Instance-1 --availability-zone us-west-2a --blueprint-id wordpress_5_1_1_2 --bundle-id nano_2_0"
     },
     {
         "eventName": "GetRegions",
@@ -1397,7 +1397,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetRegions to identify potential targets in different geographical locations on AWS LightSail.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws lightsail get-regions"
     },
     {
         "eventName": "GetCostAndUsage",
@@ -1419,7 +1419,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use GetCostAndUsage to determine how active an account is by understanding the cost within a cloud account.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ce get-cost-and-usage --time-period Start=2017-09-01,End=2017-10-01 --granularity MONTHLY --metrics 'BlendedCost' 'UnblendedCost' 'UsageQuantity' --group-by Type=DIMENSION,Key=SERVICE Type=TAG,Key=Environment"
     },
     {
         "eventName": "DeleteMembers",
@@ -1467,7 +1467,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListGroupsForUser to identify privileged groups and target specific users for access escalation.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-groups-for-user --user-name TrailDiscover"
     },
     {
         "eventName": "ListAccessKeys",
@@ -1489,7 +1489,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListAccessKeys to identify and exploit unused or unmonitored AWS IAM access keys.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-access-keys --user-name TrailDiscover"
     },
     {
         "eventName": "DeleteRolePolicy",
@@ -1511,7 +1511,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteRolePolicy to remove security policies, potentially escalating their privileges.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-role-policy --role-name TrailDiscover-Role --policy-name TrailDiscover"
     },
     {
         "eventName": "DetachRolePolicy",
@@ -1540,7 +1540,7 @@
             }
         ],
         "securityImplications": "Attackers might use DetachRolePolicy to remove crucial permissions from IAM roles, disrupting AWS services.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam detach-role-policy --role-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/FederatedTesterAccessPolicy"
     },
     {
         "eventName": "UpdateLoginProfile",
@@ -1576,7 +1576,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam update-login-profile --user-name TrailDiscover --password TrailDiscover"
     },
     {
         "eventName": "SimulatePrincipalPolicy",
@@ -1598,7 +1598,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use SimulatePrincipalPolicy to understand the permissions of a principal, to later potentially exploiting any over-permissive policies. Using this technique might allow attackers to evade defenses while enumerating permissions.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam simulate-principal-policy --policy-source-arn arn:aws:iam::123456789012:user/TrailDiscover --action-names codecommit:ListRepositories"
     },
     {
         "eventName": "GetAccountAuthorizationDetails",
@@ -1620,7 +1620,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetAccountAuthorizationDetails to gather information about IAM users, groups, roles, and policies in a targeted AWS account.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam get-account-authorization-details"
     },
     {
         "eventName": "AddUserToGroup",
@@ -1642,7 +1642,7 @@
             }
         ],
         "securityImplications": "Attackers might use AddUserToGroup to add unauthorized users to privileged groups, gaining unauthorized access or escalating privileges.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam add-user-to-group --user-name TrailDiscover --group-name TrailDiscover"
     },
     {
         "eventName": "ListGroups",
@@ -1664,7 +1664,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListGroups to identify potential targets by gathering information about IAM groups and their permissions.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-groups"
     },
     {
         "eventName": "UpdateAccessKey",
@@ -1686,7 +1686,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateAccessKey to modify existing IAM user access keys, potentially gaining unauthorized access to AWS services.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam update-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --status Inactive --user-name TrailDiscover"
     },
     {
         "eventName": "ListUsers",
@@ -1725,7 +1725,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListUsers to enumerate IAM users for further attacks, such as adding keys or creating a login profile for persistence.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-users"
     },
     {
         "eventName": "UpdateAssumeRolePolicy",
@@ -1752,7 +1752,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam update-assume-role-policy --role-name TrailDiscover-Role --policy-document {}"
     },
     {
         "eventName": "CreateAccessKey",
@@ -1809,7 +1809,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-access-key --user-name TrailDiscover"
     },
     {
         "eventName": "CreatePolicyVersion",
@@ -1831,7 +1831,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreatePolicyVersion to modify IAM policies, potentially granting themselves elevated permissions.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-policy-version --policy-arn arn:aws:iam::123456789012:policy/TrailDiscover --policy-document {}"
     },
     {
         "eventName": "DeleteUserPolicy",
@@ -1864,7 +1864,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-user-policy --user-name TrailDiscover --policy-name TrailDiscover"
     },
     {
         "eventName": "ListRoles",
@@ -1886,7 +1886,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListRoles to identify potential targets for privilege escalation attacks in AWS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-roles"
     },
     {
         "eventName": "PutRolePermissionsBoundary",
@@ -1908,7 +1908,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutRolePermissionsBoundary to modify permissions boundaries, potentially escalating privileges or enabling unauthorized access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam put-role-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --role-name TrailDiscover"
     },
     {
         "eventName": "PutUserPermissionsBoundary",
@@ -1930,7 +1930,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutUserPermissionsBoundary to modify the permissions boundary for an IAM user, potentially escalating privileges or enabling unauthorized access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam put-user-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --user-name TrailDiscover"
     },
     {
         "eventName": "DeleteUserPermissionsBoundary",
@@ -1952,7 +1952,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteUserPermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-user-permissions-boundary --user-name TrailDiscover"
     },
     {
         "eventName": "GetUser",
@@ -1974,7 +1974,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use GetUser to obtain user information.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam get-user --user-name TrailDiscover"
     },
     {
         "eventName": "DeleteAccessKey",
@@ -2001,7 +2001,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use DeleteAccessKey to revoke legitimate user access to AWS services. Also, it can be used to delete previously used keys to avoid detection.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-access-key --access-key-id AKIDPMS9RO4H3FEXAMPLE --user-name TrailDiscover"
     },
     {
         "eventName": "DeleteUser",
@@ -2032,7 +2032,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use DeleteUser to remove users and their permissions, disrupting access control in AWS. Also, it can be used to delete previously used users to avoid detection.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-user --user-name TrailDiscover"
     },
     {
         "eventName": "AttachRolePolicy",
@@ -2059,7 +2059,7 @@
             }
         ],
         "securityImplications": "Attackers use AttachRolePolicy to grant malicious policies to IAM roles, potentially escalating privileges or enabling unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --role-name TrailDiscover"
     },
     {
         "eventName": "SetDefaultPolicyVersion",
@@ -2081,7 +2081,7 @@
             }
         ],
         "securityImplications": "Attackers might use SetDefaultPolicyVersion to revert IAM policies to less secure versions, potentially exposing sensitive resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam set-default-policy-version --policy-arn arn:aws:iam::123456789012:policy/TrailDiscover --version-id v2"
     },
     {
         "eventName": "AttachUserPolicy",
@@ -2117,7 +2117,7 @@
             }
         ],
         "securityImplications": "Attackers use AttachUserPolicy to grant malicious policies to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AdministratorAccess --user-name TrailDiscover"
     },
     {
         "eventName": "CreateGroup",
@@ -2139,7 +2139,7 @@
             }
         ],
         "securityImplications": "Attackers use CreateGroup to create a group that they can use to escalate privileges.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-group --group-name TrailDiscover"
     },
     {
         "eventName": "ListAttachedRolePolicies",
@@ -2161,7 +2161,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListAttachedRolePolicies to identify and exploit permissions associated with various roles in AWS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-attached-role-policies --role-name TrailDiscover"
     },
     {
         "eventName": "PutUserPolicy",
@@ -2197,7 +2197,7 @@
             }
         ],
         "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam put-user-policy --user-name TrailDiscover --policy-name TrailDiscover --policy-document {}"
     },
     {
         "eventName": "DeleteRolePermissionsBoundary",
@@ -2219,7 +2219,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteRolePermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-role-permissions-boundary --role-name trail-discover"
     },
     {
         "eventName": "ListRolePolicies",
@@ -2241,7 +2241,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListRolePolicies to identify permissions associated with various roles in AWS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-role-policies --role-name TrailDiscover"
     },
     {
         "eventName": "PutGroupPolicy",
@@ -2263,7 +2263,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutGroupPolicy to modify permissions of a group, potentially granting unauthorized access to sensitive resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam put-group-policy --group-name TrailDiscover --policy-document {} --policy-name TrailDiscover"
     },
     {
         "eventName": "ChangePassword",
@@ -2291,7 +2291,7 @@
             }
         ],
         "securityImplications": "Attackers might use ChangePassword to alter user credentials.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam change-password --old-password TrailDiscover --new-password TrailDiscover"
     },
     {
         "eventName": "CreateLoginProfile",
@@ -2340,7 +2340,7 @@
             }
         ],
         "securityImplications": "Attackers use CreateLoginProfile to create login credentials for IAM users, allowing them access to the user via the AWS console.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-login-profile --user-name TrailDiscover --password TrailDiscover"
     },
     {
         "eventName": "CreateUser",
@@ -2427,7 +2427,7 @@
             }
         ],
         "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-user --user-name TrailDiscover"
     },
     {
         "eventName": "ListInstanceProfiles",
@@ -2449,7 +2449,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListInstanceProfiles to identify potential targets for privilege escalation attacks in AWS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-instance-profiles"
     },
     {
         "eventName": "DetachUserPolicy",
@@ -2478,7 +2478,7 @@
             }
         ],
         "securityImplications": "Attackers might use DetachUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam detach-user-policy --user-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/TesterPolicy"
     },
     {
         "eventName": "ListSSHPublicKeys",
@@ -2500,7 +2500,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ListSSHPublicKeys to get information about the user and the potential use of CodeCommit.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam list-ssh-public-keys --user-name TrailDiscover"
     },
     {
         "eventName": "PutRolePolicy",
@@ -2522,7 +2522,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutRolePolicy to modify permissions of IAM roles, potentially granting unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam put-role-policy --role-name TrailDiscover-Role --policy-name TrailDiscover --policy-document {}"
     },
     {
         "eventName": "CreateRole",
@@ -2548,7 +2548,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam create-role --role-name TrailDiscover --assume-role-policy-document {}"
     },
     {
         "eventName": "DeleteLoginProfile",
@@ -2571,7 +2571,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use DeleteLoginProfile to remove user's login credentials, preventing legitimate access to AWS services. Also, it might be used to delete a previously added profile to avoid detection.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam delete-login-profile --user-name TrailDiscover"
     },
     {
         "eventName": "AddRoleToInstanceProfile",
@@ -2593,7 +2593,7 @@
             }
         ],
         "securityImplications": "Attackers might use AddRoleToInstanceProfile to escalate privileges or gain unauthorized access to AWS resources.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam add-role-to-instance-profile --role-name TrailDiscover --instance-profile-name TrailDiscover"
     },
     {
         "eventName": "DeactivateMFADevice",
@@ -2615,7 +2615,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeactivateMFADevice to disable multi-factor authentication, potentially weakening account security.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam deactivate-mfa-device --user-name TrailDiscover --serial-number arn:aws:iam::210987654321:mfa/BobsMFADevice"
     },
     {
         "eventName": "AttachGroupPolicy",
@@ -2637,7 +2637,7 @@
             }
         ],
         "securityImplications": "Attackers might use AttachGroupPolicy to assign malicious policies to a group, escalating privileges or enabling unauthorized access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --group-name TrailDiscover"
     },
     {
         "eventName": "GetLoginProfile",
@@ -2659,7 +2659,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use GetLoginProfile to know if the account has a login profile or to get its user name.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws iam get-login-profile --user-name TrailDiscover"
     },
     {
         "eventName": "GetSecretValue",
@@ -2747,7 +2747,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateRule to add rules that allow them access bypassing potential restrictions such as authentication.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws elbv2 create-rule --listener-arn arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2 --priority 5 --actions Type=forward,TargetGroupArn=arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/73e2d6bc24d8a067 --conditions '[{}]'"
     },
     {
         "eventName": "AssociateAccessPolicy",
@@ -2769,7 +2769,7 @@
             }
         ],
         "securityImplications": "Attackers might use AssociateAccessPolicy to escalate privileges by linking access entries with highly privileged policies, allowing unauthorized control over clusters.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws eks associate-access-policy --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy --access-scope type=cluster"
     },
     {
         "eventName": "ListAssociatedAccessPolicies",
@@ -2791,7 +2791,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListAssociatedAccessPolicies to enumerate policies associated with resources in AWS services, identifying overly permissive access that can be exploited to escalate privileges.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws eks list-associated-access-policies --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
     },
     {
         "eventName": "ListClusters",
@@ -2835,7 +2835,7 @@
             }
         ],
         "securityImplications": "Attackers might use DescribeAccessEntry for reconnaissance, gathering detailed information about access configurations within AWS EKS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws eks describe-access-entry --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
     },
     {
         "eventName": "DescribeCluster",
@@ -2879,7 +2879,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateAccessEntry to craft access entries that link to high-privileged policies, effectively granting themselves unauthorized admin-level access to clusters.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws eks create-access-entry --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
     },
     {
         "eventName": "Search",
@@ -2901,7 +2901,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use Search to list resorces.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws resource-explorer-2 search --query-string 'service:iam'"
     },
     {
         "eventName": "ScheduleKeyDeletion",
@@ -3135,7 +3135,7 @@
             }
         ],
         "securityImplications": "Attackers might use GetIntrospectionSchema to understand the API for future attacks or use the configuration for future modifications.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws appsync get-introspection-schema --api-id TrailDiscover --format json output"
     },
     {
         "eventName": "UpdateResolver",
@@ -3181,7 +3181,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws s3api put-bucket-policy --bucket TrailDiscover --policy {}"
     },
     {
         "eventName": "PutObject",
@@ -3346,7 +3346,7 @@
             }
         ],
         "securityImplications": "Attackers might use PutBucketReplication to replicate sensitive data to unauthorized S3 buckets controlled by the attacker.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws s3api put-bucket-replication --bucket AWSDOC-EXAMPLE-BUCKET1 --replication-configuration '{\"Role\":\"\",\"Rules\":[]}'"
     },
     {
         "eventName": "ListBuckets",
@@ -3840,7 +3840,7 @@
             }
         ],
         "securityImplications": "Attackers might use EnableSerialConsoleAccess to enable the serial console access and bypass security group rules and gain access to EC2 instances.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 enable-serial-console-access"
     },
     {
         "eventName": "DescribeAvailabilityZones",
@@ -3940,7 +3940,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use CreateVolume to create a volume from a snapshot and mount it to an EC2 instance under their control.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 create-volume --size 80 --availability-zone us-east-1a"
     },
     {
         "eventName": "StartInstances",
@@ -4067,7 +4067,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use GetTransitGatewayRouteTableAssociations to examine the associations between transit gateway route tables and attached resources, potentially to understand network routing policies.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 get-transit-gateway-route-table-associations --transit-gateway-route-table-id tgw-rtb-0a823edbdeEXAMPLE"
     },
     {
         "eventName": "ModifySnapshotAttribute",
@@ -4089,7 +4089,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ModifySnapshotAttribute to change permissions on Amazon EBS snapshots, potentially making them accessible to unauthorized users or public.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-046281ab24d756c50 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
     },
     {
         "eventName": "CreateDefaultVpc",
@@ -4191,7 +4191,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateNetworkAclEntry to allow traffic to the network from an IP they control.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 create-network-acl-entry --network-acl-id acl-5fb85d36 --ingress --rule-number 100 --protocol udp --port-range From=53,To=53 --cidr-block 0.0.0.0/0 --rule-action allow"
     },
     {
         "eventName": "DescribeKeyPairs",
@@ -4257,7 +4257,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateTrafficMirrorSession to initiate a session for mirroring network traffic, potentially for malicious monitoring or data exfiltration.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 create-traffic-mirror-session --description TrailDiscoverDescription --traffic-mirror-target-id tmt-07f75d8feeEXAMPLE --network-interface-id eni-070203f901EXAMPLE --session-number 1 --packet-length 25 --traffic-mirror-filter-id tmf-04812ff784EXAMPLE"
     },
     {
         "eventName": "GetEbsEncryptionByDefault",
@@ -4425,7 +4425,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteNetworkAclEntry to remove specific rules from network access control lists, potentially opening network paths for unauthorized access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 delete-network-acl-entry --network-acl-id acl-5fb85d36 --ingress --rule-number 100"
     },
     {
         "eventName": "CreateRoute",
@@ -4473,7 +4473,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use GetFlowLogsIntegrationTemplate to create templates for integrating VPC flow logs with external monitoring solutions, potentially to configure exfiltration pathways for gathered data or to understand security monitoring setups.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 get-flow-logs-integration-template --flow-log-id fl-1234567890abcdef0 --config-delivery-s3-destination-arn arn:aws:s3:::DOC-EXAMPLE-BUCKET --integrate-services AthenaIntegrations='[{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00},{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00}]'"
     },
     {
         "eventName": "DescribeTransitGatewayMulticastDomains",
@@ -4625,7 +4625,7 @@
             }
         ],
         "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 authorize-security-group-ingress --group-id sg-0683fcf7a41c82593 --protocol tcp --port 22 --cidr 203.0.113.0/24"
     },
     {
         "eventName": "DescribeVpcEndpointConnectionNotifications",
@@ -4766,7 +4766,7 @@
             }
         ],
         "securityImplications": "Attackers might use DescribeRegions to identify all available AWS regions, possibly to explore regional deployment patterns and target specific regions where defenses might be weaker.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 describe-regions"
     },
     {
         "eventName": "DeleteSnapshot",
@@ -4856,7 +4856,7 @@
             }
         ],
         "securityImplications": "Attackers might use ModifySnapshotAttribute to alter permissions on EBS snapshots, potentially exposing sensitive data to unauthorized parties.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-1234567890abcdef0 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
     },
     {
         "eventName": "RunInstances",
@@ -4943,7 +4943,7 @@
             }
         ],
         "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 run-instances --image-id ami-0b98a32b1c5e0d105 --instance-type t2.micro --key-name MyKeyPair"
     },
     {
         "eventName": "CreateTrafficMirrorFilter",
@@ -4965,7 +4965,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateTrafficMirrorFilter to clandestinely mirror network traffic for analysis or exfiltration.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 create-traffic-mirror-filter --description 'TCP Filter'"
     },
     {
         "eventName": "DescribeSecurityGroups",
@@ -5009,7 +5009,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateTrafficMirrorFilterRule to fine-tune traffic mirroring for selective interception.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 create-traffic-mirror-filter-rule --description 'TCP Rule' --destination-cidr-block 0.0.0.0/0 --protocol 6 --rule-action accept --rule-number 1  --source-cidr-block 0.0.0.0/0 --traffic-direction ingress --traffic-mirror-filter-id tmf-04812ff784b25ae67"
     },
     {
         "eventName": "DescribeVpcs",
@@ -5198,7 +5198,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use DescribeClientVpnRoutes to gather information about the routing configuration of an AWS Client VPN endpoint, potentially identifying routes that could be exploited for network access.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 describe-client-vpn-routes --client-vpn-endpoint-id cvpn-endpoint-123456789123abcde"
     },
     {
         "eventName": "GetLaunchTemplateData",
@@ -5264,7 +5264,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use AuthorizeSecurityGroupEgress to allow exfiltration.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ec2 authorize-security-group-egress --group-id sg-1a2b3c4d --ip-permissions IpProtocol=tcp,FromPort=80,ToPort=80,IpRanges='[{CidrIp=10.0.0.0/16}]'"
     },
     {
         "eventName": "SendSerialConsoleSSHPublicKey",
@@ -5439,7 +5439,7 @@
             }
         ],
         "securityImplications": "Attackers might use StartExportTask to export database snapshots to an S3 they control and gain access to the data.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws rds start-export-task --export-task-identifier my-s3-export --source-arn arn:aws:rds:us-west-2:123456789012:snapshot:db5-snapshot-test --s3-bucket-name mybucket --iam-role-arn arn:aws:iam::123456789012:role/service-role/TrailDiscover --kms-key-id arn:aws:kms:us-west-2:123456789012:key/abcd0000-7fca-4128-82f2-aabbccddeeff"
     },
     {
         "eventName": "CreateDBSecurityGroup",
@@ -5514,7 +5514,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use ModifyActivityStream to alter the configuration of the activity stream, potentially hiding malicious activities or causing disruptions in the database operations.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws rds modify-activity-stream"
     },
     {
         "eventName": "CreateDevEndpoint",
@@ -5536,7 +5536,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateDevEndpoint in AWS Glue to escalate privileges or provision development endpoints, potentially exploiting them.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws glue create-dev-endpoint --endpoint-name TrailDiscover --role-arn arn:aws:iam::111122223333:role/TrailDiscover"
     },
     {
         "eventName": "UpdateJob",
@@ -5602,7 +5602,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateDevEndpoint to modify the settings of a development endpoint, potentially disrupting data processing tasks or gaining unauthorized access to data.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws glue update-dev-endpoint --endpoint-name TrailDiscover"
     },
     {
         "eventName": "SendCommand",
@@ -5736,7 +5736,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers use CreateEmailIdentity to create its own identity for sending spam or phishing emails later.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws sesv2 create-email-identity --email-identity cloudtrail.cloud"
     },
     {
         "eventName": "GetIdentityVerificationAttributes",
@@ -5784,7 +5784,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use UpdateAccountSendingEnabled to enable sending from compromised AWS accounts, facilitating spam or phishing campaigns.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ses update-account-sending-enabled"
     },
     {
         "eventName": "GetAccountSendingEnabled",
@@ -5990,7 +5990,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateIPSet to modify the IP address filters, potentially allowing malicious traffic to bypass detection.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws wafv2 update-ip-set --name testip --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --addresses 198.51.100.0/16 --lock-token 447e55ac-2396-4c6d-b9f9-86b67c17f8b5"
     },
     {
         "eventName": "UpdateDetector",
@@ -6083,7 +6083,7 @@
             }
         ],
         "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws guardduty list-detectors"
     },
     {
         "eventName": "DeleteDetector",
@@ -6267,7 +6267,7 @@
             }
         ],
         "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws guardduty create-ip-set --detector-id 12abc34d567e8fa901bc2d34eexample --name new-ip-set --format TXT --location s3://traildiscover/traildiscover.csv --activate"
     },
     {
         "eventName": "CreateFilter",
@@ -6333,7 +6333,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use RegisterTaskDefinition to deploy containers with malicious tasks in AWS ECS.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws ecs register-task-definition --family 'xtdb-bench-dev' --network-mode 'awsvpc' --container-definitions '[{\"name\":\"bench-container\", \"cpu\":2048, \"memory\":4092 }]'"
     },
     {
         "eventName": "CreateService",
@@ -6538,7 +6538,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use RequestServiceQuotaIncrease to increase the quotas and so resource hijacking will have a bigger impact.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws service-quotas request-service-quota-increase --service-code ec2 --quota-code L-20F13EBD --desired-value 2"
     },
     {
         "eventName": "DeleteRuleGroup",
@@ -6564,7 +6564,7 @@
             }
         ],
         "securityImplications": "Attackers might use DeleteRuleGroup to disable security rules, making the system vulnerable to cyber attacks.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws wafv2 delete-rule-group --name TestRuleGroup --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --lock-token 7b3bcec2-0000-0000-0000-563bf47249f0"
     },
     {
         "eventName": "UpdateIPSet",
@@ -6586,7 +6586,7 @@
             }
         ],
         "securityImplications": "Attackers might use UpdateIPSet to modify IP address rules, potentially allowing unauthorized access from IPs they control.",
-        "commandLineSimulation": "N/A"
+        "commandLineSimulation": "aws wafv2 update-ip-set --name testip --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --addresses 198.51.100.0/16 --lock-token 447e55ac-2396-4c6d-b9f9-86b67c17f8b5"
     },
     {
         "eventName": "DeleteWebACL",

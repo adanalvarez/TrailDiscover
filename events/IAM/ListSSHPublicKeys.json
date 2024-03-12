@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListSSHPublicKeys to get information about the user and the potential use of CodeCommit.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam list-ssh-public-keys --user-name TrailDiscover"
 }

@@ -18,5 +18,5 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use RegisterDomain to register malicious domains for phishing or malware distribution.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws route53domains register-domain --region us-east-1 --cli-input-json '{\"DomainName\": \"\", \"DurationInYears\": 1, \"AdminContact\": { \"FirstName\": \"\", \"LastName\": \"\"}, \"RegistrantContact\": {\"FirstName\": \"\", \"LastName\": \"\" }, \"TechContact\": {\"FirstName\": \"\", \"LastName\": \"\"}}'"
 }

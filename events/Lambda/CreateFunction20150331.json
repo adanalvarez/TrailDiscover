@@ -1,5 +1,5 @@
 {
-    "eventName": "CreateFunction",
+    "eventName": "CreateFunction20150331",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Creates a Lambda function.",
@@ -30,5 +30,5 @@
         }
     ],
     "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws lambda create-function --function-name my-function --runtime nodejs18.x --code S3Bucket=string --role arn:aws:iam::123456789012:role/service-role/MyTestFunction-role-tges6bf4"
 }

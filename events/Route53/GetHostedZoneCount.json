@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use GetHostedZoneCount to gather information about the number of hosted zones, potentially identifying targets for DNS attacks.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws route53 get-hosted-zone-count"
 }

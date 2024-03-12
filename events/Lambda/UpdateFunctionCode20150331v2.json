@@ -1,5 +1,5 @@
 {
-    "eventName": "UpdateFunctionCode",
+    "eventName": "UpdateFunctionCode20150331v2",
     "eventSource": "lambda.amazonaws.com",
     "awsService": "Lambda",
     "description": "Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.",
@@ -34,5 +34,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws lambda update-function-code --function-name  my-function"
 }

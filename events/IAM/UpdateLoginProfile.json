@@ -32,5 +32,5 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam update-login-profile --user-name TrailDiscover --password TrailDiscover"
 }

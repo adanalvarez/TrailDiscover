@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use GetAccountAuthorizationDetails to gather information about IAM users, groups, roles, and policies in a targeted AWS account.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam get-account-authorization-details"
 }

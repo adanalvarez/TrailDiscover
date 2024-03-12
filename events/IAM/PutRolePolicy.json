@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use PutRolePolicy to modify permissions of IAM roles, potentially granting unauthorized access to AWS resources.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam put-role-policy --role-name TrailDiscover-Role --policy-name TrailDiscover --policy-document {}"
 }

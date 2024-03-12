@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use StartExportTask to export database snapshots to an S3 they control and gain access to the data.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws rds start-export-task --export-task-identifier my-s3-export --source-arn arn:aws:rds:us-west-2:123456789012:snapshot:db5-snapshot-test --s3-bucket-name mybucket --iam-role-arn arn:aws:iam::123456789012:role/service-role/TrailDiscover --kms-key-id arn:aws:kms:us-west-2:123456789012:key/abcd0000-7fca-4128-82f2-aabbccddeeff"
 }

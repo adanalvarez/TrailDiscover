@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use CreatePolicyVersion to modify IAM policies, potentially granting themselves elevated permissions.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws iam create-policy-version --policy-arn arn:aws:iam::123456789012:policy/TrailDiscover --policy-document {}"
 }

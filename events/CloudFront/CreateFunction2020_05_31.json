@@ -1,8 +1,8 @@
 {
-    "eventName": "UpdateDistribution",
+    "eventName": "CreateFunction2020_05_31",
     "eventSource": "cloudfront.amazonaws.com",
     "awsService": "CloudFront",
-    "description": "Updates the configuration for a CloudFront distribution.",
+    "description": "Creates a CloudFront function.",
     "mitreAttackTactics": [
         "TA0009 - Collection"
     ],
@@ -17,6 +17,6 @@
             "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
         }
     ],
-    "securityImplications": "Attackers might use UpdateDistribution to add a malicious configuration such as a function to exfiltrate data.",
-    "commandLineSimulation": "N/A"
+    "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date.",
+    "commandLineSimulation": "aws cloudfront create-function --name trail-discover-function --function-config Comment='TrailDiscover',Runtime=cloudfront-js-1.0 --function-code VHJhaWxEaXNjb3Zlcgo="
 }

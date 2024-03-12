@@ -18,5 +18,5 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteMountTarget in AWS EFS to remove mount targets, disrupting access to file system and as a preliminary phase before data deletion.",
-    "commandLineSimulation": "N/A"
+    "commandLineSimulation": "aws efs delete-mount-target --mount-target-id fsmt-f9a14450"
 }
