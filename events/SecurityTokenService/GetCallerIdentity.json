@@ -22,6 +22,10 @@
         {
             "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
             "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        },
+        {
+            "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
         }
     ],
     "researchLinks": [

@@ -368,6 +368,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
             }
         ],
         "researchLinks": [
@@ -469,6 +473,10 @@
             {
                 "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",
                 "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
             }
         ],
         "researchLinks": [
@@ -481,6 +489,28 @@
         "commandLineSimulation": "aws sns get-sms-attributes --attributes TrailDiscoverAttributes"
     },
     {
+        "eventName": "Publish",
+        "eventSource": "sns.amazonaws.com",
+        "awsService": "SNS",
+        "description": "Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a mobile platform endpoint (when you specify the TargetArn).",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use Publish for smishing campaigns.",
+        "commandLineSimulation": "aws sns publish --message 'Hello world' --phone-number +1-555-555-0100"
+    },
+    {
         "eventName": "GetSMSSandboxAccountStatus",
         "eventSource": "sns.amazonaws.com",
         "awsService": "SNS",
@@ -491,8 +521,13 @@
         "mitreAttackTechniques": [
             "T1580 - Cloud Infrastructure Discovery"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",
@@ -888,6 +923,28 @@
         ],
         "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources.",
         "commandLineSimulation": "aws lambda create-function --function-name my-function --runtime nodejs18.x --code S3Bucket=string --role arn:aws:iam::123456789012:role/service-role/MyTestFunction-role-tges6bf4"
+    },
+    {
+        "eventName": "CreateEventSourceMapping20150331",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Creates a mapping between an event source and an AWS Lambda function.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "AWS IAM Privilege Escalation Techniques",
+                "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateEventSourceMapping to trigger unauthorized Lambda functions with malicious code.",
+        "commandLineSimulation": "aws lambda create-event-source-mapping --function-name my-function --batch-size 5 --event-source-arn arn:aws:sqs:us-west-2:123456789012:mySQSqueue"
     },
     {
         "eventName": "UpdateFunctionConfiguration20150331v2",
