@@ -1,0 +1,22 @@
+{
+    "eventName": "Publish",
+    "eventSource": "sns.amazonaws.com",
+    "awsService": "SNS",
+    "description": "Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a mobile platform endpoint (when you specify the TargetArn).",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use Publish for smishing campaigns.",
+    "commandLineSimulation": "N/A"
+}
