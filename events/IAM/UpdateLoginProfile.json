@@ -19,6 +19,10 @@
         {
             "description": "Incident report: From CLI to console, chasing an attacker in AWS",
             "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        },
+        {
+            "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+            "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
         }
     ],
     "researchLinks": [

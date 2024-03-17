@@ -1,0 +1,22 @@
+{
+    "eventName": "DeleteInvitations",
+    "eventSource": "guardduty.amazonaws.com",
+    "awsService": "GuardDuty",
+    "description": "Deletes invitations sent to the current member account by AWS accounts specified by their account IDs.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+            "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteInvitations to avoid the use of GuardDuty, thereby evading detection of malicious activity.",
+    "commandLineSimulation": "aws guardduty delete-invitations --account-ids 111222333444"
+}
