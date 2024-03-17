@@ -508,7 +508,7 @@
         ],
         "researchLinks": [],
         "securityImplications": "Attackers might use Publish for smishing campaigns.",
-        "commandLineSimulation": "aws sns publish --message 'Hello world' --phone-number +1-555-555-0100"
+        "commandLineSimulation": "N/A"
     },
     {
         "eventName": "GetSMSSandboxAccountStatus",
@@ -1620,6 +1620,10 @@
             {
                 "description": "Incident report: From CLI to console, chasing an attacker in AWS",
                 "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+            },
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
             }
         ],
         "researchLinks": [
@@ -1849,6 +1853,10 @@
             {
                 "description": "BrowserStack analysis: unpatched inactive machine compromised by shellshock vulnerability",
                 "link": "https://www.databreaches.net/browserstack-analysis-unpatched-inactive-machine-compromised-by-shellshock-vulnerability/"
+            },
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
             }
         ],
         "researchLinks": [
@@ -2380,6 +2388,10 @@
             {
                 "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
                 "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+            },
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
             }
         ],
         "researchLinks": [
@@ -2467,6 +2479,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
             }
         ],
         "researchLinks": [
@@ -2734,6 +2750,10 @@
             {
                 "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
                 "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+            },
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
             }
         ],
         "researchLinks": [],
@@ -3016,7 +3036,12 @@
             "T1562 - Impair Defenses"
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Stopping a CloudTrail trail",
@@ -3080,7 +3105,12 @@
             "T1562 - Impair Defenses"
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS Defense Evasion Delete Cloudtrail",
@@ -3888,8 +3918,13 @@
         "mitreAttackTechniques": [
             "T1021 - Remote Services"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "How to detect EC2 Serial Console enabled",
@@ -4916,6 +4951,28 @@
         "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-1234567890abcdef0 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
     },
     {
+        "eventName": "ReplaceIamInstanceProfileAssociation",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Replaces an IAM instance profile for the specified running instance.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ReplaceIamInstanceProfileAssociation to replace the IAM instance profile on an instance they control with one that has higher privileges.",
+        "commandLineSimulation": "N/A"
+    },
+    {
         "eventName": "RunInstances",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
@@ -5336,6 +5393,10 @@
         ],
         "usedInWild": true,
         "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            },
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
@@ -6050,6 +6111,28 @@
         "commandLineSimulation": "aws wafv2 update-ip-set --name testip --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --addresses 198.51.100.0/16 --lock-token 447e55ac-2396-4c6d-b9f9-86b67c17f8b5"
     },
     {
+        "eventName": "DeleteInvitations",
+        "eventSource": "guardduty.amazonaws.com",
+        "awsService": "GuardDuty",
+        "description": "Deletes invitations sent to the current member account by AWS accounts specified by their account IDs.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DeleteInvitations to avoid the use of GuardDuty, thereby evading detection of malicious activity.",
+        "commandLineSimulation": "aws guardduty delete-invitations --account-ids 111222333444"
+    },
+    {
         "eventName": "UpdateDetector",
         "eventSource": "guardduty.amazonaws.com",
         "awsService": "GuardDuty",
@@ -6153,8 +6236,13 @@
         "mitreAttackTechniques": [
             "T1562 - Impair Defenses"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS GuardDuty detector deleted",
@@ -6271,8 +6359,13 @@
         "mitreAttackTechniques": [
             "T1562 - Impair Defenses"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+                "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",

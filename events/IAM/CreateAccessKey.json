@@ -36,6 +36,10 @@
         {
             "description": "BrowserStack analysis: unpatched inactive machine compromised by shellshock vulnerability",
             "link": "https://www.databreaches.net/browserstack-analysis-unpatched-inactive-machine-compromised-by-shellshock-vulnerability/"
+        },
+        {
+            "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+            "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
         }
     ],
     "researchLinks": [
