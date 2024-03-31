@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 columns: [
                     {
                         name: "Event Name",
-                        width: '19%', 
+                        width: '21%', 
                     },
                     {
                         name: "Event Source",
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     {
                         name: "MITRE Attack Tactics",
-                        width: '22%',
+                        width: '21%',
                     },
                     {
                         name: "MITRE Attack Techniques",
-                        width: '22%',
+                        width: '21%',
                     },
                     {
                         name: "Incidents",
@@ -63,6 +63,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     {
                         name: "Command Line Simulation",
+                        hidden: true,                   
+                    },
+                    {
+                        name: "Permisions",
+                        hidden: true,                   
+                    },
+                    {
+                        name: "Alerting",
                         hidden: true,                   
                     }
                 ],
@@ -108,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     event.researchLinks,
                     event.usedInWild ? "True" : "Unknown",
                     event.securityImplications,
-                    event.commandLineSimulation
+                    event.simulation,
+                    event.permissions,
+                    event.alerting
                 ]);
                 renderGrid(mappedData);
             })
@@ -189,22 +199,87 @@ document.addEventListener('DOMContentLoaded', function() {
             modalBody.appendChild(researchList);
         }
     
-        // Security Implications
-        
+        // Security Implications       
         const securityImplications = document.createElement('p');
         securityImplications.innerHTML = `<strong>Security Implications:</strong> ${data[11]}`;
         modalBody.appendChild(securityImplications);
 
+        // Permissions
+        const permissions = document.createElement('p');
+        permissions.innerHTML = `<strong>Permissions:&nbsp&nbsp</strong>`;
+        const permissionsLink = data[13];
+        if ( permissionsLink != "N/A"){
+            const permissionsAnchor = document.createElement('a');
+            permissionsAnchor.href = permissionsLink;
+            permissionsAnchor.target = "_blank";
+            const permissionsImage = document.createElement('img');
+            permissionsImage.src = 'logos/permissions.png';
+            permissionsImage.alt = 'Click to permissions.cloud';
+            permissionsImage.style.width = '30px';
+            permissionsImage.style.height = 'auto';
+            permissionsImage.style.cursor = 'pointer';
+            permissionsAnchor.appendChild(permissionsImage);
+            permissions.appendChild(permissionsAnchor);  
+        }
+        modalBody.appendChild(permissions);
+        
+        // Alerting
+        const alerting = document.createElement('p');
+        alerting.innerHTML = `<strong>Alerting:&nbsp;&nbsp;</strong>`;
+        // cloudwatchCISControls
+        data[14].forEach(item => {
+            if (item.type === "cloudwatchCISControls") {
+                const alertingLink = item.value;
+                const alertingAnchor = document.createElement('a');
+                alertingAnchor.href = alertingLink;
+                alertingAnchor.target = "_blank";
+                const alertingImage = document.createElement('img');
+                alertingImage.src = 'logos/cloudwatch.png';
+                alertingImage.alt = 'Click to docs.aws.amazon.com';
+                alertingImage.style.width = '30px';
+                alertingImage.style.height = 'auto';
+                alertingImage.style.cursor = 'pointer';
+                alertingImage.style.marginRight = '10px'; // Adds space to the right of each image
+
+                alertingAnchor.appendChild(alertingImage);
+                alerting.appendChild(alertingAnchor);
+            }
+        });
+
+        // Finally, append the alerting paragraph (with all images) to the modal body
+        modalBody.appendChild(alerting);
+
+        // Simulation
+        const simulation = document.createElement('p');
+        simulation.innerHTML = `<strong>Simulation:&nbsp;&nbsp;</strong>`;
+        // stratusRedTeam
+        data[12].forEach(item => {
+            if (item.type === "stratusRedTeam") {
+                const stratusLink = item.value;
+                const stratusAnchor = document.createElement('a');
+                stratusAnchor.href = stratusLink;
+                stratusAnchor.target = "_blank";
+                const stratusImage = document.createElement('img');
+                stratusImage.src = 'logos/stratusredteam.png';
+                stratusImage.alt = 'Click to stratus-red-team.cloud';
+                stratusImage.style.width = '30px';
+                stratusImage.style.height = 'auto';
+                stratusImage.style.cursor = 'pointer';
+                stratusImage.style.marginRight = '5px';
+                stratusAnchor.appendChild(stratusImage);
+                simulation.appendChild(stratusAnchor);
+            }
+        });
+        modalBody.appendChild(simulation);
         // Command Line
         const commandLine = document.createElement('p');
-        commandLine.innerHTML = `<strong>Command Line:</strong>`;
+        commandLine.innerHTML = `<h6>Command Line:</h6>`;
         modalBody.appendChild(commandLine);
-
         const commandLineContainer = document.createElement('div');
         commandLineContainer.className = 'command-line-container';
 
         const commandLineText = document.createElement('pre');
-        commandLineText.textContent = data[12];
+        commandLineText.textContent = data[12].find(item => item.type === "commandLine").value
         commandLineContainer.appendChild(commandLineText);
 
         const copyIcon = document.createElement('i');

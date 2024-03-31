@@ -8,6 +8,20 @@ pre {
     margin-bottom: 0px;
 }
 
+.image-container {
+    width: 100%; /* Or any specific width */
+    max-width: 300px; /* Maximum size of the container */
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .logo {
     display: block;
     margin: 0 auto;
@@ -46,6 +60,10 @@ pre {
 .gridjs-td {
     border-top: 1px solid #eee !important;
     font-size: 14px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 150px; 
 }
 
 .btn-wild{
@@ -64,11 +82,21 @@ pre {
 .gridjs-table tr:hover td {
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
+.gridjs-th-content {
+    display: flex; /* Enable flexbox */
+    align-items: center;
+    padding-top: 5px;
+}
 .edit-on-github {
     display: block;
     margin: 0 auto;
     padding: 10px;
     margin: 20px;
+}
+th.gridjs-th {
+    padding-right: 3px !important;
+    padding-left: 10px !important;
+    
 }
 
 .command-line-container { background-color: #f7f7f7; padding: 10px; position: relative; }
@@ -100,6 +128,17 @@ pre {
     .edit-on-github {
         font-size: 12px;
     }
+
+    .gridjs-table th:nth-of-type(6),
+    .gridjs-table td:nth-of-type(6),
+    .gridjs-table th:nth-of-type(7),
+    .gridjs-table td:nth-of-type(7) {
+        display: none !important;
+    }
+
+    .gridjs-th-content {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -119,5 +158,51 @@ pre {
 
     .edit-on-github {
         display: none;
+    }
+    .gridjs-table th:nth-of-type(4),
+    .gridjs-table td:nth-of-type(4),
+    .gridjs-table th:nth-of-type(6),
+    .gridjs-table td:nth-of-type(6),
+    .gridjs-table th:nth-of-type(7),
+    .gridjs-table td:nth-of-type(7) {
+        display: none !important;
+    }
+
+    .gridjs-th-content {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-controls .btn, .filter-controls .form-control {
+        max-width: none; 
+        margin-bottom: 10px;
+    }
+
+    .gridjs-td, .gridjs-th {
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    .edit-on-github {
+        display: none;
+    }
+    .gridjs-table th:nth-of-type(3),
+    .gridjs-table td:nth-of-type(3),
+    .gridjs-table th:nth-of-type(4),
+    .gridjs-table td:nth-of-type(4),
+    .gridjs-table th:nth-of-type(6),
+    .gridjs-table td:nth-of-type(6),
+    .gridjs-table th:nth-of-type(7),
+    .gridjs-table td:nth-of-type(7) {
+        display: none !important;
+    }
+
+    .gridjs-th-content {
+        font-size: 10px;
     }
 }
