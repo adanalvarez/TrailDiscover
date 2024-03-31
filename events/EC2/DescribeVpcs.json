@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeVpcs to enumerate all Virtual Private Clouds (VPCs) within an AWS environment, aiming to map out network architectures.",
-    "commandLineSimulation": "aws ec2 describe-vpcs --vpc-ids TrailDiscoverVpcId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-vpcs --vpc-ids TrailDiscoverVpcId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeVpcs"
 }

@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use CreatePolicyVersion to modify IAM policies, potentially granting themselves elevated permissions.",
-    "commandLineSimulation": "aws iam create-policy-version --policy-arn arn:aws:iam::123456789012:policy/TrailDiscover --policy-document {}"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-policy-version --policy-arn arn:aws:iam::123456789012:policy/TrailDiscover --policy-document {}"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreatePolicyVersion"
 }

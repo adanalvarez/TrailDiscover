@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteBucketPolicy to remove security policies and gain unauthorized access to S3 buckets.",
-    "commandLineSimulation": "aws s3api delete-bucket-policy --bucket TrailDiscoverBucketName"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-8"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api delete-bucket-policy --bucket TrailDiscoverBucketName"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-DeleteBucketPolicy"
 }

@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListOrganizationalUnitsForParent to map the structure of an organization's AWS environment for potential vulnerabilities.",
-    "commandLineSimulation": "aws organizations list-organizational-units-for-parent --parent-id r-traildiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations list-organizational-units-for-parent --parent-id r-traildiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-ListOrganizationalUnitsForParent"
 }

@@ -1,7 +1,7 @@
 {
     "eventName": "GetLogRecord",
     "eventSource": "logs.amazonaws.com",
-    "awsService": "CloudWatch",
+    "awsService": "CloudWatchLogs",
     "description": "Retrieves all of the fields and values of a single log event.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetLogRecord to precisely extract information from CloudWatch logs, potentially exposing sensitive data or insights into AWS operational activities.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-GetLogRecord"
 }

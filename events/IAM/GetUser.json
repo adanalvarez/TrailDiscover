@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetUser to obtain user information.",
-    "commandLineSimulation": "aws iam get-user --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam get-user --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-GetUser"
 }

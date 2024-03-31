@@ -25,5 +25,17 @@
         }
     ],
     "securityImplications": "Attackers might use DetachUserPolicy to remove security policies and gain unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam detach-user-policy --user-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/TesterPolicy"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam detach-user-policy --user-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/TesterPolicy"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DetachUserPolicy"
 }

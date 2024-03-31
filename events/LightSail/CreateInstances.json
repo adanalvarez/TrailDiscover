@@ -20,5 +20,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use CreateInstances to rapidly deploy malicious instances, causing financial loss and resource exhaustion. The use of lightsail might not be monitored.",
-    "commandLineSimulation": "aws lightsail create-instances --instance-names Instance-1 --availability-zone us-west-2a --blueprint-id wordpress_5_1_1_2 --bundle-id nano_2_0"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lightsail create-instances --instance-names Instance-1 --availability-zone us-west-2a --blueprint-id wordpress_5_1_1_2 --bundle-id nano_2_0"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lightsail#lightsail-CreateInstances"
 }

@@ -18,5 +18,16 @@
         }
     ],
     "securityImplications": "Attackers might use GetAccountAuthorizationDetails to gather information about IAM users, groups, roles, and policies in a targeted AWS account.",
-    "commandLineSimulation": "aws iam get-account-authorization-details"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam get-account-authorization-details"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.discovery.ec2-enumerate-from-instance"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-GetAccountAuthorizationDetails"
 }

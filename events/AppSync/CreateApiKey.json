@@ -20,5 +20,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateApiKey to add a key they control for authentication. Bypassing current authentication and potentially allowing persistent access to data.",
-    "commandLineSimulation": "aws appsync create-api-key --api-id TrailDiscoverApiId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws appsync create-api-key --api-id TrailDiscoverApiId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/appsync#appsync-CreateApiKey"
 }

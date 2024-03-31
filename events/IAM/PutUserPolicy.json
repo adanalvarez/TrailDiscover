@@ -32,5 +32,17 @@
         }
     ],
     "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam put-user-policy --user-name TrailDiscover --policy-name TrailDiscover --policy-document {}"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam put-user-policy --user-name TrailDiscover --policy-name TrailDiscover --policy-document {}"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-PutUserPolicy"
 }

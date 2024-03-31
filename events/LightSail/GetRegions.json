@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetRegions to identify potential targets in different geographical locations on AWS LightSail.",
-    "commandLineSimulation": "aws lightsail get-regions"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lightsail get-regions"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lightsail#lightsail-GetRegions"
 }

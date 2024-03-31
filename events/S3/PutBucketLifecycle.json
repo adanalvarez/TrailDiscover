@@ -1,0 +1,38 @@
+{
+    "eventName": "PutBucketLifecycle",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "USA VS Nickolas Sharp",
+            "link": "https://www.justice.gov/usao-sdny/press-release/file/1452706/dl"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use PutBucketLifecycle to add a lifecycle that deletes data after one day.",
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-8"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api put-bucket-lifecycle --bucket my-bucket --lifecycle-configuration '{\"Rules\":[{\"ID\":\"\",\"Status\": \"Enabled\", \"Prefix\": \"TrailDiscover/\"}]}'"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.cloudtrail-lifecycle-rule"
+        }
+    ],
+    "permissions": "N/A"
+}

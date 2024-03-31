@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListGroupsForUser to identify privileged groups and target specific users for access escalation.",
-    "commandLineSimulation": "aws iam list-groups-for-user --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-groups-for-user --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListGroupsForUser"
 }

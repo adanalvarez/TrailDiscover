@@ -25,5 +25,12 @@
         }
     ],
     "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands.",
-    "commandLineSimulation": "aws ec2 start-instances --instance-ids TrailDiscoverInstanceID"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 start-instances --instance-ids TrailDiscoverInstanceID"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-StartInstances"
 }

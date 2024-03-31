@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeAccountAttributes to gather detailed information about AWS account configurations and limits.",
-    "commandLineSimulation": "aws ec2 describe-account-attributes --attribute-names TrailDiscoverAttribute"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-account-attributes --attribute-names TrailDiscoverAttribute"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeAccountAttributes"
 }

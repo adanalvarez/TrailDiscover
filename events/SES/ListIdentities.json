@@ -39,5 +39,12 @@
         }
     ],
     "securityImplications": "Attackers use ListIdentities from SES to enumerate email addresses or domains verified under the AWS account.",
-    "commandLineSimulation": "aws ses list-identities --identity-type \"EmailAddress\""
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses list-identities --identity-type \"EmailAddress\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-ListIdentities"
 }

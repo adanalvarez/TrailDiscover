@@ -1,7 +1,7 @@
 {
     "eventName": "DisableRule",
     "eventSource": "events.amazonaws.com",
-    "awsService": "EventBridge",
+    "awsService": "events",
     "description": "Disables the specified rule.",
     "mitreAttackTactics": [
         "TA0040 - Impact",
@@ -24,5 +24,12 @@
         }
     ],
     "securityImplications": "Attackers might use DisableRule to deactivate AWS EventBridge rules, effectively silencing alarms and automated responses designed for incident detection and mitigation.",
-    "commandLineSimulation": "aws events disable-rule --name TrailDiscoverRule --event-bus-name TrailDiscoverBus"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws events disable-rule --name TrailDiscoverRule --event-bus-name TrailDiscoverBus"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/events#events-DisableRule"
 }

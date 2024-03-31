@@ -1,7 +1,7 @@
 {
     "eventName": "RegisterDomain",
-    "eventSource": "route53.amazonaws.com",
-    "awsService": "Route53",
+    "eventSource": "route53domains.amazonaws.com",
+    "awsService": "route53domains",
     "description": "This operation registers a domain. For some top-level domains (TLDs), this operation requires extra parameters.",
     "mitreAttackTactics": [
         "TA0040 - Impact"
@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use RegisterDomain to register malicious domains for phishing or malware distribution.",
-    "commandLineSimulation": "aws route53domains register-domain --region us-east-1 --cli-input-json '{\"DomainName\": \"\", \"DurationInYears\": 1, \"AdminContact\": { \"FirstName\": \"\", \"LastName\": \"\"}, \"RegistrantContact\": {\"FirstName\": \"\", \"LastName\": \"\" }, \"TechContact\": {\"FirstName\": \"\", \"LastName\": \"\"}}'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws route53domains register-domain --region us-east-1 --cli-input-json '{\"DomainName\": \"\", \"DurationInYears\": 1, \"AdminContact\": { \"FirstName\": \"\", \"LastName\": \"\"}, \"RegistrantContact\": {\"FirstName\": \"\", \"LastName\": \"\" }, \"TechContact\": {\"FirstName\": \"\", \"LastName\": \"\"}}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/route53domains#route53domains-RegisterDomain"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListOriginationNumbers to identify origination numbers for potential smishing campaings.",
-    "commandLineSimulation": "aws sns list-origination-numbers"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns list-origination-numbers"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-ListOriginationNumbers"
 }

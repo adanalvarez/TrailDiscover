@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateJob to create a glue job with a role with higer privileges to gain these privileges.",
-    "commandLineSimulation": "aws glue create-job --name TrailDiscoverJob --role TrailDiscoverRole --command Name=pythonshell,ScriptLocation=s3://TrailDiscoverBucket/TrailDiscoverScript.py --default-arguments '{\"--job-language\": \"python\"}'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glue create-job --name TrailDiscoverJob --role TrailDiscoverRole --command Name=pythonshell,ScriptLocation=s3://TrailDiscoverBucket/TrailDiscoverScript.py --default-arguments '{\"--job-language\": \"python\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glue#glue-CreateJob"
 }

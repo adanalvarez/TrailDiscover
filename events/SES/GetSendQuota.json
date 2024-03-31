@@ -35,5 +35,12 @@
         }
     ],
     "securityImplications": "Attackers use GetSendQuota to assess the email sending capacity of an AWS account, potentially planning persistent spam or phishing campaigns by identifying limits they can exploit or escalate.",
-    "commandLineSimulation": "aws ses get-send-quota"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses get-send-quota"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-GetSendQuota"
 }

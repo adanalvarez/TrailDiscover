@@ -29,5 +29,16 @@
         }
     ],
     "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances.",
-    "commandLineSimulation": "aws ssm send-command --instance-ids \"TrailDiscoverInstanceID\" --document-name \"AWS-RunShellScript\" --parameters commands=ls --output text"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm send-command --instance-ids \"TrailDiscoverInstanceID\" --document-name \"AWS-RunShellScript\" --parameters commands=ls --output text"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.ssm-send-command"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-SendCommand"
 }

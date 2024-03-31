@@ -1,7 +1,7 @@
 {
     "eventName": "IssueCertificate",
     "eventSource": "acm-pca.amazonaws.com",
-    "awsService": "ACM-PCA",
+    "awsService": "ACMPCA",
     "description": "Uses your private certificate authority (CA), or one that has been shared with you, to issue a client certificate.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use IssueCertificate combined with Route 53 control to intercept and read data from AWS API calls.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/acm-pca#acm-pca-IssueCertificate"
 }

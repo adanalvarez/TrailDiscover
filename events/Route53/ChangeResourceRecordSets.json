@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use ChangeResourceRecordSets to redirect traffic to malicious websites.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/route53#route53-ChangeResourceRecordSets"
 }

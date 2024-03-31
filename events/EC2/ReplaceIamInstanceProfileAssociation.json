@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ReplaceIamInstanceProfileAssociation to replace the IAM instance profile on an instance they control with one that has higher privileges.",
-    "commandLineSimulation": "aws ec2 replace-iam-instance-profile-association --iam-instance-profile Name=TrailDiscoverAdminRole --association-id iip-assoc-060bae234aac2e7fa"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 replace-iam-instance-profile-association --iam-instance-profile Name=TrailDiscoverAdminRole --association-id iip-assoc-060bae234aac2e7fa"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ReplaceIamInstanceProfileAssociation"
 }

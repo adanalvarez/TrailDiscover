@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeletePublishingDestination to disrupt the security monitoring and incident response process in AWS GuardDuty.",
-    "commandLineSimulation": "aws guardduty delete-publishing-destination --detector-id TrailDiscoverDetectorId --destination-id TrailDiscoverDestinationId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty delete-publishing-destination --detector-id TrailDiscoverDetectorId --destination-id TrailDiscoverDestinationId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-DeletePublishingDestination"
 }

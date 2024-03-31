@@ -31,5 +31,12 @@
         }
     ],
     "securityImplications": "Attackers might use ImportKeyPair to upload malicious SSH keys to AWS EC2 instances, granting unauthorized access.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ImportKeyPair"
 }

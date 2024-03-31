@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeKeyPairs to audit the SSH key pairs associated with EC2 instances",
-    "commandLineSimulation": "aws ec2 describe-key-pairs --key-names TrailDiscoverKeyPair"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-key-pairs --key-names TrailDiscoverKeyPair"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeKeyPairs"
 }

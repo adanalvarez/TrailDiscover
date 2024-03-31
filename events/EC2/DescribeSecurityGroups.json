@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeSecurityGroups to review AWS VPC security group configurations, seeking misconfigurations that could be exploited for unauthorized access or to bypass network security controls.",
-    "commandLineSimulation": "aws ec2 describe-security-groups --group-names TrailDiscoverSecurityGroup"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-security-groups --group-names TrailDiscoverSecurityGroup"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSecurityGroups"
 }

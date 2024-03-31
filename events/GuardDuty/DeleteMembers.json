@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteMembers to remove members from a GuardDuty detector, disrupting threat detection and security analysis.",
-    "commandLineSimulation": "aws guardduty delete-members --account-ids TrailDiscoverAccountIds --detector-id TrailDiscoverDetectorId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty delete-members --account-ids TrailDiscoverAccountIds --detector-id TrailDiscoverDetectorId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-DeleteMembers"
 }

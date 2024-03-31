@@ -87,5 +87,16 @@
         }
     ],
     "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions.",
-    "commandLineSimulation": "aws iam create-user --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-user --user-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-admin-user"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateUser"
 }

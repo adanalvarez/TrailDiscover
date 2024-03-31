@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use CreateVolume to create a volume from a snapshot and mount it to an EC2 instance under their control.",
-    "commandLineSimulation": "aws ec2 create-volume --size 80 --availability-zone us-east-1a"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-volume --size 80 --availability-zone us-east-1a"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateVolume"
 }

@@ -47,5 +47,16 @@
         }
     ],
     "securityImplications": "Attackers might use ListAllMyBuckets to identify potential targets for data breaches or unauthorized access.",
-    "commandLineSimulation": "aws s3api list-buckets --query \"Buckets[].Name\""
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api list-buckets --query \"Buckets[].Name\""
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.discovery.ec2-enumerate-from-instance"
+        }
+    ],
+    "permissions": "N/A"
 }

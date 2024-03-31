@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteRolePolicy to remove security policies, potentially escalating their privileges.",
-    "commandLineSimulation": "aws iam delete-role-policy --role-name TrailDiscover-Role --policy-name TrailDiscover"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam delete-role-policy --role-name TrailDiscover-Role --policy-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DeleteRolePolicy"
 }

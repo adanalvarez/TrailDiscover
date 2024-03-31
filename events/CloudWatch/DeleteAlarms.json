@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteAlarms to disable critical CloudWatch alerts, undermining AWS environment monitoring",
-    "commandLineSimulation": "aws cloudwatch delete-alarms --alarm-names TrailDiscoverAlarm"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudwatch delete-alarms --alarm-names TrailDiscoverAlarm"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudwatch#cloudwatch-DeleteAlarms"
 }

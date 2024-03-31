@@ -83,5 +83,16 @@
         }
     ],
     "securityImplications": "Attackers might use RunInstances to programmatically launch unauthorized EC2 instances for crypto mining or to create a foothold within the AWS environment for further exploitation.",
-    "commandLineSimulation": "aws ec2 run-instances --image-id ami-0b98a32b1c5e0d105 --instance-type t2.micro --key-name MyKeyPair"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 run-instances --image-id ami-0b98a32b1c5e0d105 --instance-type t2.micro --key-name MyKeyPair"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.ec2-launch-unusual-instances"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-RunInstances"
 }

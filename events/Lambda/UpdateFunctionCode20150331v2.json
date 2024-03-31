@@ -34,5 +34,16 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
-    "commandLineSimulation": "aws lambda update-function-code --function-name  my-function"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda update-function-code --function-name  my-function"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.lambda-overwrite-code"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-UpdateFunctionCode"
 }

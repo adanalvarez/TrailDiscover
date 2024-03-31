@@ -23,5 +23,16 @@
         }
     ],
     "securityImplications": "Attackers might use ListDetectors to identify active threat detection systems in AWS GuardDuty.",
-    "commandLineSimulation": "aws guardduty list-detectors"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty list-detectors"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.discovery.ec2-enumerate-from-instance"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-ListDetectors"
 }

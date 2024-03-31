@@ -22,5 +22,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use UpdateAccountSendingEnabled to enable sending from compromised AWS accounts, facilitating spam or phishing campaigns.",
-    "commandLineSimulation": "aws ses update-account-sending-enabled"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses update-account-sending-enabled"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-UpdateAccountSendingEnabled"
 }

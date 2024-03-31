@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateFunction to add a new function that can be use to exfiltrate date.",
-    "commandLineSimulation": "aws cloudfront create-function --name trail-discover-function --function-config Comment='TrailDiscover',Runtime=cloudfront-js-1.0 --function-code VHJhaWxEaXNjb3Zlcgo="
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudfront create-function --name trail-discover-function --function-config Comment='TrailDiscover',Runtime=cloudfront-js-1.0 --function-code VHJhaWxEaXNjb3Zlcgo="
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-CreateFunction"
 }

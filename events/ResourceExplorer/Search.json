@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use Search to list resorces.",
-    "commandLineSimulation": "aws resource-explorer-2 search --query-string 'service:iam'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws resource-explorer-2 search --query-string 'service:iam'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/resource-explorer-2#resource-explorer-2-Search"
 }

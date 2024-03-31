@@ -23,5 +23,16 @@
         }
     ],
     "securityImplications": "Attackers might use DescribeInstances to inventory EC2 instances within an AWS environment.",
-    "commandLineSimulation": "aws ec2 describe-instances --instance-ids TrailDiscoverInstanceID"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-instances --instance-ids TrailDiscoverInstanceID"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.credential-access.ec2-steal-instance-credentials"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInstances"
 }

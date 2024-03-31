@@ -1,7 +1,7 @@
 {
     "eventName": "DeleteRule",
     "eventSource": "events.amazonaws.com",
-    "awsService": "EventBridge",
+    "awsService": "events",
     "description": "Deletes the specified rule.",
     "mitreAttackTactics": [
         "TA0040 - Impact",
@@ -24,5 +24,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteRule to disrupt automated security responses and event logging in AWS EventBridge, potentially masking unauthorized activities or compromising system integrity.",
-    "commandLineSimulation": "aws events delete-rule --name TrailDiscoverRule"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws events delete-rule --name TrailDiscoverRule"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/events#events-DeleteRule"
 }

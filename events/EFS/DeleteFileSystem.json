@@ -1,7 +1,7 @@
 {
     "eventName": "DeleteFileSystem",
     "eventSource": "elasticfilesystem.amazonaws.com",
-    "awsService": "EFS",
+    "awsService": "elasticfilesystem",
     "description": "Deletes a file system, permanently severing access to its contents.",
     "mitreAttackTactics": [
         "TA0040 - Impact"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteFileSystem in AWS EFS to deliberately erase file systems, leading to data loss.",
-    "commandLineSimulation": "aws efs delete-file-system --file-system-id fs-c7a0456e"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws efs delete-file-system --file-system-id fs-c7a0456e"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/elasticfilesystem#elasticfilesystem-DeleteFileSystem"
 }

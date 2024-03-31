@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateDevEndpoint to modify the settings of a development endpoint, potentially disrupting data processing tasks or gaining unauthorized access to data.",
-    "commandLineSimulation": "aws glue update-dev-endpoint --endpoint-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glue update-dev-endpoint --endpoint-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glue#glue-UpdateDevEndpoint"
 }

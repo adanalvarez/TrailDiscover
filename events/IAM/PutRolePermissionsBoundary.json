@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use PutRolePermissionsBoundary to modify permissions boundaries, potentially escalating privileges or enabling unauthorized access.",
-    "commandLineSimulation": "aws iam put-role-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --role-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam put-role-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --role-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-PutRolePermissionsBoundary"
 }

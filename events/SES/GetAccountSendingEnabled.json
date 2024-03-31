@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetAccountSendingEnabled to identify if an AWS account's email sending capabilities are enabled, potentially exploiting it for spamming or phishing activities.",
-    "commandLineSimulation": "aws ses get-account-sending-enabled"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses get-account-sending-enabled"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-GetAccountSendingEnabled"
 }

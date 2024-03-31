@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeInstanceInformation to gather sensitive information about the instances, potentially leading to unauthorized access.",
-    "commandLineSimulation": "aws ssm describe-instance-information --instance-information-filter-list key=InstanceIds,valueSet=TrailDiscoverInstanceIds"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm describe-instance-information --instance-information-filter-list key=InstanceIds,valueSet=TrailDiscoverInstanceIds"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeInstanceInformation"
 }

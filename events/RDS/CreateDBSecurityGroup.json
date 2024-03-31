@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateDBSecurityGroup to create new security groups with lax rules, potentially allowing unauthorized access to the database.",
-    "commandLineSimulation": "aws rds create-db-security-group --db-security-group-name TrailDiscoverSecurityGroupName --db-security-group-description TrailDiscoverDescription"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds create-db-security-group --db-security-group-name TrailDiscoverSecurityGroupName --db-security-group-description TrailDiscoverDescription"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-CreateDBSecurityGroup"
 }

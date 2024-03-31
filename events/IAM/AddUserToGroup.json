@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use AddUserToGroup to add unauthorized users to privileged groups, gaining unauthorized access or escalating privileges.",
-    "commandLineSimulation": "aws iam add-user-to-group --user-name TrailDiscover --group-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam add-user-to-group --user-name TrailDiscover --group-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-AddUserToGroup"
 }

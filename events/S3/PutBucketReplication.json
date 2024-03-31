@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use PutBucketReplication to replicate sensitive data to unauthorized S3 buckets controlled by the attacker.",
-    "commandLineSimulation": "aws s3api put-bucket-replication --bucket AWSDOC-EXAMPLE-BUCKET1 --replication-configuration '{\"Role\":\"\",\"Rules\":[]}'"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-8"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api put-bucket-replication --bucket AWSDOC-EXAMPLE-BUCKET1 --replication-configuration '{\"Role\":\"\",\"Rules\":[]}'"
+        }
+    ],
+    "permissions": "N/A"
 }

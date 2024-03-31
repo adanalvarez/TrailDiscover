@@ -27,5 +27,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetSMSAttributes to retrieve sensitive SMS configuration details for potential usage for smishing.",
-    "commandLineSimulation": "aws sns get-sms-attributes --attributes TrailDiscoverAttributes"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns get-sms-attributes --attributes TrailDiscoverAttributes"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-GetSMSAttributes"
 }

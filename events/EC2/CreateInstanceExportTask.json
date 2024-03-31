@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateInstanceExportTask to extract or exfiltrate information",
-    "commandLineSimulation": "aws ec2 create-instance-export-task --instance-id TrailDiscoverInstanceId --target-environment TrailDiscoverTargetEnvironment --export-to-s3-task DiskImageFormat=TrailDiscoverDiskImageFormat,ContainerFormat=TrailDiscoverContainerFormat,S3Bucket=TrailDiscoverS3Bucket,S3Prefix=TrailDiscoverS3Prefix"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-instance-export-task --instance-id TrailDiscoverInstanceId --target-environment TrailDiscoverTargetEnvironment --export-to-s3-task DiskImageFormat=TrailDiscoverDiskImageFormat,ContainerFormat=TrailDiscoverContainerFormat,S3Bucket=TrailDiscoverS3Bucket,S3Prefix=TrailDiscoverS3Prefix"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateInstanceExportTask"
 }

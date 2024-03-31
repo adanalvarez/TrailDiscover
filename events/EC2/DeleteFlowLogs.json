@@ -26,5 +26,16 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteFlowLogs to remove records of network traffic within AWS.",
-    "commandLineSimulation": "aws ec2 delete-flow-logs --flow-log-ids TrailDiscoverFlowLogId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 delete-flow-logs --flow-log-ids TrailDiscoverFlowLogId"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.vpc-remove-flow-logs"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeleteFlowLogs"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateTrafficMirrorFilter to clandestinely mirror network traffic for analysis or exfiltration.",
-    "commandLineSimulation": "aws ec2 create-traffic-mirror-filter --description 'TCP Filter'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-traffic-mirror-filter --description 'TCP Filter'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateTrafficMirrorFilter"
 }

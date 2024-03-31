@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteUserPermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam delete-user-permissions-boundary --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam delete-user-permissions-boundary --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DeleteUserPermissionsBoundary"
 }

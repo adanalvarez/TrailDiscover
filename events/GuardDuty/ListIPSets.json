@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListIPSets to identify what IPs won't generate an alert.",
-    "commandLineSimulation": "aws guardduty list-ip-sets --detector-id TrailDiscoverDetectorId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty list-ip-sets --detector-id TrailDiscoverDetectorId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-ListIPSets"
 }

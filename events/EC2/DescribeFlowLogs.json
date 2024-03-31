@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeFlowLogs to review VPC flow log configurations, aiming to understand what network traffic is being logged.",
-    "commandLineSimulation": "aws ec2 describe-flow-logs --filter Name=resource-id,Values=TrailDiscoverResourceId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-flow-logs --filter Name=resource-id,Values=TrailDiscoverResourceId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeFlowLogs"
 }

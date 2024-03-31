@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers use CreateEmailIdentity to create its own identity for sending spam or phishing emails later.",
-    "commandLineSimulation": "aws sesv2 create-email-identity --email-identity cloudtrail.cloud"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sesv2 create-email-identity --email-identity cloudtrail.cloud"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-CreateEmailIdentity"
 }

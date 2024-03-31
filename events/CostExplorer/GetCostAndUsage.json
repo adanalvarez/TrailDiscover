@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetCostAndUsage to determine how active an account is by understanding the cost within a cloud account.",
-    "commandLineSimulation": "aws ce get-cost-and-usage --time-period Start=2017-09-01,End=2017-10-01 --granularity MONTHLY --metrics 'BlendedCost' 'UnblendedCost' 'UsageQuantity' --group-by Type=DIMENSION,Key=SERVICE Type=TAG,Key=Environment"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ce get-cost-and-usage --time-period Start=2017-09-01,End=2017-10-01 --granularity MONTHLY --metrics 'BlendedCost' 'UnblendedCost' 'UsageQuantity' --group-by Type=DIMENSION,Key=SERVICE Type=TAG,Key=Environment"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ce#ce-GetCostAndUsage"
 }

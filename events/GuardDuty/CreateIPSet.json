@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures.",
-    "commandLineSimulation": "aws guardduty create-ip-set --detector-id 12abc34d567e8fa901bc2d34eexample --name new-ip-set --format TXT --location s3://traildiscover/traildiscover.csv --activate"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty create-ip-set --detector-id 12abc34d567e8fa901bc2d34eexample --name new-ip-set --format TXT --location s3://traildiscover/traildiscover.csv --activate"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-CreateIPSet"
 }

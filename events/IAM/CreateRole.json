@@ -22,5 +22,16 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access.",
-    "commandLineSimulation": "aws iam create-role --role-name TrailDiscover --assume-role-policy-document {}"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-role --role-name TrailDiscover --assume-role-policy-document {}"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-backdoor-role"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateRole"
 }

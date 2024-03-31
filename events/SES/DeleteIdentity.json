@@ -19,5 +19,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteIdentity to disrupt email sending capabilities or delete an identity previously used attackers.",
-    "commandLineSimulation": "aws ses delete-identity --identity TrailDiscoverIdentity"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses delete-identity --identity TrailDiscoverIdentity"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-DeleteIdentity"
 }

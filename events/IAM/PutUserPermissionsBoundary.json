@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use PutUserPermissionsBoundary to modify the permissions boundary for an IAM user, potentially escalating privileges or enabling unauthorized access.",
-    "commandLineSimulation": "aws iam put-user-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam put-user-permissions-boundary --permissions-boundary arn:aws:iam::123456789012:policy/intern-boundary --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-PutUserPermissionsBoundary"
 }

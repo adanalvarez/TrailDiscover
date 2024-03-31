@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListRolePolicies to identify permissions associated with various roles in AWS.",
-    "commandLineSimulation": "aws iam list-role-policies --role-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-role-policies --role-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListRolePolicies"
 }

@@ -1,7 +1,7 @@
 {
     "eventName": "DeleteLogGroup",
     "eventSource": "logs.amazonaws.com",
-    "awsService": "CloudWatch",
+    "awsService": "CloudWatchLogs",
     "description": "Deletes the specified log group and permanently deletes all the archived log events associated with the log group.",
     "mitreAttackTactics": [
         "TA0005 - Defense Evasion"
@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteLogGroup to erase CloudWatch logs, erasing evidence of their activities within AWS.",
-    "commandLineSimulation": "aws logs delete-log-group --log-group-name TrailDiscoverLogGroup"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs delete-log-group --log-group-name TrailDiscoverLogGroup"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-DeleteLogGroup"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateDevEndpoint in AWS Glue to escalate privileges or provision development endpoints, potentially exploiting them.",
-    "commandLineSimulation": "aws glue create-dev-endpoint --endpoint-name TrailDiscover --role-arn arn:aws:iam::111122223333:role/TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glue create-dev-endpoint --endpoint-name TrailDiscover --role-arn arn:aws:iam::111122223333:role/TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glue#glue-CreateDevEndpoint"
 }

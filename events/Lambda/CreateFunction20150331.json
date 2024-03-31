@@ -30,5 +30,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateFunction to deploy malicious code or functions, depending on the scenario this might allow the attacker to gain persistence, escalate privileges, or hijack resources.",
-    "commandLineSimulation": "aws lambda create-function --function-name my-function --runtime nodejs18.x --code S3Bucket=string --role arn:aws:iam::123456789012:role/service-role/MyTestFunction-role-tges6bf4"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda create-function --function-name my-function --runtime nodejs18.x --code S3Bucket=string --role arn:aws:iam::123456789012:role/service-role/MyTestFunction-role-tges6bf4"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-CreateFunction"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DisassociateMembers to remove members from a GuardDuty detector, disrupting threat detection and security analysis.",
-    "commandLineSimulation": "aws guardduty disassociate-members --detector-id TrailDiscoverDetectorId --account-ids TrailDiscoverAccountIds"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty disassociate-members --detector-id TrailDiscoverDetectorId --account-ids TrailDiscoverAccountIds"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-DisassociateMembers"
 }

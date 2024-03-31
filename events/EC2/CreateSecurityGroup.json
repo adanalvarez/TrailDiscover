@@ -45,5 +45,17 @@
         }
     ],
     "securityImplications": "Attackers might use CreateSecurityGroup to establish new security groups with lax rules, facilitating unauthorized access or resource exploitation within AWS environments.",
-    "commandLineSimulation": "aws ec2 create-security-group --group-name TrailDiscoverGroupName --description \"TrailDiscoverDescription\""
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-10"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-security-group --group-name TrailDiscoverGroupName --description \"TrailDiscoverDescription\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateSecurityGroup"
 }

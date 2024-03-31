@@ -22,5 +22,16 @@
         }
     ],
     "securityImplications": "Attackers might use PutEventSelectors to disrupting AWS logging.",
-    "commandLineSimulation": "aws cloudtrail put-event-selectors --trail-name TrailDiscover --event-selectors '[{\"ReadWriteType\": \"All\", \"IncludeManagementEvents\":true, \"DataResources\": [{\"Type\": \"AWS::S3::Object\", \"Values\": [\"arn:aws:s3\"]}] }]'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudtrail put-event-selectors --trail-name TrailDiscover --event-selectors '[{\"ReadWriteType\": \"All\", \"IncludeManagementEvents\":true, \"DataResources\": [{\"Type\": \"AWS::S3::Object\", \"Values\": [\"arn:aws:s3\"]}] }]'"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.cloudtrail-event-selectors"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudtrail#cloudtrail-PutEventSelectors"
 }

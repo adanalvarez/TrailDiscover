@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeTransitGatewayMulticastDomains to obtain details on multicast domains within AWS Transit Gateways, identifying network segments and multicast configurations.",
-    "commandLineSimulation": "aws ec2 describe-transit-gateway-multicast-domains --transit-gateway-multicast-domain-ids TrailDiscoverTransitGatewayMulticastDomainId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-transit-gateway-multicast-domains --transit-gateway-multicast-domain-ids TrailDiscoverTransitGatewayMulticastDomainId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeTransitGatewayMulticastDomains"
 }

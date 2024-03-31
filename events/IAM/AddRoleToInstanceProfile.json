@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use AddRoleToInstanceProfile to escalate privileges or gain unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam add-role-to-instance-profile --role-name TrailDiscover --instance-profile-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam add-role-to-instance-profile --role-name TrailDiscover --instance-profile-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-AddRoleToInstanceProfile"
 }

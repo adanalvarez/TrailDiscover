@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeVolumes to enumerate EBS volumes in an AWS environment, identifying valuable data storage.",
-    "commandLineSimulation": "aws ec2 describe-volumes --volume-ids TrailDiscoverVolumeId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-volumes --volume-ids TrailDiscoverVolumeId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeVolumes"
 }

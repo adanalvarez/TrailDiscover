@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use AttachGroupPolicy to assign malicious policies to a group, escalating privileges or enabling unauthorized access.",
-    "commandLineSimulation": "aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --group-name TrailDiscover"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --group-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-AttachGroupPolicy"
 }

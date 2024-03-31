@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteVolume to remove Elastic Block Store (EBS) volumes, leading to data loss and potentially disrupting operations.",
-    "commandLineSimulation": "aws ec2 delete-volume --volume-id TrailDiscoverVolumeId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 delete-volume --volume-id TrailDiscoverVolumeId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeleteVolume"
 }

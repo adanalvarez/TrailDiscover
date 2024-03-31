@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use DisassociateFromMasterAccount to remove the link to the master GuardDuty account, disrupting centralized security monitoring and analysis.",
-    "commandLineSimulation": "aws guardduty disassociate-from-master-account --detector-id TrailDiscoverDetectorId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty disassociate-from-master-account --detector-id TrailDiscoverDetectorId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-DisassociateFromMasterAccount"
 }

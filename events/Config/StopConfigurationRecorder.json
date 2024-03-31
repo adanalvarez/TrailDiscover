@@ -26,5 +26,17 @@
         }
     ],
     "securityImplications": "Attackers might use StopConfigurationRecorder to halt the recording of AWS resource configurations, hindering audit trails.",
-    "commandLineSimulation": "aws configservice stop-configuration-recorder --configuration-recorder-name TrailDiscoverRecorder"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-9"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws configservice stop-configuration-recorder --configuration-recorder-name TrailDiscoverRecorder"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/config#config-StopConfigurationRecorder"
 }

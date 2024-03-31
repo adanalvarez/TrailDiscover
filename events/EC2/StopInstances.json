@@ -25,5 +25,16 @@
         }
     ],
     "securityImplications": "Attackers might use StopInstances to avoid being detected or to do changes that will be executed when the EC2 is started.",
-    "commandLineSimulation": "aws ec2 stop-instances --instance-ids TrailDiscoverInstanceID"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 stop-instances --instance-ids TrailDiscoverInstanceID"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.ec2-user-data"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-StopInstances"
 }

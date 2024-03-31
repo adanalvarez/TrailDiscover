@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListFindings to identify if previous actions generated alerts.",
-    "commandLineSimulation": "aws guardduty list-findings --detector-id TrailDiscoverDetectorId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty list-findings --detector-id TrailDiscoverDetectorId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-ListFindings"
 }

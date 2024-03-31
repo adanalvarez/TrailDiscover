@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteRuleGroup to disable security rules, making the system vulnerable to cyber attacks.",
-    "commandLineSimulation": "aws wafv2 delete-rule-group --name TestRuleGroup --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --lock-token 7b3bcec2-0000-0000-0000-563bf47249f0"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws wafv2 delete-rule-group --name TestRuleGroup --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --lock-token 7b3bcec2-0000-0000-0000-563bf47249f0"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/wafv2#wafv2-DeleteRuleGroup"
 }

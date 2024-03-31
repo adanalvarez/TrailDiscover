@@ -27,5 +27,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListServiceQuotas to identify potential services to exploit by understanding their usage limits.",
-    "commandLineSimulation": "aws service-quotas list-service-quotas --service-code TrailDiscoverServiceCode"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws service-quotas list-service-quotas --service-code TrailDiscoverServiceCode"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/servicequotas#servicequotas-ListServiceQuotas"
 }

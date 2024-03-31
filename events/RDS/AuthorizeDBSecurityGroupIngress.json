@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use AuthorizeDBSecurityGroupIngress to allow unauthorized access to the database by modifying security group rules.",
-    "commandLineSimulation": "aws rds authorize-db-security-group-ingress --db-security-group-name TrailDiscoverDBSecurityGroupName --cidrip TrailDiscoverCIDRIP"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds authorize-db-security-group-ingress --db-security-group-name TrailDiscoverDBSecurityGroupName --cidrip TrailDiscoverCIDRIP"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-AuthorizeDBSecurityGroupIngress"
 }

@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteMembers to remove specific members from the SecurityHub, disrupting security management and monitoring.",
-    "commandLineSimulation": "aws securityhub delete-members --account-ids TrailDiscoverAccountIds"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws securityhub delete-members --account-ids TrailDiscoverAccountIds"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/securityhub#securityhub-DeleteMembers"
 }

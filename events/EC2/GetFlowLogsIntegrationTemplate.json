@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetFlowLogsIntegrationTemplate to create templates for integrating VPC flow logs with external monitoring solutions, potentially to configure exfiltration pathways for gathered data or to understand security monitoring setups.",
-    "commandLineSimulation": "aws ec2 get-flow-logs-integration-template --flow-log-id fl-1234567890abcdef0 --config-delivery-s3-destination-arn arn:aws:s3:::DOC-EXAMPLE-BUCKET --integrate-services AthenaIntegrations='[{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00},{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00}]'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 get-flow-logs-integration-template --flow-log-id fl-1234567890abcdef0 --config-delivery-s3-destination-arn arn:aws:s3:::DOC-EXAMPLE-BUCKET --integrate-services AthenaIntegrations='[{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00},{IntegrationResultS3DestinationArn=arn:aws:s3:::DOC-EXAMPLE-BUCKET,PartitionLoadFrequency=none,PartitionStartDate=2021-07-21T00:40:00,PartitionEndDate=2021-07-21T00:42:00}]'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-GetFlowLogsIntegrationTemplate"
 }

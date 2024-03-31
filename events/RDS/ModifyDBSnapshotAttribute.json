@@ -31,5 +31,16 @@
         }
     ],
     "securityImplications": "Attackers might use ModifyDBSnapshotAttribute to alter database snapshot permissions, potentially gaining unauthorized access to sensitive data via sharing it.",
-    "commandLineSimulation": "aws rds modify-db-snapshot-attribute --db-snapshot-identifier TrailDiscoverDBSnapshotIdentifier --attribute-name TrailDiscoverAttributeName --values-to-add TrailDiscoverValuesToAdd"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds modify-db-snapshot-attribute --db-snapshot-identifier TrailDiscoverDBSnapshotIdentifier --attribute-name TrailDiscoverAttributeName --values-to-add TrailDiscoverValuesToAdd"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.rds-share-snapshot"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyDBSnapshotAttribute"
 }

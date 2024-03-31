@@ -53,5 +53,21 @@
         }
     ],
     "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",
-    "commandLineSimulation": "aws ec2 authorize-security-group-ingress --group-id sg-0683fcf7a41c82593 --protocol tcp --port 22 --cidr 203.0.113.0/24"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-10"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 authorize-security-group-ingress --group-id sg-0683fcf7a41c82593 --protocol tcp --port 22 --cidr 203.0.113.0/24"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-security-group-open-port-22-ingress"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-AuthorizeSecurityGroupIngress"
 }

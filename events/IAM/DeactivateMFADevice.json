@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeactivateMFADevice to disable multi-factor authentication, potentially weakening account security.",
-    "commandLineSimulation": "aws iam deactivate-mfa-device --user-name TrailDiscover --serial-number arn:aws:iam::210987654321:mfa/BobsMFADevice"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam deactivate-mfa-device --user-name TrailDiscover --serial-number arn:aws:iam::210987654321:mfa/BobsMFADevice"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DeactivateMFADevice"
 }

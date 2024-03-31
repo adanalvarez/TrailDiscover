@@ -22,5 +22,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-PutObject"
 }
