@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mitreAttackTacticFilter = document.getElementById('mitreAttackTacticFilter');
     let filterUsedInWild = false;
     let selectedTactic = '';
+    let allEventsData = [];
 
     // Function to render or update the grid
     function renderGrid(eventsData) {
@@ -86,16 +87,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }).render(document.getElementById("grid"));
             window.gridInstance.on('rowClick', (...args) => {
                 const rowData = args[1].cells.map(cell => cell.data);
-                showModalWithEventData(rowData);
+                const service = rowData[2]; // Assuming this is AWS Service
+                const eventName = rowData[0]; // Assuming this is Event Name
+                window.location.hash = `${service}-${eventName}`;
             });
         }
     }
 
+    function parseHash() {
+        const hash = window.location.hash.substring(1); // Remove '#'
+        return hash ? hash.split('-') : [];
+    }
+
     // Function to fetch and filter data
     function fetchDataAndFilter() {
-        fetch('events.json')
+        return fetch('events.json')
             .then(response => response.json())
-            .then(allEventsData => {
+            .then(data => {
+                allEventsData = data;
                 // Filter by "Used in the Wild" if toggled
                 let filteredData = filterUsedInWild ? allEventsData.filter(event => event.usedInWild) : allEventsData;
                 // Further filter by selected MITRE Attack Tactic if any
@@ -124,50 +133,59 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error loading the events data:', error));
     }
+
+    function findAndShowEventFromHash() {
+        const [service, eventName] = parseHash();
+        if (service && eventName) {
+            // Assuming fetchDataAndFilter() makes allEventsData available
+            const event = allEventsData.find(e => e.awsService === service && e.eventName === eventName);
+            console.log(event)
+            if (event) showModalWithEventData(event);
+        }
+    }
     // Function to show modal with event data
-    function showModalWithEventData(data) {
+    function showModalWithEventData(event) {
         const modalBody = document.getElementById('eventModalBody');
         modalBody.innerHTML = ''; // Clear previous content
     
         // Title
         const title = document.createElement('h5');
-        title.textContent = data[0];
+        title.textContent = event.eventName;
         modalBody.appendChild(title);
     
         // Event Source
         const eventSource = document.createElement('p');
-        eventSource.innerHTML = `<strong>Event Source:</strong> ${data[1]}`;
+        eventSource.innerHTML = `<strong>Event Source:</strong> ${event.eventSource}`;
         modalBody.appendChild(eventSource);
     
         // Service
         const service = document.createElement('p');
-        service.innerHTML = `<strong>Service:</strong> ${data[2]}`;
+        service.innerHTML = `<strong>Service:</strong> ${event.awsService}`;
         modalBody.appendChild(service);
     
         // Description
         const description = document.createElement('p');
-        description.innerHTML = `<strong>Description:</strong> ${data[3]}`;
+        description.innerHTML = `<strong>Description:</strong> ${event.description}`;
         modalBody.appendChild(description);
     
         // MITRE Attack Tactics
         const mitreAttackTactics = document.createElement('p');
-        mitreAttackTactics.innerHTML = `<strong>MITRE Attack Tactics:</strong> ${data[4]}`;
+        mitreAttackTactics.innerHTML = `<strong>MITRE Attack Tactics:</strong> ${event.mitreAttackTactics.join(", ")}`;
         modalBody.appendChild(mitreAttackTactics);
     
         // MITRE Attack Techniques
         const mitreAttackTechniques = document.createElement('p');
-        mitreAttackTechniques.innerHTML = `<strong>MITRE Attack Techniques:</strong> ${data[5]}`;
+        mitreAttackTechniques.innerHTML = `<strong>MITRE Attack Techniques:</strong> ${event.mitreAttackTechniques.join(", ")}`;
         modalBody.appendChild(mitreAttackTechniques);
-    
         // Add Related Incidents if they exist
-        if (data[7].length > 0) {
+        if (event.incidents.length > 0) {
             const incidentsTitle = document.createElement('p');
             incidentsTitle.innerHTML = `<strong>Related Incidents:</strong>`;
             modalBody.appendChild(incidentsTitle);
         
             // Create an unordered list for incidents
             const incidentsList = document.createElement('ul');
-            data[7].forEach(incident => {
+            event.incidents.forEach(incident => {
                 const listItem = document.createElement('li');
                 const incidentElement = document.createElement('a');
                 incidentElement.href = incident.link;
@@ -180,14 +198,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Add Related Research if it exists
-        if (data[9].length > 0) {
+        if (event.researchLinks.length > 0) {
             const researchTitle = document.createElement('p');
             researchTitle.innerHTML = `<strong>Related Research:</strong>`;
             modalBody.appendChild(researchTitle);
         
             // Create an unordered list for research links
             const researchList = document.createElement('ul');
-            data[9].forEach(research => {
+            event.researchLinks.forEach(research => {
                 const listItem = document.createElement('li');
                 const researchElement = document.createElement('a');
                 researchElement.href = research.link;
@@ -201,13 +219,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Security Implications       
         const securityImplications = document.createElement('p');
-        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${data[11]}`;
+        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${event.securityImplications}`;
         modalBody.appendChild(securityImplications);
 
         // Permissions
         const permissions = document.createElement('p');
         permissions.innerHTML = `<strong>Permissions:&nbsp&nbsp</strong>`;
-        const permissionsLink = data[13];
+        const permissionsLink = event.permissions;
         if ( permissionsLink != "N/A"){
             const permissionsAnchor = document.createElement('a');
             permissionsAnchor.href = permissionsLink;
@@ -227,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const alerting = document.createElement('p');
         alerting.innerHTML = `<strong>Alerting:&nbsp;&nbsp;</strong>`;
         // cloudwatchCISControls
-        data[14].forEach(item => {
+        event.alerting.forEach(item => {
             if (item.type === "cloudwatchCISControls") {
                 const alertingLink = item.value;
                 const alertingAnchor = document.createElement('a');
@@ -253,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const simulation = document.createElement('p');
         simulation.innerHTML = `<strong>Simulation:&nbsp;&nbsp;</strong>`;
         // stratusRedTeam
-        data[12].forEach(item => {
+        event.simulation.forEach(item => {
             if (item.type === "stratusRedTeam") {
                 const stratusLink = item.value;
                 const stratusAnchor = document.createElement('a');
@@ -279,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
         commandLineContainer.className = 'command-line-container';
 
         const commandLineText = document.createElement('pre');
-        commandLineText.textContent = data[12].find(item => item.type === "commandLine").value
+        commandLineText.textContent = event.simulation.find(item => item.type === "commandLine").value
         commandLineContainer.appendChild(commandLineText);
 
         const copyIcon = document.createElement('i');
@@ -308,7 +326,14 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedTactic = this.value; // Set the selected MITRE Attack Tactic
         fetchDataAndFilter(); // Refetch and filter data
     });
+
+    window.addEventListener('hashchange', function() {
+        const hash = window.location.hash.substring(1); // Remove '#'
+        const [service, eventName] = hash.split('-');
+        const event = allEventsData.find(e => e.awsService === service && e.eventName === eventName);
+        if (event) showModalWithEventData(event);
+    });
   
     // Initial data fetch and render
-    fetchDataAndFilter();
+    fetchDataAndFilter().then(findAndShowEventFromHash);
 });
