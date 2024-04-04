@@ -137,9 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function findAndShowEventFromHash() {
         const [service, eventName] = parseHash();
         if (service && eventName) {
-            // Assuming fetchDataAndFilter() makes allEventsData available
             const event = allEventsData.find(e => e.awsService === service && e.eventName === eventName);
-            console.log(event)
             if (event) showModalWithEventData(event);
         }
     }
