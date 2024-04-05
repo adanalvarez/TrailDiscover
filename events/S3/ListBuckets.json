@@ -47,7 +47,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListAllMyBuckets to identify potential targets for data breaches or unauthorized access.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_enum_buckets.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

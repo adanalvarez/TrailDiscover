@@ -18,7 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use CreateCluster to provision unauthorized cluster resources, aiming to deploy malicious workloads or use compute resources for cryptojacking",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_eks_cluster_created_or_deleted.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

@@ -244,14 +244,29 @@ document.addEventListener('DOMContentLoaded', function() {
         alerting.innerHTML = `<strong>Alerting:&nbsp;&nbsp;</strong>`;
         // cloudwatchCISControls
         event.alerting.forEach(item => {
-            if (item.type === "cloudwatchCISControls") {
-                const alertingLink = item.value;
+            const typeConfig = {
+                cloudwatchCISControls: {
+                    src: 'logos/cloudwatch.png',
+                    alt: 'Click to docs.aws.amazon.com',
+                    link: item.value
+                },
+                sigma: {
+                    src: 'logos/sigma.png',
+                    alt: 'Click to sigma repository',
+                    link: item.value
+                }
+            };
+        
+            // Check if the current item type is configured
+            if (typeConfig[item.type]) {
+                const { src, alt, link } = typeConfig[item.type];
                 const alertingAnchor = document.createElement('a');
-                alertingAnchor.href = alertingLink;
+                alertingAnchor.href = link;
                 alertingAnchor.target = "_blank";
+        
                 const alertingImage = document.createElement('img');
-                alertingImage.src = 'logos/cloudwatch.png';
-                alertingImage.alt = 'Click to docs.aws.amazon.com';
+                alertingImage.src = src;
+                alertingImage.alt = alt;
                 alertingImage.style.width = '30px';
                 alertingImage.style.height = 'auto';
                 alertingImage.style.cursor = 'pointer';

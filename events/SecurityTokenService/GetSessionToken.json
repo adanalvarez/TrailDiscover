@@ -18,7 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_sts_getsessiontoken_misuse.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

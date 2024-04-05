@@ -26,6 +26,10 @@
         {
             "type": "cloudwatchCISControls",
             "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-5"
+        },
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_cloudtrail_disable_logging.yml"
         }
     ],
     "simulation": [

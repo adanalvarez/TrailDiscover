@@ -36,7 +36,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_update_login_profile.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

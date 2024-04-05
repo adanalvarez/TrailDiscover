@@ -18,7 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use RegisterTaskDefinition to deploy containers with malicious tasks in AWS ECS.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_ecs_task_definition_cred_endpoint_query.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

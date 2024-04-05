@@ -18,7 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetLoginProfile to know if the account has a login profile or to get its user name.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_loginprofile_creation.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

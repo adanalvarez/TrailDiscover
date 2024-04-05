@@ -57,7 +57,16 @@
         }
     ],
     "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_user_or_accesskey_creation.yml"
+        },
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_backdoor_users_keys.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

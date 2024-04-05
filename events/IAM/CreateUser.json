@@ -87,7 +87,12 @@
         }
     ],
     "securityImplications": "Attackers use CreateUser to establish persistent footholds or in some cases, escalate privileges within AWS environments by creating new IAM users with strategic permissions.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_user_or_accesskey_creation.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

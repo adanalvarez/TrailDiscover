@@ -18,7 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateInstanceExportTask to extract or exfiltrate information",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_ec2_vm_export_failure.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

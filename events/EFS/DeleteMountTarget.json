@@ -18,7 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteMountTarget in AWS EFS to remove mount targets, disrupting access to file system and as a preliminary phase before data deletion.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_efs_fileshare_mount_modified_or_deleted.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

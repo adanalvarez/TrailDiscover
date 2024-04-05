@@ -30,7 +30,12 @@
         }
     ],
     "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_ec2_startup_script_change.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

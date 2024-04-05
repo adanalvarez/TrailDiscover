@@ -25,7 +25,12 @@
         }
     ],
     "securityImplications": "Attackers might set the versioning to 'Suspended' before deleting data. Attackers might enable versioning to add bucket replication to exfiltrate data.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_disable_bucket_versioning.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

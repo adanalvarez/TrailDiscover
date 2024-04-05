@@ -18,7 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ModifySnapshotAttribute to change permissions on Amazon EBS snapshots, potentially making them accessible to unauthorized users or public.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_snapshot_backup_exfiltration.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",

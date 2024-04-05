@@ -18,7 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateIPSet to add malicious IP addresses to the GuardDuty whitelist, bypassing security measures.",
-    "alerting": [],
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_guardduty_disruption.yml"
+        }
+    ],
     "simulation": [
         {
             "type": "commandLine",
