@@ -348,6 +348,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const event = allEventsData.find(e => e.awsService === service && e.eventName === eventName);
         if (event) showModalWithEventData(event);
     });
+
+    $('#eventModal').on('hidden.bs.modal', function() {
+        if(history.pushState) {
+            history.pushState(null, null, window.location.pathname + window.location.search);
+        } else {
+            window.location.hash = '';
+        }
+    });
   
     // Initial data fetch and render
     fetchDataAndFilter().then(findAndShowEventFromHash);
