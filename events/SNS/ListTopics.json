@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListTopics to identify potential SNS topics for unauthorized access or disruption.",
-    "commandLineSimulation": "aws sns list-topics"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns list-topics"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-ListTopics"
 }

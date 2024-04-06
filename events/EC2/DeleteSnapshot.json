@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteSnapshot to erase Amazon EBS snapshots, potentially destroying backup data and hampering recovery efforts after an attack.",
-    "commandLineSimulation": "aws ec2 delete-snapshot --snapshot-id TrailDiscoverSnapshotId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 delete-snapshot --snapshot-id TrailDiscoverSnapshotId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeleteSnapshot"
 }

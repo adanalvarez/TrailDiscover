@@ -1,7 +1,7 @@
 {
     "eventName": "GetId",
     "eventSource": "cognito-identity.amazonaws.com",
-    "awsService": "Cognito",
+    "awsService": "CognitoIdentity",
     "description": "Generates (or retrieves) IdentityID. Supplying multiple logins will create an implicit linked account.",
     "mitreAttackTactics": [
         "TA0004 - Privilege Escalation"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetId to get an IdentityID that might be then used to get AWS credentials.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-identity#cognito-identity-GetId"
 }

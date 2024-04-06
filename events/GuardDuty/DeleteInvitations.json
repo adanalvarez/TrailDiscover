@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteInvitations to avoid the use of GuardDuty, thereby evading detection of malicious activity.",
-    "commandLineSimulation": "aws guardduty delete-invitations --account-ids 111222333444"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty delete-invitations --account-ids 111222333444"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-DeleteInvitations"
 }

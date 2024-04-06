@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateEventSourceMapping to trigger unauthorized Lambda functions with malicious code.",
-    "commandLineSimulation": "aws lambda create-event-source-mapping --function-name my-function --batch-size 5 --event-source-arn arn:aws:sqs:us-west-2:123456789012:mySQSqueue"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda create-event-source-mapping --function-name my-function --batch-size 5 --event-source-arn arn:aws:sqs:us-west-2:123456789012:mySQSqueue"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-CreateEventSourceMapping"
 }

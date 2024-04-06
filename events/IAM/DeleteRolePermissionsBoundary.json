@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteRolePermissionsBoundary to remove restrictions and gain unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam delete-role-permissions-boundary --role-name trail-discover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam delete-role-permissions-boundary --role-name trail-discover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DeleteRolePermissionsBoundary"
 }

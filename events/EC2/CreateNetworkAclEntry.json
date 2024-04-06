@@ -22,5 +22,17 @@
         }
     ],
     "securityImplications": "Attackers might use CreateNetworkAclEntry to allow traffic to the network from an IP they control.",
-    "commandLineSimulation": "aws ec2 create-network-acl-entry --network-acl-id acl-5fb85d36 --ingress --rule-number 100 --protocol udp --port-range From=53,To=53 --cidr-block 0.0.0.0/0 --rule-action allow"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-11"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-network-acl-entry --network-acl-id acl-5fb85d36 --ingress --rule-number 100 --protocol udp --port-range From=53,To=53 --cidr-block 0.0.0.0/0 --rule-action allow"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateNetworkAclEntry"
 }

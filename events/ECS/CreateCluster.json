@@ -18,5 +18,17 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use CreateCluster to provision unauthorized cluster resources, aiming to deploy malicious workloads or use compute resources for cryptojacking",
-    "commandLineSimulation": "aws ecs create-cluster --cluster-name TrailDiscoverCluster"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_eks_cluster_created_or_deleted.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs create-cluster --cluster-name TrailDiscoverCluster"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-CreateCluster"
 }

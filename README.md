@@ -47,5 +47,5 @@ PRs are welcome. Here’s how you can contribute:
 
 ## Plans for the Future
 
-- **Adding More Events**: I'll keep putting in new events and updating the info for existing ones.
-- **Simulations Section**: I want to add a part about simulating these events, to help people understand and prepare better.
+- **Adding More Events**: I'll keep adding new events and updating the info for existing ones.
+- **Adding New Alerts**: Map the current events with third-party alerts.

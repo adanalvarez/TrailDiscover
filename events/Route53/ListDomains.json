@@ -1,7 +1,7 @@
 {
     "eventName": "ListDomains",
     "eventSource": "route53domains.amazonaws.com",
-    "awsService": "Route53",
+    "awsService": "route53domains",
     "description": "This operation returns all the domain names registered with Amazon Route 53 for the current AWS account if no filtering conditions are used.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListDomains to identify potential targets for DNS hijacking or DDoS attacks.",
-    "commandLineSimulation": "aws route53domains list-domains --region us-east-1"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws route53domains list-domains --region us-east-1"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/route53domains#route53domains-ListDomains"
 }

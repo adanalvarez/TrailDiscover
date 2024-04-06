@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",
-    "commandLineSimulation": "aws sts get-session-token --duration-seconds 900 --serial-number 'YourMFADeviceSerialNumber' --token-code 123456"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_sts_getsessiontoken_misuse.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sts get-session-token --duration-seconds 900 --serial-number 'YourMFADeviceSerialNumber' --token-code 123456"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sts#sts-GetSessionToken"
 }

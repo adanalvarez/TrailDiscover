@@ -18,5 +18,16 @@
         }
     ],
     "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations.",
-    "commandLineSimulation": "aws organizations leave-organization"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations leave-organization"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.organizations-leave"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-LeaveOrganization"
 }

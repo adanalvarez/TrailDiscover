@@ -1,7 +1,7 @@
 {
     "eventName": "ListTargetsByRule",
     "eventSource": "events.amazonaws.com",
-    "awsService": "EventBridge",
+    "awsService": "events",
     "description": "Lists the targets assigned to the specified rule.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListTargetsByRule in AWS EventBridge to enumerate the targets of specific rules, gaining insights into the architecture and response mechanisms of an environment.",
-    "commandLineSimulation": "aws events list-targets-by-rule --rule TrailDiscoverRule"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws events list-targets-by-rule --rule TrailDiscoverRule"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/events#events-ListTargetsByRule"
 }

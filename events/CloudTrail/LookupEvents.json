@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use LookupEvents to monitoring CloudTrail logs for changes that might affect the attack.",
-    "commandLineSimulation": "aws cloudtrail lookup-events --lookup-attributes AttributeKey=EventName,AttributeValue=TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudtrail lookup-events --lookup-attributes AttributeKey=EventName,AttributeValue=TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudtrail#cloudtrail-LookupEvents"
 }

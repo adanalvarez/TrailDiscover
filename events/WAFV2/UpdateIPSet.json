@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateIPSet to modify IP address rules, potentially allowing unauthorized access from IPs they control.",
-    "commandLineSimulation": "aws wafv2 update-ip-set --name testip --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --addresses 198.51.100.0/16 --lock-token 447e55ac-2396-4c6d-b9f9-86b67c17f8b5"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws wafv2 update-ip-set --name testip --scope REGIONAL --id a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 --addresses 198.51.100.0/16 --lock-token 447e55ac-2396-4c6d-b9f9-86b67c17f8b5"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/wafv2#wafv2-UpdateIPSet"
 }

@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use DescribeRegions to identify all available AWS regions, possibly to explore regional deployment patterns and target specific regions where defenses might be weaker.",
-    "commandLineSimulation": "aws ec2 describe-regions"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-regions"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeRegions"
 }

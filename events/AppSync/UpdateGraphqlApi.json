@@ -20,5 +20,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateGraphqlApi to add additional authentications options. Bypassing current authentication and potentially allowing persistent access to data.",
-    "commandLineSimulation": "aws appsync update-graphql-api --api-id TrailDiscoverApiId --name TrailDiscoverName --log-config cloudWatchLogsRoleArn=TrailDiscoverRoleArn,fieldLogLevel=TrailDiscoverLogLevel"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws appsync update-graphql-api --api-id TrailDiscoverApiId --name TrailDiscoverName --log-config cloudWatchLogsRoleArn=TrailDiscoverRoleArn,fieldLogLevel=TrailDiscoverLogLevel"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/appsync#appsync-UpdateGraphqlApi"
 }

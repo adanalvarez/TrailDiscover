@@ -34,5 +34,12 @@
         }
     ],
     "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",
-    "commandLineSimulation": "aws sts assume-role --role-arn arn:aws:iam::123456789012:role/TrailDiscover --role-session-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sts assume-role --role-arn arn:aws:iam::123456789012:role/TrailDiscover --role-session-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sts#sts-AssumeRole"
 }

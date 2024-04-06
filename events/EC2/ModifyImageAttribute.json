@@ -18,5 +18,16 @@
         }
     ],
     "securityImplications": "Attackers might use ModifyImageAttribute to alter permissions or settings of Amazon Machine Images (AMIs), potentially exposing them to unauthorized users or making them public.",
-    "commandLineSimulation": "aws ec2 modify-image-attribute --image-id TrailDiscoverImageId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 modify-image-attribute --image-id TrailDiscoverImageId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ami"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ModifyImageAttribute"
 }

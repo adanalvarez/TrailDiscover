@@ -30,5 +30,21 @@
         }
     ],
     "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts.",
-    "commandLineSimulation": "aws ec2 modify-instance-attribute --instance-id TrailDiscoverInstanceId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_ec2_startup_script_change.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 modify-instance-attribute --instance-id TrailDiscoverInstanceId --attribute TrailDiscoverAttribute --value TrailDiscoverValue"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.ec2-user-data"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ModifyInstanceAttribute"
 }

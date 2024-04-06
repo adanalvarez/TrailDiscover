@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateJob to modify Glue job parameters, potentially disrupting data processing or injecting malicious code.",
-    "commandLineSimulation": "aws glue update-job --job-name TrailDiscoverJob --job-update '{\"Role\": \"TrailDiscoverRole\", \"Command\": {\"Name\": \"glueetl\", \"ScriptLocation\": \"s3://mybucket/myscript.py\"}}'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glue update-job --job-name TrailDiscoverJob --job-update '{\"Role\": \"TrailDiscoverRole\", \"Command\": {\"Name\": \"glueetl\", \"ScriptLocation\": \"s3://mybucket/myscript.py\"}}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glue#glue-UpdateJob"
 }

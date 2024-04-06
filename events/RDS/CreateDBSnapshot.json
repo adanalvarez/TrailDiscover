@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateDBSnapshot to create unauthorized backups of sensitive databases for data theft.",
-    "commandLineSimulation": "aws rds create-db-snapshot --db-instance-identifier TrailDiscoverDBInstance --db-snapshot-identifier TrailDiscoverDBSnapshot"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds create-db-snapshot --db-instance-identifier TrailDiscoverDBInstance --db-snapshot-identifier TrailDiscoverDBSnapshot"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-CreateDBSnapshot"
 }

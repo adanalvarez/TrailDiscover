@@ -31,5 +31,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetAccount to gather sensitive information about the AWS SES account for malicious purposes.",
-    "commandLineSimulation": "aws sesv2 get-account"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sesv2 get-account"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-GetAccount"
 }

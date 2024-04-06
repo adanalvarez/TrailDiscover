@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeImages to identify AMIs (Amazon Machine Images) within AWS.",
-    "commandLineSimulation": "aws ec2 describe-images --filters Name=name,Values=TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-images --filters Name=name,Values=TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeImages"
 }

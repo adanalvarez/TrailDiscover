@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListSubscriptions to identify origination numbers for potential smishing campaings.",
-    "commandLineSimulation": "aws sns list-subscriptions"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns list-subscriptions"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-ListSubscriptions"
 }

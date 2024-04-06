@@ -22,5 +22,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use RequestServiceQuotaIncrease to increase the quotas and so resource hijacking will have a bigger impact.",
-    "commandLineSimulation": "aws service-quotas request-service-quota-increase --service-code ec2 --quota-code L-20F13EBD --desired-value 2"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws service-quotas request-service-quota-increase --service-code ec2 --quota-code L-20F13EBD --desired-value 2"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/servicequotas#servicequotas-RequestServiceQuotaIncrease"
 }

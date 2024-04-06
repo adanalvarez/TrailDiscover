@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateEventSourceMapping to pull data from a different source, leading to incorrect function results.",
-    "commandLineSimulation": "aws lambda update-event-source-mapping --uuid 'a1b2c3d4-5678-90ab-cdef-11111EXAMPLE' --batch-size 8"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda update-event-source-mapping --uuid 'a1b2c3d4-5678-90ab-cdef-11111EXAMPLE' --batch-size 8"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-UpdateEventSourceMapping"
 }

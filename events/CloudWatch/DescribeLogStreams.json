@@ -1,7 +1,7 @@
 {
     "eventName": "DescribeLogStreams",
     "eventSource": "logs.amazonaws.com",
-    "awsService": "CloudWatch",
+    "awsService": "CloudWatchLogs",
     "description": "Lists the log streams for the specified log group.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeLogStreams to discover CloudWatch log configurations.",
-    "commandLineSimulation": "aws logs describe-log-streams --log-group-name TrailDiscoverLogGroupName"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs describe-log-streams --log-group-name TrailDiscoverLogGroupName"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-DescribeLogStreams"
 }

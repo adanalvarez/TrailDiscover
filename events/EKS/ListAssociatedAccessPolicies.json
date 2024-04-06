@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListAssociatedAccessPolicies to enumerate policies associated with resources in AWS services, identifying overly permissive access that can be exploited to escalate privileges.",
-    "commandLineSimulation": "aws eks list-associated-access-policies --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws eks list-associated-access-policies --cluster-name beta-fish --principal-arn arn:aws:iam::111122223333:role/TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/eks#eks-ListAssociatedAccessPolicies"
 }

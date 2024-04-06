@@ -27,5 +27,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteUser to remove users and their permissions, disrupting access control in AWS. Also, it can be used to delete previously used users to avoid detection.",
-    "commandLineSimulation": "aws iam delete-user --user-name TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam delete-user --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DeleteUser"
 }

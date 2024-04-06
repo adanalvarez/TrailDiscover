@@ -24,7 +24,7 @@ def compile_events(directory):
 
 def generate_csv():
     # Define CSV headers
-    headers = ["eventName", "eventSource", "awsService", "description", "mitreAttackTactics", "mitreAttackTechniques", "usedInWild", "incidents", "researchLinks", "securityImplications", "commandLineSimulation"]
+    headers = ["eventName", "eventSource", "awsService", "description", "mitreAttackTactics", "mitreAttackTechniques", "usedInWild", "incidents", "researchLinks", "securityImplications", "alerting", "simulation", "permissions"]
 
     with open(csv_file, mode='w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=headers)
@@ -36,6 +36,8 @@ def generate_csv():
             event['mitreAttackTechniques'] = ', '.join(event['mitreAttackTechniques'])
             event['incidents'] = json.dumps(event['incidents'])
             event['researchLinks'] = json.dumps(event['researchLinks'])
+            event['alerting'] = json.dumps(event['alerting'])
+            event['simulation'] = json.dumps(event['simulation'])
             
             # Write event data
             writer.writerow(event)

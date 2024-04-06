@@ -43,5 +43,20 @@
         }
     ],
     "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",
-    "commandLineSimulation": "aws sts get-caller-identity"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sts get-caller-identity"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.discovery.ec2-enumerate-from-instance"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.credential-access.ec2-steal-instance-credentials"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sts#sts-GetCallerIdentity"
 }

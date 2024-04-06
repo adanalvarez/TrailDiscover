@@ -1,7 +1,7 @@
 {
     "eventName": "DeleteLogStream",
     "eventSource": "logs.amazonaws.com",
-    "awsService": "CloudWatch",
+    "awsService": "CloudWatchLogs",
     "description": "Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.",
     "mitreAttackTactics": [
         "TA0005 - Defense Evasion"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS.",
-    "commandLineSimulation": "aws logs delete-log-stream --log-group-name TrailDiscoverLogGroupName --log-stream-name TrailDiscoverLogStreamName"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs delete-log-stream --log-group-name TrailDiscoverLogGroupName --log-stream-name TrailDiscoverLogStreamName"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-DeleteLogStream"
 }

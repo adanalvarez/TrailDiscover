@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateHostedZone to create malicious DNS zones for phishing or redirecting traffic.",
-    "commandLineSimulation": "aws route53 create-hosted-zone --name traildiscover.cloud --caller-reference 2014-04-01-18:47 --hosted-zone-config Comment='traildiscover'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws route53 create-hosted-zone --name traildiscover.cloud --caller-reference 2014-04-01-18:47 --hosted-zone-config Comment='traildiscover'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/route53#route53-CreateHostedZone"
 }

@@ -29,5 +29,16 @@
         }
     ],
     "securityImplications": "Attackers might use StartSession to gain unauthorized access to managed instances.",
-    "commandLineSimulation": "aws ssm start-session --target TrailDiscoverTarget"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm start-session --target TrailDiscoverTarget"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.ssm-start-session"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-StartSession"
 }

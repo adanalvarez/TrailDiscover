@@ -22,5 +22,21 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateTrail to disrupting AWS logging.",
-    "commandLineSimulation": "aws cloudtrail update-trail --name TrailDiscoverName --s3-bucket-name TrailDiscoverBucketName"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-5"
+        },
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_cloudtrail_disable_logging.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudtrail update-trail --name TrailDiscoverName --s3-bucket-name TrailDiscoverBucketName"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudtrail#cloudtrail-UpdateTrail"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use PublishFunction to publish a malicious function that might be used to exfiltrate data.",
-    "commandLineSimulation": "aws cloudfront publish-function --name trail-discover-function --if-match trail-discover-function"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudfront publish-function --name trail-discover-function --if-match trail-discover-function"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-PublishFunction"
 }

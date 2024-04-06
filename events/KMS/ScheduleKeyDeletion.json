@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use ScheduleKeyDeletion to schedule the deletion of crucial encryption keys, disrupting data security and access.",
-    "commandLineSimulation": "N/A"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-7"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-ScheduleKeyDeletion"
 }

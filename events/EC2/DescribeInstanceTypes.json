@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeInstanceTypes to assess the capabilities and resources of EC2 instance types.",
-    "commandLineSimulation": "aws ec2 describe-instance-types --instance-types TrailDiscoverInstanceType"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-instance-types --instance-types TrailDiscoverInstanceType"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInstanceTypes"
 }

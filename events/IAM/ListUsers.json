@@ -35,5 +35,16 @@
         }
     ],
     "securityImplications": "Attackers might use ListUsers to enumerate IAM users for further attacks, such as adding keys or creating a login profile for persistence.",
-    "commandLineSimulation": "aws iam list-users"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-users"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.discovery.ec2-enumerate-from-instance"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListUsers"
 }

@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetFindings to identify if previous actions generated alerts.",
-    "commandLineSimulation": "aws guardduty get-findings --detector-id TrailDiscoverDetectorId --finding-ids TrailDiscoverFindingIds"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty get-findings --detector-id TrailDiscoverDetectorId --finding-ids TrailDiscoverFindingIds"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-GetFindings"
 }

@@ -31,5 +31,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateKeyPair to generate keys that can latter be used to access EC2s.",
-    "commandLineSimulation": "aws ec2 create-key-pair --key-name TrailDiscoverKeyPair"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-key-pair --key-name TrailDiscoverKeyPair"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateKeyPair"
 }

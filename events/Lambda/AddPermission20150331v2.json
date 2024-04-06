@@ -18,5 +18,16 @@
         }
     ],
     "securityImplications": "Attackers might use AddPermission to grant unauthorized access to sensitive Lambda functions and then perform Privilege Escalation.",
-    "commandLineSimulation": "aws lambda add-permission --function-name my-function --action lambda:InvokeFunction --statement-id sns --principal sns.amazonaws.com"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda add-permission --function-name my-function --action lambda:InvokeFunction --statement-id sns --principal sns.amazonaws.com"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.lambda-backdoor-function"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-AddPermission"
 }

@@ -20,5 +20,12 @@
         }
     ],
     "securityImplications": "Attackers might use AssumeRoleWithWebIdentity to impersonate legitimate users and gain unauthorized access to an AWS role.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sts#sts-AssumeRoleWithWebIdentity"
 }

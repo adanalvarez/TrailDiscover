@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteConfigurationRecorder to disrupt AWS configuration auditing.",
-    "commandLineSimulation": "aws configservice delete-configuration-recorder --configuration-recorder-name TrailDiscoverRecorder"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws configservice delete-configuration-recorder --configuration-recorder-name TrailDiscoverRecorder"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/config#config-DeleteConfigurationRecorder"
 }

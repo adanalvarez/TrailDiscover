@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetBucketAccessControlPolicy to gain unauthorized access to sensitive data stored in S3 buckets.",
-    "commandLineSimulation": "aws s3api get-bucket-acl --bucket TrailDiscoverBucket"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api get-bucket-acl --bucket TrailDiscoverBucket"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketAcl"
 }

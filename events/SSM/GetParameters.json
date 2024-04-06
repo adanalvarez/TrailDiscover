@@ -20,5 +20,16 @@
         }
     ],
     "securityImplications": "Attackers might use GetParameters to gather sensitive information such as api keys or other secrets.",
-    "commandLineSimulation": "aws ssm get-parameters --names TrailDiscoverParameters"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm get-parameters --names TrailDiscoverParameters"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.credential-access.ssm-retrieve-securestring-parameters"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-GetParameters"
 }

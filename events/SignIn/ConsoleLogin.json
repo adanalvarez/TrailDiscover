@@ -55,5 +55,25 @@
         }
     ],
     "securityImplications": "Attackers might access via AWS console (generating a ConsoleLogin event).",
-    "commandLineSimulation": "N/A"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-6"
+        },
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-3"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.initial-access.console-login-without-mfa"
+        }
+    ],
+    "permissions": "N/A"
 }

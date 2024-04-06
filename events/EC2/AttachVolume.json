@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use AttachVolume to mount a volume to an EC2 instance under their control.",
-    "commandLineSimulation": "aws ec2 attach-volume --volume-id TrailDiscoverVolumeId --instance-id TrailDiscoverInstanceId --device TrailDiscoverDeviceName"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 attach-volume --volume-id TrailDiscoverVolumeId --instance-id TrailDiscoverInstanceId --device TrailDiscoverDeviceName"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-AttachVolume"
 }

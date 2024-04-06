@@ -25,5 +25,17 @@
         }
     ],
     "securityImplications": "Attackers might use DetachRolePolicy to remove crucial permissions from IAM roles, disrupting AWS services.",
-    "commandLineSimulation": "aws iam detach-role-policy --role-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/FederatedTesterAccessPolicy"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam detach-role-policy --role-name TrailDiscover --policy-arn arn:aws:iam::123456789012:policy/FederatedTesterAccessPolicy"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-DetachRolePolicy"
 }

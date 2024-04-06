@@ -26,5 +26,16 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration.",
-    "commandLineSimulation": "aws lambda update-function-configuration  --function-name  my-function --memory-size 256"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda update-function-configuration  --function-name  my-function --memory-size 256"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.lambda-layer-extension"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-UpdateFunctionConfiguration"
 }

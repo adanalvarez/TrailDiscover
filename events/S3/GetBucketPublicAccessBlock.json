@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetPublicAccessBlock to identify S3 buckets with public access for potential data breaches.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "N/A"
 }

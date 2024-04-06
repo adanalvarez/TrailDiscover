@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteGlobalCluster to disrupt database services by deleting global clusters in AWS RDS.",
-    "commandLineSimulation": "aws rds delete-global-cluster --global-cluster-identifier TrailDiscoverGlobalClusterIdentifier"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds delete-global-cluster --global-cluster-identifier TrailDiscoverGlobalClusterIdentifier"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteGlobalCluster"
 }

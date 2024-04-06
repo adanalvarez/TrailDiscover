@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateDistribution to add a malicious configuration such as a function to exfiltrate data.",
-    "commandLineSimulation": "aws cloudfront update-distribution --id EDFDVBD6EXAMPLE --distribution-config '{\"CallerReference\":\"\", \"Origins\":{\"Quantity\":1,\"Items\":[{\"Id\":\"\", \"DomainName\":\"\"}]}, \"DefaultCacheBehavior\":{\"TargetOriginId\":\"\", \"ViewerProtocolPolicy\":\"\"}, \"Comment\":\"\", \"Enabled\":false }'"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudfront update-distribution --id EDFDVBD6EXAMPLE --distribution-config '{\"CallerReference\":\"\", \"Origins\":{\"Quantity\":1,\"Items\":[{\"Id\":\"\", \"DomainName\":\"\"}]}, \"DefaultCacheBehavior\":{\"TargetOriginId\":\"\", \"ViewerProtocolPolicy\":\"\"}, \"Comment\":\"\", \"Enabled\":false }'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-UpdateDistribution"
 }

@@ -57,5 +57,29 @@
         }
     ],
     "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",
-    "commandLineSimulation": "aws iam create-access-key --user-name TrailDiscover"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_user_or_accesskey_creation.yml"
+        },
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_backdoor_users_keys.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-access-key --user-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-admin-user"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-backdoor-user"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateAccessKey"
 }

@@ -30,5 +30,24 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.impact.s3-ransomware-client-side-encryption"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.impact.s3-ransomware-batch-deletion"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.impact.s3-ransomware-individual-deletion"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-DeleteObject"
 }

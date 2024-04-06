@@ -36,5 +36,21 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateLoginProfile to change the password of an IAM user, gaining unauthorized access to it.",
-    "commandLineSimulation": "aws iam update-login-profile --user-name TrailDiscover --password TrailDiscover"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_update_login_profile.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam update-login-profile --user-name TrailDiscover --password TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-user-login-profile"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateLoginProfile"
 }

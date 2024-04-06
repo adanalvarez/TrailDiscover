@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ListObjects to identify potentially sensitive objects stored in S3 buckets.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "N/A"
 }

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mitreAttackTacticFilter = document.getElementById('mitreAttackTacticFilter');
     let filterUsedInWild = false;
     let selectedTactic = '';
+    let allEventsData = [];
 
     // Function to render or update the grid
     function renderGrid(eventsData) {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 columns: [
                     {
                         name: "Event Name",
-                        width: '19%', 
+                        width: '21%', 
                     },
                     {
                         name: "Event Source",
@@ -31,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     {
                         name: "MITRE Attack Tactics",
-                        width: '22%',
+                        width: '21%',
                     },
                     {
                         name: "MITRE Attack Techniques",
-                        width: '22%',
+                        width: '21%',
                     },
                     {
                         name: "Incidents",
@@ -64,6 +65,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     {
                         name: "Command Line Simulation",
                         hidden: true,                   
+                    },
+                    {
+                        name: "Permisions",
+                        hidden: true,                   
+                    },
+                    {
+                        name: "Alerting",
+                        hidden: true,                   
                     }
                 ],
                 data: eventsData,
@@ -78,16 +87,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }).render(document.getElementById("grid"));
             window.gridInstance.on('rowClick', (...args) => {
                 const rowData = args[1].cells.map(cell => cell.data);
-                showModalWithEventData(rowData);
+                const service = rowData[2]; // Assuming this is AWS Service
+                const eventName = rowData[0]; // Assuming this is Event Name
+                window.location.hash = `${service}-${eventName}`;
             });
         }
     }
 
+    function parseHash() {
+        const hash = window.location.hash.substring(1); // Remove '#'
+        return hash ? hash.split('-') : [];
+    }
+
     // Function to fetch and filter data
     function fetchDataAndFilter() {
-        fetch('events.json')
+        return fetch('events.json')
             .then(response => response.json())
-            .then(allEventsData => {
+            .then(data => {
+                allEventsData = data;
                 // Filter by "Used in the Wild" if toggled
                 let filteredData = filterUsedInWild ? allEventsData.filter(event => event.usedInWild) : allEventsData;
                 // Further filter by selected MITRE Attack Tactic if any
@@ -108,56 +125,67 @@ document.addEventListener('DOMContentLoaded', function() {
                     event.researchLinks,
                     event.usedInWild ? "True" : "Unknown",
                     event.securityImplications,
-                    event.commandLineSimulation
+                    event.simulation,
+                    event.permissions,
+                    event.alerting
                 ]);
                 renderGrid(mappedData);
             })
             .catch(error => console.error('Error loading the events data:', error));
     }
+
+    function findAndShowEventFromHash() {
+        const [service, eventName] = parseHash();
+        if (service && eventName) {
+            const event = allEventsData.find(e => 
+                e.awsService.toLowerCase() === service.toLowerCase() && 
+                e.eventName.toLowerCase() === eventName.toLowerCase());
+            if (event) showModalWithEventData(event);
+        }
+    }
     // Function to show modal with event data
-    function showModalWithEventData(data) {
+    function showModalWithEventData(event) {
         const modalBody = document.getElementById('eventModalBody');
         modalBody.innerHTML = ''; // Clear previous content
     
         // Title
         const title = document.createElement('h5');
-        title.textContent = data[0];
+        title.textContent = event.eventName;
         modalBody.appendChild(title);
     
         // Event Source
         const eventSource = document.createElement('p');
-        eventSource.innerHTML = `<strong>Event Source:</strong> ${data[1]}`;
+        eventSource.innerHTML = `<strong>Event Source:</strong> ${event.eventSource}`;
         modalBody.appendChild(eventSource);
     
         // Service
         const service = document.createElement('p');
-        service.innerHTML = `<strong>Service:</strong> ${data[2]}`;
+        service.innerHTML = `<strong>Service:</strong> ${event.awsService}`;
         modalBody.appendChild(service);
     
         // Description
         const description = document.createElement('p');
-        description.innerHTML = `<strong>Description:</strong> ${data[3]}`;
+        description.innerHTML = `<strong>Description:</strong> ${event.description}`;
         modalBody.appendChild(description);
     
         // MITRE Attack Tactics
         const mitreAttackTactics = document.createElement('p');
-        mitreAttackTactics.innerHTML = `<strong>MITRE Attack Tactics:</strong> ${data[4]}`;
+        mitreAttackTactics.innerHTML = `<strong>MITRE Attack Tactics:</strong> ${event.mitreAttackTactics.join(", ")}`;
         modalBody.appendChild(mitreAttackTactics);
     
         // MITRE Attack Techniques
         const mitreAttackTechniques = document.createElement('p');
-        mitreAttackTechniques.innerHTML = `<strong>MITRE Attack Techniques:</strong> ${data[5]}`;
+        mitreAttackTechniques.innerHTML = `<strong>MITRE Attack Techniques:</strong> ${event.mitreAttackTechniques.join(", ")}`;
         modalBody.appendChild(mitreAttackTechniques);
-    
         // Add Related Incidents if they exist
-        if (data[7].length > 0) {
+        if (event.incidents.length > 0) {
             const incidentsTitle = document.createElement('p');
             incidentsTitle.innerHTML = `<strong>Related Incidents:</strong>`;
             modalBody.appendChild(incidentsTitle);
         
             // Create an unordered list for incidents
             const incidentsList = document.createElement('ul');
-            data[7].forEach(incident => {
+            event.incidents.forEach(incident => {
                 const listItem = document.createElement('li');
                 const incidentElement = document.createElement('a');
                 incidentElement.href = incident.link;
@@ -170,14 +198,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Add Related Research if it exists
-        if (data[9].length > 0) {
+        if (event.researchLinks.length > 0) {
             const researchTitle = document.createElement('p');
             researchTitle.innerHTML = `<strong>Related Research:</strong>`;
             modalBody.appendChild(researchTitle);
         
             // Create an unordered list for research links
             const researchList = document.createElement('ul');
-            data[9].forEach(research => {
+            event.researchLinks.forEach(research => {
                 const listItem = document.createElement('li');
                 const researchElement = document.createElement('a');
                 researchElement.href = research.link;
@@ -189,22 +217,102 @@ document.addEventListener('DOMContentLoaded', function() {
             modalBody.appendChild(researchList);
         }
     
-        // Security Implications
-        
+        // Security Implications       
         const securityImplications = document.createElement('p');
-        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${data[11]}`;
+        securityImplications.innerHTML = `<strong>Security Implications:</strong> ${event.securityImplications}`;
         modalBody.appendChild(securityImplications);
 
+        // Permissions
+        const permissions = document.createElement('p');
+        permissions.innerHTML = `<strong>Permissions:&nbsp&nbsp</strong>`;
+        const permissionsLink = event.permissions;
+        if ( permissionsLink != "N/A"){
+            const permissionsAnchor = document.createElement('a');
+            permissionsAnchor.href = permissionsLink;
+            permissionsAnchor.target = "_blank";
+            const permissionsImage = document.createElement('img');
+            permissionsImage.src = 'logos/permissions.png';
+            permissionsImage.alt = 'Click to permissions.cloud';
+            permissionsImage.style.width = '30px';
+            permissionsImage.style.height = 'auto';
+            permissionsImage.style.cursor = 'pointer';
+            permissionsAnchor.appendChild(permissionsImage);
+            permissions.appendChild(permissionsAnchor);  
+        }
+        modalBody.appendChild(permissions);
+        
+        // Alerting
+        const alerting = document.createElement('p');
+        alerting.innerHTML = `<strong>Alerting:&nbsp;&nbsp;</strong>`;
+        // cloudwatchCISControls
+        event.alerting.forEach(item => {
+            const typeConfig = {
+                cloudwatchCISControls: {
+                    src: 'logos/cloudwatch.png',
+                    alt: 'Click to docs.aws.amazon.com',
+                    link: item.value
+                },
+                sigma: {
+                    src: 'logos/sigma.png',
+                    alt: 'Click to sigma repository',
+                    link: item.value
+                }
+            };
+        
+            // Check if the current item type is configured
+            if (typeConfig[item.type]) {
+                const { src, alt, link } = typeConfig[item.type];
+                const alertingAnchor = document.createElement('a');
+                alertingAnchor.href = link;
+                alertingAnchor.target = "_blank";
+        
+                const alertingImage = document.createElement('img');
+                alertingImage.src = src;
+                alertingImage.alt = alt;
+                alertingImage.style.width = '30px';
+                alertingImage.style.height = 'auto';
+                alertingImage.style.cursor = 'pointer';
+                alertingImage.style.marginRight = '10px'; // Adds space to the right of each image
+
+                alertingAnchor.appendChild(alertingImage);
+                alerting.appendChild(alertingAnchor);
+            }
+        });
+
+        // Finally, append the alerting paragraph (with all images) to the modal body
+        modalBody.appendChild(alerting);
+
+        // Simulation
+        const simulation = document.createElement('p');
+        simulation.innerHTML = `<strong>Simulation:&nbsp;&nbsp;</strong>`;
+        // stratusRedTeam
+        event.simulation.forEach(item => {
+            if (item.type === "stratusRedTeam") {
+                const stratusLink = item.value;
+                const stratusAnchor = document.createElement('a');
+                stratusAnchor.href = stratusLink;
+                stratusAnchor.target = "_blank";
+                const stratusImage = document.createElement('img');
+                stratusImage.src = 'logos/stratusredteam.png';
+                stratusImage.alt = 'Click to stratus-red-team.cloud';
+                stratusImage.style.width = '30px';
+                stratusImage.style.height = 'auto';
+                stratusImage.style.cursor = 'pointer';
+                stratusImage.style.marginRight = '5px';
+                stratusAnchor.appendChild(stratusImage);
+                simulation.appendChild(stratusAnchor);
+            }
+        });
+        modalBody.appendChild(simulation);
         // Command Line
         const commandLine = document.createElement('p');
-        commandLine.innerHTML = `<strong>Command Line:</strong>`;
+        commandLine.innerHTML = `<h6>Command Line:</h6>`;
         modalBody.appendChild(commandLine);
-
         const commandLineContainer = document.createElement('div');
         commandLineContainer.className = 'command-line-container';
 
         const commandLineText = document.createElement('pre');
-        commandLineText.textContent = data[12];
+        commandLineText.textContent = event.simulation.find(item => item.type === "commandLine").value
         commandLineContainer.appendChild(commandLineText);
 
         const copyIcon = document.createElement('i');
@@ -233,7 +341,14 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedTactic = this.value; // Set the selected MITRE Attack Tactic
         fetchDataAndFilter(); // Refetch and filter data
     });
+
+    window.addEventListener('hashchange', function() {
+        const hash = window.location.hash.substring(1); // Remove '#'
+        const [service, eventName] = hash.split('-');
+        const event = allEventsData.find(e => e.awsService === service && e.eventName === eventName);
+        if (event) showModalWithEventData(event);
+    });
   
     // Initial data fetch and render
-    fetchDataAndFilter();
+    fetchDataAndFilter().then(findAndShowEventFromHash);
 });

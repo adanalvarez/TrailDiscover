@@ -1,7 +1,7 @@
 {
     "eventName": "DescribeLogGroups",
     "eventSource": "logs.amazonaws.com",
-    "awsService": "CloudWatch",
+    "awsService": "CloudWatchLogs",
     "description": "Lists the specified log groups.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeLogGroups to discover CloudWatch log configurations.",
-    "commandLineSimulation": "aws logs describe-log-groups --log-group-name-prefix TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs describe-log-groups --log-group-name-prefix TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-DescribeLogGroups"
 }

@@ -26,5 +26,21 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteDeliveryChannel to disrupt the flow of configuration history and compliance data in AWS.",
-    "commandLineSimulation": "aws configservice delete-delivery-channel --delivery-channel-name TrailDiscoverDeliveryChannel"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-9"
+        },
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_config_disable_recording.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws configservice delete-delivery-channel --delivery-channel-name TrailDiscoverDeliveryChannel"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/config#config-DeleteDeliveryChannel"
 }

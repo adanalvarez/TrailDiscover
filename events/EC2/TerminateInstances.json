@@ -32,5 +32,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use TerminateInstances to permanently delete EC2 instances, resulting in irreversible data loss and service disruption or for defense evasion.",
-    "commandLineSimulation": "aws ec2 terminate-instances --instance-ids TrailDiscoverInstanceID"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 terminate-instances --instance-ids TrailDiscoverInstanceID"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-TerminateInstances"
 }

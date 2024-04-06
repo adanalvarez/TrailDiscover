@@ -18,5 +18,17 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use RegisterTaskDefinition to deploy containers with malicious tasks in AWS ECS.",
-    "commandLineSimulation": "aws ecs register-task-definition --family 'xtdb-bench-dev' --network-mode 'awsvpc' --container-definitions '[{\"name\":\"bench-container\", \"cpu\":2048, \"memory\":4092 }]'"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_ecs_task_definition_cred_endpoint_query.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs register-task-definition --family 'xtdb-bench-dev' --network-mode 'awsvpc' --container-definitions '[{\"name\":\"bench-container\", \"cpu\":2048, \"memory\":4092 }]'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-RegisterTaskDefinition"
 }

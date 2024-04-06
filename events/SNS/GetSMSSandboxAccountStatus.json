@@ -23,5 +23,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetSMSSandboxAccountStatus to monitor the status of a target's AWS SNS sandbox account for potential usage for smishing.",
-    "commandLineSimulation": "aws sns get-sms-sandbox-account-status"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns get-sms-sandbox-account-status"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-GetSMSSandboxAccountStatus"
 }

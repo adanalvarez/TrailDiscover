@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use GetBucketLoggingStatus to identify if logging is enabled, potentially helping them avoid detection during unauthorized activities.",
-    "commandLineSimulation": "aws s3api get-bucket-logging --bucket TrailDiscoverBucket"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api get-bucket-logging --bucket TrailDiscoverBucket"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketLogging"
 }

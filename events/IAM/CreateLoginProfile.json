@@ -49,5 +49,21 @@
         }
     ],
     "securityImplications": "Attackers use CreateLoginProfile to create login credentials for IAM users, allowing them access to the user via the AWS console.",
-    "commandLineSimulation": "aws iam create-login-profile --user-name TrailDiscover --password TrailDiscover"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_loginprofile_creation.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-login-profile --user-name TrailDiscover --password TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-user-login-profile"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateLoginProfile"
 }

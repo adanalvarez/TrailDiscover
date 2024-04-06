@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateDetector to modify the settings of GuardDuty, potentially disabling or weakening security monitoring.",
-    "commandLineSimulation": "aws guardduty update-detector --detector-id TrailDiscoverDetectorId --enable --finding-publishing-frequency TrailDiscoverFrequency"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws guardduty update-detector --detector-id TrailDiscoverDetectorId --enable --finding-publishing-frequency TrailDiscoverFrequency"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/guardduty#guardduty-UpdateDetector"
 }

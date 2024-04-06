@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use PutGroupPolicy to modify permissions of a group, potentially granting unauthorized access to sensitive resources.",
-    "commandLineSimulation": "aws iam put-group-policy --group-name TrailDiscover --policy-document {} --policy-name TrailDiscover"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam put-group-policy --group-name TrailDiscover --policy-document {} --policy-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-PutGroupPolicy"
 }

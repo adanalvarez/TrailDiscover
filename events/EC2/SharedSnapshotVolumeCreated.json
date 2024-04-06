@@ -27,5 +27,16 @@
         }
     ],
     "securityImplications": "SharedSnapshotVolumeCreated might be a signal of an attacker copying a snapshot to their account.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-snapshot"
+        }
+    ],
+    "permissions": "N/A"
 }

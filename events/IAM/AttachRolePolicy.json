@@ -23,5 +23,21 @@
         }
     ],
     "securityImplications": "Attackers use AttachRolePolicy to grant malicious policies to IAM roles, potentially escalating privileges or enabling unauthorized access to AWS resources.",
-    "commandLineSimulation": "aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --role-name TrailDiscover"
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/TrailDiscover --role-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-backdoor-role"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-AttachRolePolicy"
 }

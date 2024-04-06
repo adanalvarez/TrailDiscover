@@ -1,7 +1,7 @@
 {
     "eventName": "ListRules",
     "eventSource": "events.amazonaws.com",
-    "awsService": "EventBridge",
+    "awsService": "events",
     "description": "Lists your Amazon EventBridge rules. You can either list all the rules or you can provide a prefix to match to the rule names.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use ListRules in AWS EventBridge to catalog active event rules, identifying critical automated security mechanisms or logging functions to target for disruption or evasion.",
-    "commandLineSimulation": "aws events list-rules --name-prefix TrailDiscover"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws events list-rules --name-prefix TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/events#events-ListRules"
 }

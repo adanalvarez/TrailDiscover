@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeSnapshotAttribute to inspect attributes of EBS snapshots, such as permissions, aiming to find snapshots shared publicly or with broad access.",
-    "commandLineSimulation": "aws ec2 describe-snapshot-attribute --snapshot-id TrailDiscoverSnapshotId --attribute TrailDiscoverAttribute"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-snapshot-attribute --snapshot-id TrailDiscoverSnapshotId --attribute TrailDiscoverAttribute"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSnapshotAttribute"
 }

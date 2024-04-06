@@ -1,7 +1,7 @@
 {
     "eventName": "DeleteMountTarget",
     "eventSource": "elasticfilesystem.amazonaws.com",
-    "awsService": "EFS",
+    "awsService": "elasticfilesystem",
     "description": "Deletes the specified mount target.",
     "mitreAttackTactics": [
         "TA0040 - Impact"
@@ -18,5 +18,17 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteMountTarget in AWS EFS to remove mount targets, disrupting access to file system and as a preliminary phase before data deletion.",
-    "commandLineSimulation": "aws efs delete-mount-target --mount-target-id fsmt-f9a14450"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_efs_fileshare_mount_modified_or_deleted.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws efs delete-mount-target --mount-target-id fsmt-f9a14450"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/elasticfilesystem#elasticfilesystem-DeleteMountTarget"
 }

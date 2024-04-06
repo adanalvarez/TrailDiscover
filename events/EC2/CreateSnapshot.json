@@ -1,5 +1,5 @@
 {
-    "eventName": "ModifySnapshotAttribute",
+    "eventName": "CreateSnapshot",
     "eventSource": "ec2.amazonaws.com",
     "awsService": "EC2",
     "description": "Creates a snapshot of an EBS volume and stores it in Amazon S3.",
@@ -33,5 +33,12 @@
         }
     ],
     "securityImplications": "Attackers might use ModifySnapshotAttribute to alter permissions on EBS snapshots, potentially exposing sensitive data to unauthorized parties.",
-    "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-1234567890abcdef0 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 modify-snapshot-attribute --snapshot-id snap-1234567890abcdef0 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ModifySnapshotAttribute"
 }

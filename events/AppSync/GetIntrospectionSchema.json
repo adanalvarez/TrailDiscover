@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetIntrospectionSchema to understand the API for future attacks or use the configuration for future modifications.",
-    "commandLineSimulation": "aws appsync get-introspection-schema --api-id TrailDiscover --format json output"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws appsync get-introspection-schema --api-id TrailDiscover --format json output"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/appsync#appsync-GetIntrospectionSchema"
 }

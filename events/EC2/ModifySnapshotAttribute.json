@@ -18,5 +18,21 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use ModifySnapshotAttribute to change permissions on Amazon EBS snapshots, potentially making them accessible to unauthorized users or public.",
-    "commandLineSimulation": "aws ec2 modify-snapshot-attribute --snapshot-id snap-046281ab24d756c50 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_snapshot_backup_exfiltration.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 modify-snapshot-attribute --snapshot-id snap-046281ab24d756c50 --attribute createVolumePermission --operation-type remove --user-ids 123456789012"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-snapshot"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ModifySnapshotAttribute"
 }

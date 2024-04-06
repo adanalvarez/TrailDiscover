@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeVpcEndpointConnectionNotifications to monitor notification configurations for VPC endpoints.",
-    "commandLineSimulation": "aws ec2 describe-vpc-endpoint-connection-notifications --connection-notification-id TrailDiscoverConnectionNotificationId"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-vpc-endpoint-connection-notifications --connection-notification-id TrailDiscoverConnectionNotificationId"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeVpcEndpointConnectionNotifications"
 }

@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use CreateTrafficMirrorSession to initiate a session for mirroring network traffic, potentially for malicious monitoring or data exfiltration.",
-    "commandLineSimulation": "aws ec2 create-traffic-mirror-session --description TrailDiscoverDescription --traffic-mirror-target-id tmt-07f75d8feeEXAMPLE --network-interface-id eni-070203f901EXAMPLE --session-number 1 --packet-length 25 --traffic-mirror-filter-id tmf-04812ff784EXAMPLE"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-traffic-mirror-session --description TrailDiscoverDescription --traffic-mirror-target-id tmt-07f75d8feeEXAMPLE --network-interface-id eni-070203f901EXAMPLE --session-number 1 --packet-length 25 --traffic-mirror-filter-id tmf-04812ff784EXAMPLE"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateTrafficMirrorSession"
 }

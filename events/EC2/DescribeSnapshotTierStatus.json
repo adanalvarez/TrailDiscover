@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeSnapshotTierStatus to assess the tiering status and potential lifecycle transitions of EBS snapshots, seeking to identify snapshots that are less frequently accessed or potentially unmonitored.",
-    "commandLineSimulation": "aws ec2 describe-snapshot-tier-status"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-snapshot-tier-status"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSnapshotTierStatus"
 }

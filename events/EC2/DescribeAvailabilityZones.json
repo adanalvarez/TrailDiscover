@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeAvailabilityZones to map the deployment regions of an AWS environment.",
-    "commandLineSimulation": "aws ec2 describe-availability-zones --filters Name=region-name,Values=TrailDiscoverRegion"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-availability-zones --filters Name=region-name,Values=TrailDiscoverRegion"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeAvailabilityZones"
 }

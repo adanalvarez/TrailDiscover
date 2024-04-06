@@ -23,5 +23,16 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateAssumeRolePolicy to modify the assume role policy allowing access from an attacker compromised account.",
-    "commandLineSimulation": "aws iam update-assume-role-policy --role-name TrailDiscover-Role --policy-document {}"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam update-assume-role-policy --role-name TrailDiscover-Role --policy-document {}"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-backdoor-role"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateAssumeRolePolicy"
 }

@@ -25,5 +25,17 @@
         }
     ],
     "securityImplications": "Attackers might set the versioning to 'Suspended' before deleting data. Attackers might enable versioning to add bucket replication to exfiltrate data.",
-    "commandLineSimulation": "aws s3api put-bucket-versioning --bucket TrailDiscoverBucket --versioning-configuration Status=Enabled"
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_disable_bucket_versioning.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api put-bucket-versioning --bucket TrailDiscoverBucket --versioning-configuration Status=Enabled"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-PutBucketVersioning"
 }

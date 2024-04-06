@@ -22,5 +22,12 @@
         }
     ],
     "securityImplications": "Attackers might use DeleteDBCluster to delete crucial databases, causing data loss and service disruption.",
-    "commandLineSimulation": "aws rds delete-db-cluster --db-cluster-identifier TrailDiscoverDBCluster"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds delete-db-cluster --db-cluster-identifier TrailDiscoverDBCluster"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteDBCluster"
 }

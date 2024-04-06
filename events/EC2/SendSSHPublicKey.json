@@ -1,7 +1,7 @@
 {
     "eventName": "SendSSHPublicKey",
     "eventSource": "ec2-instance-connect.amazonaws.com",
-    "awsService": "EC2",
+    "awsService": "EC2InstanceConnect",
     "description": "Pushes an SSH public key to the specified EC2 instance for use by the specified user.",
     "mitreAttackTactics": [
         "TA0008 - Lateral Movement"
@@ -22,5 +22,16 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use SendSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control.",
-    "commandLineSimulation": "N/A"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.lateral-movement.ec2-instance-connect"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2-instance-connect#ec2-instance-connect-SendSSHPublicKey"
 }

@@ -20,5 +20,12 @@
         }
     ],
     "securityImplications": "Attackers might use UpdateResolver to execute custom code that could allow potential access to data and bypass protections.",
-    "commandLineSimulation": "aws appsync update-resolver --api-id TrailDiscoverApiId --type-name TrailDiscoverTypeName --field-name TrailDiscoverFieldName --pipeline-config functions=TrailDiscoverFunctions --request-mapping-template TrailDiscoverRequestMappingTemplate --response-mapping-template TrailDiscoverResponseMappingTemplate"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws appsync update-resolver --api-id TrailDiscoverApiId --type-name TrailDiscoverTypeName --field-name TrailDiscoverFieldName --pipeline-config functions=TrailDiscoverFunctions --request-mapping-template TrailDiscoverRequestMappingTemplate --response-mapping-template TrailDiscoverResponseMappingTemplate"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/appsync#appsync-UpdateResolver"
 }

@@ -18,5 +18,12 @@
     ],
     "researchLinks": [],
     "securityImplications": "Attackers might use DescribeOrganization to gather information about the structure and details of an AWS organization.",
-    "commandLineSimulation": "aws organizations describe-organization"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations describe-organization"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-DescribeOrganization"
 }

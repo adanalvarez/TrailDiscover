@@ -18,5 +18,12 @@
         }
     ],
     "securityImplications": "Attackers might use GetInstances to gather information about running instances for potential exploitation.",
-    "commandLineSimulation": "aws lightsail get-instances"
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lightsail get-instances"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lightsail#lightsail-GetInstances"
 }
