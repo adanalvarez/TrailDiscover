@@ -156,9 +156,6 @@ th.gridjs-th {
         font-size: 8px;
     }
 
-    .edit-on-github {
-        display: none;
-    }
     .gridjs-table th:nth-of-type(4),
     .gridjs-table td:nth-of-type(4),
     .gridjs-table th:nth-of-type(6),
@@ -188,9 +185,6 @@ th.gridjs-th {
         font-size: 8px;
     }
 
-    .edit-on-github {
-        display: none;
-    }
     .gridjs-table th:nth-of-type(3),
     .gridjs-table td:nth-of-type(3),
     .gridjs-table th:nth-of-type(4),
