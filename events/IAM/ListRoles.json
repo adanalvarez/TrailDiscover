@@ -9,8 +9,13 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Muddled Libra\u2019s Evolution to the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS - IAM Enum",

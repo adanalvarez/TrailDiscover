@@ -1,0 +1,29 @@
+{
+    "eventName": "CreateUser",
+    "eventSource": "transfer.amazonaws.com",
+    "awsService": "TransferFamily",
+    "description": "Creates a user and associates them with an existing file transfer protocol-enabled server.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Muddled Libra\u2019s Evolution to the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateUser to use the Transfer Family service.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws transfer create-user --server-id s-1234567890abcdef0 --user-name TrailDiscover --role arn:aws:iam::123456789012:role/TrailDiscover --home-directory /TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/transfer#transfer-CreateUser"
+}

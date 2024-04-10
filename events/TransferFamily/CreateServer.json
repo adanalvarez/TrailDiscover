@@ -1,0 +1,29 @@
+{
+    "eventName": "CreateServer",
+    "eventSource": "transfer.amazonaws.com",
+    "awsService": "TransferFamily",
+    "description": "Instantiates an auto-scaling virtual server based on the selected file transfer protocol in AWS.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Muddled Libra\u2019s Evolution to the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateServer to create a server that allows to transfer files into and out of AWS storage services.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws transfer create-server --protocols SFTP --endpoint-type PUBLIC --identity-provider-type SERVICE_MANAGED"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/transfer#transfer-CreateServer"
+}
