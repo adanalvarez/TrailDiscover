@@ -1,0 +1,29 @@
+{
+    "eventName": "ListSAMLProviders",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the SAML provider resource objects defined in IAM in the account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Muddled Libra\u2019s Evolution to the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListSAMLProviders to discover if there are SAML providers configured.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-saml-providers"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListSAMLProviders"
+}

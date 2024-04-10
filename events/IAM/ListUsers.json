@@ -26,6 +26,10 @@
         {
             "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+        },
+        {
+            "description": "Muddled Libra\u2019s Evolution to the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
         }
     ],
     "researchLinks": [
