@@ -4,7 +4,7 @@
     "awsService": "EC2",
     "description": "Deletes the specified snapshot.",
     "mitreAttackTactics": [
-        "T1485 - Impact"
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"

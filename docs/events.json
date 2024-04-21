@@ -5410,7 +5410,7 @@
         "awsService": "EC2",
         "description": "Deletes the specified EBS volume. The volume must be in the available state (not attached to an instance).",
         "mitreAttackTactics": [
-            "T1485 - Impact"
+            "TA0040 - Impact"
         ],
         "mitreAttackTechniques": [
             "T1485 - Data Destruction"
@@ -6852,7 +6852,7 @@
         "awsService": "EC2",
         "description": "Deletes the specified snapshot.",
         "mitreAttackTactics": [
-            "T1485 - Impact"
+            "TA0040 - Impact"
         ],
         "mitreAttackTechniques": [
             "T1485 - Data Destruction"
