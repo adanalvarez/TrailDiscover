@@ -46,7 +46,7 @@ PRs are welcome. Here’s how you can contribute:
 **Updating The Web**: After adding or updating events, use the tools in the `tools` folder to generate the updated CSV and JSON files for the web. This ensures that the website stays up-to-date with the latest event information.
 
 
-## Datadog Dashbaord
+## Datadog Dashboard
 
 In the Tools folder, the `datadog_dashboard.py` script, when executed, generates the JSON file `datadog_dashboard.json` in the docs folder. This JSON can be [imported into Datadog as a dashboard](https://docs.datadoghq.com/dashboards/configure/#copy-import-or-export-dashboard-json).
 
