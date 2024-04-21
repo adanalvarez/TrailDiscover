@@ -233,7 +233,7 @@ def tactic_group(event, tactic, x_position, y_position):
                     "name": "query1",
                     "indexes": ["*"],
                     "compute": {"aggregation": "count"},
-                    "search": {"query": f"source:cloudtrail @evt.name:{event['eventName']}"}
+                    "search": {"query": f"source:cloudtrail @evt.name:{event['eventName']} $userIdentity.arn $network.client.ip $account"}
                 }],
                 "formulas": [{"formula": "query1"}]
             }],
