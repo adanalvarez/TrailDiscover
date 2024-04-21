@@ -45,6 +45,18 @@ PRs are welcome. Here’s how you can contribute:
 
 **Updating The Web**: After adding or updating events, use the tools in the `tools` folder to generate the updated CSV and JSON files for the web. This ensures that the website stays up-to-date with the latest event information.
 
+
+## Datadog Dashbaord
+
+In the Tools folder, the `datadog_dashboard.py` script, when executed, generates the JSON file `datadog_dashboard.json` in the docs folder. This JSON can be [imported into Datadog as a dashboard](https://docs.datadoghq.com/dashboards/configure/#copy-import-or-export-dashboard-json).
+
+The dashboard has an overview section with a 'Top 10 CloudTrail Events exploited in the wild' showcasing the top 10 events happening in the account/s that are known to be used in the wild by attackers. Additionally, it includes a 'MITRE ATT&CK Tactics Events Timeline' that groups events from TrailDiscover into MITRE ATT&CK Tactics and shows when they are happening in our account/s.
+
+Then, events are organized according to MITRE ATT&CK tactics. Each event is presented with two widgets: one provides a description, a direct link to traildiscover.cloud, and references to related incidents and research; the other features a counter displaying the frequency of these events in your AWS environment.
+
+<p align="center">
+  <img src="./docs/traildiscover_datadog_dashboard.gif" alt="Datadog_TrailDiscover_Dashboard" width="400" />
+</p>
 ## Plans for the Future
 
 - **Adding More Events**: I'll keep adding new events and updating the info for existing ones.
