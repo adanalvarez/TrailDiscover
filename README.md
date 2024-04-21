@@ -55,7 +55,7 @@ The dashboard has an overview section with a 'Top 10 CloudTrail Events exploited
 Then, events are organized according to MITRE ATT&CK tactics. Each event is presented with two widgets: one provides a description, a direct link to traildiscover.cloud, and references to related incidents and research; the other features a counter displaying the frequency of these events in your AWS environment.
 
 <p align="center">
-  <img src="./docs/traildiscover_datadog_dashboard.gif" alt="Datadog_TrailDiscover_Dashboard" width="400" />
+  <img src="./docs/traildiscover_datadog_dashboard.gif" alt="Datadog_TrailDiscover_Dashboard" width="600" />
 </p>
 ## Plans for the Future
 
