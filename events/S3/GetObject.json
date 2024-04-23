@@ -50,6 +50,10 @@
         {
             "description": "Enumerate AWS Account ID from a Public S3 Bucket",
             "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/"
+        },
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
         }
     ],
     "researchLinks": [

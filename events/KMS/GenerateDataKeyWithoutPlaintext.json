@@ -1,0 +1,29 @@
+{
+    "eventName": "GenerateDataKeyWithoutPlaintext",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Returns a unique symmetric data key for use outside of AWS KMS.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1486 - Data Encrypted for Impact"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GenerateDataKeyWithoutPlaintext to generate encryption keys that can decrypt data in a ransom.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-GenerateDataKeyWithoutPlaintext"
+}

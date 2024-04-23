@@ -14,6 +14,10 @@
         {
             "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+        },
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
         }
     ],
     "researchLinks": [],

@@ -1,33 +1,29 @@
 {
-    "eventName": "ListObjects",
+    "eventName": "GetBucketTagging",
     "eventSource": "s3.amazonaws.com",
     "awsService": "S3",
-    "description": "Returns some or all (up to 1,000) of the objects in a bucket.",
+    "description": "Returns the tag set associated with the bucket.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1619 - Cloud Storage Object Discovery"
+        "T1526 - Cloud Service Discovery"
     ],
     "usedInWild": true,
     "incidents": [
-        {
-            "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
-            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
-        },
         {
             "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
             "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use ListObjects to identify potentially sensitive objects stored in S3 buckets.",
+    "securityImplications": "Attackers might use GetBucketTagging to look for tags reminiscent of PII or confidential data.",
     "alerting": [],
     "simulation": [
         {
             "type": "commandLine",
-            "value": "N/A"
+            "value": "aws s3api get-bucket-tagging --bucket TrailDiscoverBucket"
         }
     ],
-    "permissions": "N/A"
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketTagging"
 }

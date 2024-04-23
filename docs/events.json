@@ -659,6 +659,10 @@
             {
                 "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+            },
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
         "researchLinks": [],
@@ -1030,6 +1034,64 @@
         "permissions": "https://aws.permissions.cloud/iam/logs#logs-GetLogRecord"
     },
     {
+        "eventName": "PutLogEvents",
+        "eventSource": "logs.amazonaws.com",
+        "awsService": "CloudWatchLogs",
+        "description": "Uploads a batch of log events to the specified log stream.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutLogEvents to add benign log entries, effectively burying any signs of his malicious activities.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws logs put-log-events --log-group-name my-logs --log-stream-name 20150601 --log-events timestamp=$(date +%s%3N),message='TrailDiscover'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/logs#logs-PutLogEvents"
+    },
+    {
+        "eventName": "CreateLogStream",
+        "eventSource": "logs.amazonaws.com",
+        "awsService": "CloudWatchLogs",
+        "description": "Creates a log stream for the specified log group.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateLogStream to later add benign log entries, effectively burying any signs of his malicious activities.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws logs create-log-stream --log-group-name my-logs --log-stream-name 20150601"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/logs#logs-CreateLogStream"
+    },
+    {
         "eventName": "PasswordRecoveryRequested ",
         "eventSource": "signin.amazonaws.com",
         "awsService": "SignIn",
@@ -1189,6 +1251,10 @@
             {
                 "description": "Mining Crypto",
                 "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
+            },
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
         "researchLinks": [
@@ -1380,6 +1446,10 @@
             {
                 "description": "Mining Crypto",
                 "link": "https://twitter.com/jonnyplatt/status/1471453527390277638"
+            },
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
         "researchLinks": [
@@ -1771,27 +1841,63 @@
         "permissions": "https://aws.permissions.cloud/iam/events#events-ListRules"
     },
     {
+        "eventName": "PutTargets",
+        "eventSource": "events.amazonaws.com",
+        "awsService": "events",
+        "description": "Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1546 - Event Triggered Execution"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutTargets in AWS EventBridge to trigger a malicious Lambda function periodically.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws events put-targets --rule TrailDiscoverLambdaFunction --targets \"Id\"=\"1\",\"Arn\"=\"arn:aws:lambda:us-east-1:123456789012:function:MyFunctionName\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/events#events-PutTargets"
+    },
+    {
         "eventName": "PutRule",
         "eventSource": "events.amazonaws.com",
         "awsService": "events",
         "description": "Creates or updates the specified rule.",
         "mitreAttackTactics": [
             "TA0040 - Impact",
-            "TA0005 - Defense Evasion"
+            "TA0005 - Defense Evasion",
+            "TA0003 - Persistence"
         ],
         "mitreAttackTechniques": [
             "T1489 - Service Stop",
-            "T1578 - Modify Cloud Compute Infrastructure"
+            "T1578 - Modify Cloud Compute Infrastructure",
+            "T1546 - Event Triggered Execution"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Modify GuardDuty Configuration",
                 "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
             }
         ],
-        "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions or triggering unwarranted responses within the environment.",
+        "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions to gain persistence or triggering unwarranted responses within the environment.",
         "alerting": [],
         "simulation": [
             {
@@ -4212,6 +4318,35 @@
         "permissions": "https://aws.permissions.cloud/iam/resource-explorer-2#resource-explorer-2-Search"
     },
     {
+        "eventName": "GenerateDataKeyWithoutPlaintext",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Returns a unique symmetric data key for use outside of AWS KMS.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GenerateDataKeyWithoutPlaintext to generate encryption keys that can decrypt data in a ransom.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-GenerateDataKeyWithoutPlaintext"
+    },
+    {
         "eventName": "ScheduleKeyDeletion",
         "eventSource": "kms.amazonaws.com",
         "awsService": "KMS",
@@ -4244,6 +4379,35 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-ScheduleKeyDeletion"
+    },
+    {
+        "eventName": "Encrypt",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Encrypts plaintext of up to 4,096 bytes using a KMS key. ",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use Encrypt to encrypt data for ransom.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-Encrypt"
     },
     {
         "eventName": "LookupEvents",
@@ -5028,6 +5192,10 @@
             {
                 "description": "Enumerate AWS Account ID from a Public S3 Bucket",
                 "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/"
+            },
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
         "researchLinks": [
@@ -5231,6 +5399,35 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "GetBucketTagging",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Returns the tag set associated with the bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketTagging to look for tags reminiscent of PII or confidential data.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-bucket-tagging --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketTagging"
+    },
+    {
         "eventName": "DeleteObject",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
@@ -5328,6 +5525,10 @@
             {
                 "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+            },
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
         "researchLinks": [],

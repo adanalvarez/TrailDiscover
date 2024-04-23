@@ -5,21 +5,28 @@
     "description": "Creates or updates the specified rule.",
     "mitreAttackTactics": [
         "TA0040 - Impact",
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
         "T1489 - Service Stop",
-        "T1578 - Modify Cloud Compute Infrastructure"
+        "T1578 - Modify Cloud Compute Infrastructure",
+        "T1546 - Event Triggered Execution"
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Modify GuardDuty Configuration",
             "link": "https://hackingthe.cloud/aws/avoiding-detection/modify-guardduty-config/"
         }
     ],
-    "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions or triggering unwarranted responses within the environment.",
+    "securityImplications": "Attackers might use PutRule in AWS EventBridge to create unauthorized event rules, potentially automating malicious actions to gain persistence or triggering unwarranted responses within the environment.",
     "alerting": [],
     "simulation": [
         {
