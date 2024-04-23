@@ -1,0 +1,29 @@
+{
+    "eventName": "CreateLogStream",
+    "eventSource": "logs.amazonaws.com",
+    "awsService": "CloudWatchLogs",
+    "description": "Creates a log stream for the specified log group.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateLogStream to later add benign log entries, effectively burying any signs of his malicious activities.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs create-log-stream --log-group-name my-logs --log-stream-name 20150601"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-CreateLogStream"
+}

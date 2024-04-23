@@ -1,0 +1,29 @@
+{
+    "eventName": "Encrypt",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Encrypts plaintext of up to 4,096 bytes using a KMS key. ",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1486 - Data Encrypted for Impact"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use Encrypt to encrypt data for ransom.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-Encrypt"
+}
