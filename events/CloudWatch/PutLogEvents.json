@@ -1,0 +1,29 @@
+{
+    "eventName": "PutLogEvents",
+    "eventSource": "logs.amazonaws.com",
+    "awsService": "CloudWatchLogs",
+    "description": "Uploads a batch of log events to the specified log stream.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+            "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use PutLogEvents to add benign log entries, effectively burying any signs of his malicious activities.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs put-log-events --log-group-name my-logs --log-stream-name 20150601 --log-events timestamp=$(date +%s%3N),message='TrailDiscover'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-PutLogEvents"
+}
