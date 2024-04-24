@@ -56,7 +56,7 @@ Then, events are organized according to MITRE ATT&CK tactics. Each event is pres
 
 **Warning**
 
-This dashboard is resource-intensive. If you want to generate a dashboard with less data it is possible to use the options `--on-the-wild-only` to only add events that have been seen in the wild, or the `--tactics` option to only add specific tactics. Example usage
+This dashboard is resource-intensive. If you want to generate a dashboard with fewer data it is possible to use the options `--on-the-wild-only` to only add events that have been seen in the wild, or the `--tactics` option to only add specific tactics. Example usage:
  `python3 datadog_dashboard.py --on-the-wild-only --tactics "TA0005 - Defense Evasion" "TA0008 - Lateral Movement"`
 
 
