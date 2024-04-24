@@ -54,7 +54,8 @@ The dashboard has an overview section with a 'Top 10 CloudTrail Events exploited
 
 Then, events are organized according to MITRE ATT&CK tactics. Each event is presented with two widgets: one provides a description, a direct link to traildiscover.cloud, and references to related incidents and research; the other features a counter displaying the frequency of these events in your AWS environment.
 
-> **Warning**
+> **⚠️ Warning**
+>
 > This dashboard is resource-intensive. If you want to generate a dashboard with fewer data it is possible to use the options `--on-the-wild-only` to only add events that have been seen in the wild, or the `--tactics` option to only add specific tactics. Example usage:
 > `python3 datadog_dashboard.py --on-the-wild-only --tactics "TA0005 - Defense Evasion" "TA0008 - Lateral Movement"`
 
