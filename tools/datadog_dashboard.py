@@ -1,4 +1,5 @@
 import json
+import argparse
 
 # Define the order for the MITRE ATT&CK tactics
 tactic_order = {
@@ -28,13 +29,22 @@ def load_data(file_path):
         print(f"Error: The file {file_path} is not a valid JSON.")
         return None
 
-def group_events_by_tactics(events):
+def group_events_by_tactics(events, filter_tactics):
     tactics = {}
     for event in events:
         for tactic in event['mitreAttackTactics']:
-            if tactic not in tactics:
-                tactics[tactic] = []
-            tactics[tactic].append(event)
+            if filter_tactics:
+                    for tactic_to_filter in filter_tactics:
+                        if tactic == tactic_to_filter:
+                            if tactic not in tactics:
+                                tactics[tactic] = []
+                            tactics[tactic].append(event)
+                        else:
+                            pass
+            else:
+                if tactic not in tactics:
+                    tactics[tactic] = []
+                tactics[tactic].append(event)
     return tactics
 
 def get_exploited_in_wild_event_names(events):
@@ -319,15 +329,24 @@ def create_datadog_dashboard(tactics, exploited_event_names):
 
     return dashboard
 
-def main():
+def on_the_wild_only(events):
+    on_the_wild_only_events = []
+    for event in events:
+        if event.get('usedInWild', False):
+            on_the_wild_only_events.append(event)
+    return on_the_wild_only_events
+
+def main(args):
     events_path = '../docs/events.json'
     events = load_data(events_path)
+    if args.on_the_wild_only:
+        events = on_the_wild_only(events)  
 
     if events:
-        tactics = group_events_by_tactics(events)
+        tactics = group_events_by_tactics(events, args.tactics)
         exploited_event_names = get_exploited_in_wild_event_names(events)
         datadog_dashboard = create_datadog_dashboard(tactics, exploited_event_names)
-
+        
         try:
             with open('../docs/datadog_dashboard.json', 'w') as file:
                 json.dump(datadog_dashboard, file, indent=4)
@@ -338,4 +357,9 @@ def main():
         print("Failed to create dashboard due to data loading issues.")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="This script generates a Datadog dashboard with data from TrailDiscover.")
+    parser.add_argument('--on-the-wild-only', action='store_true', help='Generates a dashboard only with events that have been seen in the wild.')
+    parser.add_argument('--tactics', nargs='+', help='Generates a dashboard only with the selected MITRE ATT&CK tactics.')
+
+    args = parser.parse_args()
+    main(args)
