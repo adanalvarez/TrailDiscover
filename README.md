@@ -1,6 +1,6 @@
 # TrailDiscover
 <p align="center">
-  <img src="./HoneyTrail.png" alt="HoneyTrail" width="300" />
+  <img src="./docs/TrailDiscover.png" alt="TrailDiscover" width="300" />
 </p>
 An evolving repository of CloudTrail events with detailed descriptions, MITRE ATT&amp;CK insights, real-world incidents references, other research references and security implications.
 
