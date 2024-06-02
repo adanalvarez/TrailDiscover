@@ -1,0 +1,31 @@
+{
+    "eventName": "InvokeModel",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Invokes the specified Amazon Bedrock model to run inference using the prompt and inference parameters provided in the request body.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Service Discovery",
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
+            "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
+}
