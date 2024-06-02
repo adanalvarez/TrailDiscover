@@ -1,0 +1,29 @@
+{
+    "eventName": "GetModelInvocationLoggingConfiguration",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Get the current configuration values for model invocation logging.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
+            "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetModelInvocationLoggingConfiguration to check S3 and Cloudwatch logging configuration.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetModelInvocationLoggingConfiguration"
+}

@@ -827,6 +827,35 @@
         "permissions": "https://aws.permissions.cloud/iam/cognito-identity#cognito-identity-GetId"
     },
     {
+        "eventName": "PutLogEvents",
+        "eventSource": "logs.amazonaws.com",
+        "awsService": "CloudWatchLogs",
+        "description": "Uploads a batch of log events to the specified log stream.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
+                "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutLogEvents to add benign log entries, effectively burying any signs of his malicious activities.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws logs put-log-events --log-group-name my-logs --log-stream-name 20150601 --log-events timestamp=$(date +%s%3N),message='TrailDiscover'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/logs#logs-PutLogEvents"
+    },
+    {
         "eventName": "DescribeLogGroups",
         "eventSource": "logs.amazonaws.com",
         "awsService": "CloudWatchLogs",
@@ -5541,6 +5570,66 @@
             }
         ],
         "permissions": "N/A"
+    },
+    {
+        "eventName": "InvokeModel",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Invokes the specified Amazon Bedrock model to run inference using the prompt and inference parameters provided in the request body.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery",
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Service Discovery",
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
+                "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
+    },
+    {
+        "eventName": "GetModelInvocationLoggingConfiguration",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Get the current configuration values for model invocation logging.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
+                "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetModelInvocationLoggingConfiguration to check S3 and Cloudwatch logging configuration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetModelInvocationLoggingConfiguration"
     },
     {
         "eventName": "CreateInstanceExportTask",
