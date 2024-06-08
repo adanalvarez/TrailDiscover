@@ -8,7 +8,7 @@
         "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Service Discovery",
+        "T1580 - Cloud Infrastructure Discovery",
         "T1496 - Resource Hijacking"
     ],
     "usedInWild": true,

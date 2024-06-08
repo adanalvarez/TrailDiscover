@@ -5630,7 +5630,7 @@
             "TA0040 - Impact"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery",
+            "T1580 - Cloud Infrastructure Discovery",
             "T1496 - Resource Hijacking"
         ],
         "usedInWild": true,
@@ -5664,7 +5664,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5693,7 +5693,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5809,7 +5809,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5838,7 +5838,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5867,7 +5867,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5896,7 +5896,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1526 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
