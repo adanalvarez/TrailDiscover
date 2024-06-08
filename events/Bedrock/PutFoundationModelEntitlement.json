@@ -1,0 +1,29 @@
+{
+    "eventName": "PutFoundationModelEntitlement",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Grants permission to put entitlement to access a foundation model.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use PutFoundationModelEntitlement to prepare for using foundation models for resource hijacking.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutFoundationModelEntitlement"
+}

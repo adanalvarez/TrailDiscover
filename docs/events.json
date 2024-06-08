@@ -484,6 +484,10 @@
             {
                 "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [
@@ -3038,6 +3042,10 @@
             {
                 "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [
@@ -3365,6 +3373,10 @@
             {
                 "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
                 "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [
@@ -3472,6 +3484,10 @@
             {
                 "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
                 "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [
@@ -3981,6 +3997,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [],
@@ -5395,6 +5415,35 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "ListVaults",
+        "eventSource": "glacier.amazonaws.com",
+        "awsService": "S3",
+        "description": "This operation lists all vaults owned by the calling user\u2019s account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1619 - Cloud Storage Object Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListVaults to identify data such as archived training data or related datasets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws glacier list-vaults --account-id -"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/glacier#glacier-ListVaults"
+    },
+    {
         "eventName": "GetPublicAccessBlock",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
@@ -5581,7 +5630,7 @@
             "TA0040 - Impact"
         ],
         "mitreAttackTechniques": [
-            "T1580 - Cloud Service Discovery",
+            "T1580 - Cloud Infrastructure Discovery",
             "T1496 - Resource Hijacking"
         ],
         "usedInWild": true,
@@ -5589,10 +5638,14 @@
             {
                 "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
                 "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+            },
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
             }
         ],
         "researchLinks": [],
-        "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled.",
+        "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled and invoke the model for resource hijacking.",
         "alerting": [],
         "simulation": [
             {
@@ -5603,6 +5656,238 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
     },
     {
+        "eventName": "GetUseCaseForModelAccess",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to retrieve a use case for model access.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetUseCaseForModelAccess to enumerate accessible models.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetUseCaseForModelAccess"
+    },
+    {
+        "eventName": "ListProvisionedModelThroughputs",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to list provisioned model throughputs that you created earlier.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListProvisionedModelThroughputs to gather information on existing inputs and outputs for models in use.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListProvisionedModelThroughputs"
+    },
+    {
+        "eventName": "PutFoundationModelEntitlement",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to put entitlement to access a foundation model.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutFoundationModelEntitlement to prepare for using foundation models for resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutFoundationModelEntitlement"
+    },
+    {
+        "eventName": "InvokeModelWithResponseStream",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to invoke the specified Bedrock model to run inference using the input provided in the request body with streaming response.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use InvokeModelWithResponseStream to invoke the model for resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModelWithResponseStream"
+    },
+    {
+        "eventName": "PutUseCaseForModelAccess",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to put a use case for model access.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutUseCaseForModelAccess to prepare for using foundation models for resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutUseCaseForModelAccess"
+    },
+    {
+        "eventName": "GetFoundationModelAvailability",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to get the availability of a foundation model.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetFoundationModelAvailability to enumerate accessible models",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetFoundationModelAvailability"
+    },
+    {
+        "eventName": "ListFoundationModels",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to list Bedrock foundation models that you can use.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListFoundationModels to enumerate accessible models.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListFoundationModels"
+    },
+    {
+        "eventName": "ListFoundationModelAgreementOffers",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to get a list of foundation model agreement offers.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListFoundationModelAgreementOffers to enumerate accessible models.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListFoundationModelAgreementOffers"
+    },
+    {
         "eventName": "GetModelInvocationLoggingConfiguration",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -5611,7 +5896,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1526 - Cloud Service Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "usedInWild": true,
         "incidents": [
@@ -5630,6 +5915,35 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetModelInvocationLoggingConfiguration"
+    },
+    {
+        "eventName": "CreateFoundationModelAgreement",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Grants permission to create a new foundation model agreement.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Detecting AI resource-hijacking with Composite Alerts",
+                "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateFoundationModelAgreement to prepare for using foundation models for resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateFoundationModelAgreement"
     },
     {
         "eventName": "CreateInstanceExportTask",

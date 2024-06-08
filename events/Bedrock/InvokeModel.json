@@ -8,7 +8,7 @@
         "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Service Discovery",
+        "T1580 - Cloud Infrastructure Discovery",
         "T1496 - Resource Hijacking"
     ],
     "usedInWild": true,
@@ -16,10 +16,14 @@
         {
             "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
             "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+        },
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled.",
+    "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled and invoke the model for resource hijacking.",
     "alerting": [],
     "simulation": [
         {

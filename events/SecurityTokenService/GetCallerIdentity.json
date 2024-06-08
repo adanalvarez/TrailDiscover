@@ -26,6 +26,10 @@
         {
             "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+        },
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
         }
     ],
     "researchLinks": [
