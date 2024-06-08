@@ -1,0 +1,29 @@
+{
+    "eventName": "ListProvisionedModelThroughputs",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Grants permission to list provisioned model throughputs that you created earlier.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListProvisionedModelThroughputs to gather information on existing inputs and outputs for models in use.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListProvisionedModelThroughputs"
+}

@@ -1,0 +1,29 @@
+{
+    "eventName": "ListVaults",
+    "eventSource": "glacier.amazonaws.com",
+    "awsService": "S3",
+    "description": "This operation lists all vaults owned by the calling user\u2019s account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1619 - Cloud Storage Object Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListVaults to identify data such as archived training data or related datasets.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glacier list-vaults --account-id -"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glacier#glacier-ListVaults"
+}

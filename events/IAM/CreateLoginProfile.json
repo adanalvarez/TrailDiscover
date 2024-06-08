@@ -32,6 +32,10 @@
         {
             "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
             "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+        },
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
         }
     ],
     "researchLinks": [

@@ -1,0 +1,29 @@
+{
+    "eventName": "ListFoundationModels",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Grants permission to list Bedrock foundation models that you can use.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Service Discovery"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Detecting AI resource-hijacking with Composite Alerts",
+            "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListFoundationModels to enumerate accessible models.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListFoundationModels"
+}
