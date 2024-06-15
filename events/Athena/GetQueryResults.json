@@ -4,10 +4,15 @@
     "awsService": "Athena",
     "description": "Streams the results of a single query execution specified by QueryExecutionId from the Athena query results location in Amazon S3.",
     "mitreAttackTactics": [
-        "TA0007 - Discovery"
+        "TA0007 - Discovery",
+        "TA0009 - Collection"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1082 - System Information Discovery",
+        "T1213 - Data from Information Repositories",
+        "T1039 - Data from Network Shared Drive",
+        "T1074 - Data Staged"
     ],
     "usedInWild": true,
     "incidents": [
