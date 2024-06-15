@@ -5,11 +5,20 @@
     "description": "Updates a Resolver object.",
     "mitreAttackTactics": [
         "TA0005 - Defense Evasion",
-        "TA0003 - Persistence"
+        "TA0003 - Persistence",
+        "TA0006 - Credential Access"
     ],
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure",
-        "T1556 - Modify Authentication Process"
+        "T1556 - Modify Authentication Process",
+        "T1136.003 - Create Account: Cloud Account",
+        "T1078 - Valid Accounts",
+        "T1070.004 - Indicator Removal on Host: File Deletion",
+        "T1531 - Account Access Removal",
+        "T1003 - Credential Dumping",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1027 - Obfuscated Files or Information"
     ],
     "usedInWild": false,
     "incidents": [],

@@ -7,7 +7,10 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1526 - Cloud Service Discovery"
+        "T1526 - Cloud Service Discovery",
+        "T1087.004 - Account Discovery: Cloud Account",
+        "T1590.003 - Gather Victim Network Information: Network Trust Dependencies",
+        "T1590: Gather Victim Network Information"
     ],
     "usedInWild": false,
     "incidents": [],
