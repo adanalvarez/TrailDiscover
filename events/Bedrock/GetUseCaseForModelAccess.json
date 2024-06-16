@@ -4,10 +4,19 @@
     "awsService": "Bedrock",
     "description": "Grants permission to retrieve a use case for model access.",
     "mitreAttackTactics": [
-        "TA0007 - Discovery"
+        "TA0007 - Discovery",
+        "TA0009 - Collection",
+        "TA0006 - Credential Access",
+        "TA0010 - Exfiltration"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1078.004: Valid Accounts: Cloud Accounts",
+        "T1082: System Information Discovery",
+        "T1005: Data from Local System",
+        "T1530: Data from Cloud Storage",
+        "T1020: Automated Exfiltration",
+        "T1074.001: Data Staged: Local Data Staging"
     ],
     "usedInWild": true,
     "incidents": [

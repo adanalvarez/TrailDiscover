@@ -4,10 +4,16 @@
     "awsService": "Bedrock",
     "description": "Grants permission to put a use case for model access.",
     "mitreAttackTactics": [
-        "TA0040 - Impact"
+        "TA0040 - Impact",
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation",
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking"
+        "T1496 - Resource Hijacking",
+        "T1078 - Valid Accounts",
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1098 - Account Manipulation"
     ],
     "usedInWild": true,
     "incidents": [

@@ -4,10 +4,13 @@
     "awsService": "Bedrock",
     "description": "Grants permission to get the availability of a foundation model.",
     "mitreAttackTactics": [
+        "TA0043 - Reconaissence",
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1082 - System Information Discovery",
+        "T1590 - Gather Victim Network Information"
     ],
     "usedInWild": true,
     "incidents": [

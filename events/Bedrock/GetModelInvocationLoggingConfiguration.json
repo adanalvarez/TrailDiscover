@@ -4,10 +4,13 @@
     "awsService": "Bedrock",
     "description": "Get the current configuration values for model invocation logging.",
     "mitreAttackTactics": [
+        "TA0043 - Reconaissence",
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1082 - System Information Discovery",
+        "T1592 - Gather Victim Host Information"
     ],
     "usedInWild": true,
     "incidents": [

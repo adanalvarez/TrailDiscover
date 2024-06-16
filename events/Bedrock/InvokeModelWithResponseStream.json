@@ -4,10 +4,18 @@
     "awsService": "Bedrock",
     "description": "Grants permission to invoke the specified Bedrock model to run inference using the input provided in the request body with streaming response.",
     "mitreAttackTactics": [
-        "TA0040 - Impact"
+        "TA0040 - Impact",
+        "TA0002 - Execution",
+        "TA0010 - Exfiltration",
+        "TA0009 - Collection"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking"
+        "T1496 - Resource Hijacking",
+        "T1059 - Command and Scripting Interpreter",
+        "T1020 - Automated Exfiltration",
+        "T1041 - Exfiltration Over C2 Channel",
+        "T1005 - Data from Local System",
+        "T1071.004 - Application Layer Protocol: DNS"
     ],
     "usedInWild": true,
     "incidents": [

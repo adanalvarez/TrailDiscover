@@ -4,10 +4,21 @@
     "awsService": "Bedrock",
     "description": "Grants permission to put entitlement to access a foundation model.",
     "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation",
+        "TA0005 - Defense Evasion",
+        "TA0006 - Credential Access",
         "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking"
+        "T1496 - Resource Hijacking",
+        "T1098 - Account Manipulation",
+        "T1078 - Valid Accounts",
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1059 - Command and Scripting Interpreter",
+        "T1562 - Impair Defenses",
+        "T1078.001 - Valid Accounts: Default Accounts",
+        "T1078.003 - Valid Accounts: Local Accounts"
     ],
     "usedInWild": true,
     "incidents": [

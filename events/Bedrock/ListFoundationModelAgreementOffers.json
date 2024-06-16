@@ -4,10 +4,14 @@
     "awsService": "Bedrock",
     "description": "Grants permission to get a list of foundation model agreement offers.",
     "mitreAttackTactics": [
+        "TA0043 - Reconaissence",
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1591.002 - Gather Victim Org Information: Business Relationships",
+        "T1591 - Gather Victim Org Information",
+        "T1069.003 - Permission Groups Discovery: Cloud Groups"
     ],
     "usedInWild": true,
     "incidents": [

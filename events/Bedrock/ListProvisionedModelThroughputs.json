@@ -4,10 +4,15 @@
     "awsService": "Bedrock",
     "description": "Grants permission to list provisioned model throughputs that you created earlier.",
     "mitreAttackTactics": [
-        "TA0007 - Discovery"
+        "TA0007 - Discovery",
+        "TA0009 - Collection"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1087.004 - Cloud Account",
+        "T1082 - System Information Discovery",
+        "T1530 - Data from Cloud Storage Object",
+        "T1078.004 - Valid Accounts: Cloud Accounts"
     ],
     "usedInWild": true,
     "incidents": [
