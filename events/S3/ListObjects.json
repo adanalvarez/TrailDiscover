@@ -18,6 +18,10 @@
         {
             "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
             "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
         }
     ],
     "researchLinks": [],
