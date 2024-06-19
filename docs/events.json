@@ -1560,7 +1560,7 @@
         "permissions": "https://aws.permissions.cloud/iam/athena#athena-GetQueryResults"
     },
     {
-        "eventName": "UpdateDistribution2020_05_31",
+        "eventName": "UpdateDistribution",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Updates the configuration for a CloudFront distribution.",
@@ -1589,7 +1589,7 @@
         "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-UpdateDistribution"
     },
     {
-        "eventName": "PublishFunction2020_05_31",
+        "eventName": "PublishFunction",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
@@ -1618,7 +1618,7 @@
         "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-PublishFunction"
     },
     {
-        "eventName": "CreateFunction2020_05_31",
+        "eventName": "CreateFunction",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Creates a CloudFront function.",
