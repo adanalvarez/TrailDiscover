@@ -16,6 +16,15 @@
         "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage",
         "T1203 - Exploitation for Client Execution"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

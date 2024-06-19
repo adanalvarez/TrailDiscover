@@ -13,6 +13,15 @@
         "T1562.001 - Impair Defenses: Disable or Modify Tools",
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

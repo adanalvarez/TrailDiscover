@@ -12,6 +12,15 @@
         "T1082 - System Information Discovery",
         "T1592 - Gather Victim Host Information"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

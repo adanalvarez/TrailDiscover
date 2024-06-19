@@ -22,6 +22,15 @@
         "T1027- Obfuscated Files or Information",
         "T1553.002- Subvert Trust Controls - Code Signing"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

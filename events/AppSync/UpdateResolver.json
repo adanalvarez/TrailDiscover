@@ -20,6 +20,15 @@
         "T1562.001 - Impair Defenses: Disable or Modify Tools",
         "T1027 - Obfuscated Files or Information"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

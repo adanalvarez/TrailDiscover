@@ -4,10 +4,7 @@
     "awsService": "ACMPCA",
     "description": "Retrieves a certificate from your private CA or one that has been shared with you.",
     "mitreAttackTactics": [
-        "TA0007 - Discovery",
-        "TA0009 - Collection",
-        "TA0043 - Reconnaissance",
-        "TA0008 - Lateral Movement"
+        "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
         "T1040- Network Sniffing",
@@ -18,6 +15,15 @@
         "T1526- Cloud Service Discovery",
         "T1530- Data from Cloud Storage",
         "T1021.007- Remote Services: Cloud Services"
+    ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
     ],
     "usedInWild": false,
     "incidents": [],

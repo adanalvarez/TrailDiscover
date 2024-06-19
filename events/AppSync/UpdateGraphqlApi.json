@@ -18,6 +18,15 @@
         "T1027 - Obfuscated Files or Information",
         "T1078.004 - Valid Accounts: Privileged Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

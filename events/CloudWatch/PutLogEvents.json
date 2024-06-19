@@ -17,6 +17,15 @@
         "T1029 - Scheduled Transfer",
         "T1036.004 - Masquerading: Masquerade Task or Service"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -13,6 +13,15 @@
         "T1591 - Gather Victim Org Information",
         "T1069.003 - Permission Groups Discovery: Cloud Groups"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

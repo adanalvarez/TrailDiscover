@@ -12,6 +12,15 @@
         "T1046 - Network Service Scanning",
         "T1007 - System Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

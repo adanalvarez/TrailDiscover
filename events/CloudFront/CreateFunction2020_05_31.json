@@ -23,6 +23,15 @@
         "T1008 - Fallback Channels",
         "T1499.003 - Endpoint Denial of Service: Application Exhaustion Flood"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

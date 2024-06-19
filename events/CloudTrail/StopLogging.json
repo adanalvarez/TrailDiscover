@@ -12,6 +12,15 @@
         "T1070 - Indicator Removal",
         "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [
         {

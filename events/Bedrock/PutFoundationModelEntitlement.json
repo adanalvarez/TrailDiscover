@@ -20,6 +20,15 @@
         "T1078.001 - Valid Accounts: Default Accounts",
         "T1078.003 - Valid Accounts: Local Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

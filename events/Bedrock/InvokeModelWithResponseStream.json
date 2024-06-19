@@ -17,6 +17,15 @@
         "T1005 - Data from Local System",
         "T1071.004 - Application Layer Protocol: DNS"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

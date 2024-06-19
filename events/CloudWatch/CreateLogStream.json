@@ -19,6 +19,15 @@
         "T1074.001 Data Staged: Local Data Staging",
         "T1005 Data from Local System"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -12,6 +12,15 @@
         "T1590.003 - Gather Victim Network Information: Network Trust Dependencies",
         "T1590: Gather Victim Network Information"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

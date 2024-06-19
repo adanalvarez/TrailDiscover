@@ -14,6 +14,15 @@
         "T1556 - Modify Authentication Process",
         "T1078.001 - Valid Accounts: Default Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

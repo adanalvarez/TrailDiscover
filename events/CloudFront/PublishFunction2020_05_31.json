@@ -23,6 +23,15 @@
         "T1071 - Application Layer Protocol",
         "T1574 - Hijack Execution Flow"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -21,6 +21,15 @@
         "T1078.002 - Domain Accounts",
         "T1090 - Proxy"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

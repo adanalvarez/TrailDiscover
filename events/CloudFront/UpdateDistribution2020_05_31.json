@@ -23,6 +23,15 @@
         "T1071.001 - Application Layer Protocol: Web Protocols",
         "T1565.002 - Data Manipulation: Transmitted Data Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

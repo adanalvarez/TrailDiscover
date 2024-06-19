@@ -12,6 +12,15 @@
         "T1531: Account Access Removal",
         "T1499: Endpoint Denial of Service"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

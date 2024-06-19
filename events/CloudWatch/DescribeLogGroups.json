@@ -14,6 +14,15 @@
         "T1046 - Network Service Discovery",
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifidTechniques": [
+        {
+            "Technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {
