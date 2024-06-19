@@ -7,7 +7,15 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1526 - Cloud Service Discovery"
+        "T1526 - Cloud Service Discovery",
+        "T1082 - System Information Discovery",
+        "T1518.001 - Software Discovery: Security Software Discovery",
+        "T1005 - Data from Local System",
+        "T1213 - Data from Information Repositories",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1020 - Automated Exfiltration",
+        "T1530 - Data from Cloud Storage Object",
+        "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage"
     ],
     "usedInWild": true,
     "incidents": [
