@@ -1,5 +1,5 @@
 {
-    "eventName": "PublishFunction2020_05_31",
+    "eventName": "PublishFunction",
     "eventSource": "cloudfront.amazonaws.com",
     "awsService": "CloudFront",
     "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
