@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1048 - Exfiltration Over Alternative Protocol"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

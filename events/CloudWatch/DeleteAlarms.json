@@ -14,6 +14,15 @@
         "T1070 - Indicator Removal",
         "T1562.006 - Impair Defenses: Indicator Blocking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

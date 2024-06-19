@@ -11,6 +11,15 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

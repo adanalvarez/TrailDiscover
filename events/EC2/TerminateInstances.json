@@ -11,6 +11,15 @@
         "T1485 - Data Destruction",
         "T1070 - Indicator Removal"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -13,6 +13,15 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1546 - Event Triggered Execution"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -13,6 +13,15 @@
         "T1496 - Resource Hijacking",
         "T1119 - Automated Collection"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

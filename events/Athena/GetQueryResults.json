@@ -17,9 +17,9 @@
     "mitreAttackSubTechniques": [
 
     ],
-    "unverifidTechniques": [
+    "unverifiedMitreAttackTechniques": [
         {
-            "Technique": "",
+            "technique": "",
             "reason": ""
         }
     ],

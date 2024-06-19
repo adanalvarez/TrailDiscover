@@ -10,6 +10,15 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1070 - Indicator Removal"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

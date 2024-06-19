@@ -11,6 +11,15 @@
         "T1098 - Account Manipulation",
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

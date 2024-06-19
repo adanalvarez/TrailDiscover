@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

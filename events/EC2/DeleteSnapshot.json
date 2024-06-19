@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {
