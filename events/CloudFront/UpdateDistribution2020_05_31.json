@@ -1,5 +1,5 @@
 {
-    "eventName": "UpdateDistribution2020_05_31",
+    "eventName": "UpdateDistribution",
     "eventSource": "cloudfront.amazonaws.com",
     "awsService": "CloudFront",
     "description": "Updates the configuration for a CloudFront distribution.",
