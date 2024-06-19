@@ -7,7 +7,12 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1007 - System Service Discovery",
+        "T1018 - Remote System Discovery",
+        "T1078 - Valid Accounts",
+        "T1046 - Network Service Discovery",
+        "T1087 - Account Discovery"
     ],
     "usedInWild": true,
     "incidents": [

@@ -7,7 +7,12 @@
         "TA0004 - Privilege Escalation"
     ],
     "mitreAttackTechniques": [
-        "T1078 - Valid Accounts"
+        "T1078 - Valid Accounts",
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1078.002 - Valid Accounts: Domain Accounts",
+        "T1110 - Brute Force",
+        "T1556 - Modify Authentication Process",
+        "T1078.001 - Valid Accounts: Default Accounts"
     ],
     "usedInWild": false,
     "incidents": [],

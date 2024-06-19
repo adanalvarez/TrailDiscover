@@ -4,10 +4,15 @@
     "awsService": "CloudTrail",
     "description": "Updates trail settings that control what events you are logging, and how to handle log files.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1070 - Indicator Removal",
+        "T1098 - Account Manipulation"
     ],
     "usedInWild": false,
     "incidents": [],

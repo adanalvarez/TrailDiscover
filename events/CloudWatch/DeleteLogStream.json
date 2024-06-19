@@ -4,10 +4,14 @@
     "awsService": "CloudWatchLogs",
     "description": "Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1070 - Indicator Removal",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1485 - Data Destruction"
     ],
     "usedInWild": false,
     "incidents": [],

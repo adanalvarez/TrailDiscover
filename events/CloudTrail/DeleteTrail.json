@@ -4,10 +4,16 @@
     "awsService": "CloudTrail",
     "description": "Deletes a trail.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1070.004 - Indicator Removal on Host: File Deletion",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1485 - Data Destruction",
+        "T1531 - Account Access Removal",
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
     ],
     "usedInWild": false,
     "incidents": [

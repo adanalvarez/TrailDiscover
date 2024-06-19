@@ -7,7 +7,13 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1087.004 - Account Discovery: Cloud Account",
+        "T1057 - Process Discovery",
+        "T1580 - Cloud Infrastructure Discovery",
+        "T1033 - System Owner/User Discovery",
+        "T1078.001 - Valid Accounts: Default Accounts",
+        "T1078.003 - Valid Accounts: Local Accounts"
     ],
     "usedInWild": true,
     "incidents": [

@@ -4,10 +4,20 @@
     "awsService": "CloudWatchLogs",
     "description": "Creates a log stream for the specified log group.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0007 - Discovery",
+        "TA0009 - Collection"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1078.004 Valid Accounts: Cloud Accounts",
+        "T1036.005 Masquerading: Match Legitimate Name or Location",
+        "T1119 Automated Collection",
+        "T1560 Archive Collected Data",
+        "T1078 Valid Accounts",
+        "T1562.001 Impair Defenses: Disable or Modify Tools",
+        "T1074.001 Data Staged: Local Data Staging",
+        "T1005 Data from Local System"
     ],
     "usedInWild": true,
     "incidents": [

@@ -4,10 +4,24 @@
     "awsService": "CloudFront",
     "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
     "mitreAttackTactics": [
-        "TA0009 - Collection"
+        "TA0009 - Collection",
+        "TA0002 - Execution",
+        "TA0003 - Persistence",
+        "TA0005 - Defense Evasion",
+        "TA0011 - Command and Control"
     ],
     "mitreAttackTechniques": [
-        "T1119 - Automated Collection"
+        "T1119 - Automated Collection",
+        "T1609 - Container Administration Command",
+        "T1560 - Archive Collected Data",
+        "T1070 - Indicator Removal on Host",
+        "T1036 - Masquerading",
+        "T1090 - Proxy",
+        "T1102 - Web Service",
+        "T1204 - User Execution",
+        "T1048 - Exfiltration Over Alternative Protocol",
+        "T1071 - Application Layer Protocol",
+        "T1574 - Hijack Execution Flow"
     ],
     "usedInWild": false,
     "incidents": [],

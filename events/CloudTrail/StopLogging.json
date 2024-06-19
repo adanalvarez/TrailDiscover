@@ -7,7 +7,10 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1070 - Indicator Removal",
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
     ],
     "usedInWild": false,
     "incidents": [

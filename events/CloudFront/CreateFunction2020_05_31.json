@@ -4,10 +4,24 @@
     "awsService": "CloudFront",
     "description": "Creates a CloudFront function.",
     "mitreAttackTactics": [
-        "TA0009 - Collection"
+        "TA0009 - Collection",
+        "TA0002 - Execution",
+        "TA0003 - Persistence",
+        "TA0005 - Defense Evasion",
+        "TA0011 - Command and Control"
     ],
     "mitreAttackTechniques": [
-        "T1119 - Automated Collection"
+        "T1119 - Automated Collection",
+        "T1059.007 - Command and Scripting Interpreter: JavaScript",
+        "T1106 - Native API",
+        "T1546 - Event Triggered Execution",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1027 - Obfuscated Files or Information",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1070.004 - Indicator Removal on Host: File Deletion",
+        "T1574 - Hijack Execution Flow",
+        "T1008 - Fallback Channels",
+        "T1499.003 - Endpoint Denial of Service: Application Exhaustion Flood"
     ],
     "usedInWild": false,
     "incidents": [],

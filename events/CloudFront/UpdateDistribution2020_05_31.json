@@ -4,10 +4,24 @@
     "awsService": "CloudFront",
     "description": "Updates the configuration for a CloudFront distribution.",
     "mitreAttackTactics": [
-        "TA0009 - Collection"
+        "TA0009 - Collection",
+        "TA0010 - Exfiltration",
+        "TA0040 - Impact",
+        "TA0005 - Defense Evasion",
+        "TA0011 - Command and Control"
     ],
     "mitreAttackTechniques": [
-        "T1119 - Automated Collection"
+        "T1119 - Automated Collection",
+        "T1070.004 - Indicator Removal on Host: File Deletion",
+        "T1090 - Proxy",
+        "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1560 - Archive Collected Data",
+        "T1497.003 - Virtualization/Sandbox Evasion: Time Based Evasion",
+        "T1568.002 - Dynamic Resolution: Domain Generation Algorithms",
+        "T1095 - Non-Application Layer Protocol",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1565.002 - Data Manipulation: Transmitted Data Manipulation"
     ],
     "usedInWild": false,
     "incidents": [],

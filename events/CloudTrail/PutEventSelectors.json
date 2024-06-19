@@ -4,10 +4,14 @@
     "awsService": "CloudTrail",
     "description": "Configures an event selector or advanced event selectors for your trail.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0005 - Defense Evasion",
+        "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1562 - Impair Defenses",
+        "T1562.001: Impair Defenses: Disable or Modify Tools",
+        "T1070: Indicator Removal",
+        "T1027: Obfuscated Files or Information"
     ],
     "usedInWild": false,
     "incidents": [],
