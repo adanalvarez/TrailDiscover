@@ -14,6 +14,10 @@
         {
             "description": "GotRoot! AWS root Account Takeover",
             "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+        },
+        {
+            "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
         }
     ],
     "researchLinks": [],

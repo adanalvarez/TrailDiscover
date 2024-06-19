@@ -2860,6 +2860,10 @@
             {
                 "description": "GotRoot! AWS root Account Takeover",
                 "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -4001,6 +4005,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -5129,6 +5137,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [
@@ -5430,6 +5442,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -5607,6 +5623,10 @@
             {
                 "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
