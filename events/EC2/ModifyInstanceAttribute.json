@@ -27,6 +27,10 @@
         {
             "description": "User Data Script Persistence",
             "link": "https://hackingthe.cloud/aws/post_exploitation/user_data_script_persistence/"
+        },
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
         }
     ],
     "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts.",
