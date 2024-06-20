@@ -1,5 +1,5 @@
 {
-    "eventName": "CreateFunction2020_05_31",
+    "eventName": "CreateFunction",
     "eventSource": "cloudfront.amazonaws.com",
     "awsService": "CloudFront",
     "description": "Creates a CloudFront function.",

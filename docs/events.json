@@ -1560,7 +1560,7 @@
         "permissions": "https://aws.permissions.cloud/iam/athena#athena-GetQueryResults"
     },
     {
-        "eventName": "UpdateDistribution2020_05_31",
+        "eventName": "UpdateDistribution",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Updates the configuration for a CloudFront distribution.",
@@ -1589,7 +1589,7 @@
         "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-UpdateDistribution"
     },
     {
-        "eventName": "PublishFunction2020_05_31",
+        "eventName": "PublishFunction",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE.",
@@ -1618,7 +1618,7 @@
         "permissions": "https://aws.permissions.cloud/iam/cloudfront#cloudfront-PublishFunction"
     },
     {
-        "eventName": "CreateFunction2020_05_31",
+        "eventName": "CreateFunction",
         "eventSource": "cloudfront.amazonaws.com",
         "awsService": "CloudFront",
         "description": "Creates a CloudFront function.",
@@ -2860,6 +2860,10 @@
             {
                 "description": "GotRoot! AWS root Account Takeover",
                 "link": "https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -4001,6 +4005,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -5129,6 +5137,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [
@@ -5430,6 +5442,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -5607,6 +5623,10 @@
             {
                 "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
             }
         ],
         "researchLinks": [],
@@ -6124,6 +6144,10 @@
             {
                 "description": "User Data Script Persistence",
                 "link": "https://hackingthe.cloud/aws/post_exploitation/user_data_script_persistence/"
+            },
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
             }
         ],
         "securityImplications": "Attackers might use ModifyInstanceAttribute to change configurations of EC2 instances or overwrite the user data of an EC2 instance to have it execute malicious commands when the instance starts.",
@@ -6196,6 +6220,10 @@
             {
                 "description": "How to detect EC2 Serial Console enabled",
                 "link": "https://sysdig.com/blog/ec2-serial-console-enabled/"
+            },
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
             }
         ],
         "securityImplications": "Attackers might use EnableSerialConsoleAccess to enable the serial console access and bypass security group rules and gain access to EC2 instances.",
@@ -6364,6 +6392,10 @@
             {
                 "description": "Executing commands through EC2 user data",
                 "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+            },
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
             }
         ],
         "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands.",
@@ -7112,6 +7144,10 @@
             {
                 "description": "Executing commands through EC2 user data",
                 "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+            },
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
             }
         ],
         "securityImplications": "Attackers might use StopInstances to avoid being detected or to do changes that will be executed when the EC2 is started.",
@@ -7343,7 +7379,12 @@
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
+            }
+        ],
         "securityImplications": "Attackers might use SendSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control.",
         "alerting": [],
         "simulation": [
@@ -8602,6 +8643,10 @@
             {
                 "description": "Run Shell Commands on EC2 with Send Command or Session Manager",
                 "link": "https://hackingthe.cloud/aws/post_exploitation/run_shell_commands_on_ec2/"
+            },
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
             }
         ],
         "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances.",
@@ -8725,6 +8770,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeInstanceInformation"
+    },
+    {
+        "eventName": "ResumeSession",
+        "eventSource": "ssm.amazonaws.com",
+        "awsService": "SSM",
+        "description": "Reconnects a session to a managed node after it has been disconnected.",
+        "mitreAttackTactics": [
+            "TA0008 - Lateral Movement",
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1021 - Remote Services",
+            "T1651 - Cloud Administration Command"
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Attack Paths Into VMs in the Cloud",
+                "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
+            }
+        ],
+        "securityImplications": "Attackers might use ResumeSession to gain unauthorized access to managed instances.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ssm resume-session --session-id TrailDiscoverTarget"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-ResumeSession"
     },
     {
         "eventName": "CreateEmailIdentity",

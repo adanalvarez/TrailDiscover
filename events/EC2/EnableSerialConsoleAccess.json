@@ -29,6 +29,10 @@
         {
             "description": "How to detect EC2 Serial Console enabled",
             "link": "https://sysdig.com/blog/ec2-serial-console-enabled/"
+        },
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
         }
     ],
     "securityImplications": "Attackers might use EnableSerialConsoleAccess to enable the serial console access and bypass security group rules and gain access to EC2 instances.",

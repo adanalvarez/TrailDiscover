@@ -35,6 +35,10 @@
         {
             "description": "Run Shell Commands on EC2 with Send Command or Session Manager",
             "link": "https://hackingthe.cloud/aws/post_exploitation/run_shell_commands_on_ec2/"
+        },
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
         }
     ],
     "securityImplications": "Attackers might use SendCommand to execute malicious commands on managed instances.",
