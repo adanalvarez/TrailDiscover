@@ -4,21 +4,22 @@
     "awsService": "Bedrock",
     "description": "Grants permission to get the availability of a foundation model.",
     "mitreAttackTactics": [
-        "TA0043 - Reconaissence",
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery",
-        "T1082 - System Information Discovery",
-        "T1590 - Gather Victim Network Information"
+        "T1580 - Cloud Infrastructure Discovery"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Querying the availability of foundation models is a form of system information discovery, as it provides insight into the operational aspects of the system."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The GetFoundationModelAvailability call can be used to determine the state and availability of foundation models, which is valuable host information."
         }
     ],
     "usedInWild": true,

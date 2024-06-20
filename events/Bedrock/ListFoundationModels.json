@@ -4,24 +4,34 @@
     "awsService": "Bedrock",
     "description": "Grants permission to list Bedrock foundation models that you can use.",
     "mitreAttackTactics": [
-        "TA0043 - Reconaissence",
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery",
-        "T1087.004 - Account Discovery: Cloud Account",
-        "T1057 - Process Discovery",
-        "T1069.003 - Permission Groups Discovery: Cloud Groups",
-        "T1082 - System Information Discovery",
-        "T1482 - Domain Trust Discovery"
+        "T1580 - Cloud Infrastructure Discovery"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "Listing foundation models can help an adversary understand what cloud resources are available and their configurations"
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Listing foundation models can be a step towards understanding the processes and operations running within the cloud environment."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Identifying which models are accessible can reveal information about permission groups and roles within the cloud environment"
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Listing foundation models helps in gathering detailed system information."
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "Adversaries may list foundation models to understand the trust relationships and dependencies between different cloud resources."
         }
     ],
     "usedInWild": true,

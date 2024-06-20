@@ -4,29 +4,30 @@
     "awsService": "Bedrock",
     "description": "Grants permission to put entitlement to access a foundation model.",
     "mitreAttackTactics": [
-        "TA0003 - Persistence",
-        "TA0004 - Privilege Escalation",
-        "TA0005 - Defense Evasion",
-        "TA0006 - Credential Access",
         "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking",
-        "T1098 - Account Manipulation",
-        "T1078 - Valid Accounts",
-        "T1078.004 - Valid Accounts: Cloud Accounts",
-        "T1059 - Command and Scripting Interpreter",
-        "T1562 - Impair Defenses",
-        "T1078.001 - Valid Accounts: Default Accounts",
-        "T1078.003 - Valid Accounts: Local Accounts"
+        "T1496 - Resource Hijacking"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
+            "technique": "T1098 - Account Manipulation",
             "reason": ""
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Authorized accounts might be modified or managed to maintain persistent access to foundational models. Cloud accounts could be granted additional entitlements, leading to unauthorized access or privileges within the cloud environment. Access might be granted to default accounts, which could be exploited if not properly managed. Local accounts could be granted access, potentially leading to unauthorized activities within the environment."
+        },
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "If entitlements allow execution of scripts or code within the foundational model environment, this technique could be relevant for executing unauthorized actions."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Adjusting entitlements could be used to weaken security controls and mechanisms, aiding in defense evasion."
         }
     ],
     "usedInWild": true,

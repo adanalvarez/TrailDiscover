@@ -4,21 +4,18 @@
     "awsService": "Bedrock",
     "description": "Grants permission to create a new foundation model agreement.",
     "mitreAttackTactics": [
-        "TA0040 - Impact",
-        "TA0003 - Persistence",
-        "TA0004 - Privilege Escalation"
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking",
-        "T1098 - Account Manipulation"
+        "T1496 - Resource Hijacking"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The CreateFoundationModelAgreement API call allows users to create or modify agreements, which can be used to manipulate account permissions. Attackers can create agreements with elevated privileges or modify existing ones to gain unauthorized access or escalate privileges."
         }
     ],
     "usedInWild": true,

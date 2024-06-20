@@ -37,7 +37,7 @@
         },
         {
             "technique": "T1090 - Proxy",
-            "reason": ""
+            "reason": "Attackers can use API keys to route their malicious traffic through a proxy, hiding their true origin and bypassing security measures."
         }
     ],
     "usedInWild": false,

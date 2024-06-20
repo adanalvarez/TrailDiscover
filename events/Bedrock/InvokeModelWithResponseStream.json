@@ -4,26 +4,34 @@
     "awsService": "Bedrock",
     "description": "Grants permission to invoke the specified Bedrock model to run inference using the input provided in the request body with streaming response.",
     "mitreAttackTactics": [
-        "TA0040 - Impact",
-        "TA0002 - Execution",
-        "TA0010 - Exfiltration",
-        "TA0009 - Collection"
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking",
-        "T1059 - Command and Scripting Interpreter",
-        "T1020 - Automated Exfiltration",
-        "T1041 - Exfiltration Over C2 Channel",
-        "T1005 - Data from Local System",
-        "T1071.004 - Application Layer Protocol: DNS"
+        "T1496 - Resource Hijacking"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "If the model invocation can execute arbitrary commands or scripts through the input data, this technique applies."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The streaming response can be used to automatically exfiltrate data as it is processed by the model."
+        },
+        {
+            "technique": "T1041 - Exfiltration Over C2 Channel",
+            "reason": "The streaming response feature can be exploited to send sensitive data back to an attacker over an established C2 channel."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "If the Bedrock model processes local system data, this technique covers the collection of that data via the API."
+        },
+        {
+            "technique": "T1071.004 - Application Layer Protocol: DNS",
+            "reason": "DNS can be used for exfiltration or command and control if the model’s streaming response can be encoded into DNS queries/responses."
         }
     ],
     "usedInWild": true,

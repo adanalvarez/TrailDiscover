@@ -7,18 +7,19 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1526 - Cloud Service Discovery",
-        "T1087.004 - Account Discovery: Cloud Account",
-        "T1590.003 - Gather Victim Network Information: Network Trust Dependencies",
-        "T1590: Gather Victim Network Information"
+        "T1526 - Cloud Service Discovery"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "The GetIntrospectionSchema API call can be used to gather detailed information about the structure of an AWS AppSync GraphQL schema. This can help in identifying user roles, permissions, and accounts associated with the schema in this AWS account."
+        },
+        {
+            "technique": "T1590: Gather Victim Network Information",
+            "reason": "Through the introspection schema, an attacker can identify dependencies and integrations with other network services or external APIs, revealing trust relationships and potential attack vectors. By retrieving the introspection schema, an attacker can map out the network structure as exposed by the GraphQL API, including services, endpoints, and connections within the AWS environment."
         }
     ],
     "usedInWild": false,
