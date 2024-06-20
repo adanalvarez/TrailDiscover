@@ -22,6 +22,10 @@
         {
             "description": "Executing commands through EC2 user data",
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/executing-commands-through-user-data/"
+        },
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
         }
     ],
     "securityImplications": "Attackers might use StartInstances to reactivate dormant EC2 instances or after having modified the user data for execution of commands.",

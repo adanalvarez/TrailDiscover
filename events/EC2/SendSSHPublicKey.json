@@ -20,7 +20,12 @@
             "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
+        }
+    ],
     "securityImplications": "Attackers might use SendSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control.",
     "alerting": [],
     "simulation": [

@@ -1,0 +1,31 @@
+{
+    "eventName": "ResumeSession",
+    "eventSource": "ssm.amazonaws.com",
+    "awsService": "SSM",
+    "description": "Reconnects a session to a managed node after it has been disconnected.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement",
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services",
+        "T1651 - Cloud Administration Command"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
+        }
+    ],
+    "securityImplications": "Attackers might use ResumeSession to gain unauthorized access to managed instances.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm resume-session --session-id TrailDiscoverTarget"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-ResumeSession"
+}
