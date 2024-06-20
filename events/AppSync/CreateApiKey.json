@@ -5,28 +5,38 @@
     "description": "Creates a unique key that you can distribute to clients who invoke your API.",
     "mitreAttackTactics": [
         "TA0005 - Defense Evasion",
-        "TA0003 - Persistence",
-        "TA0004 - Privilege Escalation",
-        "TA0006 - Credential Access"
+        "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure",
-        "T1556 - Modify Authentication Process",
-        "T1078 - Valid Accounts",
-        "T1056.004 - Credential API Hooking",
-        "T1098 - Account Manipulation",
-        "T1531 - Account Access Removal",
-        "T1070.004 - File Deletion",
-        "T1550.001 - Application Access Token",
-        "T1078.002 - Domain Accounts",
-        "T1090 - Proxy"
+        "T1556 - Modify Authentication Process"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
+            "technique": "T1078 - Valid Accounts",
+            "reason": "API keys are a form of credentials that attackers can use to gain and maintain access to cloud services."
+        },
+        {
+            "technique": "T1056.004 - Credential API Hooking",
+            "reason": "Attackers may hook into the API key creation process to intercept and use these credentials for unauthorized access."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers may manipulate API keys to alter account permissions and settings, maintaining persistence and access."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "API keys can be used to remove legitimate accounts, thereby maintaining persistence and disrupting normal operations."
+        },
+        {
+            "technique": "T1550.001 - Use Alternate Authentication Material: Application Access Token",
+            "reason": "API keys serve as alternate authentication material, in this case as application access tokens to access AppSync APIs."
+        },
+        {
+            "technique": "T1090 - Proxy",
             "reason": ""
         }
     ],
