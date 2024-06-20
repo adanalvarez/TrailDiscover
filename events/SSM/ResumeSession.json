@@ -11,6 +11,15 @@
         "T1021 - Remote Services",
         "T1651 - Cloud Administration Command"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [
