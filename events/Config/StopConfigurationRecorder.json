@@ -7,19 +7,23 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools",
-        "T1485 - Data Destruction",
-        "T1489 - Service Stop",
-        "T1531 - Account Access Removal"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1485 - Data Destruction",
+            "reason": "By stopping the configuration recorder, an attacker can effectively disrupt the ability to track and monitor changes, which can be a precursor to or part of a broader data destruction strategy."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Stopping a critical service like the configuration recorder can be part of a larger strategy to disrupt services, resulting in a loss of visibility and monitoring, hence impacting the organization."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "While this technique typically involves removing access to accounts, stopping the configuration recorder can similarly disrupt access by removing the ability to monitor and track account activities."
         }
     ],
     "usedInWild": false,

@@ -4,23 +4,26 @@
     "awsService": "CloudWatchLogs",
     "description": "Deletes the specified log group and permanently deletes all the archived log events associated with the log group.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion",
-        "TA0040 - Impact"
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1070 - Indicator Removal",
-        "T1485 - Data Destruction",
-        "T1565.001 - Data Manipulation: Stored Data Manipulation",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting log groups removes evidence of activities from log files, thus covering tracks and aiding in evading detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The deletion of log groups results in the permanent destruction of log data, aligning with this technique which involves the removal or destruction of data."
+        },
+        {
+            "technique": "T1565.001 - Data Manipulation: Stored Data Manipulation",
+            "reason": "The deletion of log groups can be considered a form of data manipulation, as it involves removing stored data, impacting its integrity and availability."
         }
     ],
     "usedInWild": false,

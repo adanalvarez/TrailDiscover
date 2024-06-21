@@ -4,28 +4,42 @@
     "awsService": "CloudWatchLogs",
     "description": "Creates a log stream for the specified log group.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion",
-        "TA0007 - Discovery",
-        "TA0009 - Collection"
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1078.004 Valid Accounts: Cloud Accounts",
-        "T1036.005 Masquerading: Match Legitimate Name or Location",
-        "T1119 Automated Collection",
-        "T1560 Archive Collected Data",
-        "T1078 Valid Accounts",
-        "T1562.001 Impair Defenses: Disable or Modify Tools",
-        "T1074.001 Data Staged: Local Data Staging",
-        "T1005 Data from Local System"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers might leverage valid cloud accounts to create log streams, maintaining persistent access and monitoring activities without raising suspicion."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Creating log streams with names that mimic legitimate applications or services helps attackers blend in with normal operations and evade detection."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "Log streams can be used to automate the collection of log data from various sources within the cloud environment, aiding attackers in data aggregation."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Log streams can be used to systematically archive collected data, which can later be accessed or exfiltrated."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers use valid accounts to create and manage log streams as part of a strategy to maintain persistence and monitor activities without raising suspicion"
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Using log streams to stage data before it is exfiltrated, organizing it for easy access and transfer."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "Collecting data from local systems and logging it into cloud log streams for analysis helps in understanding the local system's behavior and activities."
         }
     ],
     "usedInWild": true,

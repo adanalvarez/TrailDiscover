@@ -7,19 +7,23 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1531: Account Access Removal",
-        "T1070.004: Indicator Removal on Host: File Deletion",
-        "T1485: Data Destruction",
-        "T1562.001: Impair Defenses: Disable or Modify Tools"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting a delivery channel might be part of actions to remove visibility and audit logs associated with account activities."
+        },
+        {
+            "technique": "T1070 - Indicator Removal on Host",
+            "reason": "By deleting the delivery channel, logs that might contain evidence of malicious activities are removed."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting the delivery channel could be part of a broader tactic to destroy data, including configuration logs that are crucial for incident response and auditing."
         }
     ],
     "usedInWild": false,

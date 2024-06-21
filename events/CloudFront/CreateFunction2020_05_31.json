@@ -4,32 +4,54 @@
     "awsService": "CloudFront",
     "description": "Creates a CloudFront function.",
     "mitreAttackTactics": [
-        "TA0009 - Collection",
-        "TA0002 - Execution",
-        "TA0003 - Persistence",
-        "TA0005 - Defense Evasion",
-        "TA0011 - Command and Control"
+        "TA0009 - Collection"
     ],
     "mitreAttackTechniques": [
-        "T1119 - Automated Collection",
-        "T1059.007 - Command and Scripting Interpreter: JavaScript",
-        "T1106 - Native API",
-        "T1546 - Event Triggered Execution",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools",
-        "T1027 - Obfuscated Files or Information",
-        "T1071.001 - Application Layer Protocol: Web Protocols",
-        "T1070.004 - Indicator Removal on Host: File Deletion",
-        "T1574 - Hijack Execution Flow",
-        "T1008 - Fallback Channels",
-        "T1499.003 - Endpoint Denial of Service: Application Exhaustion Flood"
+        "T1119 - Automated Collection"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "CloudFront functions are written in JavaScript, enabling the execution of scripts."
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "The creation of a CloudFront function involves direct interaction with AWS APIs, potentially leveraging native functionalities."
+        },
+        {
+            "technique": "T1546 - Event Triggered Execution",
+            "reason": "A CloudFront function can be set to trigger on specific events, establishing persistence."
+        },
+        {
+            "technique": "T1562.001 - Impair Defenses",
+            "reason": "CloudFront functions can modify requests and responses, which can be used to evade detection tools."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The JavaScript code within CloudFront functions can be obfuscated to hide malicious intent."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "CloudFront functions can communicate using web protocols, facilitating command and control."
+        },
+        {
+            "technique": "T1070 - Indicator Removal on Host",
+            "reason": "Functions can be used to remove or alter log files, helping in defense evasion."
+        },
+        {
+            "technique": "T1574 - Hijack Execution Flow",
+            "reason": "CloudFront functions manipulate the flow of requests, which can be seen as hijacking the execution flow within the cloud infrastructure."
+        },
+        {
+            "technique": "T1008 - Fallback Channels",
+            "reason": "CloudFront functions can be designed to use fallback channels for command and control if the primary method is disrupted."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Improperly configured or malicious CloudFront functions can cause application exhaustion, leading to denial-of-service attacks."
         }
     ],
     "usedInWild": false,

@@ -4,22 +4,22 @@
     "awsService": "CloudWatchLogs",
     "description": "Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion",
-        "TA0040 - Impact"
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1070 - Indicator Removal",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools",
-        "T1485 - Data Destruction"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "The DeleteLogStream API call deletes log streams, effectively removing indicators from logs. This technique aligns with the broader tactic of removing evidence to evade detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The permanent deletion of archived log events constitutes data destruction, impacting the organization’s ability to conduct forensic analysis and understand the scope of an attack."
         }
     ],
     "usedInWild": false,

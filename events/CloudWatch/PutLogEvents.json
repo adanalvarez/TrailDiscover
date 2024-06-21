@@ -7,23 +7,43 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1027 - Obfuscated Files or Information",
-        "T1074 - Data Staged",
-        "T1005 - Data from Local System",
-        "T1071 - Application Layer Protocol",
-        "T1119 - Automated Collection",
-        "T1213 - Data from Information Repositories",
-        "T1029 - Scheduled Transfer",
-        "T1036.004 - Masquerading: Masquerade Task or Service"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers may obfuscate the content of logs or include obfuscated commands in logs to avoid detection and analysis."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Logs might be staged in a certain format before being uploaded, allowing attackers to organize and structure the data for further analysis or exfiltration."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "Attackers may collect local log data from compromised systems to upload and analyze it in CloudWatchLogs."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The use of AWS APIs like PutLogEvents to communicate can serve as a method to transfer data stealthily."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "Automated tools or scripts could be used to collect and upload log data regularly to CloudWatchLogs for monitoring or further use."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "Logs from various information repositories might be collected and uploaded to CloudWatchLogs to facilitate data aggregation and analysis."
+        },
+        {
+            "technique": "T1029 - Scheduled Transfer",
+            "reason": "Log uploads could be scheduled at specific intervals to CloudWatchLogs to ensure consistent data transfer."
+        },
+        {
+            "technique": "T1036.004 - Masquerading",
+            "reason": "An attacker might disguise malicious activities or uploads as legitimate CloudWatch log entries to evade detection."
         }
     ],
     "usedInWild": true,

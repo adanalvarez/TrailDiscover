@@ -4,22 +4,30 @@
     "awsService": "CloudWatchLogs",
     "description": "Uploads a batch of log events to the specified log stream.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion",
-        "TA0009 - Collection"
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1560 - Archive Collected Data",
-        "T1005 - Data from Local System",
-        "T1102 - Web Service"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "The attacker uses PutLogEvents to upload collected data to CloudWatchLogs for archiving and later retrieval."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The attacker collects data from the compromised system and uses PutLogEvents to store this data in CloudWatchLogs."
+        },
+        {
+            "technique": "T1102 - Web Service",
+            "reason": "The attacker uses PutLogEvents to upload sensitive data to CloudWatchLogs, which can then be accessed remotely as part of their command and control strategy."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "The attacker stages collected data on the local system and then uses PutLogEvents to upload it to CloudWatchLogs for further use or exfiltration."
         }
     ],
     "usedInWild": true,

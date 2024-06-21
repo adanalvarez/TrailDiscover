@@ -4,24 +4,27 @@
     "awsService": "CloudTrail",
     "description": "Deletes a trail.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion",
-        "TA0040 - Impact"
+        "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1070.004 - Indicator Removal on Host: File Deletion",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools",
-        "T1485 - Data Destruction",
-        "T1531 - Account Access Removal",
-        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal on Host",
+            "reason": "Deleting a CloudTrail trail can be seen as an attempt to remove logs that could be used to detect malicious activity, thereby evading detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting the CloudTrail trail results in the destruction of important log data, which can impact the ability to investigate and respond to incidents."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "While not directly removing account access, deleting the trail can be part of broader attempts to conceal actions taken against user accounts, hindering detection and response."
         }
     ],
     "usedInWild": false,

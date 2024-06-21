@@ -7,20 +7,24 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses",
-        "T1562.001 - Impair Defenses: Disable or Modify Tools",
-        "T1485 - Data Destruction",
-        "T1489 - Service Stop",
-        "T1070 - Indicator Removal",
-        "T1562.006 - Impair Defenses: Indicator Blocking"
+        "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1562.006 - Impair Defenses: Indicator Blocking"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting alarms can be part of a broader strategy to destroy or disrupt data by removing key monitoring and alert mechanisms."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "By deleting alarms, an attacker can effectively stop the alerting service from functioning as expected, similar to stopping a service"
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting alarms can be seen as removing indicators of potential issues or past activities, which is a broader form of indicator removal than just file deletion."
         }
     ],
     "usedInWild": false,

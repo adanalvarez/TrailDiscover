@@ -4,31 +4,50 @@
     "awsService": "CloudTrail",
     "description": "Looks up management events or CloudTrail Insights events that are captured by CloudTrail.",
     "mitreAttackTactics": [
-        "TA0007 - Discovery",
-        "TA0006 - Credential Access",
-        "TA0005 - Defense Evasion",
-        "TA0001 - Initial Access"
+        "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1654 - Log Enumeration",
-        "T1087.004 - Account Discovery: Cloud Account",
-        "T1530 - Data from Cloud Storage",
-        "T1078 - Valid Accounts",
-        "T1033 - System Owner/User Discovery",
-        "T1078.004 - Valid Accounts: Cloud Accounts",
-        "T1580 - Cloud Infrastructure Discovery",
-        "T1020 - Automated Exfiltration",
-        "T1560 - Archive Collected Data",
-        "T1057 - Process Discovery",
-        "T1202 - Indirect Command Execution"
+        "T1654 - Log Enumeration"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "The LookupEvents API call can be used to identify information about AWS cloud accounts, potentially revealing new or unused accounts that can be targeted."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "By looking up events, attackers can identify access patterns or sensitive data locations within cloud storage, facilitating data collection or exfiltration."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": " If attackers are trying to access accounts, LookupEvents can help them discover which accounts are being used, aiding in the identification of valid credentials. By using LookupEvents, attackers can gain insights into which accounts have been accessed, helping them target specific accounts for compromise."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Discovering user activities and patterns can help attackers understand who owns or uses specific systems, making it easier to target high-value accounts."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "LookupEvents can reveal information about the cloud infrastructure, including services and resources used within the environment."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": " By understanding event patterns and data flows, attackers can automate the exfiltration of data from the cloud environment."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Identifying how data is stored and accessed can inform attackers on how to archive or move collected data within the cloud environment."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Attackers can use LookupEvents to see which processes or applications are being invoked, gaining insight into the operational environment."
+        },
+        {
+            "technique": "T1202 - Indirect Command Execution",
+            "reason": "LookupEvents can help attackers identify how commands are being executed indirectly through AWS services, aiding in further exploitation."
         }
     ],
     "usedInWild": true,

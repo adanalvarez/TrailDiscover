@@ -7,23 +7,43 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1526 - Cloud Service Discovery",
-        "T1082 - System Information Discovery",
-        "T1518.001 - Software Discovery: Security Software Discovery",
-        "T1005 - Data from Local System",
-        "T1213 - Data from Information Repositories",
-        "T1071.001 - Application Layer Protocol: Web Protocols",
-        "T1020 - Automated Exfiltration",
-        "T1530 - Data from Cloud Storage Object",
-        "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage"
+        "T1526 - Cloud Service Discovery"
     ],
     "mitreAttackSubTechniques": [
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The attacker calls the GetCostAndUsage API to gather detailed usage information about the AWS resources being utilized. By analyzing the cost and usage data, the attacker can infer details about the types of services, their usage patterns, and potentially the structure of the environment."
+        },
+        {
+            "technique": "T1518 - Software Discovery",
+            "reason": "By reviewing the cost and usage metrics, the attacker identifies expenditures related to security services (e.g., GuardDuty, CloudTrail). This information helps the attacker understand the security posture and tools in use, potentially avoiding or disabling them during an attack."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The attacker retrieves detailed billing and usage reports using the GetCostAndUsage API. This sensitive information is then stored locally for further analysis or for planning the next stages of an attack."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "The attacker uses the GetCostAndUsage API to access billing and usage metrics stored in the AWS CostExplorer service. This data is collected to understand the financial and resource allocation details of the target environment."
+        },
+        {
+            "technique": "T1071.001 - Application Layer Protocol: Web Protocols",
+            "reason": "The attacker uses web protocols (e.g., HTTPS) to interact with the CostExplorer service and retrieve cost and usage metrics. The data collected is then sent over the web protocol to a remote server controlled by the attacker."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The attacker scripts the retrieval of cost and usage metrics using the GetCostAndUsage API. This script regularly exfiltrates data, providing continuous updates to the attacker on the victim's cloud usage patterns."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "The attacker stores the retrieved cost and usage data in a cloud storage object (e.g., S3 bucket). This stored data is later accessed or transferred to the attacker's own environment for further analysis or sale."
+        },
+        {
+            "technique": "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+            "reason": "The attacker exfiltrates the cost and usage data to an external cloud storage service (e.g., an S3 bucket in a different AWS account). This exfiltrated data can then be accessed by the attacker from their own environment for further malicious activities."
         }
     ],
     "usedInWild": true,
