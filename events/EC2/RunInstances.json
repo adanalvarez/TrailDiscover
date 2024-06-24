@@ -13,6 +13,15 @@
         "T1496 - Resource Hijacking",
         "T1021 - Remote Services"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

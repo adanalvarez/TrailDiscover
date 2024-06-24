@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "The DeleteLogStream API call deletes log streams, effectively removing indicators from logs. This technique aligns with the broader tactic of removing evidence to evade detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The permanent deletion of archived log events constitutes data destruction, impacting the organization’s ability to conduct forensic analysis and understand the scope of an attack."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [
