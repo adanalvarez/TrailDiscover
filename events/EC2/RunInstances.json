@@ -18,8 +18,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1133 - External Remote Services",
+            "reason": "Instances can be accessed and controlled remotely, facilitating initial access and persistent control over the cloud environment through remote services."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Launching instances directly modifies the cloud compute infrastructure, which can be leveraged by adversaries to create a foothold, evade defenses, or escalate privileges."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Instances launched can be used to transfer malicious tools into the cloud environment, supporting various attack strategies. This is especally true if the instance is initiated with an malicious image."
+        },
+        {
+            "technique": "T1570 - Lateral Tool Transfer",
+            "reason": "New instances can facilitate the lateral movement of tools and malware across the cloud infrastructure, aiding in broader attack campaigns."
         }
     ],
     "usedInWild": true,

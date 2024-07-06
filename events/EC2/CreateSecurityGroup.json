@@ -12,12 +12,25 @@
         "T1021 - Remote Services"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1021.001 - Remote Services: Remote Desktop Protocol",
+        "T1021.004 - Remote Services: SSH"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By creating or modifying security group rules, adversaries can manipulate the flow of network traffic to bypass security monitoring tools, which aids in defense evasion."
+        },
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "Adversaries can use security groups to selectively allow or block network traffic, enabling them to sniff the traffic that is allowed through, potentially gathering sensitive information."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "y configuring security groups under seemingly legitimate purposes while actually facilitating malicious activities, adversaries can use this to disguise their network traffic and actions."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Adversaries may configure security groups to specifically allow traffic types that can cause application layer exhaustion, effectively using this method to flood systems with requests that exhaust resources and lead to service disruption."
         }
     ],
     "usedInWild": true,

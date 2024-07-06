@@ -10,12 +10,32 @@
         "T1098 - Account Manipulation"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1098.001 - Account Manipulation: Additional Cloud Credentials"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The creation of a new key pair can facilitate unauthorized access to cloud accounts if an attacker obtains the private key, allowing them to log in and perform actions within the compromised account. By creating a new key pair, attackers can establish valid accounts that can be used to maintain access and evade detection, as the access looks legitimate. Similar to cloud accounts, valid local accounts can be exploited if the attacker uses the key pair to gain access to specific instances or services within the local environment. If the key pair is used to authenticate to domain accounts within the cloud environment, it can provide attackers with persistent access to those accounts, facilitating further malicious activities."
+        },
+        {
+            "technique": "T1562 - Impair Defense",
+            "reason": "An attacker with a newly created key pair might use it to disable security tools or modify settings within the cloud environment to avoid detection and maintain persistence."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "The private key returned is unencrypted, which poses a risk if intercepted or improperly stored, leading to potential credential exposure. The private key might be stored in files within the cloud instances, which could be exploited by an attacker to gain unauthorized access."
+        },
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "If the private key is transmitted over the network in plaintext, it can be intercepted by an attacker, leading to credential access."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "The key pair might be stored in cloud storage, which, if not properly secured, can be accessed by attackers to retrieve the private key."
+        },
+        {
+            "technique": "T1212 - Exploitation for Credential Access",
+            "reason": "An attacker might exploit the creation and handling of key pairs to gain access to credentials if there are vulnerabilities or misconfigurations in how the keys are managed and stored."
         }
     ],
     "usedInWild": true,

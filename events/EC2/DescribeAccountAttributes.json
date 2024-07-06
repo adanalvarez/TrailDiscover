@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By describing the account attributes, an adversary can gather information about the AWS environment, such as supported platforms, EC2 limitations, and default settings, which aids in understanding the overall cloud infrastructure."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Understanding the maximum number of security groups that can be assigned to a network interface can help an adversary in identifying the possible scope and structure of permissions within the account."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "his technique is relevant as it involves obtaining information about the cloud services and configurations, such as the maximum number of instances and Elastic IP addresses, supported platforms, and default VPC ID"
+        },
+        {
+            "technique": "T1538 - Cloud Service Dashboard",
+            "reason": "Accessing the account attributes via the API is akin to viewing settings in the cloud service dashboard, providing a view into the configurations and limitations of the AWS environment."
         }
     ],
     "usedInWild": true,

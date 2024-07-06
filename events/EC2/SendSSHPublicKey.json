@@ -10,12 +10,28 @@
         "T1021 - Remote Services"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1021.004 - Remote Services: SSH"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1021 - Remote Services",
+            "reason": "This technique covers the use of SSH for remote access to systems, aligning directly with the purpose of the API call."
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "Pushing a new SSH key can be seen as creating a new means of access for a specific user, akin to account creation."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "The API call modifies the authentication state of an EC2 instance, part of cloud compute infrastructure."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Pushing a new key could be used to temporarily bypass defenses or monitoring on the instance."
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "Exploitation of Remote Services involves taking advantage of vulnerabilities, misconfigurations, or weaknesses in remote services to gain unauthorized access. In the context of the SendSSHPublicKey API call, an adversary can exploit this service by pushing their SSH public key to an EC2 instance, thereby gaining remote access to the instance without proper authorization."
         }
     ],
     "usedInWild": true,

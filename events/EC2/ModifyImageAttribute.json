@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Modifying AMI launch permissions could allow an attacker to grant additional cloud accounts the ability to launch instances with the compromised AMI."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adjusting launch permissions can be a method for attackers to use or create valid cloud accounts to maintain persistent access to instances based on the modified AMI."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By controlling who can launch the AMI, attackers can ensure that their tools embedded in the AMI are not easily discovered or disabled by defensive mechanisms."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Changing launch permissions to grant attackers access to instances where they can execute credential dumping tools."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "If the AMI is launched by specific users, it could enable the attacker to move laterally by exploiting remote services and admin privileges."
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "Modified AMI might include scripts or tools that leverage native AWS APIs for continued access and evasion."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Attackers could use the modified launch permissions to create snapshots of instances running the AMI for data exfiltration or further exploitation."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "By modifying the AMI description, attackers can disguise malicious activities under benign-sounding descriptions to evade detection."
         }
     ],
     "usedInWild": false,

@@ -10,12 +10,25 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001: Impair Defenses - Disable or Modify Tools",
+        "T1562.004: Impair Defenses - Disable or Modify System Firewall"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers with valid cloud accounts can use legitimate API calls to delete network ACL entries, making it harder to detect malicious activities as they blend with regular operations."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "This technique involves manipulating account configurations, such as network ACLs, to remove or alter security controls. Deleting specific entries can open paths for unauthorized activities."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting network ACL entries could be part of an attack to disrupt services and remove access to accounts, affecting the availability of resources."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "By deleting critical network ACL entries, an attacker can disrupt or stop essential services by either blocking required traffic or allowing malicious traffic, leading to a service interruption"
         }
     ],
     "usedInWild": false,

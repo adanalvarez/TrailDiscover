@@ -12,12 +12,36 @@
         "T1070 - Indicator Removal"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1070.004 - Indicator Removal on Host: File Deletion"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1489 - Service Stop",
+            "reason": "Terminating instances disrupts the availability of services hosted on those instances."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Terminating instances can remove defensive tools installed on those instances"
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Attackers might terminate instances to free up resources for other malicious activities."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The TerminateInstances API call can be a form of account manipulation when an attacker uses it to interfere with the normal operations of an account. By terminating instances, an attacker can disrupt services, remove evidence of their activities, and create obstacles for account recovery. This manipulation ensures that the attacker maintains control over the account’s activities and resources."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Terminating critical instances can be a form of denial of service against specific endpoints or applications."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "If instance termination leads to data loss or corruption, it can be considered a form of data manipulation."
+        },
+        {
+            "technique": "T1488 - Disk Wipe",
+            "reason": "Terminating an instance with attached EBS volumes may result in wiping the data on those volumes if they are deleted as part of the termination process"
         }
     ],
     "usedInWild": true,

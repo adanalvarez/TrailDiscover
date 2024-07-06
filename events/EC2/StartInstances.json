@@ -16,8 +16,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1036 - Masquerading",
+            "reason": "Adversaries could rename stopped instances to appear legitimate and start them without raising alarms."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Attackers might schedule tasks to automatically start stopped instances at certain times to execute malicious actions"
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Once the instance is started, adversaries could transfer tools and malware to the instance for execution"
+        },
+        {
+            "technique": "T1219 - Remote Access Software",
+            "reason": "Adversaries might start instances that have remote access tools installed to regain control over the environment."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Starting instances can impair defenses by creating new workloads that may not be monitored by existing security tools, enabling attackers to perform malicious activities without detection."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Attackers can directly use the StartInstances API call to manipulate the state of instances, aiding in persistence and execution of tasks."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Starting an instance can be used to stage data locally before exfiltration."
         }
     ],
     "usedInWild": true,

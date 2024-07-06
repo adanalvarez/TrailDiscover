@@ -14,8 +14,44 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By creating a Traffic Mirror session, an adversary can passively collect data on the network, capturing traffic to gather sensitive information."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Traffic Mirror sessions can be used to monitor application layer protocols to understand communication patterns"
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The mirrored traffic could be sent to an external system for automated analysis and potential exfiltration of data."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "In the later stages of an attack, traffic mirrored sessions might help disguise malicious traffic by blending it with legitimate traffic, by using already learnt traffic patterns, aiding in evasion of detection"
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Analyzing the mirrored traffic can provide information on remote systems, including their IP addresses and services, aiding in further discovery."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "raffic Mirror can be utilized to capture and analyze traffic routed through proxy servers, identifying potential points of interest for further compromise."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "Automating the creation of Traffic Mirror sessions allows for continuous data collection without manual intervention"
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "Traffic Mirror sessions could capture data from repositories by monitoring traffic related to repository access"
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Adversaries can use traffic mirroring to collect and then archive large amounts of network traffic for later analysis or exfiltration."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Monitoring mirrored traffic can reveal details about network connections on systems, such as active connections, protocols used, and the nature of the traffic."
         }
     ],
     "usedInWild": false,

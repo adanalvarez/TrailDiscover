@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1538 - Cloud Service Dashboard",
+            "reason": "Accessing configuration information through API calls to understand settings."
         }
     ],
     "usedInWild": true,

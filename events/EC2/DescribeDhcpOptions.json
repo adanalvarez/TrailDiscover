@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Attackers might archive information gathered from the DHCP options for later analysis or use, aiding in the evasion of immediate detection."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Describing DHCP options is directly related to understanding network configurations and connections within the AWS environment"
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Attackers might stage data related to DHCP options for later exfiltration, which can be part of a broader data exfiltration strategy"
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The DHCP options can reveal information about DNS servers, domain names, NTP servers, and other network configurations, aiding in network discovery"
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Describing DHCP options can help attackers discover remote systems within the network, providing a map of targets for lateral movement."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Understanding DHCP options might reveal information about the system owners or users, helping attackers tailor their strategies for further exploitation."
         }
     ],
     "usedInWild": true,

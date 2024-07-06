@@ -14,8 +14,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By configuring outbound rules to specific destinations, an attacker can redirect traffic for network sniffing."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Attackers can use specific egress rules to allow communication over commonly used application layer protocols."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Attackers can set up egress rules to exfiltrate staged data through approved channels."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "By setting egress rules, attackers can allow outbound traffic for remote desktop connections, facilitating lateral movement."
+        },
+        {
+            "technique": "T1095 - Non-Application Layer Protocol",
+            "reason": "Attackers might configure rules to allow exfiltration using non-standard protocols."
+        },
+        {
+            "technique": "T1571 - Non-Standard Port",
+            "reason": "By authorizing specific outbound ports, attackers can use non-standard ports for communication to evade defenses."
+        },
+        {
+            "technique": "T1599 - Network Boundary Bridging",
+            "reason": "Attackers can use egress rules to bridge network boundaries, aiding lateral movement or exfiltration"
         }
     ],
     "usedInWild": true,

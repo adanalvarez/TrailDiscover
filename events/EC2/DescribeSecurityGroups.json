@@ -14,8 +14,44 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "The DescribeSecurityGroups API call allows an adversary to gather information about security groups, which is crucial for understanding the security posture and configurations of the cloud environment"
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By describing security groups, adversaries can infer the roles and privileges associated with different accounts and identify potential targets for further compromise."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "Knowledge of security group configurations can help adversaries understand which network services are exposed, enabling them to scan for open ports and services"
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Security groups often define permissions for accessing various resources within the cloud environment. Understanding these groups can help adversaries identify critical permissions and exploit them."
+        },
+        {
+            "technique": "T1190 - Exploit Public-Facing Application",
             "reason": ""
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "If an adversary identifies security groups that allow inbound access, they might transfer tools or malware into the environment through these entry points"
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Understanding security group rules helps adversaries in crafting communication methods that can bypass security controls using allowed protocols."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Security group descriptions can reveal information about valid accounts that have permissions to access or modify these groups, aiding in credential theft or misuse."
+        },
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By knowing the security groups, adversaries can position themselves in a network segment where they can capture sensitive traffic."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "Knowledge of security group configurations that allow remote services access can be exploited to move laterally within the network using those services."
         }
     ],
     "usedInWild": true,

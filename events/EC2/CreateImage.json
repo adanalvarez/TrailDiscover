@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Attackers can create an AMI, then analyze the offline image to perform credential dumping, extracting sensitive information from the instance's filesystem"
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers can create an AMI from an instance, disable or alter security tools and configurations within the AMI, and redeploy the compromised AMI to evade detection and maintain control."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Creating an AMI involves creating a snapshot of the instance's state. Attackers can use this snapshot to capture and analyze the data and configurations of the instance, which may include sensitive information or enable further attacks."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers can use the CreateImage API to create an AMI from an instance they control. This AMI can then be used to deploy new instances with pre-configured settings, including backdoors or other malicious configurations, effectively manipulating accounts and resources within the cloud environment."
         }
     ],
     "usedInWild": true,

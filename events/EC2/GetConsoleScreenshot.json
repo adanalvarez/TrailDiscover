@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1113 - Screen Capture",
+            "reason": "This technique involves capturing screenshots of the target system, and the GetConsoleScreenshot API call directly retrieves a screenshot of a running EC2 instance."
+        },
+        {
+            "technique": "This technique involves capturing screenshots of the target system, and the GetConsoleScreenshot API call directly retrieves a screenshot of a running EC2 instance.",
+            "reason": "Accessing the EC2 instance to retrieve a screenshot requires valid credentials, highlighting the relevance of this technique."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The screenshot can provide insights into user accounts and other details visible on the instance, aiding in account discovery."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "The screenshot might reveal running processes or applications, helping in process discovery."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers might obfuscate the screenshot contents to evade detection, making this technique relevant."
+        },
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "Screenshots may reveal network configurations displayed on the system's desktop."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Information visible in the screenshot might provide details about other systems or network topology."
+        },
+        {
+            "technique": "T1110 - Brute Force",
+            "reason": "If the screenshot shows login prompts or error messages related to login attempts, it can aid in brute force attempts."
         }
     ],
     "usedInWild": true,

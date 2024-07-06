@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Snapshots can contain data stored in cloud environments which may be exfiltrated. Attackers can access sensitive information stored within these snapshots, which can include configuration data, database contents, or other critical data."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Adversaries might obfuscate the data within snapshots to avoid detection during transfer. This can involve encrypting the contents of a snapshot or otherwise making the data less recognizable to automated defense mechanisms"
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "Copying a snapshot to another region or account over AWS services can be a form of exfiltration. Attackers can exploit this API call to move large volumes of data seamlessly across AWS infrastructure, avoiding some traditional network-based exfiltration detection mechanisms."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Creating a shared snapshot can be used to stage data before exfiltration, preparing it for easy transfer or download."
         }
     ],
     "usedInWild": true,

@@ -10,12 +10,20 @@
         "T1098 - Account Manipulation"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1098.003 - Account Manipulation: Additional Cloud Roles"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1548 - Abuse Elevation Control Mechanism",
+            "reason": "By changing the IAM instance profile, an attacker can elevate the privileges of the EC2 instance, allowing it to perform actions that require higher permissions. This abuse of the role mechanism can be used to execute privileged commands."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "By altering the IAM instance profile, an attacker can modify the authentication process. This change could allow the instance to authenticate as a different role with different permissions, potentially bypassing security controls."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "An attacker might replace an IAM instance profile to remove certain access controls or permissions temporarily to perform specific actions without triggering alerts or restrictions. Additionally they might remove the instances from the contol of certain accounts to maybe evade detection. AN example would be to remove access from known cloud security tools."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "An attacker can import their own key pair to gain initial access to the AWS environment using a compromised or newly created account. The imported key can also be used to maintain persistent access. This can be applied to both cloud and domain accounts in the cloud, ensuring access across different services."
+        },
+        {
+            "technique": "T1070 - Indicator Removal on Host",
+            "reason": "Attackers may delete logs or evidence after importing the keypair."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By importing their own key pair, attackers can disable or bypass security controls. For instance, they might modify firewall rules, disable monitoring services, or alter configurations to reduce the chances of their activities being detected. This technique ensures that security measures are less effective, making it easier for the attacker to maintain access and continue their activities without interruption"
         }
     ],
     "usedInWild": true,

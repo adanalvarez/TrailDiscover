@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Knowing the availability zones is a part of system information that an attacker might want to know. This API call provides insights into the environment setup and operational state."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "This technique involves discovering cloud services utilized by the target. The DescribeAvailabilityZones API call reveals information about the cloud services' geographical distribution, aiding in the discovery of cloud services in use, since some servies might be only available in certain availability zones."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "By knowing which availability zones are in use, attackers can identify the distribution of systems and services across the cloud environment. This helps in mapping the network architecture and planning subsequent lateral movement or targeted attacks."
         }
     ],
     "usedInWild": true,

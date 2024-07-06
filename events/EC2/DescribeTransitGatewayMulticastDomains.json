@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "This api call involves identifying details about the victim's network, such as the structure and topology, which can be aided by describing transit gateway multicast domains."
+        },
+        {
+            "technique": "T1592 - Gather Victim Host Information",
+            "reason": "The information from the API call could help an attacker understand the hosts connected via the multicast domains."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Information from transit gateway multicast domains could include details about the accounts associated with them."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Describing multicast domains helps in mapping out system network connections."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "The API call may return information about the users or owners of the systems within the multicast domains."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting an EBS volume can be used to remove evidence of malicious activity, such as log files or other data stored on the volume."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The deletion of an EBS volume results in the permanent loss of the data it contained, which is a form of data destruction."
+        },
+        {
+            "technique": "T1561 - Disk Wipe",
+            "reason": "Deleting the volume ensures that all data on the volume is removed, which is similar to a disk wipe."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By deleting the volume, an attacker can remove data that could be used by forensic teams to analyze account activities, effectively removing access to data that could lead to their identification"
         }
     ],
     "usedInWild": true,

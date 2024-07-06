@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1580 - Cloud Service Discovery",
+            "reason": "The DescribeKeyPairs API call can be used to enumerate key pairs associated with EC2 instances, which aids in discovering cloud resources and configurations."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "If key pairs are stored in cloud storage, an attacker could retrieve these key pairs, potentially leading to unauthorized access."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Accessing key pairs allows attackers to use valid credentials to authenticate and access systems, leading to potential unauthorized use of valid accounts."
+        },
+        {
+            "technique": "T1528 - Steal Application Access Token",
+            "reason": "Key pairs can be used to steal application access tokens if they are used for application authentication mechanisms."
         }
     ],
     "usedInWild": true,

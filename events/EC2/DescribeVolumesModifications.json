@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Attackers might modify volume characteristics to prepare data for exfiltration or conceal their activity. The history of volume modifications can reveal such attempts."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Viewing volume modifications might help attackers understand cloud account structures and usage patterns, aiding in discovering privileged accounts"
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Volume modification details might indicate attempts to obfuscate data within volumes, thus evading detection mechanisms."
         }
     ],
     "usedInWild": true,

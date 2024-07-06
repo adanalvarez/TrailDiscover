@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Creating or modifying network ACLs can disable or alter firewall rules, thus impairing defenses. By modifying ACLs, attackers might disable security tools that rely on specific network configurations."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Modifying network ACLs could allow malicious payloads to be transferred into the network."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "By changing ACL rules, an attacker might permit unauthorized web traffic for command and control. By modifying network ACLs, an attacker could allow unauthorized email traffic for exfiltration or command and control."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "Creating or modifying ACL entries can facilitate unauthorized RDP access, aiding lateral movement."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Attackers could create ACL rules that permit traffic to and from external proxies, aiding command and control operations"
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Adjusting network ACLs might allow an attacker to scan for system owners or users by permitting specific traffic"
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "An attacker might create ACL entries to exploit default accounts for initial access."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Creating specific ACL rules might help attackers map out network connections and understand the network layout."
         }
     ],
     "usedInWild": false,

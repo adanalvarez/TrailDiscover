@@ -10,12 +10,24 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.007 - Impair Defenses: Disable or Modify Cloud Firewall"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Using valid accounts to delete network ACLs ensures the actions blend in with normal administrative activity, aiding in evading detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting a network ACL can be a form of data destruction as it disrupts the network configuration, potentially leading to data loss or service disruption"
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Removing network ACLs can stop or disrupt services by blocking legitimate network traffic, effectively causing denial of service conditions"
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting network ACLs can be part of a broader strategy to remove access to resources, making it difficult for legitimate users to access networked systems and services."
         }
     ],
     "usedInWild": false,

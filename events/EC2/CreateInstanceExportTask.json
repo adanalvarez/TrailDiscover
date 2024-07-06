@@ -14,8 +14,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "Exporting an EC2 instance to an S3 bucket involves transferring data over a web service, which aligns with exfiltrating data through a web-based method."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Once the instance data is exported, attackers might delete the original instance or logs to cover their tracks"
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The export task utilizes application layer protocols for communication, relevant for exfiltrating data using such protocols."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Exporting the instance might include using formats that obfuscate the data of the instance, aiding in defense evasion."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Despite the requirement that the S3 bucket must be in the same account and region, this still involves transferring data within a cloud environment, aligning with this technique."
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "The export task could be used in combination with other tactics to hijack the resource for further malicious activities or unauthorized access."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The instance's data being exported can be seen as collecting data from a local system before transferring it to another location."
         }
     ],
     "usedInWild": false,

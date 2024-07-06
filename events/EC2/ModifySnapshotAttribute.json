@@ -14,8 +14,40 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By adding permissions to a snapshot, attackers can grant access to unauthorized cloud accounts or default accounts, which can be used for persistence and privilege escalation."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "Adding permissions to a snapshot might expose sensitive files that contain credentials, aiding in credential access."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Removing permissions from a snapshot can be used to hide or delete evidence of unauthorized access, aiding in defense evasion."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "By modifying snapshot permissions, attackers can gain access to sensitive data stored within snapshots, aiding in data collection and exfiltration."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Removing permissions from snapshots containing security tools can help attackers evade defenses by disabling or modifying those tools."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Modifying snapshot permissions could help attackers discover cloud accounts with access to the snapshot, aiding in further attacks."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "If a snapshot contains OS-level files, attackers can use it to extract credentials, aiding in credential access."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Snapshots can be used to stage data locally for later exfiltration, aiding in data collection and exfiltration"
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Modifying snapshot permissions could be used to remove legitimate access, disrupting recovery efforts, and aiding in defense evasion."
         }
     ],
     "usedInWild": true,

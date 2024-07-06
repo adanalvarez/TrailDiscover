@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Using DescribeInstanceAttribute can reveal information about the instance's configuration, such as instance type, which aids in understanding the system environment."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Information about the instance attributes can be used to identify potential valid accounts associated with the instance, particularly if the attribute reveals details about the IAM roles or users associated with it."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Describing instance attributes can provide details about the permissions and security groups associated with the instance, aiding in the discovery of network access control configurations."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "The attribute information might include details about the instance owner or users, helping to identify key individuals for potential targeted attacks"
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Information about storage attributes of an instance can help in planning the staging of data for exfiltration."
+        },
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "Attributes related to the services running on the instance can be described, aiding in the discovery of available services for further exploitation."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Details about network interfaces and configurations discovered through instance attributes can assist in identifying other remote systems and services within the network."
+        },
+        {
+            "technique": "T1518 - Software Discovery",
+            "reason": "Describing instance attributes may reveal information about the installed software and applications, assisting in software discovery efforts."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,44 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Enabling serial console access allows attackers to execute commands directly in the Unix shell of the EC2 instances."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Serial console access can be used to manipulate or create new accounts on the instance, ensuring persistent access."
+        },
+        {
+            "technique": "T1037 - Boot or Logon Initialization Scripts",
+            "reason": "Attackers can use the console to modify initialization scripts, ensuring their scripts run on startup for persistence."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Serial console access might be exploited using compromised credentials, allowing attackers to use valid accounts to access the console."
+        },
+        {
+            "technique": "T1547 - Boot or Logon Autostart Execution",
+            "reason": "The serial console can be used to modify system configurations or add scripts to ensure code execution upon system start."
+        },
+        {
+            "technique": "T1543 - Create or Modify System Process",
+            "reason": "If the instances are running Windows, attackers might use the serial console to create or modify services for persistence and privilege escalation."
+        },
+        {
+            "technique": "T1055 - Process Injection",
+            "reason": "Serial console access could potentially be used for injecting code into running processes to evade defenses"
+        },
+        {
+            "technique": "T1207 - Rogue Domain Controller",
+            "reason": "Attackers with console access could promote a compromised instance to a domain controller in an Active Directory environment, escalating privileges."
+        },
+        {
+            "technique": "T1070 - Indicator Removal on Host",
+            "reason": "The serial console allows attackers to directly interact with the system to delete logs and other indicators of their presence."
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "Direct access to the EC2 serial console allows attackers to leverage native APIs of the operating system for various malicious purposes."
         }
     ],
     "usedInWild": true,

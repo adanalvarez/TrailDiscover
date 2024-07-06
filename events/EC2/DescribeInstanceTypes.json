@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "This technique involves gathering information about the network configurations and structures used by the target. By describing instance types, an attacker can understand the types of EC2 instances available in the target's AWS environment, which can provide insights into network layout and potential vulnerabilities."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "DescribeInstanceTypes provides detailed information about different instance types, including their capabilities and configurations, which can help an attacker understand the system architecture and capabilities."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "Knowing the types of instances helps in determining how data might be stored or managed in cloud repositories, aiding in planning data collection strategies."
+        },
+        {
+            "technique": "T1592 - Gather Victim Host Information",
+            "reason": "DescribeInstanceTypes can provide details on the hardware and software configurations of the instances, helping attackers gather comprehensive information about the victim's host environment."
+        },
+        {
+            "technique": "T1046 - Network Service Discovery",
+            "reason": "By knowing the instance types, attackers can infer what network services might be running, aiding in the discovery of network service configurations and potential vulnerabilities."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "DescribeInstanceTypes helps attackers discover the available cloud services and their configurations, which is crucial for understanding the overall cloud environment and potential targets."
+        },
+        {
+            "technique": "T1497 - Virtualization/Sandbox Evasion",
+            "reason": "Knowing the instance types can help attackers tailor their techniques to evade detection within virtualized environments specific to the cloud infrastructure in use."
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "DescribeInstanceTypes can provide insights into the types of instances and their configurations, which may include details relevant to domain trust relationships within the cloud infrastructure."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,44 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Attackers can create volumes and attach them to instances to access filesystems and potentially extract sensitive files such as /etc/passwd and /etc/shadow on Linuy systems for credential dumping."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By creating a volume from a snapshot that contains valid credentials or authentication tokens, attackers can gain persistent access to cloud resources."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers might create volumes from snapshots containing cloud credentials to use for maintaining access or escalating privileges within the cloud environment."
+        },
+        {
+            "technique": "T1202 - Indirect Command Execution",
+            "reason": "Attackers might use the creation of volumes and the data contained within them to execute commands indirectly by leveraging scripts or binaries stored in these volumes. Some of the commands could be called by methods like autorun scripts or similar"
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Creating and using volumes for storing large amounts of data or for computational tasks can be a form of resource hijacking, impacting the cloud environment's availability and cost."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Attackers might use newly created volumes to overwrite sensitive data, effectively destroying it and causing a significant impact"
+        },
+        {
+            "technique": "T1486 - Data Encrypted for Impact",
+            "reason": "Encrypted volumes can be used by attackers to encrypt data and then demand ransom for decryption keys, directly impacting data availability."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Attackers can use created volumes to stage collected data locally before exfiltration, facilitating the organization and preparation of data for extraction."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers might create volumes that mimic legitimate snapshots or backups to evade detection and maintain persistent access by blending into normal operations."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Attackers can create volumes to transfer and store exfiltrated data within a cloud account, enabling them to securely move sensitive information out of the victim's environment"
         }
     ],
     "usedInWild": true,

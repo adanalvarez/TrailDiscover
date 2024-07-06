@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Retrieving the default KMS key provides information about the encryption settings of the EBS volumes in the account."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "By knowing the KMS key, attackers could potentially access encrypted data if they manage to retrieve the corresponding encrypted volumes."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers could use this information to modify or disable encryption settings, impacting defenses."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers might use the default KMS key information to create resources that appear legitimate but are malicious in nature."
+        },
+        {
+            "technique": "T1556 - Unsecured Credentials",
+            "reason": "The KMS key might be part of broader efforts to discover unsecured private keys in the environment"
         }
     ],
     "usedInWild": true,

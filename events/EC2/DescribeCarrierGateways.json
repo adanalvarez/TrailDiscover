@@ -14,8 +14,40 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "This API call helps in discovering the network configuration, including the carrier gateway, which can provide insight into how traffic is routed"
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "Understanding the carrier gateways can assist attackers in planning lateral movement or initial access via carrier networks."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Describing the carrier gateways can reveal details about network connections and traffic flow between Wavelength Zones and carrier networks."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Carrier gateways' NAT function can be leveraged to hide the source of attack traffic, aiding in defense evasion"
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Identifying carrier gateways could be useful for attackers aiming to gain access to the network using valid accounts"
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "Knowing the setup of carrier gateways can help in exploiting remote services that rely on this infrastructure"
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Describing carrier gateways can reveal information about the users and owners of the system. In the response there is the ccount id of whom this gateway belongs to"
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "Insights into carrier gateways might reveal trust relationships between different network segments and domains"
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Information from the carrier gateway description can help identify other remote systems within the network."
         }
     ],
     "usedInWild": true,
