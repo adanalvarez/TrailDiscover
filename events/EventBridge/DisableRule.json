@@ -16,8 +16,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Disabling a rule can be used to impair defenses by preventing the triggering of certain automated responses or detections."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "T1531 - Account Access Removal"
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Disabling a rule can be a part of removing evidence of the attack by stopping logging and monitoring for certain activities, which helps in evading detection."
         }
     ],
     "usedInWild": false,

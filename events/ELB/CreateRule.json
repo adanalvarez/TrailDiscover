@@ -14,8 +14,40 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1203 - Exploitation for Client Execution",
+            "reason": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code."
+        },
+        {
+            "technique": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code.",
+            "reason": "By modifying or creating new rules, an attacker could exploit vulnerabilities in the public-facing application load balancer to gain initial access."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Creating rules that redirect traffic to malicious servers using HTTP/S or mail protocols for command and control communication."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Rules could be used to disable security controls or modify traffic patterns to evade detection tools and logs."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Rules can be set to allow the transfer of malicious tools or payloads through the load balancer to a compromised system."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers can create rules that handle or route traffic in a manner that uses encoded or obfuscated data. This can include routing traffic to endpoints that encrypt the data payloads or encode commands to be less conspicuous"
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Rules could be used to route traffic in ways that delete or bypass log files to avoid detection."
+        },
+        {
+            "technique": "T1219 - Remote Access Software",
+            "reason": "Rules can be set up to enable remote access software to connect to compromised endpoints"
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Creating rules that direct traffic to perform unauthorized actions like cryptocurrency mining or other forms of resource hijacking."
         }
     ],
     "usedInWild": false,

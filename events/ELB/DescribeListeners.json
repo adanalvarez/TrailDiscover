@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "By describing listeners, an adversary could identify configurations and attributes related to the load balancer, which may include discovering IAM roles or users with specific permissions."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "Describing listeners provides details about the services exposed by the load balancer, which helps in scanning and understanding the network topology."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Querying listener details can reveal information about the permissions and roles associated with the load balancer, providing insight into group policies."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Load balancers typically handle various application layer protocols, and knowing listener configurations can assist in crafting command and control channels over allowed protocols."
         }
     ],
     "usedInWild": false,

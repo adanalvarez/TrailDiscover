@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
+            "technique": "T1059 - Command and Scripting Interpreter",
             "reason": ""
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": ""
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": ""
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "The attacker could add targets that archive data, preparing it for exfiltration when a rule is triggered."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "The attacker could configure targets to delete logs or other indicators of compromise upon execution, aiding in defense evasion"
+        },
+        {
+            "technique": "T1203 - Exploitation for Client Execution",
+            "reason": "An attacker could set a target that exploits vulnerabilities in client applications, leading to remote execution when the rule is triggered."
         }
     ],
     "usedInWild": true,

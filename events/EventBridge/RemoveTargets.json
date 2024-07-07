@@ -16,8 +16,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Removing targets from EventBridge rules can prevent specific users or roles from being notified or triggered, effectively removing their access to critical information or actions."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Manipulating EventBridge rules by removing targets can alter the capabilities and behaviors of accounts without directly deleting them."
+        },
+        {
+            "technique": "T1562.001 - Impair Defenses",
+            "reason": "Removing security monitoring targets from EventBridge rules can impair defenses by preventing certain security actions from being triggered."
         }
     ],
     "usedInWild": false,

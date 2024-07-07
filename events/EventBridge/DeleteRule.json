@@ -16,8 +16,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting a rule, attackers can remove evidence of malicious activity."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers might delete rules to alter the behavior of scheduled tasks, maintaining persistence. By manipulating accounts and associated rules, they ensure their malicious processes can run without interruption or detection."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Deleting rules to impair security monitoring and defenses. This technique is used by attackers to weaken the security posture of a target by removing rules that trigger security alerts, thereby making it easier for them to carry out further malicious activities undetected."
         }
     ],
     "usedInWild": false,
