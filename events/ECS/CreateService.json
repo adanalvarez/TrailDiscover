@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "By creating ECS services, adversaries can execute commands or scripts in the context of containers that run on Unix-based systems"
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "The AWS CreateService API call can be used to create tasks that modify authentication processes within a cloud environment."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Match Legitimate Name or Location: An adversary could create services with names that mimic legitimate services to avoid detection."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Malicious ECS tasks could communicate over common web protocols to blend in with normal network traffic."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Adversaries might set up a chain of ECS services to act as proxies, hiding their true location."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Adversaries might create services that deploy obfuscated scripts or binaries to evade detection."
+        },
+        {
+            "technique": "T1046 - Network Service Discovery",
+            "reason": "ECS tasks might be used to run discovery scripts to enumerate network services."
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "Adversaries might create services that exploit vulnerabilities in other services or tasks within the ECS cluster to gain unauthorized access or escalate privileges"
         }
     ],
     "usedInWild": true,

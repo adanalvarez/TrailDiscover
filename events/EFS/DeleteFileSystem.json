@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "This technique involves deleting files to remove indicators of malicious activity. Deleting a file system would effectively remove all contents, which could include logs or evidence of malicious actions."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "This technique includes manipulating data stored in systems. Deleting a file system manipulates the stored data by permanently removing it."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "This technique involves removing access to accounts or systems. Deleting a file system removes access to the data contained within, impacting users ability to access critical information."
+        },
+        {
+            "technique": "T1107 - File Deletion",
+            "reason": "File deletion focuses on the removal of files to impact data availability or to hide malicious activity. Deleting a file system in AWS EFS results in the removal of all files and directories within that file system."
         }
     ],
     "usedInWild": false,

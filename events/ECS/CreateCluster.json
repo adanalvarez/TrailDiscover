@@ -14,8 +14,40 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The creation of a new cluster could be part of manipulating accounts within AWS, enabling the attacker to maintain control or establish backdoor access."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "New ECS clusters can be configured to run tasks at scheduled intervals, which can be used to execute malicious activities regularly."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "An attacker might use the new ECS cluster to set up an external proxy, which can be used to relay commands and data, aiding in defense evasion and persistent access."
+        },
+        {
+            "technique": "T1204 - User Execution",
+            "reason": "Creating an ECS cluster to run container images, which might be malicious, facilitating execution of malicious code in the environment."
+        },
+        {
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "Creating new ECS clusters is a form of acquiring infrastructure within AWS, which can be used to support further malicious activities."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The cluster could be used to deploy obfuscated code or data, making it harder to detect malicious activities."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Creating a new ECS cluster modifies the cloud compute infrastructure, which can be leveraged for both execution and evasion purposes."
+        },
+        {
+            "technique": "T1584 - Compromise Infrastructure",
+            "reason": "The CreateCluster API call in ECS enables attackers to compromise cloud infrastructure by creating and controlling a versatile and scalable platform for malicious activities. This technique supports persistent access, stealth operations, flexible resource management, and a broad range of attack vectors, making it a critical component of an adversary's strategy to leverage cloud environments for their objectives."
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "An attacker might create a new ECS cluster to host services that exploit vulnerabilities in remote services for lateral movement or further attacks."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By associating an access policy, attackers can use legitimate credentials to access the system, either by modifying existing ones or changing permissions."
+        },
+        {
+            "technique": "T1543 - Create or Modify System Process",
+            "reason": "Associating an access policy can be used to modify the permissions of processes within the EKS environment, ensuring the attacker retains control or gains elevated privileges for their processes."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Associating access policies can assist attackers in evading detection by allowing them to remove or alter logs and other indicators that track account and permission changes, thereby obscuring their activities."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Modifying access policies might allow attackers to gain access to sensitive areas of the system where they can extract credentials."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Associating new access policies can help attackers use application layer protocols more effectively to communicate with compromised systems, especially if these policies grant access to necessary network services."
         }
     ],
     "usedInWild": false,

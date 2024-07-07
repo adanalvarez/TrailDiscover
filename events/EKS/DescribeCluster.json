@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "Information from DescribeCluster can reveal IAM roles and identities associated with the cluster, aiding in the discovery of accounts."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "The DescribeCluster call might include details about Kubernetes RBAC roles and permissions, helping to discover privilege groups."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The DescribeCluster API reveals extensive system information about the EKS cluster, such as Kubernetes version, endpoint, and VPC configuration, aiding in system information discovery."
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "The DescribeCluster call can provide insights into how the cluster is integrated with other AWS services and trust relationships, such as IAM roles and policies"
         }
     ],
     "usedInWild": false,
