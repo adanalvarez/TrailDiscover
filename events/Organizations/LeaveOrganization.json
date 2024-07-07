@@ -19,7 +19,7 @@
     "researchLinks": [
         {
             "description": "An AWS account attempted to leave the AWS Organization",
-            "link": "hhttps://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
+            "link": "https://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
         }
     ],
     "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations.",
