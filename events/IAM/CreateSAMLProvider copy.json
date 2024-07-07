@@ -1,0 +1,29 @@
+{
+    "eventName": "CreateSAMLProvider",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates an IAM resource that describes an identity provider (IdP) that supports SAML 2.0.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers use CreateSAMLProvider to establish persistent footholds.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateSAMLProvider"
+}
