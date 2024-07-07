@@ -1,0 +1,29 @@
+{
+    "eventName": "DeleteDBInstance",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Deletes a previously provisioned DB instance.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteDBInstance to delete crucial databases, causing data loss and service disruption.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds delete-db-instance --db-instance-identifier TrailDiscoverDB"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteDBInstance"
+}

@@ -1,0 +1,29 @@
+{
+    "eventName": "CreateOpenIDConnectProvider",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates an IAM entity to describe an identity provider (IdP) that supports OpenID Connect (OIDC)",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers use CreateOpenIDConnectProvider to establish persistent footholds.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-open-id-connect-provider --cli-input-json '{\"Url\": \"https://server.example.com\",\"ClientIDList\": [\"example-application-ID\"],\"ThumbprintList\": [\"c3768084dfb3d2b68b7897bf5f565da8eEXAMPLE\"]}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateOpenIDConnectProvider"
+}

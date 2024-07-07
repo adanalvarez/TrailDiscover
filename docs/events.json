@@ -155,6 +155,35 @@
         "permissions": "https://aws.permissions.cloud/iam/route53#route53-CreateHostedZone"
     },
     {
+        "eventName": "InviteAccountToOrganization",
+        "eventSource": "organizations.amazonaws.com",
+        "awsService": "Organizations",
+        "description": "Sends an invitation to another account to join your organization as a member account.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1535 - Unused/Unsupported Cloud Regions"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use InviteAccountToOrganization to add an account they control for defense evasion, resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws organizations invite-account-to-organization --target '{\"Type\": \"EMAIL\", \"Id\": \"traildiscover@example.com\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-InviteAccountToOrganization"
+    },
+    {
         "eventName": "DescribeOrganization",
         "eventSource": "organizations.amazonaws.com",
         "awsService": "Organizations",
@@ -213,6 +242,35 @@
         "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-ListOrganizationalUnitsForParent"
     },
     {
+        "eventName": "CreateAccount",
+        "eventSource": "organizations.amazonaws.com",
+        "awsService": "Organizations",
+        "description": "Creates an AWS account that is automatically a member of the organization whose credentials made the request.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1535 - Unused/Unsupported Cloud Regions"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateAccount to add a new account for defense evasion, resource hijacking.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws organizations create-account --email traildiscover@example.com --account-name \"TrailDiscover Account\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-CreateAccount"
+    },
+    {
         "eventName": "LeaveOrganization",
         "eventSource": "organizations.amazonaws.com",
         "awsService": "Organizations",
@@ -221,10 +279,15 @@
             "TA0005 - Defense Evasion"
         ],
         "mitreAttackTechniques": [
-            "T1562 - Impair Defenses"
+            "T1070 - Indicator Removal"
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "An AWS account attempted to leave the AWS Organization",
@@ -275,6 +338,35 @@
         "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-ListAccounts"
     },
     {
+        "eventName": "CreateStack",
+        "eventSource": "cloudformation.amazonaws.com",
+        "awsService": "CloudFormation",
+        "description": "Creates a stack as specified in the template.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateStack to provision unauthorized resources",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cloudformation#cloudformation-CreateStack"
+    },
+    {
         "eventName": "AssumeRoleWithWebIdentity",
         "eventSource": "sts.amazonaws.com",
         "awsService": "STS",
@@ -316,11 +408,15 @@
         "mitreAttackTechniques": [
             "T1078 - Valid Accounts"
         ],
-        "usedInWild": false,
+        "usedInWild": true,
         "incidents": [
             {
                 "description": "How Adversaries Can Persist with AWS User Federation",
                 "link": "https://www.crowdstrike.com/blog/how-adversaries-persist-with-aws-user-federation/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [
@@ -354,8 +450,13 @@
         "mitreAttackTechniques": [
             "T1199 - Trusted Relationship"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS STS GetSessionToken Abuse",
@@ -2121,6 +2222,35 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListGroupsForUser"
     },
     {
+        "eventName": "CreateSAMLProvider",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Creates an IAM resource that describes an identity provider (IdP) that supports SAML 2.0.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers use CreateSAMLProvider to establish persistent footholds.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateSAMLProvider"
+    },
+    {
         "eventName": "ListAccessKeys",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -2758,6 +2888,35 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-PutRolePermissionsBoundary"
     },
     {
+        "eventName": "StartSSO",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Initialize AWS IAM Identity Center",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers use StartSSO to establish persistent footholds.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso#sso-StartSSO"
+    },
+    {
         "eventName": "PutUserPermissionsBoundary",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -2991,6 +3150,35 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-AttachRolePolicy"
+    },
+    {
+        "eventName": "CreateOpenIDConnectProvider",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Creates an IAM entity to describe an identity provider (IdP) that supports OpenID Connect (OIDC)",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers use CreateOpenIDConnectProvider to establish persistent footholds.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws iam create-open-id-connect-provider --cli-input-json '{\"Url\": \"https://server.example.com\",\"ClientIDList\": [\"example-application-ID\"],\"ThumbprintList\": [\"c3768084dfb3d2b68b7897bf5f565da8eEXAMPLE\"]}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateOpenIDConnectProvider"
     },
     {
         "eventName": "SetDefaultPolicyVersion",
@@ -4666,8 +4854,13 @@
         "mitreAttackTechniques": [
             "T1562 - Impair Defenses"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "cloudtrail_guardduty_bypass",
@@ -5307,6 +5500,10 @@
             {
                 "description": "USA VS Nickolas Sharp",
                 "link": "https://www.justice.gov/usao-sdny/press-release/file/1452706/dl"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [],
@@ -5328,6 +5525,35 @@
             }
         ],
         "permissions": "N/A"
+    },
+    {
+        "eventName": "DeleteBucket",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Deletes the S3 bucket.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DeleteBucket to delete resources.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api delete-bucket --bucket my-traildiscover-bucket --region us-east-1"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-DeleteBucket"
     },
     {
         "eventName": "GetBucketAcl",
@@ -5549,6 +5775,10 @@
             {
                 "description": "Hacker Puts Hosting Service Code Spaces Out of Business",
                 "link": "https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [],
@@ -5662,6 +5892,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [],
@@ -5778,6 +6012,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [],
@@ -7272,6 +7510,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [
@@ -7699,6 +7941,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [
@@ -8342,8 +8588,13 @@
         "mitreAttackTechniques": [
             "T1485 - Data Destruction"
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Hunting AWS RDS security events with Sysdig",
@@ -8394,6 +8645,35 @@
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-StartExportTask"
     },
     {
+        "eventName": "DeleteDBInstance",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Deletes a previously provisioned DB instance.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DeleteDBInstance to delete crucial databases, causing data loss and service disruption.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds delete-db-instance --db-instance-identifier TrailDiscoverDB"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteDBInstance"
+    },
+    {
         "eventName": "CreateDBSecurityGroup",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -8442,6 +8722,10 @@
             {
                 "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
                 "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [
@@ -9699,6 +9983,10 @@
             {
                 "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+            },
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
         "researchLinks": [],

@@ -9,8 +9,13 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
     "researchLinks": [
         {
             "description": "cloudtrail_guardduty_bypass",
