@@ -1,0 +1,38 @@
+{
+    "eventName": "CreateAccount",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Creates an AWS account that is automatically a member of the organization whose credentials made the request.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1535 - Unused/Unsupported Cloud Regions"
+    ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateAccount to add a new account for defense evasion, resource hijacking.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations create-account --email traildiscover@example.com --account-name \"TrailDiscover Account\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-CreateAccount"
+}

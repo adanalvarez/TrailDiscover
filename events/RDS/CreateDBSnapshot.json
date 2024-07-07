@@ -23,6 +23,10 @@
         {
             "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
             "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
         }
     ],
     "researchLinks": [

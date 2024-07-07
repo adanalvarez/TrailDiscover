@@ -7,7 +7,7 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1562 - Impair Defenses"
+        "T1070 - Indicator Removal"
     ],
     "mitreAttackSubTechniques": [
 
@@ -19,11 +19,16 @@
         }
     ],
     "usedInWild": false,
-    "incidents": [],
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
     "researchLinks": [
         {
             "description": "An AWS account attempted to leave the AWS Organization",
-            "link": "hhttps://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
+            "link": "https://docs.datadoghq.com/security/default_rules/aws-organizations-leave-organization/"
         }
     ],
     "securityImplications": "Attackers might use LeaveOrganization to disassociate resources and disrupt the structure of AWS organizations.",

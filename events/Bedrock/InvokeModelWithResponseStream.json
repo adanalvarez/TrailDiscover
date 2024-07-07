@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1071.004 - Application Layer Protocol: DNS",
-            "reason": "DNS can be used for exfiltration or command and control if the model’s streaming response can be encoded into DNS queries/responses."
+            "reason": "DNS can be used for exfiltration or command and control if the model's streaming response can be encoded into DNS queries/responses."
         }
     ],
     "usedInWild": true,
@@ -39,6 +39,10 @@
         {
             "description": "Detecting AI resource-hijacking with Composite Alerts",
             "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        },
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
         }
     ],
     "researchLinks": [],

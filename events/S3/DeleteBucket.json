@@ -1,0 +1,38 @@
+{
+    "eventName": "DeleteBucket",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "Deletes the S3 bucket.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeleteBucket to delete resources.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api delete-bucket --bucket my-traildiscover-bucket --region us-east-1"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-DeleteBucket"
+}

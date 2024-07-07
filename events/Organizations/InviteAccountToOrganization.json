@@ -1,0 +1,38 @@
+{
+    "eventName": "InviteAccountToOrganization",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Sends an invitation to another account to join your organization as a member account.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1535 - Unused/Unsupported Cloud Regions"
+    ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "",
+            "reason": ""
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use InviteAccountToOrganization to add an account they control for defense evasion, resource hijacking.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations invite-account-to-organization --target '{\"Type\": \"EMAIL\", \"Id\": \"traildiscover@example.com\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-InviteAccountToOrganization"
+}

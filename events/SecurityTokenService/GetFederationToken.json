@@ -18,11 +18,15 @@
             "reason": ""
         }
     ],
-    "usedInWild": false,
+    "usedInWild": true,
     "incidents": [
         {
             "description": "How Adversaries Can Persist with AWS User Federation",
             "link": "https://www.crowdstrike.com/blog/how-adversaries-persist-with-aws-user-federation/"
+        },
+        {
+            "description": "New tactics and techniques for proactive threat detection",
+            "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
         }
     ],
     "researchLinks": [
