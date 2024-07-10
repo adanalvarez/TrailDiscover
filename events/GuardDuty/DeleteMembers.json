@@ -10,12 +10,20 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting GuardDuty member accounts can prevent legitimate users from accessing the service, thus disrupting monitoring and security alerts."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting member accounts, logs and other related files might be purged or altered, aiding in hiding the malicious activities."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "This technique involves altering account settings, such as permissions and memberships, which fits the action of deleting GuardDuty members."
         }
     ],
     "usedInWild": false,

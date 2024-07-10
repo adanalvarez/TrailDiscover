@@ -10,12 +10,17 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
 
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By disassociating member accounts, an adversary could remove access to GuardDuty for specific accounts, reducing the ability to detect and respond to malicious activities."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Disassociating member accounts might effectively stop the GuardDuty service from monitoring those accounts, similar to stopping a security service to avoid detection."
         }
     ],
     "usedInWild": false,

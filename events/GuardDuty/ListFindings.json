@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1057 - Process Discovery",
+            "reason": "By retrieving and analyzing finding IDs, attackers can discover details about processes associated with GuardDuty findings, helping them understand which processes were flagged and why."
         }
     ],
     "usedInWild": true,

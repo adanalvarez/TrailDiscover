@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Knowledge of detector IDs can guide attackers in identifying monitored versus unmonitored cloud assets, facilitating targeted reconnaissance on less protected resources."
         }
     ],
     "usedInWild": true,

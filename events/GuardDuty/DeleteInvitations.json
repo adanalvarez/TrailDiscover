@@ -10,12 +10,13 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1562.006 - Impair Defenses: Indicator Blocking"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting GuardDuty invitations can be seen as a form of defense evasion by removing traces of an invitation that might otherwise be used for investigative purposes. Invitations could be used by security teams to track and verify legitimate connections between AWS accounts. By removing these invitations, the adversary might prevent the detection of unauthorized or suspicious account activities."
         }
     ],
     "usedInWild": true,

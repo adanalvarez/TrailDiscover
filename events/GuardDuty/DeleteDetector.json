@@ -10,12 +10,12 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting the GuardDuty detector can be part of a larger strategy to destroy or manipulate security configurations and logs, impacting the integrity of the security monitoring system."
         }
     ],
     "usedInWild": true,

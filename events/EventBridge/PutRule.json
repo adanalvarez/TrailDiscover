@@ -30,7 +30,7 @@
             "reason": "By manipulating EventBridge rules, attackers can potentially alter the flow of logs and events to hide their activities."
         },
         {
-            "technique": "T1562.001  - Impair Defenses",
+            "technique": "T1562 - Impair Defenses",
             "reason": "By updating EventBridge rules, attackers can disable or modify security tools and alerts, impairing defenses and ensuring continued access."
         }
     ],

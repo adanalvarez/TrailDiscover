@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1106 - Native API",
+            "reason": "Using the AWS Glue API to create development endpoints can facilitate malicious actions within the AWS environment by leveraging legitimate service functionalities."
+        },
+        {
+            "technique": "T1133 - External Remote Services",
+            "reason": "Development endpoints can be accessed remotely, providing a vector for persistent remote access by attackers."
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "Attackers can create new accounts with permissions to create and use development endpoints, facilitating unauthorized access and persistence in the environment."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "cheduling jobs on the development endpoint ensures that malicious payloads or scripts are executed at specific times, aiding in persistence and automated execution."
         }
     ],
     "usedInWild": false,

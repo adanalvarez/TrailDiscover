@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Glue allows the use of Python scripts - updating the endpoint could change the scripts to execute arbitrary code directly in the development environment."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Adversaries may update the endpoint to include scripts that delete logs or other files, helping to evade detection."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Updates could involve obfuscated scripts or configurations to hide malicious code and evade detection mechanisms"
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "The development endpoint update might utilize native APIs for malicious purposes, including privilege escalation or evasion."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "UpdateDevEndpoint could be used to create or modify scheduled tasks that ensure malicious scripts are run periodically."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Adversaries could update the endpoint to masquerade malicious activities as legitimate by matching names or locations."
         }
     ],
     "usedInWild": false,

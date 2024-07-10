@@ -14,8 +14,40 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Glue jobs can be defined to execute Python scripts for various data manipulation tasks."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Glue jobs can be used to collect, compress, and store large datasets, which can later be exfiltrated."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Job definitions may include obfuscated scripts or commands to avoid detection."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Glue jobs can be configured to stage data in S3 buckets, making it easier for exfiltration."
+        },
+        {
+            "technique": "T1083 - File and Directory Discovery",
+            "reason": "Glue jobs can be scripted to discover and list files and directories in S3 or other storage services."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Glue jobs might be used to exfiltrate data using DNS queries, a method that can bypass some network monitoring tools. Python or Java jobs are extremely likely to do this. Glue jobs can send data over HTTP/S, facilitating communication with external servers for command and control or exfiltration"
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Glue jobs can be created to download and execute additional scripts or tools from external sources."
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "Data processed by Glue jobs can be moved to external cloud storage for exfiltration purposes."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "Glue jobs might access files containing credentials, which can then be exfiltrated."
         }
     ],
     "usedInWild": false,

@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Adversaries can create filters that suppress alerts for file deletion activities, allowing them to remove indicators of their presence without triggering alarms."
         }
     ],
     "usedInWild": false,
