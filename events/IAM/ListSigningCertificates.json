@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "Identifying signing certificates shows which users have configured alternate authentication mechanisms, revealing potential entry points that do not rely on passwords."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Gaining information about signing certificates aids in mapping the IAM infrastructure, helping to understand the authentication methods and structure of the cloud environment."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Understanding the valid signing certificates helps in identifying potential accounts to compromise, which can be used for initial access or persistence within the environment."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Listing signing certificates assists in discovering the primary users and owners of the accounts, which aids in planning targeted attacks."
         }
     ],
     "usedInWild": true,

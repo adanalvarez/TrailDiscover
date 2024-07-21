@@ -10,12 +10,12 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Listing IAM groups helps identify the permission groups within an AWS environment, which is crucial for understanding the access levels and privileges assigned to different users."
         }
     ],
     "usedInWild": true,

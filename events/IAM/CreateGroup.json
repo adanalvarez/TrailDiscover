@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By creating a new group, attackers can then create new users within this group, providing valid credentials for later access."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Creating a new group with a name similar to existing groups can help attackers blend in and avoid detection"
         }
     ],
     "usedInWild": false,

@@ -10,12 +10,20 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By listing attached role policies, attackers can understand the permissions associated with specific roles, which is essential for discovering permission groups within a cloud environment."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers may use the information from this API call to gain insight into valid roles and associated policies, which can help them identify which roles to target for credential access."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "This technique is applicable because the API call provides information on the configuration and setup of IAM roles and their policies, contributing to the discovery of cloud services configurations."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "Access key information can reveal details about the IAM user's identity, such as their role and permissions, which can be valuable for planning further attacks."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "By listing access keys, attackers can identify existing cloud infrastructure accounts and keys, revealing how the cloud environment is structured."
         }
     ],
     "usedInWild": true,

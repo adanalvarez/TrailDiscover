@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Compromised cloud accounts can be manipulated by deleting permissions boundaries, giving adversaries increased permissions to execute further malicious activities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Deleting the permissions boundary could be part of a broader strategy to disable or modify security tools or settings to avoid detection."
         }
     ],
     "usedInWild": false,

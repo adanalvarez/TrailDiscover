@@ -10,12 +10,20 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Group Discovery",
+            "reason": "By listing the groups for a user, adversaries can identify the permissions associated with different IAM groups and plan further actions based on the discovered roles and policies."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Knowledge of user group memberships can help adversaries in identifying valid accounts with specific privileges and using these accounts to escalate privileges or access resources."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Information about user groups can be utilized by adversaries to infer the types of processes and operations a user can perform, aiding in planning subsequent steps of an attack."
         }
     ],
     "usedInWild": true,

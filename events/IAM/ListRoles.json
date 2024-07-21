@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Discovering IAM roles helps adversaries understand their permissions and group memberships, enabling them to identify roles with excessive privileges that can be misused for unauthorized activities."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By listing IAM roles, adversaries can identify valid accounts, including default and user-created roles, which might be targeted for compromise or misuse."
+        },
+        {
+            "technique": "T1518 - Software Discovery",
+            "reason": "Listing IAM roles can reveal roles associated with various software applications, including security, administrative, and operational tools."
         }
     ],
     "usedInWild": true,

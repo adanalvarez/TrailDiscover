@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1212 - Exploitation for Privilege Escalation",
+            "reason": "Modifying permissions boundaries can be used to elevate the privileges of the role, enabling actions that would otherwise be restricted."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "By altering the permissions boundary, attackers can change the authentication process for the role to grant themselves higher privileges."
         }
     ],
     "usedInWild": false,

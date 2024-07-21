@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078. - Valid Accounts",
+            "reason": "If attackers can associate public keys with user accounts, they might leverage this information to attempt to use stolen or weak credentials elsewhere."
         }
     ],
     "usedInWild": true,

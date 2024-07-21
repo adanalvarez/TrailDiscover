@@ -10,12 +10,12 @@
         "T1136 - Create Account"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1136.001 - Create Account: Local Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Adversaries may create new IAM users to manipulate accounts for continuous access or privilege escalation."
         }
     ],
     "usedInWild": true,

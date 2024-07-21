@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Setting a permissions boundary might be part of a strategy to later remove access to certain resources or actions, effectively controlling or limiting account capabilities."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "Attackers may modify permissions boundaries to ensure their access is maintained across cloud accounts, preventing account lockout or access removal."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Modifying permissions boundaries can be used to ensure that indicators of compromise, such as logs or records of malicious activities, can be deleted or altered, aiding in defense evasion."
         }
     ],
     "usedInWild": false,

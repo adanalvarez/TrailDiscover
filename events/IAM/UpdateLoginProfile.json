@@ -15,8 +15,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Changing an IAM user's password allows an attacker to maintain access using a legitimate account."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "Changing the password directly impacts the authentication process, potentially locking out legitimate users and ensuring only the attacker has access."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Changing the password of an IAM user can also serve as a means to remove legitimate account access for the rightful user, ensuring only the attacker can access the account."
         }
     ],
     "usedInWild": true,

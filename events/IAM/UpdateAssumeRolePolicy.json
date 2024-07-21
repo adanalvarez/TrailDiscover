@@ -15,8 +15,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Updating the assume role policy can allow attackers to use valid IAM roles to maintain access."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "T1036.005] - Masquerading"
         }
     ],
     "usedInWild": false,

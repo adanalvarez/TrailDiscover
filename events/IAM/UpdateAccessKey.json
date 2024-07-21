@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070. - Indicator Removal",
+            "reason": "Disabling keys can be a tactic to remove indicators of compromise, preventing detection and forensic analysis."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Temporarily deactivating keys to remove access can help adversaries evade detection while they perform malicious activities."
         }
     ],
     "usedInWild": false,

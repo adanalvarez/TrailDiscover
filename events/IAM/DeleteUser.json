@@ -15,8 +15,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Removing a user account directly impacts access control by revoking permissions and access rights associated with that IAM user. This technique can be used to disrupt normal operations, especially if the deleted user was critical to system functions or had extensive permissions."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": " The deletion of an IAM user can be part of a deliberate attempt to destroy data or disrupt normal operations. Users often have associated data, policies, and access controls that, when removed, can result in data loss or corruption. "
         }
     ],
     "usedInWild": true,

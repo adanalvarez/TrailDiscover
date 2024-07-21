@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers may use the ListUsers API call to discover valid user accounts within an AWS environment. Knowledge of valid accounts can help in attempts to compromise or leverage these accounts."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Knowledge of IAM users can help an attacker identify which processes might be running under specific user accounts, assisting in further exploitation or lateral movement within the cloud environment."
         }
     ],
     "usedInWild": true,

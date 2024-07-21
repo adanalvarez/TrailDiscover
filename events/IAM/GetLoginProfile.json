@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Retrieving IAM user details can help attackers understand the structure and users within the cloud infrastructure."
         }
     ],
     "usedInWild": true,

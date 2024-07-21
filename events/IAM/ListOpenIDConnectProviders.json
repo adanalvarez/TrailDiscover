@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1201 - Password Policy Discovery",
+            "reason": "By understanding which OIDC providers are configured, attackers might infer the password policies tied to these providers."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Identifying OIDC providers gives attackers insights into the cloud infrastructure, revealing the different third-party services and platforms integrated with the AWS environment."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Listing OIDC providers provides details about the system's authentication setup, contributing to the overall system information an attacker can gather."
         }
     ],
     "usedInWild": true,

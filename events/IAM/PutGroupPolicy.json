@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Inline policies can be altered to disable or impair security features such as monitoring and alerting."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "Inline policies can be modified to change authentication processes, making it easier to bypass existing security controls."
         }
     ],
     "usedInWild": false,

@@ -10,12 +10,12 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1586 - Compromise Accounts",
+            "reason": "Deactivating MFA is part of compromising user accounts to ensure ongoing access and persistence within an AWS environment."
         }
     ],
     "usedInWild": false,

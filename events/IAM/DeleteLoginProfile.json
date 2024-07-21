@@ -15,8 +15,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The deletion of a login profile is a form of account manipulation, altering the state of an IAM user account to possibly favor continued unauthorized access through other means like access keys or roles"
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By deleting the login profile, an attacker can remove a user's ability to log in with a password, thus removing an access method that might be used for legitimate purposes or incident response, aiding in persistence and defense evasion."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "Removing the password of an IAM user modifies the way that user can authenticate, potentially replacing it with a method controlled by the attacker, facilitating unauthorized access while evading detection."
         }
     ],
     "usedInWild": true,

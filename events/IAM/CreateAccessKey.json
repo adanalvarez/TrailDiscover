@@ -12,12 +12,17 @@
         "T1078 - Valid Accounts"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1136.003 - Create Account: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "New keys might be used to impair security defenses by disabling or modifying security tools."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "New keys can be used for account manipulation activities, providing additional or unauthorized access."
         }
     ],
     "usedInWild": true,

@@ -10,12 +10,20 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "This technique involves using API calls to discover cloud assets. Listing instance profiles is a way to enumerate resources and their configurations in the cloud environment."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Enumerating instance profiles can help identify valid accounts and roles that an attacker might use to maintain access or escalate privileges within the environment."
+        },
+        {
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "The API call can help gather information about the identities and roles within the AWS environment, which could be used for further attacks or social engineering."
         }
     ],
     "usedInWild": true,

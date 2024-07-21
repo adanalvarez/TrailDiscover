@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adding a user to a group with elevated permissions can allow the user to maintain access to the AWS environment with legitimate credentials."
         }
     ],
     "usedInWild": false,

@@ -16,8 +16,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Detaching a policy from a user can be used to revoke permissions from legitimate accounts, impacting their ability to perform actions."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Detaching a policy can be used as a way to remove or limit access to critical accounts, impacting operational capabilities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Security controls relying on certain policies may be disabled or impaired when those policies are detached."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "By removing critical policies, the attacker can cause a denial of service for endpoints relying on those permissions to function properly."
         }
     ],
     "usedInWild": true,

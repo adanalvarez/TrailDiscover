@@ -10,12 +10,20 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By retrieving information on IAM groups and their policies, attackers can understand the permissions associated with each group. This information is useful for identifying which groups have elevated privileges."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "If an adversary gains access to this information, they can identify valid accounts within the AWS environment, aiding in furthering access or compromising specific accounts."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "By gathering detailed information on IAM roles and policies, attackers can map out the cloud infrastructure, understand the hierarchy and relationships between resources, and identify potential weaknesses or entry points."
         }
     ],
     "usedInWild": false,

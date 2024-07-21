@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": " Using this API, attackers can determine the permissions associated with specific IAM roles or users, aiding in privilege escalation planning."
+        },
+        {
+            "technique": "T1615 - Group Policy Discovery",
+            "reason": "By simulating principal policies, attackers can identify the group policies and their impact on IAM roles and entities."
         }
     ],
     "usedInWild": true,

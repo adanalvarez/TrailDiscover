@@ -10,12 +10,12 @@
         "T1098 - Account Manipulation"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1098.001 - Account Manipulation: Additional Cloud Credentials"
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1068 - Exploitation for Privilege Escalation",
+            "reason": " - Exploitation for Privilege Escalation"
         }
     ],
     "usedInWild": false,
