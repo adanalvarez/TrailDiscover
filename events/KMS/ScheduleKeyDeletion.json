@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1561 - Disk Wipe",
+            "reason": "By scheduling the deletion of a KMS key, the adversary could render encrypted data useless, effectively wiping the disk content indirectly."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting a KMS key can disrupt the availability of data, causing a denial of service on the applications relying on the encrypted data."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "An adversary may remove access to encrypted data by scheduling the deletion of the KMS key, which is crucial for decryption."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The scheduling of a key deletion might involve manipulating existing KMS permissions or roles to gain the necessary rights to perform the action."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Deleting a KMS key can impair security defenses by making logs or other critical data inaccessible if they are encrypted with the deleted key."
+        },
+        {
+            "technique": "T1486 - Data Encrypted for Impact",
+            "reason": "By deleting the encryption key, the adversary ensures that the encrypted data is rendered unusable, impacting the integrity and availability of the data."
         }
     ],
     "usedInWild": false,

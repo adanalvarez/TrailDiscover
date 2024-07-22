@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Encrypting data before exfiltration can help to evade detection and bypass certain security controls, however this would be quite noisy."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Encrypting information can make it harder for security tools to analyze the content of the data, aiding in evasion. This could be used for things like other keys to avoid suspicion."
         }
     ],
     "usedInWild": true,
