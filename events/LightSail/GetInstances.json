@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Using GetInstances, attackers can retrieve detailed information about the instances, such as instance IDs, names, and states, providing insight into the system's configuration."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Although indirect, details about instances can hint at the types of processes and services running within those instances."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Instance metadata often includes user or owner information, which can be used to identify who is responsible for the instances."
         }
     ],
     "usedInWild": false,

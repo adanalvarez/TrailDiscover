@@ -17,8 +17,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The Lambda function can be configured to execute JavaScript code, enabling attackers to run malicious scripts."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": " By using Lambda, attackers can delete logs or files to evade detection."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers might create Lambda functions designed to disable security monitoring tools or alerts."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Lambda functions can communicate over standard web protocols, enabling Command and Control communication that blends with regular traffic."
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "Utilizing the AWS API to deploy and manage Lambda functions involves using native APIs to conduct malicious activities."
+        },
+        {
+            "technique": "T1190 - Exploit Public-Facing Application",
+            "reason": "If the Lambda function is triggered via a public-facing API, it can be exploited to gain initial access or execute code."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Attackers might schedule Lambda functions to execute at specific intervals, providing a means of persistence or delayed execution."
         }
     ],
     "usedInWild": true,

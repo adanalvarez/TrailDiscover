@@ -15,8 +15,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Lambda functions can be used to execute scripts and commands, allowing attackers to run arbitrary code within the AWS environment."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The Invoke API call can be used to establish communication channels over various application layer protocols for command and control purposes."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers can invoke Lambda functions under the guise of legitimate requests to evade detection."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "An attacker can use Lambda functions to download or transfer malicious tools into the environment."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Lambda functions can be used to stage data for exfiltration, storing collected information temporarily."
+        },
+        {
+            "technique": "T1219 - Remote Access Software",
+            "reason": "Attackers can use Lambda functions as a form of remote access to maintain control over compromised systems."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers might use obfuscation techniques in Lambda functions to hide malicious activities."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Lambda functions can be scheduled to execute tasks periodically, allowing persistent execution of malicious code."
         }
     ],
     "usedInWild": true,

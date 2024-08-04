@@ -18,8 +18,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Adversaries can use AWS Lambda to execute commands or scripts by updating the function code to include the desired commands or scripts."
+        },
+        {
+            "technique": "T1648 - Serverless Execution",
+            "reason": "Attackers may maintain persistence in a target environment by continually updating Lambda function code in serverless environments."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Staging data in cloud storage services can be facilitated by updating the Lambda function code to interact with these storage resources."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Updating Lambda function code to access metadata services enables the function to collect and archive data."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Attackers can modify cloud compute infrastructure to execute malicious activities by updating the Lambda function."
+        },
+        {
+            "technique": "T1056 - Input Capture",
+            "reason": "By updating the Lambda function code to capture inputs, such as keystrokes or API inputs, adversaries can collect sensitive information."
+        },
+        {
+            "technique": "T1106 - Native API",
+            "reason": "Directly updating the Lambda function code allows adversaries to exploit native APIs to execute their payloads."
         }
     ],
     "usedInWild": false,
