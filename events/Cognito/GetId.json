@@ -9,6 +9,21 @@
     "mitreAttackTechniques": [
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1078.002 - Valid Accounts: Domain Accounts",
+        "T1078.001 - Valid Accounts: Default Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1110 - Brute Force",
+            "reason": "Attackers might attempt to generate or retrieve multiple IdentityIDs through brute force, seeking unauthorized access."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "By linking multiple logins to a single IdentityID, attackers can modify the authentication process, facilitating persistence and evading detection."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

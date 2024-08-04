@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By attaching a policy to a group, an adversary can ensure that even if certain accounts are revoked, the group as a whole still retains the permissions."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

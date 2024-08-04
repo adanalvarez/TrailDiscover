@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Querying the availability of foundation models is a form of system information discovery, as it provides insight into the operational aspects of the system."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The GetFoundationModelAvailability call can be used to determine the state and availability of foundation models, which is valuable host information."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

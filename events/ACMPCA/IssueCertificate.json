@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1040- Network Sniffing"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078- Valid Accounts",
+            "reason": "Issuing a certificate can create a valid cloud account credential. This certificate could be used to authenticate against various services. Issued certificates could be used to create or access local accounts within the cloud infrastructure. "
+        },
+        {
+            "technique": "T1212- Exploitation for Credential Access",
+            "reason": "Certificates can be exploited to gain credential access, especially if they include sensitive authentication details or are from a trustd CA."
+        },
+        {
+            "technique": "T1136- Create Account",
+            "reason": "An adversary might use a certificate to create new cloud accounts or gain access to existing ones under the guise of legitimate credentials."
+        },
+        {
+            "technique": "T1588- Obtain Capabilities",
+            "reason": "By using this API call an adversary has successfully gained the capability to create digital certificates."
+        },
+        {
+            "technique": "T1550- Use Alternate Authentication Material",
+            "reason": "Issued certificates can be used as alternative authentication material in place of traditional credentials like web cookies, aiding in Credential Access and Defense Evasion."
+        },
+        {
+            "technique": "T1586.003- Compromise Accounts",
+            "reason": "By issuing certificates through the IssueCertificate API call, adversaries can compromise cloud accounts by creating legitimate credentials for accessing cloud services. These certificates can be used to authenticate and gain control over cloud accounts, facilitating Initial Access and Persistence. The adversary can then maintain access by leveraging these certificates, bypassing traditional authentication mechanisms and evading detection."
+        },
+        {
+            "technique": "T1027- Obfuscated Files or Information",
+            "reason": "Certificates issued via this API call can be used to obfuscate the true nature of communication and data, aiding in Defense Evasion."
+        },
+        {
+            "technique": "T1553- Subvert Trust Controls",
+            "reason": "By issuing a certificate, an adversary can sign malicious binaries, making them appear legitimate and trusted, aiding in Defense Evasion."
+        },
+        {
+            "technique": "T1071.001- Application Layer Protocol - Web Protocols",
+            "reason": "Issued certificates can be used to secure communication over web protocols, potentially aiding in Defense Evasion and Credential Access by making malicious traffic appear legitimate."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

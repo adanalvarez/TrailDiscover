@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1538 - Cloud Service Dashboard",
+            "reason": "Accessing configuration information through API calls to understand settings."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

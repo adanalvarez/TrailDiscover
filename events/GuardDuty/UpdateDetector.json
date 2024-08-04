@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "An attacker may update the GuardDuty detector to avoid detection by altering or hiding security logs and alarms"
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

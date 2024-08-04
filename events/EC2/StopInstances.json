@@ -11,6 +11,23 @@
         "T1499 - Endpoint Denial of Service",
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+        "T1578.003 - Modify Cloud Compute Infrastructure: Delete Cloud Instance"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "Stopping an instance can be a precursor to manipulating the stored data, especially if the instance is hibernated and the memory contents are preserved but the disk is later modified."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Stopping instances can disable security monitoring tools and defenses running on those instances, hindering their ability to detect malicious activities."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Stopping an instance directly impacts availability and can be used as part of a larger attack to disrupt services."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

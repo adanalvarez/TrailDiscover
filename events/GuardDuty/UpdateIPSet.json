@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070.004 - Indicator Removal",
+            "reason": "Modifying an IPSet can remove IPs that would otherwise generate security findings, thus evading detection."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

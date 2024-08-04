@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Although not creating new users, it enables valid accounts to access models, which can be exploited for continued access."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "This API call allows manipulation of permissions related to model access, which can be leveraged for privilege escalation or maintaining access."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1136 - Create Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "By starting SSO, an adversary can manipulate IAM user accounts, adding or modifying permissions to maintain persistent access."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Use of valid SSO credentials can help adversaries gain access to various services and resources without raising alarms."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

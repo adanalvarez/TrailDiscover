@@ -11,6 +11,16 @@
         "T1098 - Account Manipulation",
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1078.001 - Valid Accounts: Local Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "The CreateLoginProfile API call can be used to set a new password for an existing IAM user, effectively modifying the authentication process for that user."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

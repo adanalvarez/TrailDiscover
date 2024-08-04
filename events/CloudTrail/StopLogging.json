@@ -9,6 +9,16 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By stopping the logging, the adversary prevents the creation of future log entries, effectively removing indicators that would otherwise be generated, thus evading detection and hindering incident response efforts."
+        }
+    ],
     "usedInWild": false,
     "incidents": [
         {

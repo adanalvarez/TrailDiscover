@@ -11,6 +11,23 @@
         "T1580 - Cloud Infrastructure Discovery",
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The InvokeModel API call can be scripted to run repeatedly, allowing for the continuous extraction of data. For example, an attacker could automate requests to the API, each time providing new or varied prompts that extract different pieces of sensitive information"
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "An attacker who has access to AWS credentials can set up a process where InvokeModel API calls are made to generate sensitive information in small chunks. Each chunk of data, once generated, can be immediately sent to an S3 bucket or another cloud storage service controlled by the attacker. This method ensures that data is consistently moved out of the compromised environment without raising alarms associated with large data transfers."
+        },
+        {
+            "technique": "T1203 - Exploitation for Client Execution",
+            "reason": "Exploiting vulnerabilities in a model's interface could trigger unintended code execution through the InvokeModel API."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {
