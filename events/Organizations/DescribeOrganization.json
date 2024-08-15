@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "DescribeOrganization can be used to discover details about accounts within the organization, including account IDs and email addresses."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Information gathered can assist in identifying valid accounts within the organization, aiding further actions that require valid credentials."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By creating a new AWS account within the organization, attackers can obtain valid cloud credentials for future access and operations."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Creating a new account can be used to manipulate and manage user accounts, potentially hiding malicious activities under a legitimate-looking account."
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "Creating a new account can establish persistence, allowing an attacker to maintain access even if the initially compromised account is detected and removed."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers can use the new account to disable or modify security tools and configurations within the cloud environment to avoid detection."
         }
     ],
     "usedInWild": true,

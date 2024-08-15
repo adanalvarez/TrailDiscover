@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "By listing the organizational units, an adversary can identify relationships and trust boundaries between different parts of the organization, gaining insight into the hierarchical structure that may be exploited later."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Knowledge of the organizational units can inform an adversary about different parts of the cloud infrastructure, helping to discover systems or accounts that can be targeted for further actions."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "The API can reveal different organizational units that might correspond to permission groupings or roles within the AWS environment, which is crucial for understanding how access is managed across the organization."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "By understanding the organizational units, an adversary can piece together information about the internal network structure, which can be critical for furthering internal reconnaissance efforts."
         }
     ],
     "usedInWild": true,

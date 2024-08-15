@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Adding accounts to the organization can be used to manipulate account permissions and roles for persistence or escalation of privileges."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Using the API call to communicate and manage accounts in the organization can evade detection mechanisms focused on other layers."
+        },
+        {
+            "technique": "T1102 - Web Service",
+            "reason": "Utilizing AWS Organizations API as a web service to manage accounts can help in evading direct detection of unauthorized activities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By adding new accounts, an attacker might impair the existing security defenses, such as monitoring and logging configurations, by creating noise or adding trusted accounts."
+        },
+        {
+            "technique": "T1199 - Trusted Relationship",
+            "reason": "Inviting an account creates a trusted relationship that can be exploited for initial access or lateral movement within the organization."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "Using the ListAccounts API call, an attacker can enumerate all accounts within the AWS organization, gaining insight into the structure and scope of the organization's AWS environment."
         }
     ],
     "usedInWild": true,

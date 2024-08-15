@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Leaving the organization can be used to evade security controls and monitoring that are applied at the organization level, reducing the chances of detection."
         }
     ],
     "usedInWild": false,
