@@ -14,8 +14,44 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The ChangeResourceRecordSets API can be used to modify DNS records, allowing attackers to establish command and control channels using DNS or other application-layer protocols like HTTP/HTTPS."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By altering DNS records, attackers can hide or modify evidence of their activities, such as tampering with or removing logs associated with DNS queries to avoid detection by security systems."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Attackers may use this API to redirect network traffic through external or internal proxies by changing DNS records, which helps conceal the true destination of the traffic and evade monitoring tools."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "Altering DNS records can mislead or redirect users and systems, potentially sending them to malicious IP addresses or disrupting the normal operation of services by providing false information."
+        },
+        {
+            "technique": "T1568 - Dynamic Resolution",
+            "reason": "Attackers can frequently update DNS entries using this API to maintain control over compromised systems or to evade detection by constantly altering the destination of command and control traffic."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By modifying or deleting DNS records, attackers can effectively deny legitimate users access to services, redirecting traffic to incorrect or malicious servers, thereby locking out authorized access."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Changing or deleting essential DNS records can lead to a denial of service, where users are unable to access critical resources because DNS queries resolve to incorrect addresses."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Constant manipulation of DNS records may be used to obscure the attacker's activities, making it more challenging for defenders to trace or understand the methods used for command and control or data exfiltration."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "By redirecting traffic from legitimate information repositories to a malicious destination through altered DNS records, attackers can collect sensitive data under the guise of normal operations"
+        },
+        {
+            "technique": "T1557 - Man-in-the-Middle",
+            "reason": "Modifying DNS records to reroute traffic to malicious sites can facilitate man-in-the-middle attacks, allowing attackers to intercept or manipulate communications between users and services."
         }
     ],
     "usedInWild": true,

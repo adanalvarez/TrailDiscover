@@ -14,8 +14,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By adding specific AWS account IDs to the ValuesToAdd parameter, an attacker can ensure persistent access to a DB snapshot by authorized accounts."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying the snapshot to make it public or share it with specific accounts might bypass certain security controls, aiding in defense evasion."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Making a DB snapshot public or sharing it with specific accounts allows unauthorized access, facilitating the exfiltration of sensitive data to an attacker-controlled AWS account."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Removing attributes or specific account IDs from the ValuesToAdd parameter can be used to cover tracks by eliminating evidence of unauthorized access."
+        },
+        {
+            "technique": "T1087 - Account Manipulation",
+            "reason": "Modifying the attributes to include or exclude certain account IDs is a form of account manipulation, impacting who can access the snapshot."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By removing access to certain AWS accounts from the ValuesToAdd parameter, legitimate users may be denied access, contributing to account access removal tactics."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The API call itself operates over an application layer protocol (typically HTTPS) and can be part of a communication channel used by the attacker to modify and transfer data within the cloud."
         }
     ],
     "usedInWild": true,

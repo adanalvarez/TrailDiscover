@@ -14,8 +14,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By deleting the DB cluster, an attacker could disable or remove a crucial part of an organization’s monitoring or logging setup if these were hosted on the RDS instance."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting a DB cluster could also serve to remove access to critical data and services, thereby disrupting operations and hindering incident response."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting the DB cluster may remove evidence of previous activities, such as logs or data that could be used to investigate the attack, serving as a method to evade detection."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "The deletion of a DB cluster directly results in stopping the associated service, causing disruption to any applications or services relying on that database."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "By deleting the DB cluster, the attacker effectively denies access to the endpoint associated with the database, preventing legitimate users from interacting with the data and services hosted on the DB cluster."
+        },
+        {
+            "technique": "T1490 - Inhibit System Recovery",
+            "reason": "Deleting a DB cluster can prevent data recovery if backups are also targeted or if the deletion is part of a strategy to ensure that data cannot be restored."
+        },
+        {
+            "technique": "T1491 - Defacement",
+            "reason": "The deletion of the DB cluster could cause a web application or service to become unavailable or display errors, which can be perceived as defacement, especially if the service is customer-facing."
         }
     ],
     "usedInWild": true,

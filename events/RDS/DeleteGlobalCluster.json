@@ -14,8 +14,36 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting a global database cluster can cause an application or system to become unavailable, effectively denying service to legitimate users."
+        },
+        {
+            "technique": "T1561 - Disk Wipe",
+            "reason": "The deletion of a global database cluster can be seen as a form of storage deletion, where critical data is irreversibly destroyed."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting the global database cluster, an attacker can remove evidence of the existence of that cluster, potentially hindering forensic investigations."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Deleting a global database cluster will stop associated services, disrupting operations and causing an impact on availability."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Deleting the database cluster can disable monitoring or logging capabilities, thus impairing defenses by making it harder to detect malicious activity."
+        },
+        {
+            "technique": "T1490 - Inhibit System Recovery",
+            "reason": "By deleting a global database cluster, an attacker may prevent system recovery by ensuring that critical data or configurations cannot be restored."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "If the global database cluster contains authentication information or is tied to account access mechanisms, deleting it can effectively remove or disrupt account access."
+        },
+        {
+            "technique": "T1491 - Defacement",
+            "reason": "The deletion of a global database cluster could serve as a form of defacement, especially if the cluster supports a public-facing application, causing reputational damage."
         }
     ],
     "usedInWild": false,
