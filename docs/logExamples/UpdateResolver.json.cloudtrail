@@ -1,0 +1,42 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "eventCategory": "Management",
+      "eventID": "ad140370-6dfb-4d93-9356-ba32eb5acc21",
+      "eventName": "UpdateResolver",
+      "eventSource": "appsync.amazonaws.com",
+      "eventTime": "2024-08-18T13:21:07Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "413083a6-f841-4812-8dcd-f5d229a889ed",
+      "requestParameters": {
+         "apiId": "TrailDiscoverApiId",
+         "fieldName": "TrailDiscoverFieldName",
+         "pipelineConfig": {
+            "functions": [
+               "TrailDiscoverFunctions"
+            ]
+         },
+         "requestMappingTemplate": "***",
+         "responseMappingTemplate": "***",
+         "typeName": "TrailDiscoverTypeName"
+      },
+      "responseElements": {
+         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: appsync:UpdateResolver on resource: arn:aws:appsync:us-east-1:192374575148:/v1/apis/TrailDiscoverApiId/types/TrailDiscoverTypeName/resolvers/TrailDiscoverFieldName"
+      },
+      "sourceIPAddress": "109.196.12.142",
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_34bbdb4b-caf7-440f-8ca0-7fe6ff217c12 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#appsync.update-resolver",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

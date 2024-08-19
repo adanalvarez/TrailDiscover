@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ssm:ResumeSession on resource: arn:aws:ssm:us-east-1:192374575148:session/TrailDiscoverTarget because no identity-based policy allows the ssm:ResumeSession action",
+      "eventCategory": "Management",
+      "eventID": "414dacad-43e6-4327-aec8-dcb0caacc5dc",
+      "eventName": "ResumeSession",
+      "eventSource": "ssm.amazonaws.com",
+      "eventTime": "2024-08-18T16:13:21Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "219e0244-a4ea-40b8-b870-059954972199",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+         "clientProvidedHostHeader": "ssm.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.2"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_f303ce4d-3e7b-43b5-84c0-0b58b10696c7 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ssm.resume-session",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

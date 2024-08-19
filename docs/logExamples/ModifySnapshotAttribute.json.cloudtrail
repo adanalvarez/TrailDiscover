@@ -1,0 +1,47 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:ModifySnapshotAttribute on resource: arn:aws:ec2:us-east-1::snapshot/snap-046281ab24d756c50 because no identity-based policy allows the ec2:ModifySnapshotAttribute action. Encoded authorization failure message: DLf6QVYy_ZsMvXL5UQwCbgK2_QlnUh3MoADfUPv-WQDhGfY6yn9sGM0OydymqexCTW7U0wmsxkYsJyAq0-OB39jdQZIgSk1vM64Kw_sG2a5kUZ1c8vh2BjdVG-qY1E_TYz0kKNsNVFY1vnpTrpsO6fwDc7W9mUMJvVbykYGVUTgeOOJZc87fqfZfEwHcjyubetIZs1Wd5KB0bbekhQIe7eZgXHcEK9iSKOgfttOvJyAeYvBfgeDxfhWz_pMSTvludFt4x7sfGVD7Vkav8AR3taS9tTBYlrBDMebtu-vJ76CZBVzVnfIA_y63io2danlv3Pufaf0YigCa9qe2ihJfXLMWL9-rBjO2BtkueUhGH8hx4lO54GeUpiLtXTcUG4W7Yq1_73KrRBgnGMfbkQVIYIPNfSg4OCH-wwfTR4_xkg0J3vEydEThM1XpEqFvT4tmBOPbBhtzvGEjyc0bJTPDR3JUvIRtpaR6Vw4ys2E5cJA41jHL7Pz6VYBXWWMfwKuitnTYxh5Hu3EjhgIcCWKai9Swc29E0ag9Gv03iyFsTsbHtFykOmt0OhzE31XOlVlQB14xQ0kChMsvuJ_H6LqZBGPaHM3mUUV2GykislCO_sXcsu0CRZ7Vl_ApnafIp7z2WAQuMsjrhNaKFQWizl0mDboRG1z87xOs4yE...",
+      "eventCategory": "Management",
+      "eventID": "1b5e60ad-3f81-43c8-8b33-7c1788ae9bd1",
+      "eventName": "ModifySnapshotAttribute",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:19:44Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "a7ef511b-5d8a-43a1-942f-d23420baff64",
+      "requestParameters": {
+         "attributeType": "CREATE_VOLUME_PERMISSION",
+         "createVolumePermission": {
+            "remove": {
+               "items": [
+                  {
+                     "userId": "123456789012"
+                  }
+               ]
+            }
+         },
+         "snapshotId": "snap-046281ab24d756c50"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_5e4698f8-de04-49f3-96c7-95a2fe5dd205 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.modify-snapshot-attribute",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

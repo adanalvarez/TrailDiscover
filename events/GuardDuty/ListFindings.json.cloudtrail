@@ -1,0 +1,31 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "eventCategory": "Management",
+      "eventID": "48a3444f-e727-4360-b8c7-c05e8ed47ed9",
+      "eventName": "ListFindings",
+      "eventSource": "guardduty.amazonaws.com",
+      "eventTime": "2024-08-18T16:44:40Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "5d9daeb1-4057-425e-9ce3-ff34c4ae556b",
+      "requestParameters": {
+         "detectorId": "TrailDiscoverDetectorId"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_49395dd7-0308-4a54-85fe-edf318e49279 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.list-findings",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

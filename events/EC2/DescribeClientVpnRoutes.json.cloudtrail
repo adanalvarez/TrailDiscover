@@ -1,0 +1,39 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeClientVpnRoutes on resource: arn:aws:ec2:us-east-1:192374575148:client-vpn-endpoint/* because no identity-based policy allows the ec2:DescribeClientVpnRoutes action. Encoded authorization failure message: w_C6D3D2If6YxyI7gAG1rhZKyD8a3Y47smvugQrAn-tLDfpZquKf3XtKd1Mt-tk0ZdzVYupl4U_YhU1ssSo2aIgKJ_Tmk8rEORqOd6Fkv20D5ialEvH2Qnx6cUbPoOTypD1IPAO0XIjkfDxCnU28PK8tn3mcW5z4Co0sdbjC4w_OFjkq3JpvCZGD3f-b-Z34w_z-DDCi9aMIcO4QP23Sq-Vn_UCdk-ZC5qYirGnPlZ9lP23UIm9smGvrgBJeyKnU7wF4_yzb4V30ggfunyG5R_jHbiHRmI4qqndNgJoRAr83P2t7IdA1de2BNFLtr4qyZV5bWDix9_O7DM_pwpltvI2EH-ueBjc_rXDAoZVfoShCcjRvpJJFoTc_Lj7vdsTHtDc1Mo12h-aOZeNezVdoLLF9OoVFA2dk465XUXP_s72SUvNXMWwTxI610096fxxfnLUh-VoDd5NNft8z2FlD1y0Rf_xfZcXEcixfCsVCVCSOvYFmM5-7hK_v4shPC4Ou8y8Vibadwv-tHrOGFbxd0_jxMj-iBA",
+      "eventCategory": "Management",
+      "eventID": "80367a3e-a9f4-44dd-9cf9-b30d4b53144e",
+      "eventName": "DescribeClientVpnRoutes",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:27:35Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "e1e21965-5643-478a-96bb-ac165cc57a29",
+      "requestParameters": {
+         "DescribeClientVpnRoutesRequest": {
+            "ClientVpnEndpointId": "cvpn-endpoint-123456789123abcde"
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_168f64e0-888f-449f-bc3c-e0a49b4eea33 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-client-vpn-routes",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

@@ -1,0 +1,33 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "eventCategory": "Management",
+      "eventID": "95614094-37de-41f8-8dd0-19e73a21bd86",
+      "eventName": "CreateApiKey",
+      "eventSource": "appsync.amazonaws.com",
+      "eventTime": "2024-08-18T13:17:41Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "45f6dc04-2729-4409-bad4-2aaf95382f74",
+      "requestParameters": {
+         "apiId": "TrailDiscoverApiId"
+      },
+      "responseElements": {
+         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: appsync:CreateApiKey on resource: arn:aws:appsync:us-east-1:192374575148:/v1/apis/TrailDiscoverApiId/apikeys"
+      },
+      "sourceIPAddress": "109.196.12.142",
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_07c3196f-96a4-4e34-ab92-ac480b3f33a7 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#appsync.create-api-key",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

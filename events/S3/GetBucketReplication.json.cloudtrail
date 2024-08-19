@@ -1,0 +1,47 @@
+[
+   {
+      "additionalEventData": {
+         "AuthenticationMethod": "AuthHeader",
+         "CipherSuite": "TLS_AES_128_GCM_SHA256",
+         "SignatureVersion": "SigV4",
+         "bytesTransferredIn": 0,
+         "bytesTransferredOut": 341,
+         "x-amz-id-2": "Z99+pOE5at8HUfpiYLNgghqAll4ceOz5ZS3SJ+CUybSRbdVy5Q3kCZ8GO5b9GlyGlkpbuWI2jEP6MiaZjQxpWRDIRWvRll1A7AI7rdhgqeo="
+      },
+      "awsRegion": "us-east-1",
+      "errorCode": "NoSuchBucket",
+      "errorMessage": "The specified bucket does not exist",
+      "eventCategory": "Management",
+      "eventID": "9d7bdca8-b298-4a2e-9515-c601b4716edb",
+      "eventName": "GetBucketReplication",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2024-08-18T13:40:44Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "JWQKC1SE3ZTPVGTK",
+      "requestParameters": {
+         "Host": "s3.us-east-1.amazonaws.com",
+         "bucketName": "TrailDiscoverBucket",
+         "replication": ""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "s3.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_298cd21b-dbb7-4620-98fb-c51173ceb1e6 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-bucket-replication]",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

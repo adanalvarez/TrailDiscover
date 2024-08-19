@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudTrail Log Example Viewer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Notification about the tool used to generate the log -->
+    <div class="notification">
+        This log was generated using the tool <a href="https://github.com/DataDog/grimoire" target="_blank">Grimoire</a>.
+    </div>
+    
+    <div id="jsonViewer" class="json-viewer"></div>
+    <div class="back-button-container">
+        <button onclick="window.history.back();" class="back-button">Go Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

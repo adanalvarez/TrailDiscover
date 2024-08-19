@@ -1,0 +1,44 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateInstanceExportTask on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:CreateInstanceExportTask action. Encoded authorization failure message: tOtMgKrojKBdikVshRGWDYLMupP7yIHJvRJyKIRXB8uJMh_OzJNDXPhWlzd5Wr-K29pG3uPnZm2GDnRFV8mtaKt6CYU6oGfSWKiHDGYdiSpS3g9wlitQ9LxW15IleXb6lV0TkBveluuMShTYBkdi-M_wsirn7JXLHhOkFqfg0IdpoJyDcdFVJFutZv1icD5kaSc8UaTm-B0rZ8RU-VZIGe6rpIgi4BU2hP5gurkxKRq4-Dcp4OS72LxUBWeYUVLAbyMvhQIfyTr_LctcqJBrWLQ2dEbEqTyczv_hn4FUJnpNN07a1XytZ3Ir8iFc6bCc2e6PB5jNT0IoFOp9ZecHW1quwaiiC-O9VTtzQCH63BH9fkzHqctkrALCKRh6Vg2ru3lntqcmx5tXexuRLxSaESpHHS6g8r5uoUIXJBuFVAhoitwifR258p2L9o4a2Yrc4sHkpHVadRZN8-bFT-ls75UkfM8XuTVGB6creDt9IVYy_EJAOWAKFb-tvDsEWKgwBSFj-65j-8D3i2Lt-uVpXw0",
+      "eventCategory": "Management",
+      "eventID": "05e9d4c2-6231-4e9f-bc67-8b5295e25023",
+      "eventName": "CreateInstanceExportTask",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T13:53:54Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "3ca5e5b1-2e35-44c2-bd60-103f24a9358f",
+      "requestParameters": {
+         "exportToS3": {
+            "containerFormat": "TrailDiscoverContainerFormat",
+            "diskImageFormat": "TrailDiscoverDiskImageFormat",
+            "s3Bucket": "TrailDiscoverS3Bucket",
+            "s3Prefix": "TrailDiscoverS3Prefix"
+         },
+         "instanceId": "TrailDiscoverInstanceId",
+         "targetEnvironment": "TrailDiscoverTargetEnvironment"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_75431df9-4379-4377-a498-1abadfe4d194 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-instance-export-task",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

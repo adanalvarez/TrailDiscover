@@ -1,0 +1,39 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateImage on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:CreateImage action. Encoded authorization failure message: sjCIkW5X3-uOzkv1EzwGC-5G9RdSyrqCu95JBmQPa6EIDgvD_s6e4Nwb2Kbp47lPIteddSyVp9qkX5x3HsKwbTllmbwNNcOcLVarukJG74VoaP8tit6rtOHpuO-XaCbwLWHv0JARQqhrbf2rJK13W6mCw0X8XQU5xFTdYzpq7z9xxKTK0pGbj_e8rxjdBQkOyohcm3m9S6pDZ-G1A7P7NiPbsgDShrrNe_eBAxEm0Z1FUqI7OIXPtNZrYOY-kIKmfCsxCvF2eCl9QAm7IGWdPy8wYcV0U6nvixWpaGP9xPe_Io94bQY4QisQ4BTN-XNyZNQ7-HDoyICSvaVzhISjJVoePq88YXYuQk1piclxcI9uJ1jGLXDTGnA_5t6v6Fi9-9fX3-X9t5XLEHShg64gc2pZF5oaneEBamCGcp0_8XQYn3LOsmJQ-GqBJ7qtIvS948EXxEk--rL4qXevxqJ50aQ9cqJ-gUIjud_uRk-KWbRe4SgUSvYdJoEH0fiGHKIsfEU-wnKehLMy",
+      "eventCategory": "Management",
+      "eventID": "872ad123-6fb0-4732-b7af-5da4684fa49b",
+      "eventName": "CreateImage",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:31:52Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "4a0d9c10-3af2-4645-a604-b82a35557347",
+      "requestParameters": {
+         "description": "\"TrailDiscoverImageDescription\"",
+         "instanceId": "TrailDiscoverInstanceId",
+         "name": "\"TrailDiscoverImageName\""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_6198d6e9-11df-4e14-800b-c104a15822b5 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-image",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]
