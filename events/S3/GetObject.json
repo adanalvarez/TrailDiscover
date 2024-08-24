@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "The GetObject API call is used to retrieve data from specific objects within S3 buckets, making it essential for adversaries collecting data from cloud storage."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The GetObject operation can be invoked over HTTPS, which is a common method for communicating with AWS services and could be used to exfiltrate data covertly."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "If the object retrieved using GetObject is in an archived format, such as a compressed file (e.g., zip), this API call is necessary to access and stage the archived data, which could then be extracted and used by the adversary."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Adversaries may retrieve objects that contain obfuscated data, using the GetObject API to download the data before decoding it."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "The GetObject operation might be part of a process where data is retrieved and temporarily stored (staged) before further processing or exfiltration."
+        },
+        {
+            "technique": "T1570 - Lateral Tool Transfer",
+            "reason": "Retrieving an object that contains tools or scripts via GetObject can be part of a lateral movement strategy, where tools are transferred between compromised systems."
         }
     ],
     "usedInWild": true,

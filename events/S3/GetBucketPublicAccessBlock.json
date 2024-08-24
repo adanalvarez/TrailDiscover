@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1615 - Group Policy Discovery",
+            "reason": "Retrieving the PublicAccessBlock configuration allows adversaries to discover the security policies and restrictions applied to S3 buckets, which helps them understand the overall security posture."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adversaries might use the GetPublicAccessBlock API call to check for misconfigurations or overly permissive settings in S3 buckets, potentially leading to unauthorized access and exploitation of valid cloud accounts."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Knowing the PublicAccessBlock settings helps attackers assess how restrictive the bucket's access policies are, enabling them to plan actions that minimize the creation of logs or alerts, and to more effectively remove or avoid indicators of compromise."
+        },
+        {
+            "technique": "T1538 - Cloud Service Dashboard",
+            "reason": "By using the GetPublicAccessBlock API, attackers can monitor and understand security settings typically available in a cloud service dashboard, aiding in the reconnaissance of security controls."
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Knowing the PublicAccessBlock settings can help attackers determine whether an S3 bucket is vulnerable to resource hijacking, where unauthorized parties use cloud resources for their own purposes."
         }
     ],
     "usedInWild": true,

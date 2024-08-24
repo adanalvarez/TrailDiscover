@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting an S3 bucket can prevent legitimate users from accessing important data, aligning with the removal of access to resources."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting an S3 bucket directly results in the destruction of data stored in that bucket, making this technique highly relevant."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting an S3 bucket can serve as a method of removing evidence or logs that may be stored within the bucket, helping to evade detection."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting an S3 bucket could result in a denial of service if critical data or services that rely on that bucket become unavailable."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "If the S3 bucket is tied to a critical application or service, deleting it could effectively stop that service, aligning with this technique."
         }
     ],
     "usedInWild": true,

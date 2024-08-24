@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Understanding the versioning and MFA Delete status allows attackers to potentially collect older or deleted versions of data, which might not be available in a non-versioned setup."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Knowing whether MFA Delete is enabled provides insights into the robustness of the bucket's security. Attackers may attempt to modify or disable such protections if they have sufficient permissions."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers with valid accounts (e.g., those who have compromised credentials) may use this API call to gather information that could further their goals, such as determining the best method to evade detection or exfiltrate data."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "The versioning status of a bucket might indicate the presence of multiple versions of stored data, which attackers could access and collect as part of their broader objective of gathering information from cloud storage."
         }
     ],
     "usedInWild": true,

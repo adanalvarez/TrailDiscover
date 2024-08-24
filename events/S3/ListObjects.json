@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1083 - File and Directory Discovery",
+            "reason": "Even though directory buckets are not supported, ListObjects allows an attacker to discover the contents and structure of an S3 bucket by listing objects."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "This API call can be used to identify and stage data within S3 buckets, which may be prepared for exfiltration."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "The ListObjects call enables the retrieval of data stored within S3 buckets, which are often utilized as information repositories."
         }
     ],
     "usedInWild": true,

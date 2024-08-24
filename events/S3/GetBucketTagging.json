@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "The GetBucketTagging API call can reveal tag information that may indicate domain or organizational trust relationships within AWS, helping adversaries understand the trust boundaries of the bucket."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Tags may include sensitive information or classifications about the data stored in the S3 bucket, aiding attackers in prioritizing which data to exfiltrate or further target."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "ags retrieved from the bucket may contain information about the AWS accounts, IAM roles, or user groups with permissions, which can be used to identify potential targets for credential theft or account takeover."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The API call might provide insights into user or service accounts associated with the bucket through tags, allowing adversaries to identify accounts that have access to critical resources."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Tags could provide information about the owner of the bucket or associated resources, which could help attackers in social engineering or in targeting specific individuals or roles within the organization."
+        },
+        {
+            "technique": "T1484 - Group Policy Discovery",
+            "reason": "Tags could indicate group-like configurations or policies associated with buckets, such as those related to access control or data management, offering insights into how resources are managed or accessed."
         }
     ],
     "usedInWild": true,

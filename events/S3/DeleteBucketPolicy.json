@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting a bucket policy can remove specific account or role permissions, effectively locking out other identities from accessing the bucket, which supports account access removal."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By deleting a bucket policy, an attacker could disable or weaken security controls that were enforced by the policy, making it easier to execute subsequent malicious actions."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "If an attacker deletes the bucket policy, they can manipulate access controls to further their persistence or impede legitimate access, which could be considered a form of account manipulation."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting the bucket policy can remove key indicators of unauthorized access or changes. Since the policy itself might contain logging configurations or access control rules, its removal could make it harder to detect and track the attacker's actions, thereby aiding in evasion of detection."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting the bucket policy can lead to denial of service for legitimate users who rely on the policy to access the bucket, especially if the policy enforced critical access controls."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "By deleting the bucket policy, an attacker might indirectly cause services depending on that policy to stop functioning correctly, thereby achieving a form of service stop."
         }
     ],
     "usedInWild": false,

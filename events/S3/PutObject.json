@@ -14,8 +14,32 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1074 - Data Staged",
+            "reason": "The PutObject API call can be used to store objects in S3 as a staging area for data that might be collected or processed before exfiltration or further use."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Attackers can use PutObject to overwrite existing objects with benign data or to modify metadata, helping to conceal malicious activity by removing indicators of compromise within cloud storage."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "The PutObject API can be used to transfer tools or malicious binaries into an S3 bucket, facilitating their retrieval and execution elsewhere in the environment."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers could upload objects with names or metadata that mimic legitimate files using the PutObject API, making malicious content harder to detect."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The PutObject API could be used to overwrite critical objects, leading to data loss or destruction, particularly if previous versions are not preserved."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers can use PutObject to upload files containing hidden or obfuscated data (e.g., within images), supporting defense evasion."
+        },
+        {
+            "technique": "T1570 - Lateral Tool Transfer",
+            "reason": "Objects added to an S3 bucket via PutObject can be used to transfer tools or payloads across different cloud environments, supporting lateral movement within compromised infrastructure."
         }
     ],
     "usedInWild": true,

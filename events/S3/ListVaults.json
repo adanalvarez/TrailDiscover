@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "The ListVaults API call is used to enumerate all vaults within S3 Glacier, which could help an attacker identify potential storage locations for exfiltration."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Listing vaults provides insight into the structure and ownership of cloud storage resources, which can be useful for discovering cloud accounts and identifying valuable targets."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "The API call can be used to list and access data stored in vaults, which may be part of broader data collection or exfiltration efforts."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Understanding the vaults associated with an account can inform attackers about which accounts manage sensitive data, potentially guiding further credential access attempts."
         }
     ],
     "usedInWild": true,

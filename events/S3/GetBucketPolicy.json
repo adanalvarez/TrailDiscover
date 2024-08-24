@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "If an adversary can access a bucket policy, it may provide insights into valid accounts or roles that can be exploited for further access."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment."
+        },
+        {
+            "technique": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment.",
+            "reason": "Analyzing the bucket policy might allow attackers to discover group policies that affect user or service permissions, aiding in further privilege escalation or persistence efforts."
         }
     ],
     "usedInWild": true,

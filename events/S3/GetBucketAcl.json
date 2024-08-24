@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By examining the ACL, an attacker can identify accounts or roles that have access to the bucket, which can then be used to gain unauthorized access through valid credentials."
+        },
+        {
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "By examining the ACL, an attacker could gather information about the identities (users, roles, or accounts) that have access to the bucket, which can be useful in planning further attacks."
         }
     ],
     "usedInWild": true,

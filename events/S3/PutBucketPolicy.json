@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "A malicious policy could allow an attacker to exfiltrate data from an S3 bucket to an external location."
+        },
+        {
+            "technique": "T1190 - Exploit Public-Facing Application",
+            "reason": "Incorrectly configured policies on directory buckets might expose them to public access, making them susceptible to exploitation by external actors."
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "An attacker might leverage the modified bucket policy to maintain access via alternate authentication methods, such as session tokens or identity federation mechanisms."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Attackers can modify a bucket policy to revoke access from certain users or roles, making it difficult for legitimate users to regain control over the resource."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Modifying the bucket policy can directly alter the permissions and access rights of various accounts, effectively manipulating who has control over the S3 resources."
         }
     ],
     "usedInWild": false,
