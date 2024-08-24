@@ -1,0 +1,39 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateRoute on resource: arn:aws:ec2:us-east-1:192374575148:*/* because no identity-based policy allows the ec2:CreateRoute action. Encoded authorization failure message: 2L9VcJAIQR6b051oiAT1ADvhlvaRfOpZxPjkAOhBJxJRitTZyhhqfVGTjq00npd6Gw5WAplqXU9LOlYY1xwVebSYuuEovONqYgk-KDVleDrtpctdsk-3Nmp6HMz83WkvUJtIcStNLVNmNPFQE5fmH0mL3I8sMH0OLdWQDZECppi72jhMQV1QPT8Ymf-aG0bgBmKXPYTJV5uabzI8doYZXVmkT6wrW_dDz4tjEhbs8KAh6dnNbBAPBLBl3AptJAdn3TyozpdhloFpGZy-d8XXR5qwnU9J25GM-lxtce6ZV9SjIYPOlekj87KmyVQrnJF1G75VEUHJHDVVaHZqxdI0O9JsoFocG-pJpCjoBWbHZnNT7Roc_RyX2jJ0uZbMR4S-7dJHVVpaH9lRBK1nNbgTFsX2teyycjD25G9wM_4vHs1K6pByn5OvAUDM2wev5HUpd6AJ1n4RFDHDWE7ZUyh9oCuVlw2rSHNJEsKh7lF7okrovsYjpIm2Izn9N8-N",
+      "eventCategory": "Management",
+      "eventID": "d121bef5-9ddc-4aed-aed8-861a375beacc",
+      "eventName": "CreateRoute",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:38:48Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "9a1038f5-d25a-4960-910b-934f509bca40",
+      "requestParameters": {
+         "destinationCidrBlock": "TrailDiscoverDestinationCidrBlock",
+         "gatewayId": "TrailDiscoverGatewayId",
+         "routeTableId": "TrailDiscoverRouteTableId"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_3d9bdb3b-4993-422a-90d2-f5e811724ebe cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-route",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

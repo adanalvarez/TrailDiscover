@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: iam:PutUserPolicy on resource: user TrailDiscover because no identity-based policy allows the iam:PutUserPolicy action",
+      "eventCategory": "Management",
+      "eventID": "12f2d218-e61e-4015-8c74-5651e9c0146a",
+      "eventName": "PutUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2024-08-18T11:47:32Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "c4396b39-e11a-4843-a283-cc75ef08a4d4",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "iam.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_7203e53e-94a3-4588-aa1e-07e2bfbb606a cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.put-user-policy",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

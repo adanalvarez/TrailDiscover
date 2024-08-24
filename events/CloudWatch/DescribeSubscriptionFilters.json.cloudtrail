@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: logs:DescribeSubscriptionFilters on resource: arn:aws:logs:us-east-1:192374575148:log-group:TrailDiscoverLogGroupName:log-stream: because no identity-based policy allows the logs:DescribeSubscriptionFilters action",
+      "eventCategory": "Management",
+      "eventID": "ec409114-3158-4bdb-9d49-bc8586ecba76",
+      "eventName": "DescribeSubscriptionFilters",
+      "eventSource": "logs.amazonaws.com",
+      "eventTime": "2024-08-18T09:31:55Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "9de535ca-b1fb-4fc9-b35e-24bf7635b6d2",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "logs.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_5e8b13b1-b18d-4c32-bf6a-b0f542d26818 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#logs.describe-subscription-filters",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

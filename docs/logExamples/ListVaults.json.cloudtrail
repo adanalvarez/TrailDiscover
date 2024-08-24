@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: glacier:ListVaults on resource: arn:aws:glacier:us-east-1:192374575148:vaults/ because no identity-based policy allows the glacier:ListVaults action",
+      "eventCategory": "Management",
+      "eventID": "6f7d51f2-6566-4b7d-930a-5d412d0a4cda",
+      "eventName": "ListVaults",
+      "eventSource": "glacier.amazonaws.com",
+      "eventTime": "2024-08-18T13:51:40Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "knMXVHViQthmDeB_9Cf9dr_oAGCvBhDN3egehlDxnTN8x6I",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "glacier.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_48dd3e1d-36a0-4c6b-ab5d-35f129f98580 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#glacier.list-vaults",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

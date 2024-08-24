@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ssm:StartSession on resource: arn:aws:ssm:us-east-1:192374575148:document/SSM-SessionManagerRunShell because no identity-based policy allows the ssm:StartSession action",
+      "eventCategory": "Management",
+      "eventID": "3d3af9d3-6413-4472-bbb3-9f56de8c69a8",
+      "eventName": "StartSession",
+      "eventSource": "ssm.amazonaws.com",
+      "eventTime": "2024-08-18T16:09:02Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "1d07f1d6-3902-472e-b8d3-7ce9e7a83387",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+         "clientProvidedHostHeader": "ssm.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.2"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_69893d91-6efb-4289-8b03-736f178bc044 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ssm.start-session",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

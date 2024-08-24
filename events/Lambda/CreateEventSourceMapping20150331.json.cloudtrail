@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: lambda:CreateEventSourceMapping on resource: * because no identity-based policy allows the lambda:CreateEventSourceMapping action",
+      "eventCategory": "Management",
+      "eventID": "aa3ecf3c-f96f-45e6-9ecc-226e586f3288",
+      "eventName": "CreateEventSourceMapping20150331",
+      "eventSource": "lambda.amazonaws.com",
+      "eventTime": "2024-08-18T09:49:34Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "d99d6d97-dab7-429c-85bf-c29083f6a0af",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_044f8c6b-7b60-443b-ac32-f60614b419ab cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#lambda.create-event-source-mapping",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

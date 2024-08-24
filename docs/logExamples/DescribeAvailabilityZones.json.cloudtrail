@@ -1,0 +1,52 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeAvailabilityZones because no identity-based policy allows the ec2:DescribeAvailabilityZones action",
+      "eventCategory": "Management",
+      "eventID": "1d9eb4cf-ab44-4b4a-8582-cb384659ae84",
+      "eventName": "DescribeAvailabilityZones",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:05:41Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "3bd8e370-a577-4517-aa15-73874f194b5c",
+      "requestParameters": {
+         "availabilityZoneIdSet": {},
+         "availabilityZoneSet": {},
+         "filterSet": {
+            "items": [
+               {
+                  "name": "region-name",
+                  "valueSet": {
+                     "items": [
+                        {
+                           "value": "TrailDiscoverRegion"
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_542c7c7b-17c3-4eaf-b185-ddb49d41d700 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-availability-zones",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

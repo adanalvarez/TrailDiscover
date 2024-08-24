@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: rds:AuthorizeDBSecurityGroupIngress on resource: arn:aws:rds:us-east-1:192374575148:secgrp:traildiscoverdbsecuritygroupname because no identity-based policy allows the rds:AuthorizeDBSecurityGroupIngress action",
+      "eventCategory": "Management",
+      "eventID": "8452b6af-6048-4b93-8cd1-0aa8563b8e06",
+      "eventName": "AuthorizeDBSecurityGroupIngress",
+      "eventSource": "rds.amazonaws.com",
+      "eventTime": "2024-08-18T15:40:34Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "7e71e3df-ce87-4a02-8b17-9c63a135ea0e",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "rds.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_fea269f9-8bd8-4316-a643-9e5f620cf3d3 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#rds.authorize-db-security-group-ingress",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

@@ -1,0 +1,45 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeSecurityGroups because no identity-based policy allows the ec2:DescribeSecurityGroups action",
+      "eventCategory": "Management",
+      "eventID": "bf2e688a-ca85-4891-9d16-dcf2b777bb8b",
+      "eventName": "DescribeSecurityGroups",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:12:02Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "11b40a3c-cfd3-4484-8c38-b95d99870bb8",
+      "requestParameters": {
+         "filterSet": {},
+         "securityGroupIdSet": {},
+         "securityGroupSet": {
+            "items": [
+               {
+                  "groupName": "TrailDiscoverSecurityGroup"
+               }
+            ]
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_31e2a39a-d33e-4217-bd69-29770369c69b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-security-groups",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

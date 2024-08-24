@@ -282,6 +282,33 @@ document.addEventListener('DOMContentLoaded', function() {
         // Finally, append the alerting paragraph (with all images) to the modal body
         modalBody.appendChild(alerting);
 
+        // Example CloudTrail Log
+        let displayLog = false;
+        // Directly checking if we should display the log link
+        for (const simulation of event.simulation) {
+            if (simulation.type === 'commandLine' && simulation.value !== 'N/A') {
+                displayLog = true;
+                break; 
+            }
+        }
+        if (displayLog) {
+            const exampleLog = document.createElement('p');
+            exampleLog.innerHTML = `<strong>Example Log:&nbsp&nbsp</strong>`;
+            const exampleLogLink = `logExamples/?event=${event.eventName}`;
+            const exampleLogAnchor = document.createElement('a');
+            exampleLogAnchor.href = exampleLogLink;
+            const exampleLogImage = document.createElement('img');
+            exampleLogImage.src = 'logos/grimoire.png';
+            exampleLogImage.alt = 'Click to example log';
+            exampleLogImage.style.width = '30px';
+            exampleLogImage.style.height = 'auto';
+            exampleLogImage.style.cursor = 'pointer';
+            exampleLogAnchor.appendChild(exampleLogImage);
+            exampleLog.appendChild(exampleLogAnchor);  
+            modalBody.appendChild(exampleLog);
+        }
+        
+
         // Simulation
         const simulation = document.createElement('p');
         simulation.innerHTML = `<strong>Simulation:&nbsp;&nbsp;</strong>`;

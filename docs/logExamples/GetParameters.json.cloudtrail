@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ssm:GetParameters on resource: arn:aws:ssm:us-east-1:192374575148:parameter/TrailDiscoverParameters because no identity-based policy allows the ssm:GetParameters action",
+      "eventCategory": "Management",
+      "eventID": "5537fd22-5a82-494f-93ae-d17b20451e62",
+      "eventName": "GetParameters",
+      "eventSource": "ssm.amazonaws.com",
+      "eventTime": "2024-08-18T16:06:54Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "7a9b8269-a392-42b1-b5e3-8434eee309d9",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+         "clientProvidedHostHeader": "ssm.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.2"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_b12428a7-d3c0-4ff9-8b64-66c7e37a4764 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ssm.get-parameters",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

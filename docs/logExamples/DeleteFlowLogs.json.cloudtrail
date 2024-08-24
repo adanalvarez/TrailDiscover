@@ -1,0 +1,42 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.InvalidParameterValue",
+      "errorMessage": "1 validation error detected: Value '[TrailDiscoverFlowLogId]' at 'flowLogId' has an invalid format",
+      "eventCategory": "Management",
+      "eventID": "d6135b67-b4ea-4142-928c-77d83c95e320",
+      "eventName": "DeleteFlowLogs",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:23:32Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "9ac81fb7-9076-4736-a344-988cd1083997",
+      "requestParameters": {
+         "DeleteFlowLogsRequest": {
+            "FlowLogId": {
+               "content": "TrailDiscoverFlowLogId",
+               "tag": 1
+            }
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_fe9064e3-21cd-4478-8b0f-23050a4d0854 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.delete-flow-logs",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

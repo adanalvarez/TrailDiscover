@@ -1,0 +1,40 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.InvalidParameterValue",
+      "errorMessage": "The instance ID 'TrailDiscoverInstanceId' is malformed",
+      "eventCategory": "Management",
+      "eventID": "a09130b7-6927-4dfc-89cc-2506928a30b2",
+      "eventName": "AttachVolume",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:18:51Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "9d8cad96-e719-4c67-b7ff-7738da952d17",
+      "requestParameters": {
+         "deleteOnTermination": false,
+         "device": "TrailDiscoverDeviceName",
+         "instanceId": "TrailDiscoverInstanceId",
+         "volumeId": "TrailDiscoverVolumeId"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_355458f0-581a-4101-a27f-a97908384ae2 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.attach-volume",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: config:StopConfigurationRecorder because no identity-based policy allows the config:StopConfigurationRecorder action",
+      "eventCategory": "Management",
+      "eventID": "f59ee926-fe5d-444b-b8c2-dd6241823ec4",
+      "eventName": "StopConfigurationRecorder",
+      "eventSource": "config.amazonaws.com",
+      "eventTime": "2024-08-18T17:20:28Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "cfaa2d1e-db1a-40f6-9cd3-13483af78577",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "config.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_caa4e02a-9892-4240-8f9a-911d9a31200f cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#configservice.stop-configuration-recorder",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

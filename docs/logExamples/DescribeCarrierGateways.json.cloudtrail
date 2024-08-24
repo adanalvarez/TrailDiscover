@@ -1,0 +1,42 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeCarrierGateways because no identity-based policy allows the ec2:DescribeCarrierGateways action",
+      "eventCategory": "Management",
+      "eventID": "56a4aefa-70e0-4018-94a3-4bf246662217",
+      "eventName": "DescribeCarrierGateways",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:34:19Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "fec84e71-9b09-429e-acf5-02a2d5d5f8f5",
+      "requestParameters": {
+         "DescribeCarrierGatewaysRequest": {
+            "CarrierGatewayId": {
+               "content": "TrailDiscoverCarrierGatewayId",
+               "tag": 1
+            }
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_6d174966-4a4b-4b83-ad16-bf2a29d60191 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-carrier-gateways",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]
