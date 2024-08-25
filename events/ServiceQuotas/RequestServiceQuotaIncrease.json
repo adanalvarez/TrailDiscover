@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "The API allows for requesting additional resources, enabling the attacker to develop infrastructure needed for further malicious activities."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers using valid accounts might request increased quotas to misuse cloud resources under the guise of legitimate activity."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Increasing resource quotas to their maximum can be used to create conditions that lead to resource exhaustion and potential denial-of-service attacks."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By increasing quotas, attackers can potentially disable or impair security monitoring tools, operating outside of normal detection thresholds."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The API can help attackers identify previously requested quota increases, revealing insights into cloud resource usage and potential targets within an account."
         }
     ],
     "usedInWild": true,

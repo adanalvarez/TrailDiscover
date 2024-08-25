@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "This API call allows an adversary to determine the SMS sandbox status, which can reveal if an AWS account is still in a test phase or if it's been moved to production, indicating how the account might be used or targeted."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Understanding whether an account is in the SMS sandbox could help an attacker ascertain the validity and usage level of the account, which might be crucial for planning an initial access strategy."
         }
     ],
     "usedInWild": true,

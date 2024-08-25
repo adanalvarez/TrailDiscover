@@ -14,8 +14,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The SwitchRole API call indicates that a user is leveraging valid credentials to access different roles, which could be used for maintaining persistence, evading detection, or moving laterally within the AWS environment."
+        },
+        {
+            "technique": "T1068 - Exploitation for Privilege Escalation",
+            "reason": "Switching to a role with higher privileges could be an attempt to escalate privileges within the AWS environment."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By switching to a role with sufficient privileges, an attacker could disable or modify security controls such as CloudTrail logging, thus impairing the defenses in place to detect and respond to malicious activities."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The use of SwitchRole can be a tactic to manipulate IAM roles and associated policies, thus enabling or disabling certain permissions or roles."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "The API call might be used to masquerade as a different user or role, enabling an attacker to carry out malicious activities under the guise of a legitimate user."
         }
     ],
     "usedInWild": false,

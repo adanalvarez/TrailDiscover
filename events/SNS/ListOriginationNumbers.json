@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1087 - Account Discovery",
+            "reason": "The ListOriginationNumbers API call provides information on the account's SMS origination numbers, which could help an adversary discover and map out cloud resources associated with the account."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By accessing the list of verified and pending origination numbers, an attacker can confirm the existence of these numbers and their association with a valid AWS account, which may be useful for planning further attacks."
         }
     ],
     "usedInWild": false,

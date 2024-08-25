@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": " By verifying an email address, an adversary might create a valid cloud account identity that could be used in subsequent malicious activities, making it appear as if actions are being carried out by a legitimate user."
+        },
+        {
+            "technique": "T1588 - Obtain Capabilities",
+            "reason": "Adversaries could use the API to validate an email identity, thereby acquiring a tool or resource that can be utilized in future phishing or spamming campaigns."
         }
     ],
     "usedInWild": true,

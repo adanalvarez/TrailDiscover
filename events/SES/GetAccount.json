@@ -2,7 +2,7 @@
     "eventName": "GetAccount",
     "eventSource": "ses.amazonaws.com",
     "awsService": "SES",
-    "description": "Lists the applied quota values for the specified AWS service.",
+    "description": "Obtain information about the email-sending status and capabilities of your Amazon SES account in the current AWS Region.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
     ],
@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By obtaining information about the SES account, attackers can identify if an account is enabled for sending emails, aiding in the identification of valid accounts for unauthorized access."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "The GetAccount API call allows an attacker to gather information related to the cloud infrastructure's email capabilities, essential for understanding the cloud environment and planning further malicious activities."
         }
     ],
     "usedInWild": true,

@@ -16,8 +16,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "The GetParameters API, particularly with decryption enabled, can be used to retrieve sensitive credentials if they are stored in the SSM Parameter Store. This can expose API keys, passwords, or other authentication materials."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By using GetParameters, an attacker can gather configuration and environment details stored in the parameters, aiding in system information discovery."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "Attackers can exploit GetParameters to extract important data stored within the Parameter Store, such as system configurations, secrets, or other critical information."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "If parameter values include credentials or tokens, the attacker could use them to access valid accounts, facilitating further malicious activity."
         }
     ],
     "usedInWild": false,

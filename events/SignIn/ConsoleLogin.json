@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1199 - Trusted Relationship",
+            "reason": "An attacker might exploit trusted relationships between accounts, leading to a console login that can be traced back to an initial access attempt."
         }
     ],
     "usedInWild": true,

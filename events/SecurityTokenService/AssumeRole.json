@@ -17,8 +17,24 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By assuming a role with higher privileges, an attacker could disable or remove access for legitimate users, making it harder for defenders to detect and respond."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The attacker can create or manipulate roles and policies to generate additional credentials, enabling unauthorized access or persistent control over resources."
+        },
+        {
+            "technique": "T1484 - Domain Policy Modification",
+            "reason": "If the assumed role has sufficient privileges, an attacker can modify IAM policies or roles, potentially allowing them to grant themselves or others additional permissions."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "An attacker with an assumed role could disable or modify logging or security tools, reducing the ability of defenders to detect ongoing attacks."
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "The attacker can leverage the temporary credentials obtained through AssumeRole to access services in different accounts, enabling lateral movement across AWS environments."
         }
     ],
     "usedInWild": true,

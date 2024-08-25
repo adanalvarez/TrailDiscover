@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "The API can be used to verify the status of email addresses, enabling attackers to identify active and valid email addresses that may be targeted for social engineering or phishing attacks."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Access to this API could indicate that an attacker has compromised cloud credentials, allowing them to monitor or manipulate email verification statuses, potentially leading to further unauthorized access."
         }
     ],
     "usedInWild": true,

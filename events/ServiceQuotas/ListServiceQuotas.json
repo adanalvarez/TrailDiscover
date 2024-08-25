@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "This technique applies because listing service quotas provides insights into the AWS environment’s configurations, which can inform an attacker about the system's structure and limitations."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "By retrieving quota values, attackers can access stored data within AWS repositories, which could be used to inform further actions or planning."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Filtering by account or resource level when retrieving quotas may expose details about which permissions are associated with different accounts or roles."
+        },
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "Listing quotas can reveal which AWS services are in use and their configurations, helping attackers map out the environment and understand what services are available."
         }
     ],
     "usedInWild": true,

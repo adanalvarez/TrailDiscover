@@ -14,8 +14,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The AssumeRoleWithSAML API call allows attackers to use valid SAML assertions to gain temporary access to AWS resources, enabling them to gain initial access, maintain persistence, or escalate privileges."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers can use the AssumeRoleWithSAML API to assume roles, potentially allowing them to manipulate account permissions and escalate privileges within the AWS environment."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Since SAML authentication typically uses web-based protocols, attackers can use the AssumeRoleWithSAML API call to blend in with legitimate web traffic, making their actions harder to detect."
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "By using SAML tokens via the AssumeRoleWithSAML API, attackers can authenticate to AWS services without traditional credentials, assisting in defense evasion."
         }
     ],
     "usedInWild": false,

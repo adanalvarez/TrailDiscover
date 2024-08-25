@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Disabling email sending can help evade detection by preventing the generation of SES-based alerts or logs that might indicate malicious activities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "An attacker could use this API call to disable email sending, potentially preventing security teams from receiving critical alerts and impairing the defenses of the environment."
         }
     ],
     "usedInWild": true,

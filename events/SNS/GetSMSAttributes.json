@@ -14,8 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The GetSMSAttributes call can reveal details about the SMS configuration, including regions, usage patterns, and sender IDs, providing an attacker with valuable information about the environment."
         }
     ],
     "usedInWild": true,

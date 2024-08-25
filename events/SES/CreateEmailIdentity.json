@@ -14,8 +14,28 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "Verifying an email identity or domain is part of acquiring the necessary infrastructure for sending emails, which could be used for malicious activities such as phishing or command and control."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The verification of an email identity, especially when using DKIM, helps establish a legitimate-looking account or service that can be exploited for malicious purposes."
+        },
+        {
+            "technique": "T1566 - Phishing",
+            "reason": "The verified email identity or domain can be utilized to send phishing emails, leveraging the trust established by a verified and legitimate-looking sender address or domain."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The use of DKIM and DNS records helps obfuscate the true intent by making the email communications appear legitimate, thereby evading detection by security controls."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "The verified email identity could be used as part of a communication chain that includes proxies or relays to further mask the origin of malicious emails or commands."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Utilizing verified email identities and domains involves standard protocols like SMTP for sending emails, which could be exploited for command and control communications or other malicious activities under the guise of legitimate traffic."
         }
     ],
     "usedInWild": true,

@@ -16,8 +16,20 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The AssumeRoleWithWebIdentity API allows an attacker to gain valid temporary AWS credentials through a web identity provider, enabling them to access AWS services with authenticated permissions."
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "Attackers could use the AssumeRoleWithWebIdentity API to create new roles or accounts within the AWS environment, establishing persistence through legitimate means."
+        },
+        {
+            "technique": "T1505 - Server Software Component",
+            "reason": "If an attacker has compromised a web application, they can use the AssumeRoleWithWebIdentity API to escalate privileges or maintain persistence by obtaining temporary credentials."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "With the temporary credentials obtained through AssumeRoleWithWebIdentity, an attacker can modify cloud infrastructure, such as launching instances, modifying configurations, or accessing sensitive data."
         }
     ],
     "usedInWild": false,

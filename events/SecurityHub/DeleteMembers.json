@@ -14,8 +14,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting invited member accounts might be used to cover tracks by eliminating evidence of prior monitoring or alerts associated with those accounts."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting member accounts can serve as a way to remove or prevent access to security services and monitoring, effectively denying those accounts access to critical security insights."
         }
     ],
     "usedInWild": false,
