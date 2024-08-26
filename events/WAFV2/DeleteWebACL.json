@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting the WebACL after disassociating it from resources could be used to remove evidence of previous configurations that could have logged or blocked malicious activity."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "By deleting the WebACL, an attacker could attempt to make malicious traffic appear legitimate by removing the security policies that would identify or block it."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting critical WebACL protections, especially after disassociating them from resources, may increase the likelihood of successful DoS attacks against those now-unprotected resources, affecting service availability."
         }
     ],
     "usedInWild": false,

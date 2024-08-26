@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Creating a user in the Transfer Family service results in valid credentials that could be exploited for unauthorized access."
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "The CreateUser API call involves the creation of a new account, which can be used by attackers to establish persistence in the environment."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The creation of a new user account allows for the potential manipulation of user roles or permissions, enabling privilege escalation."
         }
     ],
     "usedInWild": true,

@@ -14,8 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "",
-            "reason": ""
+            "technique": "T1098 - Account Manipulation",
+            "reason": "By deleting a RuleGroup that is crucial for access management, an attacker could manipulate accounts or credentials to bypass security controls."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Removing critical firewall rules could lead to a Denial of Service (DoS) by allowing malicious traffic to overwhelm the system or service endpoints."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "The deletion of a RuleGroup can be used to eliminate logs or indicators of malicious activity by disabling the mechanisms that detect and log those activities."
         }
     ],
     "usedInWild": false,
