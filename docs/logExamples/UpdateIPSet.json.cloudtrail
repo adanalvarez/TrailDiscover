@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: wafv2:UpdateIPSet on resource: arn:aws:wafv2:us-east-1:192374575148:regional/ipset/testip/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 because no identity-based policy allows the wafv2:UpdateIPSet action",
+      "eventCategory": "Management",
+      "eventID": "1acee9b8-b1c0-4b24-8118-ab97955d142d",
+      "eventName": "UpdateIPSet",
+      "eventSource": "wafv2.amazonaws.com",
+      "eventTime": "2024-08-18T17:30:56Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "93ca0132-5a6b-4c50-a6e3-800f19836f1a",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "wafv2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_99575fc5-611b-4d62-99f6-31a77c4f9bd4 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#wafv2.update-ip-set",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

@@ -1,0 +1,37 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateDefaultVpc on resource: arn:aws:ec2:us-east-1:192374575148:*/* because no identity-based policy allows the ec2:CreateDefaultVpc action. Encoded authorization failure message: 4ja0h5zSAYC_WwPZTINbt_bZWh-kXvrNGSrJQSD88iLE8RwE3XQJLShzLDUQueGzFA6D_hhi-kVQF-Zi19JhpwHnbuugPMPiuofAgcwVl_8GN20cA96rt-npOs3D2e7O--v-mTZKOQoJak8a5NzxwUspVBu0E6hI9cp1uWLebhNSasuOeRuPy6LqG0ydDCPuIctJfCLZP2ZLR9pz01LRhMruzHiRond8PDRj7nLtw75sQcbDFWykEIKUtEg1k6u3bmsqk5xAnfsPk9jpil8UT4f4lwjU-e_paFh7XOFWogFsyl2lo6KEyUHLOsFXo_kXZa0NBlNAgNIXt9hseoamtASDA6CFn_Ch9yqJkidHUW55Uvo3cKtdKQ49WwtWdy_SCXMZW9r40PzsL4oHguLRT2YftsXxRvDAxmiet8Tuc3H7Nv4wmMEWegXn7Ajm3KSFr_K5X0KeJ3BJeY2g03YxEsOWNQeQD1qsHeeezdmxDaIfJa4WrHmcPxonyP6_QirlLw",
+      "eventCategory": "Management",
+      "eventID": "b3025abe-2a50-4ea4-ab29-cdc1384c5fc5",
+      "eventName": "CreateDefaultVpc",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:21:57Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "025c444e-4d21-4d2b-ae83-f9f7c271d69e",
+      "requestParameters": {
+         "CreateDefaultVpcRequest": ""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_472440e2-8ea6-41cc-bd5b-3ec152346eb2 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-default-vpc",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

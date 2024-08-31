@@ -1,0 +1,38 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateSecurityGroup on resource: arn:aws:ec2:us-east-1:192374575148:security-group/* because no identity-based policy allows the ec2:CreateSecurityGroup action. Encoded authorization failure message: IR6a5UerHqSNRaG6OukJPNeI5491_JIkFb25RT_J1nrtwQgwMpzqNUMI_hp2_8c24cTSGTpo2U0GLYd-NMGujZqFeZLEXP62_3r9FeUOwtpcEuQ6FpeTnKPOnpANAhS3qVsQWq8qqwIkn0T0d3ecCld8dup58YNvjPDKyBrG7D-9mvpVOwGeUb1bpH7t-PTiSfFY4FqQXhKpLVKHmKIdx45BgvRUF6j-ARuFdxy3xq7-ZT5bXv8SiRRppObfWTyze1F_2obCLP6s_2H8Dj33pObFJ-e0iHPaPwP8MdPqV2xxM-ireWCuVZZBmdrrgrmC1g3XxVfXQcJ8YhpfAXgFhKf0XhGkBwH30xQRpp0DaBLSNzud3USlcMjS9QHnALcPsUzbOy7aTQBtZFiQybS0qmVbA971HRKiqmhoC9AjiiiMjx8ntP1NxcuZRDZPBZ8xqYiO5LafIlb145GkTNK6CEk-XhWpl5BdcrgLRRA8Ys_ZgKpRLJxcskh1Sh-Tgif9kCd6Cy7lOBuN1r6H9zJA",
+      "eventCategory": "Management",
+      "eventID": "e09e1709-c0a7-4996-8d45-18d20763690b",
+      "eventName": "CreateSecurityGroup",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:15:34Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "b294db52-82bd-4685-a1da-6de15d4f09ee",
+      "requestParameters": {
+         "groupDescription": "\"TrailDiscoverDescription\"",
+         "groupName": "TrailDiscoverGroupName"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_a2c395bd-aae6-4e0f-af8f-cffbe71cfc0e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-security-group",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

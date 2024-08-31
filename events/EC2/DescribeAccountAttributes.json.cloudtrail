@@ -1,0 +1,44 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeAccountAttributes because no identity-based policy allows the ec2:DescribeAccountAttributes action",
+      "eventCategory": "Management",
+      "eventID": "2b35b90b-d82a-4934-89e1-50b676469940",
+      "eventName": "DescribeAccountAttributes",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:23:04Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "6180904c-c6d4-48d5-b1ac-b7331a25bdd3",
+      "requestParameters": {
+         "accountAttributeNameSet": {
+            "items": [
+               {
+                  "attributeName": "TrailDiscoverAttribute"
+               }
+            ]
+         },
+         "filterSet": {}
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_e12c7e6a-77da-4c90-ad58-b8cb302ad083 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-account-attributes",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

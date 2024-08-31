@@ -1,0 +1,47 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateNetworkAclEntry on resource: arn:aws:ec2:us-east-1:192374575148:network-acl/acl-5fb85d36 because no identity-based policy allows the ec2:CreateNetworkAclEntry action. Encoded authorization failure message: I971PWaxBP2k85C4oOHlOSFlIQ3ez4-Jtj1Ei3RpuiHHxgkDAM79Ypk8oBa7qnOj7a_Ioixre5_qs26EhQaOkk6qCInm5rJhOtPfZ0O5e1M5hLFhgHZfhHiersnkB1LD30p16-c7KyttFYHANXBzPmojAZ6DK4e_uIwRXhvPkzbLG7NVS3RtwwdbTnND8SxPbJ203tRAOCM8ju5Ex8JySd4-V1rL7ITYSMFbLchWQm9UFdfvz_eXl-rnaMv_qnGl8UIfEgdipZ8RYQ7b6XOrnbC5_dKtkZ0n1Nw6-l7bCtgR6Uh0pgXJGacUaa-33mjS8KPpYsDjBu9KA37-2Hz_VxpnYzUe-NdY8Ba0IuIlwaqjvbnJ041nupwPQ-K_0gIvPGr0Zy_8g_K2YJRy-Bp0EuMJnOyOSZ2jKohM63SE1aSXlyF8b--6KH_qTcNX3-V65lU6-zKyQR08wiFQ_mS3Oo1YwysVaBqfSzDTpY85dWjkAgGEW9UDysU-FG_jbvD6hv3MhKsSTQu6pIR8x9y0NUzXlqaNKoMseT0QMx6bMyc",
+      "eventCategory": "Management",
+      "eventID": "e7921105-f089-46b8-b97c-01b819b7036c",
+      "eventName": "CreateNetworkAclEntry",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:26:17Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "e4b02d05-95e8-4297-baa9-6e7df6864d79",
+      "requestParameters": {
+         "aclProtocol": "17",
+         "cidrBlock": "0.0.0.0/0",
+         "egress": false,
+         "icmpTypeCode": {},
+         "networkAclId": "acl-5fb85d36",
+         "portRange": {
+            "from": 53,
+            "to": 53
+         },
+         "ruleAction": "allow",
+         "ruleNumber": 100
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_7ad326a8-4d3f-4b3e-a402-ee24b28b1d19 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-network-acl-entry",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

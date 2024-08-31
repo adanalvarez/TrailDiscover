@@ -1,0 +1,39 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:GetLaunchTemplateData on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:GetLaunchTemplateData action. Encoded authorization failure message: fXpWG34oZ3q7LMEGt94q7sLzwqxc6lIDAYvFJcjhUm85AyCQLX93l1L5w6mvZ1S3Kqu-aPYZwUOh4iITeb6dTyyaHVfNwzgV10LPlNQwSa3TKlzsAkgbesIYomPkJoxZ9OOmUujLJfF8F40wOvqVM0Lpc5EW0-9i65BEqmO7P1dQOnCVybzuMY8-l5RRks2tIwzb2122CfCdRTPmkv6lvr6gVoEyx2uUat8z_ELn_hewfK2G1eRiY8UZ2_OORgrrWoqnq8g-lAj92-1QfvcSA4tgKfirhEzFbwg_zJyZDJ89Rf19JsjOECf_tkXYfKrry1xVRKqZC6tkrT6Ly7oukZ2s73xX3qQOdUwXlMpL6wtM0UNvpNX9Z5ep7y3kpQTMUyI0SdoPub7k3Lz5ZAbi5qZh26Gclj5BSKkImDMdRFgWLtz8jzzthr-Nr9S_4rPlYtY4Pxr-hUGku-_yzimNCXx5w6TuIMxz3lYCXR8GmoFcvdZjwJF1FeyU-mqYbaR4BOwyOAA9pCLzdLCTXPONQ9vg",
+      "eventCategory": "Management",
+      "eventID": "22fdd79c-3365-413d-afe9-9545afc18b8f",
+      "eventName": "GetLaunchTemplateData",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:24:06Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "90e16c83-b05f-4c19-b92a-d2c55ac319b6",
+      "requestParameters": {
+         "GetLaunchTemplateDataRequest": {
+            "InstanceId": "TrailDiscoverInstanceId"
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_9249f83c-00c6-4b39-9c1f-6193eed2984d cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.get-launch-template-data",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

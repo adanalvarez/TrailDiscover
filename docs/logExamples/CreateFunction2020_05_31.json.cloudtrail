@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: cloudfront:CreateFunction on resource: arn:aws:cloudfront::192374575148:function/trail-discover-function because no identity-based policy allows the cloudfront:CreateFunction action",
+      "eventCategory": "Management",
+      "eventID": "3a2d19b9-772c-42bf-a3fb-758637119245",
+      "eventName": "CreateFunction2020_05_31",
+      "eventSource": "cloudfront.amazonaws.com",
+      "eventTime": "2024-08-18T10:05:35Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "b3157d04-8e2f-4ac0-b580-0c99bb939e37",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_e8581bb8-6783-4b8e-a310-f9673dad917c cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-function",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

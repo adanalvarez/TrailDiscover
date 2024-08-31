@@ -1,0 +1,56 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:AuthorizeSecurityGroupEgress on resource: arn:aws:ec2:us-east-1:192374575148:security-group/* because no identity-based policy allows the ec2:AuthorizeSecurityGroupEgress action. Encoded authorization failure message: ZtihpIuL_EkGNwqJoUK9t1e7P1IlH_OGO-49ceQaUuUd_gVzCCefr9b6mMJYjtCy8lKyqVb3cZXIZZNTcb7rZY3VYBFh42wFWhP07QnzjmL-8XGenLGqUCnYlFVkNJzsArnVDEJ8anTPFQ2YlAsd52ERi_H0v2Uoq_XerKBkjZjvImdnmHPw8d_toha9UoUW3r0RvwJN5xl7ywuOW_FAewUq_FioPExNslbH0nWO6fBjmN0OD-vTo2GkuiX4IixQ86ztsnifCkFfrbhxP_7hDl7tQ-YCuTSQIddSdtlDTnS6wWwcEeOGO9bDj7qsP7fXoiFdRWNg-sLz92fI6yUbnPo4C8Et_Dd4p0IllqzwFpLtapL8KpxxHXaEo0sOXVNKbdOPrQEzvkNAUiW6UJzMHpOQqGFuY_cX2yPh-2vf4vPLUr-GCeYVSOQxU9ILr8rnu3BEDVzpUr75dq2u9F3qp6myXW7vwfzKWHeNQYDDRBCC8kiIvSNfVfVo4-FSPo_BOQXATcmkmcDZBT02Xb81MURQQnhSxNHv",
+      "eventCategory": "Management",
+      "eventID": "baa20bac-3d87-4bf6-b39a-16ef77c377ed",
+      "eventName": "AuthorizeSecurityGroupEgress",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T15:34:04Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "87d2dd20-561f-418d-a381-d33ca36a747d",
+      "requestParameters": {
+         "groupId": "sg-1a2b3c4d",
+         "ipPermissions": {
+            "items": [
+               {
+                  "fromPort": 80,
+                  "groups": {},
+                  "ipProtocol": "tcp",
+                  "ipRanges": {
+                     "items": [
+                        {
+                           "cidrIp": "10.0.0.0/16"
+                        }
+                     ]
+                  },
+                  "ipv6Ranges": {},
+                  "prefixListIds": {},
+                  "toPort": 80
+               }
+            ]
+         }
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_6de5784b-f010-4138-8fb7-0c21a2696730 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.authorize-security-group-egress",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

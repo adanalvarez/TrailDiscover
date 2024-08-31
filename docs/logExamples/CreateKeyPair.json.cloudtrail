@@ -1,0 +1,38 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateKeyPair on resource: arn:aws:ec2:us-east-1:192374575148:key-pair/TrailDiscoverKeyPair because no identity-based policy allows the ec2:CreateKeyPair action. Encoded authorization failure message: KU6E_KJ2YYE2gCdsrjCMfIKReW3Up5hY67C_EArqdz-ICwDxfPgr_n9djUIFX0-1EEOeImEh3cfRF0YuvX0UsXqxV2zPfcrRg-huFdCdDxGulNEz3qaj8ws2e_icig9DjHt4Ecto0cqrGaPFSdBx6YSucFRHR9TRIAj2PI0txW0ORowPiuofnR8pFwSygeeJxLjq5pVS9kfkZ2Nt7JbbTrXw3KMeIXbGN5qgIUJGO0_PwKdOxHeUdQGRLgmKuV9zPFzRHfJ2CpdR5UMz7fmHnvevUCio029OKofk6Ar6EXb8gumuTYxyLUKIrEOBMlgA2mh_ioJAHQw6QQzklGuslm8IDVT6dE6VpMsnIcWH5bAbSTnLTDOZAHRIJ8x7SJ5DxZx3aKA788NlpTDUri1MpRKU47MdpKUI7MtrQ9zsY1g_DEOX73OyHCa01e1f9d94B3bO_O0UvR3sZi_e7KUUuHw3EEQuSnUsaoVuvPZWE_OkM-7SmgA64HqVvLDhxWIpOs2aVQuiRRx8J0gQaFn58qi65H9HOA",
+      "eventCategory": "Management",
+      "eventID": "6ab0fcf3-b7d5-40af-a2d6-8bdc8c5a6bf5",
+      "eventName": "CreateKeyPair",
+      "eventSource": "ec2.amazonaws.com",
+      "eventTime": "2024-08-18T14:32:07Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "6402331b-8d66-4ed8-83ce-908c4287e6f9",
+      "requestParameters": {
+         "keyFormat": "pem",
+         "keyName": "TrailDiscoverKeyPair"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_3de4f2bc-8a21-4802-9e8d-58e2e9922f01 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-key-pair",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

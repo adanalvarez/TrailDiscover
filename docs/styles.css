@@ -103,6 +103,72 @@ th.gridjs-th {
 
 .copy-icon { cursor: pointer; position: absolute; top: 10px; right: 10px; }
 
+.json-viewer {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto; 
+    overflow: auto;
+    white-space: pre-wrap; 
+    font-family: 'Courier New', monospace;
+}
+
+.notification {
+    background-color: #023047;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px; 
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.notification a {
+    color: #ffffff; /* White color for the link */
+    font-weight: bold; /* Bold font weight for the link */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+.notification a:hover {
+    text-decoration: underline; /* Adds underline on hover for better user interaction */
+}
+
+.key {
+    font-weight: bold;
+}
+
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.object, .array { color: #00008B; } /* Navy blue for objects and arrays */
+
+.back-button-container {
+    text-align: center; /* Centers the button horizontally */
+    margin: 20px; /* Adds space around the button */
+}
+
+.back-button {
+    background-color: #023047; /* Background color matching the notification bar */
+    color: #FFFFFF; /* White text color */
+    border: none; /* No border for a modern look */
+    padding: 10px 20px; /* Padding for a larger click area */
+    border-radius: 8px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif; /* Consistent font usage */
+    font-size: 16px; /* Readable text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Subtle shadow for 3D effect */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button:hover {
+    background-color: #035a70; /* Darker shade on hover for feedback */
+}
+
 @media (max-width: 1200px) { 
     .gridjs-td, .gridjs-th {
         padding: 10px; 

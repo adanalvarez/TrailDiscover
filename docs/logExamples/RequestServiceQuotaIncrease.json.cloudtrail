@@ -1,0 +1,35 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: servicequotas:RequestServiceQuotaIncrease on resource: arn:aws:servicequotas:us-east-1:192374575148:ec2/L-20F13EBD because no identity-based policy allows the servicequotas:RequestServiceQuotaIncrease action",
+      "eventCategory": "Management",
+      "eventID": "22fbef70-1824-4377-aaae-8691f15b05e7",
+      "eventName": "RequestServiceQuotaIncrease",
+      "eventSource": "servicequotas.amazonaws.com",
+      "eventTime": "2024-08-18T17:26:32Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.10",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "192374575148",
+      "requestID": "f480dbfa-d2b9-4658-bb4b-753c93232e3a",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "servicequotas.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_589a4cd3-57e8-4f07-a657-daea2d23f34a cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#service-quotas.request-service-quota-increase",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]

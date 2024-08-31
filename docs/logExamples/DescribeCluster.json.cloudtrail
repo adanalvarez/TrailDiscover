@@ -1,0 +1,31 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "eventCategory": "Management",
+      "eventID": "8b3f39df-7ba1-4dae-8b35-589fc8c811c4",
+      "eventName": "DescribeCluster",
+      "eventSource": "eks.amazonaws.com",
+      "eventTime": "2024-08-18T12:52:14Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.09",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "192374575148",
+      "requestID": "c6f0e2b5-e531-4176-bcd9-e56375de2435",
+      "requestParameters": {
+         "name": "TrailDiscoverCluster"
+      },
+      "responseElements": null,
+      "sourceIPAddress": "109.196.12.142",
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_ba12a00f-2cac-44f5-8b69-4dc40c5a911a cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#eks.describe-cluster",
+      "userIdentity": {
+         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
+         "accountId": "192374575148",
+         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
+         "principalId": "AIDASZSTLCAWCAFWFS22H",
+         "type": "IAMUser",
+         "userName": "TrailDiscover"
+      }
+   }
+]
