@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1033 - System Owner/User Discovery",
-            "reason": "This technique can reveal information about system owners or users responsible for resources targeted by EventBridge rules, helping an attacker understand roles and access levels within the organization."
+            "reason": "Listing targets by rule in EventBridge can reveal details about the users or roles associated with those resources. This information helps attackers identify key personnel or accounts with access, aiding in targeted attacks or privilege escalation efforts."
         },
         {
             "technique": "T1057 - Process Discovery",

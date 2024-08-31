@@ -27,7 +27,7 @@
         },
         {
             "technique": "T1074 - Data Staged",
-            "reason": "Once the attacker has described the snapshot tier status, they might stage the collected data locally for further exfiltration or analysis. This technique involves moving data to a local staging area before exfiltration."
+            "reason": "An attacker might use the DescribeSnapshotTierStatus API call to gather snapshot information and then move the relevant data to a local staging area."
         }
     ],
     "usedInWild": true,

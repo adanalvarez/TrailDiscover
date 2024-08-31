@@ -15,11 +15,11 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1113 - Screen Capture",
-            "reason": "This technique involves capturing screenshots of the target system, and the GetConsoleScreenshot API call directly retrieves a screenshot of a running EC2 instance."
+            "reason": "The GetConsoleScreenshot API call captures a screenshot of a running EC2 instance, providing a visual snapshot of the system's state. This can reveal sensitive information displayed on the screen, such as open applications, user activities, or visible credentials."
         },
         {
-            "technique": "This technique involves capturing screenshots of the target system, and the GetConsoleScreenshot API call directly retrieves a screenshot of a running EC2 instance.",
-            "reason": "Accessing the EC2 instance to retrieve a screenshot requires valid credentials, highlighting the relevance of this technique."
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Accessing the GetConsoleScreenshot API requires valid credentials, indicating the need for authorized access to the instance. Unauthorized use of these credentials can lead to capturing sensitive information from the instance."
         },
         {
             "technique": "T1087 - Account Discovery",
@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "Attackers might obfuscate the screenshot contents to evade detection, making this technique relevant."
+            "reason": "The contents of the screenshot retrieved via GetConsoleScreenshot may be deliberately altered or obscured by an attacker to avoid detection. This can make it harder to recognize malicious activity or sensitive data on the instance."
         },
         {
             "technique": "T1016 - System Network Configuration Discovery",

@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1070 - Indicator Removal",
-            "reason": "The DeleteLogStream API call deletes log streams, effectively removing indicators from logs. This technique aligns with the broader tactic of removing evidence to evade detection."
+            "reason": "Deleting log streams removes critical log data, effectively erasing evidence of activities that could be used to detect or investigate malicious behavior. This action makes it difficult for defenders to trace the attacker's steps or identify potential indicators of compromise."
         },
         {
             "technique": "T1485 - Data Destruction",

@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1136 - Create Account",
-            "reason": "This technique involves the creation of accounts, which can be a part of setting up a new stack in CloudFormation."
+            "reason": "The CreateStack API call can be used to set up new accounts within the cloud environment as part of deploying a CloudFormation stack, which aids in gaining and maintaining access."
         },
         {
             "technique": "T1578 - Modify Cloud Compute Infrastructure",

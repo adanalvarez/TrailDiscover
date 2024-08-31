@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1590 - Gather Victim Network Information",
-            "reason": "This technique involves collecting information about the network infrastructure of a cloud environment. Describing load balancers is a direct way to gather details on how traffic is managed and routed in the cloud network."
+            "reason": "Describing load balancers allows an adversary to obtain details on how network traffic is managed and routed within the cloud environment. This information can reveal critical network components and their configurations."
         },
         {
             "technique": "T1046 - Network Service Discovery",

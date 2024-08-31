@@ -20,7 +20,7 @@
         },
         {
             "technique": "T1098 - Account Manipulation",
-            "reason": "This technique involves manipulating account configurations, such as network ACLs, to remove or alter security controls. Deleting specific entries can open paths for unauthorized activities."
+            "reason": "Attackers may manipulate network ACLs as part of account manipulation to remove or alter security controls. This can enable unauthorized access or disrupt normal operations within the cloud environment."
         },
         {
             "technique": "T1531 - Account Access Removal",

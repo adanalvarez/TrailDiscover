@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1526 - Cloud Service Discovery",
-            "reason": "This technique is applicable because the API call provides information on the configuration and setup of IAM roles and their policies, contributing to the discovery of cloud services configurations."
+            "reason": "Listing attached role policies reveals the configuration and permissions of cloud services tied to specific roles. This information helps attackers map out the cloud environment and identify potential targets for further exploitation."
         }
     ],
     "usedInWild": true,

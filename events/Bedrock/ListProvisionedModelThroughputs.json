@@ -27,7 +27,7 @@
         },
         {
             "technique": "T1078 - Valid Accounts",
-            "reason": " This technique involves using legitimate cloud accounts to access information and resources. If an attacker gains access to an account with permissions to use this API call, they can enumerate the provisioned models to understand what resources and data are available in the cloud environment."
+            "reason": "Legitimate cloud accounts with access to this API call can be used to gather information on provisioned models. If an attacker gains control of such an account, they can enumerate resources to assess what data and services are available within the cloud environment."
         }
     ],
     "usedInWild": true,

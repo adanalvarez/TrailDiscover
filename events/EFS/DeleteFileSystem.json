@@ -15,15 +15,15 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1070 - Indicator Removal",
-            "reason": "This technique involves deleting files to remove indicators of malicious activity. Deleting a file system would effectively remove all contents, which could include logs or evidence of malicious actions."
+            "reason": "Deleting an EFS file system removes all its contents, including logs and other forensic evidence, effectively erasing any indicators of malicious activity. This action helps attackers avoid detection by eliminating traces of their presence in the environment."
         },
         {
             "technique": "T1565 - Data Manipulation",
-            "reason": "This technique includes manipulating data stored in systems. Deleting a file system manipulates the stored data by permanently removing it."
+            "reason": "Deleting an EFS file system alters the state of stored data by permanently removing it. This can disrupt operations and affect data integrity, making it a significant form of data manipulation."
         },
         {
             "technique": "T1531 - Account Access Removal",
-            "reason": "This technique involves removing access to accounts or systems. Deleting a file system removes access to the data contained within, impacting users ability to access critical information."
+            "reason": "Deleting an EFS file system cuts off access to the data for all users and systems that rely on it. This action effectively removes the ability to access critical resources, potentially disrupting operations."
         },
         {
             "technique": "T1107 - File Deletion",

@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1098 - Account Manipulation",
-            "reason": "This technique involves altering account settings, such as permissions and memberships, which fits the action of deleting GuardDuty members."
+            "reason": "Deleting GuardDuty member accounts involves altering account configurations, potentially changing access controls or permissions. This action can disrupt security monitoring and allow unauthorized activities to go undetected."
         }
     ],
     "usedInWild": false,

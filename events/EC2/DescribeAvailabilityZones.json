@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1526 - Cloud Service Discovery",
-            "reason": "This technique involves discovering cloud services utilized by the target. The DescribeAvailabilityZones API call reveals information about the cloud services' geographical distribution, aiding in the discovery of cloud services in use, since some servies might be only available in certain availability zones."
+            "reason": "The DescribeAvailabilityZones API call provides information about the geographical distribution of cloud services, aiding in the identification of cloud services in use."
         },
         {
             "technique": "T1018 - Remote System Discovery",

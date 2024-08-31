@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1526 - Cloud Service Discovery",
-            "reason": "This technique involves discovering services and resources in a cloud environment. Using DescribeVolumes, an attacker can list EBS volumes to understand the storage configuration and usage."
+            "reason": "DescribeVolumes allows attackers to list and understand the configuration of EBS volumes within a cloud environment. This information helps map out the storage resources, potentially revealing sensitive data or misconfigurations."
         },
         {
             "technique": "T1069 - Permission Groups Discovery",

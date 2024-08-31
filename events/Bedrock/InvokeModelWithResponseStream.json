@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",
-            "reason": "If the model invocation can execute arbitrary commands or scripts through the input data, this technique applies."
+            "reason": "Attackers could potentially exploit the model invocation process to execute arbitrary commands or scripts, depending on how the input data to the model is handled and interpreted."
         },
         {
             "technique": "T1020 - Automated Exfiltration",
@@ -27,7 +27,7 @@
         },
         {
             "technique": "T1005 - Data from Local System",
-            "reason": "If the Bedrock model processes local system data, this technique covers the collection of that data via the API."
+            "reason": "If the Bedrock model has access to and processes local system data, attackers could leverage the API call to collect sensitive information. This scenario assumes that the model's processing involves data that might include confidential or proprietary information."
         },
         {
             "technique": "T1071.004 - Application Layer Protocol: DNS",

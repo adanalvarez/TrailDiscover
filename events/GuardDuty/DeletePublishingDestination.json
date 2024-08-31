@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1531 - Account Access Removal",
-            "reason": "This technique involves removing access to security controls. Deleting the publishing destination could be part of a broader attempt to limit the visibility and control of security operations."
+            "reason": "Deleting the publishing destination can prevent security personnel from receiving critical alerts, effectively limiting their ability to respond to threats. This action reduces the ability to monitor and manage GuardDuty findings, thereby diminishing the security team's control over the environment."
         },
         {
             "technique": "T1565 - Data Manipulation",

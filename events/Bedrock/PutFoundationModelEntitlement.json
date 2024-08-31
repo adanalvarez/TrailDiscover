@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1059 - Command and Scripting Interpreter",
-            "reason": "If entitlements allow execution of scripts or code within the foundational model environment, this technique could be relevant for executing unauthorized actions."
+            "reason": "The granted entitlements may include permissions that enable the execution of scripts or code, potentially facilitating the execution of malicious scripts under legitimate operations within a controlled environment."
         },
         {
             "technique": "T1562 - Impair Defenses",

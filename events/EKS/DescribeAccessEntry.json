@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1526 - Cloud Service Discovery",
-            "reason": "This technique involves discovering services running in the cloud environment. The DescribeAccessEntry API call can help attackers learn about access permissions and configurations of EKS"
+            "reason": "The DescribeAccessEntry API call can be used to identify access permissions and configurations within the EKS service, revealing which cloud services are in use. This information helps attackers understand the cloud environment and potential targets."
         },
         {
             "technique": "T1587 - Develop Capabilities",

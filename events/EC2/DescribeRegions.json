@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1590 - Gather Victim Network Information",
-            "reason": "This technique involves gathering information about the victim's network, including cloud infrastructure. The DescribeRegions API call provides critical details about the enabled AWS regions, assisting attackers in mapping the cloud environment."
+            "reason": "Attackers can use the DescribeRegions API call to obtain information about the cloud regions where a victim's resources are deployed. This helps in mapping the network and understanding the potential attack surface."
         },
         {
             "technique": "T1082 - System Information Discovery",

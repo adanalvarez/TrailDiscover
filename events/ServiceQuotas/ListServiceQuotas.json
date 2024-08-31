@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1082 - System Information Discovery",
-            "reason": "This technique applies because listing service quotas provides insights into the AWS environment’s configurations, which can inform an attacker about the system's structure and limitations."
+            "reason": "Listing service quotas provides detailed information about the configuration and resource limits within an AWS environment. This information helps attackers understand the system's structure, enabling them to identify potential areas for exploitation or further reconnaissance."
         },
         {
             "technique": "T1213 - Data from Information Repositories",

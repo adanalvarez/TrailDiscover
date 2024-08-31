@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1531 - Account Access Removal",
-            "reason": "This technique involves removing access to cloud accounts, which can be accomplished by deleting inline policies associated with IAM roles, effectively removing permissions and hindering incident response or investigation."
+            "reason": "Deleting inline policies from IAM roles can remove critical permissions, effectively locking out legitimate users or restricting their access. This action can hinder incident response and obscure the attacker's presence in the environment."
         },
         {
             "technique": "T1562 - Impair Defenses",

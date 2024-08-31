@@ -20,7 +20,7 @@
         },
         {
             "technique": "T1078 - Valid Accounts",
-            "reason": "This technique is relevant as attaching a policy can be used to maintain access through a valid cloud account with specific permissions."
+            "reason": "Attaching a policy can grant or elevate permissions for a valid cloud account, enabling persistent access. This action could be used to maintain or escalate privileges within the environment."
         }
     ],
     "usedInWild": true,

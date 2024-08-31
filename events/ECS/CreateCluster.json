@@ -43,7 +43,7 @@
         },
         {
             "technique": "T1584 - Compromise Infrastructure",
-            "reason": "The CreateCluster API call in ECS enables attackers to compromise cloud infrastructure by creating and controlling a versatile and scalable platform for malicious activities. This technique supports persistent access, stealth operations, flexible resource management, and a broad range of attack vectors, making it a critical component of an adversary's strategy to leverage cloud environments for their objectives."
+            "reason": "Compromising cloud infrastructure to create ECS clusters enables attackers to establish control over resources. This can support further malicious activities, such as launching attacks or maintaining persistence in the environment."
         },
         {
             "technique": "T1210 - Exploitation of Remote Services",

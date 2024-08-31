@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1580 - Cloud Infrastructure Discovery",
-            "reason": "This technique involves using API calls to discover cloud assets. Listing instance profiles is a way to enumerate resources and their configurations in the cloud environment."
+            "reason": "The ListInstanceProfiles API call provides details about instance profiles and their associated IAM roles, helping an attacker map out the cloud infrastructure. Understanding the roles in use aids in identifying potential targets for further exploitation or privilege escalation."
         },
         {
             "technique": "T1078 - Valid Accounts",

@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1537 - Transfer Data to Cloud Account",
-            "reason": "Despite the requirement that the S3 bucket must be in the same account and region, this still involves transferring data within a cloud environment, aligning with this technique."
+            "reason": "Exporting an EC2 instance to an S3 bucket involves moving data within the same cloud account and region, but it still represents a transfer of potentially sensitive data to another location within the cloud. "
         },
         {
             "technique": "T1496 - Resource Hijacking",

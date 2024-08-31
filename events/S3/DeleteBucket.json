@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1485 - Data Destruction",
-            "reason": "Deleting an S3 bucket directly results in the destruction of data stored in that bucket, making this technique highly relevant."
+            "reason": "Permanently deleting objects or versions from S3 can result in the loss of critical data, affecting the availability and integrity of information. This action can disrupt business operations by removing essential files, leading to significant data loss and operational downtime."
         },
         {
             "technique": "T1070 - Indicator Removal",
@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1489 - Service Stop",
-            "reason": "If the S3 bucket is tied to a critical application or service, deleting it could effectively stop that service, aligning with this technique."
+            "reason": "Deleting key objects or configuration files from S3 can cause critical services to stop functioning. This disruption can lead to downtime and loss of access to essential systems, impacting business operations."
         }
     ],
     "usedInWild": true,

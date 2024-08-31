@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1560 - Archive Collected Data",
-            "reason": "Listing S3 buckets contributes to this technique by identifying existing storage locations where collected or exfiltrated data can be archived. Attackers can use this information to select a suitable bucket for storing their data within the same account, ensuring that the archived data blends in with legitimate storage resources, making detection more difficult."
+            "reason": "Listing S3 buckets allows attackers to identify available storage locations where they can discreetly store or archive exfiltrated data. By selecting an existing bucket, attackers can blend their activities with legitimate cloud operations, reducing the risk of detection."
         }
     ],
     "usedInWild": true,

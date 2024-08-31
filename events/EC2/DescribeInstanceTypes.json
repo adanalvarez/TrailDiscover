@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1590 - Gather Victim Network Information",
-            "reason": "This technique involves gathering information about the network configurations and structures used by the target. By describing instance types, an attacker can understand the types of EC2 instances available in the target's AWS environment, which can provide insights into network layout and potential vulnerabilities."
+            "reason": "By describing instance types, attackers can identify the network configurations and resources used in the target's AWS environment. This information aids in understanding the network structure and potential vulnerabilities that could be exploited."
         },
         {
             "technique": "T1082 - System Information Discovery",

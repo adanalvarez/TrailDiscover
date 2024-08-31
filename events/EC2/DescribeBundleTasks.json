@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "If the bundle task includes data that is encrypted or obfuscated, this technique applies as it relates to hiding the true nature of the data being handled. The description of what a Bundle Task is not even available on AWS anymore."
+            "reason": "Bundling tasks may involve handling data that is encrypted or obfuscated, concealing the true nature of the information."
         },
         {
             "technique": "T1553.002 - Subvert Trust Controls: Code Signing",

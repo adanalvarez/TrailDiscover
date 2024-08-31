@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1526 - Cloud Service Discovery",
-            "reason": "This technique involves discovering services in the cloud, and GetHostedZoneCount specifically reveals information about Route 53 DNS hosting, a key cloud service."
+            "reason": "The GetHostedZoneCount API call reveals the presence and scale of Route 53 DNS services within the cloud environment. This information helps adversaries understand the cloud infrastructure and identify potential targets for further actions."
         }
     ],
     "usedInWild": false,

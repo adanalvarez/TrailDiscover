@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1082 - System Information Discovery",
-            "reason": "While this technique typically pertains to system-level information, in the context of AWS, using ListRules to understand the setup of EventBridge could reveal configuration information and operational patterns that are crucial for planning further attacks or lateral movements."
+            "reason": "Listing rules helps attackers understand what events are being monitored, giving insight into the environment."
         },
         {
             "technique": "T1069 - Permission Groups Discovery",

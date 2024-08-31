@@ -43,7 +43,7 @@
         },
         {
             "technique": "T1613 - Container and Resource Discovery",
-            "reason": "This technique involves discovering container and resource configurations, which is facilitated by describing images that might be used in containerized environments."
+            "reason": "Attackers can use DescribeImages to identify available container images and resources in the environment. This helps them understand the infrastructure and identify potential targets for exploitation within containerized applications."
         },
         {
             "technique": "T1526 - Cloud Service Discovery",

@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1016 - System Network Configuration Discovery",
-            "reason": "This technique involves querying the network configuration to understand the architecture, such as subnets, route tables, and associated network ACLs within the VPCs."
+            "reason": "Understanding the network configuration by querying VPCs helps an attacker identify the architecture, including subnets, route tables, and network ACLs. This information can reveal how the network is structured and potential points for further exploitation."
         },
         {
             "technique": "T1040 - Network Sniffing",
