@@ -14,16 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "By deleting the configuration recorder, an adversary can prevent the logging of configuration changes, making it harder to track unauthorized access and changes to resources."
-        },
-        {
             "technique": "T1070 - Indicator Removal",
             "reason": "Deleting the configuration recorder aligns with the broader goal of eliminating records that could be used for forensic purposes, removing indicators of compromise."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "By deleting the configuration recorder, an adversary can obfuscate the tracks of their malicious activities, ensuring their actions are not recorded."
         },
         {
             "technique": "T1098 - Account Manipulation",

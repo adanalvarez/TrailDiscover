@@ -22,10 +22,6 @@
             "reason": "Describing log groups can reveal information about the systems and their operations, helping in mapping out remote systems within the cloud infrastructure."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Knowledge of log groups can assist in identifying valid accounts or activities, potentially aiding in discovering compromised or valid credentials used within the environment."
-        },
-        {
             "technique": "T1046 - Network Service Discovery",
             "reason": "By examining log groups, attackers can understand the network services being utilized and their respective configurations, which is crucial for further discovery and potential exploitation."
         },

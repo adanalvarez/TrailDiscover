@@ -12,7 +12,7 @@
         "T1070 - Indicator Removal"
     ],
     "mitreAttackSubTechniques": [
-        "T1070.004 - Indicator Removal on Host: File Deletion"
+        "T1070.004 - Indicator Removal: File Deletion"
     ],
     "unverifiedMitreAttackTechniques": [
         {

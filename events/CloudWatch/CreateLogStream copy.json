@@ -14,12 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1560 - Archive Collected Data",
-            "reason": "The attacker uses PutLogEvents to upload collected data to CloudWatchLogs for archiving and later retrieval."
-        },
-        {
-            "technique": "T1005 - Data from Local System",
-            "reason": "The attacker collects data from the compromised system and uses PutLogEvents to store this data in CloudWatchLogs."
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "The attacker leverages CloudWatchLogs as an AWS web service to exfiltrate data, making it blend in with legitimate service use."
         },
         {
             "technique": "T1102 - Web Service",

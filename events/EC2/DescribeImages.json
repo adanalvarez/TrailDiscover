@@ -50,7 +50,7 @@
             "reason": "Using DescribeImages helps attackers discover available cloud services, their configurations, and associated resources."
         },
         {
-            "technique": "Using DescribeImages helps attackers discover available cloud services, their configurations, and associated resources.",
+            "technique": "T1195 - Supply Chain Compromise",
             "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise"
         }
     ],

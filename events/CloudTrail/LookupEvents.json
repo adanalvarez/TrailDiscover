@@ -38,16 +38,8 @@
             "reason": " By understanding event patterns and data flows, attackers can automate the exfiltration of data from the cloud environment."
         },
         {
-            "technique": "T1560 - Archive Collected Data",
-            "reason": "Identifying how data is stored and accessed can inform attackers on how to archive or move collected data within the cloud environment."
-        },
-        {
             "technique": "T1057 - Process Discovery",
             "reason": "Attackers can use LookupEvents to see which processes or applications are being invoked, gaining insight into the operational environment."
-        },
-        {
-            "technique": "T1202 - Indirect Command Execution",
-            "reason": "LookupEvents can help attackers identify how commands are being executed indirectly through AWS services, aiding in further exploitation."
         }
     ],
     "usedInWild": true,

@@ -14,11 +14,7 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting a delivery channel might be part of actions to remove visibility and audit logs associated with account activities."
-        },
-        {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "By deleting the delivery channel, logs that might contain evidence of malicious activities are removed."
         },
         {

@@ -24,7 +24,7 @@
             "reason": "By updating the resolver, adversaries can utilize valid credentials to access AppSync and maintain persistence."
         },
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "Adversaries can update resolvers to manipulate logs or delete records, evading detection by altering or concealing their tracks."
         },
         {

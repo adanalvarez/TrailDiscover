@@ -18,10 +18,6 @@
             "reason": "CloudFront functions are written in JavaScript, enabling the execution of scripts."
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "The creation of a CloudFront function involves direct interaction with AWS APIs, potentially leveraging native functionalities."
-        },
-        {
             "technique": "T1546 - Event Triggered Execution",
             "reason": "A CloudFront function can be set to trigger on specific events, establishing persistence."
         },
@@ -38,7 +34,7 @@
             "reason": "CloudFront functions can communicate using web protocols, facilitating command and control."
         },
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "Functions can be used to remove or alter log files, helping in defense evasion."
         },
         {

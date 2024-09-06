@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1046 - Network Service Scanning",
-            "reason": "y listing subscription filters, attackers can determine what types of network services and activities are being monitored. This can help them identify potential targets or services that are not being adequately monitored."
+            "reason": "By listing subscription filters, attackers can determine what types of network services and activities are being monitored. This can help them identify potential targets or services that are not being adequately monitored."
         },
         {
             "technique": "T1007 - System Service Discovery",

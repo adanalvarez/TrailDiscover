@@ -46,7 +46,7 @@
             "reason": "Attackers with console access could promote a compromised instance to a domain controller in an Active Directory environment, escalating privileges."
         },
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "The serial console allows attackers to directly interact with the system to delete logs and other indicators of their presence."
         },
         {

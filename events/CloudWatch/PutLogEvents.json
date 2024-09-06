@@ -22,10 +22,6 @@
             "reason": "Logs might be staged in a certain format before being uploaded, allowing attackers to organize and structure the data for further analysis or exfiltration."
         },
         {
-            "technique": "T1005 - Data from Local System",
-            "reason": "Attackers may collect local log data from compromised systems to upload and analyze it in CloudWatchLogs."
-        },
-        {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "The use of AWS APIs like PutLogEvents to communicate can serve as a method to transfer data stealthily."
         },

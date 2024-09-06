@@ -18,10 +18,6 @@
             "reason": "By deleting configuration rules and their results, an attacker could be aiming to destroy security data that would alert defenders to their activities."
         },
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Removing config rules could be part of a broader strategy to remove detection mechanisms tied to account activity and monitoring."
-        },
-        {
             "technique": "T1499 - Endpoint Denial of Service",
             "reason": "While not directly causing a denial of service, deleting config rules could indirectly contribute by removing mechanisms that ensure the stability and compliance of services."
         }

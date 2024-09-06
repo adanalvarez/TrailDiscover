@@ -15,16 +15,12 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "Deleting a CloudTrail trail can be seen as an attempt to remove logs that could be used to detect malicious activity, thereby evading detection."
         },
         {
             "technique": "T1485 - Data Destruction",
             "reason": "Deleting the CloudTrail trail results in the destruction of important log data, which can impact the ability to investigate and respond to incidents."
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "While not directly removing account access, deleting the trail can be part of broader attempts to conceal actions taken against user accounts, hindering detection and response."
         }
     ],
     "usedInWild": false,

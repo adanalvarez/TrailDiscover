@@ -20,10 +20,6 @@
             "reason": "API keys are a form of credentials that attackers can use to gain and maintain access to cloud services."
         },
         {
-            "technique": "T1056.004 - Credential API Hooking",
-            "reason": "Attackers may hook into the API key creation process to intercept and use these credentials for unauthorized access."
-        },
-        {
             "technique": "T1098 - Account Manipulation",
             "reason": "Attackers may manipulate API keys to alter account permissions and settings, maintaining persistence and access."
         },
@@ -37,7 +33,7 @@
         },
         {
             "technique": "T1090 - Proxy",
-            "reason": "Attackers can use API keys to route their malicious traffic through a proxy, hiding their true origin and bypassing security measures."
+            "reason": "Attackers can use API keys to route their malicious traffic through a AppSync, which acts here as a proxy, hiding their true origin and bypassing security measures."
         }
     ],
     "usedInWild": false,

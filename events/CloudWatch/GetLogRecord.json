@@ -24,10 +24,6 @@
         {
             "technique": "T1033 - System Owner/User Discovery",
             "reason": "Log records can reveal information about system owners or users who are interacting with the cloud environment, such as user activity logs and access patterns."
-        },
-        {
-            "technique": "T1078.001 - Valid Accounts: Default Accounts",
-            "reason": "Log records can show instances where default accounts are being used, which could be a security risk if not properly managed. Logs can reveal the use of local accounts within the cloud environment, which can then be assessed for potential security risks."
         }
     ],
     "usedInWild": true,

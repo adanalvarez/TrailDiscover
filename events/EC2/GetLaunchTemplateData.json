@@ -38,7 +38,7 @@
             "reason": "The configuration data may include scripts or commands that can be leveraged to gain further access or control over the instance"
         },
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "By understanding the configuration and storage locations, attackers can delete logs or files to evade detection"
         },
         {

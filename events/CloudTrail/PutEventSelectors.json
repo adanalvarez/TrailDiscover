@@ -16,10 +16,6 @@
         {
             "technique": "T1070 - Indicator Removal",
             "reason": "By configuring event selectors, adversaries can exclude certain activities from being logged, effectively removing traces of their presence and actions, which hinders detection and forensic analysis."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "By customizing event selectors, adversaries can avoid logging specific activities that involve the use of obfuscated files or information, thereby evading detection mechanisms that rely on log analysis."
         }
     ],
     "usedInWild": true,

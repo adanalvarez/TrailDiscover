@@ -14,20 +14,16 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1609 - Container Administration Command",
-            "reason": "The PublishFunction API allows for the execution and management of code in an isolated serverless environment, akin to how container commands manage containerized applications."
-        },
-        {
             "technique": "T1560 - Archive Collected Data",
             "reason": "A published CloudFront function could aggregate and compress data, preparing it for exfiltration."
         },
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "A function can be programmed to clean up or remove indicators of compromise, aiding in evasion of detection"
         },
         {
             "technique": "T1036 - Masquerading",
-            "reason": " Malicious functions can be disguised as legitimate CloudFront functions, hiding malicious activities within seemingly normal operations."
+            "reason": "Malicious functions can be disguised as legitimate CloudFront functions, hiding malicious activities within seemingly normal operations."
         },
         {
             "technique": "T1090 - Proxy",

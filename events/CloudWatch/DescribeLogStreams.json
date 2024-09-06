@@ -18,10 +18,6 @@
             "reason": "Listing log streams can help identify different cloud accounts or services that are being logged."
         },
         {
-            "technique":  "T1005 - Data from Local System",
-            "reason": "Logs can contain valuable information, and listing log streams is the first step in accessing this data"
-        },
-        {
             "technique": "T1119 - Automated Collection",
             "reason": "Automating the listing of log streams is a part of setting up a system for automated data collection."
         },

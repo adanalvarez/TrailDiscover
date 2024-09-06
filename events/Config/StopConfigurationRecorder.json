@@ -20,10 +20,6 @@
         {
             "technique": "T1489 - Service Stop",
             "reason": "Stopping a critical service like the configuration recorder can be part of a larger strategy to disrupt services, resulting in a loss of visibility and monitoring, hence impacting the organization."
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": " Stopping the configuration recorder can be a preliminary action to prevent the detection of unauthorized account access changes. By disabling this service, an attacker could make changes to account access without triggering alerts or being logged, effectively removing the organization's ability to monitor and respond to these changes."
         }
     ],
     "usedInWild": false,

@@ -14,7 +14,7 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1070 - Indicator Removal on Host",
+            "technique": "T1070 - Indicator Removal",
             "reason": "An attacker could modify CloudFront distribution settings to remove or alter logging configurations, thus deleting or hiding evidence of malicious activities."
         },
         {

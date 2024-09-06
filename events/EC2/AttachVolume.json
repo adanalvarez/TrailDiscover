@@ -31,15 +31,15 @@
         },
         {
             "technique": "T1027 - Obfuscated Files or Information",
-            "reason": ""
+            "reason": "Malicious actors can store obfuscated data or tools on an EBS volume to evade detection mechanisms."
         },
         {
             "technique": "T1560 - Archive Collected Data",
-            "reason": ""
+            "reason": "Attackers may attach volumes to archive collected data for exfiltration or future use, leveraging the storage capacity of the EBS volumes."
         },
         {
             "technique": "T1213 - Data from Information Repositories",
-            "reason": "y attaching a volume that contains information repositories, attackers can access and extract sensitive data stored within these repositories"
+            "reason": "By attaching a volume that contains information repositories, attackers can access and extract sensitive data stored within these repositories"
         },
         {
             "technique": "T1530 - Data from Cloud Storage",
