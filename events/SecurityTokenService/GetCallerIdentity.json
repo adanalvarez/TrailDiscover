@@ -30,6 +30,10 @@
         {
             "description": "Detecting AI resource-hijacking with Composite Alerts",
             "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        },
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
         }
     ],
     "researchLinks": [
