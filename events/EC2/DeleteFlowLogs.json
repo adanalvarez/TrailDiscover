@@ -9,8 +9,13 @@
     "mitreAttackTechniques": [
         "T1089 - Disabling Security Tools"
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Removing VPC flow logs",

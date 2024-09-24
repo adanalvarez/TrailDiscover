@@ -18,6 +18,10 @@
         {
             "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
             "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+        },
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
         }
     ],
     "researchLinks": [

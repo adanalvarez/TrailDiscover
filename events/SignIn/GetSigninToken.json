@@ -1,0 +1,29 @@
+{
+    "eventName": "GetSigninToken",
+    "eventSource": "signin.amazonaws.com",
+    "awsService": "SignIn",
+    "description": "Generate a SigninToken that can be used to login to the the AWS Management Console.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might access via a Federated identity (such as AWS SSO) to the Management Console.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "N/A"
+}
