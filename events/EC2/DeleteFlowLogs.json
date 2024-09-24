@@ -30,8 +30,13 @@
             "reason": "Deleting flow logs can be part of account manipulation to hide tracks and activities conducted using compromised accounts."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Removing VPC flow logs",

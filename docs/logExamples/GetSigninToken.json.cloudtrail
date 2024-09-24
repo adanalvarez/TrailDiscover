@@ -1,0 +1,54 @@
+[
+   {
+      "eventVersion": "1.08",
+      "userIdentity": {
+         "type": "AssumedRole",
+         "principalId": "AROATI5GJIISF5AXXXXXX:TrailDiscover",
+         "arn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_AdministratorAccess_6c63ce732f555555/TrailDiscover",
+         "accountId": "123456789012",
+         "accessKeyId": "ASIATI5GJIISLXXXXXX",
+         "sessionContext": {
+               "sessionIssuer": {
+                  "type": "Role",
+                  "principalId": "AROATI5GJIISF5AXXXXXX",
+                  "arn": "arn:aws:iam::123456789012:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_6c63ce732f555555",
+                  "accountId": "123456789012",
+                  "userName": "AWSReservedSSO_AdministratorAccess_6c63ce732f555555"
+               },
+               "webIdFederationData": {},
+               "attributes": {
+                  "creationDate": "2024-09-24T08:12:45Z",
+                  "mfaAuthenticated": "false"
+               }
+         }
+      },
+      "eventTime": "2024-09-24T08:12:45Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "GetSigninToken",
+      "awsRegion": "us-east-2",
+      "sourceIPAddress": "1.1.1.1",
+      "userAgent": "Jersey/${project.version} (HttpUrlConnection 17.0.12)",
+      "requestParameters": null,
+      "responseElements": {
+         "credentials": {
+               "accessKeyId": "ASIATI5GJIISLXXXXXX"
+         },
+         "GetSigninToken": "Success"
+      },
+      "additionalEventData": {
+         "MobileVersion": "No",
+         "MFAUsed": "No"
+      },
+      "eventID": "56678442-08db-4d88-af47-f994dd706a15",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+         "tlsVersion": "TLSv1.3",
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "us-east-2.signin.aws.amazon.com"
+      }
+   }
+]

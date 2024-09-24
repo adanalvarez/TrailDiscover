@@ -26,8 +26,13 @@
             "reason" : "Updating trail settings could facilitate the transfer of logs or sensitive data to an attacker-controlled cloud account for exfiltration."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS Defense Evasion and Centralized Multi-Account Logging",

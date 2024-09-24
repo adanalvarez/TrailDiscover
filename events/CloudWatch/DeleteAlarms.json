@@ -33,6 +33,10 @@
         {
             "description": "AWS CloudWatch Alarm Deletion",
             "link": "https://www.elastic.co/guide/en/security/current/aws-cloudwatch-alarm-deletion.html"
+        },
+        {
+            "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+            "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
         }
     ],
     "securityImplications": "Attackers might use DeleteAlarms to disable critical CloudWatch alerts, undermining AWS environment monitoring",

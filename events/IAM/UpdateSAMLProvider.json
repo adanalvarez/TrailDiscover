@@ -1,0 +1,30 @@
+{
+    "eventName": "UpdateSAMLProvider",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Updates the metadata document for an existing SAML provider resource object.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Gaining AWS Persistence by Updating a SAML Identity Provider",
+            "link": "https://medium.com/@adan.alvarez/gaining-aws-persistence-by-updating-a-saml-identity-provider-ef57ebdc8db5"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateSAMLProvider to change the metadata document from a SAML provider for latter being able to assume the roles that trust this provider.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam update-saml-provider --saml-metadata-document file://TrailDiscoverSAMLMetaData.xml --saml-provider-arn arn:aws:iam::123456789012:saml-provider/traildiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateSAMLProvider"
+}

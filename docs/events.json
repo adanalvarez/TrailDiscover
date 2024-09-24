@@ -13,27 +13,27 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1119- Automated Collection",
+                "technique": "T1119 - Automated Collection",
                 "reason": "An attacker could write a script that continiously calls GetCertificate to get all certificates"
             },
             {
-                "technique": "T1580- Cloud Infrastructure Discovery",
+                "technique": "T1580 - Cloud Infrastructure Discovery",
                 "reason": "Using GetCertificate, adversaries can discover details about the cloud infrastructure, including how certificates are managed and issued within the environment."
             },
             {
-                "technique": "TT1589- Gather Victim Identity Information",
+                "technique": "TT1589 - Gather Victim Identity Information",
                 "reason": "Often times victim information is present in the certificate, f.e. email adresses."
             },
             {
-                "technique": "T1526- Cloud Service Discovery",
+                "technique": "T1526 - Cloud Service Discovery",
                 "reason": "Often times certificates are issued for single cloud services. "
             },
             {
-                "technique": "T1530- Data from Cloud Storage",
+                "technique": "T1530 - Data from Cloud Storage",
                 "reason": "One could label the ACMPCA as a cloud storage, because the certificates are stored in there."
             },
             {
-                "technique": "T1021.007- Remote Services: Cloud Services",
+                "technique": "T1021.007 - Remote Services: Cloud Services",
                 "reason": "The GetCertificate API call retrieves certificates from a private CA or one that has been shared, which can then be used to authenticate access to various cloud services. Adversaries can use these certificates to authenticate themselves to cloud services remotely, leveraging the trust established by the certificate. This enables the adversary to move laterally within the cloud environment, access additional resources, or establish persistence by maintaining authenticated sessions with the compromised certificates"
             },
             {
@@ -45,7 +45,7 @@
                 "reason": "Certificates retrieved can be used in Man-in-the-Middle (MitM) attacks to intercept and decrypt secure communications."
             },
             {
-                "technique": "T1021: Remote Services",
+                "technique": "T1021 - Remote Services",
                 "reason": "Certificates are often used as an authetication material, especially in enterprise environments and can be therefore used to move laterally."
             }
         ],
@@ -155,10 +155,6 @@
                 "reason": "API keys are a form of credentials that attackers can use to gain and maintain access to cloud services."
             },
             {
-                "technique": "T1056.004 - Credential API Hooking",
-                "reason": "Attackers may hook into the API key creation process to intercept and use these credentials for unauthorized access."
-            },
-            {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Attackers may manipulate API keys to alter account permissions and settings, maintaining persistence and access."
             },
@@ -172,7 +168,7 @@
             },
             {
                 "technique": "T1090 - Proxy",
-                "reason": "Attackers can use API keys to route their malicious traffic through a proxy, hiding their true origin and bypassing security measures."
+                "reason": "Attackers can use API keys to route their malicious traffic through a AppSync, which acts here as a proxy, hiding their true origin and bypassing security measures."
             }
         ],
         "usedInWild": false,
@@ -997,10 +993,6 @@
                 "reason": "CloudFront functions are written in JavaScript, enabling the execution of scripts."
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "The creation of a CloudFront function involves direct interaction with AWS APIs, potentially leveraging native functionalities."
-            },
-            {
                 "technique": "T1546 - Event Triggered Execution",
                 "reason": "A CloudFront function can be set to trigger on specific events, establishing persistence."
             },
@@ -1017,7 +1009,7 @@
                 "reason": "CloudFront functions can communicate using web protocols, facilitating command and control."
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "Functions can be used to remove or alter log files, helping in defense evasion."
             },
             {
@@ -1065,20 +1057,16 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1609 - Container Administration Command",
-                "reason": "The PublishFunction API allows for the execution and management of code in an isolated serverless environment, akin to how container commands manage containerized applications."
-            },
-            {
                 "technique": "T1560 - Archive Collected Data",
                 "reason": "A published CloudFront function could aggregate and compress data, preparing it for exfiltration."
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "A function can be programmed to clean up or remove indicators of compromise, aiding in evasion of detection"
             },
             {
                 "technique": "T1036 - Masquerading",
-                "reason": " Malicious functions can be disguised as legitimate CloudFront functions, hiding malicious activities within seemingly normal operations."
+                "reason": "Malicious functions can be disguised as legitimate CloudFront functions, hiding malicious activities within seemingly normal operations."
             },
             {
                 "technique": "T1090 - Proxy",
@@ -1137,7 +1125,7 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "An attacker could modify CloudFront distribution settings to remove or alter logging configurations, thus deleting or hiding evidence of malicious activities."
             },
             {
@@ -1212,23 +1200,23 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "Deleting a CloudTrail trail can be seen as an attempt to remove logs that could be used to detect malicious activity, thereby evading detection."
             },
             {
                 "technique": "T1485 - Data Destruction",
                 "reason": "Deleting the CloudTrail trail results in the destruction of important log data, which can impact the ability to investigate and respond to incidents."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "While not directly removing account access, deleting the trail can be part of broader attempts to conceal actions taken against user accounts, hindering detection and response."
             }
         ],
-        "usedInWild": false,
+        "usedInWild": true,
         "incidents": [
             {
                 "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
                 "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
@@ -1306,16 +1294,8 @@
                 "reason": " By understanding event patterns and data flows, attackers can automate the exfiltration of data from the cloud environment."
             },
             {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Identifying how data is stored and accessed can inform attackers on how to archive or move collected data within the cloud environment."
-            },
-            {
                 "technique": "T1057 - Process Discovery",
                 "reason": "Attackers can use LookupEvents to see which processes or applications are being invoked, gaining insight into the operational environment."
-            },
-            {
-                "technique": "T1202 - Indirect Command Execution",
-                "reason": "LookupEvents can help attackers identify how commands are being executed indirectly through AWS services, aiding in further exploitation."
             }
         ],
         "usedInWild": true,
@@ -1354,10 +1334,6 @@
             {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "By configuring event selectors, adversaries can exclude certain activities from being logged, effectively removing traces of their presence and actions, which hinders detection and forensic analysis."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "By customizing event selectors, adversaries can avoid logging specific activities that involve the use of obfuscated files or information, thereby evading detection mechanisms that rely on log analysis."
             }
         ],
         "usedInWild": true,
@@ -1492,8 +1468,13 @@
                 "reason": "Updating trail settings could facilitate the transfer of logs or sensitive data to an attacker-controlled cloud account for exfiltration."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS Defense Evasion and Centralized Multi-Account Logging",
@@ -1537,12 +1518,8 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "The attacker uses PutLogEvents to upload collected data to CloudWatchLogs for archiving and later retrieval."
-            },
-            {
-                "technique": "T1005 - Data from Local System",
-                "reason": "The attacker collects data from the compromised system and uses PutLogEvents to store this data in CloudWatchLogs."
+                "technique": "T1567 - Exfiltration Over Web Service",
+                "reason": "The attacker leverages CloudWatchLogs as an AWS web service to exfiltrate data, making it blend in with legitimate service use."
             },
             {
                 "technique": "T1102 - Web Service",
@@ -1587,10 +1564,6 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers might leverage valid cloud accounts to create log streams, maintaining persistent access and monitoring activities without raising suspicion."
-            },
-            {
                 "technique": "T1036 - Masquerading",
                 "reason": "Creating log streams with names that mimic legitimate applications or services helps attackers blend in with normal operations and evade detection."
             },
@@ -1599,20 +1572,8 @@
                 "reason": "Log streams can be used to automate the collection of log data from various sources within the cloud environment, aiding attackers in data aggregation."
             },
             {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Log streams can be used to systematically archive collected data, which can later be accessed or exfiltrated."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers use valid accounts to create and manage log streams as part of a strategy to maintain persistence and monitor activities without raising suspicion"
-            },
-            {
                 "technique": "T1074 - Data Staged",
                 "reason": "Using log streams to stage data before it is exfiltrated, organizing it for easy access and transfer."
-            },
-            {
-                "technique": "T1005 - Data from Local System",
-                "reason": "Collecting data from local systems and logging it into cloud log streams for analysis helps in understanding the local system's behavior and activities."
             }
         ],
         "usedInWild": true,
@@ -1668,6 +1629,10 @@
             {
                 "description": "AWS CloudWatch Alarm Deletion",
                 "link": "https://www.elastic.co/guide/en/security/current/aws-cloudwatch-alarm-deletion.html"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "securityImplications": "Attackers might use DeleteAlarms to disable critical CloudWatch alerts, undermining AWS environment monitoring",
@@ -1794,10 +1759,6 @@
                 "reason": "Describing log groups can reveal information about the systems and their operations, helping in mapping out remote systems within the cloud infrastructure."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Knowledge of log groups can assist in identifying valid accounts or activities, potentially aiding in discovering compromised or valid credentials used within the environment."
-            },
-            {
                 "technique": "T1046 - Network Service Discovery",
                 "reason": "By examining log groups, attackers can understand the network services being utilized and their respective configurations, which is crucial for further discovery and potential exploitation."
             },
@@ -1840,10 +1801,6 @@
             {
                 "technique": "T1087 - Account Discovery",
                 "reason": "Listing log streams can help identify different cloud accounts or services that are being logged."
-            },
-            {
-                "technique": "T1005 - Data from Local System",
-                "reason": "Logs can contain valuable information, and listing log streams is the first step in accessing this data"
             },
             {
                 "technique": "T1119 - Automated Collection",
@@ -1907,7 +1864,7 @@
             },
             {
                 "technique": "T1046 - Network Service Scanning",
-                "reason": "y listing subscription filters, attackers can determine what types of network services and activities are being monitored. This can help them identify potential targets or services that are not being adequately monitored."
+                "reason": "By listing subscription filters, attackers can determine what types of network services and activities are being monitored. This can help them identify potential targets or services that are not being adequately monitored."
             },
             {
                 "technique": "T1007 - System Service Discovery",
@@ -1956,10 +1913,6 @@
             {
                 "technique": "T1033 - System Owner/User Discovery",
                 "reason": "Log records can reveal information about system owners or users who are interacting with the cloud environment, such as user activity logs and access patterns."
-            },
-            {
-                "technique": "T1078.001 - Valid Accounts: Default Accounts",
-                "reason": "Log records can show instances where default accounts are being used, which could be a security risk if not properly managed. Logs can reveal the use of local accounts within the cloud environment, which can then be assessed for potential security risks."
             }
         ],
         "usedInWild": true,
@@ -2000,10 +1953,6 @@
             {
                 "technique": "T1074 - Data Staged",
                 "reason": "Logs might be staged in a certain format before being uploaded, allowing attackers to organize and structure the data for further analysis or exfiltration."
-            },
-            {
-                "technique": "T1005 - Data from Local System",
-                "reason": "Attackers may collect local log data from compromised systems to upload and analyze it in CloudWatchLogs."
             },
             {
                 "technique": "T1071 - Application Layer Protocol",
@@ -2067,10 +2016,6 @@
                 "reason": "Attackers may use credentials obtained from this API to generate session tokens or cookies for web sessions."
             },
             {
-                "technique": "T1556.002: Modify Authentication Process: Replace Authentication Step",
-                "reason": "By gaining credentials through this API, attackers might replace or bypass authentication steps within the application."
-            },
-            {
                 "technique": "T1212: Exploitation for Credential Access",
                 "reason": "Exploiting the GetCredentialsForIdentity API call can be a direct method to gain credentials."
             },
@@ -2123,8 +2068,12 @@
                 "reason": "Attackers might attempt to generate or retrieve multiple IdentityIDs through brute force, seeking unauthorized access."
             },
             {
-                "technique": "T1556 - Modify Authentication Process",
-                "reason": "By linking multiple logins to a single IdentityID, attackers can modify the authentication process, facilitating persistence and evading detection."
+                "technique": "T1589 - Gather Victim Identity Information",
+                "reason": "The Logins parameter allows attackers to gather or brute-force information tied to identity providers (e.g., linked Google or Facebook accounts), which might reveal valuable identity information."
+            },
+            {
+                "technique": "T1087 - Account Discovery",
+                "reason": "By retrieving an IdentityId, attackers could discover cloud accounts linked to multiple identity providers, which might give them further access or knowledge about an organization's cloud infrastructure."
             }
         ],
         "usedInWild": false,
@@ -2161,10 +2110,6 @@
             {
                 "technique": "T1485 - Data Destruction",
                 "reason": "By deleting configuration rules and their results, an attacker could be aiming to destroy security data that would alert defenders to their activities."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Removing config rules could be part of a broader strategy to remove detection mechanisms tied to account activity and monitoring."
             },
             {
                 "technique": "T1499 - Endpoint Denial of Service",
@@ -2205,16 +2150,8 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "By deleting the configuration recorder, an adversary can prevent the logging of configuration changes, making it harder to track unauthorized access and changes to resources."
-            },
-            {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "Deleting the configuration recorder aligns with the broader goal of eliminating records that could be used for forensic purposes, removing indicators of compromise."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "By deleting the configuration recorder, an adversary can obfuscate the tracks of their malicious activities, ensuring their actions are not recorded."
             },
             {
                 "technique": "T1098 - Account Manipulation",
@@ -2255,11 +2192,7 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting a delivery channel might be part of actions to remove visibility and audit logs associated with account activities."
-            },
-            {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "By deleting the delivery channel, logs that might contain evidence of malicious activities are removed."
             },
             {
@@ -2324,10 +2257,6 @@
             {
                 "technique": "T1489 - Service Stop",
                 "reason": "Stopping a critical service like the configuration recorder can be part of a larger strategy to disrupt services, resulting in a loss of visibility and monitoring, hence impacting the organization."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": " Stopping the configuration recorder can be a preliminary action to prevent the detection of unauthorized account access changes. By disabling this service, an attacker could make changes to account access without triggering alerts or being logged, effectively removing the organization's ability to monitor and respond to these changes."
             }
         ],
         "usedInWild": false,
@@ -2387,10 +2316,6 @@
                 "reason": "By reviewing the cost and usage metrics, the attacker identifies expenditures related to security services (e.g., GuardDuty, CloudTrail). This information helps the attacker understand the security posture and tools in use, potentially avoiding or disabling them during an attack."
             },
             {
-                "technique": "T1005 - Data from Local System",
-                "reason": "The attacker retrieves detailed billing and usage reports using the GetCostAndUsage API. This sensitive information is then stored locally for further analysis or for planning the next stages of an attack."
-            },
-            {
                 "technique": "T1213 - Data from Information Repositories",
                 "reason": "The attacker uses the GetCostAndUsage API to access billing and usage metrics stored in the AWS CostExplorer service. This data is collected to understand the financial and resource allocation details of the target environment."
             },
@@ -2405,10 +2330,6 @@
             {
                 "technique": "T1530 - Data from Cloud Storage Object",
                 "reason": "The attacker stores the retrieved cost and usage data in a cloud storage object (e.g., S3 bucket). This stored data is later accessed or transferred to the attacker's own environment for further analysis or sale."
-            },
-            {
-                "technique": "T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage",
-                "reason": "The attacker exfiltrates the cost and usage data to an external cloud storage service (e.g., an S3 bucket in a different AWS account). This exfiltrated data can then be accessed by the attacker from their own environment for further malicious activities."
             }
         ],
         "usedInWild": true,
@@ -2460,15 +2381,15 @@
             },
             {
                 "technique": "T1027 - Obfuscated Files or Information",
-                "reason": ""
+                "reason": "Malicious actors can store obfuscated data or tools on an EBS volume to evade detection mechanisms."
             },
             {
                 "technique": "T1560 - Archive Collected Data",
-                "reason": ""
+                "reason": "Attackers may attach volumes to archive collected data for exfiltration or future use, leveraging the storage capacity of the EBS volumes."
             },
             {
                 "technique": "T1213 - Data from Information Repositories",
-                "reason": "y attaching a volume that contains information repositories, attackers can access and extract sensitive data stored within these repositories"
+                "reason": "By attaching a volume that contains information repositories, attackers can access and extract sensitive data stored within these repositories"
             },
             {
                 "technique": "T1530 - Data from Cloud Storage",
@@ -2516,7 +2437,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1040 - Network Sniffing",
-                "reason": "By configuring outbound rules to specific destinations, an attacker can redirect traffic for network sniffing."
+                "reason": "Outbound rules can be adjusted to send traffic to specific external destinations, which may allow attackers to capture or monitor network traffic for sensitive information."
             },
             {
                 "technique": "T1071 - Application Layer Protocol",
@@ -2600,12 +2521,8 @@
                 "reason": "Discovering which permission groups can modify security group rules is directly relevant as it informs the attacker's strategy to use the AuthorizeSecurityGroupIngress API call."
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "Directly using the AWS API, including AuthorizeSecurityGroupIngress, is a method attackers employ to execute actions within the cloud environment."
-            },
-            {
                 "technique": "T1203 - Exploitation for Client Execution",
-                "reason": "If an attacker exploits a vulnerability and gains access to an AWS account, they might use the AuthorizeSecurityGroupIngress API call to further their attack by establishing ingress points."
+                "reason": "If an attacker exploits a vulnerability and gains access to an AWS account, they might use the AuthorizeSecurityGroupIngress API call to allow them to exploit applications that were not previously reachable."
             },
             {
                 "technique": "T1090 - Proxy",
@@ -2691,10 +2608,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1580 - Cloud Infrastructure Discovery",
-                "reason": "Creating a default VPC provides a comprehensive view of the cloud network, which can be used to map out and discover all available resources and services within the environment."
-            },
             {
                 "technique": "T1021 - Remote Services",
                 "reason": "With a default VPC in place, adversaries can use it to establish connections between various services, facilitating lateral movement across different instances and resources."
@@ -2792,16 +2705,8 @@
                 "reason": "Exporting an EC2 instance to an S3 bucket involves transferring data over a web service, which aligns with exfiltrating data through a web-based method."
             },
             {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Once the instance data is exported, attackers might delete the original instance or logs to cover their tracks"
-            },
-            {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "The export task utilizes application layer protocols for communication, relevant for exfiltrating data using such protocols."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Exporting the instance might include using formats that obfuscate the data of the instance, aiding in defense evasion."
             },
             {
                 "technique": "T1537 - Transfer Data to Cloud Account",
@@ -2872,7 +2777,7 @@
             },
             {
                 "technique": "T1530 - Data from Cloud Storage Object",
-                "reason": "The key pair might be stored in cloud storage, which, if not properly secured, can be accessed by attackers to retrieve the private key."
+                "reason": "If the EC2 instance has permissions to access Cloud storage, the key can be used to get this data via the EC2 permissions"
             },
             {
                 "technique": "T1212 - Exploitation for Credential Access",
@@ -3584,8 +3489,13 @@
                 "reason": "Deleting flow logs can be part of account manipulation to hide tracks and activities conducted using compromised accounts."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Removing VPC flow logs",
@@ -4239,7 +4149,7 @@
                 "reason": "Using DescribeImages helps attackers discover available cloud services, their configurations, and associated resources."
             },
             {
-                "technique": "Using DescribeImages helps attackers discover available cloud services, their configurations, and associated resources.",
+                "technique": "T1195 - Supply Chain Compromise",
                 "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise"
             }
         ],
@@ -5113,7 +5023,7 @@
                 "reason": "Attackers with console access could promote a compromised instance to a domain controller in an Active Directory environment, escalating privileges."
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "The serial console allows attackers to directly interact with the system to delete logs and other indicators of their presence."
             },
             {
@@ -5406,7 +5316,7 @@
                 "reason": "The configuration data may include scripts or commands that can be leveraged to gain further access or control over the instance"
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "By understanding the configuration and storage locations, attackers can delete logs or files to evade detection"
             },
             {
@@ -5462,7 +5372,7 @@
                 "reason": "Once an attacker has the administrator password, they can bypass User Account Control (UAC) on the instance to elevate privileges without user consent."
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "An attacker with administrator access might delete logs and other files to cover their tracks and ensure persistent access without detection."
             }
         ],
@@ -5590,7 +5500,7 @@
                 "reason": "An attacker can import their own key pair to gain initial access to the AWS environment using a compromised or newly created account. The imported key can also be used to maintain persistent access. This can be applied to both cloud and domain accounts in the cloud, ensuring access across different services."
             },
             {
-                "technique": "T1070 - Indicator Removal on Host",
+                "technique": "T1070 - Indicator Removal",
                 "reason": "Attackers may delete logs or evidence after importing the keypair."
             },
             {
@@ -6075,6 +5985,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [],
@@ -6133,6 +6047,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
@@ -6423,7 +6341,7 @@
             "T1070 - Indicator Removal"
         ],
         "mitreAttackSubTechniques": [
-            "T1070.004 - Indicator Removal on Host: File Deletion"
+            "T1070.004 - Indicator Removal: File Deletion"
         ],
         "unverifiedMitreAttackTechniques": [
             {
@@ -7992,6 +7910,10 @@
             {
                 "description": "Threat Hunting with CloudTrail and GuardDuty in Splunk",
                 "link": "https://www.chrisfarris.com/post/reinforce-threat-hunting/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "securityImplications": "Attackers might use DeleteDetector to disable GuardDuty, thereby evading detection of malicious activity.",
@@ -10624,6 +10546,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
@@ -11138,6 +11064,51 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateLoginProfile"
+    },
+    {
+        "eventName": "UpdateSAMLProvider",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Updates the metadata document for an existing SAML provider resource object.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence",
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Changing an IAM user's password allows an attacker to maintain access using a legitimate account."
+            },
+            {
+                "technique": "T1556 - Modify Authentication Process",
+                "reason": "Changing the password directly impacts the authentication process, potentially locking out legitimate users and ensuring only the attacker has access."
+            },
+            {
+                "technique": "T1531 - Account Access Removal",
+                "reason": "Changing the password of an IAM user can also serve as a means to remove legitimate account access for the rightful user, ensuring only the attacker can access the account."
+            }
+        ],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Gaining AWS Persistence by Updating a SAML Identity Provider",
+                "link": "https://medium.com/@adan.alvarez/gaining-aws-persistence-by-updating-a-saml-identity-provider-ef57ebdc8db5"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateSAMLProvider to change the metadata document from a SAML provider for latter being able to assume the roles that trust this provider.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws iam update-saml-provider --saml-metadata-document file://TrailDiscoverSAMLMetaData.xml --saml-provider-arn arn:aws:iam::123456789012:saml-provider/traildiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateSAMLProvider"
     },
     {
         "eventName": "Encrypt",
@@ -14474,6 +14445,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [],
@@ -14542,6 +14517,10 @@
             {
                 "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [],
@@ -14833,6 +14812,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
@@ -14906,6 +14889,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
@@ -15639,6 +15626,50 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "GetSigninToken",
+        "eventSource": "signin.amazonaws.com",
+        "awsService": "SignIn",
+        "description": "Generate a SigninToken that can be used to login to the the AWS Management Console.",
+        "mitreAttackTactics": [
+            "TA0001 - Initial Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Changing an IAM user's password allows an attacker to maintain access using a legitimate account."
+            },
+            {
+                "technique": "T1556 - Modify Authentication Process",
+                "reason": "Changing the password directly impacts the authentication process, potentially locking out legitimate users and ensuring only the attacker has access."
+            },
+            {
+                "technique": "T1531 - Account Access Removal",
+                "reason": "Changing the password of an IAM user can also serve as a means to remove legitimate account access for the rightful user, ensuring only the attacker can access the account."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might access via a Federated identity (such as AWS SSO) to the Management Console.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "N/A"
+    },
+    {
         "eventName": "PasswordRecoveryRequested",
         "eventSource": "signin.amazonaws.com",
         "awsService": "SignIn",
@@ -16185,6 +16216,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
+                "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
             }
         ],
         "researchLinks": [
