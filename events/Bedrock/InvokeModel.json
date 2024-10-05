@@ -41,6 +41,10 @@
         {
             "description": "New tactics and techniques for proactive threat detection",
             "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        },
+        {
+            "description": "When AI Gets Hijacked: Exploiting Hosted Models for Dark Roleplaying",
+            "link": "https://permiso.io/blog/exploiting-hosted-models"
         }
     ],
     "researchLinks": [],
