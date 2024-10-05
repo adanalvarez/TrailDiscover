@@ -26,10 +26,6 @@
             "reason": "Adversaries might use the gathered configuration data to create archives for exfiltration purposes"
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "Utilizing native AWS APIs to gather configuration data is a method for defense evasion, blending in with regular activity."
-        },
-        {
             "technique": "T1033 - System Owner/User Discovery",
             "reason": "The GetLaunchTemplateData call may reveal information about the system owner or users associated with the instance."
         }

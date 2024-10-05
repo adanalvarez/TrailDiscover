@@ -18,8 +18,8 @@
             "reason": "Modifying Lambda function configurations allows execution of scripts or commands in the runtime environment."
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "Attackers use AWS API calls like UpdateFunctionConfiguration to directly interact with and manipulate Lambda functions to achieve their goals."
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers might modify configurations like logging settings or environment variables to prevent detection efforts."
         }
     ],
     "usedInWild": false,

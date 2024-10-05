@@ -28,10 +28,6 @@
         {
             "technique": "T1036 - Masquerading",
             "reason": "Attackers might use the default KMS key information to create resources that appear legitimate but are malicious in nature."
-        },
-        {
-            "technique": "T1556 - Unsecured Credentials",
-            "reason": "The KMS key might be part of broader efforts to discover unsecured private keys in the environment"
         }
     ],
     "usedInWild": true,

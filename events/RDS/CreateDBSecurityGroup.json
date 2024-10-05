@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Creating a new DB security group could be used to establish persistence by allowing access to specific IP ranges or users who control the security group, effectively allowing continuous access."
-        },
-        {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "The security group settings can be configured to allow specific protocols or applications to communicate with the DB instance, facilitating control or exfiltration methods."
         },
@@ -28,10 +24,6 @@
         {
             "technique": "T1098 - Account Manipulation",
             "reason": "Creating or modifying a security group could be a method to manipulate access controls and permissions, thereby escalating privileges or creating a backdoor for persistent access."
-        },
-        {
-            "technique": "T1003 - Credential Dumping",
-            "reason": "Misconfigured security groups could allow unauthorized access to the DB instance, where attackers might attempt to dump credentials stored within the database"
         },
         {
             "technique": "T1036 - Masquerading",

@@ -22,8 +22,8 @@
             "reason": "Attackers may modify permissions boundaries to ensure their access is maintained across cloud accounts, preventing account lockout or access removal."
         },
         {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Modifying permissions boundaries can be used to ensure that indicators of compromise, such as logs or records of malicious activities, can be deleted or altered, aiding in defense evasion."
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Changing the permissions boundary might be used to impact security settings or access, impairing the effectiveness of security tools and preventing detection or response to malicious activity."
         }
     ],
     "usedInWild": false,

@@ -32,12 +32,8 @@
             "reason": "Discovering which permission groups can modify security group rules is directly relevant as it informs the attacker's strategy to use the AuthorizeSecurityGroupIngress API call."
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "Directly using the AWS API, including AuthorizeSecurityGroupIngress, is a method attackers employ to execute actions within the cloud environment."
-        },
-        {
             "technique": "T1203 - Exploitation for Client Execution",
-            "reason": "If an attacker exploits a vulnerability and gains access to an AWS account, they might use the AuthorizeSecurityGroupIngress API call to further their attack by establishing ingress points."
+            "reason": "If an attacker exploits a vulnerability and gains access to an AWS account, they might use the AuthorizeSecurityGroupIngress API call to allow them to exploit applications that were not previously reachable."
         },
         {
             "technique": "T1090 - Proxy",

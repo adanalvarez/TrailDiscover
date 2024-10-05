@@ -39,12 +39,16 @@
             "reason": "Attackers can use Lambda functions as a form of remote access to maintain control over compromised systems."
         },
         {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "Attackers might use obfuscation techniques in Lambda functions to hide malicious activities."
+            "technique": "T1190 - Exploit Public-Facing Application",
+            "reason": "If the Lambda function is triggered via a public-facing API endpoint, it could be exploited to gain unauthorized access. Attackers may abuse vulnerable API configurations or input validation flaws to invoke the function, thus compromising the environment."
         },
         {
             "technique": "T1053 - Scheduled Task/Job",
             "reason": "Lambda functions can be scheduled to execute tasks periodically, allowing persistent execution of malicious code."
+        },
+        {
+            "technique": "T1648 - Serverless Execution",
+            "reason": "By invoking a Lambda function, an attacker can leverage the serverless environment to run malicious code, perform lateral movement, or conduct other post-exploitation activities while taking advantage of the scalability and ephemeral nature of serverless computing to evade detection and persist within the environment."
         }
     ],
     "usedInWild": true,

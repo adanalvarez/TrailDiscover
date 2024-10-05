@@ -14,16 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Stopping GuardDuty monitoring can be a step in removing or reducing the access capabilities of accounts that are being monitored for malicious activity."
-        },
-        {
             "technique": "T1489 - Service Stop",
             "reason": "Stopping GuardDuty monitoring is an example of halting a service, which can impact the overall security monitoring and incident response capabilities."
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "An attacker might leverage valid accounts to stop GuardDuty monitoring, evading detection by using legitimate credentials."
         }
     ],
     "usedInWild": false,

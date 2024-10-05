@@ -16,10 +16,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1580 - Cloud Infrastructure Discovery",
-            "reason": "Creating a default VPC provides a comprehensive view of the cloud network, which can be used to map out and discover all available resources and services within the environment."
-        },
-        {
             "technique": "T1021 - Remote Services",
             "reason": "With a default VPC in place, adversaries can use it to establish connections between various services, facilitating lateral movement across different instances and resources."
         },

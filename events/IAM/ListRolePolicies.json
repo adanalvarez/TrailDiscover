@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Knowledge of inline policies can help identify valid accounts and their permissions, aiding in targeted attacks or misuse of credentials."
-        },
-        {
             "technique": "T1484 - Domain Policy Discovery",
             "reason": "Inline policies may reveal roles with the ability to discover or enumerate domain policies, which can be used to further understand the security posture and potential attack paths within the environment."
         },

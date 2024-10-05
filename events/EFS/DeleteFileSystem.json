@@ -22,10 +22,6 @@
             "reason": "Deleting an EFS file system alters the state of stored data by permanently removing it. This can disrupt operations and affect data integrity, making it a significant form of data manipulation."
         },
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting an EFS file system cuts off access to the data for all users and systems that rely on it. This action effectively removes the ability to access critical resources, potentially disrupting operations."
-        },
-        {
             "technique": "T1107 - File Deletion",
             "reason": "File deletion focuses on the removal of files to impact data availability or to hide malicious activity. Deleting a file system in AWS EFS results in the removal of all files and directories within that file system."
         }

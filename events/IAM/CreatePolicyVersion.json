@@ -18,8 +18,8 @@
             "reason": "By altering IAM policies, attackers can remove access for legitimate users, ensuring only malicious actors maintain control."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Creating a new version of a policy can involve adding new permissions or modifying existing ones, potentially allowing unauthorized access to AWS resources."
+            "technique": "T1489 - Service Stop",
+            "reason": "By altering permissions with a new policy version, an attacker could restrict or stop critical services within an AWS environment."
         }
     ],
     "usedInWild": false,

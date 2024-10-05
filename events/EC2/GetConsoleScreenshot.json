@@ -18,20 +18,12 @@
             "reason": "The GetConsoleScreenshot API call captures a screenshot of a running EC2 instance, providing a visual snapshot of the system's state. This can reveal sensitive information displayed on the screen, such as open applications, user activities, or visible credentials."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Accessing the GetConsoleScreenshot API requires valid credentials, indicating the need for authorized access to the instance. Unauthorized use of these credentials can lead to capturing sensitive information from the instance."
-        },
-        {
             "technique": "T1087 - Account Discovery",
             "reason": "The screenshot can provide insights into user accounts and other details visible on the instance, aiding in account discovery."
         },
         {
             "technique": "T1057 - Process Discovery",
             "reason": "The screenshot might reveal running processes or applications, helping in process discovery."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "The contents of the screenshot retrieved via GetConsoleScreenshot may be deliberately altered or obscured by an attacker to avoid detection. This can make it harder to recognize malicious activity or sensitive data on the instance."
         },
         {
             "technique": "T1016 - System Network Configuration Discovery",

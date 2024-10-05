@@ -30,20 +30,12 @@
             "reason": "Security groups often define permissions for accessing various resources within the cloud environment. Understanding these groups can help adversaries identify critical permissions and exploit them."
         },
         {
-            "technique": "T1190 - Exploit Public-Facing Application",
-            "reason": ""
-        },
-        {
             "technique": "T1105 - Ingress Tool Transfer",
             "reason": "If an adversary identifies security groups that allow inbound access, they might transfer tools or malware into the environment through these entry points"
         },
         {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "Understanding security group rules helps adversaries in crafting communication methods that can bypass security controls using allowed protocols."
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Security group descriptions can reveal information about valid accounts that have permissions to access or modify these groups, aiding in credential theft or misuse."
         },
         {
             "technique": "T1040 - Network Sniffing",

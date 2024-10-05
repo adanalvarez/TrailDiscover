@@ -48,10 +48,6 @@
         {
             "technique": "T1070 - Indicator Removal",
             "reason": "The serial console allows attackers to directly interact with the system to delete logs and other indicators of their presence."
-        },
-        {
-            "technique": "T1106 - Native API",
-            "reason": "Direct access to the EC2 serial console allows attackers to leverage native APIs of the operating system for various malicious purposes."
         }
     ],
     "usedInWild": true,

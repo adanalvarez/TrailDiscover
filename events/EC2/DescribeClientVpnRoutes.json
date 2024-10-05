@@ -18,10 +18,6 @@
             "reason": "An adversary might use DescribeClientVpnRoutes to enumerate network routes within the VPN, identifying potential targets and pivot points within the network."
         },
         {
-            "technique": "T1538 - Cloud Service Dashboard",
-            "reason": "By calling DescribeClientVpnRoutes, an attacker can gather information on the VPN routes, which could be used to navigate through the cloud environment stealthily."
-        },
-        {
             "technique": "T1021- Remote Services",
             "reason": "This API call can provide details on how to access different parts of the network remotely, which could facilitate lateral movement or remote execution of commands"
         },

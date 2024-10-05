@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Using valid accounts to delete network ACLs ensures the actions blend in with normal administrative activity, aiding in evading detection."
-        },
-        {
             "technique": "T1485 - Data Destruction",
             "reason": "Deleting a network ACL can be a form of data destruction as it disrupts the network configuration, potentially leading to data loss or service disruption"
         },
@@ -27,7 +23,7 @@
         },
         {
             "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting network ACLs can be part of a broader strategy to remove access to resources, making it difficult for legitimate users to access networked systems and services."
+            "reason": "Deleting network ACLs can be part of a broader strategy to remove access to resources, making it difficult for legitimate users to access networked systems and services. For example, deleting a network ACL that allows SSH access."
         }
     ],
     "usedInWild": false,

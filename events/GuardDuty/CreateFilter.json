@@ -10,14 +10,9 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
     ],
-    "unverifiedMitreAttackTechniques": [
-        {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Adversaries can create filters that suppress alerts for file deletion activities, allowing them to remove indicators of their presence without triggering alarms."
-        }
-    ],
+    "unverifiedMitreAttackTechniques": [],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

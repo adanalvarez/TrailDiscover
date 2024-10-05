@@ -14,14 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "By modifying the IAM role policies, attackers can ensure valid credentials maintain elevated permissions for later use."
-        },
-        {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Attackers may modify IAM role policies to cover their tracks, making it difficult to detect unauthorized actions."
-        },
-        {
             "technique": "T1531 - Account Access Removal",
             "reason": "Modifying IAM role policies can be used to restrict or remove access to certain users or roles, aiding in defense evasion."
         }

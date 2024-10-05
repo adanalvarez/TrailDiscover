@@ -2850,11 +2850,11 @@
             },
             {
                 "technique": "T1033 - System Owner/User Discovery",
-                "reason": "Adjusting network ACLs might allow an attacker to scan for system owners or users by permitting specific traffic"
+                "reason": "By modifying network ACL rules, an attacker can enable access to specific ports used by services like SMB (TCP/445). SMB ports are often used for sharing files and resources within a network. Access to these ports can provide the attacker with the ability to query for system information, users, and groups (such as through NetSessionEnum or NetUserEnum calls), helping them to discover the system owner or logged-in users, which aids in understanding the target environment."
             },
             {
                 "technique": "T1078 - Valid Accounts",
-                "reason": "An attacker might create ACL entries to exploit default accounts for initial access."
+                "reason": "An attacker might create ACL entries to allow traffic to sites or services where the attacker has valid accounts."
             },
             {
                 "technique": "T1049 - System Network Connections Discovery",
@@ -2972,12 +2972,8 @@
                 "reason": "By creating or modifying security group rules, adversaries can manipulate the flow of network traffic to bypass security monitoring tools, which aids in defense evasion."
             },
             {
-                "technique": "T1040 - Network Sniffing",
-                "reason": "Adversaries can use security groups to selectively allow or block network traffic, enabling them to sniff the traffic that is allowed through, potentially gathering sensitive information."
-            },
-            {
                 "technique": "T1036 - Masquerading",
-                "reason": "y configuring security groups under seemingly legitimate purposes while actually facilitating malicious activities, adversaries can use this to disguise their network traffic and actions."
+                "reason": "By configuring security groups under seemingly legitimate purposes while actually facilitating malicious activities, adversaries can use this to disguise their network traffic and actions."
             },
             {
                 "technique": "T1499 - Endpoint Denial of Service",
@@ -3069,7 +3065,7 @@
             },
             {
                 "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Snapshots might be used to obfuscate data transfer activities."
+                "reason": "By creating snapshots of EBS volumes, adversaries can hide data transfers under the guise of legitimate backup operations. This makes it harder to distinguish between regular snapshot activities and potential malicious data movements."
             },
             {
                 "technique": "T1074 - Data Staged",
@@ -3078,10 +3074,6 @@
             {
                 "technique": "T1550 - Use Alternate Authentication Material",
                 "reason": "Adversaries might use stolen keys or other credentials extracted from snapshots as authentication material."
-            },
-            {
-                "technique": "T1056 - Input Capture",
-                "reason": "If the EBS volume contains logs or other data capturing user inputs, snapshots could be used to collect this information."
             },
             {
                 "technique": "T1496 - Resource Hijacking",
@@ -3135,10 +3127,6 @@
             {
                 "technique": "T1040 - Network Sniffing",
                 "reason": "By creating a Traffic Mirror filter, attackers can intercept and analyze network traffic to capture sensitive information. This directly relates to the ability to observe all mirrored network traffic."
-            },
-            {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Attackers can collect and transfer data via the mirrored traffic to remote servers or network shares. Mirroring allows for the redirection and storage of network data elsewhere for further analysis."
             },
             {
                 "technique": "T1046 - Network Service Scanning",
@@ -3402,15 +3390,11 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1003 - OS Credential Dumping",
-                "reason": "Attackers can create volumes and attach them to instances to access filesystems and potentially extract sensitive files such as /etc/passwd and /etc/shadow on Linuy systems for credential dumping."
+                "reason": "Attackers can create volumes and attach them to instances to access filesystems and potentially extract sensitive files such as /etc/passwd and /etc/shadow on Linux systems for credential dumping."
             },
             {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "By creating a volume from a snapshot that contains valid credentials or authentication tokens, attackers can gain persistent access to cloud resources."
-            },
-            {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "Attackers might create volumes from snapshots containing cloud credentials to use for maintaining access or escalating privileges within the cloud environment."
             },
             {
                 "technique": "T1202 - Indirect Command Execution",
@@ -3540,10 +3524,6 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Using valid accounts to delete network ACLs ensures the actions blend in with normal administrative activity, aiding in evading detection."
-            },
-            {
                 "technique": "T1485 - Data Destruction",
                 "reason": "Deleting a network ACL can be a form of data destruction as it disrupts the network configuration, potentially leading to data loss or service disruption"
             },
@@ -3553,7 +3533,7 @@
             },
             {
                 "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting network ACLs can be part of a broader strategy to remove access to resources, making it difficult for legitimate users to access networked systems and services."
+                "reason": "Deleting network ACLs can be part of a broader strategy to remove access to resources, making it difficult for legitimate users to access networked systems and services. For example, deleting a network ACL that allows SSH access."
             }
         ],
         "usedInWild": false,
@@ -3596,20 +3576,16 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers with valid cloud accounts can use legitimate API calls to delete network ACL entries, making it harder to detect malicious activities as they blend with regular operations."
-            },
-            {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Attackers may manipulate network ACLs as part of account manipulation to remove or alter security controls. This can enable unauthorized access or disrupt normal operations within the cloud environment."
             },
             {
                 "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting network ACL entries could be part of an attack to disrupt services and remove access to accounts, affecting the availability of resources."
+                "reason": "Deleting network ACL entries could be part of an attack to disrupt services and remove access to accounts, affecting the availability of resources. For example, deleting a network ACL that allows SSH access."
             },
             {
                 "technique": "T1489 - Service Stop",
-                "reason": "By deleting critical network ACL entries, an attacker can disrupt or stop essential services by either blocking required traffic or allowing malicious traffic, leading to a service interruption"
+                "reason": "By deleting critical network ACL entries, an attacker can disrupt or stop essential services by either blocking required traffic or allowing malicious traffic, leading to a service interruption."
             }
         ],
         "usedInWild": false,
@@ -3655,10 +3631,6 @@
             {
                 "technique": "T1486 - Data Encrypted for Impact",
                 "reason": "If the adversary has encrypted the data and then deletes snapshots, it makes recovery impossible without the decryption keys, thus increasing the impact."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting snapshots associated with compromised or obsolete accounts can be used to prevent access recovery or hinder incident response efforts."
             },
             {
                 "technique": "T1565 - Data Manipulation",
@@ -3711,10 +3683,6 @@
             {
                 "technique": "T1561 - Disk Wipe",
                 "reason": "Deleting the volume ensures that all data on the volume is removed, which is similar to a disk wipe."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "By deleting the volume, an attacker can remove data that could be used by forensic teams to analyze account activities, effectively removing access to data that could lead to their identification"
             }
         ],
         "usedInWild": true,
@@ -3845,14 +3813,6 @@
                 "reason": "The DescribeBundleTasks API call can provide details about the instance, which can be used to gather information about the system's configuration and status. The description of what a Bundle Task is not even available on AWS anymore."
             },
             {
-                "technique": "T1005 - Data from Local System",
-                "reason": "The bundle task will contain data from the local system, detailing what information has been collected and is being prepared for transfer or backup. The description of what a Bundle Task is not even available on AWS anymore."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Bundling tasks may involve handling data that is encrypted or obfuscated, concealing the true nature of the information."
-            },
-            {
                 "technique": "T1553.002 - Subvert Trust Controls: Code Signing",
                 "reason": "nsuring that the bundled data is from a legitimate source and not tampered with might involve code signing, particularly if the bundle is intended for deployment or transfer. The description of what a Bundle Task is not even available on AWS anymore."
             },
@@ -3897,10 +3857,6 @@
                 "reason": "This API call helps in discovering the network configuration, including the carrier gateway, which can provide insight into how traffic is routed"
             },
             {
-                "technique": "T1021 - Remote Services",
-                "reason": "Understanding the carrier gateways can assist attackers in planning lateral movement or initial access via carrier networks."
-            },
-            {
                 "technique": "T1049 - System Network Connections Discovery",
                 "reason": "Describing the carrier gateways can reveal details about network connections and traffic flow between Wavelength Zones and carrier networks."
             },
@@ -3915,10 +3871,6 @@
             {
                 "technique": "T1210 - Exploitation of Remote Services",
                 "reason": "Knowing the setup of carrier gateways can help in exploiting remote services that rely on this infrastructure"
-            },
-            {
-                "technique": "T1033 - System Owner/User Discovery",
-                "reason": "Describing carrier gateways can reveal information about the users and owners of the system. In the response there is the ccount id of whom this gateway belongs to"
             },
             {
                 "technique": "T1482 - Domain Trust Discovery",
@@ -3965,10 +3917,6 @@
                 "reason": "An adversary might use DescribeClientVpnRoutes to enumerate network routes within the VPN, identifying potential targets and pivot points within the network."
             },
             {
-                "technique": "T1538 - Cloud Service Dashboard",
-                "reason": "By calling DescribeClientVpnRoutes, an attacker can gather information on the VPN routes, which could be used to navigate through the cloud environment stealthily."
-            },
-            {
                 "technique": "T1021- Remote Services",
                 "reason": "This API call can provide details on how to access different parts of the network remotely, which could facilitate lateral movement or remote execution of commands"
             },
@@ -4009,16 +3957,8 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Attackers might archive information gathered from the DHCP options for later analysis or use, aiding in the evasion of immediate detection."
-            },
-            {
                 "technique": "T1049 - System Network Connections Discovery",
                 "reason": "Describing DHCP options is directly related to understanding network configurations and connections within the AWS environment"
-            },
-            {
-                "technique": "T1074 - Data Staged",
-                "reason": "Attackers might stage data related to DHCP options for later exfiltration, which can be part of a broader data exfiltration strategy"
             },
             {
                 "technique": "T1590 - Gather Victim Network Information",
@@ -4113,18 +4053,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1496 - Resource Hijacking",
-                "reason": "By understanding the available images, an attacker could hijack resources by creating instances using these images for malicious activities such as cryptocurrency mining."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Attackers can use knowledge about available images to obfuscate their activities by using less monitored or unusual images"
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By identifying specific images that might have security tools, attackers can choose to avoid those images or disable the security tools present in them"
-            },
-            {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "DescribeImages can be used to gather detailed information about the system images in use, which is critical for planning further attacks or understanding the environment."
             },
@@ -4150,7 +4078,7 @@
             },
             {
                 "technique": "T1195 - Supply Chain Compromise",
-                "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise"
+                "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise."
             }
         ],
         "usedInWild": true,
@@ -4255,10 +4183,6 @@
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "The DescribeInstances call provides detailed information about the EC2 instances, including instance type, state, and configuration details. This information is essential for an adversary performing system information discovery to understand the environment."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Information obtained from DescribeInstances can help an adversary identify valid user accounts and their associated permissions, especially if they are looking for accounts with elevated privileges."
             },
             {
                 "technique": "T1033 - System Owner/User Discovery",
@@ -4402,14 +4326,6 @@
                 "reason": "The DescribeKeyPairs API call can be used to enumerate key pairs associated with EC2 instances, which aids in discovering cloud resources and configurations."
             },
             {
-                "technique": "T1530 - Data from Cloud Storage Object",
-                "reason": "If key pairs are stored in cloud storage, an attacker could retrieve these key pairs, potentially leading to unauthorized access."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Accessing key pairs allows attackers to use valid credentials to authenticate and access systems, leading to potential unauthorized use of valid accounts."
-            },
-            {
                 "technique": "T1528 - Steal Application Access Token",
                 "reason": "Key pairs can be used to steal application access tokens if they are used for application authentication mechanisms."
             }
@@ -4455,7 +4371,7 @@
             },
             {
                 "technique": "T1213 - Data from Information Repositories",
-                "reason": "DescribeRegions provides metadata about regions, which can be seen as a form of information repository. Attackers may gather this data to understand the environment better."
+                "reason": "DescribeRegions gives access to the regional metadata of AWS, which acts as an information repository. Attackers may exploit this data to gain insights into the structure and status of the cloud environment."
             },
             {
                 "technique": "T1135 - Network Share Discovery",
@@ -4511,10 +4427,6 @@
                 "reason": "Adversaries might use the gathered configuration data to create archives for exfiltration purposes"
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "Utilizing native AWS APIs to gather configuration data is a method for defense evasion, blending in with regular activity."
-            },
-            {
                 "technique": "T1033 - System Owner/User Discovery",
                 "reason": "The GetLaunchTemplateData call may reveal information about the system owner or users associated with the instance."
             }
@@ -4567,20 +4479,12 @@
                 "reason": "Security groups often define permissions for accessing various resources within the cloud environment. Understanding these groups can help adversaries identify critical permissions and exploit them."
             },
             {
-                "technique": "T1190 - Exploit Public-Facing Application",
-                "reason": ""
-            },
-            {
                 "technique": "T1105 - Ingress Tool Transfer",
                 "reason": "If an adversary identifies security groups that allow inbound access, they might transfer tools or malware into the environment through these entry points"
             },
             {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "Understanding security group rules helps adversaries in crafting communication methods that can bypass security controls using allowed protocols."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Security group descriptions can reveal information about valid accounts that have permissions to access or modify these groups, aiding in credential theft or misuse."
             },
             {
                 "technique": "T1040 - Network Sniffing",
@@ -4622,10 +4526,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Analyzing snapshot attributes can help identify valid accounts by examining account-specific data stored in the snapshots."
-            },
             {
                 "technique": "T1087 - Account Discovery",
                 "reason": "By describing snapshot attributes, an adversary can discover accounts associated with specific snapshots, providing insight into user and service accounts in the environment."
@@ -4689,10 +4589,6 @@
             {
                 "technique": "T1213 - Data from Information Repositories",
                 "reason": "This API call provides detailed information about EBS snapshots, which are a form of cloud storage. An attacker can use this to identify and access sensitive data stored within these snapshots."
-            },
-            {
-                "technique": "T1074 - Data Staged",
-                "reason": "An attacker might use the DescribeSnapshotTierStatus API call to gather snapshot information and then move the relevant data to a local staging area."
             }
         ],
         "usedInWild": true,
@@ -4793,14 +4689,6 @@
             {
                 "technique": "T1613 - Container and Resource Discovery",
                 "reason": "Volumes can be linked to container storage. Discovering volumes helps in mapping container usage and dependencies"
-            },
-            {
-                "technique": "T1485 - Data Destruction",
-                "reason": "Information about volumes can be used to identify targets for data destruction attacks"
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "DescribeVolumes can reveal usage patterns and configurations that help in identifying and leveraging valid cloud accounts."
             }
         ],
         "usedInWild": true,
@@ -4835,16 +4723,8 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Attackers might modify volume characteristics to prepare data for exfiltration or conceal their activity. The history of volume modifications can reveal such attempts."
-            },
-            {
                 "technique": "T1087 - Account Discovery",
                 "reason": "Viewing volume modifications might help attackers understand cloud account structures and usage patterns, aiding in discovering privileged accounts"
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Volume modification details might indicate attempts to obfuscate data within volumes, thus evading detection mechanisms."
             }
         ],
         "usedInWild": true,
@@ -4883,24 +4763,12 @@
                 "reason": "Describing VPC endpoint connection notifications can help identify shared resources within the VPC, providing information on the network structure and potential entry points."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers might use valid credentials to describe VPC endpoint notifications, identifying points of interest within the network for further exploitation"
-            },
-            {
                 "technique": "T1049 - System Network Connections Discovery",
                 "reason": "By describing VPC endpoint connection notifications, an attacker can gather information about the network connections and endpoints configured in the VPC."
             },
             {
-                "technique": "T1020 - Automated Exfiltration",
-                "reason": "Understanding VPC endpoint connections and notifications can help in setting up automated exfiltration channels via specific endpoints."
-            },
-            {
                 "technique": "T1007 - Network Service Scanning",
                 "reason": "Describing VPC endpoint connection notifications can reveal details about network services in use, which can be leveraged for further network service scanning."
-            },
-            {
-                "technique": "T1057 - Process Discovery",
-                "reason": "While not directly discovering processes, the VPC endpoint notifications can provide insights into the services and applications communicating within the network, aiding in the overall discovery of active processes and services in the environment."
             }
         ],
         "usedInWild": true,
@@ -5025,10 +4893,6 @@
             {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "The serial console allows attackers to directly interact with the system to delete logs and other indicators of their presence."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "Direct access to the EC2 serial console allows attackers to leverage native APIs of the operating system for various malicious purposes."
             }
         ],
         "usedInWild": true,
@@ -5076,20 +4940,12 @@
                 "reason": "The GetConsoleScreenshot API call captures a screenshot of a running EC2 instance, providing a visual snapshot of the system's state. This can reveal sensitive information displayed on the screen, such as open applications, user activities, or visible credentials."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Accessing the GetConsoleScreenshot API requires valid credentials, indicating the need for authorized access to the instance. Unauthorized use of these credentials can lead to capturing sensitive information from the instance."
-            },
-            {
                 "technique": "T1087 - Account Discovery",
                 "reason": "The screenshot can provide insights into user accounts and other details visible on the instance, aiding in account discovery."
             },
             {
                 "technique": "T1057 - Process Discovery",
                 "reason": "The screenshot might reveal running processes or applications, helping in process discovery."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "The contents of the screenshot retrieved via GetConsoleScreenshot may be deliberately altered or obscured by an attacker to avoid detection. This can make it harder to recognize malicious activity or sensitive data on the instance."
             },
             {
                 "technique": "T1016 - System Network Configuration Discovery",
@@ -5150,10 +5006,6 @@
             {
                 "technique": "T1036 - Masquerading",
                 "reason": "Attackers might use the default KMS key information to create resources that appear legitimate but are malicious in nature."
-            },
-            {
-                "technique": "T1556 - Unsecured Credentials",
-                "reason": "The KMS key might be part of broader efforts to discover unsecured private keys in the environment"
             }
         ],
         "usedInWild": true,
@@ -5257,7 +5109,7 @@
             },
             {
                 "technique": "T1560 - Archive Collected Data",
-                "reason": "The template could be used to create archives of log data, potentially aiding in data exfiltration by archiving and compressing the data before transfer."
+                "reason": "By using the CloudFormation template to configure the VPC flow logs integration, adversaries can automate the collection, archiving, and storage of flow logs data, potentially using S3 to archive collected logs before exfiltration or analysis."
             }
         ],
         "usedInWild": true,
@@ -5444,16 +5296,8 @@
                 "reason": "Route table information can be used to facilitate the transfer of tools across different segments of the network, aiding lateral movement."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers can leverage valid accounts to access network routes and associations information, using it to further their goals within the network"
-            },
-            {
                 "technique": "T1021 - Remote Services",
                 "reason": "The information obtained from the API call can be used to identify and exploit remote services for lateral movement or persistence"
-            },
-            {
-                "technique": "T1033 - System Owner/User Discovery",
-                "reason": "By analyzing the route table associations, attackers can infer information about system owners and users associated with different network segments."
             },
             {
                 "technique": "T1071 - Application Layer Protocol",
@@ -5502,10 +5346,6 @@
             {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "Attackers may delete logs or evidence after importing the keypair."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "Attackers may use the imported key to disable or bypass security controls, such as altering firewall rules or disabling monitoring services, to avoid detection and maintain access. This weakens the overall security posture of the environment."
             }
         ],
         "usedInWild": true,
@@ -5558,27 +5398,15 @@
             },
             {
                 "technique": "T1078 - Valid Accounts",
-                "reason": "Adjusting launch permissions can be a method for attackers to use or create valid cloud accounts to maintain persistent access to instances based on the modified AMI."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By controlling who can launch the AMI, attackers can ensure that their tools embedded in the AMI are not easily discovered or disabled by defensive mechanisms."
+                "reason": "Modifying launchPermission can be used to grant access to valid accounts or remove access, effectively controlling which accounts can launch instances from the AMI."
             },
             {
                 "technique": "T1003 - OS Credential Dumping",
-                "reason": "Changing launch permissions to grant attackers access to instances where they can execute credential dumping tools."
+                "reason": "Changing launch permissions to launch the AMI in an attacker AWS account might grant attackers access to instances where they can execute credential dumping tools."
             },
             {
                 "technique": "T1021 - Remote Services",
                 "reason": "If the AMI is launched by specific users, it could enable the attacker to move laterally by exploiting remote services and admin privileges."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "Modified AMI might include scripts or tools that leverage native AWS APIs for continued access and evasion."
-            },
-            {
-                "technique": "T1578 - Modify Cloud Compute Infrastructure",
-                "reason": "Attackers could use the modified launch permissions to create snapshots of instances running the AMI for data exfiltration or further exploitation."
             },
             {
                 "technique": "T1036 - Masquerading",
@@ -5622,11 +5450,11 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1078 - Valid Accounts",
-                "reason": "Modifying instance attributes can involve changing account settings to maintain access to the instance, including the use or creation of default, local, or cloud accounts."
+                "reason": "Modifying instance attributes can involve, via modifications of the UserData, changing account settings to maintain access to the instance, including the use or creation of default, local, or cloud accounts."
             },
             {
                 "technique": "T1562 - Impair Defenses",
-                "reason": "This API call could disable or modify security tools and defenses on the instance, impairing the system's ability to detect or respond to threats"
+                "reason": "Via modifications of the UserData an attacker could disable or modify security tools and defenses on the instance, impairing the system's ability to detect or respond to threats"
             },
             {
                 "technique": "T1496 - Resource Hijacking",
@@ -5711,7 +5539,7 @@
             },
             {
                 "technique": "T1562 - Impair Defenses",
-                "reason": "Removing permissions from snapshots containing security tools can help attackers evade defenses by disabling or modifying those tools."
+                "reason": "Modifying permissions could impair security controls or defenses by granting unauthorized access to the snapshots, potentially containing security-related configurations, backups, or tools."
             },
             {
                 "technique": "T1087 - Account Discovery",
@@ -5724,10 +5552,6 @@
             {
                 "technique": "T1074 - Data Staged",
                 "reason": "Snapshots can be used to stage data locally for later exfiltration, aiding in data collection and exfiltration"
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Modifying snapshot permissions could be used to remove legitimate access, disrupting recovery efforts, and aiding in defense evasion."
             }
         ],
         "usedInWild": true,
@@ -5822,7 +5646,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1133 - External Remote Services",
-                "reason": "Instances can be accessed and controlled remotely, facilitating initial access and persistent control over the cloud environment through remote services."
+                "reason": "Adversaries can launch EC2 instances that can be remotely accessed via SSH, RDP, or other protocols, gaining an initial access point into the AWS environment or maintaining persistence."
             },
             {
                 "technique": "T1578 - Modify Cloud Compute Infrastructure",
@@ -5948,16 +5772,8 @@
                 "reason": "Attackers may push their own SSH keys to the EC2 instances, effectively manipulating access control."
             },
             {
-                "technique": "T1053 - Scheduled Task/Job",
-                "reason": "Attackers could set up scheduled tasks or jobs on the EC2 instance to maintain persistence after gaining access."
-            },
-            {
                 "technique": "T1562 - Impair Defenses",
                 "reason": "After gaining access, attackers could disable security tools or logs to evade detection."
-            },
-            {
-                "technique": "T1105 - Ingress Tool Transfer",
-                "reason": "Attackers may transfer additional tools to the EC2 instance to facilitate further actions."
             },
             {
                 "technique": "T1036 - Masquerading",
@@ -6574,10 +6390,6 @@
                 "reason": "The task definitions can contain Unix shell commands, facilitating execution of malicious scripts or commands."
             },
             {
-                "technique": "T1203 - Exploitation for Client Execution",
-                "reason": "Task definitions might be crafted to exploit vulnerabilities within the container runtime or application, leading to execution"
-            },
-            {
                 "technique": "T1036 - Masquerading",
                 "reason": "Malicious task definitions can be disguised as legitimate ones to evade detection and blend in with normal operations"
             },
@@ -6631,10 +6443,6 @@
                 "reason": "Deleting an EFS file system alters the state of stored data by permanently removing it. This can disrupt operations and affect data integrity, making it a significant form of data manipulation."
             },
             {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting an EFS file system cuts off access to the data for all users and systems that rely on it. This action effectively removes the ability to access critical resources, potentially disrupting operations."
-            },
-            {
                 "technique": "T1107 - File Deletion",
                 "reason": "File deletion focuses on the removal of files to impact data availability or to hide malicious activity. Deleting a file system in AWS EFS results in the removal of all files and directories within that file system."
             }
@@ -6682,10 +6490,6 @@
             {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "By deleting the mount target and the associated network interface, traces and logs of malicious activity stored on the file system may be removed, aiding in defense evasion."
-            },
-            {
-                "technique": "T1496 - Resource Hijacking",
-                "reason": "Deleting mount targets can free up resources, potentially redirecting them to other malicious activities or hindering legitimate use, indirectly impacting operations."
             }
         ],
         "usedInWild": false,
@@ -6779,10 +6583,6 @@
             {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "Creating an access entry for an IAM principal can establish valid credentials that can be used for access."
-            },
-            {
-                "technique": "T1059 - Command and Scripting Interpreter",
-                "reason": "If access is created for an IAM principal, the principal might use Unix shell commands to interact with the EKS cluster."
             }
         ],
         "usedInWild": false,
@@ -6816,10 +6616,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Describing access entries in EKS could be used to enumerate valid cloud accounts and their associated access permissions, aiding attackers in identifying and leveraging existing credentials."
-            },
             {
                 "technique": "T1526 - Cloud Service Discovery",
                 "reason": "The DescribeAccessEntry API call can be used to identify access permissions and configurations within the EKS service, revealing which cloud services are in use. This information helps attackers understand the cloud environment and potential targets."
@@ -6917,14 +6713,6 @@
                 "reason": "By listing the access policies, adversaries can discern the permission groups within the EKS cluster, aiding in understanding the permissions and roles configured."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Access to the list of associated policies can reveal valid accounts with specific permissions, which can be targeted for credential theft or misuse. The information from these policies assists in identifying valid accounts, which can then be exploited to gain unauthorized access to the EKS cluster."
-            },
-            {
-                "technique": "T1556 - Modify Authentication Process",
-                "reason": "Knowledge of associated access policies can facilitate changes to the authentication processes, enabling adversaries to bypass security mechanisms or gain unauthorized access."
-            },
-            {
                 "technique": "T1046 - Network Service Scanning",
                 "reason": "Listing access policies helps map out the services and permissions in use, aiding in reconnaissance efforts to identify potential targets and vulnerabilities."
             },
@@ -6977,10 +6765,6 @@
                 "reason": "Knowing the clusters can help adversaries understand shared network resources within the EKS environment."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "The information gathered might be used to identify valid cloud accounts if the clusters are associated with specific users or roles."
-            },
-            {
                 "technique": "T1007 - Network Service Scanning",
                 "reason": "Identifying clusters can help adversaries in mapping the network services exposed by these clusters."
             },
@@ -7025,7 +6809,7 @@
                 "reason": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code."
             },
             {
-                "technique": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code.",
+                "technique": "T1190 - Exploit Public-Facing Application",
                 "reason": "By modifying or creating new rules, an attacker could exploit vulnerabilities in the public-facing application load balancer to gain initial access."
             },
             {
@@ -7047,10 +6831,6 @@
             {
                 "technique": "T1070 - Indicator Removal",
                 "reason": "Rules could be used to route traffic in ways that delete or bypass log files to avoid detection."
-            },
-            {
-                "technique": "T1219 - Remote Access Software",
-                "reason": "Rules can be set up to enable remote access software to connect to compromised endpoints"
             },
             {
                 "technique": "T1496 - Resource Hijacking",
@@ -7153,7 +6933,7 @@
                 "reason": "Load balancers often manage external access to services. By describing them, an adversary can identify the external endpoints and understand how remote services are being accessed and managed."
             },
             {
-                "technique": "Load balancers often manage external access to services. By describing them, an adversary can identify the external endpoints and understand how remote services are being accessed and managed.",
+                "technique": "T1482 - Domain Trust Discovery",
                 "reason": "The DescribeLoadBalancers API call can provide information on how load balancers are configured across different domains, revealing trust relationships and how traffic is managed between different parts of the network."
             }
         ],
@@ -7463,19 +7243,19 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1059 - Command and Scripting Interpreter",
-                "reason": ""
+                "reason": "An attacker could add a target that executes a script or command interpreter, allowing for arbitrary command execution"
             },
             {
                 "technique": "T1098 - Account Manipulation",
-                "reason": ""
+                "reason": "An attacker could add a target that executes a script or command interpreter, allowing for arbitrary command execution"
             },
             {
                 "technique": "T1105 - Ingress Tool Transfer",
-                "reason": ""
+                "reason": "The attacker could configure targets that download and execute malicious tools, facilitating further exploitation."
             },
             {
                 "technique": "T1560 - Archive Collected Data",
-                "reason": "The attacker could add targets that archive data, preparing it for exfiltration when a rule is triggered."
+                "reason": "If targets are added to an event rule to trigger actions like archiving (e.g., invoking a Lambda function to zip and store data in an S3 bucket), this can be used to collect and prepare data for later exfiltration."
             },
             {
                 "technique": "T1070 - Indicator Removal",
@@ -7483,7 +7263,7 @@
             },
             {
                 "technique": "T1203 - Exploitation for Client Execution",
-                "reason": "An attacker could set a target that exploits vulnerabilities in client applications, leading to remote execution when the rule is triggered."
+                "reason": "An attacker could create or modify a target to execute a particular payload or exploit code on services that are automatically triggered by the event, which might lead to exploiting client applications or services."
             }
         ],
         "usedInWild": true,
@@ -7519,10 +7299,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Removing targets from EventBridge rules can prevent specific users or roles from being notified or triggered, effectively removing their access to critical information or actions."
-            },
             {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Manipulating EventBridge rules by removing targets can alter the capabilities and behaviors of accounts without directly deleting them."
@@ -7564,20 +7340,8 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1106 - Native API",
-                "reason": "Using the AWS Glue API to create development endpoints can facilitate malicious actions within the AWS environment by leveraging legitimate service functionalities."
-            },
-            {
                 "technique": "T1133 - External Remote Services",
                 "reason": "Development endpoints can be accessed remotely, providing a vector for persistent remote access by attackers."
-            },
-            {
-                "technique": "T1136 - Create Account",
-                "reason": "Attackers can create new accounts with permissions to create and use development endpoints, facilitating unauthorized access and persistence in the environment."
-            },
-            {
-                "technique": "T1053 - Scheduled Task/Job",
-                "reason": "cheduling jobs on the development endpoint ensures that malicious payloads or scripts are executed at specific times, aiding in persistence and automated execution."
             }
         ],
         "usedInWild": false,
@@ -7697,14 +7461,6 @@
                 "reason": "Updates could involve obfuscated scripts or configurations to hide malicious code and evade detection mechanisms"
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "The development endpoint update might utilize native APIs for malicious purposes, including privilege escalation or evasion."
-            },
-            {
-                "technique": "T1053 - Scheduled Task/Job",
-                "reason": "UpdateDevEndpoint could be used to create or modify scheduled tasks that ensure malicious scripts are run periodically."
-            },
-            {
                 "technique": "T1036 - Masquerading",
                 "reason": "Adversaries could update the endpoint to masquerade malicious activities as legitimate by matching names or locations."
             }
@@ -7754,10 +7510,6 @@
                 "reason": "Updating a job definition can include instructions to remove or alter logs and other artifacts, helping adversaries evade detection."
             },
             {
-                "technique": "T1484 - Domain or Tenant Policy Modification",
-                "reason": "Adversaries can change job definitions to alter the behavior of the Glue job, affecting the overall data processing policies and workflows within the AWS environment."
-            },
-            {
                 "technique": "T1480 - Execution Guardrails",
                 "reason": "Adversaries can update the job definition to include specific conditions or constraints, ensuring the job only executes under certain circumstances, which helps in evading detection."
             },
@@ -7799,13 +7551,10 @@
         "mitreAttackTechniques": [
             "T1562 - Impair Defenses"
         ],
-        "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Adversaries can create filters that suppress alerts for file deletion activities, allowing them to remove indicators of their presence without triggering alarms."
-            }
+        "mitreAttackSubTechniques": [
+            "T1562.001 - Impair Defenses: Disable or Modify Tools"
         ],
+        "unverifiedMitreAttackTechniques": [],
         "usedInWild": false,
         "incidents": [],
         "researchLinks": [
@@ -7982,7 +7731,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting GuardDuty member accounts can prevent legitimate users from accessing the service, thus disrupting monitoring and security alerts."
+                "reason": "Deleting GuardDuty member accounts can prevent legitimate accounts from getting data from member accounts, thus disrupting monitoring and security alerts."
             },
             {
                 "technique": "T1070 - Indicator Removal",
@@ -8027,14 +7776,6 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1485 - Data Destruction",
-                "reason": "Although not directly data destruction, it disrupts the availability of security logs which could be considered an impact on the integrity and availability of logging data."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting the publishing destination can prevent security personnel from receiving critical alerts, effectively limiting their ability to respond to threats. This action reduces the ability to monitor and manage GuardDuty findings, thereby diminishing the security team's control over the environment."
-            },
-            {
                 "technique": "T1565 - Data Manipulation",
                 "reason": "By deleting the publishing destination, critical security findings are not reported, which can be seen as manipulating the availability of security data and hindering incident response efforts."
             }
@@ -8077,16 +7818,8 @@
                 "reason": "This involves actions taken to manipulate accounts to maintain access or evade detection. Disassociating the GuardDuty member account from its master account can be seen as a form of account manipulation to avoid centralized logging and monitoring."
             },
             {
-                "technique": "T1485 - Data Destruction",
-                "reason": "By disassociating the account, attackers may intend to evade detection and subsequently destroy data within the compromised account without triggering alerts in the central monitoring account."
-            },
-            {
                 "technique": "T1531 - Account Access Removal",
                 "reason": "Disassociating from the master account effectively removes the centralized management and monitoring capabilities, making it harder to regain control or visibility over the account."
-            },
-            {
-                "technique": "T1565 - Data Manipulation",
-                "reason": "Disassociating from the master account can allow attackers to manipulate data within the account without detection from the central monitoring system. This can include altering security logs, configurations, or other critical data to cover their tracks or achieve other malicious objectives."
             }
         ],
         "usedInWild": true,
@@ -8170,10 +7903,6 @@
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "Retrieving a GuardDuty detector provides information about the security monitoring and configurations in the AWS environment."
-            },
-            {
-                "technique": "T1482 - Domain Trust Discovery",
-                "reason": "By accessing the detector, an attacker might infer information about trusted domains and relationships within the AWS environment."
             },
             {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
@@ -8341,10 +8070,6 @@
                 "reason": "Listing IPSets provides insights into the network's structure and the external IPs that are considered trusted or monitored. This information is crucial for attackers to map out the network and plan their actions accordingly."
             },
             {
-                "technique": "T1074 - Data Staged",
-                "reason": "With information about trusted IP sets, attackers can stage data for exfiltration to those IPs, ensuring that the data transfer goes unnoticed by security systems monitoring for unusual outbound connections."
-            },
-            {
                 "technique": "T1016 - System Network Configuration Discovery",
                 "reason": "By accessing the list of IPSets, attackers can understand the network configuration, including which IP addresses are allowed or blocked. This helps in identifying potential weak points or entry points into the network."
             }
@@ -8383,16 +8108,8 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Stopping GuardDuty monitoring can be a step in removing or reducing the access capabilities of accounts that are being monitored for malicious activity."
-            },
-            {
                 "technique": "T1489 - Service Stop",
                 "reason": "Stopping GuardDuty monitoring is an example of halting a service, which can impact the overall security monitoring and incident response capabilities."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "An attacker might leverage valid accounts to stop GuardDuty monitoring, evading detection by using legitimate credentials."
             }
         ],
         "usedInWild": false,
@@ -8671,10 +8388,6 @@
             {
                 "technique": "T1556 - Modify Authentication Process",
                 "reason": "By attaching a policy, an adversary can alter the authentication process, potentially bypassing multi-factor authentication (MFA) or other security measures."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attaching a policy can grant or elevate permissions for a valid cloud account, enabling persistent access. This action could be used to maintain or escalate privileges within the environment."
             }
         ],
         "usedInWild": true,
@@ -8790,10 +8503,6 @@
         ],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "New keys might be used to impair security defenses by disabling or modifying security tools."
-            },
-            {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "New keys can be used for account manipulation activities, providing additional or unauthorized access."
             }
@@ -8883,10 +8592,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "By creating a new group, attackers can then create new users within this group, providing valid credentials for later access."
-            },
             {
                 "technique": "T1036 - Masquerading",
                 "reason": "Creating a new group with a name similar to existing groups can help attackers blend in and avoid detection"
@@ -9059,8 +8764,8 @@
                 "reason": "By altering IAM policies, attackers can remove access for legitimate users, ensuring only malicious actors maintain control."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Creating a new version of a policy can involve adding new permissions or modifying existing ones, potentially allowing unauthorized access to AWS resources."
+                "technique": "T1489 - Service Stop",
+                "reason": "By altering permissions with a new policy version, an attacker could restrict or stop critical services within an AWS environment."
             }
         ],
         "usedInWild": false,
@@ -9099,14 +8804,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By creating a role with permissions to modify or disable security configurations, an attacker can evade defenses."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Generic valid account creation through roles provides a method for persistent access."
-            },
             {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Attackers might create a new role to maintain access or elevate privileges within the environment."
@@ -9359,7 +9056,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1586 - Compromise Accounts",
-                "reason": "Deactivating MFA is part of compromising user accounts to ensure ongoing access and persistence within an AWS environment."
+                "reason": "Deactivating MFA might be part of an account compromise if the attacker knows the password but has no access to the MFA. By disabling the MFA the attacker will be able to compromise the account."
             }
         ],
         "usedInWild": false,
@@ -9484,10 +9181,6 @@
                 "reason": "Removing permissions boundaries can weaken the security posture by reducing the effectiveness of policies designed to limit role actions."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Deleting the permissions boundary of a role could facilitate misuse of legitimate credentials by removing restrictions, thus enabling persistence or privilege escalation."
-            },
-            {
                 "technique": "T1068 - Exploitation for Privilege Escalation",
                 "reason": "Removing permissions boundaries may be used as part of exploiting a misconfiguration to gain elevated privileges."
             }
@@ -9530,10 +9223,6 @@
             {
                 "technique": "T1562 - Impair Defenses",
                 "reason": "By deleting IAM role policies, an attacker could impair security tools that rely on those policies for correct operation, effectively reducing the efficacy of security defenses."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Managing and modifying IAM roles and their policies can be part of maintaining access using valid accounts with modified permissions to evade detection"
             }
         ],
         "usedInWild": false,
@@ -9780,10 +9469,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Detaching a policy from a user can be used to revoke permissions from legitimate accounts, impacting their ability to perform actions."
-            },
-            {
                 "technique": "T1531 - Account Access Removal",
                 "reason": "Detaching a policy can be used as a way to remove or limit access to critical accounts, impacting operational capabilities."
             },
@@ -10025,10 +9710,6 @@
                 "reason": "By listing attached role policies, attackers can understand the permissions associated with specific roles, which is essential for discovering permission groups within a cloud environment."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers may use the information from this API call to gain insight into valid roles and associated policies, which can help them identify which roles to target for credential access."
-            },
-            {
                 "technique": "T1526 - Cloud Service Discovery",
                 "reason": "Listing attached role policies reveals the configuration and permissions of cloud services tied to specific roles. This information helps attackers map out the cloud environment and identify potential targets for further exploitation."
             }
@@ -10114,10 +9795,6 @@
                 "reason": "By listing the groups for a user, adversaries can identify the permissions associated with different IAM groups and plan further actions based on the discovered roles and policies."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Knowledge of user group memberships can help adversaries in identifying valid accounts with specific privileges and using these accounts to escalate privileges or access resources."
-            },
-            {
                 "technique": "T1057 - Process Discovery",
                 "reason": "Information about user groups can be utilized by adversaries to infer the types of processes and operations a user can perform, aiding in planning subsequent steps of an attack."
             }
@@ -10160,10 +9837,6 @@
                 "reason": "The ListInstanceProfiles API call provides details about instance profiles and their associated IAM roles, helping an attacker map out the cloud infrastructure. Understanding the roles in use aids in identifying potential targets for further exploitation or privilege escalation."
             },
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Enumerating instance profiles can help identify valid accounts and roles that an attacker might use to maintain access or escalate privileges within the environment."
-            },
-            {
                 "technique": "T1589 - Gather Victim Identity Information",
                 "reason": "The API call can help gather information about the identities and roles within the AWS environment, which could be used for further attacks or social engineering."
             }
@@ -10199,10 +9872,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1201 - Password Policy Discovery",
-                "reason": "By understanding which OIDC providers are configured, attackers might infer the password policies tied to these providers."
-            },
             {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
                 "reason": "Identifying OIDC providers gives attackers insights into the cloud infrastructure, revealing the different third-party services and platforms integrated with the AWS environment."
@@ -10243,10 +9912,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Knowledge of inline policies can help identify valid accounts and their permissions, aiding in targeted attacks or misuse of credentials."
-            },
             {
                 "technique": "T1484 - Domain Policy Discovery",
                 "reason": "Inline policies may reveal roles with the ability to discover or enumerate domain policies, which can be used to further understand the security posture and potential attack paths within the environment."
@@ -10290,10 +9955,6 @@
             {
                 "technique": "T1069 - Permission Groups Discovery",
                 "reason": "Discovering IAM roles helps adversaries understand their permissions and group memberships, enabling them to identify roles with excessive privileges that can be misused for unauthorized activities."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "By listing IAM roles, adversaries can identify valid accounts, including default and user-created roles, which might be targeted for compromise or misuse."
             },
             {
                 "technique": "T1518 - Software Discovery",
@@ -10341,10 +10002,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "By identifying SAML providers, attackers can understand the authentication mechanisms in use and potentially exploit known weaknesses or misconfigurations, including targeting and potentially compromising cloud accounts through federated authentication mechanisms."
-            },
-            {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
                 "reason": "Listing SAML providers can help attackers map out the cloud infrastructure and understand how identity federation is being handled within the account."
             },
@@ -10389,10 +10046,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Gaining valid credentials allows attackers to access systems, services, and information. Listing service-specific credentials helps identify valid credentials an attacker might use."
-            },
-            {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
                 "reason": "Adversaries may enumerate cloud infrastructure to understand the environment better, and listing service-specific credentials provides information about the associated IAM users"
             }
@@ -10435,10 +10088,6 @@
             {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
                 "reason": "Gaining information about signing certificates aids in mapping the IAM infrastructure, helping to understand the authentication methods and structure of the cloud environment."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Understanding the valid signing certificates helps in identifying potential accounts to compromise, which can be used for initial access or persistence within the environment."
             },
             {
                 "technique": "T1033 - System Owner/User Discovery",
@@ -10671,14 +10320,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "By modifying the IAM role policies, attackers can ensure valid credentials maintain elevated permissions for later use."
-            },
-            {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Attackers may modify IAM role policies to cover their tracks, making it difficult to detect unauthorized actions."
-            },
-            {
                 "technique": "T1531 - Account Access Removal",
                 "reason": "Modifying IAM role policies can be used to restrict or remove access to certain users or roles, aiding in defense evasion."
             }
@@ -10728,8 +10369,8 @@
                 "reason": "Attackers may modify permissions boundaries to ensure their access is maintained across cloud accounts, preventing account lockout or access removal."
             },
             {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Modifying permissions boundaries can be used to ensure that indicators of compromise, such as logs or records of malicious activities, can be deleted or altered, aiding in defense evasion."
+                "technique": "T1562 - Impair Defenses",
+                "reason": "Changing the permissions boundary might be used to impact security settings or access, impairing the effectiveness of security tools and preventing detection or response to malicious activity."
             }
         ],
         "usedInWild": false,
@@ -10765,10 +10406,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Updating inline policies can help adversaries evade detection by altering the permissions without creating new, noticeable accounts."
-            },
-            {
                 "technique": "T1562 - Impair Defenses",
                 "reason": "By embedding policies that allow for disabling or bypassing security controls, adversaries can impair defense mechanisms."
             },
@@ -10777,7 +10414,7 @@
                 "reason": "Adversaries may use PutUserPolicy to remove access rights for legitimate users, causing disruption."
             },
             {
-                "technique": "Adversaries may use PutUserPolicy to remove access rights for legitimate users, causing disruption.",
+                "technique": "T1068 - Exploitation for Privilege Escalation",
                 "reason": "If an adversary can modify policies to grant administrative privileges, they effectively escalate their privileges."
             },
             {
@@ -10840,7 +10477,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1070 - Indicator Removal",
-                "reason": "Modifying the policy's default version can be used to evade detection by altering the policies that would trigger alarms or logs."
+                "reason": "Modifying the policy's default version can be used to evade detection by setting the policy version that was in place before the attack."
             },
             {
                 "technique": "T1531 - Account Access Removal",
@@ -10920,7 +10557,7 @@
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1070. - Indicator Removal",
-                "reason": "Disabling keys can be a tactic to remove indicators of compromise, preventing detection and forensic analysis."
+                "reason": "Disabling keys can be a tactic to remove indicators of compromise, because keys need to be disabled before deletion, preventing detection and forensic analysis."
             },
             {
                 "technique": "T1531 - Account Access Removal",
@@ -10965,7 +10602,7 @@
             },
             {
                 "technique": "T1036 - Masquerading",
-                "reason": "T1036.005] - Masquerading"
+                "reason": "Attackers can allow access from an account they control to assume a valid role that is used in the organization making the access appear legitimate"
             }
         ],
         "usedInWild": false,
@@ -11080,16 +10717,16 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Changing an IAM user's password allows an attacker to maintain access using a legitimate account."
-            },
-            {
                 "technique": "T1556 - Modify Authentication Process",
-                "reason": "Changing the password directly impacts the authentication process, potentially locking out legitimate users and ensuring only the attacker has access."
+                "reason": "The UpdateSAMLProvider API call allows changing the SAML metadata document, directly affecting how AWS handles authentication through SAML assertions. This can enable an attacker to alter authentication mechanisms or potentially introduce unauthorized access methods."
             },
             {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Changing the password of an IAM user can also serve as a means to remove legitimate account access for the rightful user, ensuring only the attacker can access the account."
+                "technique": "T1078 - Valid Accounts",
+                "reason": "By changing the SAML metadata document, an attacker could gain access to valid accounts. The new or altered assertions in the SAML metadata can be used to authenticate as legitimate AWS users or roles."
+            },
+            {
+                "technique": "T1550 - Use Alternate Authentication Material",
+                "reason": "Altering the SAML metadata document provides an opportunity to use different authentication material. An attacker could insert alternate cryptographic keys or certificates into the SAML assertions, allowing them to authenticate to AWS resources as a trusted user or entity."
             }
         ],
         "usedInWild": false,
@@ -11170,10 +10807,6 @@
             {
                 "technique": "T1560 - Archive Collected Data",
                 "reason": "The data key can facilitate the encryption of collected data before exfiltration to avoid detection."
-            },
-            {
-                "technique": "T1496 - Resource Hijacking",
-                "reason": "Attackers could use the symmetric data key to encrypt legitimate resources, thereby disrupting normal operations and potentially leading to financial or operational impacts."
             }
         ],
         "usedInWild": true,
@@ -11214,10 +10847,6 @@
             {
                 "technique": "T1499 - Endpoint Denial of Service",
                 "reason": "Deleting a KMS key can disrupt the availability of data, causing a denial of service on the applications relying on the encrypted data."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "An adversary may remove access to encrypted data by scheduling the deletion of the KMS key, which is crucial for decryption."
             },
             {
                 "technique": "T1098 - Account Manipulation",
@@ -11271,14 +10900,6 @@
             {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "The AddPermission API call can be used to alter permissions, effectively manipulating accounts to maintain access or escalate privileges."
-            },
-            {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Using AddPermission to adjust access rights can help hide malicious activities by removing or altering indicators of compromise."
-            },
-            {
-                "technique": "T1040 - Credential Access via API",
-                "reason": "Granting permissions can facilitate the capture or misuse of credentials if permissions are set incorrectly, allowing access to sensitive functions."
             },
             {
                 "technique": "T1090 - Proxy",
@@ -11341,18 +10962,6 @@
                 "reason": "Event source mappings can be used to trigger Lambda functions, executing code in response to specific events or data."
             },
             {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Adversaries could configure Lambda functions to delete logs or other indicators of their activity upon execution."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "Utilizing the CreateEventSourceMapping API, adversaries can execute Lambda functions by mapping event sources to them."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "he payload or code executed by the Lambda function could be obfuscated to evade detection."
-            },
-            {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Modifying the event source mappings can change the behavior of Lambda functions, possibly to escalate privileges or persist in the environment."
             }
@@ -11408,12 +11017,8 @@
                 "reason": "Lambda functions can communicate over standard web protocols, enabling Command and Control communication that blends with regular traffic."
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "Utilizing the AWS API to deploy and manage Lambda functions involves using native APIs to conduct malicious activities."
-            },
-            {
-                "technique": "T1190 - Exploit Public-Facing Application",
-                "reason": "If the Lambda function is triggered via a public-facing API, it can be exploited to gain initial access or execute code."
+                "technique": "T1027 - Obfuscated Files or Information",
+                "reason": "If attackers use code-signing configurations and different deployment packaging (e.g., obfuscated container images or encrypted .zip archives), it can help evade detection by concealing the true nature of the function code."
             },
             {
                 "technique": "T1053 - Scheduled Task/Job",
@@ -11490,12 +11095,16 @@
                 "reason": "Attackers can use Lambda functions as a form of remote access to maintain control over compromised systems."
             },
             {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Attackers might use obfuscation techniques in Lambda functions to hide malicious activities."
+                "technique": "T1190 - Exploit Public-Facing Application",
+                "reason": "If the Lambda function is triggered via a public-facing API endpoint, it could be exploited to gain unauthorized access. Attackers may abuse vulnerable API configurations or input validation flaws to invoke the function, thus compromising the environment."
             },
             {
                 "technique": "T1053 - Scheduled Task/Job",
                 "reason": "Lambda functions can be scheduled to execute tasks periodically, allowing persistent execution of malicious code."
+            },
+            {
+                "technique": "T1648 - Serverless Execution",
+                "reason": "By invoking a Lambda function, an attacker can leverage the serverless environment to run malicious code, perform lateral movement, or conduct other post-exploitation activities while taking advantage of the scalability and ephemeral nature of serverless computing to evade detection and persist within the environment."
             }
         ],
         "usedInWild": true,
@@ -11553,10 +11162,6 @@
             {
                 "technique": "T1027 - Obfuscated Files or Information",
                 "reason": "Adversaries can obfuscate their actions by frequently changing the event source mapping, making it harder to trace the function invocations."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "Use of the AWS API directly is an example of leveraging native APIs to perform tasks, in this case, updating Lambda functions."
             },
             {
                 "technique": "T1098 - Account Manipulation",
@@ -11625,10 +11230,6 @@
             {
                 "technique": "T1056 - Input Capture",
                 "reason": "By updating the Lambda function code to capture inputs, such as keystrokes or API inputs, adversaries can collect sensitive information."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "Directly updating the Lambda function code allows adversaries to exploit native APIs to execute their payloads."
             }
         ],
         "usedInWild": false,
@@ -11683,8 +11284,8 @@
                 "reason": "Modifying Lambda function configurations allows execution of scripts or commands in the runtime environment."
             },
             {
-                "technique": "T1106 - Native API",
-                "reason": "Attackers use AWS API calls like UpdateFunctionConfiguration to directly interact with and manipulate Lambda functions to achieve their goals."
+                "technique": "T1562 - Impair Defenses",
+                "reason": "Attackers might modify configurations like logging settings or environment variables to prevent detection efforts."
             }
         ],
         "usedInWild": false,
@@ -11735,10 +11336,6 @@
             {
                 "technique": "T1583 - Acquire Infrastructure",
                 "reason": "CreateInstances can be used by adversaries to acquire infrastructure for future operations by provisioning new instances."
-            },
-            {
-                "technique": "T1566 - Phishing",
-                "reason": "Instances may host phishing websites to harvest credentials from targeted users."
             },
             {
                 "technique": "T1090 - Proxy",
@@ -11959,14 +11556,6 @@
             {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Adding accounts to the organization can be used to manipulate account permissions and roles for persistence or escalation of privileges."
-            },
-            {
-                "technique": "T1071 - Application Layer Protocol",
-                "reason": "Using the API call to communicate and manage accounts in the organization can evade detection mechanisms focused on other layers."
-            },
-            {
-                "technique": "T1102 - Web Service",
-                "reason": "Utilizing AWS Organizations API as a web service to manage accounts can help in evading direct detection of unauthorized activities."
             },
             {
                 "technique": "T1562 - Impair Defenses",
@@ -12198,10 +11787,6 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Creating a new DB security group could be used to establish persistence by allowing access to specific IP ranges or users who control the security group, effectively allowing continuous access."
-            },
-            {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "The security group settings can be configured to allow specific protocols or applications to communicate with the DB instance, facilitating control or exfiltration methods."
             },
@@ -12212,10 +11797,6 @@
             {
                 "technique": "T1098 - Account Manipulation",
                 "reason": "Creating or modifying a security group could be a method to manipulate access controls and permissions, thereby escalating privileges or creating a backdoor for persistent access."
-            },
-            {
-                "technique": "T1003 - Credential Dumping",
-                "reason": "Misconfigured security groups could allow unauthorized access to the DB instance, where attackers might attempt to dump credentials stored within the database"
             },
             {
                 "technique": "T1036 - Masquerading",
@@ -12272,10 +11853,6 @@
             {
                 "technique": "T1005 - Data from Local System",
                 "reason": "The snapshot may contain data from the local system of the database instance that attackers could extract."
-            },
-            {
-                "technique": "T1496 - Resource Hijacking",
-                "reason": "An attacker could use the snapshot to clone the database instance in another environment, potentially misusing resources."
             },
             {
                 "technique": "T1020 - Automated Exfiltration",
@@ -12345,10 +11922,6 @@
             {
                 "technique": "T1490 - Inhibit System Recovery",
                 "reason": "Deleting a DB cluster can prevent data recovery if backups are also targeted or if the deletion is part of a strategy to ensure that data cannot be restored."
-            },
-            {
-                "technique": "T1491 - Defacement",
-                "reason": "The deletion of the DB cluster could cause a web application or service to become unavailable or display errors, which can be perceived as defacement, especially if the service is customer-facing."
             }
         ],
         "usedInWild": true,
@@ -12470,10 +12043,6 @@
             {
                 "technique": "T1531 - Account Access Removal",
                 "reason": "If the global database cluster contains authentication information or is tied to account access mechanisms, deleting it can effectively remove or disrupt account access."
-            },
-            {
-                "technique": "T1491 - Defacement",
-                "reason": "The deletion of a global database cluster could serve as a form of defacement, especially if the cluster supports a public-facing application, causing reputational damage."
             }
         ],
         "usedInWild": false,
@@ -12513,11 +12082,7 @@
             },
             {
                 "technique": "T1070 - Indicator Removal",
-                "reason": "By disabling the audit stream, an adversary could attempt to hide or remove traces of malicious activity by preventing the collection of activity logs."
-            },
-            {
-                "technique": "T1106 - Native API",
-                "reason": "The use of native APIs, such as ModifyActivityStream, can allow an adversary to modify system configurations to evade detection or gain persistence."
+                "reason": "Attackers might reconfigure the audit policy state to the original state to avoid an investigation."
             }
         ],
         "usedInWild": true,
@@ -12637,20 +12202,12 @@
                 "reason": "After exporting snapshot data to S3, an adversary can retrieve and analyze the data from the S3 bucket, provided they maintain access to the cloud storage."
             },
             {
-                "technique": "T1552 - Unsecured Credentials",
-                "reason": "If the database snapshots contain unsecured credentials, such as plaintext passwords or API keys, exporting the snapshot to S3 could allow an adversary to access these credentials, which could then be used to further compromise the environment or exfiltrate additional data."
-            },
-            {
                 "technique": "T1213 - Data from Information Repositories",
                 "reason": "By exporting the RDS snapshot, an adversary gains access to a repository of information stored within the database, which they can then access through the S3 bucket."
             },
             {
                 "technique": "T1078 - Cloud Accounts",
                 "reason": "Adversaries may leverage compromised cloud accounts to persist within the environment, using cloud-native functionality like the StartExportTask to maintain access to sensitive data over time."
-            },
-            {
-                "technique": "T1556 - Credentials from Password Stores",
-                "reason": "If the database snapshots contain password hashes or other credential stores, exporting the snapshot to S3 could allow an adversary to collect and crack these credentials for further exploitation."
             }
         ],
         "usedInWild": false,
@@ -15639,16 +15196,12 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Changing an IAM user's password allows an attacker to maintain access using a legitimate account."
+                "technique": "T1562 - Impair Defenses",
+                "reason": "Access via the SigninToken enables an attacker to alter or disable cloud defenses, such as modifying IAM policies, Security Groups, or other security mechanisms to evade detection."
             },
             {
-                "technique": "T1556 - Modify Authentication Process",
-                "reason": "Changing the password directly impacts the authentication process, potentially locking out legitimate users and ensuring only the attacker has access."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Changing the password of an IAM user can also serve as a means to remove legitimate account access for the rightful user, ensuring only the attacker can access the account."
+                "technique": "T1589 - Gather Victim Network Information",
+                "reason": "Using the AWS Management Console accessed via the token, an attacker could collect information about the network's architecture, VPC configurations, and connected services."
             }
         ],
         "usedInWild": true,

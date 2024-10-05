@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1040 - Network Sniffing",
-            "reason": "By configuring outbound rules to specific destinations, an attacker can redirect traffic for network sniffing."
+            "reason": "Outbound rules can be adjusted to send traffic to specific external destinations, which may allow attackers to capture or monitor network traffic for sensitive information."
         },
         {
             "technique": "T1071 - Application Layer Protocol",

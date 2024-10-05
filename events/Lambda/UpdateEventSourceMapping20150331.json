@@ -30,10 +30,6 @@
             "reason": "Adversaries can obfuscate their actions by frequently changing the event source mapping, making it harder to trace the function invocations."
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "Use of the AWS API directly is an example of leveraging native APIs to perform tasks, in this case, updating Lambda functions."
-        },
-        {
             "technique": "T1098 - Account Manipulation",
             "reason": "Changing the event source mapping can also be used to manipulate which account or function is invoked, potentially changing the permissions context."
         },

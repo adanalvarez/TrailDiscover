@@ -18,16 +18,8 @@
             "reason": "This involves actions taken to manipulate accounts to maintain access or evade detection. Disassociating the GuardDuty member account from its master account can be seen as a form of account manipulation to avoid centralized logging and monitoring."
         },
         {
-            "technique": "T1485 - Data Destruction",
-            "reason": "By disassociating the account, attackers may intend to evade detection and subsequently destroy data within the compromised account without triggering alerts in the central monitoring account."
-        },
-        {
             "technique": "T1531 - Account Access Removal",
             "reason": "Disassociating from the master account effectively removes the centralized management and monitoring capabilities, making it harder to regain control or visibility over the account."
-        },
-        {
-            "technique": "T1565 - Data Manipulation",
-            "reason": "Disassociating from the master account can allow attackers to manipulate data within the account without detection from the central monitoring system. This can include altering security logs, configurations, or other critical data to cover their tracks or achieve other malicious objectives."
         }
     ],
     "usedInWild": true,

@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Describing access entries in EKS could be used to enumerate valid cloud accounts and their associated access permissions, aiding attackers in identifying and leveraging existing credentials."
-        },
-        {
             "technique": "T1526 - Cloud Service Discovery",
             "reason": "The DescribeAccessEntry API call can be used to identify access permissions and configurations within the EKS service, revealing which cloud services are in use. This information helps attackers understand the cloud environment and potential targets."
         },

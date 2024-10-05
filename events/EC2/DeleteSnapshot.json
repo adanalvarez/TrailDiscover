@@ -22,10 +22,6 @@
             "reason": "If the adversary has encrypted the data and then deletes snapshots, it makes recovery impossible without the decryption keys, thus increasing the impact."
         },
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting snapshots associated with compromised or obsolete accounts can be used to prevent access recovery or hinder incident response efforts."
-        },
-        {
             "technique": "T1565 - Data Manipulation",
             "reason": "Deleting snapshots can be a form of manipulating stored data, particularly if snapshots are used for data recovery and the deletion disrupts normal recovery processes."
         },

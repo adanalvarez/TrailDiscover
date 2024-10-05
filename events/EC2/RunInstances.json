@@ -19,7 +19,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1133 - External Remote Services",
-            "reason": "Instances can be accessed and controlled remotely, facilitating initial access and persistent control over the cloud environment through remote services."
+            "reason": "Adversaries can launch EC2 instances that can be remotely accessed via SSH, RDP, or other protocols, gaining an initial access point into the AWS environment or maintaining persistence."
         },
         {
             "technique": "T1578 - Modify Cloud Compute Infrastructure",

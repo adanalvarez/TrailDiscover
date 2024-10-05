@@ -16,10 +16,6 @@
         {
             "technique": "T1078 - Valid Accounts",
             "reason": "Creating an access entry for an IAM principal can establish valid credentials that can be used for access."
-        },
-        {
-            "technique": "T1059 - Command and Scripting Interpreter",
-            "reason": "If access is created for an IAM principal, the principal might use Unix shell commands to interact with the EKS cluster."
         }
     ],
     "usedInWild": false,

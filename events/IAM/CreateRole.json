@@ -14,14 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "By creating a role with permissions to modify or disable security configurations, an attacker can evade defenses."
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Generic valid account creation through roles provides a method for persistent access."
-        },
-        {
             "technique": "T1098 - Account Manipulation",
             "reason": "Attackers might create a new role to maintain access or elevate privileges within the environment."
         }

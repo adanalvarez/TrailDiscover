@@ -37,7 +37,7 @@
         },
         {
             "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "Snapshots might be used to obfuscate data transfer activities."
+            "reason": "By creating snapshots of EBS volumes, adversaries can hide data transfers under the guise of legitimate backup operations. This makes it harder to distinguish between regular snapshot activities and potential malicious data movements."
         },
         {
             "technique": "T1074 - Data Staged",
@@ -46,10 +46,6 @@
         {
             "technique": "T1550 - Use Alternate Authentication Material",
             "reason": "Adversaries might use stolen keys or other credentials extracted from snapshots as authentication material."
-        },
-        {
-            "technique": "T1056 - Input Capture",
-            "reason": "If the EBS volume contains logs or other data capturing user inputs, snapshots could be used to collect this information."
         },
         {
             "technique": "T1496 - Resource Hijacking",

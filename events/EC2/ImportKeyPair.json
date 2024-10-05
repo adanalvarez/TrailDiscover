@@ -20,10 +20,6 @@
         {
             "technique": "T1070 - Indicator Removal",
             "reason": "Attackers may delete logs or evidence after importing the keypair."
-        },
-        {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "Attackers may use the imported key to disable or bypass security controls, such as altering firewall rules or disabling monitoring services, to avoid detection and maintain access. This weakens the overall security posture of the environment."
         }
     ],
     "usedInWild": true,

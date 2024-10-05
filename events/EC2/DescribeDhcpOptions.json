@@ -14,16 +14,8 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1560 - Archive Collected Data",
-            "reason": "Attackers might archive information gathered from the DHCP options for later analysis or use, aiding in the evasion of immediate detection."
-        },
-        {
             "technique": "T1049 - System Network Connections Discovery",
             "reason": "Describing DHCP options is directly related to understanding network configurations and connections within the AWS environment"
-        },
-        {
-            "technique": "T1074 - Data Staged",
-            "reason": "Attackers might stage data related to DHCP options for later exfiltration, which can be part of a broader data exfiltration strategy"
         },
         {
             "technique": "T1590 - Gather Victim Network Information",

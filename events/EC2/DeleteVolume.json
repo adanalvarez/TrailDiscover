@@ -24,10 +24,6 @@
         {
             "technique": "T1561 - Disk Wipe",
             "reason": "Deleting the volume ensures that all data on the volume is removed, which is similar to a disk wipe."
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "By deleting the volume, an attacker can remove data that could be used by forensic teams to analyze account activities, effectively removing access to data that could lead to their identification"
         }
     ],
     "usedInWild": true,

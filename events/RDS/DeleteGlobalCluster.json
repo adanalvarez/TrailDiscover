@@ -40,10 +40,6 @@
         {
             "technique": "T1531 - Account Access Removal",
             "reason": "If the global database cluster contains authentication information or is tied to account access mechanisms, deleting it can effectively remove or disrupt account access."
-        },
-        {
-            "technique": "T1491 - Defacement",
-            "reason": "The deletion of a global database cluster could serve as a form of defacement, especially if the cluster supports a public-facing application, causing reputational damage."
         }
     ],
     "usedInWild": false,

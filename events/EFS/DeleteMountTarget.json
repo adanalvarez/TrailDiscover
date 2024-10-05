@@ -20,10 +20,6 @@
         {
             "technique": "T1070 - Indicator Removal",
             "reason": "By deleting the mount target and the associated network interface, traces and logs of malicious activity stored on the file system may be removed, aiding in defense evasion."
-        },
-        {
-            "technique": "T1496 - Resource Hijacking",
-            "reason": "Deleting mount targets can free up resources, potentially redirecting them to other malicious activities or hindering legitimate use, indirectly impacting operations."
         }
     ],
     "usedInWild": false,

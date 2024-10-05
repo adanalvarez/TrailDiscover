@@ -36,10 +36,6 @@
         {
             "technique": "T1490 - Inhibit System Recovery",
             "reason": "Deleting a DB cluster can prevent data recovery if backups are also targeted or if the deletion is part of a strategy to ensure that data cannot be restored."
-        },
-        {
-            "technique": "T1491 - Defacement",
-            "reason": "The deletion of the DB cluster could cause a web application or service to become unavailable or display errors, which can be perceived as defacement, especially if the service is customer-facing."
         }
     ],
     "usedInWild": true,

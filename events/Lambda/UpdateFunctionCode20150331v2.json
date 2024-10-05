@@ -40,10 +40,6 @@
         {
             "technique": "T1056 - Input Capture",
             "reason": "By updating the Lambda function code to capture inputs, such as keystrokes or API inputs, adversaries can collect sensitive information."
-        },
-        {
-            "technique": "T1106 - Native API",
-            "reason": "Directly updating the Lambda function code allows adversaries to exploit native APIs to execute their payloads."
         }
     ],
     "usedInWild": false,

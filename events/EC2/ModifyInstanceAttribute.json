@@ -15,11 +15,11 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",
-            "reason": "Modifying instance attributes can involve changing account settings to maintain access to the instance, including the use or creation of default, local, or cloud accounts."
+            "reason": "Modifying instance attributes can involve, via modifications of the UserData, changing account settings to maintain access to the instance, including the use or creation of default, local, or cloud accounts."
         },
         {
             "technique": "T1562 - Impair Defenses",
-            "reason": "This API call could disable or modify security tools and defenses on the instance, impairing the system's ability to detect or respond to threats"
+            "reason": "Via modifications of the UserData an attacker could disable or modify security tools and defenses on the instance, impairing the system's ability to detect or respond to threats"
         },
         {
             "technique": "T1496 - Resource Hijacking",

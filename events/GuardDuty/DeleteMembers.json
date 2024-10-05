@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting GuardDuty member accounts can prevent legitimate users from accessing the service, thus disrupting monitoring and security alerts."
+            "reason": "Deleting GuardDuty member accounts can prevent legitimate accounts from getting data from member accounts, thus disrupting monitoring and security alerts."
         },
         {
             "technique": "T1070 - Indicator Removal",

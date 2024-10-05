@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1562 - Impair Defenses",
-            "reason": "Removing permissions from snapshots containing security tools can help attackers evade defenses by disabling or modifying those tools."
+            "reason": "Modifying permissions could impair security controls or defenses by granting unauthorized access to the snapshots, potentially containing security-related configurations, backups, or tools."
         },
         {
             "technique": "T1087 - Account Discovery",
@@ -44,10 +44,6 @@
         {
             "technique": "T1074 - Data Staged",
             "reason": "Snapshots can be used to stage data locally for later exfiltration, aiding in data collection and exfiltration"
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Modifying snapshot permissions could be used to remove legitimate access, disrupting recovery efforts, and aiding in defense evasion."
         }
     ],
     "usedInWild": true,

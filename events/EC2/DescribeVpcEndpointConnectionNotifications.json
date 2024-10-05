@@ -18,24 +18,12 @@
             "reason": "Describing VPC endpoint connection notifications can help identify shared resources within the VPC, providing information on the network structure and potential entry points."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Attackers might use valid credentials to describe VPC endpoint notifications, identifying points of interest within the network for further exploitation"
-        },
-        {
             "technique": "T1049 - System Network Connections Discovery",
             "reason": "By describing VPC endpoint connection notifications, an attacker can gather information about the network connections and endpoints configured in the VPC."
         },
         {
-            "technique": "T1020 - Automated Exfiltration",
-            "reason": "Understanding VPC endpoint connections and notifications can help in setting up automated exfiltration channels via specific endpoints."
-        },
-        {
             "technique": "T1007 - Network Service Scanning",
             "reason": "Describing VPC endpoint connection notifications can reveal details about network services in use, which can be leveraged for further network service scanning."
-        },
-        {
-            "technique": "T1057 - Process Discovery",
-            "reason": "While not directly discovering processes, the VPC endpoint notifications can provide insights into the services and applications communicating within the network, aiding in the overall discovery of active processes and services in the environment."
         }
     ],
     "usedInWild": true,

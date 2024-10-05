@@ -20,10 +20,6 @@
         {
             "technique": "T1560 - Archive Collected Data",
             "reason": "The data key can facilitate the encryption of collected data before exfiltration to avoid detection."
-        },
-        {
-            "technique": "T1496 - Resource Hijacking",
-            "reason": "Attackers could use the symmetric data key to encrypt legitimate resources, thereby disrupting normal operations and potentially leading to financial or operational impacts."
         }
     ],
     "usedInWild": true,

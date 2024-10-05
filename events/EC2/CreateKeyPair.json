@@ -31,7 +31,7 @@
         },
         {
             "technique": "T1530 - Data from Cloud Storage Object",
-            "reason": "The key pair might be stored in cloud storage, which, if not properly secured, can be accessed by attackers to retrieve the private key."
+            "reason": "If the EC2 instance has permissions to access Cloud storage, the key can be used to get this data via the EC2 permissions"
         },
         {
             "technique": "T1212 - Exploitation for Credential Access",

@@ -30,7 +30,7 @@
             "reason": "Load balancers often manage external access to services. By describing them, an adversary can identify the external endpoints and understand how remote services are being accessed and managed."
         },
         {
-            "technique": "Load balancers often manage external access to services. By describing them, an adversary can identify the external endpoints and understand how remote services are being accessed and managed.",
+            "technique": "T1482 - Domain Trust Discovery",
             "reason": "The DescribeLoadBalancers API call can provide information on how load balancers are configured across different domains, revealing trust relationships and how traffic is managed between different parts of the network."
         }
     ],

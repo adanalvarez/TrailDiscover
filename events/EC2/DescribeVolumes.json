@@ -28,14 +28,6 @@
         {
             "technique": "T1613 - Container and Resource Discovery",
             "reason": "Volumes can be linked to container storage. Discovering volumes helps in mapping container usage and dependencies"
-        },
-        {
-            "technique": "T1485 - Data Destruction",
-            "reason": "Information about volumes can be used to identify targets for data destruction attacks"
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "DescribeVolumes can reveal usage patterns and configurations that help in identifying and leveraging valid cloud accounts."
         }
     ],
     "usedInWild": true,

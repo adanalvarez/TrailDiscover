@@ -15,15 +15,11 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1003 - OS Credential Dumping",
-            "reason": "Attackers can create volumes and attach them to instances to access filesystems and potentially extract sensitive files such as /etc/passwd and /etc/shadow on Linuy systems for credential dumping."
+            "reason": "Attackers can create volumes and attach them to instances to access filesystems and potentially extract sensitive files such as /etc/passwd and /etc/shadow on Linux systems for credential dumping."
         },
         {
             "technique": "T1078 - Valid Accounts",
             "reason": "By creating a volume from a snapshot that contains valid credentials or authentication tokens, attackers can gain persistent access to cloud resources."
-        },
-        {
-            "technique": "T1098 - Account Manipulation",
-            "reason": "Attackers might create volumes from snapshots containing cloud credentials to use for maintaining access or escalating privileges within the cloud environment."
         },
         {
             "technique": "T1202 - Indirect Command Execution",

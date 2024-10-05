@@ -33,12 +33,8 @@
             "reason": "Lambda functions can communicate over standard web protocols, enabling Command and Control communication that blends with regular traffic."
         },
         {
-            "technique": "T1106 - Native API",
-            "reason": "Utilizing the AWS API to deploy and manage Lambda functions involves using native APIs to conduct malicious activities."
-        },
-        {
-            "technique": "T1190 - Exploit Public-Facing Application",
-            "reason": "If the Lambda function is triggered via a public-facing API, it can be exploited to gain initial access or execute code."
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "If attackers use code-signing configurations and different deployment packaging (e.g., obfuscated container images or encrypted .zip archives), it can help evade detection by concealing the true nature of the function code."
         },
         {
             "technique": "T1053 - Scheduled Task/Job",

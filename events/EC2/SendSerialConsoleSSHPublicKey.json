@@ -22,16 +22,8 @@
             "reason": "Attackers may push their own SSH keys to the EC2 instances, effectively manipulating access control."
         },
         {
-            "technique": "T1053 - Scheduled Task/Job",
-            "reason": "Attackers could set up scheduled tasks or jobs on the EC2 instance to maintain persistence after gaining access."
-        },
-        {
             "technique": "T1562 - Impair Defenses",
             "reason": "After gaining access, attackers could disable security tools or logs to evade detection."
-        },
-        {
-            "technique": "T1105 - Ingress Tool Transfer",
-            "reason": "Attackers may transfer additional tools to the EC2 instance to facilitate further actions."
         },
         {
             "technique": "T1036 - Masquerading",

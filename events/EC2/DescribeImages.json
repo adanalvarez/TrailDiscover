@@ -14,18 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1496 - Resource Hijacking",
-            "reason": "By understanding the available images, an attacker could hijack resources by creating instances using these images for malicious activities such as cryptocurrency mining."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "Attackers can use knowledge about available images to obfuscate their activities by using less monitored or unusual images"
-        },
-        {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "By identifying specific images that might have security tools, attackers can choose to avoid those images or disable the security tools present in them"
-        },
-        {
             "technique": "T1082 - System Information Discovery",
             "reason": "DescribeImages can be used to gather detailed information about the system images in use, which is critical for planning further attacks or understanding the environment."
         },
@@ -51,7 +39,7 @@
         },
         {
             "technique": "T1195 - Supply Chain Compromise",
-            "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise"
+            "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise."
         }
     ],
     "usedInWild": true,

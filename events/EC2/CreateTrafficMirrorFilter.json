@@ -18,10 +18,6 @@
             "reason": "By creating a Traffic Mirror filter, attackers can intercept and analyze network traffic to capture sensitive information. This directly relates to the ability to observe all mirrored network traffic."
         },
         {
-            "technique": "T1560 - Archive Collected Data",
-            "reason": "Attackers can collect and transfer data via the mirrored traffic to remote servers or network shares. Mirroring allows for the redirection and storage of network data elsewhere for further analysis."
-        },
-        {
             "technique": "T1046 - Network Service Scanning",
             "reason": "raffic mirroring can be used to observe and scan network services and discover active services and devices on the network. By analyzing mirrored traffic, attackers can map the network and identify active services."
         },

@@ -30,10 +30,6 @@
             "reason": "The task definitions can contain Unix shell commands, facilitating execution of malicious scripts or commands."
         },
         {
-            "technique": "T1203 - Exploitation for Client Execution",
-            "reason": "Task definitions might be crafted to exploit vulnerabilities within the container runtime or application, leading to execution"
-        },
-        {
             "technique": "T1036 - Masquerading",
             "reason": "Malicious task definitions can be disguised as legitimate ones to evade detection and blend in with normal operations"
         },

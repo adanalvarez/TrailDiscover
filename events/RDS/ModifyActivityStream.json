@@ -19,11 +19,7 @@
         },
         {
             "technique": "T1070 - Indicator Removal",
-            "reason": "By disabling the audit stream, an adversary could attempt to hide or remove traces of malicious activity by preventing the collection of activity logs."
-        },
-        {
-            "technique": "T1106 - Native API",
-            "reason": "The use of native APIs, such as ModifyActivityStream, can allow an adversary to modify system configurations to evade detection or gain persistence."
+            "reason": "Attackers might reconfigure the audit policy state to the original state to avoid an investigation."
         }
     ],
     "usedInWild": true,

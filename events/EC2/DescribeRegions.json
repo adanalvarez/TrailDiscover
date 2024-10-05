@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1213 - Data from Information Repositories",
-            "reason": "DescribeRegions provides metadata about regions, which can be seen as a form of information repository. Attackers may gather this data to understand the environment better."
+            "reason": "DescribeRegions gives access to the regional metadata of AWS, which acts as an information repository. Attackers may exploit this data to gain insights into the structure and status of the cloud environment."
         },
         {
             "technique": "T1135 - Network Share Discovery",

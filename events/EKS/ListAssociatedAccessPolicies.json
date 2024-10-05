@@ -22,14 +22,6 @@
             "reason": "By listing the access policies, adversaries can discern the permission groups within the EKS cluster, aiding in understanding the permissions and roles configured."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Access to the list of associated policies can reveal valid accounts with specific permissions, which can be targeted for credential theft or misuse. The information from these policies assists in identifying valid accounts, which can then be exploited to gain unauthorized access to the EKS cluster."
-        },
-        {
-            "technique": "T1556 - Modify Authentication Process",
-            "reason": "Knowledge of associated access policies can facilitate changes to the authentication processes, enabling adversaries to bypass security mechanisms or gain unauthorized access."
-        },
-        {
             "technique": "T1046 - Network Service Scanning",
             "reason": "Listing access policies helps map out the services and permissions in use, aiding in reconnaissance efforts to identify potential targets and vulnerabilities."
         },

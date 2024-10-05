@@ -20,10 +20,6 @@
             "reason": "CreateInstances can be used by adversaries to acquire infrastructure for future operations by provisioning new instances."
         },
         {
-            "technique": "T1566 - Phishing",
-            "reason": "Instances may host phishing websites to harvest credentials from targeted users."
-        },
-        {
             "technique": "T1090 - Proxy",
             "reason": "Instances could act as proxies to route malicious traffic and hide the true source of the attack."
         },

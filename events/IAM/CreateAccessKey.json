@@ -17,10 +17,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "New keys might be used to impair security defenses by disabling or modifying security tools."
-        },
-        {
             "technique": "T1098 - Account Manipulation",
             "reason": "New keys can be used for account manipulation activities, providing additional or unauthorized access."
         }

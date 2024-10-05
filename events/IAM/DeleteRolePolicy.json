@@ -20,10 +20,6 @@
         {
             "technique": "T1562 - Impair Defenses",
             "reason": "By deleting IAM role policies, an attacker could impair security tools that rely on those policies for correct operation, effectively reducing the efficacy of security defenses."
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Managing and modifying IAM roles and their policies can be part of maintaining access using valid accounts with modified permissions to evade detection"
         }
     ],
     "usedInWild": false,

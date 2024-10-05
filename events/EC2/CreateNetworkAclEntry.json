@@ -35,11 +35,11 @@
         },
         {
             "technique": "T1033 - System Owner/User Discovery",
-            "reason": "Adjusting network ACLs might allow an attacker to scan for system owners or users by permitting specific traffic"
+            "reason": "By modifying network ACL rules, an attacker can enable access to specific ports used by services like SMB (TCP/445). SMB ports are often used for sharing files and resources within a network. Access to these ports can provide the attacker with the ability to query for system information, users, and groups (such as through NetSessionEnum or NetUserEnum calls), helping them to discover the system owner or logged-in users, which aids in understanding the target environment."
         },
         {
             "technique": "T1078 - Valid Accounts",
-            "reason": "An attacker might create ACL entries to exploit default accounts for initial access."
+            "reason": "An attacker might create ACL entries to allow traffic to sites or services where the attacker has valid accounts."
         },
         {
             "technique": "T1049 - System Network Connections Discovery",

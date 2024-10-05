@@ -30,10 +30,6 @@
             "reason": "The snapshot may contain data from the local system of the database instance that attackers could extract."
         },
         {
-            "technique": "T1496 - Resource Hijacking",
-            "reason": "An attacker could use the snapshot to clone the database instance in another environment, potentially misusing resources."
-        },
-        {
             "technique": "T1020 - Automated Exfiltration",
             "reason": "The snapshot could be automatically transferred out of the environment to an external location, facilitating data exfiltration without manual intervention."
         }

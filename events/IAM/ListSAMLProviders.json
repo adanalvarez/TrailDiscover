@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "By identifying SAML providers, attackers can understand the authentication mechanisms in use and potentially exploit known weaknesses or misconfigurations, including targeting and potentially compromising cloud accounts through federated authentication mechanisms."
-        },
-        {
             "technique": "T1580 - Cloud Infrastructure Discovery",
             "reason": "Listing SAML providers can help attackers map out the cloud infrastructure and understand how identity federation is being handled within the account."
         },

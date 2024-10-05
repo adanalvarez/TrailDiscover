@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Analyzing snapshot attributes can help identify valid accounts by examining account-specific data stored in the snapshots."
-        },
-        {
             "technique": "T1087 - Account Discovery",
             "reason": "By describing snapshot attributes, an adversary can discover accounts associated with specific snapshots, providing insight into user and service accounts in the environment."
         },

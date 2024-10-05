@@ -18,7 +18,7 @@
             "reason": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code."
         },
         {
-            "technique": "By creating a malicious rule that directs traffic to a compromised endpoint, an attacker could exploit vulnerabilities in client applications to execute malicious code.",
+            "technique": "T1190 - Exploit Public-Facing Application",
             "reason": "By modifying or creating new rules, an attacker could exploit vulnerabilities in the public-facing application load balancer to gain initial access."
         },
         {
@@ -40,10 +40,6 @@
         {
             "technique": "T1070 - Indicator Removal",
             "reason": "Rules could be used to route traffic in ways that delete or bypass log files to avoid detection."
-        },
-        {
-            "technique": "T1219 - Remote Access Software",
-            "reason": "Rules can be set up to enable remote access software to connect to compromised endpoints"
         },
         {
             "technique": "T1496 - Resource Hijacking",

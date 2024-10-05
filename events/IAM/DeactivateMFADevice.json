@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1586 - Compromise Accounts",
-            "reason": "Deactivating MFA is part of compromising user accounts to ensure ongoing access and persistence within an AWS environment."
+            "reason": "Deactivating MFA might be part of an account compromise if the attacker knows the password but has no access to the MFA. By disabling the MFA the attacker will be able to compromise the account."
         }
     ],
     "usedInWild": false,

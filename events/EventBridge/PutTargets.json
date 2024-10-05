@@ -15,19 +15,19 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",
-            "reason": ""
+            "reason": "An attacker could add a target that executes a script or command interpreter, allowing for arbitrary command execution"
         },
         {
             "technique": "T1098 - Account Manipulation",
-            "reason": ""
+            "reason": "An attacker could add a target that executes a script or command interpreter, allowing for arbitrary command execution"
         },
         {
             "technique": "T1105 - Ingress Tool Transfer",
-            "reason": ""
+            "reason": "The attacker could configure targets that download and execute malicious tools, facilitating further exploitation."
         },
         {
             "technique": "T1560 - Archive Collected Data",
-            "reason": "The attacker could add targets that archive data, preparing it for exfiltration when a rule is triggered."
+            "reason": "If targets are added to an event rule to trigger actions like archiving (e.g., invoking a Lambda function to zip and store data in an S3 bucket), this can be used to collect and prepare data for later exfiltration."
         },
         {
             "technique": "T1070 - Indicator Removal",
@@ -35,7 +35,7 @@
         },
         {
             "technique": "T1203 - Exploitation for Client Execution",
-            "reason": "An attacker could set a target that exploits vulnerabilities in client applications, leading to remote execution when the rule is triggered."
+            "reason": "An attacker could create or modify a target to execute a particular payload or exploit code on services that are automatically triggered by the event, which might lead to exploiting client applications or services."
         }
     ],
     "usedInWild": true,

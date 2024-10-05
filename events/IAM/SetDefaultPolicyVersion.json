@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1070 - Indicator Removal",
-            "reason": "Modifying the policy's default version can be used to evade detection by altering the policies that would trigger alarms or logs."
+            "reason": "Modifying the policy's default version can be used to evade detection by setting the policy version that was in place before the attack."
         },
         {
             "technique": "T1531 - Account Access Removal",

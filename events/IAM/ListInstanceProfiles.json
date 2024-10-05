@@ -18,10 +18,6 @@
             "reason": "The ListInstanceProfiles API call provides details about instance profiles and their associated IAM roles, helping an attacker map out the cloud infrastructure. Understanding the roles in use aids in identifying potential targets for further exploitation or privilege escalation."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Enumerating instance profiles can help identify valid accounts and roles that an attacker might use to maintain access or escalate privileges within the environment."
-        },
-        {
             "technique": "T1589 - Gather Victim Identity Information",
             "reason": "The API call can help gather information about the identities and roles within the AWS environment, which could be used for further attacks or social engineering."
         }

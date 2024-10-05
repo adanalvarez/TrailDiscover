@@ -47,7 +47,7 @@
         },
         {
             "technique": "T1560 - Archive Collected Data",
-            "reason": "The template could be used to create archives of log data, potentially aiding in data exfiltration by archiving and compressing the data before transfer."
+            "reason": "By using the CloudFormation template to configure the VPC flow logs integration, adversaries can automate the collection, archiving, and storage of flow logs data, potentially using S3 to archive collected logs before exfiltration or analysis."
         }
     ],
     "usedInWild": true,

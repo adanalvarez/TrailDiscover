@@ -15,10 +15,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Updating inline policies can help adversaries evade detection by altering the permissions without creating new, noticeable accounts."
-        },
-        {
             "technique": "T1562 - Impair Defenses",
             "reason": "By embedding policies that allow for disabling or bypassing security controls, adversaries can impair defense mechanisms."
         },
@@ -27,7 +23,7 @@
             "reason": "Adversaries may use PutUserPolicy to remove access rights for legitimate users, causing disruption."
         },
         {
-            "technique": "Adversaries may use PutUserPolicy to remove access rights for legitimate users, causing disruption.",
+            "technique": "T1068 - Exploitation for Privilege Escalation",
             "reason": "If an adversary can modify policies to grant administrative privileges, they effectively escalate their privileges."
         },
         {

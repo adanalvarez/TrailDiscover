@@ -34,16 +34,8 @@
             "reason": "Route table information can be used to facilitate the transfer of tools across different segments of the network, aiding lateral movement."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Attackers can leverage valid accounts to access network routes and associations information, using it to further their goals within the network"
-        },
-        {
             "technique": "T1021 - Remote Services",
             "reason": "The information obtained from the API call can be used to identify and exploit remote services for lateral movement or persistence"
-        },
-        {
-            "technique": "T1033 - System Owner/User Discovery",
-            "reason": "By analyzing the route table associations, attackers can infer information about system owners and users associated with different network segments."
         },
         {
             "technique": "T1071 - Application Layer Protocol",

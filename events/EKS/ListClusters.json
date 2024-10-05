@@ -26,10 +26,6 @@
             "reason": "Knowing the clusters can help adversaries understand shared network resources within the EKS environment."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "The information gathered might be used to identify valid cloud accounts if the clusters are associated with specific users or roles."
-        },
-        {
             "technique": "T1007 - Network Service Scanning",
             "reason": "Identifying clusters can help adversaries in mapping the network services exposed by these clusters."
         },

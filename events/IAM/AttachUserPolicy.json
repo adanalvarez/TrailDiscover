@@ -17,10 +17,6 @@
         {
             "technique": "T1556 - Modify Authentication Process",
             "reason": "By attaching a policy, an adversary can alter the authentication process, potentially bypassing multi-factor authentication (MFA) or other security measures."
-        },
-        {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Attaching a policy can grant or elevate permissions for a valid cloud account, enabling persistent access. This action could be used to maintain or escalate privileges within the environment."
         }
     ],
     "usedInWild": true,

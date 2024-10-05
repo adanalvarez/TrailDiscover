@@ -26,18 +26,6 @@
             "reason": "Event source mappings can be used to trigger Lambda functions, executing code in response to specific events or data."
         },
         {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Adversaries could configure Lambda functions to delete logs or other indicators of their activity upon execution."
-        },
-        {
-            "technique": "T1106 - Native API",
-            "reason": "Utilizing the CreateEventSourceMapping API, adversaries can execute Lambda functions by mapping event sources to them."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "he payload or code executed by the Lambda function could be obfuscated to evade detection."
-        },
-        {
             "technique": "T1098 - Account Manipulation",
             "reason": "Modifying the event source mappings can change the behavior of Lambda functions, possibly to escalate privileges or persist in the environment."
         }

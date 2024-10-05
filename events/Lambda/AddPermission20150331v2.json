@@ -18,14 +18,6 @@
             "reason": "The AddPermission API call can be used to alter permissions, effectively manipulating accounts to maintain access or escalate privileges."
         },
         {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Using AddPermission to adjust access rights can help hide malicious activities by removing or altering indicators of compromise."
-        },
-        {
-            "technique": "T1040 - Credential Access via API",
-            "reason": "Granting permissions can facilitate the capture or misuse of credentials if permissions are set incorrectly, allowing access to sensitive functions."
-        },
-        {
             "technique": "T1090 - Proxy",
             "reason": "Permissions granted via AddPermission could enable an attacker to set up functions that act as proxies, helping to evade defenses."
         },

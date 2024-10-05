@@ -24,10 +24,6 @@
         {
             "technique": "T1213 - Data from Information Repositories",
             "reason": "This API call provides detailed information about EBS snapshots, which are a form of cloud storage. An attacker can use this to identify and access sensitive data stored within these snapshots."
-        },
-        {
-            "technique": "T1074 - Data Staged",
-            "reason": "An attacker might use the DescribeSnapshotTierStatus API call to gather snapshot information and then move the relevant data to a local staging area."
         }
     ],
     "usedInWild": true,

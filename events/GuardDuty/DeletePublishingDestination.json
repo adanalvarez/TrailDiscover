@@ -14,14 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1485 - Data Destruction",
-            "reason": "Although not directly data destruction, it disrupts the availability of security logs which could be considered an impact on the integrity and availability of logging data."
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting the publishing destination can prevent security personnel from receiving critical alerts, effectively limiting their ability to respond to threats. This action reduces the ability to monitor and manage GuardDuty findings, thereby diminishing the security team's control over the environment."
-        },
-        {
             "technique": "T1565 - Data Manipulation",
             "reason": "By deleting the publishing destination, critical security findings are not reported, which can be seen as manipulating the availability of security data and hindering incident response efforts."
         }

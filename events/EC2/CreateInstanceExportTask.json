@@ -18,16 +18,8 @@
             "reason": "Exporting an EC2 instance to an S3 bucket involves transferring data over a web service, which aligns with exfiltrating data through a web-based method."
         },
         {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Once the instance data is exported, attackers might delete the original instance or logs to cover their tracks"
-        },
-        {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "The export task utilizes application layer protocols for communication, relevant for exfiltrating data using such protocols."
-        },
-        {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "Exporting the instance might include using formats that obfuscate the data of the instance, aiding in defense evasion."
         },
         {
             "technique": "T1537 - Transfer Data to Cloud Account",
