@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The CreateFoundationModelAgreement API call allows users to create or modify agreements, which can be used to manipulate account permissions. Attackers can create agreements with elevated privileges or modify existing ones to gain unauthorized access or escalate privileges."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

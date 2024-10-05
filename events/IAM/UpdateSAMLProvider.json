@@ -10,6 +10,23 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "The UpdateSAMLProvider API call allows changing the SAML metadata document, directly affecting how AWS handles authentication through SAML assertions. This can enable an attacker to alter authentication mechanisms or potentially introduce unauthorized access methods."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By changing the SAML metadata document, an attacker could gain access to valid accounts. The new or altered assertions in the SAML metadata can be used to authenticate as legitimate AWS users or roles."
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "Altering the SAML metadata document provides an opportunity to use different authentication material. An attacker could insert alternate cryptographic keys or certificates into the SAML assertions, allowing them to authenticate to AWS resources as a trusted user or entity."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

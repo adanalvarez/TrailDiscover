@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1136 - Create Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": " Creating a SAML provider can lead to the creation and use of valid credentials, allowing the adversary to maintain persistence."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The creation of a SAML provider involves the manipulation of account settings to allow federated authentication, which can be used by adversaries to maintain access and evade detection."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "The creation of a SAML provider could be used to modify the authentication process, allowing adversaries to authenticate as different users within the AWS environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

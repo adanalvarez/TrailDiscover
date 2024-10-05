@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "The API call provides information about the transit gateway route table associations, which can be used to identify and map remote systems within the network."
+        },
+        {
+            "technique": "T1423 - Network Service Scanning",
+            "reason": "Understanding route table associations helps in scanning and identifying active services and their routing paths, facilitating network service discovery."
+        },
+        {
+            "technique": "T1133 - External Remote Services",
+            "reason": "By analyzing transit gateway associations, attackers can identify potential external services that can be targeted for initial access or further exploitation"
+        },
+        {
+            "technique": "T1219 - Remote Access Software",
+            "reason": "Knowledge of network routes and associations is crucial for deploying and managing remote access tools within the network"
+        },
+        {
+            "technique": "T1570 - Lateral Tool Transfer",
+            "reason": "Route table information can be used to facilitate the transfer of tools across different segments of the network, aiding lateral movement."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "The information obtained from the API call can be used to identify and exploit remote services for lateral movement or persistence"
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Attackers can use knowledge of network routing to communicate using application layer protocols that traverse the transit gateway routes"
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The transit gateway route table associations provide valuable insights into the network's structure and configuration, useful for gathering detailed network information"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

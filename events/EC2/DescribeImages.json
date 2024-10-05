@@ -9,6 +9,39 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "DescribeImages can be used to gather detailed information about the system images in use, which is critical for planning further attacks or understanding the environment."
+        },
+        {
+            "technique": "T1202 - Indirect Command Execution",
+            "reason": "By using DescribeImages, attackers can identify images that may allow them to indirectly execute commands through specific software or configurations present in the images"
+        },
+        {
+            "technique": "T1608 - Stage Capabilities",
+            "reason": "An attacker might use DescribeImages to find specific images to stage capabilities like installing digital certificates on chosen instances."
+        },
+        {
+            "technique": "T1083 - File and Directory Discovery",
+            "reason": "DescribeImages can reveal the existence and properties of files and directories associated with specific AMIs, aiding in discovery efforts"
+        },
+        {
+            "technique": "T1613 - Container and Resource Discovery",
+            "reason": "Attackers can use DescribeImages to identify available container images and resources in the environment. This helps them understand the infrastructure and identify potential targets for exploitation within containerized applications."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Using DescribeImages helps attackers discover available cloud services, their configurations, and associated resources."
+        },
+        {
+            "technique": "T1195 - Supply Chain Compromise",
+            "reason": "Attackers can use DescribeImages to identify and exploit vulnerabilities in the software dependencies and development tools used within specific images, leading to a supply chain compromise."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

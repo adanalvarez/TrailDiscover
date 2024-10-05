@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery - Cloud Account",
+            "reason": "Listing associated access policies allows adversaries to discover the cloud accounts associated with those policies, identifying potential targets"
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By listing the access policies, adversaries can discern the permission groups within the EKS cluster, aiding in understanding the permissions and roles configured."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "Listing access policies helps map out the services and permissions in use, aiding in reconnaissance efforts to identify potential targets and vulnerabilities."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "By listing associated access policies, adversaries might identify misconfigurations or unsecured credentials that can be exploited to gain further access."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

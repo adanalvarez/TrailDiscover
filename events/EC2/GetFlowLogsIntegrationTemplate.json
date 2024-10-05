@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By analyzing the resulting template, adversaries might identify configurations and permissions related to valid accounts"
+        },
+        {
+            "technique": "T1203 - Exploitation for Client Execution",
+            "reason": "The template could potentially include commands or scripts that are executed in the cloud environment, exploiting existing vulnerabilities for execution."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "The template could include configurations that disable or alter logging, monitoring, or other security tools."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The CloudFormation template could include obfuscated scripts or configurations to evade detection"
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "The setup process defined in the template might interact with remote services, offering a vector for exploitation."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "The information gleaned from the template can assist adversaries in understanding the network services in use, aiding in further network scanning and enumeration."
+        },
+        {
+            "technique": "T1497 - Virtualization/Sandbox Evasion",
+            "reason": "The template could be designed to detect and avoid execution within certain virtualized environments or sandboxes, thereby evading analysis or detection."
+        },
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The CloudFormation template might include scripts executed via command and scripting interpreters, which can be leveraged for execution."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "By using the CloudFormation template to configure the VPC flow logs integration, adversaries can automate the collection, archiving, and storage of flow logs data, potentially using S3 to archive collected logs before exfiltration or analysis."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

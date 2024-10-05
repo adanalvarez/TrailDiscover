@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting snapshots can be part of an effort to remove indicators of compromise or evidence of malicious activity."
+        },
+        {
+            "technique": "T1486 - Data Encrypted for Impact",
+            "reason": "If the adversary has encrypted the data and then deletes snapshots, it makes recovery impossible without the decryption keys, thus increasing the impact."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "Deleting snapshots can be a form of manipulating stored data, particularly if snapshots are used for data recovery and the deletion disrupts normal recovery processes."
+        },
+        {
+            "technique": "T1561 - Disk Wipe",
+            "reason": "Deleting snapshots can be considered a form of disk wipe if the snapshots contain the only copies of certain data, effectively wiping that data from existence."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001: Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By configuring event selectors, adversaries can exclude certain activities from being logged, effectively removing traces of their presence and actions, which hinders detection and forensic analysis."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

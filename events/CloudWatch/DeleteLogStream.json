@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting log streams removes critical log data, effectively erasing evidence of activities that could be used to detect or investigate malicious behavior. This action makes it difficult for defenders to trace the attacker's steps or identify potential indicators of compromise."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The permanent deletion of archived log events constitutes data destruction, impacting the organization’s ability to conduct forensic analysis and understand the scope of an attack."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

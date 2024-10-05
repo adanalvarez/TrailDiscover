@@ -11,6 +11,31 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1556 - Modify Authentication Process"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "API keys are a form of credentials that attackers can use to gain and maintain access to cloud services."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers may manipulate API keys to alter account permissions and settings, maintaining persistence and access."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "API keys can be used to remove legitimate accounts, thereby maintaining persistence and disrupting normal operations."
+        },
+        {
+            "technique": "T1550.001 - Use Alternate Authentication Material: Application Access Token",
+            "reason": "API keys serve as alternate authentication material, in this case as application access tokens to access AppSync APIs."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Attackers can use API keys to route their malicious traffic through a AppSync, which acts here as a proxy, hiding their true origin and bypassing security measures."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": ""
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Authorized accounts might be modified or managed to maintain persistent access to foundational models. Cloud accounts could be granted additional entitlements, leading to unauthorized access or privileges within the cloud environment. Access might be granted to default accounts, which could be exploited if not properly managed. Local accounts could be granted access, potentially leading to unauthorized activities within the environment."
+        },
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The granted entitlements may include permissions that enable the execution of scripts or code, potentially facilitating the execution of malicious scripts under legitimate operations within a controlled environment."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Adjusting entitlements could be used to weaken security controls and mechanisms, aiding in defense evasion."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087.004 - Account Discovery: Cloud Account",
+            "reason": "Retrieving log records can help identify details about cloud accounts in use, such as who accessed certain services and when."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Logs may contain information about processes running in the cloud environment, which can help in identifying active processes and their behavior."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Log records can reveal information about system owners or users who are interacting with the cloud environment, such as user activity logs and access patterns."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

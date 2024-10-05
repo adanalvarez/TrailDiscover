@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The SNS Publish API can send messages using common application layer protocols such as HTTPS. This can be used for command and control communication by sending instructions or payloads to subscribed endpoints in a covert manner."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Attackers can use SNS to exfiltrate data by sending it as a message to a subscribed endpoint, which may belong to an external cloud account controlled by the adversary."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "The SNS service can act as a relay for communications, allowing attackers to hide the true source and destination of their messages by using SNS as an intermediary, which can evade detection mechanisms."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "By automating the use of SNS Publish to regularly send messages containing exfiltrated data to external endpoints, attackers can maintain a consistent and automated exfiltration channel."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

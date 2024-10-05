@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting inline policies from IAM roles can remove critical permissions, effectively locking out legitimate users or restricting their access. This action can hinder incident response and obscure the attacker's presence in the environment."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By deleting IAM role policies, an attacker could impair security tools that rely on those policies for correct operation, effectively reducing the efficacy of security defenses."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

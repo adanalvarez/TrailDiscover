@@ -9,6 +9,39 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Listing log streams can help identify different cloud accounts or services that are being logged."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "Automating the listing of log streams is a part of setting up a system for automated data collection."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Log streams may include process logs that reveal information about running processes in the environment."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Log streams can help in identifying which users or systems are generating logs, aiding in system owner/user discovery."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "By listing log streams, one can determine the existence of remote systems being logged."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Logs may contain information about system configurations, operating systems, and other details relevant for system information discovery."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Identifying log streams can help in discovering the usage of valid accounts, potentially indicating compromised or misused accounts."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

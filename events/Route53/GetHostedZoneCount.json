@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The GetHostedZoneCount API call can be used to enumerate the number of DNS zones hosted in a cloud environment, which reveals information about the cloud account's resources."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "The GetHostedZoneCount API call reveals the presence and scale of Route 53 DNS services within the cloud environment. This information helps adversaries understand the cloud infrastructure and identify potential targets for further actions."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

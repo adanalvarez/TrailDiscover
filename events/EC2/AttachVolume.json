@@ -9,6 +9,51 @@
     "mitreAttackTechniques": [
         "T1021 - Remote Services"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "By attaching or detaching volumes, attackers can manipulate account settings or the environment to further their objectives, such as making specific data accessible or inaccessible."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers might attach volumes that appear legitimate or contain misleading data, thereby disguising their malicious activities."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "EBS volumes can be used to stage data for exfiltration or further manipulation by the attackers."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Attackers can use attached volumes to transfer tools, scripts, or other malicious files into the target environment."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Malicious actors can store obfuscated data or tools on an EBS volume to evade detection mechanisms."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Attackers may attach volumes to archive collected data for exfiltration or future use, leveraging the storage capacity of the EBS volumes."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "By attaching a volume that contains information repositories, attackers can access and extract sensitive data stored within these repositories"
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "Attackers can attach volumes that contain cloud storage objects, allowing them to access and manipulate the data stored within these objects."
+        },
+        {
+            "technique": "T1030 - Data Transfer Size Limits",
+            "reason": "Attackers may attach EBS volumes to instances to handle large amounts of data transfer without triggering size-based detection mechanisms."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "By attaching an EBS volume, attackers can access and extract data from the local file system of the EC2 instance."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Accessing replication configuration details could help an adversary identify which accounts or roles have permissions related to replication, enabling targeted attacks on these accounts for unauthorized access."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "With knowledge of the replication setup, an adversary can craft actions that closely mimic legitimate activities, such as modifying replication settings, which helps them evade detection by blending in with normal operations."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

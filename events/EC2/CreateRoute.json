@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1074 - Data Staged"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Creating a route can facilitate the use of external proxies by directing traffic through a specific intermediary node. Using the CreateRoute API can set up routing that utilizes proxies to hide the origin of network traffic."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The creation of routes might involve the use of compromised cloud accounts to establish persistence within a network."
+        },
+        {
+            "technique": "T1570 - Lateral Tool Transfer",
+            "reason": "Routes can be used to facilitate the transfer of tools across different segments of a network, aiding lateral movement."
+        },
+        {
+            "technique": "T1070: Indicator Removal",
+            "reason": "Creating routes might assist in evading detection and preserving stealth by directing traffic in a way that avoids logging mechanisms, aiding in the removal or obfuscation of evidence."
+        },
+        {
+            "technique": "T1046: Network Service Discovery",
+            "reason": "Adjusting routes can help in discovering network services by ensuring that specific network segments are reachable, aiding in reconnaissance."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The DescribeBundleTasks API call can provide details about the instance, which can be used to gather information about the system's configuration and status. The description of what a Bundle Task is not even available on AWS anymore."
+        },
+        {
+            "technique": "T1553.002 - Subvert Trust Controls: Code Signing",
+            "reason": "nsuring that the bundled data is from a legitimate source and not tampered with might involve code signing, particularly if the bundle is intended for deployment or transfer. The description of what a Bundle Task is not even available on AWS anymore."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "The bundling process involves staging data for bundling and transfer, which is a crucial step in the data management process. The description of what a Bundle Task is not even available on AWS anymore."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

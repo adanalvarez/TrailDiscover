@@ -10,6 +10,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Updating the assume role policy can allow attackers to use valid IAM roles to maintain access."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers can allow access from an account they control to assume a valid role that is used in the organization making the access appear legitimate"
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

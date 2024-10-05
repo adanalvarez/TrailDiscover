@@ -13,6 +13,27 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1546 - Event Triggered Execution"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1205 - Traffic Signaling",
+            "reason": "EventBridge rules can be configured to trigger signals that facilitate command and control communication, masking malicious traffic as legitimate event triggers."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job: Scheduled Task",
+            "reason": "Creating or updating EventBridge rules can schedule tasks or jobs that perform malicious activities without user intervention."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By manipulating EventBridge rules, attackers can potentially alter the flow of logs and events to hide their activities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By updating EventBridge rules, attackers can disable or modify security tools and alerts, impairing defenses and ensuring continued access."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Viewing volume modifications might help attackers understand cloud account structures and usage patterns, aiding in discovering privileged accounts"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

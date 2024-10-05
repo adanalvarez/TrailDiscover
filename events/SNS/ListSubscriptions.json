@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "An attacker could use ListSubscriptions to enumerate all subscriptions associated with SNS topics, providing insight into the AWS environment and identifying active accounts."
+        },
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "The information retrieved via ListSubscriptions can reveal details about services in the AWS environment, helping an attacker understand available resources and configurations."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

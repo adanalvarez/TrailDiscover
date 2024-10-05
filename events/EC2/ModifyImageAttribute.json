@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Modifying AMI launch permissions could allow an attacker to grant additional cloud accounts the ability to launch instances with the compromised AMI."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Modifying launchPermission can be used to grant access to valid accounts or remove access, effectively controlling which accounts can launch instances from the AMI."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Changing launch permissions to launch the AMI in an attacker AWS account might grant attackers access to instances where they can execute credential dumping tools."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "If the AMI is launched by specific users, it could enable the attacker to move laterally by exploiting remote services and admin privileges."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "By modifying the AMI description, attackers can disguise malicious activities under benign-sounding descriptions to evade detection."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

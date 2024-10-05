@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Registering a task definition can be leveraged to create scheduled tasks within ECS, allowing for persistence and automated execution of malicious tasks."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Task definitions could be used to download and execute additional tools or scripts from external sources"
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "ECS tasks can be configured to disable or modify security tools within the container environment, aiding in defense evasion."
+        },
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The task definitions can contain Unix shell commands, facilitating execution of malicious scripts or commands."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Malicious task definitions can be disguised as legitimate ones to evade detection and blend in with normal operations"
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Container definitions within ECS can include obfuscated or packed scripts and binaries, making detection harder."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

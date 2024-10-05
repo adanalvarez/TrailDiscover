@@ -9,6 +9,51 @@
     "mitreAttackTechniques": [
         "T1119 - Automated Collection"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "An attacker could modify CloudFront distribution settings to remove or alter logging configurations, thus deleting or hiding evidence of malicious activities."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "By updating CloudFront distribution, an attacker can route traffic through CloudFront, effectively hiding the origin of malicious traffic and obfuscating command and control communications."
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "An attacker might reconfigure CloudFront to redirect sensitive data to an external endpoint under their control, facilitating data exfiltration over a web service."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying CloudFront distribution settings can be used to impair security monitoring and defense mechanisms by disabling or altering configurations that are critical for security monitoring."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "An attacker might modify the CloudFront distribution to use cloud storage as a method to archive and exfiltrate collected data."
+        },
+        {
+            "technique": "T1497 - Virtualization/Sandbox Evasion",
+            "reason": "CloudFront configurations can be updated to delay or slow responses, making detection and analysis more difficult, effectively evading automated analysis systems."
+        },
+        {
+            "technique": "T1568 - Dynamic Resolution",
+            "reason": "By updating CloudFront distributions, an attacker can implement domain generation algorithms to dynamically change domain names for command and control, evading detection."
+        },
+        {
+            "technique": "T1095 - Non-Application Layer Protocol",
+            "reason": "By configuring CloudFront to use non-standard protocols for data transmission, an attacker can exfiltrate data or communicate with compromised assets using non-application layer protocols."
+        },
+        {
+            "technique": "T1071.001 - Application Layer Protocol: Web Protocols",
+            "reason": "loudFront can be configured to use common web protocols (HTTP/HTTPS) for malicious command and control communications, blending in with normal traffic and avoiding detection."
+        },
+        {
+            "technique": "T1565.002 - Data Manipulation: Transmitted Data Manipulation",
+            "reason": "Attackers can update CloudFront distribution settings to manipulate data as it transits through CloudFront, altering its content for malicious purposes or exfiltrating manipulated data."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1089 - Disabling Security Tools"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting flow logs can remove indicators that were stored, making it harder to detect malicious activities"
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Disabling or deleting flow logs can impair defensive mechanisms by removing visibility into network traffic. It also supersedes T1089 since v7.1."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting flow logs can be part of a broader data destruction strategy. By removing logs that track network activity, an attacker can ensure that no historical data remains to aid in the forensic investigation of their activities. This makes it significantly harder to trace malicious actions back to the perpetrator, thus effectively destroying critical evidence"
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Deleting flow logs can be part of account manipulation to hide tracks and activities conducted using compromised accounts."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

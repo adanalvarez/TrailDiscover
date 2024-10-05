@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1592 - Gather Victim Network Information",
+            "reason": "The GetAccountSendingEnabled API call can be used to gather information about the email sending capabilities of a specific AWS SES account, providing insights into the configurations and potential vulnerabilities in the victim's cloud infrastructure."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By querying the SES email sending status, attackers can learn whether the service is configured and operational, revealing critical details about the cloud environment's setup."
+        },
+        {
+            "technique": "T1590 - Gather Victim Identity Information",
+            "reason": "Understanding the email sending status through GetAccountSendingEnabled may provide insights into associated email addresses or domains, which can be used for further reconnaissance activities."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The DescribeVolumes API call can reveal information about EBS volumes which might contain details about the accounts that created or use them."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "DescribeVolumes allows attackers to list and understand the configuration of EBS volumes within a cloud environment. This information helps map out the storage resources, potentially revealing sensitive data or misconfigurations."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By describing volumes, attackers can infer the permissions set on EBS volumes and potentially discover groups with access to these volumes"
+        },
+        {
+            "technique": "T1613 - Container and Resource Discovery",
+            "reason": "Volumes can be linked to container storage. Discovering volumes helps in mapping container usage and dependencies"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

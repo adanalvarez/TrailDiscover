@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Changing the event source mapping can be used to invoke a function via HTTP/S requests, which aligns with utilizing web protocols for execution."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Adversaries can use this API call to set up or alter scheduled tasks or jobs, such as Lambda functions, to achieve persistence by ensuring repeated or delayed execution."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Adversaries can pause the invocation of a Lambda function to impair or disable security tools or monitoring functions, thereby evading detection or preventing logging."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Adversaries can obfuscate their actions by frequently changing the event source mapping, making it harder to trace the function invocations."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Changing the event source mapping can also be used to manipulate which account or function is invoked, potentially changing the permissions context."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Updating the event source mapping involves modifying the cloud infrastructure to change how functions are executed, which is a form of altering cloud resources for persistence or evasion."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

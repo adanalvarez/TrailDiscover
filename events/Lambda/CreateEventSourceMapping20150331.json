@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The Lambda function might execute code based on the event source data, potentially running JavaScript if included in the payload."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Lambda functions can communicate over web protocols, enabling command and control through event source triggers."
+        },
+        {
+            "technique": "T1546 - Event Triggered Execution",
+            "reason": "Event source mappings can be used to trigger Lambda functions, executing code in response to specific events or data."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Modifying the event source mappings can change the behavior of Lambda functions, possibly to escalate privileges or persist in the environment."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

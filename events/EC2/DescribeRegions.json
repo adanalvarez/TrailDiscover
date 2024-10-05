@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "Attackers can use the DescribeRegions API call to obtain information about the cloud regions where a victim's resources are deployed. This helps in mapping the network and understanding the potential attack surface."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By utilizing DescribeRegions, attackers can gain insights into the geographical distribution of the victim's cloud infrastructure, contributing to the overall system information."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "DescribeRegions gives access to the regional metadata of AWS, which acts as an information repository. Attackers may exploit this data to gain insights into the structure and status of the cloud environment."
+        },
+        {
+            "technique": "T1135 - Network Share Discovery",
+            "reason": "Although not directly relevant attackers can use DescribeRegions to understand the layout of network resources across different regions, which can aid in discovering network shares and how resources are distributed geographically."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

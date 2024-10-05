@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Describing flow logs can help attackers understand which users are accessing specific network resources."
+        },
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "Flow logs can reveal network configurations, allowing attackers to map out the network layout"
+        },
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By analyzing flow logs, attackers can infer traffic patterns and potentially sensitive information about network communications"
+        },
+        {
+            "technique": "T1020 - Automated Collection",
+            "reason": "Attackers can use the flow logs to automate the collection of network traffic data for further analysis"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

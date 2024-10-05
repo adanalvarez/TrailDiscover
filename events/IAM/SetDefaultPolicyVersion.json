@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Modifying the policy's default version can be used to evade detection by setting the policy version that was in place before the attack."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Attackers can use this API call to update policies in a way that prevents legitimate users from accessing resources, ensuring continued control over the compromised environment."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

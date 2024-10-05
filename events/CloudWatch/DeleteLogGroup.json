@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting log groups removes evidence of activities from log files, thus covering tracks and aiding in evading detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting log groups leads to the permanent removal of critical log data, effectively erasing records that could be used for forensic analysis or troubleshooting. This action disrupts the availability of essential logs, potentially causing significant operational impact and hindering incident response efforts."
+        },
+        {
+            "technique": "T1565.001 - Data Manipulation: Stored Data Manipulation",
+            "reason": "The deletion of log groups can be considered a form of data manipulation, as it involves removing stored data, impacting its integrity and availability."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

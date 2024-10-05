@@ -11,6 +11,19 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Removing a policy from an IAM user could be a step to disable access for an account, which aligns with tactics for impact."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Removing policies can help adversaries to evade detection and persist in the environment by modifying account permissions."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

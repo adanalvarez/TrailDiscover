@@ -11,6 +11,23 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Detaching a policy can be used as a way to remove or limit access to critical accounts, impacting operational capabilities."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Security controls relying on certain policies may be disabled or impaired when those policies are detached."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "By removing critical policies, the attacker can cause a denial of service for endpoints relying on those permissions to function properly."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

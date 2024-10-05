@@ -9,6 +9,39 @@
     "mitreAttackTechniques": [
         "T1021 - Remote Services"
     ],
+    "mitreAttackSubTechniques": [
+        "T1021.004 - Remote Services: SSH"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Once access is established, attackers can use the command and scripting interpreter to execute commands on the instance."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers may push their own SSH keys to the EC2 instances, effectively manipulating access control."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "After gaining access, attackers could disable security tools or logs to evade detection."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers may use legitimate commands and tools to mask their activities within the compromised instance"
+        },
+        {
+            "technique": "T1203 - Exploitation for Client Execution",
+            "reason": "Exploiting the SSH access to execute further malicious code or scripts within the EC2 instance."
+        },
+        {
+            "technique": "T1219 - Remote Access Software",
+            "reason": "Using SSH as a remote access tool to maintain control over the compromised EC2 instance."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers may use or create local accounts on the EC2 instance to facilitate further access and actions."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

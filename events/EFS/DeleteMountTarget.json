@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Removing a mount target may disrupt monitoring or defense mechanisms that rely on the file system for logging or other security functions."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting the mount target and the associated network interface, traces and logs of malicious activity stored on the file system may be removed, aiding in defense evasion."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

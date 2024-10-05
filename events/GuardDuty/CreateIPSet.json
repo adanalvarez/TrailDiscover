@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Adding an IP address to a trusted list effectively removes the monitoring of network traffic and activities associated with that IP, making it undetectable by GuardDuty, similar to how indicator removal hides evidence of malicious activity."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Adversaries may use a proxy to route their traffic through trusted IP addresses added to the IPSet, thereby evading detection and maintaining persistence."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

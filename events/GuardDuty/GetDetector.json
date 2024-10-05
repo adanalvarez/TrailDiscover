@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Retrieving a GuardDuty detector provides information about the security monitoring and configurations in the AWS environment."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Accessing the GuardDuty detector can give insights into the cloud infrastructure setup and the security measures in place."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

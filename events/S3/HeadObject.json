@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1619 - Cloud Storage Object Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "The HeadObject API call helps verify the existence of data in S3 buckets, allowing attackers to understand what data is available for transfer or collection."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Attackers may use HeadObject to discover information about objects in S3 buckets, which can help identify sensitive accounts or resources within a cloud environment."
+        },
+        {
+            "technique": "T1083 - File and Directory Discovery",
+            "reason": "This API call provides metadata about objects, helping attackers discover the organization and structure of files stored in S3, facilitating further actions."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "The operation assists in identifying which specific cloud storage objects might contain valuable data for exfiltration."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "By accessing metadata, attackers can infer details about the cloud infrastructure, such as object creation dates, storage classes, and more, providing insights into the environment's configuration."
+        },
+        {
+            "technique": "T1557 - Service Discovery",
+            "reason": "The ability to query metadata from S3 objects can help attackers gather information about the usage and configuration of cloud services, potentially revealing misconfigurations or security weaknesses."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "By stopping the configuration recorder, an attacker can effectively disrupt the ability to track and monitor changes, which can be a precursor to or part of a broader data destruction strategy."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Stopping a critical service like the configuration recorder can be part of a larger strategy to disrupt services, resulting in a loss of visibility and monitoring, hence impacting the organization."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

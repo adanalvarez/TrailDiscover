@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The GetSendQuota API call can be used to determine the current email sending limits of an account, which is a form of system information that could help an adversary understand the operational capabilities of the target environment."
+        },
+        {
+            "technique": "T1602 - Gather Victim Host Information",
+            "reason": "By using GetSendQuota, an attacker could gather details about the SES service's capacity and limitations, which is part of understanding the victim's resources."
+        },
+        {
+            "technique": "T1580 - Cloud Service Discovery",
+            "reason": "This API call allows adversaries to discover details about the cloud services in use (SES in this case), contributing to broader cloud service reconnaissance."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

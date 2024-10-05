@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By analyzing the snapshot tier status, an attacker could infer which accounts have access to particular snapshots, thereby gaining insights into the account structures and permissions within the target environment."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Information about the storage tier status of snapshots includes metadata that helps identify system owners or users associated with those snapshots, thus aiding in the discovery of target users within the environment."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "This API call provides detailed information about EBS snapshots, which are a form of cloud storage. An attacker can use this to identify and access sensitive data stored within these snapshots."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

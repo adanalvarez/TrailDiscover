@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1136 - Create Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers might create a new role to maintain access or elevate privileges within the environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

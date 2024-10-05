@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By altering IAM policies, attackers can remove access for legitimate users, ensuring only malicious actors maintain control."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "By altering permissions with a new policy version, an attacker could restrict or stop critical services within an AWS environment."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

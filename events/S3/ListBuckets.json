@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "he ListBuckets API call helps identify the scope of an AWS account by revealing all S3 buckets owned by the account, giving insight into the account's cloud resources."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Once buckets are listed, attackers can target specific buckets for data extraction, which is critical for both understanding and potentially exfiltrating data stored in the cloud."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The ability to list buckets verifies that the credentials used have sufficient permissions, which can inform the attacker about the level of access they have and what actions they can perform."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By listing buckets, attackers can gather information about the organization of data and system configurations within the cloud environment, indirectly giving insight into how the cloud infrastructure is managed."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "Listing S3 buckets allows attackers to identify available storage locations where they can discreetly store or archive exfiltrated data. By selecting an existing bucket, attackers can blend their activities with legitimate cloud operations, reducing the risk of detection."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

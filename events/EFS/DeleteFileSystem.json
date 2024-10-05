@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting an EFS file system removes all its contents, including logs and other forensic evidence, effectively erasing any indicators of malicious activity. This action helps attackers avoid detection by eliminating traces of their presence in the environment."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "Deleting an EFS file system alters the state of stored data by permanently removing it. This can disrupt operations and affect data integrity, making it a significant form of data manipulation."
+        },
+        {
+            "technique": "T1107 - File Deletion",
+            "reason": "File deletion focuses on the removal of files to impact data availability or to hide malicious activity. Deleting a file system in AWS EFS results in the removal of all files and directories within that file system."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

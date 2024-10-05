@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The security group settings can be configured to allow specific protocols or applications to communicate with the DB instance, facilitating control or exfiltration methods."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying or creating a security group that permits broader access to the DB instance could serve as a form of defense evasion by bypassing firewall rules set to protect the database."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Creating or modifying a security group could be a method to manipulate access controls and permissions, thereby escalating privileges or creating a backdoor for persistent access."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "An attacker could create or name a DB security group to resemble legitimate or existing groups to avoid detection. This can deceive administrators or monitoring systems, allowing malicious actions to go unnoticed."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

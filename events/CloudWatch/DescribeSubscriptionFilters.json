@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Attackers might use DescribeSubscriptionFilters to identify log groups and their associated subscription filters, which can provide insight into monitoring and logging configurations specific to cloud infrastructure. This information helps attackers understand the cloud environment and its accounts."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "By listing subscription filters, attackers can determine what types of network services and activities are being monitored. This can help them identify potential targets or services that are not being adequately monitored."
+        },
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "DescribeSubscriptionFilters can reveal details about the log group's configuration, helping attackers discover how system services are being logged and monitored. This can aid in understanding the security posture and identifying potential weaknesses."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

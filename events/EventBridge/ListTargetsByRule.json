@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "Attackers can use this API call to discover information about targets assigned to specific rules within the AWS EventBridge service, providing insights into potentially vulnerable or interesting systems."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By listing targets assigned to rules, an attacker can gather information about AWS accounts and their configurations, aiding in understanding the environment and potential attack paths."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "Understanding the targets associated with EventBridge rules allows an attacker to potentially identify network services that could be targeted for further exploration or exploitation."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "The API call provides information about remote systems (AWS resources) that are targeted by specific rules, aiding attackers in identifying potential entry points into the environment."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Listing targets by rule in EventBridge can reveal details about the users or roles associated with those resources. This information helps attackers identify key personnel or accounts with access, aiding in targeted attacks or privilege escalation efforts."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "The ListTargetsByRule call can be used to discover the targets (potentially processes or functions) that are triggered by specific CloudWatch rules, helping attackers understand what processes might be running in the environment."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By understanding the targets associated with specific rules, attackers might infer the existence of certain IAM roles or accounts that have the permissions to execute these targets."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By listing the targets of rules, attackers can identify which resources and permissions are associated with specific rules, aiding in understanding the permission structures."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

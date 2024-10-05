@@ -11,6 +11,27 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By detaching policies from roles, attackers can invalidate certain permissions, reducing the risk of detection while using compromised accounts."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "By detaching policies, attackers can remove access permissions, disrupting legitimate user operations and evading detection."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Removing policies can be part of a strategy to clean up indicators of malicious activity on the account, aiding in defense evasion."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Detaching policies may impair security configurations, reducing the ability of the environment to detect or prevent further malicious activities."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

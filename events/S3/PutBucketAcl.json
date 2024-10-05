@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1048 - Exfiltration Over Alternative Protocol"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adjusting the ACL to include additional accounts or groups can provide persistent access to unauthorized entities, allowing the adversary to maintain control over the resource."
+        },
+        {
+            "technique": "T1548 - Abuse Elevation Control Mechanism",
+            "reason": "By setting the ACL with more permissive controls, an attacker could elevate their access privileges, gaining the ability to perform actions beyond their intended scope."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying ACLs can be used to prevent security tools or monitoring from detecting malicious actions by restricting access to logging or alerting services."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Changing ACLs can serve to obscure evidence of unauthorized access or changes by modifying who has visibility into the bucket, thereby evading detection."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "An attacker can alter the ACL to make unauthorized access appear as legitimate traffic, thus avoiding suspicion and detection."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Adjusting the ACL could be used to remove legitimate access to a bucket, effectively denying access to authorized users while maintaining control over the resource."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The ability to modify ACLs directly correlates with manipulating which accounts have what level of access to a resource, aligning with broader account manipulation strategies."
+        },
+        {
+            "technique": "T1199 - Trusted Relationship",
+            "reason": "If an attacker modifies ACLs to include entities that are typically trusted, this can facilitate initial access through a trusted relationship, leveraging the trust model to gain unauthorized access."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "The DescribeAccessEntry API call can be used to identify access permissions and configurations within the EKS service, revealing which cloud services are in use. This information helps attackers understand the cloud environment and potential targets."
+        },
+        {
+            "technique": "T1587 - Develop Capabilities",
+            "reason": "Access information can aid in developing tailored malware that exploits specific permissions or configurations discovered within EKS."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

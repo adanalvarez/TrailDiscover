@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "An adversary might use DescribeClientVpnRoutes to enumerate network routes within the VPN, identifying potential targets and pivot points within the network."
+        },
+        {
+            "technique": "T1021- Remote Services",
+            "reason": "This API call can provide details on how to access different parts of the network remotely, which could facilitate lateral movement or remote execution of commands"
+        },
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "Information from DescribeClientVpnRoutes can reveal internal network structures, including IP ranges and network topologies, which can be used for further discovery and evasion activities"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

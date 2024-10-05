@@ -12,6 +12,35 @@
         "T1098 - Account Manipulation",
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The Lambda function can be configured to execute JavaScript code, enabling attackers to run malicious scripts."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": " By using Lambda, attackers can delete logs or files to evade detection."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers might create Lambda functions designed to disable security monitoring tools or alerts."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Lambda functions can communicate over standard web protocols, enabling Command and Control communication that blends with regular traffic."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "If attackers use code-signing configurations and different deployment packaging (e.g., obfuscated container images or encrypted .zip archives), it can help evade detection by concealing the true nature of the function code."
+        },
+        {
+            "technique": "T1053 - Scheduled Task/Job",
+            "reason": "Attackers might schedule Lambda functions to execute at specific intervals, providing a means of persistence or delayed execution."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

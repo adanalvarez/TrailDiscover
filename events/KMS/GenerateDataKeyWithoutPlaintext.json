@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1486 - Data Encrypted for Impact"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "The symmetric data key can be used to encrypt or delete critical data, rendering it useless and causing operational disruptions."
+        },
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "The data key can facilitate the encryption of collected data before exfiltration to avoid detection."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

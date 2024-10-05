@@ -11,6 +11,23 @@
         "T1021 - Remote Services",
         "T1651 - Cloud Administration Command"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Attackers can use valid credentials to reconnect to a previously disconnected session, allowing them to maintain persistent access to a system without re-authenticating."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "By reconnecting to an active session, attackers can continue to upload malicious tools or scripts to the managed node without needing to initiate a new session, facilitating ongoing exploitation."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The reconnection process uses HTTPS, allowing attackers to maintain an encrypted communication channel, which could be used for executing commands or transferring data during the resumed session."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

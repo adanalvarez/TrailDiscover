@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "Listing IPSets provides insights into the network's structure and the external IPs that are considered trusted or monitored. This information is crucial for attackers to map out the network and plan their actions accordingly."
+        },
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "By accessing the list of IPSets, attackers can understand the network configuration, including which IP addresses are allowed or blocked. This helps in identifying potential weak points or entry points into the network."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

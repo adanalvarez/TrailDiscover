@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Retrieving the configuration data of instances can provide attackers with detailed system information that can be used for further reconnaissance and discovery of system characteristics."
+        },
+        {
+            "technique": "T1135 - Network Share Discovery",
+            "reason": "Attackers might use this data to discover network shares and storage configurations, aiding in understanding the network topology and resources"
+        },
+        {
+            "technique": "T1518 - Software Discovery",
+            "reason": "By accessing instance configuration data, attackers can determine what software is running on the instance, including security software, enabling them to plan further attacks."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Information obtained can be used to identify valid accounts within the cloud environment, potentially leading to misuse of credentials."
+        },
+        {
+            "technique": "T1195 - Supply Chain Compromise",
+            "reason": "Attackers can create a launch template based on the retrieved data, embedding malicious software or configurations, thus compromising the software supply chain."
+        },
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The configuration data may include scripts or commands that can be leveraged to gain further access or control over the instance"
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By understanding the configuration and storage locations, attackers can delete logs or files to evade detection"
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Attackers might use the launch template to spin up instances for resource hijacking, such as cryptocurrency mining."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

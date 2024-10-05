@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The API call provides insights into which IAM accounts have permissions to view or modify bucket logging, aiding an attacker in identifying accounts with specific privileges."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Listing EKS clusters helps adversaries understand the cloud services being used and their configurations."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By listing clusters, attackers can infer the structure and number of accounts that manage these resources."
+        },
+        {
+            "technique": "T1135 - Network Share Discovery",
+            "reason": "Knowing the clusters can help adversaries understand shared network resources within the EKS environment."
+        },
+        {
+            "technique": "T1007 - Network Service Scanning",
+            "reason": "Identifying clusters can help adversaries in mapping the network services exposed by these clusters."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "Identifying clusters helps in understanding the internal network architecture and relationships."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

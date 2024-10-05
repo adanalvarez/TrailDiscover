@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting the delivery channel, logs that might contain evidence of malicious activities are removed."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting the delivery channel could be part of a broader tactic to destroy data, including configuration logs that are crucial for incident response and auditing."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [
