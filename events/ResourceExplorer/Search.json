@@ -34,10 +34,6 @@
             "reason": "If the search results reveal IAM roles or users with associated access keys, attackers might identify unsecured credentials that could be exploited for unauthorized access."
         },
         {
-            "technique": "T1027 - Obfuscated Files or Information",
-            "reason": "By using specific query strings, attackers might identify resources where information or files are stored in a manner that obfuscates their true nature, aiding in evasion of detection."
-        },
-        {
             "technique": "T1078 - Valid Accounts",
             "reason": "Searches might return details about valid accounts that could be targeted for unauthorized access, particularly if accounts are not adequately secured."
         }

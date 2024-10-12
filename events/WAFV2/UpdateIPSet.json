@@ -18,10 +18,6 @@
             "reason": "By updating an IPSet to allow or block specific IP addresses, an attacker can manipulate web traffic to facilitate or evade detection during Command and Control activities."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "An attacker with legitimate credentials could update the IPSet to include malicious IPs, ensuring ongoing access or enabling external connections from trusted addresses."
-        },
-        {
             "technique": "T1489 - Service Stop",
             "reason": "An attacker could update the IPSet to block access to critical services, effectively stopping them by denying network access. This is relevant because the API call can alter IP address permissions, potentially disrupting service availability."
         },

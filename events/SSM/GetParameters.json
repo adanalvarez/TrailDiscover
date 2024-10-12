@@ -24,10 +24,6 @@
             "reason": "By using GetParameters, an attacker can gather configuration and environment details stored in the parameters, aiding in system information discovery."
         },
         {
-            "technique": "T1213 - Data from Information Repositories",
-            "reason": "Attackers can exploit GetParameters to extract important data stored within the Parameter Store, such as system configurations, secrets, or other critical information."
-        },
-        {
             "technique": "T1078 - Valid Accounts",
             "reason": "If parameter values include credentials or tokens, the attacker could use them to access valid accounts, facilitating further malicious activity."
         }

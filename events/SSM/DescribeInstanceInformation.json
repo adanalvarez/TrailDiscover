@@ -24,10 +24,6 @@
         {
             "technique": "T1018 - Remote System Discovery",
             "reason": "IP addresses and system information can be used to discover and map out other systems within the network environment."
-        },
-        {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "By analyzing the SSM Agent version and status, an attacker could identify vulnerabilities or disable the agent to evade detection."
         }
     ],
     "usedInWild": true,

@@ -26,10 +26,6 @@
         {
             "technique": "T1488 - Data Destruction",
             "reason": "If an attacker sets an object expiration lifecycle in a version-enabled bucket and suspends versioning, they could effectively destroy all noncurrent object versions over time, leading to the loss of data."
-        },
-        {
-            "technique": "T1499 - Resource Hijacking",
-            "reason": "By manipulating the versioning state and object lifecycle, an attacker could potentially exploit the S3 bucket for unauthorized storage or compute tasks, consuming resources."
         }
     ],
     "usedInWild": true,

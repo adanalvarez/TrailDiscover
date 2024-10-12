@@ -30,10 +30,6 @@
             "reason": "A JobCreated event could be used to transfer tools or scripts into the environment, using S3 as a storage mechanism before execution."
         },
         {
-            "technique": "T1210 - Exploitation of Remote Services",
-            "reason": "An S3 Batch Operations job could be created to exploit remote S3 buckets or services, potentially leading to unauthorized data access or manipulation."
-        },
-        {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "The Batch Operations job may involve communication over standard protocols (like HTTPS) for command and control, making it harder to detect malicious activity."
         },

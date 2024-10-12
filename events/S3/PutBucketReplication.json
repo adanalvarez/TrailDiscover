@@ -24,10 +24,6 @@
         {
             "technique": "T1020 - Automated Exfiltration",
             "reason": "By setting up replication to an external or unauthorized S3 bucket, an attacker can automatically exfiltrate data, transferring large volumes without direct manual intervention."
-        },
-        {
-            "technique": "T1485 - Data Destruction",
-            "reason": "An attacker could utilize replication to replace or propagate corrupted data across multiple S3 buckets, leading to widespread data destruction or manipulation, causing significant operational impact."
         }
     ],
     "usedInWild": false,

@@ -14,10 +14,6 @@
     ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Deleting an S3 bucket can prevent legitimate users from accessing important data, aligning with the removal of access to resources."
-        },
-        {
             "technique": "T1485 - Data Destruction",
             "reason": "Permanently deleting objects or versions from S3 can result in the loss of critical data, affecting the availability and integrity of information. This action can disrupt business operations by removing essential files, leading to significant data loss and operational downtime."
         },

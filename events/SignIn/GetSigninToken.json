@@ -13,14 +13,7 @@
 
     ],
     "unverifiedMitreAttackTechniques": [
-        {
-            "technique": "T1562 - Impair Defenses",
-            "reason": "Access via the SigninToken enables an attacker to alter or disable cloud defenses, such as modifying IAM policies, Security Groups, or other security mechanisms to evade detection."
-        },
-        {
-            "technique": "T1589 - Gather Victim Network Information",
-            "reason": "Using the AWS Management Console accessed via the token, an attacker could collect information about the network's architecture, VPC configurations, and connected services."
-        }
+        
     ],
     "usedInWild": true,
     "incidents": [

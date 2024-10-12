@@ -24,14 +24,6 @@
         {
             "technique": "T1071 - Application Layer Protocol",
             "reason": "By creating a hosted zone and assigning name servers, the domain can be used to facilitate communication via DNS, a common method for establishing command and control channels."
-        },
-        {
-            "technique": "T1070 - Indicator Removal",
-            "reason": "Enabling privacy protection can hide WHOIS information, making it harder to attribute the domain to its true owner, aiding in defense evasion."
-        },
-        {
-            "technique": "T1564 - Hide Artifacts",
-            "reason": "The use of privacy protection to obfuscate WHOIS data serves as a method to hide the true identity of the domain owner, a tactic that falls under defense evasion."
         }
     ],
     "usedInWild": true,

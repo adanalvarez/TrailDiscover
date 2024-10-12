@@ -20,10 +20,6 @@
         {
             "technique": "T1087 - Account Discovery",
             "reason": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment."
-        },
-        {
-            "technique": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment.",
-            "reason": "Analyzing the bucket policy might allow attackers to discover group policies that affect user or service permissions, aiding in further privilege escalation or persistence efforts."
         }
     ],
     "usedInWild": true,

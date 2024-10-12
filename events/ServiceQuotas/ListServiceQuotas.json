@@ -18,10 +18,6 @@
             "reason": "Listing service quotas provides detailed information about the configuration and resource limits within an AWS environment. This information helps attackers understand the system's structure, enabling them to identify potential areas for exploitation or further reconnaissance."
         },
         {
-            "technique": "T1213 - Data from Information Repositories",
-            "reason": "By retrieving quota values, attackers can access stored data within AWS repositories, which could be used to inform further actions or planning."
-        },
-        {
             "technique": "T1069 - Permission Groups Discovery",
             "reason": "Filtering by account or resource level when retrieving quotas may expose details about which permissions are associated with different accounts or roles."
         },

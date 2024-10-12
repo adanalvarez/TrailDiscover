@@ -18,10 +18,6 @@
             "reason": "A malicious policy could allow an attacker to exfiltrate data from an S3 bucket to an external location."
         },
         {
-            "technique": "T1190 - Exploit Public-Facing Application",
-            "reason": "Incorrectly configured policies on directory buckets might expose them to public access, making them susceptible to exploitation by external actors."
-        },
-        {
             "technique": "T1550 - Use Alternate Authentication Material",
             "reason": "An attacker might leverage the modified bucket policy to maintain access via alternate authentication methods, such as session tokens or identity federation mechanisms."
         },

@@ -26,20 +26,8 @@
             "reason": "Attackers may use dynamically generated domains within the hosted zone to maintain command and control, making it difficult for defenders to track or block these communications."
         },
         {
-            "technique": "T1087 - Account Discovery",
-            "reason": "The creation of a hosted zone provides attackers with insights into the cloud account structure, domain settings, and associated resources, aiding in further discovery and reconnaissance efforts."
-        },
-        {
-            "technique": "T1590 - Gather Victim Network Information",
-            "reason": "By setting up a hosted zone and monitoring DNS traffic, attackers can gather information about the victim's network, such as domain structure and internal configurations."
-        },
-        {
             "technique": "T1036 - Masquerading",
             "reason": "Attackers might create a hosted zone with a domain or subdomain that closely mimics a legitimate one, aiding in phishing or other forms of deception to mislead users or systems."
-        },
-        {
-            "technique": "T1119 - Automated Collection",
-            "reason": "Hosted zones can be configured to automatically redirect or collect DNS queries from targeted systems, facilitating the collection of sensitive information without direct interaction."
         }
     ],
     "usedInWild": true,

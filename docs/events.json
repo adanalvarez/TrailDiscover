@@ -12286,10 +12286,6 @@
                 "reason": "If the search results reveal IAM roles or users with associated access keys, attackers might identify unsecured credentials that could be exploited for unauthorized access."
             },
             {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "By using specific query strings, attackers might identify resources where information or files are stored in a manner that obfuscates their true nature, aiding in evasion of detection."
-            },
-            {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "Searches might return details about valid accounts that could be targeted for unauthorized access, particularly if accounts are not adequately secured."
             }
@@ -12415,20 +12411,8 @@
                 "reason": "Attackers may use dynamically generated domains within the hosted zone to maintain command and control, making it difficult for defenders to track or block these communications."
             },
             {
-                "technique": "T1087 - Account Discovery",
-                "reason": "The creation of a hosted zone provides attackers with insights into the cloud account structure, domain settings, and associated resources, aiding in further discovery and reconnaissance efforts."
-            },
-            {
-                "technique": "T1590 - Gather Victim Network Information",
-                "reason": "By setting up a hosted zone and monitoring DNS traffic, attackers can gather information about the victim's network, such as domain structure and internal configurations."
-            },
-            {
                 "technique": "T1036 - Masquerading",
                 "reason": "Attackers might create a hosted zone with a domain or subdomain that closely mimics a legitimate one, aiding in phishing or other forms of deception to mislead users or systems."
-            },
-            {
-                "technique": "T1119 - Automated Collection",
-                "reason": "Hosted zones can be configured to automatically redirect or collect DNS queries from targeted systems, facilitating the collection of sensitive information without direct interaction."
             }
         ],
         "usedInWild": true,
@@ -12566,14 +12550,6 @@
             {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "By creating a hosted zone and assigning name servers, the domain can be used to facilitate communication via DNS, a common method for establishing command and control channels."
-            },
-            {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Enabling privacy protection can hide WHOIS information, making it harder to attribute the domain to its true owner, aiding in defense evasion."
-            },
-            {
-                "technique": "T1564 - Hide Artifacts",
-                "reason": "The use of privacy protection to obfuscate WHOIS data serves as a method to hide the true identity of the domain owner, a tactic that falls under defense evasion."
             }
         ],
         "usedInWild": true,
@@ -12607,10 +12583,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Deleting an S3 bucket can prevent legitimate users from accessing important data, aligning with the removal of access to resources."
-            },
             {
                 "technique": "T1485 - Data Destruction",
                 "reason": "Permanently deleting objects or versions from S3 can result in the loss of critical data, affecting the availability and integrity of information. This action can disrupt business operations by removing essential files, leading to significant data loss and operational downtime."
@@ -12892,10 +12864,6 @@
             {
                 "technique": "T1087 - Account Discovery",
                 "reason": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment."
-            },
-            {
-                "technique": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment.",
-                "reason": "Analyzing the bucket policy might allow attackers to discover group policies that affect user or service permissions, aiding in further privilege escalation or persistence efforts."
             }
         ],
         "usedInWild": true,
@@ -12934,24 +12902,12 @@
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
             {
-                "technique": "T1615 - Group Policy Discovery",
-                "reason": "Retrieving the PublicAccessBlock configuration allows adversaries to discover the security policies and restrictions applied to S3 buckets, which helps them understand the overall security posture."
-            },
-            {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "Adversaries might use the GetPublicAccessBlock API call to check for misconfigurations or overly permissive settings in S3 buckets, potentially leading to unauthorized access and exploitation of valid cloud accounts."
             },
             {
-                "technique": "T1070 - Indicator Removal",
-                "reason": "Knowing the PublicAccessBlock settings helps attackers assess how restrictive the bucket's access policies are, enabling them to plan actions that minimize the creation of logs or alerts, and to more effectively remove or avoid indicators of compromise."
-            },
-            {
-                "technique": "T1538 - Cloud Service Dashboard",
-                "reason": "By using the GetPublicAccessBlock API, attackers can monitor and understand security settings typically available in a cloud service dashboard, aiding in the reconnaissance of security controls."
-            },
-            {
-                "technique": "T1496 - Resource Hijacking",
-                "reason": "Knowing the PublicAccessBlock settings can help attackers determine whether an S3 bucket is vulnerable to resource hijacking, where unauthorized parties use cloud resources for their own purposes."
+                "technique": "T1530 - Data from Cloud Storage",
+                "reason": "Retrieving the PublicAccessBlock configuration can assist attackers in identifying S3 buckets that are misconfigured to allow public access, which may lead to unauthorized access and potential exfiltration of data from cloud storage."
             }
         ],
         "usedInWild": true,
@@ -13094,10 +13050,6 @@
                 "reason": "Understanding the versioning and MFA Delete status allows attackers to potentially collect older or deleted versions of data, which might not be available in a non-versioned setup."
             },
             {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "Knowing whether MFA Delete is enabled provides insights into the robustness of the bucket's security. Attackers may attempt to modify or disable such protections if they have sufficient permissions."
-            },
-            {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "Attackers with valid accounts (e.g., those who have compromised credentials) may use this API call to gather information that could further their goals, such as determining the best method to evade detection or exfiltrate data."
             },
@@ -13148,14 +13100,6 @@
             {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "The GetObject operation can be invoked over HTTPS, which is a common method for communicating with AWS services and could be used to exfiltrate data covertly."
-            },
-            {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "If the object retrieved using GetObject is in an archived format, such as a compressed file (e.g., zip), this API call is necessary to access and stage the archived data, which could then be extracted and used by the adversary."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Adversaries may retrieve objects that contain obfuscated data, using the GetObject API to download the data before decoding it."
             },
             {
                 "technique": "T1074 - Data Staged",
@@ -13331,10 +13275,6 @@
                 "reason": "A JobCreated event could be used to transfer tools or scripts into the environment, using S3 as a storage mechanism before execution."
             },
             {
-                "technique": "T1210 - Exploitation of Remote Services",
-                "reason": "An S3 Batch Operations job could be created to exploit remote S3 buckets or services, potentially leading to unauthorized data access or manipulation."
-            },
-            {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "The Batch Operations job may involve communication over standard protocols (like HTTPS) for command and control, making it harder to detect malicious activity."
             },
@@ -13389,10 +13329,6 @@
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "By listing buckets, attackers can gather information about the organization of data and system configurations within the cloud environment, indirectly giving insight into how the cloud infrastructure is managed."
-            },
-            {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Listing S3 buckets allows attackers to identify available storage locations where they can discreetly store or archive exfiltrated data. By selecting an existing bucket, attackers can blend their activities with legitimate cloud operations, reducing the risk of detection."
             }
         ],
         "usedInWild": true,
@@ -13475,10 +13411,6 @@
             {
                 "technique": "T1083 - File and Directory Discovery",
                 "reason": "Even though directory buckets are not supported, ListObjects allows an attacker to discover the contents and structure of an S3 bucket by listing objects."
-            },
-            {
-                "technique": "T1074 - Data Staged",
-                "reason": "This API call can be used to identify and stage data within S3 buckets, which may be prepared for exfiltration."
             },
             {
                 "technique": "T1213 - Data from Information Repositories",
@@ -13711,10 +13643,6 @@
                 "reason": "A malicious policy could allow an attacker to exfiltrate data from an S3 bucket to an external location."
             },
             {
-                "technique": "T1190 - Exploit Public-Facing Application",
-                "reason": "Incorrectly configured policies on directory buckets might expose them to public access, making them susceptible to exploitation by external actors."
-            },
-            {
                 "technique": "T1550 - Use Alternate Authentication Material",
                 "reason": "An attacker might leverage the modified bucket policy to maintain access via alternate authentication methods, such as session tokens or identity federation mechanisms."
             },
@@ -13778,10 +13706,6 @@
             {
                 "technique": "T1020 - Automated Exfiltration",
                 "reason": "By setting up replication to an external or unauthorized S3 bucket, an attacker can automatically exfiltrate data, transferring large volumes without direct manual intervention."
-            },
-            {
-                "technique": "T1485 - Data Destruction",
-                "reason": "An attacker could utilize replication to replace or propagate corrupted data across multiple S3 buckets, leading to widespread data destruction or manipulation, causing significant operational impact."
             }
         ],
         "usedInWild": false,
@@ -13833,10 +13757,6 @@
             {
                 "technique": "T1488 - Data Destruction",
                 "reason": "If an attacker sets an object expiration lifecycle in a version-enabled bucket and suspends versioning, they could effectively destroy all noncurrent object versions over time, leading to the loss of data."
-            },
-            {
-                "technique": "T1499 - Resource Hijacking",
-                "reason": "By manipulating the versioning state and object lifecycle, an attacker could potentially exploit the S3 bucket for unauthorized storage or compute tasks, consuming resources."
             }
         ],
         "usedInWild": true,
@@ -14005,16 +13925,8 @@
                 "reason": "Accessing secrets via GetSecretValue provides insights into cloud resource configurations and other details useful for discovering and mapping the cloud infrastructure."
             },
             {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "Attackers might retrieve encrypted or obfuscated secrets, which they can later decrypt or analyze to access the sensitive information."
-            },
-            {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "Retrieving secrets may give attackers information about the system, such as environment configurations, which helps them understand the environment they are targeting."
-            },
-            {
-                "technique": "T1071 - Application Layer Protocol",
-                "reason": "Retrieved secrets may include configurations or keys related to DNS or other protocols, allowing attackers to manipulate network traffic or establish command and control channels."
             }
         ],
         "usedInWild": true,
@@ -14075,10 +13987,6 @@
             {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "By listing secrets, an attacker could discover credentials for valid accounts stored in Secrets Manager, which could then be used to gain unauthorized access to services or resources."
-            },
-            {
-                "technique": "T1557 - Adversary-in-the-Middle",
-                "reason": "If secrets are discovered using ListSecrets, an adversary could use these to intercept and manipulate communications between systems, particularly if the secrets include API keys or tokens."
             },
             {
                 "technique": "T1036 - Masquerading",
@@ -14178,28 +14086,7 @@
             "T1078 - Valid Accounts"
         ],
         "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "By assuming a role with higher privileges, an attacker could disable or remove access for legitimate users, making it harder for defenders to detect and respond."
-            },
-            {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "The attacker can create or manipulate roles and policies to generate additional credentials, enabling unauthorized access or persistent control over resources."
-            },
-            {
-                "technique": "T1484 - Domain Policy Modification",
-                "reason": "If the assumed role has sufficient privileges, an attacker can modify IAM policies or roles, potentially allowing them to grant themselves or others additional permissions."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "An attacker with an assumed role could disable or modify logging or security tools, reducing the ability of defenders to detect ongoing attacks."
-            },
-            {
-                "technique": "T1210 - Exploitation of Remote Services",
-                "reason": "The attacker can leverage the temporary credentials obtained through AssumeRole to access services in different accounts, enabling lateral movement across AWS environments."
-            }
-        ],
+        "unverifiedMitreAttackTechniques": [],
         "usedInWild": true,
         "incidents": [
             {
@@ -14247,10 +14134,6 @@
             {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "The AssumeRoleWithSAML API call allows attackers to use valid SAML assertions to gain temporary access to AWS resources, enabling them to gain initial access, maintain persistence, or escalate privileges."
-            },
-            {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "Attackers can use the AssumeRoleWithSAML API to assume roles, potentially allowing them to manipulate account permissions and escalate privileges within the AWS environment."
             },
             {
                 "technique": "T1071 - Application Layer Protocol",
@@ -14304,16 +14187,8 @@
                 "reason": "The AssumeRoleWithWebIdentity API allows an attacker to gain valid temporary AWS credentials through a web identity provider, enabling them to access AWS services with authenticated permissions."
             },
             {
-                "technique": "T1136 - Create Account",
-                "reason": "Attackers could use the AssumeRoleWithWebIdentity API to create new roles or accounts within the AWS environment, establishing persistence through legitimate means."
-            },
-            {
                 "technique": "T1505 - Server Software Component",
                 "reason": "If an attacker has compromised a web application, they can use the AssumeRoleWithWebIdentity API to escalate privileges or maintain persistence by obtaining temporary credentials."
-            },
-            {
-                "technique": "T1578 - Modify Cloud Compute Infrastructure",
-                "reason": "With the temporary credentials obtained through AssumeRoleWithWebIdentity, an attacker can modify cloud infrastructure, such as launching instances, modifying configurations, or accessing sensitive data."
             }
         ],
         "usedInWild": false,
@@ -14356,16 +14231,8 @@
                 "reason": "By successfully calling GetCallerIdentity, an attacker can confirm that a set of credentials is valid and active, which is essential for leveraging these credentials to access additional resources within the AWS environment."
             },
             {
-                "technique": "T1071 - Application Layer Protocol",
-                "reason": "Utilizing standard AWS API calls like GetCallerIdentity over common protocols allows malicious actors to blend their traffic with legitimate activity, making detection by monitoring tools more difficult."
-            },
-            {
                 "technique": "T1550 - Use Alternate Authentication Material",
                 "reason": "Attackers can use stolen or compromised credentials to invoke GetCallerIdentity, verifying the legitimacy and scope of these credentials without needing specific permissions, aiding in maintaining unauthorized access."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "Since GetCallerIdentity can be executed even when explicitly denied, attackers may exploit this behavior to bypass security policies intended to restrict access, thereby circumventing defensive measures."
             },
             {
                 "technique": "T1580 - Cloud Infrastructure Discovery",
@@ -14449,10 +14316,6 @@
                 "reason": "The temporary credentials provided by GetFederationToken can serve as alternate authentication tokens, enabling access to various AWS services without relying on long-term credentials, thereby aiding in defense evasion."
             },
             {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "The ability to generate new, temporary credentials using GetFederationToken can be leveraged by attackers to create additional credentials, which can be used to maintain access or escalate privileges in the cloud environment."
-            },
-            {
                 "technique": "T1212 - Exploitation for Credential Access",
                 "reason": "An attacker with access to the credentials of an IAM user could exploit GetFederationToken to generate new credentials, which can be used to escalate their privileges or access other resources."
             },
@@ -14514,16 +14377,8 @@
                 "reason": "The GetSessionToken API call generates temporary credentials that can be used as valid accounts, allowing an adversary to bypass certain security measures by leveraging these temporary credentials."
             },
             {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "The temporary credentials obtained via GetSessionToken can be used to perform actions with the permissions of the original IAM user, potentially manipulating resources or services within the AWS environment under the guise of legitimate access."
-            },
-            {
                 "technique": "T1550 - Use Alternate Authentication Material",
                 "reason": "The temporary credentials from GetSessionToken can act as alternative authentication material, enabling attackers to maintain access without the need to use the compromised long-term credentials again, thus evading certain detection mechanisms."
-            },
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "Attackers using temporary credentials can revoke access for legitimate users or create conditions that interfere with the normal operation of the legitimate user's credentials, thereby establishing persistence within the environment."
             }
         ],
         "usedInWild": true,
@@ -14570,10 +14425,6 @@
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "Listing service quotas provides detailed information about the configuration and resource limits within an AWS environment. This information helps attackers understand the system's structure, enabling them to identify potential areas for exploitation or further reconnaissance."
-            },
-            {
-                "technique": "T1213 - Data from Information Repositories",
-                "reason": "By retrieving quota values, attackers can access stored data within AWS repositories, which could be used to inform further actions or planning."
             },
             {
                 "technique": "T1069 - Permission Groups Discovery",
@@ -14627,22 +14478,6 @@
             {
                 "technique": "T1583 - Acquire Infrastructure",
                 "reason": "The API allows for requesting additional resources, enabling the attacker to develop infrastructure needed for further malicious activities."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Attackers using valid accounts might request increased quotas to misuse cloud resources under the guise of legitimate activity."
-            },
-            {
-                "technique": "T1499 - Endpoint Denial of Service",
-                "reason": "Increasing resource quotas to their maximum can be used to create conditions that lead to resource exhaustion and potential denial-of-service attacks."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By increasing quotas, attackers can potentially disable or impair security monitoring tools, operating outside of normal detection thresholds."
-            },
-            {
-                "technique": "T1087 - Account Discovery",
-                "reason": "The API can help attackers identify previously requested quota increases, revealing insights into cloud resource usage and potential targets within an account."
             }
         ],
         "usedInWild": true,
@@ -14691,18 +14526,6 @@
             {
                 "technique": "T1566 - Phishing",
                 "reason": "The verified email identity or domain can be utilized to send phishing emails, leveraging the trust established by a verified and legitimate-looking sender address or domain."
-            },
-            {
-                "technique": "T1027 - Obfuscated Files or Information",
-                "reason": "The use of DKIM and DNS records helps obfuscate the true intent by making the email communications appear legitimate, thereby evading detection by security controls."
-            },
-            {
-                "technique": "T1090 - Proxy",
-                "reason": "The verified email identity could be used as part of a communication chain that includes proxies or relays to further mask the origin of malicious emails or commands."
-            },
-            {
-                "technique": "T1071 - Application Layer Protocol",
-                "reason": "Utilizing verified email identities and domains involves standard protocols like SMTP for sending emails, which could be exploited for command and control communications or other malicious activities under the guise of legitimate traffic."
             }
         ],
         "usedInWild": true,
@@ -14839,10 +14662,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1592 - Gather Victim Network Information",
-                "reason": "The GetAccountSendingEnabled API call can be used to gather information about the email sending capabilities of a specific AWS SES account, providing insights into the configurations and potential vulnerabilities in the victim's cloud infrastructure."
-            },
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "By querying the SES email sending status, attackers can learn whether the service is configured and operational, revealing critical details about the cloud environment's setup."
@@ -14984,10 +14803,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1213 - Data from Information Repositories",
-                "reason": "The identity information retrieved can be instrumental in accessing or targeting specific information repositories, such as email or other cloud-based data sources, within the AWS environment."
-            },
             {
                 "technique": "T1078 - Valid Accounts",
                 "reason": "The ListIdentities API might help an attacker identify valid cloud accounts or identities to target for subsequent attacks, such as trying to access these accounts using stolen or guessed credentials."
@@ -15218,16 +15033,7 @@
             "T1078 - Valid Accounts"
         ],
         "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "Access via the SigninToken enables an attacker to alter or disable cloud defenses, such as modifying IAM policies, Security Groups, or other security mechanisms to evade detection."
-            },
-            {
-                "technique": "T1589 - Gather Victim Network Information",
-                "reason": "Using the AWS Management Console accessed via the token, an attacker could collect information about the network's architecture, VPC configurations, and connected services."
-            }
-        ],
+        "unverifiedMitreAttackTechniques": [],
         "usedInWild": true,
         "incidents": [
             {
@@ -15259,14 +15065,6 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1531 - Account Access Removal",
-                "reason": "An attacker might use the password recovery process to lock out legitimate users by changing the password, effectively removing their access."
-            },
-            {
-                "technique": "T1190 - Exploit Public-Facing Application",
-                "reason": "If there is a vulnerability in the password recovery mechanism of a public-facing application (such as the AWS console), an attacker might exploit this to gain unauthorized access."
-            },
             {
                 "technique": "T1212 - Exploitation for Credential Access",
                 "reason": "The password recovery process could be manipulated or exploited to gain access to credentials, especially if the attacker can intercept or redirect the recovery process."
@@ -15314,14 +15112,6 @@
             {
                 "technique": "T1068 - Exploitation for Privilege Escalation",
                 "reason": "Switching to a role with higher privileges could be an attempt to escalate privileges within the AWS environment."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By switching to a role with sufficient privileges, an attacker could disable or modify security controls such as CloudTrail logging, thus impairing the defenses in place to detect and respond to malicious activities."
-            },
-            {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "The use of SwitchRole can be a tactic to manipulate IAM roles and associated policies, thus enabling or disabling certain permissions or roles."
             },
             {
                 "technique": "T1036 - Masquerading",
@@ -15407,10 +15197,6 @@
             {
                 "technique": "T1087 - Account Discovery",
                 "reason": "This API call allows an adversary to determine the SMS sandbox status, which can reveal if an AWS account is still in a test phase or if it's been moved to production, indicating how the account might be used or targeted."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Understanding whether an account is in the SMS sandbox could help an attacker ascertain the validity and usage level of the account, which might be crucial for planning an initial access strategy."
             }
         ],
         "usedInWild": true,
@@ -15452,10 +15238,6 @@
             {
                 "technique": "T1087 - Account Discovery",
                 "reason": "The ListOriginationNumbers API call provides information on the account's SMS origination numbers, which could help an adversary discover and map out cloud resources associated with the account."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "By accessing the list of verified and pending origination numbers, an attacker can confirm the existence of these numbers and their association with a valid AWS account, which may be useful for planning further attacks."
             }
         ],
         "usedInWild": false,
@@ -15632,10 +15414,6 @@
             {
                 "technique": "T1018 - Remote System Discovery",
                 "reason": "IP addresses and system information can be used to discover and map out other systems within the network environment."
-            },
-            {
-                "technique": "T1562 - Impair Defenses",
-                "reason": "By analyzing the SSM Agent version and status, an attacker could identify vulnerabilities or disable the agent to evade detection."
             }
         ],
         "usedInWild": true,
@@ -15678,10 +15456,6 @@
             {
                 "technique": "T1082 - System Information Discovery",
                 "reason": "By using GetParameters, an attacker can gather configuration and environment details stored in the parameters, aiding in system information discovery."
-            },
-            {
-                "technique": "T1213 - Data from Information Repositories",
-                "reason": "Attackers can exploit GetParameters to extract important data stored within the Parameter Store, such as system configurations, secrets, or other critical information."
             },
             {
                 "technique": "T1078 - Valid Accounts",
@@ -15904,16 +15678,12 @@
                 "reason": "The server creation process may involve generating or utilizing valid credentials, which can be leveraged by attackers to gain unauthorized access to the system."
             },
             {
-                "technique": "T1505 - Server Software Component",
-                "reason": "By creating a new server, attackers can install or manage software components that support malicious activities, such as maintaining persistence or running unauthorized code."
-            },
-            {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "The server can be used to facilitate command and control communications using standard file transfer protocols (e.g., SFTP, FTPS), which are application layer protocols."
             },
             {
                 "technique": "T1562 - Impair Defenses",
-                "reason": "Attackers could configure the server in a way that bypasses or disables certain security controls, allowing them to evade detection and maintain access."
+                "reason": "Attackers could configure the server to allow them to access from the internet to S3 files."
             }
         ],
         "usedInWild": true,
@@ -16086,10 +15856,6 @@
             {
                 "technique": "T1071 - Application Layer Protocol",
                 "reason": "By updating an IPSet to allow or block specific IP addresses, an attacker can manipulate web traffic to facilitate or evade detection during Command and Control activities."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "An attacker with legitimate credentials could update the IPSet to include malicious IPs, ensuring ongoing access or enabling external connections from trusted addresses."
             },
             {
                 "technique": "T1489 - Service Stop",

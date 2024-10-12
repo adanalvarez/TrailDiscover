@@ -18,16 +18,8 @@
             "reason": "The GetSessionToken API call generates temporary credentials that can be used as valid accounts, allowing an adversary to bypass certain security measures by leveraging these temporary credentials."
         },
         {
-            "technique": "T1098 - Account Manipulation",
-            "reason": "The temporary credentials obtained via GetSessionToken can be used to perform actions with the permissions of the original IAM user, potentially manipulating resources or services within the AWS environment under the guise of legitimate access."
-        },
-        {
             "technique": "T1550 - Use Alternate Authentication Material",
             "reason": "The temporary credentials from GetSessionToken can act as alternative authentication material, enabling attackers to maintain access without the need to use the compromised long-term credentials again, thus evading certain detection mechanisms."
-        },
-        {
-            "technique": "T1531 - Account Access Removal",
-            "reason": "Attackers using temporary credentials can revoke access for legitimate users or create conditions that interfere with the normal operation of the legitimate user's credentials, thereby establishing persistence within the environment."
         }
     ],
     "usedInWild": true,
