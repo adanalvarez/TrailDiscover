@@ -12,7 +12,8 @@
         "T1021 - Remote Services"
     ],
     "mitreAttackSubTechniques": [
-        "T1021.004 - Remote Services: SSH"
+        "T1021.004 - Remote Services: SSH",
+        "T1021.007 - Remote Services: Cloud Services"
     ],
     "unverifiedMitreAttackTechniques": [
         {

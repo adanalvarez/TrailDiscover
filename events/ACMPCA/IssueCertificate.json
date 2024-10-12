@@ -7,7 +7,7 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1040- Network Sniffing"
+        "T1040 - Network Sniffing"
     ],
     "mitreAttackSubTechniques": [
 

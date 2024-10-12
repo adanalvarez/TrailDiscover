@@ -15,7 +15,7 @@
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1098 - Account Manipulation",
-            "reason": ""
+            "reason": "By modifying account entitlements, an attacker could adjust or extend permissions, gaining higher privileges or persistence within the cloud environment."
         },
         {
             "technique": "T1078 - Valid Accounts",

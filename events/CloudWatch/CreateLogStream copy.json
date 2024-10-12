@@ -10,7 +10,7 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
     ],
     "unverifiedMitreAttackTechniques": [
         {
