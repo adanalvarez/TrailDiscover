@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1136 - Create Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Creating an OpenID Connect Provider can be used to generate valid credentials that can be exploited for persistent access"
+        },
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "Establishing new accounts or providers in the IAM can assist in maintaining access over time"
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "Adjusting authentication settings to include a new provider can bypass certain security measures."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Creating and managing new accounts or providers can lead to manipulation of permissions and roles."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

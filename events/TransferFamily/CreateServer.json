@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The server creation process may involve generating or utilizing valid credentials, which can be leveraged by attackers to gain unauthorized access to the system."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The server can be used to facilitate command and control communications using standard file transfer protocols (e.g., SFTP, FTPS), which are application layer protocols."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers could configure the server to allow them to access from the internet to S3 files."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The ListIdentities API might help an attacker identify valid cloud accounts or identities to target for subsequent attacks, such as trying to access these accounts using stolen or guessed credentials."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Identifying system owners or users based on the listed identities can help attackers target specific accounts or tailor attacks based on the roles of those users."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

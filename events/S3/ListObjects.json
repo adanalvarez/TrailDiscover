@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1619 - Cloud Storage Object Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1083 - File and Directory Discovery",
+            "reason": "Even though directory buckets are not supported, ListObjects allows an attacker to discover the contents and structure of an S3 bucket by listing objects."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "The ListObjects call enables the retrieval of data stored within S3 buckets, which are often utilized as information repositories."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attaching policies with permissions that affect logging or monitoring tools can be used to evade detection by modifying the environment to reduce visibility."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

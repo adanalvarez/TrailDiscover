@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1535 - Unused/Unsupported Cloud Regions"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Adding accounts to the organization can be used to manipulate account permissions and roles for persistence or escalation of privileges."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By adding new accounts, an attacker might impair the existing security defenses, such as monitoring and logging configurations, by creating noise or adding trusted accounts."
+        },
+        {
+            "technique": "T1199 - Trusted Relationship",
+            "reason": "Inviting an account creates a trusted relationship that can be exploited for initial access or lateral movement within the organization."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

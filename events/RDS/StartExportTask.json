@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "By exporting data to an S3 bucket, adversaries can use cloud services as a method to exfiltrate data without direct interaction with the database."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "After exporting snapshot data to S3, an adversary can retrieve and analyze the data from the S3 bucket, provided they maintain access to the cloud storage."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "By exporting the RDS snapshot, an adversary gains access to a repository of information stored within the database, which they can then access through the S3 bucket."
+        },
+        {
+            "technique": "T1078 - Cloud Accounts",
+            "reason": "Adversaries may leverage compromised cloud accounts to persist within the environment, using cloud-native functionality like the StartExportTask to maintain access to sensitive data over time."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

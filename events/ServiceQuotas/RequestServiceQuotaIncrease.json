@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "The API allows for requesting additional resources, enabling the attacker to develop infrastructure needed for further malicious activities."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adversaries might use the GetPublicAccessBlock API call to check for misconfigurations or overly permissive settings in S3 buckets, potentially leading to unauthorized access and exploitation of valid cloud accounts."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "Retrieving the PublicAccessBlock configuration can assist attackers in identifying S3 buckets that are misconfigured to allow public access, which may lead to unauthorized access and potential exfiltration of data from cloud storage."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -10,6 +10,15 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1070 - Indicator Removal"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting the access key pair is a direct method to remove access credentials, which aligns with the technique of account access removal."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

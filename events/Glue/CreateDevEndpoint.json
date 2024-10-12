@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1133 - External Remote Services",
+            "reason": "Development endpoints can be accessed remotely, providing a vector for persistent remote access by attackers."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

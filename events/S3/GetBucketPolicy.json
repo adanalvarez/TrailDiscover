@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "If an adversary can access a bucket policy, it may provide insights into valid accounts or roles that can be exploited for further access."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By analyzing the bucket policy, an attacker can discover accounts or IAM roles that have access to the S3 bucket, which may help in escalating privileges within the environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

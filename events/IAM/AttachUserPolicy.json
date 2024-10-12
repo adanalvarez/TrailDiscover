@@ -10,6 +10,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "By attaching a policy, an adversary can alter the authentication process, potentially bypassing multi-factor authentication (MFA) or other security measures."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

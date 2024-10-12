@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Creating or modifying network ACLs can disable or alter firewall rules, thus impairing defenses. By modifying ACLs, attackers might disable security tools that rely on specific network configurations."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "Modifying network ACLs could allow malicious payloads to be transferred into the network."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "By changing ACL rules, an attacker might permit unauthorized web traffic for command and control. By modifying network ACLs, an attacker could allow unauthorized email traffic for exfiltration or command and control."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "Creating or modifying ACL entries can facilitate unauthorized RDP access, aiding lateral movement."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Attackers could create ACL rules that permit traffic to and from external proxies, aiding command and control operations"
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "By modifying network ACL rules, an attacker can enable access to specific ports used by services like SMB (TCP/445). SMB ports are often used for sharing files and resources within a network. Access to these ports can provide the attacker with the ability to query for system information, users, and groups (such as through NetSessionEnum or NetUserEnum calls), helping them to discover the system owner or logged-in users, which aids in understanding the target environment."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "An attacker might create ACL entries to allow traffic to sites or services where the attacker has valid accounts."
+        },
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Creating specific ACL rules might help attackers map out network connections and understand the network layout."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

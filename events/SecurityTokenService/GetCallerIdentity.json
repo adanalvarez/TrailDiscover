@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The GetCallerIdentity API call provides detailed information about the IAM user or role making the request, enabling an attacker to understand the current access context and tailor subsequent actions based on available permissions."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By successfully calling GetCallerIdentity, an attacker can confirm that a set of credentials is valid and active, which is essential for leveraging these credentials to access additional resources within the AWS environment."
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "Attackers can use stolen or compromised credentials to invoke GetCallerIdentity, verifying the legitimacy and scope of these credentials without needing specific permissions, aiding in maintaining unauthorized access."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "The information retrieved can help map out aspects of the cloud environment, such as account numbers and associated roles, providing insight necessary for further reconnaissance and targeted attacks."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

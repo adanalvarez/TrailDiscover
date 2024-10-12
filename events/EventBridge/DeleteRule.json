@@ -11,6 +11,23 @@
         "T1489 - Service Stop",
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "By deleting a rule, attackers can remove evidence of malicious activity."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers might delete rules to alter the behavior of scheduled tasks, maintaining persistence. By manipulating accounts and associated rules, they ensure their malicious processes can run without interruption or detection."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Deleting rules can weaken security monitoring by removing triggers that would generate alerts, effectively blinding security teams to ongoing malicious activities. This action allows attackers to operate with reduced risk of detection, making further exploitation easier."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

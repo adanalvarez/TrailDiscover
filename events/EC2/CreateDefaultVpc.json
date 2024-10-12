@@ -11,6 +11,23 @@
         "T1098 - Account Manipulation",
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "With a default VPC in place, adversaries can use it to establish connections between various services, facilitating lateral movement across different instances and resources."
+        },
+        {
+            "technique": "T1133 - External Remote Services",
+            "reason": "The VPC configuration can be exploited to set up remote access points, which adversaries can use to maintain command and control over compromised resources."
+        },
+        {
+            "technique": "T1041 - Exfiltration Over C2 Channel",
+            "reason": "Once command and control is established within the VPC, data can be exfiltrated through these channels without raising immediate suspicion, leveraging the network infrastructure."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -10,6 +10,23 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1070 - Indicator Removal"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting an email address or domain from the list of verified identities can remove access for legitimate users, thereby evading detection by disrupting normal email flows and alert mechanisms that rely on these identities."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting a verified identity can disrupt communication channels, especially if the identity is tied to critical email systems, effectively leading to the destruction of necessary operational data."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "This operation could contribute to a denial of service by removing a critical identity that is required for sending emails, thus halting communication or alerting capabilities within the affected system."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

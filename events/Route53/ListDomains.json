@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "The ListDomains API call allows an adversary to discover domain names associated with the AWS account, providing insights into the cloud infrastructure."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The ListDomains API call can be used to gather DNS information, which may reveal the structure of the victim’s network and other valuable network details."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Knowing the domains registered within the AWS account can help identify associated cloud resources and potential attack vectors within the cloud environment."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "The ListDomains API call could assist an adversary in identifying network services associated with the domain names, contributing to their reconnaissance efforts."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

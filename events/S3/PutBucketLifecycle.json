@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "An attacker could manipulate lifecycle configurations to delete, transition, or obscure data, effectively impairing defensive mechanisms by reducing the visibility or availability of critical data."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Manipulating lifecycle configurations could facilitate the movement of data to different storage locations or accounts, enabling data exfiltration or staging of information."
+        },
+        {
+            "technique": "T1486 - Data Encrypted for Impact",
+            "reason": "Lifecycle configurations could be altered to move data into encrypted storage, rendering it inaccessible as a form of impact, effectively denying access to the legitimate users."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "An attacker might adjust lifecycle configurations to archive or obscure files, making them harder to detect or stage them for later exfiltration, thus evading detection."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

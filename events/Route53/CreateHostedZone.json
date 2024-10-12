@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Creating a hosted zone allows attackers to use DNS or web protocols for communication between compromised systems and attacker-controlled infrastructure, facilitating covert command and control operations."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "The hosted zone can be configured to route traffic through multiple proxies, aiding in defense evasion by obscuring the true source or destination of the traffic."
+        },
+        {
+            "technique": "T1568 - Dynamic Resolution",
+            "reason": "Attackers may use dynamically generated domains within the hosted zone to maintain command and control, making it difficult for defenders to track or block these communications."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers might create a hosted zone with a domain or subdomain that closely mimics a legitimate one, aiding in phishing or other forms of deception to mislead users or systems."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

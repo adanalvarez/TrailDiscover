@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Adversaries can modify the job definition to make the job appear legitimate, effectively hiding malicious activities within a seemingly benign job."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Updating a job definition can include instructions to remove or alter logs and other artifacts, helping adversaries evade detection."
+        },
+        {
+            "technique": "T1480 - Execution Guardrails",
+            "reason": "Adversaries can update the job definition to include specific conditions or constraints, ensuring the job only executes under certain circumstances, which helps in evading detection."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "Adversaries can alter the job definition to manipulate data processed by the Glue job, affecting the integrity and outcome of the data workflows."
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "By altering job definitions, adversaries can repurpose AWS Glue jobs for their own computational needs, impacting the resource allocation of the environment."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

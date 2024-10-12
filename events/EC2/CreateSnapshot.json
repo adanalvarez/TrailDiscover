@@ -11,6 +11,47 @@
         "T1537 - Transfer Data to Cloud Account",
         "T1021 - Remote Services"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Creating a snapshot and storing it in S3 can be used to exfiltrate data by transferring it to another account or region."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "If an adversary has access to an EBS volume containing credentials, creating a snapshot of that volume could allow them to extract those credentials."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "An adversary could create a snapshot before deleting the original volume, ensuring they can still access the data"
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "The snapshot data can be exfiltrated using AWS APIs, moving it to S3 or other cloud storage."
+        },
+        {
+            "technique": "T1030 - Data Transfer Size Limits",
+            "reason": "Creating multiple snapshots to evade detection mechanisms that monitor for large data transfers."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "By creating snapshots of EBS volumes, adversaries can hide data transfers under the guise of legitimate backup operations. This makes it harder to distinguish between regular snapshot activities and potential malicious data movements."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Snapshots can serve as a stage for data before exfiltration"
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "Adversaries might use stolen keys or other credentials extracted from snapshots as authentication material."
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Adversaries could create snapshots and use them in other environments, leveraging the stored resources for malicious purposes."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

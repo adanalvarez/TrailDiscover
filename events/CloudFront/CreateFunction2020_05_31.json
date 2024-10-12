@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1119 - Automated Collection"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "CloudFront functions are written in JavaScript, enabling the execution of scripts."
+        },
+        {
+            "technique": "T1546 - Event Triggered Execution",
+            "reason": "A CloudFront function can be set to trigger on specific events, establishing persistence."
+        },
+        {
+            "technique": "T1562.001 - Impair Defenses",
+            "reason": "CloudFront functions can modify requests and responses, which can be used to evade detection tools."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The JavaScript code within CloudFront functions can be obfuscated to hide malicious intent."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "CloudFront functions can communicate using web protocols, facilitating command and control."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Functions can be used to remove or alter log files, helping in defense evasion."
+        },
+        {
+            "technique": "T1574 - Hijack Execution Flow",
+            "reason": "CloudFront functions manipulate the flow of requests, which can be seen as hijacking the execution flow within the cloud infrastructure."
+        },
+        {
+            "technique": "T1008 - Fallback Channels",
+            "reason": "CloudFront functions can be designed to use fallback channels for command and control if the primary method is disrupted."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Improperly configured or malicious CloudFront functions can cause application exhaustion, leading to denial-of-service attacks."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,39 @@
     "mitreAttackTechniques": [
         "T1654 - Log Enumeration"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The LookupEvents API call can be used to identify information about AWS cloud accounts, potentially revealing new or unused accounts that can be targeted."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "By looking up events, attackers can identify access patterns or sensitive data locations within cloud storage, facilitating data collection or exfiltration."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": " If attackers are trying to access accounts, LookupEvents can help them discover which accounts are being used, aiding in the identification of valid credentials. By using LookupEvents, attackers can gain insights into which accounts have been accessed, helping them target specific accounts for compromise."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Discovering user activities and patterns can help attackers understand who owns or uses specific systems, making it easier to target high-value accounts."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "LookupEvents can reveal information about the cloud infrastructure, including services and resources used within the environment."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": " By understanding event patterns and data flows, attackers can automate the exfiltration of data from the cloud environment."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Attackers can use LookupEvents to see which processes or applications are being invoked, gaining insight into the operational environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

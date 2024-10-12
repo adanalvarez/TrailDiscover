@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Modifying IAM role policies can be used to restrict or remove access to certain users or roles, aiding in defense evasion."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "By authorizing specific IP ranges or security groups, this API call can enable remote access to the database from specified instances or IP addresses, potentially allowing attackers to establish unauthorized access directly."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The authorization of ingress rules through this API call may enable attackers to use common web protocols (HTTP/S) to interact with the database, facilitating access over application-layer protocols."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Attackers might exploit the authorized IP range through this API call by routing their traffic via an external proxy, masking their true origin and evading detection."
+        },
+        {
+            "technique": "T1133 - External Remote Services",
+            "reason": "The API call directly allows the configuration of external access to cloud-based database services, which could be exploited by attackers to bypass internal network protections by directly accessing the database."
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Attackers might use the API call to authorize ingress for IP addresses or security groups that appear legitimate or benign, thus evading detection by security monitoring tools that rely on expected network traffic patterns."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By carefully selecting which IPs or security groups to authorize, attackers can effectively impair or avoid network-based defenses, such as firewalls or intrusion detection systems (IDS), that rely on stricter ingress rules to protect the database."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

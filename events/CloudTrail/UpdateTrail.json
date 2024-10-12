@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Modifying CloudTrail settings can involve stopping log generation or deleting logs, removing evidence of activities."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Changing CloudTrail settings might require manipulating account permissions or configurations to control logging."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason" : "Updating trail settings could facilitate the transfer of logs or sensitive data to an attacker-controlled cloud account for exfiltration."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

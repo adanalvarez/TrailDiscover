@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The API retrieves comprehensive details about the managed nodes, including platform name, version, and agent status, which helps in understanding the target system."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The IAM role associated with each managed node can be analyzed to identify and potentially exploit valid credentials, leading to unauthorized access."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "IP addresses and system information can be used to discover and map out other systems within the network environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

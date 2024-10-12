@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Creating log streams with names that mimic legitimate applications or services helps attackers blend in with normal operations and evade detection."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "Log streams can be used to automate the collection of log data from various sources within the cloud environment, aiding attackers in data aggregation."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Using log streams to stage data before it is exfiltrated, organizing it for easy access and transfer."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

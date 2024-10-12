@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying the database activity stream to an unlocked state could impair logging and monitoring, effectively evading defenses."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Attackers might reconfigure the audit policy state to the original state to avoid an investigation."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

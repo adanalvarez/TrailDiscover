@@ -7,7 +7,28 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"
+        "T1580 - Cloud Infrastructure Discovery"        
+    ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "GetQueryResults can be used to gather information about the Athena environment, such as the metadata of the queries and databases. This can reveal insights about the system configuration and the types of data stored."
+        },
+        {
+            "technique": "T1213 - Data from Information Repositories",
+            "reason": "Athena queries can access and retrieve data from various repositories like S3. GetQueryResults is used to obtain this data, making it a critical step in extracting information from these repositories."
+        },
+        {
+            "technique": "T1039 - Data from Network Shared Drive",
+            "reason": " If Athena queries target data stored in network shared drives (like those mounted on EC2 instances and accessible via S3), the GetQueryResults API will be used to collect this data."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Attackers may stage data in a specific location after retrieving it with GetQueryResults before exfiltration. This staging is a preparatory step for further data handling or analysis."
+        }
     ],
     "usedInWild": true,
     "incidents": [

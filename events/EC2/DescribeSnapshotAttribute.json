@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By describing snapshot attributes, an adversary can discover accounts associated with specific snapshots, providing insight into user and service accounts in the environment."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": " Snapshots often contain data stored in the cloud, and describing their attributes is a step towards accessing and exploiting this data."
+        },
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "DescribeSnapshotAttribute can be used in scripts to automatically collect data on snapshots for further analysis or malicious use."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "By gathering detailed information about snapshots, an adversary can infer the system owner or user details, which is crucial for furthering their attack strategy."
+        },
+        {
+            "technique": "T1602 - Data from Configuration Repository",
+            "reason": "Snapshot attributes may include configuration information that could be valuable for understanding the environment or identifying further targets for exfiltration or attack."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

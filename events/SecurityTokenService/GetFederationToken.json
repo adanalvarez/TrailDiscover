@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "The temporary credentials provided by GetFederationToken can serve as alternate authentication tokens, enabling access to various AWS services without relying on long-term credentials, thereby aiding in defense evasion."
+        },
+        {
+            "technique": "T1212 - Exploitation for Credential Access",
+            "reason": "An attacker with access to the credentials of an IAM user could exploit GetFederationToken to generate new credentials, which can be used to escalate their privileges or access other resources."
+        },
+        {
+            "technique": "T1134 - Access Token Manipulation",
+            "reason": "Similar to manipulating access tokens, attackers can use GetFederationToken to create temporary sessions that spoof legitimate access patterns, aiding in evasion and unauthorized access."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "This involves actions taken to manipulate accounts to maintain access or evade detection. Disassociating the GuardDuty member account from its master account can be seen as a form of account manipulation to avoid centralized logging and monitoring."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Disassociating from the master account effectively removes the centralized management and monitoring capabilities, making it harder to regain control or visibility over the account."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

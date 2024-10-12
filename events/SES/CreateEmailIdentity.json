@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "Verifying an email identity or domain is part of acquiring the necessary infrastructure for sending emails, which could be used for malicious activities such as phishing or command and control."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The verification of an email identity, especially when using DKIM, helps establish a legitimate-looking account or service that can be exploited for malicious purposes."
+        },
+        {
+            "technique": "T1566 - Phishing",
+            "reason": "The verified email identity or domain can be utilized to send phishing emails, leveraging the trust established by a verified and legitimate-looking sender address or domain."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,20 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools",
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting a CloudTrail trail can be seen as an attempt to remove logs that could be used to detect malicious activity, thereby evading detection."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Deleting the CloudTrail trail results in the destruction of important log data, which can impact the ability to investigate and respond to incidents."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

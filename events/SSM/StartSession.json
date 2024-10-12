@@ -11,6 +11,23 @@
         "T1021 - Remote Services",
         "T1651 - Cloud Administration Command"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "The StartSession API allows for establishing a session where commands can be executed on the managed node through a command-line interface. This enables direct interaction with the system, facilitating the execution of scripts or commands remotely."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The StartSession API requires valid credentials and an authenticated token to initiate a session, allowing access to managed nodes. Attackers with compromised credentials can exploit this to gain unauthorized access to systems."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The StartSession API uses WebSocket connections over HTTPS, enabling communication with the managed node. This can be leveraged to disguise command and control traffic within regular web traffic, making detection more challenging."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

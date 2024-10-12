@@ -11,6 +11,35 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1556 - Modify Authentication Process"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "An attacker might use UpdateGraphqlApi to update settings in a way that allows creating new user accounts with elevated privileges."
+        },
+        {
+            "technique": "T1212 - Exploitation for Credential Dumping",
+            "reason": "Updating GraphQL API could be abused to alter application behavior to facilitate credential dumping."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "An attacker could use the API call to modify existing configurations to maintain access through valid cloud accounts."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The API call could allow manipulation of user accounts or roles to maintain access or escalate privileges."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "The API call might be used to modify or obfuscate logs and configurations to avoid detection."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By updating the API, attackers might ensure they can access privileged accounts for persistent access."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

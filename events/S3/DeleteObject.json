@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting an object can be used to remove evidence of prior activity, aiding in evasion of detection and analysis."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "By deleting logs, configurations, or security-related data stored in S3, attackers can impair defensive mechanisms, reducing the effectiveness of monitoring and alerting systems."
+        },
+        {
+            "technique": "T1490 - Inhibit System Recovery",
+            "reason": "By deleting critical backups or data versions in S3, an attacker can inhibit recovery processes, making it difficult to restore systems to their pre-attack state."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting important objects required for system functionality or application performance could result in a denial of service, preventing users from accessing necessary resources or causing system disruptions."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Deleting configuration files or objects critical to the operation of a service hosted in AWS can lead to a service stop, effectively disrupting operations and causing downtime."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

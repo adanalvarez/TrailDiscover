@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Adversaries use existing cloud accounts to gain access to cloud services. The GetUser API call can reveal information useful for identifying valid accounts."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "By retrieving information about IAM users, adversaries can gather details about the system environment and user configurations."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Adversaries may enumerate existing IAM users to identify which accounts can be targeted for access removal in order to evade detection and maintain access."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

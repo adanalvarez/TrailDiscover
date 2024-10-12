@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "The ListOriginationNumbers API call provides information on the account's SMS origination numbers, which could help an adversary discover and map out cloud resources associated with the account."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Attackers can create queries to discover permission groups, roles, and policies within the AWS environment, which might aid in understanding access levels across different resources."
+        },
+        {
+            "technique": "T1538 - Cloud Service Discovery",
+            "reason": "By specifying queries related to cloud services, attackers can discover details about various services in use, aiding in the mapping of the environment."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "The search results can reveal information about infrastructure components like EC2 instances, S3 buckets, and databases, providing attackers with critical data about the cloud architecture."
+        },
+        {
+            "technique": "T1201 - Password Policy Discovery",
+            "reason": "Queries can be tailored to discover password policies related to IAM users, assisting attackers in crafting password-based attacks."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "If the search results reveal IAM roles or users with associated access keys, attackers might identify unsecured credentials that could be exploited for unauthorized access."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Searches might return details about valid accounts that could be targeted for unauthorized access, particularly if accounts are not adequately secured."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

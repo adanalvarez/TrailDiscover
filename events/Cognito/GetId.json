@@ -9,6 +9,25 @@
     "mitreAttackTechniques": [
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1078.002 - Valid Accounts: Domain Accounts",
+        "T1078.001 - Valid Accounts: Default Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1110 - Brute Force",
+            "reason": "Attackers might attempt to generate or retrieve multiple IdentityIDs through brute force, seeking unauthorized access."
+        },
+        {
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "The Logins parameter allows attackers to gather or brute-force information tied to identity providers (e.g., linked Google or Facebook accounts), which might reveal valuable identity information."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "By retrieving an IdentityId, attackers could discover cloud accounts linked to multiple identity providers, which might give them further access or knowledge about an organization's cloud infrastructure."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

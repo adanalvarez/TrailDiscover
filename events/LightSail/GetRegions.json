@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The GetRegions API call can provide information about the geographical distribution of LightSail resources, which is useful for understanding the environment."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "The RegisterDomain API call is used to acquire a new domain, which can be leveraged to set up malicious infrastructure, such as phishing sites or command and control servers."
+        },
+        {
+            "technique": "T1584 - Compromise Infrastructure",
+            "reason": "Registering a domain and creating a corresponding hosted zone allows attackers to establish and control an infrastructure that supports malicious activities."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "By creating a hosted zone and assigning name servers, the domain can be used to facilitate communication via DNS, a common method for establishing command and control channels."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1074 - Data Staged"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By creating a Traffic Mirror filter, attackers can intercept and analyze network traffic to capture sensitive information. This directly relates to the ability to observe all mirrored network traffic."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "raffic mirroring can be used to observe and scan network services and discover active services and devices on the network. By analyzing mirrored traffic, attackers can map the network and identify active services."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "Traffic mirroring can facilitate the automated exfiltration of data through observed network traffic. Mirrored traffic can be continuously collected and sent to an attacker's controlled server for automatic processing and exfiltration."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Mirrored traffic can help attackers discover information about system owners or users by analyzing the traffic. For instance, login attempts, user credentials, and other user-related information might be observed."
+        },
+        {
+            "technique": "T1518 - Software Discovery",
+            "reason": "Traffic mirroring can be used to identify security software and appliances by analyzing network traffic. Attackers can look for traffic patterns related to security software to understand the defenses in place."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "By capturing mirrored traffic, attackers can collect data from local systems indirectly by observing network communications. This can include files being transferred over the network, credentials, and other sensitive information."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,12 @@
     "mitreAttackTechniques": [
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The ability to modify or create replication configurations can be used to ensure that critical data is continuously replicated to an attacker-controlled bucket, maintaining persistence even if access controls are modified or removed."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "An attacker could misuse the replication configuration to redirect logs or other monitoring data away from security tools, effectively evading detection and disabling defenses."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "By setting up replication to an external or unauthorized S3 bucket, an attacker can automatically exfiltrate data, transferring large volumes without direct manual intervention."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Creating a new group with a name similar to existing groups can help attackers blend in and avoid detection"
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": "Permanently deleting objects or versions from S3 can result in the loss of critical data, affecting the availability and integrity of information. This action can disrupt business operations by removing essential files, leading to significant data loss and operational downtime."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Deleting an S3 bucket can serve as a method of removing evidence or logs that may be stored within the bucket, helping to evade detection."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Deleting an S3 bucket could result in a denial of service if critical data or services that rely on that bucket become unavailable."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Deleting key objects or configuration files from S3 can cause critical services to stop functioning. This disruption can lead to downtime and loss of access to essential systems, impacting business operations."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Glue allows the use of Python scripts - updating the endpoint could change the scripts to execute arbitrary code directly in the development environment."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Adversaries may update the endpoint to include scripts that delete logs or other files, helping to evade detection."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Updates could involve obfuscated scripts or configurations to hide malicious code and evade detection mechanisms"
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Adversaries could update the endpoint to masquerade malicious activities as legitimate by matching names or locations."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

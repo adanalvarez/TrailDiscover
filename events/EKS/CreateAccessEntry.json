@@ -9,6 +9,15 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Creating an access entry for an IAM principal can establish valid credentials that can be used for access."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

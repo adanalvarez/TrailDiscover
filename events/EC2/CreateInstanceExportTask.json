@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1005 - Data from Local System"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "Exporting an EC2 instance to an S3 bucket involves transferring data over a web service, which aligns with exfiltrating data through a web-based method."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The export task utilizes application layer protocols for communication, relevant for exfiltrating data using such protocols."
+        },
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Exporting an EC2 instance to an S3 bucket involves moving data within the same cloud account and region, but it still represents a transfer of potentially sensitive data to another location within the cloud. "
+        },
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "The export task could be used in combination with other tactics to hijack the resource for further malicious activities or unauthorized access."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The instance's data being exported can be seen as collecting data from a local system before transferring it to another location."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

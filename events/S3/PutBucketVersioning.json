@@ -11,6 +11,23 @@
         "T1490 - Inhibit System Recovery",
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "If an attacker suspends versioning, they could delete IAM policies or credentials stored in S3, making recovery of previous versions impossible, thereby preventing account recovery."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "An attacker might disable versioning or enable it without MFA Delete, which allows them to delete or overwrite objects in a way that removes evidence of their activity, complicating forensic investigation."
+        },
+        {
+            "technique": "T1488 - Data Destruction",
+            "reason": "If an attacker sets an object expiration lifecycle in a version-enabled bucket and suspends versioning, they could effectively destroy all noncurrent object versions over time, leading to the loss of data."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -11,6 +11,19 @@
         "T1489 - Service Stop",
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Manipulating EventBridge rules by removing targets can alter the capabilities and behaviors of accounts without directly deleting them."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Removing security monitoring targets from EventBridge rules can impair defenses by preventing certain security actions from being triggered."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

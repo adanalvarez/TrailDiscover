@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts: Cloud Accounts",
+            "reason": "If an attacker obtains credentials to use the GetUseCaseForModelAccess API call, they can gather sensitive information about model access use cases, which may aid further malicious activity."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The GetUseCaseForModelAccess API call can be used to collect details about model access, revealing important information about the environment and configurations, which is a form of system discovery."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The API call can potentially be used to extract detailed data regarding model use cases, equivalent to gathering sensitive data from the local cloud environment."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "If the GetUseCaseForModelAccess API provides links or references to data stored in cloud storage, an attacker could use it to access and exfiltrate sensitive data."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "An attacker could script the API call to automatically extract and exfiltrate information about model use cases over time."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Step-by-step explanation: The results from the GetUseCaseForModelAccess call could be staged locally in the attacker's environment for later exfiltration or use."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

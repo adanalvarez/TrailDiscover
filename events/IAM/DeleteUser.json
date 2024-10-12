@@ -10,6 +10,19 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1070 - Indicator Removal"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "Deleting a user account immediately revokes all permissions and access rights associated with that IAM user, disrupting access to critical resources. This action can prevent legitimate users from performing essential tasks, effectively halting operations and response efforts."
+        },
+        {
+            "technique": "T1485 - Data Destruction",
+            "reason": " The deletion of an IAM user can be part of a deliberate attempt to destroy data or disrupt normal operations. Users often have associated data, policies, and access controls that, when removed, can result in data loss or corruption. "
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "Adversaries can use the findings to discover details about processes running on compromised instances, aiding them in identifying and targeting specific processes for further exploitation."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "An adversary can identify findings that indicate automated data exfiltration activities, allowing them to understand what methods were detected and possibly refine their tactics."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Analyzing findings can help adversaries discover details about the cloud infrastructure, such as the types of resources and their configurations, aiding in planning further attacks."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

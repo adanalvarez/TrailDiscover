@@ -12,6 +12,12 @@
         "T1199 - Trusted Relationship",
         "T1078 - Valid Accounts"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        
+    ],
     "usedInWild": true,
     "incidents": [
         {

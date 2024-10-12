@@ -9,6 +9,51 @@
     "mitreAttackTechniques": [
         "T1074 - Data Staged"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "When a Traffic Mirror target is created, it enables the capture of network traffic, which can be analyzed to understand the network configuration, including IP addresses, subnets, and routing."
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "Mirrored traffic provides visibility into the types of services running on the network, allowing adversaries to map out the network services and identify potential vulnerabilities."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "By examining the mirrored traffic, attackers can identify and understand the protocols used at the application layer, which can be exploited for further attacks."
+        },
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "The data captured through traffic mirroring can be exfiltrated via web services, making it easier for attackers to move large amounts of data without detection."
+        },
+        {
+            "technique": "T1571 - Non-Standard Port",
+            "reason": "Traffic mirroring can uncover the use of non-standard ports, which can then be targeted in later stages of the attack for covert command and control communications."
+        },
+        {
+            "technique": "1590 - Gather Victim Network Information",
+            "reason": "The detailed information gathered from traffic mirroring helps attackers build a comprehensive profile of the victim's network."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "By analyzing the traffic within a cloud environment, adversaries can discover cloud infrastructure details and configurations, which can be critical for planning further attacks."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Analysis of mirrored traffic can reveal information about system owners or users, which can be leveraged for further attacks."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "Mirrored traffic can reveal sensitive data being transmitted within the network, which can be captured and analyzed."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "Traffic mirroring enables the continuous collection of network traffic, which can then be automatically exfiltrated for further analysis or exploitation."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

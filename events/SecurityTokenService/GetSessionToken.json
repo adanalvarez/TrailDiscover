@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1199 - Trusted Relationship"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The GetSessionToken API call generates temporary credentials that can be used as valid accounts, allowing an adversary to bypass certain security measures by leveraging these temporary credentials."
+        },
+        {
+            "technique": "T1550 - Use Alternate Authentication Material",
+            "reason": "The temporary credentials from GetSessionToken can act as alternative authentication material, enabling attackers to maintain access without the need to use the compromised long-term credentials again, thus evading certain detection mechanisms."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

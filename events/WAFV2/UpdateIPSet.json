@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "By updating an IPSet to allow or block specific IP addresses, an attacker can manipulate web traffic to facilitate or evade detection during Command and Control activities."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "An attacker could update the IPSet to block access to critical services, effectively stopping them by denying network access. This is relevant because the API call can alter IP address permissions, potentially disrupting service availability."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "By modifying the IPSet to block or allow certain IP addresses, an attacker could cause a Denial of Service (DoS) attack by either overwhelming a service with traffic or cutting off access to legitimate users."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

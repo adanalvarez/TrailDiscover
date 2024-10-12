@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Removing a DB instance can help an adversary eliminate logs or traces of malicious activity by erasing the entire database where logs might be stored."
+        },
+        {
+            "technique": "T1531 - Account Access Removal",
+            "reason": "If an attacker deletes a DB instance, it could be a part of denying access to legitimate users by removing the resource they need."
+        },
+        {
+            "technique": "T1489 - Service Stop",
+            "reason": "Deleting a DB instance can effectively stop a critical service, rendering the associated application or service unavailable."
+        },
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "By deleting a DB instance, an attacker can cause a denial of service by removing the endpoint that the application or users rely on for database services."
+        },
+        {
+            "technique": "T1565 - Data Manipulation",
+            "reason": "While not strictly altering data, deleting a DB instance can result in the loss of data integrity, as the sudden removal can lead to incomplete data or service disruptions."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Knowing the logging setup allows attackers to delete or alter logs to avoid detection and cover their tracks."
+        },
+        {
+            "technique": "T1027 - Obfuscated Files or Information",
+            "reason": "Attackers may use knowledge of logging configurations to craft their actions in ways that avoid triggering specific logging mechanisms."
+        },
+        {
+            "technique": "T1518.001 - Software Discovery",
+            "reason": "Understanding how model invocation is logged can reveal what security software is in use."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Knowing the logging configuration can help attackers understand how to disable or evade defensive logging."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Attackers might tailor their command and control communication methods based on the logging configurations discovered."
+        },
+        {
+            "technique": "T1212 - Exploitation for Credential Access",
+            "reason": "If the option textDataDeliveryEnabled is activated there could be credentials in it which attackers can exploit. If the option imageDataDeliveryEnabled is activated there could be sensitive information in the images which are delivered in the logs."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

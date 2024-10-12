@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "Understanding the network configuration by querying VPCs helps an attacker identify the architecture, including subnets, route tables, and network ACLs. This information can reveal how the network is structured and potential points for further exploitation."
+        },
+        {
+            "technique": "T1040 - Network Sniffing",
+            "reason": "By describing the VPCs, attackers can identify potential points of network sniffing to capture valuable information traversing the network."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Understanding the VPCs helps in mapping out the cloud environment, potentially identifying accounts that manage or are associated with those VPCs."
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "By describing VPCs, adversaries can identify trusts between different VPCs or between on-premises and cloud environments, aiding lateral movement and privilege escalation attempts."
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "Describing VPCs directly aligns with gathering information about cloud network configurations, including CIDR blocks, subnets, and associated components."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Discovering details about VPCs is part of a broader effort to map out cloud services and their configurations, providing a clearer picture of the cloud environment's landscape."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

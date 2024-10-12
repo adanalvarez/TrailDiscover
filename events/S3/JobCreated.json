@@ -9,6 +9,35 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "An attacker could use the S3 Batch Operations to aggregate and compress large amounts of data for exfiltration, creating a job that is recorded as a JobCreated event."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "The JobCreated event indicates that data could be staged in an S3 bucket, possibly in preparation for further actions such as exfiltration."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The job creation could be part of an automated process designed to move data out of the environment, with minimal manual intervention required once set up."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "A JobCreated event could be used to transfer tools or scripts into the environment, using S3 as a storage mechanism before execution."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The Batch Operations job may involve communication over standard protocols (like HTTPS) for command and control, making it harder to detect malicious activity."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Attackers may manipulate or create new accounts with the necessary permissions to execute Batch Operations jobs, facilitating unauthorized data access or exfiltration."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

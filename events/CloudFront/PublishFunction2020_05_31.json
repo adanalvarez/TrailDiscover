@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1119 - Automated Collection"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1560 - Archive Collected Data",
+            "reason": "A published CloudFront function could aggregate and compress data, preparing it for exfiltration."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "A function can be programmed to clean up or remove indicators of compromise, aiding in evasion of detection"
+        },
+        {
+            "technique": "T1036 - Masquerading",
+            "reason": "Malicious functions can be disguised as legitimate CloudFront functions, hiding malicious activities within seemingly normal operations."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "A CloudFront function could redirect traffic through CloudFront, acting as a proxy and obscuring the origin of command and control traffic."
+        },
+        {
+            "technique": "T1102 - Web Service",
+            "reason": "Leveraging CloudFront functions to interact with web services, enabling command and control via HTTP or HTTPS, blending with regular web traffic"
+        },
+        {
+            "technique": "T1204 - User Execution",
+            "reason": "If the published function requires user interaction or specific conditions to trigger, it aligns with techniques requiring user execution."
+        },
+        {
+            "technique": "T1048 - Exfiltration Over Alternative Protocol",
+            "reason": "A CloudFront function could use alternative protocols for data exfiltration, bypassing standard monitoring tools."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "The function may use application layer protocols (HTTP/S) for communication, facilitating command and control or data exfiltration."
+        },
+        {
+            "technique": "T1574 - Hijack Execution Flow",
+            "reason": "The PublishFunction API can be used to modify how CloudFront handles requests, potentially hijacking the execution flow to achieve malicious objectives"
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

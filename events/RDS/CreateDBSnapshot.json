@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "Snapshots could contain credentials or other sensitive information that can be extracted and exploited by an attacker."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Snapshots containing authentication data or API keys can be used by attackers to maintain unauthorized access to cloud environments."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Snapshots stored in cloud storage can be accessed by attackers to extract sensitive information."
+        },
+        {
+            "technique": "T1005 - Data from Local System",
+            "reason": "The snapshot may contain data from the local system of the database instance that attackers could extract."
+        },
+        {
+            "technique": "T1020 - Automated Exfiltration",
+            "reason": "The snapshot could be automatically transferred out of the environment to an external location, facilitating data exfiltration without manual intervention."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

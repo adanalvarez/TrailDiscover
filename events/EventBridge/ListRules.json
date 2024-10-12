@@ -9,6 +9,31 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "By using ListRules to view the configuration of EventBridge rules, an adversary gains understanding of the event-driven workflows and integrations within the target's AWS environment. This can reveal insights into operational processes and potential areas for deeper exploration or exploitation."
+        },
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Listing rules helps attackers understand what events are being monitored, giving insight into the environment."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By examining the conditions and targets of EventBridge rules, attackers can infer the roles and permissions required to trigger these rules, which might provide insights into permission configurations and potential privilege escalation paths."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Identifying EventBridge rules can help attackers understand the configuration and interconnectivity of remote systems and services in the environment."
+        },
+        {
+            "technique": "T1482 - Domain Trust Discovery",
+            "reason": "Listing rules may reveal integrations and trust relationships with other domains or AWS accounts, aiding in the mapping of domain trust paths."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

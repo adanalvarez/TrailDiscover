@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1074 - Data Staged"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1020 - Automated Collection",
+            "reason": "Traffic mirroring can automate the collection of network traffic, which can include sensitive data."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "By intercepting traffic, an attacker can discover information about the system owner or users based on network communications."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Traffic mirroring can help attackers understand and manipulate application layer protocols by observing the traffic."
+        },
+        {
+            "technique": "T1040: Network Sniffing",
+            "reason": "Traffic mirroring is essentially a form of network sniffing, capturing data in transit for further analysis"
+        },
+        {
+            "technique": "T1567: Exfiltration Over Web Service",
+            "reason": "Intercepted traffic can be exfiltrated over web services if the mirrored data is sent to an external destination."
+        },
+        {
+            "technique": "T1213: Data from Information Repositories",
+            "reason": "T1213: Data from Information Repositories"
+        },
+        {
+            "technique": "T1005: Data from Local System",
+            "reason": "Traffic mirroring can capture data from the local system that is transmitted over the network."
+        },
+        {
+            "technique": "T1083: File and Directory Discovery",
+            "reason": "Analysis of mirrored traffic can help in discovering files and directories being accessed and used on the network"
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

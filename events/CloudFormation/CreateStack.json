@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1136 - Create Account",
+            "reason": "The CreateStack API call can be used to set up new accounts within the cloud environment as part of deploying a CloudFormation stack, which aids in gaining and maintaining access."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "The creation of new stacks can be used to modify or add cloud compute infrastructure, which can be part of defense evasion by creating resources that blend into the existing environment."
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Creating new stacks could involve setting up new accounts or roles that can be used later, contributing to persistence within the environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

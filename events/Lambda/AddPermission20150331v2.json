@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The AddPermission API call can be used to alter permissions, effectively manipulating accounts to maintain access or escalate privileges."
+        },
+        {
+            "technique": "T1090 - Proxy",
+            "reason": "Permissions granted via AddPermission could enable an attacker to set up functions that act as proxies, helping to evade defenses."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Attackers could use the AddPermission call to discover additional accounts that have access to specific Lambda functions, aiding in lateral movement."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Permissions can be used to manipulate Lambda functions to communicate over various application layer protocols, aiding in command and control."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

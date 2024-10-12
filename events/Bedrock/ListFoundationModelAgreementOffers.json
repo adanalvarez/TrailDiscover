@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1591.002 - Gather Victim Org Information: Business Relationships",
+            "reason": "The list of foundation model agreement offers can provide insights into the organization's partnerships and agreements with other entities, revealing valuable business relationship details."
+        },
+        {
+            "technique": "T1591 - Gather Victim Org Information",
+            "reason": "This API call might yield information about the internal structure of the organization, such as departments or teams involved with foundation models, contributing to a broader understanding of the target's organizational setup."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "The information retrieved from this API call could indicate which groups or roles within the AWS account have permissions to access these foundation models, helping to understand the permission hierarchy and potential targets for privilege escalation or further discovery."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

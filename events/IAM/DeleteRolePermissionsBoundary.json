@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Removing permissions boundaries can weaken the security posture by reducing the effectiveness of policies designed to limit role actions."
+        },
+        {
+            "technique": "T1068 - Exploitation for Privilege Escalation",
+            "reason": "Removing permissions boundaries may be used as part of exploiting a misconfiguration to gain elevated privileges."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -11,6 +11,19 @@
         "T1199 - Trusted Relationship",
         "T1550 - Use Alternate Authentication Material"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "The AssumeRoleWithWebIdentity API allows an attacker to gain valid temporary AWS credentials through a web identity provider, enabling them to access AWS services with authenticated permissions."
+        },
+        {
+            "technique": "T1505 - Server Software Component",
+            "reason": "If an attacker has compromised a web application, they can use the AssumeRoleWithWebIdentity API to escalate privileges or maintain persistence by obtaining temporary credentials."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

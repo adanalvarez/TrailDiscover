@@ -9,6 +9,23 @@
     "mitreAttackTechniques": [
         "T1562 - Impair Defenses"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1567 - Exfiltration Over Web Service",
+            "reason": "The attacker leverages CloudWatchLogs as an AWS web service to exfiltrate data, making it blend in with legitimate service use."
+        },
+        {
+            "technique": "T1102 - Web Service",
+            "reason": "The attacker uses PutLogEvents to upload sensitive data to CloudWatchLogs, which can then be accessed remotely as part of their command and control strategy."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "The attacker stages collected data on the local system and then uses PutLogEvents to upload it to CloudWatchLogs for further use or exfiltration."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1040- Network Sniffing"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1119 - Automated Collection",
+            "reason": "An attacker could write a script that continiously calls GetCertificate to get all certificates"
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Using GetCertificate, adversaries can discover details about the cloud infrastructure, including how certificates are managed and issued within the environment."
+        },
+        {
+            "technique": "TT1589 - Gather Victim Identity Information",
+            "reason": "Often times victim information is present in the certificate, f.e. email adresses."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Often times certificates are issued for single cloud services. "
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "One could label the ACMPCA as a cloud storage, because the certificates are stored in there."
+        },
+        {
+            "technique": "T1021.007 - Remote Services: Cloud Services",
+            "reason": "The GetCertificate API call retrieves certificates from a private CA or one that has been shared, which can then be used to authenticate access to various cloud services. Adversaries can use these certificates to authenticate themselves to cloud services remotely, leveraging the trust established by the certificate. This enables the adversary to move laterally within the cloud environment, access additional resources, or establish persistence by maintaining authenticated sessions with the compromised certificates"
+        },
+        {
+            "technique": "T1212 - Exploitation for Credential Access",
+            "reason": "Certificates can be exploited to gain credential access, especially if they include sensitive authentication details"
+        },
+        {
+            "technique": "T1557 - Adversary-in-the-Middle",
+            "reason": "Certificates retrieved can be used in Man-in-the-Middle (MitM) attacks to intercept and decrypt secure communications."
+        },
+        {
+            "technique": "T1021 - Remote Services",
+            "reason": "Certificates are often used as an authetication material, especially in enterprise environments and can be therefore used to move laterally."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Modifying Lambda function configurations allows execution of scripts or commands in the runtime environment."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Attackers might modify configurations like logging settings or environment variables to prevent detection efforts."
+        }
+    ],
     "usedInWild": false,
     "incidents": [],
     "researchLinks": [

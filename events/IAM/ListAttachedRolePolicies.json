@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "By listing attached role policies, attackers can understand the permissions associated with specific roles, which is essential for discovering permission groups within a cloud environment."
+        },
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Listing attached role policies reveals the configuration and permissions of cloud services tied to specific roles. This information helps attackers map out the cloud environment and identify potential targets for further exploitation."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

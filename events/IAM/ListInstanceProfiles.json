@@ -9,6 +9,19 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "The ListInstanceProfiles API call provides details about instance profiles and their associated IAM roles, helping an attacker map out the cloud infrastructure. Understanding the roles in use aids in identifying potential targets for further exploitation or privilege escalation."
+        },
+        {
+            "technique": "T1589 - Gather Victim Identity Information",
+            "reason": "The API call can help gather information about the identities and roles within the AWS environment, which could be used for further attacks or social engineering."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

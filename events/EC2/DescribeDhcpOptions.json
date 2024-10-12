@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1049 - System Network Connections Discovery",
+            "reason": "Describing DHCP options is directly related to understanding network configurations and connections within the AWS environment"
+        },
+        {
+            "technique": "T1590 - Gather Victim Network Information",
+            "reason": "The DHCP options can reveal information about DNS servers, domain names, NTP servers, and other network configurations, aiding in network discovery"
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Describing DHCP options can help attackers discover remote systems within the network, providing a map of targets for lateral movement."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Understanding DHCP options might reveal information about the system owners or users, helping attackers tailor their strategies for further exploitation."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

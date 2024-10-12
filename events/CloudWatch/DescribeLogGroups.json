@@ -9,6 +9,27 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1007 - System Service Discovery",
+            "reason": "Listing log groups can provide insights into the services and activities running within the AWS environment, aiding in identifying active services and their configurations."
+        },
+        {
+            "technique": "T1018 - Remote System Discovery",
+            "reason": "Describing log groups can reveal information about the systems and their operations, helping in mapping out remote systems within the cloud infrastructure."
+        },
+        {
+            "technique": "T1046 - Network Service Discovery",
+            "reason": "By examining log groups, attackers can understand the network services being utilized and their respective configurations, which is crucial for further discovery and potential exploitation."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Log groups often include data about different user activities and roles, which can be used to discover account details and permissions within the cloud environment."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

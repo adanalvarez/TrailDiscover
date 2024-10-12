@@ -9,6 +9,47 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "The DescribeInstances call provides detailed information about the EC2 instances, including instance type, state, and configuration details. This information is essential for an adversary performing system information discovery to understand the environment."
+        },
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "The DescribeInstances output can include tags and other metadata that may contain user information, helping adversaries to identify system owners and users."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Discovering the details of security configurations, such as security groups and network ACLs associated with instances, can help adversaries to plan how to impair or bypass defenses"
+        },
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Understanding the details of EC2 instances can enable an adversary to manipulate accounts associated with those instances, such as creating or deleting IAM roles attached to instances."
+        },
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "DescribeInstances can reveal network configurations of instances, including VPC, subnet, and security group details, aiding in network discovery"
+        },
+        {
+            "technique": "T1046 - Network Service Scanning",
+            "reason": "While DescribeInstances does not directly perform network service scanning, the information it provides about instance IP addresses and configurations can be used to facilitate subsequent network scanning activities."
+        },
+        {
+            "technique": "T1210 - Exploitation of Remote Services",
+            "reason": "Detailed information about EC2 instances, such as their public IP addresses and running services, can be used to exploit remote services running on these instances."
+        },
+        {
+            "technique": "T1135 - Network Share Discovery",
+            "reason": "Information from DescribeInstances can indicate the presence of network shares or attached storage, which may be targeted for further discovery or exploitation."
+        },
+        {
+            "technique": "T1057 - Process Discovery",
+            "reason": "DescribeInstances can provide insights into the software and processes running on the instances, helping adversaries identify potential targets for process discovery and further exploitation."
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {

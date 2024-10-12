@@ -9,6 +9,43 @@
     "mitreAttackTechniques": [
         "T1537 - Transfer Data to Cloud Account"
     ],
+    "mitreAttackSubTechniques": [
+
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "By adding permissions to a snapshot, attackers can grant access to unauthorized cloud accounts or default accounts, which can be used for persistence and privilege escalation."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "Adding permissions to a snapshot might expose sensitive files that contain credentials, aiding in credential access."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Removing permissions from a snapshot can be used to hide or delete evidence of unauthorized access, aiding in defense evasion."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage",
+            "reason": "By modifying snapshot permissions, attackers can gain access to sensitive data stored within snapshots, aiding in data collection and exfiltration."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Modifying permissions could impair security controls or defenses by granting unauthorized access to the snapshots, potentially containing security-related configurations, backups, or tools."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Modifying snapshot permissions could help attackers discover cloud accounts with access to the snapshot, aiding in further attacks."
+        },
+        {
+            "technique": "T1003 - OS Credential Dumping",
+            "reason": "If a snapshot contains OS-level files, attackers can use it to extract credentials, aiding in credential access."
+        },
+        {
+            "technique": "T1074 - Data Staged",
+            "reason": "Snapshots can be used to stage data locally for later exfiltration, aiding in data collection and exfiltration"
+        }
+    ],
     "usedInWild": true,
     "incidents": [
         {
