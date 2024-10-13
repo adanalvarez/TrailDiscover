@@ -13,7 +13,8 @@
     ],
     "mitreAttackSubTechniques": [
         "T1078.004 - Valid Accounts: Cloud Accounts",
-        "T1078.001 - Valid Accounts: Local Accounts"
+        "T1078.001 - Valid Accounts: Local Accounts",
+        "T1098.001 - Account Manipulation: Additional Cloud Credentials"
     ],
     "unverifiedMitreAttackTechniques": [
         {

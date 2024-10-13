@@ -10,7 +10,7 @@
         "T1087 - Account Discovery"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1087.004 - Account Discovery: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {

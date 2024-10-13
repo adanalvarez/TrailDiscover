@@ -10,7 +10,7 @@
         "T1021 - Remote Services"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1021.008 - Remote Services: Direct Cloud VM Connections"
     ],
     "unverifiedMitreAttackTechniques": [
         {

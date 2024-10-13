@@ -10,7 +10,7 @@
         "T1078 - Valid Accounts"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1078.004 - Valid Accounts: Cloud Accounts"
     ],
     "unverifiedMitreAttackTechniques": [
         
