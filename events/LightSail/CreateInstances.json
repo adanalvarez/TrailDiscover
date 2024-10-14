@@ -12,7 +12,7 @@
         "T1496 - Resource Hijacking"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1578.002 - Modify Cloud Compute Infrastructure: Create Cloud Instance"
     ],
     "unverifiedMitreAttackTechniques": [
         {

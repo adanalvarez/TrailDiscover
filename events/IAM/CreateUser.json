@@ -10,7 +10,8 @@
         "T1136 - Create Account"
     ],
     "mitreAttackSubTechniques": [
-        "T1136.001 - Create Account: Local Account"
+        "T1136.001 - Create Account: Local Account",
+        "T1136.003 - Create Account: Cloud Account"
     ],
     "unverifiedMitreAttackTechniques": [
         {

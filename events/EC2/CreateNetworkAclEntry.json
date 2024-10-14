@@ -7,7 +7,8 @@
         "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
-        "T1098 - Account Manipulation"
+        "T1098 - Account Manipulation",
+        "T1133 - External Remote Services"
     ],
     "mitreAttackSubTechniques": [
 

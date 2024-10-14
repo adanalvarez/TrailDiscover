@@ -10,7 +10,7 @@
         "T1074 - Data Staged"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1074.002 - Data Staged: Remote Data Staging"
     ],
     "unverifiedMitreAttackTechniques": [
         {

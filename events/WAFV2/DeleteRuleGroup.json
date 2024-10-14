@@ -10,7 +10,7 @@
         "T1562 - Impair Defenses"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1562.007 - Impair Defenses: Disable or Modify Cloud Firewall"
     ],
     "unverifiedMitreAttackTechniques": [
         {
@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1070 - Indicator Removal",
-            "reason": "The deletion of a RuleGroup can be used to eliminate logs or indicators of malicious activity by disabling the mechanisms that detect and log those activities."
+            "reason": "The deletion of a RuleGroup can be used to eliminate logs or indicators of malicious activity by disabling the mechanisms that detect and log those activities. Also, to delete a group that was used previously by attackers."
         }
     ],
     "usedInWild": false,

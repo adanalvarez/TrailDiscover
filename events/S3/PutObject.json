@@ -10,7 +10,7 @@
         "T1565 - Data Manipulation"
     ],
     "mitreAttackSubTechniques": [
-
+        "T1565.001 - Data Manipulation: Stored Data Manipulation"
     ],
     "unverifiedMitreAttackTechniques": [
         {
