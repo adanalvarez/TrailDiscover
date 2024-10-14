@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1048 - Exfiltration Over Alternative Protocol"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",

@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1089 - Disabling Security Tools"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1070 - Indicator Removal",

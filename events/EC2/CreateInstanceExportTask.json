@@ -11,9 +11,7 @@
         "T1005 - Data from Local System",
         "T1537 - Transfer Data to Cloud Account"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1567 - Exfiltration Over Web Service",

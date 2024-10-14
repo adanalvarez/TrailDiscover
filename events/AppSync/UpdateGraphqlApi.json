@@ -11,9 +11,7 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1556 - Modify Authentication Process"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1136 - Create Account",

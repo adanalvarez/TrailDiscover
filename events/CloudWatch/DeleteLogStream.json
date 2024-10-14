@@ -19,7 +19,7 @@
         },
         {
             "technique": "T1485 - Data Destruction",
-            "reason": "The permanent deletion of archived log events constitutes data destruction, impacting the organization’s ability to conduct forensic analysis and understand the scope of an attack."
+            "reason": "The permanent deletion of archived log events constitutes data destruction, impacting the organization\u2019s ability to conduct forensic analysis and understand the scope of an attack."
         }
     ],
     "usedInWild": false,

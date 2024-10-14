@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1526 - Cloud Service Discovery",
@@ -19,7 +17,7 @@
         },
         {
             "technique": "T1590 - Gather Victim Network Information",
-            "reason": "The ListDomains API call can be used to gather DNS information, which may reveal the structure of the victim’s network and other valuable network details."
+            "reason": "The ListDomains API call can be used to gather DNS information, which may reveal the structure of the victim\u2019s network and other valuable network details."
         },
         {
             "technique": "T1087 - Account Discovery",

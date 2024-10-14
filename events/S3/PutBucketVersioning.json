@@ -11,9 +11,7 @@
         "T1490 - Inhibit System Recovery",
         "T1537 - Transfer Data to Cloud Account"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1531 - Account Access Removal",

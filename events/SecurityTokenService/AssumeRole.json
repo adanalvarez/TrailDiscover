@@ -15,9 +15,7 @@
     "mitreAttackSubTechniques": [
         "T1078.004 - Valid Accounts: Cloud Accounts"
     ],
-    "unverifiedMitreAttackTechniques": [
-        
-    ],
+    "unverifiedMitreAttackTechniques": [],
     "usedInWild": true,
     "incidents": [
         {

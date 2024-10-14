@@ -11,9 +11,7 @@
         "T1489 - Service Stop",
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1562 - Impair Defenses",

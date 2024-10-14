@@ -11,9 +11,7 @@
         "T1580 - Cloud Infrastructure Discovery",
         "T1496 - Resource Hijacking"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1020 - Automated Exfiltration",

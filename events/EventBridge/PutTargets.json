@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1546 - Event Triggered Execution"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",

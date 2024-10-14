@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1619 - Cloud Storage Object Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1537 - Transfer Data to Cloud Account",

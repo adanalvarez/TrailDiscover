@@ -11,9 +11,7 @@
         "T1199 - Trusted Relationship",
         "T1550 - Use Alternate Authentication Material"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",

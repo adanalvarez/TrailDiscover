@@ -23,7 +23,7 @@
         },
         {
             "technique": "T1537 - Transfer Data to Cloud Account",
-            "reason" : "Updating trail settings could facilitate the transfer of logs or sensitive data to an attacker-controlled cloud account for exfiltration."
+            "reason": "Updating trail settings could facilitate the transfer of logs or sensitive data to an attacker-controlled cloud account for exfiltration."
         }
     ],
     "usedInWild": true,

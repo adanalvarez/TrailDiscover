@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1098 - Account Manipulation"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",

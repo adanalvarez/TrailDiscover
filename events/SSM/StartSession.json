@@ -11,9 +11,7 @@
         "T1021 - Remote Services",
         "T1651 - Cloud Administration Command"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",

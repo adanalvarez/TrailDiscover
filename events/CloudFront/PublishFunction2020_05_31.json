@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1119 - Automated Collection"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1560 - Archive Collected Data",

@@ -11,12 +11,10 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1556 - Modify Authentication Process"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique":  "T1136 - Create Account",
+            "technique": "T1136 - Create Account",
             "reason": "Using the UpdateResolver API, an adversary can manipulate the AppSync resolver to create new user accounts with specific roles or permissions, enabling persistent access to the AWS environment."
         },
         {

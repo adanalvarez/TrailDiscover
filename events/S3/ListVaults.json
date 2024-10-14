@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1619 - Cloud Storage Object Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1530 - Data from Cloud Storage Object",

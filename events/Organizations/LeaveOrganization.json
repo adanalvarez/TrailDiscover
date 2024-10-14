@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1070 - Indicator Removal"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1562 - Impair Defenses",
