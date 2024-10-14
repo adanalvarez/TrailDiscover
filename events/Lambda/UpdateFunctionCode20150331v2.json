@@ -13,9 +13,7 @@
         "T1496 - Resource Hijacking",
         "T1119 - Automated Collection"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",

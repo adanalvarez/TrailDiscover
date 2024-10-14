@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1486 - Data Encrypted for Impact"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1560 - Archive Collected Data",

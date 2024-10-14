@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1578 - Modify Cloud Compute Infrastructure"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1203 - Exploitation for Client Execution",

@@ -7,11 +7,9 @@
         "TA0007 - Discovery"
     ],
     "mitreAttackTechniques": [
-        "T1580 - Cloud Infrastructure Discovery"        
+        "T1580 - Cloud Infrastructure Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1082 - System Information Discovery",

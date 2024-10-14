@@ -11,9 +11,7 @@
         "T1526 - Cloud Service Discovery",
         "T1552 - Unsecured Credentials"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1552 - Unsecured Credentials",

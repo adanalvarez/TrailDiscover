@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1040 - Network Sniffing"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1119 - Automated Collection",

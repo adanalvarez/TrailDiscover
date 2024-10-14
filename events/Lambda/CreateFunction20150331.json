@@ -12,9 +12,7 @@
         "T1098 - Account Manipulation",
         "T1496 - Resource Hijacking"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1059 - Command and Scripting Interpreter",

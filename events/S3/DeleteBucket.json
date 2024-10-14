@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1485 - Data Destruction",

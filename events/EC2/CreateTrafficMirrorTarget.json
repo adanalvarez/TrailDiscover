@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1074 - Data Staged"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1016 - System Network Configuration Discovery",

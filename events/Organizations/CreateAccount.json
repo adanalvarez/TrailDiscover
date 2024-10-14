@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1535 - Unused/Unsupported Cloud Regions"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",

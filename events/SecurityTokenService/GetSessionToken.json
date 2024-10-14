@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1199 - Trusted Relationship"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",

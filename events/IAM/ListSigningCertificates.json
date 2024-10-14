@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1550 - Use Alternate Authentication Material",

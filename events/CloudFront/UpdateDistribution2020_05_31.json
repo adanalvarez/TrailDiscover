@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1119 - Automated Collection"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1070 - Indicator Removal",

@@ -10,9 +10,7 @@
         "T1098 - Account Manipulation",
         "T1133 - External Remote Services"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1562 - Impair Defenses",

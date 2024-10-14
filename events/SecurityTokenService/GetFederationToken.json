@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1078 - Valid Accounts"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1550 - Use Alternate Authentication Material",

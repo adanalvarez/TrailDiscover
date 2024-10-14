@@ -9,13 +9,11 @@
     "mitreAttackTechniques": [
         "T1485 - Data Destruction"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1562 - Impair Defenses",
-            "reason": "By deleting the DB cluster, an attacker could disable or remove a crucial part of an organization’s monitoring or logging setup if these were hosted on the RDS instance."
+            "reason": "By deleting the DB cluster, an attacker could disable or remove a crucial part of an organization\u2019s monitoring or logging setup if these were hosted on the RDS instance."
         },
         {
             "technique": "T1531 - Account Access Removal",

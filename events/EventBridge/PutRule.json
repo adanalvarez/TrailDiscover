@@ -13,9 +13,7 @@
         "T1578 - Modify Cloud Compute Infrastructure",
         "T1546 - Event Triggered Execution"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1205 - Traffic Signaling",

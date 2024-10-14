@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1580 - Cloud Infrastructure Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1087 - Account Discovery - Cloud Account",

@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1087 - Account Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1069 - Permission Groups Discovery",

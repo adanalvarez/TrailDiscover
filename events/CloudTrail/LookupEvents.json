@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1654 - Log Enumeration"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1087 - Account Discovery",

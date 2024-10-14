@@ -9,9 +9,7 @@
     "mitreAttackTechniques": [
         "T1526 - Cloud Service Discovery"
     ],
-    "mitreAttackSubTechniques": [
-
-    ],
+    "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1057 - Process Discovery",

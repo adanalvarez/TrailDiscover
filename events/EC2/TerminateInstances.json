@@ -29,7 +29,7 @@
         },
         {
             "technique": "T1098 - Account Manipulation",
-            "reason": "The TerminateInstances API call can be a form of account manipulation when an attacker uses it to interfere with the normal operations of an account. By terminating instances, an attacker can disrupt services, remove evidence of their activities, and create obstacles for account recovery. This manipulation ensures that the attacker maintains control over the account’s activities and resources."
+            "reason": "The TerminateInstances API call can be a form of account manipulation when an attacker uses it to interfere with the normal operations of an account. By terminating instances, an attacker can disrupt services, remove evidence of their activities, and create obstacles for account recovery. This manipulation ensures that the attacker maintains control over the account\u2019s activities and resources."
         },
         {
             "technique": "T1499 - Endpoint Denial of Service",
