@@ -57,7 +57,12 @@
             "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Attack Paths Into VMs in the Cloud",
+            "link": "https://unit42.paloaltonetworks.com/cloud-virtual-machine-attack-vectors/"
+        }
+    ],
     "securityImplications": "Attackers might use SendSerialConsoleSSHPublicKey to inject unauthorized SSH keys into EC2 instances, granting them access for remote control.",
     "alerting": [],
     "simulation": [
