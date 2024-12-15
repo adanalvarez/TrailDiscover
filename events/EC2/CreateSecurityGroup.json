@@ -50,6 +50,10 @@
         {
             "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
             "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+        },
+        {
+            "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+            "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
         }
     ],
     "researchLinks": [

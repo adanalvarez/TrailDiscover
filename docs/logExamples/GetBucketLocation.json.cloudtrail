@@ -1,0 +1,59 @@
+[
+   {
+      "additionalEventData": {
+         "AuthenticationMethod": "AuthHeader",
+         "CipherSuite": "TLS_AES_128_GCM_SHA256",
+         "SignatureVersion": "SigV4",
+         "bytesTransferredIn": 0,
+         "bytesTransferredOut": 309,
+         "x-amz-id-2": "FN75be0TjBCagDg2jNZnVoWt7xvXfMEXoVvwgmixocbAoKVPNfP5XOvGPOyI9gx2fjHiNo5+LxA="
+      },
+      "awsRegion": "me-south-2r",
+      "errorCode": "NoSuchBucket",
+      "errorMessage": "The specified bucket does not exist",
+      "eventCategory": "Management",
+      "eventID": "5d19abd1-01cb-48c5-94cc-0d39dd510a8a",
+      "eventName": "GetBucketLocation",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2024-12-15T21:15:10Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.11",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "071848170574",
+      "requestID": "2JYXMANR2MGQDFXW",
+      "requestParameters": {
+         "Host": "s3.me-south-2r.amazonaws.com",
+         "bucketName": "TrailDiscoverBucket",
+         "location": ""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "252.217.242.251",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "s3.me-south-2r.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#241.254.211.255-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_3dac99d3-6f86-4d86-b815-3ec8ae148c5b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-bucket-location]",
+      "userIdentity": {
+         "accessKeyId": "ASIAHXY0600HF9585YOI",
+         "accountId": "071848170574",
+         "arn": "arn:aws:sts::071848170574:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00/TrailDiscover",
+         "principalId": "AROAOVVDS2T5XTLB13GY0:AdanAlvarez",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2024-12-15T21:11:03Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "071848170574",
+               "arn": "arn:aws:iam::071848170574:role/aws-reserved/sso.amazonaws.com/cagov-east-3r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00",
+               "principalId": "AROAOVVDS2T5XTLB13GY0",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]

@@ -29,6 +29,10 @@
         {
             "description": "Muddled Libra\u2019s Evolution to the Cloud",
             "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+        },
+        {
+            "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+            "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
         }
     ],
     "researchLinks": [],

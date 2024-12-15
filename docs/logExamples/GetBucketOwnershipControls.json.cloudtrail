@@ -1,0 +1,59 @@
+[
+   {
+      "additionalEventData": {
+         "AuthenticationMethod": "AuthHeader",
+         "CipherSuite": "TLS_AES_128_GCM_SHA256",
+         "SignatureVersion": "SigV4",
+         "bytesTransferredIn": 0,
+         "bytesTransferredOut": 309,
+         "x-amz-id-2": "Ix6D4NlHAHzlRtYPuvEvLvkp+bzl0rMRmgSEO+NP1iqMQ24svaHIvDiUwt7a11qrPwvI3xahWAw="
+      },
+      "awsRegion": "eu-southeast-3r",
+      "errorCode": "NoSuchBucket",
+      "errorMessage": "The specified bucket does not exist",
+      "eventCategory": "Management",
+      "eventID": "7b63d4a7-827b-4855-ad39-85ab2b748a15",
+      "eventName": "GetBucketOwnershipControls",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2024-12-15T21:17:02Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.11",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "165814334558",
+      "requestID": "GMEV770HYNP3CQ1Y",
+      "requestParameters": {
+         "Host": "s3.eu-southeast-3r.amazonaws.com",
+         "bucketName": "TrailDiscoverBucket",
+         "ownershipControls": ""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "019.18.5.217",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "s3.eu-southeast-3r.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#239.4.250.253-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_84271ef3-40d5-42f7-a219-b95351fb5cd0 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-bucket-ownership-controls]",
+      "userIdentity": {
+         "accessKeyId": "ASIAOW1P8Q7N61YMECMA",
+         "accountId": "165814334558",
+         "arn": "arn:aws:sts::165814334558:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00TrailDiscover",
+         "principalId": "AROARSGXT0BIWZU0G44TL:TrailDiscover",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2024-12-15T21:11:03Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "165814334558",
+               "arn": "arn:aws:iam::165814334558:role/aws-reserved/sso.amazonaws.com/cagov-south-2r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00TrailDiscover",
+               "principalId": "AROARSGXT0BIWZU0G44TL",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00TrailDiscover"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]

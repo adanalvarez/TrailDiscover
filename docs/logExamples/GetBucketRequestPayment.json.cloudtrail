@@ -1,0 +1,59 @@
+[
+   {
+      "additionalEventData": {
+         "AuthenticationMethod": "AuthHeader",
+         "CipherSuite": "TLS_AES_128_GCM_SHA256",
+         "SignatureVersion": "SigV4",
+         "bytesTransferredIn": 0,
+         "bytesTransferredOut": 309,
+         "x-amz-id-2": "pp0a2N1blgz2pFJR58HfNf1yVQkaKT2yDyFrj7Q7LABWPFYeplEcx/K1WMiCcvqJArDQ8QiYvXo="
+      },
+      "awsRegion": "us-north-3r",
+      "errorCode": "NoSuchBucket",
+      "errorMessage": "The specified bucket does not exist",
+      "eventCategory": "Management",
+      "eventID": "61dccfc5-a614-43c4-9ab9-deef6f9ab624",
+      "eventName": "GetBucketObjectLockConfiguration",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2024-12-15T21:19:01Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.11",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "598075661806",
+      "requestID": "7PQ9JS3G40FS8DA2",
+      "requestParameters": {
+         "Host": "s3.us-north-3r.amazonaws.com",
+         "bucketName": "TrailDiscoverBucket",
+         "object-lock": ""
+      },
+      "responseElements": null,
+      "sourceIPAddress": "10.240.251.14",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "s3.us-north-3r.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#241.253.056.5-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_f5f00788-0709-436a-8b4d-290e502fdb33 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-object-lock-configuration]",
+      "userIdentity": {
+         "accessKeyId": "ASIAVT85BLME3ZCKPWZC",
+         "accountId": "598075661806",
+         "arn": "arn:aws:sts::598075661806:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00/TrailDiscover",
+         "principalId": "AROA8J7WOT7WW3JI5I5L6:TrailDiscover",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2024-12-15T21:11:03Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "598075661806",
+               "arn": "arn:aws:iam::598075661806:role/aws-reserved/sso.amazonaws.com/ap-central-1r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00",
+               "principalId": "AROA8J7WOT7WW3JI5I5L6",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]

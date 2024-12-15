@@ -78,6 +78,10 @@
         {
             "description": "New tactics and techniques for proactive threat detection",
             "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        },
+        {
+            "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+            "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
         }
     ],
     "researchLinks": [

@@ -1,0 +1,31 @@
+{
+    "eventName": "GetBucketAccelerateConfiguration",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "This implementation of the GET action uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+            "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetBucketAccelerateConfiguration to check if S3 transfer acceleration is enabled.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api get-bucket-accelerate-configuration --bucket TrailDiscoverBucket"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetAccelerateConfiguration"
+}
