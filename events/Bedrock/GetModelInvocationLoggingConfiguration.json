@@ -41,6 +41,10 @@
         {
             "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
             "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+        },
+        {
+            "description": "New Developments in LLM Hijacking Activity",
+            "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
         }
     ],
     "researchLinks": [],

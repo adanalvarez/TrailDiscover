@@ -88,6 +88,10 @@
         {
             "description": "Tales from the cloud trenches: Unwanted visitor",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+        },
+        {
+            "description": "New Developments in LLM Hijacking Activity",
+            "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
         }
     ],
     "researchLinks": [
