@@ -1,0 +1,38 @@
+{
+    "eventName": "CreatePolicy",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates a new managed policy for your AWS account.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1098.003 - Account Manipulation: Additional Cloud Roles"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "New Developments in LLM Hijacking Activity",
+            "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreatePolicy to create new IAM policies that later they can use for potentially granting themselves elevated permissions.",
+    "alerting": [
+        {
+            "type": "cloudwatchCISControls",
+            "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-policy --policy-name TrailDiscoverPolicy --policy-document {}"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreatePolicy"
+}
