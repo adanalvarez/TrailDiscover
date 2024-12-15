@@ -3810,6 +3810,44 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-SimulatePrincipalPolicy"
     },
     {
+        "eventName": "CreatePolicy",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Creates a new managed policy for your AWS account.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1098.003 - Account Manipulation: Additional Cloud Roles"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreatePolicy to create new IAM policies that later they can use for potentially granting themselves elevated permissions.",
+        "alerting": [
+            {
+                "type": "cloudwatchCISControls",
+                "value": "https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html#cloudwatch-4"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws iam create-policy --policy-name TrailDiscoverPolicy --policy-document {}"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreatePolicy"
+    },
+    {
         "eventName": "GetAccountAuthorizationDetails",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -4150,6 +4188,10 @@
             {
                 "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
                 "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [
@@ -5370,6 +5412,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [
@@ -5495,6 +5541,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [
@@ -8818,6 +8868,10 @@
             {
                 "description": "When AI Gets Hijacked: Exploiting Hosted Models for Dark Roleplaying",
                 "link": "https://permiso.io/blog/exploiting-hosted-models"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [],
@@ -9034,6 +9088,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [],
@@ -9078,6 +9136,10 @@
             {
                 "description": "When AI Gets Hijacked: Exploiting Hosted Models for Dark Roleplaying",
                 "link": "https://permiso.io/blog/exploiting-hosted-models"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [],
@@ -9274,6 +9336,10 @@
             {
                 "description": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
                 "link": "https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [],
@@ -9314,6 +9380,10 @@
             {
                 "description": "When AI Gets Hijacked: Exploiting Hosted Models for Dark Roleplaying",
                 "link": "https://permiso.io/blog/exploiting-hosted-models"
+            },
+            {
+                "description": "New Developments in LLM Hijacking Activity",
+                "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
         "researchLinks": [],
