@@ -1,0 +1,47 @@
+[
+   {
+      "awsRegion": "euiso-westwest-1r",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:sts::186599486980:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa11/TrailDiscover is not authorized to perform: iam:CreatePolicy on resource: policy TrailDiscoverPolicy because no identity-based policy allows the iam:CreatePolicy action",
+      "eventCategory": "Management",
+      "eventID": "5de97e56-a296-4e79-9122-e8543a2cb73e",
+      "eventName": "CreatePolicy",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2024-12-15T20:02:24Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.10",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "186599486980",
+      "requestID": "2639d1f3-1b9d-44d0-8117-d96c2f03411b",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "253.236.07.202",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_128_GCM_SHA256",
+         "clientProvidedHostHeader": "iam.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#100.17.9.229-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_26bb1fec-10f7-4d6b-b066-0111a84c7bff cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-policy",
+      "userIdentity": {
+         "accessKeyId": "ASIA48E5EUGOF4RDUZSA",
+         "accountId": "186599486980",
+         "arn": "arn:aws:sts::186599486980:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa11/TrailDiscover",
+         "principalId": "AROAC40R4TTV05DWF5L1H:TrailDiscover",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2024-12-15T20:02:14Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "186599486980",
+               "arn": "arn:aws:iam::186599486980:role/aws-reserved/sso.amazonaws.com/us-westsouth-3r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa11",
+               "principalId": "AROAC40R4TTV05DWF5L1H",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa11"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]
