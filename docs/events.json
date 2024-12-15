@@ -882,6 +882,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -2122,6 +2126,10 @@
             {
                 "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -4065,6 +4073,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -4807,6 +4819,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -5876,6 +5892,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -7698,6 +7718,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -7837,6 +7861,37 @@
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-PutBucketVersioning"
     },
     {
+        "eventName": "GetBucketAccelerateConfiguration",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "This implementation of the GET action uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketAccelerateConfiguration to check if S3 transfer acceleration is enabled.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-bucket-accelerate-configuration --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetAccelerateConfiguration"
+    },
+    {
         "eventName": "GetBucketLogging",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
@@ -7863,6 +7918,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -7875,6 +7934,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketLogging"
+    },
+    {
+        "eventName": "GetObjectLockConfiguration",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Gets the Object Lock configuration for a bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetObjectLockConfiguration to check if object lock is active before ransomware attacks.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-object-lock-configuration --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketObjectLockConfiguration"
     },
     {
         "eventName": "GetBucketPolicy",
@@ -7970,6 +8060,37 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "GetBucketOwnershipControls",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Retrieves OwnershipControls for an Amazon S3 bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketOwnershipControls to check the ownership configuration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-bucket-ownership-controls --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketOwnershipControls"
+    },
+    {
         "eventName": "ListBuckets",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
@@ -8036,6 +8157,10 @@
             {
                 "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -8094,6 +8219,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -8182,6 +8311,10 @@
             {
                 "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -8215,6 +8348,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetObject"
+    },
+    {
+        "eventName": "GetBucketLocation",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Returns the Region the bucket resides in.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketLocation to identify the region of s3 buckets",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-bucket-location --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketLocation"
     },
     {
         "eventName": "PutBucketLifecycle",
@@ -8352,6 +8516,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -8540,6 +8708,37 @@
         "permissions": "https://aws.permissions.cloud/iam/glacier#glacier-ListVaults"
     },
     {
+        "eventName": "GetBucketLifecycle",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Returns the lifecycle configuration information set on the bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketLifecycle to check if the S3 has any lifecycle policy.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-bucket-lifecycle --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetLifecycleConfiguration"
+    },
+    {
         "eventName": "GetPublicAccessBlock",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
@@ -8570,6 +8769,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -8694,6 +8897,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [],
@@ -8718,6 +8925,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-DeleteObject"
+    },
+    {
+        "eventName": "GetBucketRequestPayment",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "Returns the request payment configuration of a bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetBucketRequestPayment to check who pays for request and the data download.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api get-object-lock-configuration --bucket TrailDiscoverBucket"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketRequestPayment"
     },
     {
         "eventName": "JobCreated",
@@ -10229,6 +10467,10 @@
             {
                 "description": "ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING",
                 "link": "https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -10971,6 +11213,10 @@
             {
                 "description": "UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR",
                 "link": "https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -11676,6 +11922,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -12332,6 +12582,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -14466,8 +14720,13 @@
                 "reason": "Understanding the email sending status through GetAccountSendingEnabled may provide insights into associated email addresses or domains, which can be used for further reconnaissance activities."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "SES-PIONAGE",
@@ -14527,6 +14786,10 @@
             {
                 "description": "SES-PIONAGE",
                 "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -14592,6 +14855,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
@@ -14691,6 +14958,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
+                "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
             }
         ],
         "researchLinks": [
