@@ -25,6 +25,10 @@
         {
             "description": "Trouble in Paradise",
             "link": "https://blog.darklab.hk/2021/07/06/trouble-in-paradise/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
         }
     ],
     "researchLinks": [
