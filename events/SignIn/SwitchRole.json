@@ -24,8 +24,13 @@
             "reason": "The API call might be used to masquerade as a different user or role, enabling an attacker to carry out malicious activities under the guise of a legitimate user."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS CloudTrail cheat sheet",

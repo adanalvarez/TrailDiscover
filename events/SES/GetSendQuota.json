@@ -41,6 +41,10 @@
         {
             "description": "SES-PIONAGE",
             "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+        },
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
         }
     ],
     "researchLinks": [

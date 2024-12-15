@@ -47,6 +47,10 @@
         {
             "description": "Detecting AI resource-hijacking with Composite Alerts",
             "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        },
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
         }
     ],
     "researchLinks": [

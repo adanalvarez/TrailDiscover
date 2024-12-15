@@ -647,6 +647,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -746,6 +750,10 @@
             {
                 "description": "Trouble in Paradise",
                 "link": "https://blog.darklab.hk/2021/07/06/trouble-in-paradise/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -1912,8 +1920,13 @@
                 "reason": "The API call might be used to masquerade as a different user or role, enabling an attacker to carry out malicious activities under the guise of a legitimate user."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS CloudTrail cheat sheet",
@@ -1979,6 +1992,10 @@
             {
                 "description": "Not a SIMulation: CrowdStrike Investigations Reveal Intrusion Campaign Targeting Telco and BPO Companies",
                 "link": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -2038,6 +2055,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [],
@@ -4740,6 +4761,10 @@
             {
                 "description": "The curious case of DangerDev@protonmail.me",
                 "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -4895,6 +4920,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -5337,6 +5366,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -5458,6 +5491,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -5785,6 +5822,10 @@
             {
                 "description": "The curious case of DangerDev@protonmail.me",
                 "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [],
@@ -14170,6 +14211,42 @@
         "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-ResumeSession"
     },
     {
+        "eventName": "ListEmailIdentities",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Returns a list of all of the email identities that are associated with your AWS account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1087 - Account Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1033 - System Owner/User Discovery",
+                "reason": "Identifying users based on the email listed identities can help attackers target specific accounts."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers use ListEmailIdentities from SES to enumerate email addresses under the AWS account for future attacks.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sesv2 list-email-identities"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-ListEmailIdentities"
+    },
+    {
         "eventName": "CreateEmailIdentity",
         "eventSource": "ses.amazonaws.com",
         "awsService": "SES",
@@ -14441,6 +14518,10 @@
             {
                 "description": "SES-PIONAGE",
                 "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [
@@ -14536,6 +14617,10 @@
             {
                 "description": "SES-PIONAGE",
                 "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+            },
+            {
+                "description": "Tales from the cloud trenches: Unwanted visitor",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
             }
         ],
         "researchLinks": [

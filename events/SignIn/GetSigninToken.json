@@ -18,6 +18,10 @@
         {
             "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
             "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        },
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
         }
     ],
     "researchLinks": [],

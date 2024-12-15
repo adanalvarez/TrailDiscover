@@ -1,0 +1,36 @@
+{
+    "eventName": "ListEmailIdentities",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Returns a list of all of the email identities that are associated with your AWS account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1033 - System Owner/User Discovery",
+            "reason": "Identifying users based on the email listed identities can help attackers target specific accounts."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: Unwanted visitor",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers use ListEmailIdentities from SES to enumerate email addresses under the AWS account for future attacks.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sesv2 list-email-identities"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-ListEmailIdentities"
+}
