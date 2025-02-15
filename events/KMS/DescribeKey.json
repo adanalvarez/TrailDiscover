@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeKey",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Provides detailed information about a KMS key.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        }
+    ],
+    "securityImplications": "Attackers might use DescribeKey to check information of KMS keys in ransomware attacks.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms describe-key --key-id 1234abcd-12ab-34cd-56ef-1234567890ab"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-DescribeKey"
+}

@@ -1,0 +1,47 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50/AdanAlvarez is not authorized to perform: kms:CreateKey on resource: * because no identity-based policy allows the kms:CreateKey action",
+      "eventCategory": "Management",
+      "eventID": "6f4babb4-aac4-4664-a2e6-1ce8c9baac2b",
+      "eventName": "CreateKey",
+      "eventSource": "kms.amazonaws.com",
+      "eventTime": "2025-02-15T14:51:04Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.11",
+      "managementEvent": true,
+      "readOnly": false,
+      "recipientAccountId": "345594607949",
+      "requestID": "6542de57-ab9c-43e2-9532-738cc50c76db",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "46.6.38.8",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_256_GCM_SHA384",
+         "clientProvidedHostHeader": "kms.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.15.153.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_a35c5710-8a0e-4a58-b124-508fa7267cbd cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#kms.create-key",
+      "userIdentity": {
+         "accessKeyId": "ASIAVA5YLHFG22UNOASA",
+         "accountId": "345594607949",
+         "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50/AdanAlvarez",
+         "principalId": "AROAVA5YLHFGXTTEWKGQX:AdanAlvarez",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2025-02-15T14:50:08Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "345594607949",
+               "arn": "arn:aws:iam::345594607949:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50",
+               "principalId": "AROAVA5YLHFGXTTEWKGQX",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]

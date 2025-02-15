@@ -6925,6 +6925,68 @@
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-GenerateDataKeyWithoutPlaintext"
     },
     {
+        "eventName": "PutKeyPolicy",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Attaches a key policy to the specified KMS key.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
+        "securityImplications": "Attackers might put a new key polocy to modify the policy of a current KMS Key and lock the data for ransomware attacks.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms put-key-policy --key-id 1234abcd-12ab-34cd-56ef-1234567890ab --policy-name default --policy \"{\"Version\":\"2012-10-17\",\"Id\":\"key-default-1\",\"Statement\":[{\"Sid\":\"Enable IAM User Permissions\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::123456789012:root\"},\"Action\":\"kms:*\",\"Resource\":\"*\"}]}\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-PutKeyPolicy"
+    },
+    {
+        "eventName": "DescribeKey",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Provides detailed information about a KMS key.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
+        "securityImplications": "Attackers might use DescribeKey to check information of KMS keys in ransomware attacks.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms describe-key --key-id 1234abcd-12ab-34cd-56ef-1234567890ab"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-DescribeKey"
+    },
+    {
         "eventName": "ScheduleKeyDeletion",
         "eventSource": "kms.amazonaws.com",
         "awsService": "KMS",
@@ -7010,7 +7072,12 @@
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
         "securityImplications": "Attackers might use Encrypt to encrypt data for ransom.",
         "alerting": [],
         "simulation": [
@@ -7020,6 +7087,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-Encrypt"
+    },
+    {
+        "eventName": "CreateKey",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Creates a unique customer managed KMS key in your AWS account and Region.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
+        "securityImplications": "Attackers might create keys only accessible by the identity they have compromised, for later encrypt data and delete access to it for ransomware attacks.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms create-key"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-CreateKey"
     },
     {
         "eventName": "LookupEvents",
@@ -7672,7 +7770,12 @@
                 "link": "https://www.tripwire.com/state-of-security/la-times-website-cryptojacking-attack"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
         "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",
         "alerting": [],
         "simulation": [
@@ -8325,6 +8428,10 @@
             {
                 "description": "S3 Streaming Copy",
                 "link": "https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/"
+            },
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
             }
         ],
         "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",
@@ -8651,6 +8758,37 @@
             {
                 "type": "commandLine",
                 "value": "N/A"
+            }
+        ],
+        "permissions": "N/A"
+    },
+    {
+        "eventName": "PutBucketEncryption",
+        "eventSource": "s3.amazonaws.com",
+        "awsService": "S3",
+        "description": "This operation configures default encryption and Amazon S3 Bucket Keys for an existing bucket.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+                "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            }
+        ],
+        "securityImplications": "Attackers might use PutBucketEncryption to set the KMS key to one it controls for ransomware.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3api put-bucket-encryption --bucket my-bucket --server-side-encryption-configuration '{\"Rules\":[{\"ApplyServerSideEncryptionByDefault\":{\"SSEAlgorithm\":\"aws:kms\",\"KMSMasterKeyID\":\"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab\"}}]}'"
             }
         ],
         "permissions": "N/A"

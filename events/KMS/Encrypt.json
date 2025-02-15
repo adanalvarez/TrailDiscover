@@ -27,7 +27,12 @@
             "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        }
+    ],
     "securityImplications": "Attackers might use Encrypt to encrypt data for ransom.",
     "alerting": [],
     "simulation": [
