@@ -35,6 +35,10 @@
         {
             "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
+        },
+        {
+            "description": "Datadog threat roundup: top insights for Q4 2024",
+            "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
         }
     ],
     "researchLinks": [],

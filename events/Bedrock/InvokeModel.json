@@ -47,6 +47,10 @@
         {
             "description": "New Developments in LLM Hijacking Activity",
             "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+        },
+        {
+            "description": "Datadog threat roundup: top insights for Q4 2024",
+            "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
         }
     ],
     "researchLinks": [],
@@ -56,6 +60,10 @@
         {
             "type": "commandLine",
             "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.impact.bedrock-invoke-model"
         }
     ],
     "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"

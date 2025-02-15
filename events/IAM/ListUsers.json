@@ -51,6 +51,10 @@
         {
             "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
             "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        },
+        {
+            "description": "Datadog threat roundup: top insights for Q4 2024",
+            "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
         }
     ],
     "researchLinks": [
