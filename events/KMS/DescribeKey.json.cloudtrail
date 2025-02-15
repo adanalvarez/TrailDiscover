@@ -1,0 +1,47 @@
+[
+   {
+      "awsRegion": "us-east-1",
+      "errorCode": "NotFoundException",
+      "errorMessage": "Key 'arn:aws:kms:us-east-1:345594607949:key/1234abcd-12ab-34cd-56ef-1234567890ab' does not exist",
+      "eventCategory": "Management",
+      "eventID": "82afc1f2-b6aa-48dd-bab5-86bbbefb46ac",
+      "eventName": "DescribeKey",
+      "eventSource": "kms.amazonaws.com",
+      "eventTime": "2025-02-15T14:52:52Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.11",
+      "managementEvent": true,
+      "readOnly": true,
+      "recipientAccountId": "345594607949",
+      "requestID": "d9ab4ab3-911c-4627-86fd-2c8216f39fc1",
+      "requestParameters": null,
+      "responseElements": null,
+      "sourceIPAddress": "46.6.38.8",
+      "tlsDetails": {
+         "cipherSuite": "TLS_AES_256_GCM_SHA384",
+         "clientProvidedHostHeader": "kms.us-east-1.amazonaws.com",
+         "tlsVersion": "TLSv1.3"
+      },
+      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.15.153.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_f1febf2d-7a30-413e-86a0-19e718b2faad cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#kms.describe-key",
+      "userIdentity": {
+         "accessKeyId": "ASIAVA5YLHFG22UNOASA",
+         "accountId": "345594607949",
+         "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50/AdanAlvarez",
+         "principalId": "AROAVA5YLHFGXTTEWKGQX:AdanAlvarez",
+         "sessionContext": {
+            "attributes": {
+               "creationDate": "2025-02-15T14:50:08Z",
+               "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+               "accountId": "345594607949",
+               "arn": "arn:aws:iam::345594607949:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50",
+               "principalId": "AROAVA5YLHFGXTTEWKGQX",
+               "type": "Role",
+               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50"
+            }
+         },
+         "type": "AssumedRole"
+      }
+   }
+]

@@ -53,7 +53,12 @@
             "link": "https://www.tripwire.com/state-of-security/la-times-website-cryptojacking-attack"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        }
+    ],
     "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",
     "alerting": [],
     "simulation": [

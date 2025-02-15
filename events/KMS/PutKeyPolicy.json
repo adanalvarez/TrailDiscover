@@ -1,0 +1,31 @@
+{
+    "eventName": "PutKeyPolicy",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Attaches a key policy to the specified KMS key.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1486 - Data Encrypted for Impact"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        }
+    ],
+    "securityImplications": "Attackers might put a new key polocy to modify the policy of a current KMS Key and lock the data for ransomware attacks.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms put-key-policy --key-id 1234abcd-12ab-34cd-56ef-1234567890ab --policy-name default --policy \"{\"Version\":\"2012-10-17\",\"Id\":\"key-default-1\",\"Statement\":[{\"Sid\":\"Enable IAM User Permissions\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::123456789012:root\"},\"Action\":\"kms:*\",\"Resource\":\"*\"}]}\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-PutKeyPolicy"
+}

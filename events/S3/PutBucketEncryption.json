@@ -1,0 +1,31 @@
+{
+    "eventName": "PutBucketEncryption",
+    "eventSource": "s3.amazonaws.com",
+    "awsService": "S3",
+    "description": "This operation configures default encryption and Amazon S3 Bucket Keys for an existing bucket.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1486 - Data Encrypted for Impact"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        }
+    ],
+    "securityImplications": "Attackers might use PutBucketEncryption to set the KMS key to one it controls for ransomware.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3api put-bucket-encryption --bucket my-bucket --server-side-encryption-configuration '{\"Rules\":[{\"ApplyServerSideEncryptionByDefault\":{\"SSEAlgorithm\":\"aws:kms\",\"KMSMasterKeyID\":\"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab\"}}]}'"
+        }
+    ],
+    "permissions": "N/A"
+}

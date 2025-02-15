@@ -87,6 +87,10 @@
         {
             "description": "S3 Streaming Copy",
             "link": "https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/"
+        },
+        {
+            "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
+            "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
         }
     ],
     "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",
