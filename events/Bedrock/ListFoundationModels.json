@@ -37,6 +37,10 @@
         {
             "description": "Detecting AI resource-hijacking with Composite Alerts",
             "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+        },
+        {
+            "description": "Datadog threat roundup: top insights for Q4 2024",
+            "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
         }
     ],
     "researchLinks": [],

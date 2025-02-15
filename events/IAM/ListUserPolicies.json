@@ -1,0 +1,31 @@
+{
+    "eventName": "ListUserPolicies",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the names of the inline policies embedded in the specified IAM user.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Datadog threat roundup: top insights for Q4 2024",
+            "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListUserPolicies to identify permissions associated with various users in AWS.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-user-policies --user-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListUserPolicies"
+}

@@ -38,6 +38,10 @@
         {
             "type": "commandLine",
             "value": "N/A"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.impact.bedrock-invoke-model"
         }
     ],
     "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListFoundationModelAgreementOffers"
