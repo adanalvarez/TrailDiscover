@@ -61,6 +61,10 @@
         {
             "description": "Hacker Puts Hosting Service Code Spaces Out of Business",
             "link": "https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/"
+        },
+        {
+            "description": "Securing a SaaS Company's AWS Environment After a Breach",
+            "link": "https://badshah.io/case-studies/saas-aws-breach/"
         }
     ],
     "researchLinks": [],
