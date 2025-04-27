@@ -1,0 +1,179 @@
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA************************:UserName",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_AdministratorAccess_********/UserName",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIA****************",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA************************",
+                "arn": "arn:aws:iam::123456789012:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_********",
+                "accountId": "123456789012",
+                "userName": "AWSReservedSSO_AdministratorAccess_********"
+            },
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2025-04-27T10:31:26Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-04-27T10:43:22Z",
+    "eventSource": "rds.amazonaws.com",
+    "eventName": "ModifyDBInstance",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "10.0.0.1",
+    "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.15.153.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#rds.modify-db-instance",
+    "requestParameters": {
+        "dBInstanceIdentifier": "database-instance",
+        "applyImmediately": true,
+        "masterUserPassword": "HIDDEN_DUE_TO_SECURITY_REASONS",
+        "allowMajorVersionUpgrade": false
+    },
+    "responseElements": {
+        "dBInstanceIdentifier": "database-instance",
+        "dBInstanceClass": "db.t4g.micro",
+        "engine": "postgres",
+        "dBInstanceStatus": "available",
+        "masterUsername": "dbadmin",
+        "endpoint": {
+            "address": "database-instance.xxxxx.us-east-1.rds.amazonaws.com",
+            "port": 5432,
+            "hostedZoneId": "Z2R2ITUGPM61AM"
+        },
+        "allocatedStorage": 20,
+        "instanceCreateTime": "Apr 27, 2025, 10:39:19 AM",
+        "preferredBackupWindow": "04:38-05:08",
+        "backupRetentionPeriod": 1,
+        "dBSecurityGroups": [],
+        "vpcSecurityGroups": [
+            {
+                "vpcSecurityGroupId": "sg-0xxxxxxxxxxxxxxx",
+                "status": "active"
+            }
+        ],
+        "dBParameterGroups": [
+            {
+                "dBParameterGroupName": "default.postgres17",
+                "parameterApplyStatus": "in-sync"
+            }
+        ],
+        "availabilityZone": "us-east-1f",
+        "dBSubnetGroup": {
+            "dBSubnetGroupName": "default",
+            "dBSubnetGroupDescription": "default",
+            "vpcId": "vpc-0xxxxxxxxxxxxxxx",
+            "subnetGroupStatus": "Complete",
+            "subnets": [
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1d"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                },
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1f"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                },
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1b"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                },
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1a"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                },
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1e"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                },
+                {
+                    "subnetIdentifier": "subnet-0xxxxxxxxxxxxxxx",
+                    "subnetAvailabilityZone": {
+                        "name": "us-east-1c"
+                    },
+                    "subnetOutpost": {},
+                    "subnetStatus": "Active"
+                }
+            ]
+        },
+        "preferredMaintenanceWindow": "sun:09:35-sun:10:05",
+        "pendingModifiedValues": {
+            "masterUserPassword": "HIDDEN_DUE_TO_SECURITY_REASONS"
+        },
+        "latestRestorableTime": "Apr 27, 2025, 10:40:40 AM",
+        "multiAZ": false,
+        "engineVersion": "17.2",
+        "autoMinorVersionUpgrade": true,
+        "readReplicaDBInstanceIdentifiers": [],
+        "licenseModel": "postgresql-license",
+        "storageThroughput": 0,
+        "optionGroupMemberships": [
+            {
+                "optionGroupName": "default:postgres-17",
+                "status": "in-sync"
+            }
+        ],
+        "publiclyAccessible": false,
+        "storageType": "gp2",
+        "dbInstancePort": 0,
+        "storageEncrypted": true,
+        "kmsKeyId": "arn:aws:kms:us-east-1:123456789012:key/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "dbiResourceId": "db-XXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "cACertificateIdentifier": "rds-ca-rsa2048-g1",
+        "domainMemberships": [],
+        "copyTagsToSnapshot": true,
+        "monitoringInterval": 0,
+        "dBInstanceArn": "arn:aws:rds:us-east-1:123456789012:db:database-instance",
+        "iAMDatabaseAuthenticationEnabled": false,
+        "databaseInsightsMode": "standard",
+        "performanceInsightsEnabled": false,
+        "deletionProtection": false,
+        "associatedRoles": [],
+        "httpEndpointEnabled": false,
+        "maxAllocatedStorage": 1000,
+        "tagList": [],
+        "customerOwnedIpEnabled": false,
+        "networkType": "IPV4",
+        "backupTarget": "region",
+        "certificateDetails": {
+            "cAIdentifier": "rds-ca-rsa2048-g1",
+            "validTill": "Apr 27, 2026, 10:38:33 AM"
+        },
+        "dedicatedLogVolume": false,
+        "engineLifecycleSupport": "open-source-rds-extended-support-disabled"
+    },
+    "requestID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "123456789012",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "rds.us-east-1.amazonaws.com"
+    }
+}
