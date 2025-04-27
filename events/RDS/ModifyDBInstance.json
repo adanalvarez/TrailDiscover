@@ -1,0 +1,43 @@
+{
+    "eventName": "ModifyDBInstance",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Modifies settings for a DB instance.",
+    "mitreAttackTactics": [
+        "TA0006 - Credential Access",
+        "TA0008 - Lateral Movement"
+    ],
+    "mitreAttackTechniques": [
+        "T1556 - Modify Authentication Process",
+        "T1550 - Use Alternate Authentication Material"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Attackers might disable security protections such as DeletionProtection"
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Securing a SaaS Company's AWS Environment After a Breach",
+            "link": "https://badshah.io/case-studies/saas-aws-breach/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ModifyDBInstance to reset the password of a database user, potentially gaining unauthorized access to the database.",
+    "alerting": [
+        {
+            "type": "sigma",
+            "value": "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_rds_change_master_password.yml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds modify-db-instance --db-instance-identifier CloudTrail --apply-immediately --master-user-password RandomCloudTrailPa$$word"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyDBInstance"
+}

@@ -32,6 +32,10 @@
         {
             "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
             "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        },
+        {
+            "description": "Securing a SaaS Company's AWS Environment After a Breach",
+            "link": "https://badshah.io/case-studies/saas-aws-breach/"
         }
     ],
     "researchLinks": [
