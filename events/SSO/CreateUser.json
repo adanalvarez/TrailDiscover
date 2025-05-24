@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateUser",
+    "eventSource": "sso-directory.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Creates a user within the specified identity store.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateUser to create users with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws identitystore create-user --identity-store-id <your-identity-store-id> --user-name 'TrailDiscoverUser' --display-name 'Trail Discover User' --emails '[{\"Value\": \"test@test.com\", \"Type\": \"work\", \"Primary\": true}]'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateUser"
+}

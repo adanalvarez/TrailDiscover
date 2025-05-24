@@ -1,5 +1,156 @@
 [
     {
+        "eventName": "AddMemberToGroup",
+        "eventSource": "sso-directory.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Adds a member to a group within the specified identity store.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use AddMemberToGroup to add compromised or malicious users to groups with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
+        "alerting": [],
+        "simulation": [],
+        "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-AddMemberToGroup"
+    },
+    {
+        "eventName": "CreateGroup",
+        "eventSource": "sso-directory.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Creates a group within the specified identity store.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1098.003 - Account Manipulation: Additional Cloud Roles"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateGroup to create groups with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws identitystore create-group --identity-store-id <your-identity-store-id> --display-name 'TrailDiscoverGroup'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateGroup"
+    },
+    {
+        "eventName": "UpdateSsoConfiguration",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Updates the SSO configuration for the specified instance.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use UpdateSsoConfiguration to modify the SSO settings, such as disabling mandatory MFA or changing the session duration, which can lead to unauthorized access and persistence in the environment.",
+        "alerting": [],
+        "simulation": [],
+        "permissions": "https://aws.permissions.cloud/iam/sso#sso-UpdateSSOConfiguration"
+    },
+    {
+        "eventName": "CreateAccountAssignment",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Assigns access to a principal for a specified AWS account using a specified permission set.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateAccountAssignment to assign themselves or compromised users access to AWS accounts with elevated privileges, allowing them to manipulate resources and maintain persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso-admin create-account-assignment --instance-arn <your-instance-arn> --target-id <your-target-id> --target-type AWS_ACCOUNT --permission-set-arn <your-permission-set-arn> --principal-type USER --principal-id <your-principal-id>"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso#sso-CreateAccountAssignment"
+    },
+    {
+        "eventName": "CreateUser",
+        "eventSource": "sso-directory.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Creates a user within the specified identity store.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateUser to create users with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws identitystore create-user --identity-store-id <your-identity-store-id> --user-name 'TrailDiscoverUser' --display-name 'Trail Discover User' --emails '[{\"Value\": \"test@test.com\", \"Type\": \"work\", \"Primary\": true}]'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateUser"
+    },
+    {
         "eventName": "ChangeResourceRecordSets",
         "eventSource": "route53.amazonaws.com",
         "awsService": "Route53",
@@ -651,6 +802,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -2000,6 +2155,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -2130,6 +2289,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -2258,6 +2421,7 @@
         "awsService": "Lambda",
         "description": "Grants an AWS service, AWS account, or AWS organization permission to use a function.",
         "mitreAttackTactics": [
+            "TA0003 - Persistence",
             "TA0004 - Privilege Escalation"
         ],
         "mitreAttackTechniques": [
@@ -2282,8 +2446,13 @@
                 "reason": "Permissions can be used to manipulate Lambda functions to communicate over various application layer protocols, aiding in command and control."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
@@ -5054,6 +5223,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -5508,6 +5681,10 @@
             {
                 "description": "New Developments in LLM Hijacking Activity",
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -5637,6 +5814,10 @@
             {
                 "description": "New Developments in LLM Hijacking Activity",
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -6130,8 +6311,13 @@
                 "reason": "By attaching a policy to a group, an adversary can ensure that even if certain accounts are revoked, the group as a whole still retains the permissions."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
@@ -10749,6 +10935,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -15115,6 +15305,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -15184,6 +15378,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -15287,6 +15485,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
             }
         ],
         "researchLinks": [
@@ -16425,6 +16627,138 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/config#config-DeleteConfigRule"
+    },
+    {
+        "eventName": "CreateStage",
+        "eventSource": "apigateway.amazonaws.com",
+        "awsService": "APIGateway",
+        "description": "Creates a Stage for an API. A Stage is a named reference to a deployment of an API.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateStage to create malicious stages that can be used to establish persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws apigatewayv2 create-stage  --api-id $API_ID --stage-name '$default' --auto-deploy"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+    },
+    {
+        "eventName": "CreateApi",
+        "eventSource": "apigateway.amazonaws.com",
+        "awsService": "APIGateway",
+        "description": "Creates an Api resource.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateApi to create malicious APIs that can be used to establish persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws apigatewayv2 create-api --name TrailDiscoverApi --protocol-type HTTP --query 'ApiId'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+    },
+    {
+        "eventName": "CreateIntegration",
+        "eventSource": "apigateway.amazonaws.com",
+        "awsService": "APIGateway",
+        "description": "Creates an Integration. An Integration is a configuration that specifies the backend endpoint for an API route.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateIntegration to create malicious integrations that can be used to establish persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws apigatewayv2 create-integration --api-id $API_ID --integration-type AWS_PROXY --integration-uri arn:aws:lambda:us-east-1:<your-account-id>:function:buckets555 --integration-method POST --payload-format-version 2.0 --query 'IntegrationId'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+    },
+    {
+        "eventName": "CreateRoute",
+        "eventSource": "apigateway.amazonaws.com",
+        "awsService": "APIGateway",
+        "description": "Creates a Route for an API. A Route is a configuration that specifies how API requests are routed to backend integrations.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+                "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateRoute to create malicious routes that can be used to establish persistence in the environment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws apigatewayv2 create-route --api-id $API_ID --route-key 'GET /buckets555' --target 'integrations/$INTEGRATION_ID'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
     },
     {
         "eventName": "ListServiceQuotas",

@@ -1,0 +1,26 @@
+{
+    "eventName": "UpdateSsoConfiguration",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Updates the SSO configuration for the specified instance.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use UpdateSsoConfiguration to modify the SSO settings, such as disabling mandatory MFA or changing the session duration, which can lead to unauthorized access and persistence in the environment.",
+    "alerting": [],
+    "simulation": [],
+    "permissions": "https://aws.permissions.cloud/iam/sso#sso-UpdateSSOConfiguration"
+}

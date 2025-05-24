@@ -1,0 +1,57 @@
+[
+  {
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAOTZG6Z7B1DG682GIW:AdanAlvarez",
+        "arn": "arn:aws:sts::406188993179:assumed-role/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb/AdanAlvarez",
+        "accountId": "703074655370",
+        "accessKeyId": "ASIAL2PNV4070466J1S5",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROAOTZG6Z7B1DG682GIW",
+                "arn": "arn:aws:iam::703074655370:role/aws-reserved/sso.amazonaws.com/cn-northcentral-3r/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb",
+                "accountId": "703074655370",
+                "userName": "AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T14:45:18Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T15:06:31Z",
+    "eventSource": "sso.amazonaws.com",
+    "eventName": "UpdateSsoConfiguration",
+    "awsRegion": "cn-northcentral-3r",
+    "sourceIPAddress": "061.237.219.234",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/230.203.250.227 Safari/537.36",
+    "requestParameters": {
+        "ssoConfiguration": {
+            "sessionConfiguration": {
+                "maxAuthenticationAge": "PT8H",
+                "extendedSessionEnabledAppProviders": [
+                    "codewhisperer"
+                ]
+            }
+        },
+        "configurationType": "SESSION",
+        "instanceArn": "arn:aws:sso:::instance/ssoins-66846d02039d7f57"
+    },
+    "responseElements": null,
+    "requestID": "8e3c4127-a9f4-4554-8532-2b93b82e37e2",
+    "eventID": "689a1e31-8d3d-4142-b0fb-26ed0eb8a573",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "703074655370",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "sso.cn-northcentral-3r.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+  }
+]

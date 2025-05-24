@@ -1,0 +1,52 @@
+[
+{
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA5043CENIA5Y4ZRJPP:AdanAlvarez",
+        "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
+        "accountId": "205385822584",
+        "accessKeyId": "ASIAF7PW31H97DFL7A7D",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA5043CENIA5Y4ZRJPP",
+                "arn": "arn:aws:iam::205385822584:role/aws-reserved/sso.amazonaws.com/cniso-central-3r/AWSReservedSSO_AdministratorAccess_38ed609eee440095",
+                "accountId": "205385822584",
+                "userName": "AWSReservedSSO_AdministratorAccess_38ed609eee440095"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T13:26:15Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T13:29:16Z",
+    "eventSource": "apigateway.amazonaws.com",
+    "eventName": "CreateRoute",
+    "awsRegion": "me-isob-eastcentral-1r",
+    "sourceIPAddress": "201.255.227.238",
+    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.11.0 (+https://www.terraform.io) terraform-provider-aws/5.98.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.8 md/GOOS#linux md/GOARCH#amd64 api/apigatewayv2#1.27.1 m/g",
+    "requestParameters": {
+        "apiKeyRequired": false,
+        "routeKey": "GET /trigger",
+        "authorizationType": "NONE",
+        "apiId": "5614585pm4",
+        "target": "integrations/3hcdepi"
+    },
+    "responseElements": {
+        "authorizationType": "NONE",
+        "routeId": "p8hctvu",
+        "apiKeyRequired": false,
+        "routeKey": "GET /trigger",
+        "target": "integrations/3hcdepi"
+    },
+    "requestID": "1e5e7cbe-b3d1-44e2-a899-3766e45eaed9",
+    "eventID": "c202eb07-c30d-46f2-a098-f65cd97a115e",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "205385822584",
+    "eventCategory": "Management"
+}
+]

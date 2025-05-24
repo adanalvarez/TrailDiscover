@@ -1,0 +1,52 @@
+[
+   {
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAJB2UBHHR2102HG487:AdanAlvarez",
+        "arn": "arn:aws:sts::406188993179:assumed-role/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb/AdanAlvarez",
+        "accountId": "905883987436",
+        "accessKeyId": "ASIAV786F7VHC0ZYL7JH",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROAJB2UBHHR2102HG487",
+                "arn": "arn:aws:iam::905883987436:role/aws-reserved/sso.amazonaws.com/ap-east-3r/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb",
+                "accountId": "905883987436",
+                "userName": "AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T14:45:18Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T14:51:14Z",
+    "eventSource": "sso-directory.amazonaws.com",
+    "eventName": "AddMemberToGroup",
+    "awsRegion": "ap-east-3r",
+    "sourceIPAddress": "253.210.12.251",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/236.251.246.251 Safari/537.36",
+    "requestParameters": {
+        "identityStoreId": "d-9a670c783a",
+        "groupId": "114bd550-8061-702c-4bb4-2a771ff86cfb",
+        "member": {
+            "memberId": "01cb45c0-c071-70a1-0a3a-e417bf7fd8ff"
+        }
+    },
+    "responseElements": null,
+    "requestID": "9ac77faa-3e12-4104-9213-829f30620a8f",
+    "eventID": "26e0a9c8-7463-4187-a03c-e839af4766fe",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "905883987436",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "up.sso.ap-east-3r.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+  }
+]

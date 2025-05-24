@@ -1,0 +1,28 @@
+{
+    "eventName": "AddMemberToGroup",
+    "eventSource": "sso-directory.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Adds a member to a group within the specified identity store.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AddMemberToGroup to add compromised or malicious users to groups with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
+    "alerting": [],
+    "simulation": [],
+    "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-AddMemberToGroup"
+}

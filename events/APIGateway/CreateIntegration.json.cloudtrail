@@ -1,0 +1,55 @@
+[
+{
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAY6WAOMYX3MWP4LZQ9:AdanAlvarez",
+        "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
+        "accountId": "735474257465",
+        "accessKeyId": "ASIA6MLA8WSL7HOCR27P",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROAY6WAOMYX3MWP4LZQ9",
+                "arn": "arn:aws:iam::735474257465:role/aws-reserved/sso.amazonaws.com/cn-isob-eastcentral-2r/AWSReservedSSO_AdministratorAccess_38ed609eee440095",
+                "accountId": "735474257465",
+                "userName": "AWSReservedSSO_AdministratorAccess_38ed609eee440095"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T13:26:15Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T13:29:16Z",
+    "eventSource": "apigateway.amazonaws.com",
+    "eventName": "CreateIntegration",
+    "awsRegion": "ca-southwest-3r",
+    "sourceIPAddress": "205.245.19.202",
+    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.11.0 (+https://www.terraform.io) terraform-provider-aws/5.98.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.8 md/GOOS#linux md/GOARCH#amd64 api/apigatewayv2#1.27.1 m/g",
+    "requestParameters": {
+        "integrationMethod": "POST",
+        "integrationType": "AWS_PROXY",
+        "payloadFormatVersion": "2.0",
+        "connectionType": "INTERNET",
+        "integrationUri": "arn:aws:apigateway:ca-southwest-3r:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-southwest-3r:735474257465:function:buckets555/invocations",
+        "apiId": "5614585pm4"
+    },
+    "responseElements": {
+        "integrationMethod": "POST",
+        "integrationType": "AWS_PROXY",
+        "integrationId": "3hcdepi",
+        "payloadFormatVersion": "2.0",
+        "integrationUri": "arn:aws:apigateway:ca-southwest-3r:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-southwest-3r:735474257465:function:buckets555/invocations",
+        "connectionType": "INTERNET",
+        "timeoutInMillis": 30000
+    },
+    "requestID": "08aafb38-8d86-44a0-8000-ccec0aca6243",
+    "eventID": "ba92ae64-2234-424e-9b55-149ec63be007",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "735474257465",
+    "eventCategory": "Management"
+}
+]
