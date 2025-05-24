@@ -3,60 +3,6 @@
     "eventVersion": "1.09",
     "userIdentity": {
         "type": "AssumedRole",
-        "principalId": "AROAVA5YLHFGWMIABGSL3:AdanAlvarez",
-        "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
-        "accountId": "345594607949",
-        "accessKeyId": "ASIAVA5YLHFG6HJV72TP",
-        "sessionContext": {
-            "sessionIssuer": {
-                "type": "Role",
-                "principalId": "AROAVA5YLHFGWMIABGSL3",
-                "arn": "arn:aws:iam::345594607949:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_38ed609eee440095",
-                "accountId": "345594607949",
-                "userName": "AWSReservedSSO_AdministratorAccess_38ed609eee440095"
-            },
-            "attributes": {
-                "creationDate": "2025-05-24T13:26:15Z",
-                "mfaAuthenticated": "false"
-            }
-        }
-    },
-    "eventTime": "2025-05-24T13:29:00Z",
-    "eventSource": "apigateway.amazonaws.com",
-    "eventName": "CreateStage",
-    "awsRegion": "us-east-1",
-    "sourceIPAddress": "139.47.33.43",
-    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.11.0 (+https://www.terraform.io) terraform-provider-aws/5.98.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.8 md/GOOS#linux md/GOARCH#amd64 api/apigatewayv2#1.27.1 m/g",
-    "requestParameters": {
-        "stageName": "$default",
-        "autoDeploy": true,
-        "apiId": "5614585pm4"
-    },
-    "responseElements": {
-        "lastUpdatedDate": "2025-05-24T13:29:00Z",
-        "stageName": "$default",
-        "createdDate": "2025-05-24T13:29:00Z",
-        "routeSettings": {},
-        "autoDeploy": true,
-        "defaultRouteSettings": {
-            "detailedMetricsEnabled": false
-        },
-        "stageVariables": "***",
-        "tags": {}
-    },
-    "requestID": "53f13915-8d31-421f-8ad9-cb0ad7467b61",
-    "eventID": "b5a95a84-67cf-4639-99c0-c58cc8e4d8f0",
-    "readOnly": false,
-    "eventType": "AwsApiCall",
-    "managementEvent": true,
-    "recipientAccountId": "345594607949",
-    "eventCategory": "Management"
-}
-][
-{
-    "eventVersion": "1.09",
-    "userIdentity": {
-        "type": "AssumedRole",
         "principalId": "AROACVX1CM555D87BUQD5:AdanAlvarez",
         "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
         "accountId": "235259118431",
