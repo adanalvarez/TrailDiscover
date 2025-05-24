@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateRoute",
+    "eventSource": "apigateway.amazonaws.com",
+    "awsService": "APIGateway",
+    "description": "Creates a Route for an API. A Route is a configuration that specifies how API requests are routed to backend integrations.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateRoute to create malicious routes that can be used to establish persistence in the environment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws apigatewayv2 create-route --api-id $API_ID --route-key 'GET /buckets555' --target 'integrations/$INTEGRATION_ID'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+}

@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateIntegration",
+    "eventSource": "apigateway.amazonaws.com",
+    "awsService": "APIGateway",
+    "description": "Creates an Integration. An Integration is a configuration that specifies the backend endpoint for an API route.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateIntegration to create malicious integrations that can be used to establish persistence in the environment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws apigatewayv2 create-integration --api-id $API_ID --integration-type AWS_PROXY --integration-uri arn:aws:lambda:us-east-1:<your-account-id>:function:buckets555 --integration-method POST --payload-format-version 2.0 --query 'IntegrationId'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+}

@@ -1,0 +1,61 @@
+[
+   {
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAZPLVF8FX8CLP26HV8:AdanAlvarez",
+        "arn": "arn:aws:sts::406188993179:assumed-role/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb/AdanAlvarez",
+        "accountId": "112951987889",
+        "accessKeyId": "ASIAAN2152GEHND7PBQE",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROAZPLVF8FX8CLP26HV8",
+                "arn": "arn:aws:iam::112951987889:role/aws-reserved/sso.amazonaws.com/cn-south-3r/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb",
+                "accountId": "112951987889",
+                "userName": "AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T14:45:18Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T14:48:54Z",
+    "eventSource": "sso-directory.amazonaws.com",
+    "eventName": "CreateGroup",
+    "awsRegion": "cn-south-3r",
+    "sourceIPAddress": "232.254.18.240",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/224.244.050.163 Safari/537.36",
+    "requestParameters": {
+        "identityStoreId": "d-9a670c783a",
+        "displayName": "secure"
+    },
+    "responseElements": {
+        "group": {
+            "groupId": "114bd550-8061-702c-4bb4-2a771ff86cfb",
+            "displayName": "secure",
+            "groupAttributes": {},
+            "meta": {
+                "createdAt": "May 24, 2025, 2:48:54 PM",
+                "updatedAt": "May 24, 2025, 2:48:54 PM",
+                "createdBy": "AROAZPLVF8FX8CLP26HV8:AdanAlvarez",
+                "updatedBy": "AROAZPLVF8FX8CLP26HV8:AdanAlvarez"
+            }
+        }
+    },
+    "requestID": "436b31af-e3c0-40fd-a50f-9e4ae8065cc3",
+    "eventID": "0c99658c-a0e5-4f92-863a-ce0b78db316e",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "112951987889",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "up.sso.cn-south-3r.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+  }
+]

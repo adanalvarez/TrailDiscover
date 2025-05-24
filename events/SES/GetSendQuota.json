@@ -49,6 +49,10 @@
         {
             "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
             "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        },
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
         }
     ],
     "researchLinks": [

@@ -1,0 +1,63 @@
+[
+  {
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA4UUN6B6VOP9V23H01:AdanAlvarez",
+        "arn": "arn:aws:sts::406188993179:assumed-role/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb/AdanAlvarez",
+        "accountId": "860087596644",
+        "accessKeyId": "ASIAUIKS9HUGQPC7B7J0",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA4UUN6B6VOP9V23H01",
+                "arn": "arn:aws:iam::860087596644:role/aws-reserved/sso.amazonaws.com/euiso-south-2r/AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb",
+                "accountId": "860087596644",
+                "userName": "AWSReservedSSO_AdministratorAccess_2276cacebc31d3eb"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T14:45:18Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T14:52:07Z",
+    "eventSource": "sso.amazonaws.com",
+    "eventName": "CreateAccountAssignment",
+    "awsRegion": "euiso-south-2r",
+    "sourceIPAddress": "232.252.249.251",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/05.231.202.02 Safari/537.36",
+    "requestParameters": {
+        "instanceArn": "arn:aws:sso:::instance/ssoins-66846d02039d7f57",
+        "targetId": "760507577735",
+        "targetType": "AWS_ACCOUNT",
+        "permissionSetArn": "arn:aws:sso:::permissionSet/ssoins-66846d02039d7f57/ps-cc3ba8d6d6642c51",
+        "principalType": "GROUP",
+        "principalId": "114bd550-8061-702c-4bb4-2a771ff86cfb"
+    },
+    "responseElements": {
+        "accountAssignmentCreationStatus": {
+            "status": "IN_PROGRESS",
+            "requestId": "9987b8b8-20f7-4a42-85a9-17c48c76a74b",
+            "targetId": "760507577735",
+            "targetType": "AWS_ACCOUNT",
+            "permissionSetArn": "arn:aws:sso:::permissionSet/ssoins-66846d02039d7f57/ps-cc3ba8d6d6642c51",
+            "principalType": "GROUP",
+            "principalId": "114bd550-8061-702c-4bb4-2a771ff86cfb"
+        }
+    },
+    "requestID": "9987b8b8-20f7-4a42-85a9-17c48c76a74b",
+    "eventID": "7a0067f3-5a91-4116-ab94-e497b06054ae",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "860087596644",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "sso.euiso-south-2r.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+  }
+]

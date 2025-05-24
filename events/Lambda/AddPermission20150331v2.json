@@ -4,6 +4,7 @@
     "awsService": "Lambda",
     "description": "Grants an AWS service, AWS account, or AWS organization permission to use a function.",
     "mitreAttackTactics": [
+        "TA0003 - Persistence",
         "TA0004 - Privilege Escalation"
     ],
     "mitreAttackTechniques": [
@@ -28,8 +29,13 @@
             "reason": "Permissions can be used to manipulate Lambda functions to communicate over various application layer protocols, aiding in command and control."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS IAM Privilege Escalation Techniques",
