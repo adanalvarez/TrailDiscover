@@ -23,6 +23,11 @@
     "researchLinks": [],
     "securityImplications": "Attackers might use AddMemberToGroup to add compromised or malicious users to groups with elevated privileges, allowing them to manipulate access controls and maintain persistence in the environment.",
     "alerting": [],
-    "simulation": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": ""
+        }
+    ],
     "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-AddMemberToGroup"
 }
