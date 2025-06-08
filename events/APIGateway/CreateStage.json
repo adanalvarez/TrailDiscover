@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateStage",
+    "eventSource": "apigateway.amazonaws.com",
+    "awsService": "APIGateway",
+    "description": "Creates a Stage for an API. A Stage is a named reference to a deployment of an API.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateStage to create malicious stages that can be used to establish persistence in the environment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws apigatewayv2 create-stage  --api-id $API_ID --stage-name '$default' --auto-deploy"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+}

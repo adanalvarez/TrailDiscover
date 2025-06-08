@@ -1,0 +1,55 @@
+[
+{
+    "eventVersion": "1.09",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROARDNPAH816EMNBPRHH:AdanAlvarez",
+        "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
+        "accountId": "915028459638",
+        "accessKeyId": "ASIAZG3AAU2KQ8UZQGNT",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROARDNPAH816EMNBPRHH",
+                "arn": "arn:aws:iam::915028459638:role/aws-reserved/sso.amazonaws.com/cn-north-2r/AWSReservedSSO_AdministratorAccess_38ed609eee440095",
+                "accountId": "915028459638",
+                "userName": "AWSReservedSSO_AdministratorAccess_38ed609eee440095"
+            },
+            "attributes": {
+                "creationDate": "2025-05-24T13:26:15Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-24T13:29:00Z",
+    "eventSource": "apigateway.amazonaws.com",
+    "eventName": "CreateApi",
+    "awsRegion": "ca-centralsouth-1r",
+    "sourceIPAddress": "236.254.79.250",
+    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.11.0 (+https://www.terraform.io) terraform-provider-aws/5.98.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.8 md/GOOS#linux md/GOARCH#amd64 api/apigatewayv2#1.27.1 m/g",
+    "requestParameters": {
+        "name": "buckets555-api",
+        "protocolType": "HTTP",
+        "apiKeySelectionExpression": "$request.header.x-api-key",
+        "routeSelectionExpression": "$request.method $request.path"
+    },
+    "responseElements": {
+        "disableExecuteApiEndpoint": false,
+        "apiEndpoint": "https://5614585pm4.execute-api.ca-centralsouth-1r.amazonaws.com",
+        "createdDate": "2025-05-24T13:29:00Z",
+        "apiKeySelectionExpression": "$request.header.x-api-key",
+        "routeSelectionExpression": "$request.method $request.path",
+        "name": "buckets555-api",
+        "protocolType": "HTTP",
+        "apiId": "5614585pm4",
+        "ipAddressType": "ipv4"
+    },
+    "requestID": "58049ca4-195e-4dfe-b26d-4b7d6cd92184",
+    "eventID": "27598258-c8d7-4de8-b5d4-a651f5d2bf2a",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "915028459638",
+    "eventCategory": "Management"
+}
+]

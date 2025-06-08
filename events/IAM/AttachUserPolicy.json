@@ -40,6 +40,10 @@
         {
             "description": "Tales from the cloud trenches: Unwanted visitor",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+        },
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
         }
     ],
     "researchLinks": [

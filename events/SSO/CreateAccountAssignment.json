@@ -1,0 +1,31 @@
+{
+    "eventName": "CreateAccountAssignment",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Assigns access to a principal for a specified AWS account using a specified permission set.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
+            "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateAccountAssignment to assign themselves or compromised users access to AWS accounts with elevated privileges, allowing them to manipulate resources and maintain persistence in the environment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sso-admin create-account-assignment --instance-arn <your-instance-arn> --target-id <your-target-id> --target-type AWS_ACCOUNT --permission-set-arn <your-permission-set-arn> --principal-type USER --principal-id <your-principal-id>"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sso#sso-CreateAccountAssignment"
+}
