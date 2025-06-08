@@ -26,7 +26,7 @@
     "simulation": [
         {
             "type": "commandLine",
-            "value": ""
+            "value": "N/A"
         }
     ],
     "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-AddMemberToGroup"
