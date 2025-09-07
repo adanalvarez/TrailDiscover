@@ -59,6 +59,10 @@
         {
             "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
             "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        },
+        {
+            "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+            "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
         }
     ],
     "researchLinks": [

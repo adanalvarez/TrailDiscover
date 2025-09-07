@@ -44,6 +44,10 @@
         {
             "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        },
+        {
+            "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+            "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
         }
     ],
     "researchLinks": [
