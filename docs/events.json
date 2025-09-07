@@ -1051,6 +1051,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [
@@ -4042,6 +4046,10 @@
             {
                 "description": "New Developments in LLM Hijacking Activity",
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [],
@@ -5232,6 +5240,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [
@@ -7385,6 +7397,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-CreateKey"
+    },
+    {
+        "eventName": "CreateCase",
+        "eventSource": "support.amazonaws.com",
+        "awsService": "Support",
+        "description": "Creates a case in the Support Center.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1578 - Modify Cloud Compute Infrastructure"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1578.005 - Modify Cloud Compute Infrastructure: Modify Cloud Account Settings"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateCase to create a support case to try to get bigger quotas or other changes to the AWS account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws support create-case --subject \"API Test Case\" --service-code \"general-info\" --severity-code \"low\" --category-code \"using-aws\" --communication-body \"This is only a test of the AWS Support Create Case API.\" --issue-type \"technical\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/support#support-CreateCase"
     },
     {
         "eventName": "LookupEvents",
@@ -15121,6 +15166,10 @@
             {
                 "description": "The curious case of DangerDev@protonmail.me",
                 "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [],
@@ -15217,6 +15266,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ses#ses-UpdateAccountSendingEnabled"
+    },
+    {
+        "eventName": "PutAccountDetails",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Update your Amazon SES account details.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1578 - Modify Cloud Compute Infrastructure"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1578.005 - Modify Cloud Compute Infrastructure: Modify Cloud Account Settings"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PutAccountDetails to push the SES account into production mode.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sesv2 put-account-details --mail-type TRANSACTIONAL --website-url https://traildiscover.cloud --contact-language EN --use-case-description \"We need to use the Amazon SES for sending the report pdf, payment receipt through email and user verify through email\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-GetAccount"
     },
     {
         "eventName": "GetAccountSendingEnabled",
@@ -15387,6 +15469,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [
@@ -15494,6 +15580,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+                "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
         "researchLinks": [

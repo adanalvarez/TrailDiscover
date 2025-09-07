@@ -1,0 +1,40 @@
+[
+    {
+         "eventVersion": "1.04",
+         "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+            "arn": "arn:aws:iam::111122223333:user/janedoe",
+            "accountId": "111122223333",
+            "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+            "userName": "janedoe",
+            "sessionContext": {
+               "attributes": {
+                  "mfaAuthenticated": "false",
+                  "creationDate": "2016-04-13T17:51:37Z"
+               }
+            },
+            "invokedBy": "signin.amazonaws.com"
+         },
+         "eventTime": "2016-04-13T18:05:53Z",
+         "eventSource": "support.amazonaws.com",
+         "eventName": "CreateCase",
+         "awsRegion": "us-east-1",
+         "sourceIPAddress": "198.51.100.15",
+         "userAgent": "signin.amazonaws.com",
+         "requestParameters": {
+            "severityCode": "low",
+            "categoryCode": "other",
+            "language": "en",
+            "serviceCode": "support-api",
+            "issueType": "technical"
+         },
+         "responseElements": {
+            "caseId": "case-111122223333-muen-2016-c3f2077e504940f2"
+         },
+         "requestID": "58c257ef-01a2-11e6-be2a-01c031063738",
+         "eventID": "5aa34bfc-ad5b-4fb1-8a55-2277c86e746a",
+         "eventType": "AwsApiCall",
+         "recipientAccountId": "111122223333"
+      }
+]

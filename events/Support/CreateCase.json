@@ -1,0 +1,34 @@
+{
+    "eventName": "CreateCase",
+    "eventSource": "support.amazonaws.com",
+    "awsService": "Support",
+    "description": "Creates a case in the Support Center.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1578.005 - Modify Cloud Compute Infrastructure: Modify Cloud Account Settings"
+    ],
+    "unverifiedMitreAttackTechniques": [    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
+            "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+        }
+    ],
+    "researchLinks": [
+    ],
+    "securityImplications": "Attackers might use CreateCase to create a support case to try to get bigger quotas or other changes to the AWS account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws support create-case --subject \"API Test Case\" --service-code \"general-info\" --severity-code \"low\" --category-code \"using-aws\" --communication-body \"This is only a test of the AWS Support Create Case API.\" --issue-type \"technical\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/support#support-CreateCase"
+}
