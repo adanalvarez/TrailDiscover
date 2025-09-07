@@ -12,7 +12,7 @@
     "mitreAttackSubTechniques": [
         "T1578.005 - Modify Cloud Compute Infrastructure: Modify Cloud Account Settings"
     ],
-    "unverifiedMitreAttackTechniques": [    ],
+    "unverifiedMitreAttackTechniques": [],
     "usedInWild": true,
     "incidents": [
         {
@@ -20,8 +20,7 @@
             "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
         }
     ],
-    "researchLinks": [
-    ],
+    "researchLinks": [],
     "securityImplications": "Attackers might use PutAccountDetails to push the SES account into production mode.",
     "alerting": [],
     "simulation": [
