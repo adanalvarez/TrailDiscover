@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeDBInstances",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Describes provisioned RDS instances.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "DB endpoint details aid targeting for data exfiltration or privilege escalation within databases.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds describe-db-instances"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBInstances"
+}

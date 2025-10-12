@@ -48,6 +48,10 @@
         {
             "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
             "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [

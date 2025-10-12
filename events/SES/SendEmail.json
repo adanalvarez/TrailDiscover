@@ -1,0 +1,41 @@
+{
+    "eventName": "SendEmail",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Composes an email message and immediately queues it for sending.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection",
+        "TA0011 - Command and Control",
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking",
+        "T1567 - Exfiltration Over Web Service"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1585 - Establish Accounts",
+            "reason": "Using SES to send phishing emails can support infrastructure for social engineering."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Sending emails from a compromised account can enable phishing, data exfiltration, or brand abuse.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses send-email --from attacker@example.com --destination ToAddresses=target@example.com --message Subject={Data=Test},Body={Text={Data=Hi}}"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-SendEmail"
+}

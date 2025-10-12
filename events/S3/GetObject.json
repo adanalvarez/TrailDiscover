@@ -85,6 +85,10 @@
         {
             "description": "Top employee monitoring app leaks 21 million screenshots on thousands of users",
             "link": "https://www.techradar.com/pro/security/top-employee-monitoring-app-leaks-21-million-screenshots-on-thousands-of-users"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [

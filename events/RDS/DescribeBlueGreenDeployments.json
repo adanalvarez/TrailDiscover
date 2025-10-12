@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeBlueGreenDeployments",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Describes one or more blue/green deployments.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Allows attackers discovery of deployment configurations and potential weaknesses.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds describe-blue-green-deployments"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeBlueGreenDeployments"
+}
