@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeExportTasks",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Returns information about a snapshot or cluster export to Amazon S3.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Export task details may expose S3 bucket names and regions, aiding in data exfiltration efforts.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds describe-export-tasks"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeExportTasks"
+}

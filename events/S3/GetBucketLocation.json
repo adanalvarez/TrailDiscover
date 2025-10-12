@@ -16,6 +16,10 @@
         {
             "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
             "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [],

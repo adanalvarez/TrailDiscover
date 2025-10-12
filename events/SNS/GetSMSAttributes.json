@@ -25,6 +25,10 @@
         {
             "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [

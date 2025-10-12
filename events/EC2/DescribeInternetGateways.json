@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeInternetGateways",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Describes your internet gateways.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Knowledge of internet ingress/egress points supports planning of data exfiltration.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-internet-gateways"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInternetGateways"
+}

@@ -1,5 +1,36 @@
 [
     {
+        "eventName": "ListApplications",
+        "eventSource": "servicecatalog-appregistry.amazonaws.com",
+        "awsService": "ServiceCatalog",
+        "description": "Retrieves a list of all of your applications.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Reveals cloud resources which may be targeted for further exploration or exploitation.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws servicecatalog-appregistry list-applications"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/appconfig#appconfig-ListApplications"
+    },
+    {
         "eventName": "AddMemberToGroup",
         "eventSource": "sso-directory.amazonaws.com",
         "awsService": "SSO",
@@ -268,7 +299,12 @@
             }
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
@@ -308,7 +344,12 @@
             }
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
@@ -1055,6 +1096,10 @@
             {
                 "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -1232,6 +1277,10 @@
             {
                 "description": "Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -1691,6 +1740,37 @@
         "permissions": "https://aws.permissions.cloud/iam/logs#logs-DescribeLogGroups"
     },
     {
+        "eventName": "DescribeAlarms",
+        "eventSource": "monitoring.amazonaws.com",
+        "awsService": "CloudWatch",
+        "description": "Retrieves the specified alarms.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Knowing existing alarms helps attackers evade detection by avoiding or disabling targeted metrics.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cloudwatch describe-alarms --max-items 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cloudwatch#cloudwatch-DescribeAlarms"
+    },
+    {
         "eventName": "DeleteAlarms",
         "eventSource": "monitoring.amazonaws.com",
         "awsService": "CloudWatch",
@@ -1936,6 +2016,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/logs#logs-DescribeLogStreams"
+    },
+    {
+        "eventName": "DescribeAlarmsForMetric",
+        "eventSource": "monitoring.amazonaws.com",
+        "awsService": "CloudWatch",
+        "description": "Retrieves the alarms for the specified metric.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Helps determine which metrics trigger detection enabling silent abuse of unmonitored resources.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cloudwatch describe-alarms-for-metric --namespace AWS/EC2 --metric-name CPUUtilization"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/monitoring#monitoring-DescribeAlarmsForMetric"
     },
     {
         "eventName": "GetLogRecord",
@@ -3550,6 +3661,37 @@
         "permissions": "https://aws.permissions.cloud/iam/lightsail#lightsail-GetRegions"
     },
     {
+        "eventName": "GetCostForecast",
+        "eventSource": "ce.amazonaws.com",
+        "awsService": "CostExplorer",
+        "description": "Retrieves a forecast for how much Amazon Web Services predicts that you will spend over the forecast time period that you select, based on your past costs.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Cost forecasting can validate success of cryptomining or resource abuse while avoiding detection.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ce get-cost-forecast --metric BLENDED_COST --time-period Start=$(date +%Y-%m-%d),End=$(date -d '+1 year' +%Y-%m-%d) --granularity MONTHLY --prediction-interval-level 95"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ce#ce-GetCostForecast"
+    },
+    {
         "eventName": "GetCostAndUsage",
         "eventSource": "ce.amazonaws.com",
         "awsService": "CostExplorer",
@@ -3592,6 +3734,10 @@
             {
                 "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
                 "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -3987,6 +4133,39 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-UpdateLoginProfile"
     },
     {
+        "eventName": "ListAccountAliases",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Lists the account aliases associated with the AWS account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1087 - Account Discovery"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1087.004 - Account Discovery: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers may list account aliases to identify the human-friendly alias of the compromised account for social engineering or further reconnaissance.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws iam list-account-aliases"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListAccountAliases"
+    },
+    {
         "eventName": "SimulatePrincipalPolicy",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -4013,6 +4192,10 @@
             {
                 "description": "The curious case of DangerDev@protonmail.me",
                 "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -4421,6 +4604,10 @@
             {
                 "description": "New Developments in LLM Hijacking Activity",
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -4627,6 +4814,10 @@
             {
                 "description": "Muddled Libra\u2019s Evolution to the Cloud",
                 "link": "https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -4943,6 +5134,10 @@
             {
                 "description": "Datadog threat roundup: top insights for Q4 2024",
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -5244,6 +5439,10 @@
             {
                 "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -5702,6 +5901,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -5835,6 +6038,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -6702,7 +6909,12 @@
             }
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Rigging the Rules: Manipulating AWS ALB to Mine Sensitive Data",
@@ -8588,6 +8800,10 @@
             {
                 "description": "Securing a SaaS Company's AWS Environment After a Breach",
                 "link": "https://badshah.io/case-studies/saas-aws-breach/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -8750,6 +8966,10 @@
             {
                 "description": "Top employee monitoring app leaks 21 million screenshots on thousands of users",
                 "link": "https://www.techradar.com/pro/security/top-employee-monitoring-app-leaks-21-million-screenshots-on-thousands-of-users"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -8806,6 +9026,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -10635,6 +10859,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -10989,6 +11217,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -11015,6 +11247,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateSecurityGroup"
+    },
+    {
+        "eventName": "DescribeVolumeStatus",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes the status of your Amazon EBS volumes.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Volume health and events may highlight targets for ransomware-style encryption or data theft.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-volume-status"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeVolumeStatus"
     },
     {
         "eventName": "DescribeInstances",
@@ -11156,6 +11419,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-GetTransitGatewayRouteTableAssociations"
+    },
+    {
+        "eventName": "DescribeSnapshots",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes the specified EBS snapshots available to you or all of the EBS snapshots available to you.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Snapshot metadata can reveal data volume targets for exfiltration or cloning in another account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-snapshots --owner-ids self"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSnapshots"
     },
     {
         "eventName": "ModifySnapshotAttribute",
@@ -11815,6 +12109,37 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "DescribeInstanceStatus",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes the status of the specified instances or all of your instances.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Can reveal degraded instances or maintenance events an attacker might exploit.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-instance-status --include-all-instances"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInstanceStatus"
+    },
+    {
         "eventName": "DescribeCarrierGateways",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
@@ -12136,6 +12461,37 @@
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-GetFlowLogsIntegrationTemplate"
     },
     {
+        "eventName": "DescribeHosts",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes the specified Dedicated Hosts or all your Dedicated Hosts.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Provides inventory of dedicated hosts which can guide lateral movement or privilege escalation strategies.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-hosts --max-results 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeHosts"
+    },
+    {
         "eventName": "DescribeTransitGatewayMulticastDomains",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
@@ -12365,6 +12721,37 @@
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeDhcpOptions"
     },
     {
+        "eventName": "DescribeLaunchTemplates",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes one or more launch templates.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Launch template details may leak AMI IDs, user data scripts, and configuration patterns useful for privilege escalation or persistence.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-launch-templates --max-results 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeLaunchTemplates"
+    },
+    {
         "eventName": "AuthorizeSecurityGroupIngress",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
@@ -12448,6 +12835,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -12689,6 +13080,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSnapshotAttribute"
+    },
+    {
+        "eventName": "DescribeInternetGateways",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes your internet gateways.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Knowledge of internet ingress/egress points supports planning of data exfiltration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-internet-gateways"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInternetGateways"
     },
     {
         "eventName": "DescribeVolumesModifications",
@@ -12949,6 +13371,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -13108,6 +13534,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -13251,6 +13681,10 @@
             {
                 "description": "Case Study: Responding to an Attack in AWS",
                 "link": "https://www.cadosecurity.com/case-study-responding-to-an-attack-in-aws/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -13263,6 +13697,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSecurityGroups"
+    },
+    {
+        "eventName": "DescribeTags",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes the specified tags for your EC2 resources.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Tags often encode environment, application names, and ownership enabling targeted attacks or cost-evasion tactics.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-tags"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeTags"
     },
     {
         "eventName": "CreateTrafficMirrorFilterRule",
@@ -13371,6 +13836,10 @@
             {
                 "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
                 "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -13445,6 +13914,10 @@
             {
                 "description": "Navigating the Cloud: Exploring Lateral Movement Techniques",
                 "link": "https://unit42.paloaltonetworks.com/cloud-lateral-movement-techniques/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -13640,6 +14113,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -13704,6 +14181,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -13716,6 +14197,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeInstanceTypes"
+    },
+    {
+        "eventName": "DescribeRouteTables",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes one or more of your route tables.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Reveals network paths which enables planning for lateral movement or data exfiltration routes.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-route-tables --max-results 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeRouteTables"
     },
     {
         "eventName": "DescribeClientVpnRoutes",
@@ -13808,6 +14320,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-GetLaunchTemplateData"
+    },
+    {
+        "eventName": "DescribeSubnets",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes your subnets.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Subnet CIDRs and attributes inform reachability and potential pivot targets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-subnets --max-results 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeSubnets"
     },
     {
         "eventName": "CreateImage",
@@ -14054,6 +14597,68 @@
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-ModifyImageAttribute"
     },
     {
+        "eventName": "DescribeEventAggregates",
+        "eventSource": "health.amazonaws.com",
+        "awsService": "Health",
+        "description": "Returns the number of events of each event type (issue, scheduled change, and account notification).",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Aggregates could reveal large-scale outages an attacker might leverage for cover.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws health describe-event-aggregates --aggregate-field eventTypeCode"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/health#health-DescribeEventAggregates"
+    },
+    {
+        "eventName": "DescribeEvents",
+        "eventSource": "health.amazonaws.com",
+        "awsService": "Health",
+        "description": "Returns information about events that meet the specified filter criteria.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Service health events can help attackers time actions when defenses or staff attention are reduced.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws health describe-events --region us-east-1"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/health#health-DescribeEvents"
+    },
+    {
         "eventName": "ModifyDBSnapshotAttribute",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -14131,6 +14736,37 @@
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyDBSnapshotAttribute"
     },
     {
+        "eventName": "DescribeDBProxies",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns information about DB proxies.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Proxy configuration may expose auth mechanisms or targets for credential harvesting.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-proxies"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBProxies"
+    },
+    {
         "eventName": "AuthorizeDBSecurityGroupIngress",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -14189,6 +14825,68 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-AuthorizeDBSecurityGroupIngress"
+    },
+    {
+        "eventName": "DescribeOrderableDBInstanceOptions",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Describes the orderable DB instance options for a specified DB engine.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Available instance classes may inform cost/resource abuse strategies.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-orderable-db-instance-options --engine mysql --max-items 5"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeOrderableDBInstanceOptions"
+    },
+    {
+        "eventName": "DescribeDBClusters",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Describes existing Amazon Aurora DB clusters and Multi-AZ DB clusters.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Cluster endpoints and replication settings help plan targeted data theft or disruption.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-clusters"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBClusters"
     },
     {
         "eventName": "DeleteGlobalCluster",
@@ -14251,6 +14949,130 @@
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteGlobalCluster"
     },
     {
+        "eventName": "DescribeDBSnapshots",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns information about DB snapshots.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Snapshot info indicates potential data backup targets for theft or ransom duplication.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-snapshots"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBSnapshots"
+    },
+    {
+        "eventName": "DescribeDBEngineVersions",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Describes the properties of specific versions of DB engines.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Engine version info can be correlated with known vulnerabilities for exploitation.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-engine-versions"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBEngineVersions"
+    },
+    {
+        "eventName": "DescribeDBInstances",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Describes provisioned RDS instances.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "DB endpoint details aid targeting for data exfiltration or privilege escalation within databases.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-instances"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBInstances"
+    },
+    {
+        "eventName": "DescribeDBSubnetGroups",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns a list of DBSubnetGroup descriptions.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Subnet group details reveal network placement of databases supporting lateral movement planning.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-db-subnet-groups"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeDBSubnetGroups"
+    },
+    {
         "eventName": "ModifyDBInstance",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -14275,6 +15097,10 @@
             {
                 "description": "Securing a SaaS Company's AWS Environment After a Breach",
                 "link": "https://badshah.io/case-studies/saas-aws-breach/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [],
@@ -14359,6 +15185,37 @@
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteDBCluster"
     },
     {
+        "eventName": "DescribeExportTasks",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns information about a snapshot or cluster export to Amazon S3.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Export task details may expose S3 bucket names and regions, aiding in data exfiltration efforts.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-export-tasks"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeExportTasks"
+    },
+    {
         "eventName": "StartExportTask",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -14389,7 +15246,12 @@
             }
         ],
         "usedInWild": false,
-        "incidents": [],
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS - RDS Post Exploitation",
@@ -14405,6 +15267,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-StartExportTask"
+    },
+    {
+        "eventName": "DescribeGlobalClusters",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns information about Aurora global database clusters.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Global cluster topology may expose cross-region replication targets for disruption or exfiltration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-global-clusters"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeGlobalClusters"
     },
     {
         "eventName": "DeleteDBInstance",
@@ -14457,6 +15350,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-DeleteDBInstance"
+    },
+    {
+        "eventName": "DescribeBlueGreenDeployments",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Describes one or more blue/green deployments.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Allows attackers discovery of deployment configurations and potential weaknesses.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-blue-green-deployments"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeBlueGreenDeployments"
     },
     {
         "eventName": "CreateDBSecurityGroup",
@@ -14553,6 +15477,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -14610,6 +15538,68 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyActivityStream"
+    },
+    {
+        "eventName": "DescribePendingMaintenanceActions",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Returns a list of resources (for example, DB instances) that have at least one pending maintenance action.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Maintenance windows may present timing opportunities for stealthy operations.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-pending-maintenance-actions"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribePendingMaintenanceActions"
+    },
+    {
+        "eventName": "DescribeValidDBInstanceModifications",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "You can call DescribeValidDBInstanceModifications to learn what modifications you can make to your DB instance.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "May inform attackers on upgrade/downgrade or performance-impacting changes for disruptive actions.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds describe-valid-db-instance-modifications --db-instance-identifier example"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeValidDBInstanceModifications"
     },
     {
         "eventName": "CreateDevEndpoint",
@@ -15301,6 +16291,47 @@
         "permissions": "https://aws.permissions.cloud/iam/ses#ses-GetAccount"
     },
     {
+        "eventName": "SendEmail",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Composes an email message and immediately queues it for sending.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection",
+            "TA0011 - Command and Control",
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking",
+            "T1567 - Exfiltration Over Web Service"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1585 - Establish Accounts",
+                "reason": "Using SES to send phishing emails can support infrastructure for social engineering."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Sending emails from a compromised account can enable phishing, data exfiltration, or brand abuse.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ses send-email --from attacker@example.com --destination ToAddresses=target@example.com --message Subject={Data=Test},Body={Text={Data=Hi}}"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-SendEmail"
+    },
+    {
         "eventName": "GetAccountSendingEnabled",
         "eventSource": "ses.amazonaws.com",
         "awsService": "SES",
@@ -15396,6 +16427,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [
@@ -15473,6 +16508,10 @@
             {
                 "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            },
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
             }
         ],
         "researchLinks": [

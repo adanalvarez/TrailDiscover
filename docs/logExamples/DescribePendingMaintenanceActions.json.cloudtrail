@@ -1,0 +1,44 @@
+{
+    "eventVersion": "1.11",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA****************:User",
+        "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+        "accountId": "111111111111",
+        "accessKeyId": "AKIA****************",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA****************:User",
+                "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b",
+                "accountId": "111111111111",
+                "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d47002b"
+            },
+            "attributes": {
+                "creationDate": "2025-10-12T14:55:21Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-10-12T15:10:04Z",
+    "eventSource": "rds.amazonaws.com",
+    "eventName": "DescribePendingMaintenanceActions",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "0.0.0.0",
+    "userAgent": "aws-cli/2.31.1 md/awscrt#0.27.6 ua/2.1 os/linux#6.1.147-172.266.amzn2023.x86_64 md/arch#x86_64 lang/python#3.13.7 md/pyimpl#CPython exec-env/CloudShell m/Z,b,C,E cfg/retry-mode#standard md/installer#exe md/distrib#amzn.2023 md/prompt#off md/command#rds.describe-pending-maintenance-actions",
+    "requestParameters": null,
+    "responseElements": null,
+    "requestID": "ff2e3e03-2383-41b3-9cf3-42328668e873",
+    "eventID": "47afff02-abf5-4cd5-9427-80a1835643ae",
+    "readOnly": true,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "111111111111",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "rds.us-west-2.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+}

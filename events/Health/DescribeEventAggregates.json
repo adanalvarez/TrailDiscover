@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeEventAggregates",
+    "eventSource": "health.amazonaws.com",
+    "awsService": "Health",
+    "description": "Returns the number of events of each event type (issue, scheduled change, and account notification).",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Aggregates could reveal large-scale outages an attacker might leverage for cover.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws health describe-event-aggregates --aggregate-field eventTypeCode"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/health#health-DescribeEventAggregates"
+}

@@ -1,0 +1,63 @@
+[
+    {
+        "eventTime": "2025-01-24T11:43:00Z",
+        "eventSource": "ses.amazonaws.com",
+        "eventName": "SendEmail",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.23.4 md/awscrt#0.23.4",
+        "requestParameters": {
+            "destination": {
+                "bccAddresses": [
+                    "HIDDEN_DUE_TO_SECURITY_REASONS"
+                ],
+                "toAddresses": [
+                    "HIDDEN_DUE_TO_SECURITY_REASONS"
+                ],
+                "ccAddresses": [
+                    "HIDDEN_DUE_TO_SECURITY_REASONS"
+                ]
+            },
+            "message": {
+                "subject": {
+                    "charset": "UTF-8",
+                    "data": "HIDDEN_DUE_TO_SECURITY_REASONS"
+                },
+                "body": {
+                    "html": {
+                        "charset": "UTF-8",
+                        "data": "HIDDEN_DUE_TO_SECURITY_REASONS"
+                    },
+                    "text": {
+                        "charset": "UTF-8",
+                        "data": "HIDDEN_DUE_TO_SECURITY_REASONS"
+                    }
+                }
+            },
+            "source": "sender@example.com"
+        },
+        "responseElements": null,
+        "additionalEventData": {
+            "sesMessageId": "01000100a11a11aa-00aa0a00-00a0-48a8-aaa7-a174a83b456a-000000"
+        },
+        "requestID": "ab2cc803-ac09-11d7-8bb8-a56a3119e476",
+        "eventID": "eb834e01-f168-435f-92c0-c36278378b6e",
+        "readOnly": true,
+        "resources": [
+            {
+                "accountId": "111111111111",
+                "type": "AWS::SES::EmailIdentity",
+                "ARN": "arn:aws:ses:us-east-1:111122223333:identity/sender@example.com"
+            }
+        ],
+        "eventType": "AwsApiCall",
+        "managementEvent": false,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Data",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "email.us-east-1.amazonaws.com"
+        }
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "eventName": "ListApplications",
+    "eventSource": "servicecatalog-appregistry.amazonaws.com",
+    "awsService": "ServiceCatalog",
+    "description": "Retrieves a list of all of your applications.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Reveals cloud resources which may be targeted for further exploration or exploitation.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws servicecatalog-appregistry list-applications"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/appconfig#appconfig-ListApplications"
+}

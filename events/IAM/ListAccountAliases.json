@@ -1,0 +1,33 @@
+{
+    "eventName": "ListAccountAliases",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Lists the account aliases associated with the AWS account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers may list account aliases to identify the human-friendly alias of the compromised account for social engineering or further reconnaissance.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam list-account-aliases"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-ListAccountAliases"
+}

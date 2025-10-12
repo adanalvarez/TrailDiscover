@@ -21,7 +21,12 @@
         }
     ],
     "usedInWild": false,
-    "incidents": [],
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",

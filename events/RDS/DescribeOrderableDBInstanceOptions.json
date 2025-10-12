@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeOrderableDBInstanceOptions",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Describes the orderable DB instance options for a specified DB engine.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Available instance classes may inform cost/resource abuse strategies.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds describe-orderable-db-instance-options --engine mysql --max-items 5"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-DescribeOrderableDBInstanceOptions"
+}

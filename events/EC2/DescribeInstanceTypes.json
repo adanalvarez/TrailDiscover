@@ -49,6 +49,10 @@
         {
             "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
             "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [],

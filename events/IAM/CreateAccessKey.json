@@ -54,6 +54,10 @@
         {
             "description": "New Developments in LLM Hijacking Activity",
             "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+        },
+        {
+            "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+            "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
         }
     ],
     "researchLinks": [
