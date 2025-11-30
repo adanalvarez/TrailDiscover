@@ -1,36 +1,5 @@
 [
     {
-        "eventName": "ListApplications",
-        "eventSource": "servicecatalog-appregistry.amazonaws.com",
-        "awsService": "ServiceCatalog",
-        "description": "Retrieves a list of all of your applications.",
-        "mitreAttackTactics": [
-            "TA0007 - Discovery"
-        ],
-        "mitreAttackTechniques": [
-            "T1526 - Cloud Service Discovery"
-        ],
-        "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [],
-        "usedInWild": true,
-        "incidents": [
-            {
-                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
-                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
-            }
-        ],
-        "researchLinks": [],
-        "securityImplications": "Reveals cloud resources which may be targeted for further exploration or exploitation.",
-        "alerting": [],
-        "simulation": [
-            {
-                "type": "commandLine",
-                "value": "aws servicecatalog-appregistry list-applications"
-            }
-        ],
-        "permissions": "https://aws.permissions.cloud/iam/appconfig#appconfig-ListApplications"
-    },
-    {
         "eventName": "AddMemberToGroup",
         "eventSource": "sso-directory.amazonaws.com",
         "awsService": "SSO",
@@ -2284,6 +2253,10 @@
             {
                 "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -3152,6 +3125,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/elasticfilesystem#elasticfilesystem-DeleteMountTarget"
+    },
+    {
+        "eventName": "ListApplications",
+        "eventSource": "servicecatalog-appregistry.amazonaws.com",
+        "awsService": "ServiceCatalog",
+        "description": "Retrieves a list of all of your applications.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
+                "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Reveals cloud resources which may be targeted for further exploration or exploitation.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws servicecatalog-appregistry list-applications"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/appconfig#appconfig-ListApplications"
     },
     {
         "eventName": "DeleteRule",
@@ -5443,6 +5447,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -5905,6 +5913,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -6042,6 +6054,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -11221,6 +11237,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -12010,6 +12030,10 @@
             {
                 "technique": "T1212 - Exploitation for Credential Access",
                 "reason": "An attacker might exploit the creation and handling of key pairs to gain access to credentials if there are vulnerabilities or misconfigurations in how the keys are managed and stored."
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "usedInWild": true,
@@ -12792,6 +12816,10 @@
             {
                 "technique": "T1090 - Proxy",
                 "reason": "Attackers might modify ingress rules to allow traffic through a proxy, enabling them to route malicious traffic through the compromised environment."
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "usedInWild": true,
@@ -13288,6 +13316,10 @@
             {
                 "description": "Democratic National Committee hack",
                 "link": "https://www.politico.com/f/?id=00000168-6161-de11-af7d-ef7327ea0000"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [
@@ -13538,6 +13570,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "My AWS Account Got Hacked - Here Is What Happened",
+                "link": "https://zviwex.com/posts/aws-account-hacked"
             }
         ],
         "researchLinks": [

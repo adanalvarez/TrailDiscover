@@ -55,6 +55,10 @@
         {
             "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        },
+        {
+            "description": "My AWS Account Got Hacked - Here Is What Happened",
+            "link": "https://zviwex.com/posts/aws-account-hacked"
         }
     ],
     "researchLinks": [
