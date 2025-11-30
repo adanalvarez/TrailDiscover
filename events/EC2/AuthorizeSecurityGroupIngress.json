@@ -39,6 +39,10 @@
         {
             "technique": "T1090 - Proxy",
             "reason": "Attackers might modify ingress rules to allow traffic through a proxy, enabling them to route malicious traffic through the compromised environment."
+        },
+        {
+            "description": "My AWS Account Got Hacked - Here Is What Happened",
+            "link": "https://zviwex.com/posts/aws-account-hacked"
         }
     ],
     "usedInWild": true,

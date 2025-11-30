@@ -36,6 +36,10 @@
         {
             "technique": "T1212 - Exploitation for Credential Access",
             "reason": "An attacker might exploit the creation and handling of key pairs to gain access to credentials if there are vulnerabilities or misconfigurations in how the keys are managed and stored."
+        },
+        {
+            "description": "My AWS Account Got Hacked - Here Is What Happened",
+            "link": "https://zviwex.com/posts/aws-account-hacked"
         }
     ],
     "usedInWild": true,

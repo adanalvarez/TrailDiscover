@@ -52,6 +52,10 @@
         {
             "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
             "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        },
+        {
+            "description": "My AWS Account Got Hacked - Here Is What Happened",
+            "link": "https://zviwex.com/posts/aws-account-hacked"
         }
     ],
     "researchLinks": [
