@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrailDiscover</title>
+    <meta name="description" content="CloudTrail Events mapped to real incidents">
+    <meta name="author" content="Adan Alvarez">
+    <meta property="og:title" content="TrailDiscover">
+    <meta property="og:description" content="CloudTrail Events mapped to real incidents">
+    <meta property="og:type" content="website">
+    <title>TrailDiscover - AWS CloudTrail Event Discovery</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -11,13 +17,17 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a65a2f1386.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="logo-container">
-            <img src="logo.png" alt="CloudUncover" class="logo">
+    <header>
+        <div class="container-fluid">
+            <div class="logo-container">
+                <img src="logo.png" alt="TrailDiscover Logo" class="logo" loading="eager">
+            </div>
         </div>
+    </header>
+    <main>
+        <div class="container-fluid">
         <div class="filter-controls">
             <button id="toggleUsedInWild" class="btn btn-wild">Used in the Wild</button>
             <select id="mitreAttackTacticFilter" class="form-control">
@@ -37,7 +47,8 @@
             </select>
         </div>
         <div id="grid" class="gridjs"></div>
-    </div>
+        </div>
+    </main>
     
     <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -56,11 +67,13 @@
             </div>
         </div>
         </div>
-    </div>    
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
-    <script src="initializeGrid.js"></script>
+    </div>
+    
     <a href="https://github.com/adanalvarez/TrailDiscover" class="btn btn-secondary edit-on-github">
         <i class="fa fa-github"></i> Edit on GitHub
     </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="initializeGrid.js"></script>
 </body>
 </html>
