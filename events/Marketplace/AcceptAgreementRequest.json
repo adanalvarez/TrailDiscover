@@ -1,7 +1,7 @@
 {
     "eventName": "AcceptAgreementRequest",
     "eventSource": "agreement-marketplace.amazonaws.com",
-    "awsService": "AWS Marketplace",
+    "awsService": "Marketplace",
     "description": "Accepts an AWS Marketplace agreement request, activating entitlements needed for Bedrock third-party models.",
     "mitreAttackTactics": [
         "TA0003 - Persistence"

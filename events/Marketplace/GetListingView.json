@@ -1,7 +1,7 @@
 {
     "eventName": "GetListingView",
     "eventSource": "discovery-marketplace.amazonaws.com",
-    "awsService": "AWS Marketplace",
+    "awsService": "Marketplace",
     "description": "Retrieves detailed metadata for an AWS Marketplace listing, including pricing, fulfillment, and entitlement options used by Bedrock.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"

@@ -1,7 +1,7 @@
 {
     "eventName": "SearchAgreements",
     "eventSource": "agreement-marketplace.amazonaws.com",
-    "awsService": "AWS Marketplace",
+    "awsService": "Marketplace",
     "description": "Searches across all agreements that a proposer has in AWS Marketplace.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"

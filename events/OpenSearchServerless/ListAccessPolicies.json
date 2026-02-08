@@ -1,7 +1,7 @@
 {
     "eventName": "ListAccessPolicies",
     "eventSource": "aoss.amazonaws.com",
-    "awsService": "OpenSearch Serverless",
+    "awsService": "OpenSearchServerless",
     "description": "Returns information about a list of OpenSearch Serverless access policies.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
