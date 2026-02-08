@@ -1,0 +1,40 @@
+{
+    "eventName": "AcceptAgreementRequest",
+    "eventSource": "agreement-marketplace.amazonaws.com",
+    "awsService": "AWS Marketplace",
+    "description": "Accepts an AWS Marketplace agreement request, activating entitlements needed for Bedrock third-party models.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Accepting agreements can unlock expensive GPU-backed models that adversaries then abuse for unauthorized inference workloads."
+        },
+        {
+            "technique": "T1110 - Brute Force",
+            "reason": "Attackers may repeatedly request and accept agreements with different pricing terms to find misconfigurations or weak approval workflows."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AcceptAgreementRequest to silently subscribe to premium Bedrock listings, enabling long-lived access to costly AI services or staging points for data theft.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws marketplace-agreement accept-agreement-request --agreement-request-id ar-0123456789abcdef --client-token demo-token"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-AcceptAgreementRequest"
+}

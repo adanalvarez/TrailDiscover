@@ -41,6 +41,10 @@
         {
             "description": "Datadog threat roundup: top insights for Q4 2024",
             "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+        },
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
     "researchLinks": [],

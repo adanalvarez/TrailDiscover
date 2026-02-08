@@ -1,0 +1,46 @@
+[
+    {
+        "eventVersion": "1.08",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d47002b"
+                },
+                "webIdFederationData": {},
+                "attributes": {
+                    "creationDate": "2026-02-08T16:28:43Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2026-02-08T16:31:32Z",
+        "eventSource": "aoss.amazonaws.com",
+        "eventName": "ListAccessPolicies",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython m/g,E,b,Z cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#opensearchserverless.list-access-policies",
+        "requestParameters": {
+            "type": "data"
+        },
+        "responseElements": null,
+        "requestID": "f182f77e-4670-4b97-b381-1b5e709991b9",
+        "eventID": "5e7c50cd-4fe5-429e-ad3a-652c02ff3f60",
+        "readOnly": true,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "clientProvidedHostHeader": "aoss.us-east-1.amazonaws.com"
+        }
+    }
+]

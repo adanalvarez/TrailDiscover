@@ -1,0 +1,40 @@
+{
+    "eventName": "ListCustomModels",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Returns a list of the custom models that you have created with the CreateModelCustomizationJob operation.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087.004 - Cloud Account",
+            "reason": "Inventorying custom models can highlight which accounts own valuable AI assets and what capacity they control."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Knowing which models exist helps attackers decide which compromised identities grant the access they need to run or modify them."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListCustomModels to discover proprietary fine-tunes worth stealing or sabotaging and to gauge potential GPU spend to hijack.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock list-custom-models"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListCustomModels"
+}

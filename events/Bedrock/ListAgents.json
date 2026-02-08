@@ -1,0 +1,40 @@
+{
+    "eventName": "ListAgents",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Lists the agents belonging to an account and information about each agent.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Enumerating agents can reveal the business functions and AWS principals associated with each agent, helping attackers understand which identities are valuable targets."
+        },
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Inspecting agent configurations can expose which IAM roles and policies they rely on, informing privilege-escalation plans."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAgents to inventory AI agents, map their integrations, and select high-impact targets for further compromise.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent list-agents"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListAgents"
+}

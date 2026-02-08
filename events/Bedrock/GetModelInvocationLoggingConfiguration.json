@@ -45,6 +45,10 @@
         {
             "description": "New Developments in LLM Hijacking Activity",
             "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+        },
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
     "researchLinks": [],

@@ -1,0 +1,40 @@
+{
+    "eventName": "ListInferenceProfiles",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Returns a list of inference profiles that you can use.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Understanding inference profiles helps an attacker identify choke points where they could exhaust capacity or disrupt service."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Profile metadata may reference monitoring hooks or logging sinks that adversaries can later disable."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListInferenceProfiles to identify high-cost deployments they can hijack for ML workload abuse or target for disruption.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock list-inference-profiles"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListInferenceProfiles"
+}

@@ -1,0 +1,40 @@
+{
+    "eventName": "ListAccessPolicies",
+    "eventSource": "aoss.amazonaws.com",
+    "awsService": "OpenSearch Serverless",
+    "description": "Returns information about a list of OpenSearch Serverless access policies.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1069 - Permission Groups Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1098 - Account Manipulation",
+            "reason": "Reviewing existing access policies helps attackers understand how to modify identities or roles to gain broader access."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Policy details reveal which principals already have data-plane permissions, indicating which compromised accounts offer the best reach."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAccessPolicies to understand enforcement gaps, clone permissive rules, or stage privilege escalation against OpenSearch Serverless data.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws opensearchserverless list-access-policies --type data"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aoss#aoss-ListAccessPolicies"
+}

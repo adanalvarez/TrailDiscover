@@ -1,0 +1,40 @@
+{
+    "eventName": "ListEndpoints",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Lists endpoints.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1499 - Endpoint Denial of Service",
+            "reason": "Identifying endpoints allows attackers to target critical ML APIs with disruption or resource exhaustion attacks."
+        },
+        {
+            "technique": "T1562 - Impair Defenses",
+            "reason": "Endpoint configuration details may highlight attached monitoring or logging integrations that adversaries later disable."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListEndpoints to find live ML services that can be hijacked for inference abuse, data theft, or service disruption.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker list-endpoints"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListEndpoints"
+}

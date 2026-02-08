@@ -1,0 +1,40 @@
+{
+    "eventName": "SearchAgreements",
+    "eventSource": "agreement-marketplace.amazonaws.com",
+    "awsService": "AWS Marketplace",
+    "description": "Searches across all agreements that a proposer has in AWS Marketplace.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087.004 - Cloud Account",
+            "reason": "Agreement listings reveal which AWS accounts have active contracts for third-party AI models, guiding attackers toward high-value tenants."
+        },
+        {
+            "technique": "T1078 - Valid Accounts",
+            "reason": "Knowing which principals accepted agreements indicates which compromised identities already have the required entitlements."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use SearchAgreements to enumerate Bedrock contracts, determine billing limits, and time their abuse before defenders notice unusual marketplace usage.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws marketplace-agreement search-agreements --catalog BedrockMarketplace --max-results 20"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-SearchAgreements"
+}

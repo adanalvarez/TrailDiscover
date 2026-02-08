@@ -20,8 +20,13 @@
             "reason": "Attackers might modify configurations like logging settings or environment variables to prevent detection efforts."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS IAM Privilege Escalation Techniques",

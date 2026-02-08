@@ -1,0 +1,40 @@
+{
+    "eventName": "ListCollections",
+    "eventSource": "aoss.amazonaws.com",
+    "awsService": "OpenSearch Serverless",
+    "description": "Lists all OpenSearch Serverless collections.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087.004 - Cloud Account",
+            "reason": "Enumerating collections reveals which tenants and workloads exist across cloud accounts, guiding attackers toward the most valuable data stores."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Collection metadata references associated S3 buckets and encryption settings, helping adversaries map where searchable data resides."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListCollections to inventory search clusters, identify business-critical analytics assets, and prioritize follow-on data theft or sabotage.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws opensearchserverless list-collections"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aoss#aoss-ListCollections"
+}

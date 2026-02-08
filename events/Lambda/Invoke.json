@@ -58,6 +58,10 @@
         {
             "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
             "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+        },
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
     "researchLinks": [
