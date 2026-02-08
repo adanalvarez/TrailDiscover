@@ -1,7 +1,7 @@
 {
     "eventName": "ListCollections",
     "eventSource": "aoss.amazonaws.com",
-    "awsService": "OpenSearch Serverless",
+    "awsService": "OpenSearchServerless",
     "description": "Lists all OpenSearch Serverless collections.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
