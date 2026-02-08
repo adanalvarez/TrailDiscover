@@ -1,0 +1,40 @@
+{
+    "eventName": "GetKnowledgeBase",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Retrieves configuration details for a specific Amazon Bedrock knowledge base.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1082 - System Information Discovery",
+            "reason": "Inspecting a knowledge base exposes data sources, embeddings, and IAM roles that describe how sensitive data flows through the environment."
+        },
+        {
+            "technique": "T1552 - Unsecured Credentials",
+            "reason": "Metadata about storage locations or connection strings may reveal weakly protected secrets that attackers can harvest."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetKnowledgeBase to understand how proprietary data is ingested and where to pivot for data exfiltration or tampering.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent get-knowledge-base --knowledge-base-id kb-1234567890"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetKnowledgeBase"
+}

@@ -1,0 +1,40 @@
+{
+    "eventName": "ListTrainingJobs",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Lists training jobs.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Knowing which training jobs run and when helps attackers schedule their own GPU-intensive operations to blend in or steal capacity."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Awareness of job histories and logs enables adversaries to tamper with or delete evidence tied to compromised training workflows."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListTrainingJobs to discover datasets, container images, and execution roles involved in training so they can pivot to sensitive storage or tamper with future training runs.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker list-training-jobs"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListTrainingJobs"
+}

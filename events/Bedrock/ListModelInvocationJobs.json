@@ -1,0 +1,40 @@
+{
+    "eventName": "ListModelInvocationJobs",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Lists all batch inference jobs in the account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1496 - Resource Hijacking",
+            "reason": "Enumerating historical jobs helps attackers understand typical GPU schedules so they can hide within or disrupt them."
+        },
+        {
+            "technique": "T1070 - Indicator Removal",
+            "reason": "Knowing which jobs exist and what logs they generate can guide attackers in deleting or tampering with related evidence."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListModelInvocationJobs to review sensitive prompts, spot valuable outputs, or plan when to insert malicious workloads.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock list-model-invocation-jobs"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListModelInvocationJobs"
+}

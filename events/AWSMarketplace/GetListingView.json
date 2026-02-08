@@ -1,0 +1,40 @@
+{
+    "eventName": "GetListingView",
+    "eventSource": "discovery-marketplace.amazonaws.com",
+    "awsService": "AWS Marketplace",
+    "description": "Retrieves detailed metadata for an AWS Marketplace listing, including pricing, fulfillment, and entitlement options used by Bedrock.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1069 - Permission Groups Discovery",
+            "reason": "Listing details reveal which IAM roles or marketplace entitlements are required, helping attackers plan privilege escalation."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Information about usage terms per account can indicate which AWS accounts already have access to specific Bedrock models."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetListingView to learn which commercial Bedrock providers are available, their cost controls, and what entitlements must be abused to spin up expensive inference jobs.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws marketplace-catalog get-listing-view --listing-id l-abc123 --catalog BedrockMarketplace"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-GetListingView"
+}

@@ -40,8 +40,13 @@
             "reason": "By updating the Lambda function code to capture inputs, such as keystrokes or API inputs, adversaries can collect sensitive information."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",

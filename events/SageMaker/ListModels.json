@@ -1,0 +1,40 @@
+{
+    "eventName": "ListModels",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Lists models created with the CreateModel API.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1087.004 - Cloud Account",
+            "reason": "Enumerating SageMaker models reveals which environments and accounts run sensitive ML workloads."
+        },
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "Model metadata often references model artifacts in S3, providing a map to potential data-theft targets."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListModels to inventory proprietary ML assets, determine which ones are most valuable, and plan exfiltration or sabotage.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker list-models"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListModels"
+}

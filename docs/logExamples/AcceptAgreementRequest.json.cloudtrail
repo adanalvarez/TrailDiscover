@@ -1,0 +1,31 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "Unknown",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************"
+        },
+        "eventTime": "2026-02-08T17:04:36Z",
+        "eventSource": "agreement-marketplace.amazonaws.com",
+        "eventName": "AcceptAgreementRequest",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "AWS Internal",
+        "requestParameters": {
+            "agreementRequestId": "ar-bt0olemsixuh5lfti29ewcfa2"
+        },
+        "responseElements": {
+            "agreementId": "agmt-3ibqxj0exzvzt2u3ofpzjgbv4"
+        },
+        "requestID": "d6fe0df7-3436-43f0-9055-e15740c09faa",
+        "eventID": "a048ca6f-5d17-48ef-a818-8db62b4cf3bd",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management"
+    }
+]

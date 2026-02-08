@@ -694,6 +694,86 @@
         "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-ListAccounts"
     },
     {
+        "eventName": "ListAccessPolicies",
+        "eventSource": "aoss.amazonaws.com",
+        "awsService": "OpenSearch Serverless",
+        "description": "Returns information about a list of OpenSearch Serverless access policies.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1069 - Permission Groups Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1098 - Account Manipulation",
+                "reason": "Reviewing existing access policies helps attackers understand how to modify identities or roles to gain broader access."
+            },
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Policy details reveal which principals already have data-plane permissions, indicating which compromised accounts offer the best reach."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListAccessPolicies to understand enforcement gaps, clone permissive rules, or stage privilege escalation against OpenSearch Serverless data.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws opensearchserverless list-access-policies --type data"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aoss#aoss-ListAccessPolicies"
+    },
+    {
+        "eventName": "ListCollections",
+        "eventSource": "aoss.amazonaws.com",
+        "awsService": "OpenSearch Serverless",
+        "description": "Lists all OpenSearch Serverless collections.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1087.004 - Cloud Account",
+                "reason": "Enumerating collections reveals which tenants and workloads exist across cloud accounts, guiding attackers toward the most valuable data stores."
+            },
+            {
+                "technique": "T1530 - Data from Cloud Storage Object",
+                "reason": "Collection metadata references associated S3 buckets and encryption settings, helping adversaries map where searchable data resides."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListCollections to inventory search clusters, identify business-critical analytics assets, and prioritize follow-on data theft or sabotage.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws opensearchserverless list-collections"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aoss#aoss-ListCollections"
+    },
+    {
         "eventName": "CreateStack",
         "eventSource": "cloudformation.amazonaws.com",
         "awsService": "CloudFormation",
@@ -929,6 +1009,10 @@
             {
                 "description": "Tales from the cloud trenches: Unwanted visitor",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-unwanted-visitor/"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [
@@ -2483,8 +2567,13 @@
                 "reason": "Attackers might modify configurations like logging settings or environment variables to prevent detection efforts."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
@@ -2608,8 +2697,13 @@
                 "reason": "By updating the Lambda function code to capture inputs, such as keystrokes or API inputs, adversaries can collect sensitive information."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident",
@@ -2702,6 +2796,10 @@
             {
                 "description": "Cloud Security Stories: From Risky Permissions to Ransomware Execution",
                 "link": "https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [
@@ -4612,6 +4710,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [
@@ -5451,6 +5553,10 @@
             {
                 "description": "My AWS Account Got Hacked - Here Is What Happened",
                 "link": "https://zviwex.com/posts/aws-account-hacked"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [
@@ -6058,6 +6164,10 @@
             {
                 "description": "My AWS Account Got Hacked - Here Is What Happened",
                 "link": "https://zviwex.com/posts/aws-account-hacked"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [
@@ -9846,6 +9956,46 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
     },
     {
+        "eventName": "ListKnowledgeBases",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Lists the knowledge bases in an account. The list also includes information about each knowledge base.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1082 - System Information Discovery",
+                "reason": "Enumerating knowledge bases reveals what enterprise data sources are connected to AI workloads and how they are configured."
+            },
+            {
+                "technique": "T1530 - Data from Cloud Storage Object",
+                "reason": "A list of knowledge bases can point attackers to valuable document stores or vector databases that might contain sensitive data."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListKnowledgeBases to identify connected data repositories and prioritize follow-on data theft or sabotage.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent list-knowledge-bases"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListKnowledgeBases"
+    },
+    {
         "eventName": "GetUseCaseForModelAccess",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -9906,6 +10056,46 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetUseCaseForModelAccess"
     },
     {
+        "eventName": "ListCustomModels",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Returns a list of the custom models that you have created with the CreateModelCustomizationJob operation.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1087.004 - Cloud Account",
+                "reason": "Inventorying custom models can highlight which accounts own valuable AI assets and what capacity they control."
+            },
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Knowing which models exist helps attackers decide which compromised identities grant the access they need to run or modify them."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListCustomModels to discover proprietary fine-tunes worth stealing or sabotaging and to gauge potential GPU spend to hijack.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock list-custom-models"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListCustomModels"
+    },
+    {
         "eventName": "ListProvisionedModelThroughputs",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -9940,6 +10130,10 @@
             {
                 "description": "Detecting AI resource-hijacking with Composite Alerts",
                 "link": "https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [],
@@ -10008,6 +10202,46 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutFoundationModelEntitlement"
+    },
+    {
+        "eventName": "ListAgents",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Lists the agents belonging to an account and information about each agent.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1087 - Account Discovery",
+                "reason": "Enumerating agents can reveal the business functions and AWS principals associated with each agent, helping attackers understand which identities are valuable targets."
+            },
+            {
+                "technique": "T1069 - Permission Groups Discovery",
+                "reason": "Inspecting agent configurations can expose which IAM roles and policies they rely on, informing privilege-escalation plans."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListAgents to inventory AI agents, map their integrations, and select high-impact targets for further compromise.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent list-agents"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListAgents"
     },
     {
         "eventName": "InvokeModelWithResponseStream",
@@ -10178,6 +10412,126 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetFoundationModelAvailability"
     },
     {
+        "eventName": "ListInferenceProfiles",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Returns a list of inference profiles that you can use.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1499 - Endpoint Denial of Service",
+                "reason": "Understanding inference profiles helps an attacker identify choke points where they could exhaust capacity or disrupt service."
+            },
+            {
+                "technique": "T1562 - Impair Defenses",
+                "reason": "Profile metadata may reference monitoring hooks or logging sinks that adversaries can later disable."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListInferenceProfiles to identify high-cost deployments they can hijack for ML workload abuse or target for disruption.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock list-inference-profiles"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListInferenceProfiles"
+    },
+    {
+        "eventName": "ListModelInvocationJobs",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Lists all batch inference jobs in the account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1496 - Resource Hijacking",
+                "reason": "Enumerating historical jobs helps attackers understand typical GPU schedules so they can hide within or disrupt them."
+            },
+            {
+                "technique": "T1070 - Indicator Removal",
+                "reason": "Knowing which jobs exist and what logs they generate can guide attackers in deleting or tampering with related evidence."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListModelInvocationJobs to review sensitive prompts, spot valuable outputs, or plan when to insert malicious workloads.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock list-model-invocation-jobs"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListModelInvocationJobs"
+    },
+    {
+        "eventName": "GetKnowledgeBase",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Retrieves configuration details for a specific Amazon Bedrock knowledge base.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1082 - System Information Discovery",
+                "reason": "Inspecting a knowledge base exposes data sources, embeddings, and IAM roles that describe how sensitive data flows through the environment."
+            },
+            {
+                "technique": "T1552 - Unsecured Credentials",
+                "reason": "Metadata about storage locations or connection strings may reveal weakly protected secrets that attackers can harvest."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetKnowledgeBase to understand how proprietary data is ingested and where to pivot for data exfiltration or tampering.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent get-knowledge-base --knowledge-base-id kb-1234567890"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetKnowledgeBase"
+    },
+    {
         "eventName": "ListFoundationModels",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -10220,6 +10574,10 @@
             {
                 "description": "Datadog threat roundup: top insights for Q4 2024",
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [],
@@ -10328,6 +10686,10 @@
             {
                 "description": "New Developments in LLM Hijacking Activity",
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
+            },
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
         "researchLinks": [],
@@ -14695,6 +15057,126 @@
         "permissions": "https://aws.permissions.cloud/iam/health#health-DescribeEvents"
     },
     {
+        "eventName": "GetListingView",
+        "eventSource": "discovery-marketplace.amazonaws.com",
+        "awsService": "AWS Marketplace",
+        "description": "Retrieves detailed metadata for an AWS Marketplace listing, including pricing, fulfillment, and entitlement options used by Bedrock.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1069 - Permission Groups Discovery",
+                "reason": "Listing details reveal which IAM roles or marketplace entitlements are required, helping attackers plan privilege escalation."
+            },
+            {
+                "technique": "T1087 - Account Discovery",
+                "reason": "Information about usage terms per account can indicate which AWS accounts already have access to specific Bedrock models."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetListingView to learn which commercial Bedrock providers are available, their cost controls, and what entitlements must be abused to spin up expensive inference jobs.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws marketplace-catalog get-listing-view --listing-id l-abc123 --catalog BedrockMarketplace"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-GetListingView"
+    },
+    {
+        "eventName": "SearchAgreements",
+        "eventSource": "discovery-marketplace.amazonaws.com",
+        "awsService": "AWS Marketplace",
+        "description": "Searches across all agreements that a proposer has in AWS Marketplace.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1087.004 - Cloud Account",
+                "reason": "Agreement listings reveal which AWS accounts have active contracts for third-party AI models, guiding attackers toward high-value tenants."
+            },
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Knowing which principals accepted agreements indicates which compromised identities already have the required entitlements."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use SearchAgreements to enumerate Bedrock contracts, determine billing limits, and time their abuse before defenders notice unusual marketplace usage.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws marketplace-agreement search-agreements --catalog BedrockMarketplace --max-results 20"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-SearchAgreements"
+    },
+    {
+        "eventName": "AcceptAgreementRequest",
+        "eventSource": "discovery-marketplace.amazonaws.com",
+        "awsService": "AWS Marketplace",
+        "description": "Accepts an AWS Marketplace agreement request, activating entitlements needed for Bedrock third-party models.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1496 - Resource Hijacking",
+                "reason": "Accepting agreements can unlock expensive GPU-backed models that adversaries then abuse for unauthorized inference workloads."
+            },
+            {
+                "technique": "T1110 - Brute Force",
+                "reason": "Attackers may repeatedly request and accept agreements with different pricing terms to find misconfigurations or weak approval workflows."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use AcceptAgreementRequest to silently subscribe to premium Bedrock listings, enabling long-lived access to costly AI services or staging points for data theft.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws marketplace-agreement accept-agreement-request --agreement-request-id ar-0123456789abcdef --client-token demo-token"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-AcceptAgreementRequest"
+    },
+    {
         "eventName": "ModifyDBSnapshotAttribute",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -18022,6 +18504,126 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/servicequotas#servicequotas-RequestServiceQuotaIncrease"
+    },
+    {
+        "eventName": "ListTrainingJobs",
+        "eventSource": "sagemaker.amazonaws.com",
+        "awsService": "SageMaker",
+        "description": "Lists training jobs.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1496 - Resource Hijacking",
+                "reason": "Knowing which training jobs run and when helps attackers schedule their own GPU-intensive operations to blend in or steal capacity."
+            },
+            {
+                "technique": "T1070 - Indicator Removal",
+                "reason": "Awareness of job histories and logs enables adversaries to tamper with or delete evidence tied to compromised training workflows."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListTrainingJobs to discover datasets, container images, and execution roles involved in training so they can pivot to sensitive storage or tamper with future training runs.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sagemaker list-training-jobs"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListTrainingJobs"
+    },
+    {
+        "eventName": "ListEndpoints",
+        "eventSource": "sagemaker.amazonaws.com",
+        "awsService": "SageMaker",
+        "description": "Lists endpoints.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1499 - Endpoint Denial of Service",
+                "reason": "Identifying endpoints allows attackers to target critical ML APIs with disruption or resource exhaustion attacks."
+            },
+            {
+                "technique": "T1562 - Impair Defenses",
+                "reason": "Endpoint configuration details may highlight attached monitoring or logging integrations that adversaries later disable."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListEndpoints to find live ML services that can be hijacked for inference abuse, data theft, or service disruption.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sagemaker list-endpoints"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListEndpoints"
+    },
+    {
+        "eventName": "ListModels",
+        "eventSource": "sagemaker.amazonaws.com",
+        "awsService": "SageMaker",
+        "description": "Lists models created with the CreateModel API.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1087.004 - Cloud Account",
+                "reason": "Enumerating SageMaker models reveals which environments and accounts run sensitive ML workloads."
+            },
+            {
+                "technique": "T1530 - Data from Cloud Storage Object",
+                "reason": "Model metadata often references model artifacts in S3, providing a map to potential data-theft targets."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+                "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListModels to inventory proprietary ML assets, determine which ones are most valuable, and plan exfiltration or sabotage.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sagemaker list-models"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-ListModels"
     },
     {
         "eventName": "DeleteRuleGroup",

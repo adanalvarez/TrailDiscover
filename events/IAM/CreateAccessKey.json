@@ -58,6 +58,10 @@
         {
             "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
             "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        },
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
     "researchLinks": [

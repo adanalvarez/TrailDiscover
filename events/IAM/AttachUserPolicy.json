@@ -56,6 +56,10 @@
         {
             "description": "My AWS Account Got Hacked - Here Is What Happened",
             "link": "https://zviwex.com/posts/aws-account-hacked"
+        },
+        {
+            "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
+            "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
     "researchLinks": [
