@@ -45,6 +45,53 @@ PRs are welcome. Here’s how you can contribute:
 
 **Updating The Web**: After adding or updating events, use the tools in the `tools` folder to generate the updated CSV and JSON files for the web. This ensures that the website stays up-to-date with the latest event information.
 
+## MCP Server
+
+TrailDiscover is available as an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server, allowing AI assistants to query the CloudTrail security events database directly.
+
+**Endpoint:** `https://mcp.traildiscover.cloud/mcp`
+
+### VS Code / GitHub Copilot
+
+Add to your `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "traildiscover": {
+      "type": "http",
+      "url": "https://mcp.traildiscover.cloud/mcp"
+    }
+  }
+}
+```
+
+### Claude Desktop
+
+Add to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "traildiscover": {
+      "type": "streamable-http",
+      "url": "https://mcp.traildiscover.cloud/mcp"
+    }
+  }
+}
+```
+
+### Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `search_events` | Search CloudTrail events by keyword across names, services, and descriptions |
+| `get_event_details` | Get full details for a specific CloudTrail event name |
+| `get_events_by_service` | List all catalogued events for an AWS service |
+| `get_events_by_mitre_tactic` | List events mapped to a MITRE ATT&CK tactic |
+| `get_events_seen_in_wild` | Get events with evidence of real-world incident usage, sorted by number of incidents |
+| `get_database_stats` | Get summary statistics (events, services, tactics, techniques, seen in wild) |
+
 
 ## Datadog Dashboard
 
