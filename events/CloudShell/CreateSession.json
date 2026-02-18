@@ -1,0 +1,47 @@
+{
+    "eventName": "CreateSession",
+    "eventSource": "cloudshell.amazonaws.com",
+    "awsService": "CloudShell",
+    "description": "Occurs when a CloudShell environment is connected from the AWS Management Console.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1059 - Command and Scripting Interpreter"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1059.009 - Command and Scripting Interpreter: Cloud API"
+    ],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1021.007 - Remote Services: Cloud Services",
+            "reason": "The CreateSession API is used to start an interactive AWS CloudShell session and requires authenticating into AWS Management cloud service."
+        },
+        {
+            "technique": "T1078.004 - Valid Accounts: Cloud Accounts",
+            "reason": "The CreateSession API requires valid AWS credentials. Adversary with compromised credentials can then use CreateSession to spawn a shell environment to interact with AWS resources."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+            "link": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+        }
+    ],
+    "researchLinks": [
+        {
+            "description": "Logging and monitoring in AWS CloudShell",
+            "link": "https://docs.aws.amazon.com/cloudshell/latest/userguide/logging-and-monitoring.html"
+        }
+    ],
+    "securityImplications": "Attackers could misuse valid credentials to call CreateSession and open an interactive shell to access cloud resources.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudshell#cloudshell-CreateSession"
+}
