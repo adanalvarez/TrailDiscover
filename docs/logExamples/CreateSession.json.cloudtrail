@@ -1,0 +1,48 @@
+{
+    "awsRegion": "us-west-2",
+    "eventCategory": "Management",
+    "eventID": "a99c6f1b-9854-403e-a83e-34fc10e7609a",
+    "eventName": "CreateSession",
+    "eventSource": "cloudshell.amazonaws.com",
+    "eventTime": "2025-10-10T17:39:24Z",
+    "eventType": "AwsApiCall",
+    "eventVersion": "1.09",
+    "managementEvent": true,
+    "readOnly": false,
+    "recipientAccountId": "111111111111",
+    "requestID": "42a42d61-a962-46b7-bb53-9966938157ea",
+    "requestParameters": {
+        "EnvironmentId": "755*********************************",
+        "QCliDisabled": false,
+        "SessionType": "TMUX",
+        "TabId": "14877312-1e36-44a5-818c-a93859ce9e07"
+    },
+    "responseElements": {
+        "EnvironmentId": "755*********************************",
+        "SessionId": "1760115506015360607-v553gib4s37pi2rskvff4j2a6i",
+        "StreamUrl": "wss://ssmmessages.us-west-2.amazonaws.com/v1/data-channel/1760115506015360607-v553gib4s37pi2rskvff4j2a6i?role=publish_subscribe&cell-number=AAEAARWTB5wmXdUT7GccwYgVh8zMu6+ad/ZdgzkI6KLbCtXCAAAAAGjpRMxNdRc8WeJV5vyOl+kizGPqPTCbmzU/R0uNuLFJ/gt/jy3nFYs+&X-Amz-Date=20251010T173924Z",
+        "TokenValue": "***"
+    },
+    "sourceIPAddress": "0.0.0.0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/0.0.0.0 Safari/537.36",
+    "userIdentity": {
+        "accessKeyId": "AKIA****************",
+        "accountId": "111111111111",
+        "arn": "arn:aws:sts::111111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_c2**************/abc@abc.com",
+        "principalId": "AROA****************:User",
+        "sessionContext": {
+            "attributes": {
+                "creationDate": "2025-10-10T17:02:03Z",
+                "mfaAuthenticated": "false"
+            },
+            "sessionIssuer": {
+                "accountId": "111111111111",
+                "arn": "arn:aws:iam::111111111111111:role/aws-reserved/sso.amazonaws.com/us-west-2/AWSReservedSSO_AdministratorAccess_c2**************",
+                "principalId": "AROA****************:User",
+                "type": "Role",
+                "userName": "AWSReservedSSO_AdministratorAccess_c2**************"
+            }
+        },
+        "type": "AssumedRole"
+    }
+}
