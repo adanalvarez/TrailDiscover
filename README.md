@@ -17,7 +17,7 @@ The easiest way to consume this information is via the website: https://traildis
 Here's what you'll find in TrailDiscover:
 - **Events Folder**: This is the main folder, here each AWS service has its own folder and inside you will find a JSON file for each event, like `CloudTrail/DeleteTrail.json` or `Cognito/GetCredentialsForIdentity.json`.
 - **Docs Folder**: This folder contains a website where you can search through the events easily. You can access the website via: https://traildiscover.cloud/
-- **Tools Folder**: This folder contains tools to put all the event JSONs into one file for the website, make a list of all events in a CSV file, and a tool to help figure out security risks with OpenAI (An OpenAI apikey is needed).
+- **Tools Folder**: Contains `build.py`, a single pipeline that formats events, redacts CloudTrail logs, copies log examples to docs, and generates `events.json`, `events.csv`, and `datadog_dashboard.json`. Additional helper scripts are included for Grimoire log retrieval, Sigma rule matching, and security implication generation.
 
 ### How Events Are Structured
 
@@ -43,7 +43,7 @@ PRs are welcome. Here’s how you can contribute:
 
 **Update Event Details:** Add any new findings or details that can provide a better understanding of the event's implications, use in real-world attacks, or links to researchs where the event is mentioned.
 
-**Updating The Web**: After adding or updating events, use the tools in the `tools` folder to generate the updated CSV and JSON files for the web. This ensures that the website stays up-to-date with the latest event information.
+**Updating The Web**: After adding or updating events, run `python3 build.py` from the `tools` folder to format, redact, and generate all output files. This ensures that the website stays up-to-date with the latest event information.
 
 ## MCP Server
 
@@ -95,7 +95,7 @@ Add to your `claude_desktop_config.json`:
 
 ## Datadog Dashboard
 
-In the Tools folder, the `datadog_dashboard.py` script, when executed, generates the JSON file `datadog_dashboard.json` in the docs folder. This JSON can be [imported into Datadog as a dashboard](https://docs.datadoghq.com/dashboards/configure/#copy-import-or-export-dashboard-json).
+Run `python3 build.py` from the `tools` folder to generate all output files including `datadog_dashboard.json` in the docs folder. This JSON can be [imported into Datadog as a dashboard](https://docs.datadoghq.com/dashboards/configure/#copy-import-or-export-dashboard-json).
 
 The dashboard has an overview section with a 'Top 10 CloudTrail Events exploited in the wild' showcasing the top 10 events happening in the account/s that are known to be used in the wild by attackers. Additionally, it includes a 'MITRE ATT&CK Tactics Events Timeline' that groups events from TrailDiscover into MITRE ATT&CK Tactics and shows when they are happening in our account/s.
 
@@ -104,7 +104,7 @@ Then, events are organized according to MITRE ATT&CK tactics. Each event is pres
 > **⚠️ Warning**
 >
 > This dashboard is resource-intensive. If you want to generate a dashboard with fewer data it is possible to use the options `--on-the-wild-only` to only add events that have been seen in the wild, or the `--tactics` option to only add specific tactics. Example usage:
-> `python3 datadog_dashboard.py --on-the-wild-only --tactics "TA0005 - Defense Evasion" "TA0008 - Lateral Movement"`
+> `python3 build.py --on-the-wild-only --tactics "TA0005 - Defense Evasion" "TA0008 - Lateral Movement"`
 
 
 <p align="center">
