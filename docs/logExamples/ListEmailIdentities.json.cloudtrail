@@ -1,45 +1,45 @@
 [
-   {
-    "eventVersion": "1.08",
-    "userIdentity": {
-        "type": "AssumedRole",
-        "principalId": "AROA3H1YZ9UJ1EFEEVH1U:TrailDiscover",
-        "arn": "arn:aws:sts::393031354412:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33/TrailDiscover",
-        "accountId": "393031354412",
-        "accessKeyId": "ASIAPXEBOKNPAVQ9BFGQ",
-        "sessionContext": {
-            "sessionIssuer": {
-                "type": "Role",
-                "principalId": "AROA3H1YZ9UJ1EFEEVH1U",
-                "arn": "arn:aws:iam::393031354412:role/aws-reserved/sso.amazonaws.com/apiso-south-2r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33",
-                "accountId": "393031354412",
-                "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33"
-            },
-            "attributes": {
-                "creationDate": "2024-12-15T18:41:25Z",
-                "mfaAuthenticated": "false"
+    {
+        "eventVersion": "1.08",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33/TrailDiscover",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/apiso-south-2r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa33"
+                },
+                "attributes": {
+                    "creationDate": "2024-12-15T18:41:25Z",
+                    "mfaAuthenticated": "false"
+                }
             }
+        },
+        "eventTime": "2024-12-15T18:54:36Z",
+        "eventSource": "ses.amazonaws.com",
+        "eventName": "ListEmailIdentities",
+        "awsRegion": "ca-centraleast-3r",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_0edfa7de-9f3f-4506-8040-a8ae6c4ac866 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#sesv2.list-email-identities",
+        "requestParameters": null,
+        "responseElements": null,
+        "requestID": "2115c9c6-8d8b-4ea5-a982-eedb477fb52a",
+        "eventID": "007ebdb7-8af1-42c7-a257-2fac3e475d6c",
+        "readOnly": true,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "email.ca-centraleast-3r.amazonaws.com"
         }
-    },
-    "eventTime": "2024-12-15T18:54:36Z",
-    "eventSource": "ses.amazonaws.com",
-    "eventName": "ListEmailIdentities",
-    "awsRegion": "ca-centraleast-3r",
-    "sourceIPAddress": "8.214.221.11",
-    "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#55.206.255.019-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_0edfa7de-9f3f-4506-8040-a8ae6c4ac866 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#sesv2.list-email-identities",
-    "requestParameters": null,
-    "responseElements": null,
-    "requestID": "2115c9c6-8d8b-4ea5-a982-eedb477fb52a",
-    "eventID": "007ebdb7-8af1-42c7-a257-2fac3e475d6c",
-    "readOnly": true,
-    "eventType": "AwsApiCall",
-    "managementEvent": true,
-    "recipientAccountId": "393031354412",
-    "eventCategory": "Management",
-    "tlsDetails": {
-        "tlsVersion": "TLSv1.3",
-        "cipherSuite": "TLS_AES_128_GCM_SHA256",
-        "clientProvidedHostHeader": "email.ca-centraleast-3r.amazonaws.com"
     }
-   }
 ]

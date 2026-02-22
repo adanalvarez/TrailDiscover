@@ -1,39 +1,39 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:GetLaunchTemplateData on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:GetLaunchTemplateData action. Encoded authorization failure message: UZRy5z11-K7z8Qahum84spEeNgxv08EDZ0fkLbmomc3MSPZPiDePWcGZQSX7C1btAfg_ZZBspn7066ep0o5XCVF7jVSO989ahZcHn_uWk2mzROTnL1vtSCV2TTKBAHXfPpb_aWpo1slqI_jk7f8dyiHPZOzFCAtnb425d_5wbWK9VtwT5rIEeugEkxfP6riHCN86QsdheKa_u9zCueYOMoyhDFbr4zpxGTZPpMI1PHJRWHUJao_z3CQD1hyMBgmS-G1nm7uxGk2q8T2IS_ArUERMnGdGwQURKh6UYMIxa4bL76hmGXpez6rpo9Omx-uLZZRuXJ8sLbaXXdLRjz8cbNaZv-6-G8JlG14UQQQ82rg79lvHeHJ-vE23vexpngrPnyjIWP9Q69i_A8AdlrPXOPe12bhq_LmPVsFco3_-r3Sp5jlO5WuynssjM6mTpKO8u-CqHTXQv3xNmhlLWajf2eIUjoisiT9ueXRAizI2dcMYY9A28ti5iudf0hquv94P0Hk4dcbw4RKmk2Qi5qD9ef0m",
-      "eventCategory": "Management",
-      "eventID": "b39a5ccd-8911-4425-aa76-3091bbee9778",
-      "eventName": "GetLaunchTemplateData",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T15:29:46Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "2f4676ca-2ab8-4d6e-a65f-283e08599233",
-      "requestParameters": {
-         "GetLaunchTemplateDataRequest": {
-            "InstanceId": "TrailDiscoverInstanceId"
-         }
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_baea16f5-00d9-48af-8084-dbe73dbb03bd cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.get-launch-template-data",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:GetLaunchTemplateData on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:GetLaunchTemplateData action. Encoded authorization failure message: UZRy5z11-K7z8Qahum84spEeNgxv08EDZ0fkLbmomc3MSPZPiDePWcGZQSX7C1btAfg_ZZBspn7066ep0o5XCVF7jVSO989ahZcHn_uWk2mzROTnL1vtSCV2TTKBAHXfPpb_aWpo1slqI_jk7f8dyiHPZOzFCAtnb425d_5wbWK9VtwT5rIEeugEkxfP6riHCN86QsdheKa_u9zCueYOMoyhDFbr4zpxGTZPpMI1PHJRWHUJao_z3CQD1hyMBgmS-G1nm7uxGk2q8T2IS_ArUERMnGdGwQURKh6UYMIxa4bL76hmGXpez6rpo9Omx-uLZZRuXJ8sLbaXXdLRjz8cbNaZv-6-G8JlG14UQQQ82rg79lvHeHJ-vE23vexpngrPnyjIWP9Q69i_A8AdlrPXOPe12bhq_LmPVsFco3_-r3Sp5jlO5WuynssjM6mTpKO8u-CqHTXQv3xNmhlLWajf2eIUjoisiT9ueXRAizI2dcMYY9A28ti5iudf0hquv94P0Hk4dcbw4RKmk2Qi5qD9ef0m",
+        "eventCategory": "Management",
+        "eventID": "b39a5ccd-8911-4425-aa76-3091bbee9778",
+        "eventName": "GetLaunchTemplateData",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T15:29:46Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "2f4676ca-2ab8-4d6e-a65f-283e08599233",
+        "requestParameters": {
+            "GetLaunchTemplateDataRequest": {
+                "InstanceId": "TrailDiscoverInstanceId"
+            }
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_baea16f5-00d9-48af-8084-dbe73dbb03bd cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.get-launch-template-data",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

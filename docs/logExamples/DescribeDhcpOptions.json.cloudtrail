@@ -1,44 +1,44 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeDhcpOptions because no identity-based policy allows the ec2:DescribeDhcpOptions action",
-      "eventCategory": "Management",
-      "eventID": "7e0f079f-93d1-4f8a-9040-98ac8eb7b71a",
-      "eventName": "DescribeDhcpOptions",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:50:26Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "ae7b4a8c-eb41-4d05-8a21-7b95fd996f92",
-      "requestParameters": {
-         "dhcpOptionsSet": {
-            "items": [
-               {
-                  "dhcpOptionsId": "TrailDiscoverDhcpOptionsId"
-               }
-            ]
-         },
-         "filterSet": {}
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_d05b60e6-0ae6-4042-8dd0-a45abdf5041e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-dhcp-options",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:DescribeDhcpOptions because no identity-based policy allows the ec2:DescribeDhcpOptions action",
+        "eventCategory": "Management",
+        "eventID": "7e0f079f-93d1-4f8a-9040-98ac8eb7b71a",
+        "eventName": "DescribeDhcpOptions",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:50:26Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "ae7b4a8c-eb41-4d05-8a21-7b95fd996f92",
+        "requestParameters": {
+            "dhcpOptionsSet": {
+                "items": [
+                    {
+                        "dhcpOptionsId": "TrailDiscoverDhcpOptionsId"
+                    }
+                ]
+            },
+            "filterSet": {}
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_d05b60e6-0ae6-4042-8dd0-a45abdf5041e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-dhcp-options",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

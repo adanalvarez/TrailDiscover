@@ -1,43 +1,43 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeBundleTasks because no identity-based policy allows the ec2:DescribeBundleTasks action",
-      "eventCategory": "Management",
-      "eventID": "d0a3dec5-f1cb-4484-8523-bcf1b155cfcf",
-      "eventName": "DescribeBundleTasks",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T15:21:03Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "fdd27c99-025f-4e0a-bd95-cc8fd894d12f",
-      "requestParameters": {
-         "bundlesSet": {
-            "items": [
-               {
-                  "bundleId": "TrailDiscoverBundleId"
-               }
-            ]
-         }
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2399300d-f638-4e58-a7c3-3ad0f9ff1f9d cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-bundle-tasks",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:DescribeBundleTasks because no identity-based policy allows the ec2:DescribeBundleTasks action",
+        "eventCategory": "Management",
+        "eventID": "d0a3dec5-f1cb-4484-8523-bcf1b155cfcf",
+        "eventName": "DescribeBundleTasks",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T15:21:03Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "fdd27c99-025f-4e0a-bd95-cc8fd894d12f",
+        "requestParameters": {
+            "bundlesSet": {
+                "items": [
+                    {
+                        "bundleId": "TrailDiscoverBundleId"
+                    }
+                ]
+            }
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2399300d-f638-4e58-a7c3-3ad0f9ff1f9d cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-bundle-tasks",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

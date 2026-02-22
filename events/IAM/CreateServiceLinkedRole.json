@@ -1,0 +1,36 @@
+{
+    "eventName": "CreateServiceLinkedRole",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates an IAM role that is linked to a specific AWS service. The service controls the attached policies and when the role can be deleted.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1136.003 - Create Account: Cloud Account",
+            "reason": "Creating a service-linked role establishes a new identity in the environment that could be leveraged as part of an attack infrastructure."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateServiceLinkedRole to create roles required for services like Auto Scaling as part of setting up infrastructure for resource hijacking.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws iam create-service-linked-role --aws-service-name autoscaling.amazonaws.com"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateServiceLinkedRole"
+}

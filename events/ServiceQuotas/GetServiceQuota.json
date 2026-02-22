@@ -1,0 +1,36 @@
+{
+    "eventName": "GetServiceQuota",
+    "eventSource": "servicequotas.amazonaws.com",
+    "awsService": "ServiceQuotas",
+    "description": "Retrieves the applied quota value for the specified account-level or resource-level quota.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1526 - Cloud Service Discovery",
+            "reason": "Querying service quotas helps adversaries understand the limits and capacity of cloud services, aiding in planning resource hijacking or other attacks."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetServiceQuota to enumerate EC2 or other service limits before launching resource hijacking campaigns such as cryptomining.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws service-quotas get-service-quota --service-code ec2 --quota-code L-1216C47A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/servicequotas#servicequotas-GetServiceQuota"
+}

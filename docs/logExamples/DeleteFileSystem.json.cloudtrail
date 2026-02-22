@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: elasticfilesystem:DeleteFileSystem on the specified resource",
-      "eventCategory": "Management",
-      "eventID": "1d8eaf44-b4ac-41b7-b40e-377ba7e11a82",
-      "eventName": "DeleteFileSystem",
-      "eventSource": "elasticfilesystem.amazonaws.com",
-      "eventTime": "2024-08-18T10:07:56Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.08",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "132f2b5c-e90e-4cb2-9752-3769641a654b",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "elasticfilesystem.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_b2375659-a913-4eb4-ac4a-674c04029d2c cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#efs.delete-file-system",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: elasticfilesystem:DeleteFileSystem on the specified resource",
+        "eventCategory": "Management",
+        "eventID": "1d8eaf44-b4ac-41b7-b40e-377ba7e11a82",
+        "eventName": "DeleteFileSystem",
+        "eventSource": "elasticfilesystem.amazonaws.com",
+        "eventTime": "2024-08-18T10:07:56Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "132f2b5c-e90e-4cb2-9752-3769641a654b",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "elasticfilesystem.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_b2375659-a913-4eb4-ac4a-674c04029d2c cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#efs.delete-file-system",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

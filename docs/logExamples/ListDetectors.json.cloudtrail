@@ -1,29 +1,29 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "eventCategory": "Management",
-      "eventID": "abc99c33-3924-4c67-a5dd-bac810b6eed4",
-      "eventName": "ListDetectors",
-      "eventSource": "guardduty.amazonaws.com",
-      "eventTime": "2024-08-18T16:46:47Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "c181509c-5a25-49d3-906c-41e80eeec1b4",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_28bce30e-d478-49a2-8786-ddea830cc79f cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.list-detectors",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "eventCategory": "Management",
+        "eventID": "abc99c33-3924-4c67-a5dd-bac810b6eed4",
+        "eventName": "ListDetectors",
+        "eventSource": "guardduty.amazonaws.com",
+        "eventTime": "2024-08-18T16:46:47Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "c181509c-5a25-49d3-906c-41e80eeec1b4",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_28bce30e-d478-49a2-8786-ddea830cc79f cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.list-detectors",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: wafv2:DeleteRuleGroup on resource: arn:aws:wafv2:us-east-1:192374575148:regional/rulegroup/TestRuleGroup/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 because no identity-based policy allows the wafv2:DeleteRuleGroup action",
-      "eventCategory": "Management",
-      "eventID": "5fadabcd-bea7-4f06-8d54-ac304ee9671e",
-      "eventName": "DeleteRuleGroup",
-      "eventSource": "wafv2.amazonaws.com",
-      "eventTime": "2024-08-18T17:28:44Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.08",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "34f72a8a-478a-4c9a-9a0a-90ab5a05c6f9",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "wafv2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_78b8a0db-7314-48f0-ba02-fed2905bda70 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#wafv2.delete-rule-group",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: wafv2:DeleteRuleGroup on resource: arn:aws:wafv2:us-east-1:192374575148:regional/rulegroup/TestRuleGroup/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111 because no identity-based policy allows the wafv2:DeleteRuleGroup action",
+        "eventCategory": "Management",
+        "eventID": "5fadabcd-bea7-4f06-8d54-ac304ee9671e",
+        "eventName": "DeleteRuleGroup",
+        "eventSource": "wafv2.amazonaws.com",
+        "eventTime": "2024-08-18T17:28:44Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "34f72a8a-478a-4c9a-9a0a-90ab5a05c6f9",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "wafv2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_78b8a0db-7314-48f0-ba02-fed2905bda70 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#wafv2.delete-rule-group",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

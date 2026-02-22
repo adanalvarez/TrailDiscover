@@ -56,6 +56,10 @@
         {
             "description": "Tales from the cloud trenches: The Attacker doth persist too much, methinks",
             "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/"
+        },
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
         }
     ],
     "researchLinks": [

@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: wafv2:DeleteWebACL on resource: arn:aws:wafv2:us-east-1:192374575148:regional/webacl/TrailDiscoverWebACL/TrailDiscoverId because no identity-based policy allows the wafv2:DeleteWebACL action",
-      "eventCategory": "Management",
-      "eventID": "3621b858-22f4-4a5a-9e37-bd950adbf894",
-      "eventName": "DeleteWebACL",
-      "eventSource": "wafv2.amazonaws.com",
-      "eventTime": "2024-08-18T17:33:07Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.08",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "4a917b69-e041-4d4b-ae62-f7921669c2b8",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "wafv2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_69791f96-c3a3-42c4-9c47-97d69dc7e9d0 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#wafv2.delete-web-acl",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: wafv2:DeleteWebACL on resource: arn:aws:wafv2:us-east-1:192374575148:regional/webacl/TrailDiscoverWebACL/TrailDiscoverId because no identity-based policy allows the wafv2:DeleteWebACL action",
+        "eventCategory": "Management",
+        "eventID": "3621b858-22f4-4a5a-9e37-bd950adbf894",
+        "eventName": "DeleteWebACL",
+        "eventSource": "wafv2.amazonaws.com",
+        "eventTime": "2024-08-18T17:33:07Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "4a917b69-e041-4d4b-ae62-f7921669c2b8",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "wafv2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_69791f96-c3a3-42c4-9c47-97d69dc7e9d0 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#wafv2.delete-web-acl",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

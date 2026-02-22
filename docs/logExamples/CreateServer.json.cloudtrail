@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: transfer:CreateServer on resource: arn:aws:transfer:us-east-1:192374575148:server/* because no identity-based policy allows the transfer:CreateServer action",
-      "eventCategory": "Management",
-      "eventID": "b9c1c5d3-0e4b-435b-8bb6-41f4b80c0153",
-      "eventName": "CreateServer",
-      "eventSource": "transfer.amazonaws.com",
-      "eventTime": "2024-08-18T12:37:12Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "5d98a82d-6013-48bd-ad1b-8f06c04b67b6",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "transfer.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_f5f74818-3600-483a-9fea-ac8f8fec662e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#transfer.create-server",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: transfer:CreateServer on resource: arn:aws:transfer:us-east-1:192374575148:server/* because no identity-based policy allows the transfer:CreateServer action",
+        "eventCategory": "Management",
+        "eventID": "b9c1c5d3-0e4b-435b-8bb6-41f4b80c0153",
+        "eventName": "CreateServer",
+        "eventSource": "transfer.amazonaws.com",
+        "eventTime": "2024-08-18T12:37:12Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "5d98a82d-6013-48bd-ad1b-8f06c04b67b6",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "transfer.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_f5f74818-3600-483a-9fea-ac8f8fec662e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#transfer.create-server",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

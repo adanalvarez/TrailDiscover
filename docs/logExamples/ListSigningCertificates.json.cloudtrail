@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: iam:ListSigningCertificates on resource: user traildiscover because no identity-based policy allows the iam:ListSigningCertificates action",
-      "eventCategory": "Management",
-      "eventID": "4cf1e839-e477-4fd0-9c47-02e26a4f5a8b",
-      "eventName": "ListSigningCertificates",
-      "eventSource": "iam.amazonaws.com",
-      "eventTime": "2024-08-18T12:05:12Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "6e9422de-673c-4c76-9b53-d800cc54db0e",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "iam.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_41b7658d-1af3-47f5-bdfe-ac4c9d8cfb77 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.list-signing-certificates",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: iam:ListSigningCertificates on resource: user traildiscover because no identity-based policy allows the iam:ListSigningCertificates action",
+        "eventCategory": "Management",
+        "eventID": "4cf1e839-e477-4fd0-9c47-02e26a4f5a8b",
+        "eventName": "ListSigningCertificates",
+        "eventSource": "iam.amazonaws.com",
+        "eventTime": "2024-08-18T12:05:12Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "6e9422de-673c-4c76-9b53-d800cc54db0e",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "iam.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_41b7658d-1af3-47f5-bdfe-ac4c9d8cfb77 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.list-signing-certificates",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

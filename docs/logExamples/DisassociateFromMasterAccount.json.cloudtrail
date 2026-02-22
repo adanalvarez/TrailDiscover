@@ -1,33 +1,33 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "eventCategory": "Management",
-      "eventID": "4f63b8af-948d-4963-a4f3-53044e6e1827",
-      "eventName": "DisassociateFromMasterAccount",
-      "eventSource": "guardduty.amazonaws.com",
-      "eventTime": "2024-08-18T16:56:04Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "1399da95-97aa-4677-b19c-9e123a5dc6ea",
-      "requestParameters": {
-         "detectorId": "TrailDiscoverDetectorId"
-      },
-      "responseElements": {
-         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: guardduty:DisassociateFromMasterAccount on resource: arn:aws:guardduty:us-east-1:192374575148:detector/TrailDiscoverDetectorId/master/disassociate"
-      },
-      "sourceIPAddress": "109.196.12.142",
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_72873cab-305b-4f82-a93b-3612deea3c6e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.disassociate-from-master-account",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "eventCategory": "Management",
+        "eventID": "4f63b8af-948d-4963-a4f3-53044e6e1827",
+        "eventName": "DisassociateFromMasterAccount",
+        "eventSource": "guardduty.amazonaws.com",
+        "eventTime": "2024-08-18T16:56:04Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "1399da95-97aa-4677-b19c-9e123a5dc6ea",
+        "requestParameters": {
+            "detectorId": "TrailDiscoverDetectorId"
+        },
+        "responseElements": {
+            "message": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: guardduty:DisassociateFromMasterAccount on resource: arn:aws:guardduty:us-east-1:192374575148:detector/TrailDiscoverDetectorId/master/disassociate"
+        },
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_72873cab-305b-4f82-a93b-3612deea3c6e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.disassociate-from-master-account",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

@@ -1,49 +1,49 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "NoSuchEntityException",
-      "errorMessage": "The user with name TrailDiscover cannot be found.",
-      "eventCategory": "Management",
-      "eventID": "9a396e10-d67f-4f05-9f32-859ae5cade36",
-      "eventName": "ListAttachedUserPolicies",
-      "eventSource": "iam.amazonaws.com",
-      "eventTime": "2025-02-15T15:40:57Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.10",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "345594607949",
-      "requestID": "20de2ce1-33ee-4bb4-943b-2ff84ecfda78",
-      "requestParameters": {
-         "userName": "TrailDiscover"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "46.6.38.8",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "iam.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.15.153.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2801d487-3878-4c1f-983f-84915804c148 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.list-attached-user-policies",
-      "userIdentity": {
-         "accessKeyId": "ASIAVA5YLHFG22UNOASA",
-         "accountId": "345594607949",
-         "arn": "arn:aws:sts::345594607949:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50/AdanAlvarez",
-         "principalId": "AROAVA5YLHFGXTTEWKGQX:AdanAlvarez",
-         "sessionContext": {
-            "attributes": {
-               "creationDate": "2025-02-15T14:50:08Z",
-               "mfaAuthenticated": "false"
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "NoSuchEntityException",
+        "errorMessage": "The user with name TrailDiscover cannot be found.",
+        "eventCategory": "Management",
+        "eventID": "9a396e10-d67f-4f05-9f32-859ae5cade36",
+        "eventName": "ListAttachedUserPolicies",
+        "eventSource": "iam.amazonaws.com",
+        "eventTime": "2025-02-15T15:40:57Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.10",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "20de2ce1-33ee-4bb4-943b-2ff84ecfda78",
+        "requestParameters": {
+            "userName": "TrailDiscover"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "iam.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2801d487-3878-4c1f-983f-84915804c148 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.list-attached-user-policies",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50/AdanAlvarez",
+            "principalId": "AROA****************:User",
+            "sessionContext": {
+                "attributes": {
+                    "creationDate": "2025-02-15T14:50:08Z",
+                    "mfaAuthenticated": "false"
+                },
+                "sessionIssuer": {
+                    "accountId": "111111111111",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50",
+                    "principalId": "AROA****************:User",
+                    "type": "Role",
+                    "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50"
+                }
             },
-            "sessionIssuer": {
-               "accountId": "345594607949",
-               "arn": "arn:aws:iam::345594607949:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50",
-               "principalId": "AROAVA5YLHFGXTTEWKGQX",
-               "type": "Role",
-               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851db50"
-            }
-         },
-         "type": "AssumedRole"
-      }
-   }
+            "type": "AssumedRole"
+        }
+    }
 ]

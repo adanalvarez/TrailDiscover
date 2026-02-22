@@ -1,59 +1,59 @@
 [
-   {
-      "additionalEventData": {
-         "AuthenticationMethod": "AuthHeader",
-         "CipherSuite": "TLS_AES_128_GCM_SHA256",
-         "SignatureVersion": "SigV4",
-         "bytesTransferredIn": 0,
-         "bytesTransferredOut": 309,
-         "x-amz-id-2": "+kMTyv7SBVrWXEglCtAgWVHW8sXwY3JI5/dRJ8j5R5vOxiYScCQp3D/waCiJGIOapMUPQrRpYdM="
-      },
-      "awsRegion": "sa-central-3r",
-      "errorCode": "NoSuchBucket",
-      "errorMessage": "The specified bucket does not exist",
-      "eventCategory": "Management",
-      "eventID": "8a9a850c-1c7b-4095-acac-cc9d429dc42f",
-      "eventName": "GetBucketLifecycle",
-      "eventSource": "s3.amazonaws.com",
-      "eventTime": "2024-12-15T21:13:11Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.11",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "825798831372",
-      "requestID": "VRK7ARQ0SJTDJFJZ",
-      "requestParameters": {
-         "Host": "s3.sa-central-3r.amazonaws.com",
-         "bucketName": "TrailDiscoverBucket",
-         "lifecycle": ""
-      },
-      "responseElements": null,
-      "sourceIPAddress": "026.6.18.253",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "s3.sa-central-3r.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#218.252.253.252-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_29d96397-ffc8-4b44-bc08-ce46f58af350 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-bucket-lifecycle]",
-      "userIdentity": {
-         "accessKeyId": "ASIAH48ONP296ZLGHNVO",
-         "accountId": "825798831372",
-         "arn": "arn:aws:sts::825798831372:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00/TrailDiscover",
-         "principalId": "AROA09UXIA03XAGBJMH2C:TrailDiscover",
-         "sessionContext": {
-            "attributes": {
-               "creationDate": "2024-12-15T21:11:03Z",
-               "mfaAuthenticated": "false"
+    {
+        "additionalEventData": {
+            "AuthenticationMethod": "AuthHeader",
+            "CipherSuite": "TLS_AES_128_GCM_SHA256",
+            "SignatureVersion": "SigV4",
+            "bytesTransferredIn": 0,
+            "bytesTransferredOut": 309,
+            "x-amz-id-2": "+kMTyv7SBVrWXEglCtAgWVHW8sXwY3JI5/dRJ8j5R5vOxiYScCQp3D/waCiJGIOapMUPQrRpYdM="
+        },
+        "awsRegion": "sa-central-3r",
+        "errorCode": "NoSuchBucket",
+        "errorMessage": "The specified bucket does not exist",
+        "eventCategory": "Management",
+        "eventID": "8a9a850c-1c7b-4095-acac-cc9d429dc42f",
+        "eventName": "GetBucketLifecycle",
+        "eventSource": "s3.amazonaws.com",
+        "eventTime": "2024-12-15T21:13:11Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.11",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "VRK7ARQ0SJTDJFJZ",
+        "requestParameters": {
+            "Host": "s3.sa-central-3r.amazonaws.com",
+            "bucketName": "TrailDiscoverBucket",
+            "lifecycle": ""
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "s3.sa-central-3r.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_29d96397-ffc8-4b44-bc08-ce46f58af350 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.get-bucket-lifecycle]",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "sessionContext": {
+                "attributes": {
+                    "creationDate": "2024-12-15T21:11:03Z",
+                    "mfaAuthenticated": "false"
+                },
+                "sessionIssuer": {
+                    "accountId": "111111111111",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/cn-southsouth-1r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00",
+                    "principalId": "AROA****************:User",
+                    "type": "Role",
+                    "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00"
+                }
             },
-            "sessionIssuer": {
-               "accountId": "825798831372",
-               "arn": "arn:aws:iam::825798831372:role/aws-reserved/sso.amazonaws.com/cn-southsouth-1r/AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00",
-               "principalId": "AROA09UXIA03XAGBJMH2C",
-               "type": "Role",
-               "userName": "AWSReservedSSO_ReadOnlyAccess_ff7f8c5c5851aa00"
-            }
-         },
-         "type": "AssumedRole"
-      }
-   }
+            "type": "AssumedRole"
+        }
+    }
 ]

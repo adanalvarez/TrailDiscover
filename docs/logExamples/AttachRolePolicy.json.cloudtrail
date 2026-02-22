@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: iam:AttachRolePolicy on resource: role TrailDiscover because no identity-based policy allows the iam:AttachRolePolicy action",
-      "eventCategory": "Management",
-      "eventID": "7cfaafa9-f396-4389-aa8c-67a29ce73b4e",
-      "eventName": "AttachRolePolicy",
-      "eventSource": "iam.amazonaws.com",
-      "eventTime": "2024-08-18T11:30:49Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "38761281-e338-4846-b3c4-fd60a917dc8e",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "iam.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_c65b0090-dde5-4bd2-9f9d-2d315cb3782b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.attach-role-policy",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: iam:AttachRolePolicy on resource: role TrailDiscover because no identity-based policy allows the iam:AttachRolePolicy action",
+        "eventCategory": "Management",
+        "eventID": "7cfaafa9-f396-4389-aa8c-67a29ce73b4e",
+        "eventName": "AttachRolePolicy",
+        "eventSource": "iam.amazonaws.com",
+        "eventTime": "2024-08-18T11:30:49Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "38761281-e338-4846-b3c4-fd60a917dc8e",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "iam.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_c65b0090-dde5-4bd2-9f9d-2d315cb3782b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.attach-role-policy",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

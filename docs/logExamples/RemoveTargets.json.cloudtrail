@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: events:RemoveTargets on resource: arn:aws:events:us-east-1:192374575148:rule/TrailDiscoverRule because no identity-based policy allows the events:RemoveTargets action",
-      "eventCategory": "Management",
-      "eventID": "849f0a87-ffad-4c6c-9be8-e2091e684794",
-      "eventName": "RemoveTargets",
-      "eventSource": "events.amazonaws.com",
-      "eventTime": "2024-08-18T10:16:08Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.08",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "88886766-1fad-4df4-b19a-3b78a956dc2b",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "events.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1c311ec1-28a7-486b-95cd-fb98a0210114 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#events.remove-targets",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: events:RemoveTargets on resource: arn:aws:events:us-east-1:192374575148:rule/TrailDiscoverRule because no identity-based policy allows the events:RemoveTargets action",
+        "eventCategory": "Management",
+        "eventID": "849f0a87-ffad-4c6c-9be8-e2091e684794",
+        "eventName": "RemoveTargets",
+        "eventSource": "events.amazonaws.com",
+        "eventTime": "2024-08-18T10:16:08Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "88886766-1fad-4df4-b19a-3b78a956dc2b",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "events.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1c311ec1-28a7-486b-95cd-fb98a0210114 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#events.remove-targets",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

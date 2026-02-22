@@ -1,38 +1,38 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.InvalidParameterValue",
-      "errorMessage": "The volume ID 'TrailDiscoverVolumeId' is malformed",
-      "eventCategory": "Management",
-      "eventID": "b45aa765-3c20-4395-92ae-eb55e569f220",
-      "eventName": "DeleteVolume",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T13:57:00Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "fe4c5b43-6cc4-43fe-a496-672009e9fabe",
-      "requestParameters": {
-         "reportVolumeFailure": false,
-         "volumeId": "TrailDiscoverVolumeId"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_21763ce5-7ebc-4515-8050-3ae53601763e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.delete-volume",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.InvalidParameterValue",
+        "errorMessage": "The volume ID 'TrailDiscoverVolumeId' is malformed",
+        "eventCategory": "Management",
+        "eventID": "b45aa765-3c20-4395-92ae-eb55e569f220",
+        "eventName": "DeleteVolume",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T13:57:00Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "fe4c5b43-6cc4-43fe-a496-672009e9fabe",
+        "requestParameters": {
+            "reportVolumeFailure": false,
+            "volumeId": "TrailDiscoverVolumeId"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_21763ce5-7ebc-4515-8050-3ae53601763e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.delete-volume",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

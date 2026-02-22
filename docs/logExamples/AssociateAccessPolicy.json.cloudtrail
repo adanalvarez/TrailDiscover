@@ -1,38 +1,38 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "eventCategory": "Management",
-      "eventID": "03b3c880-17ce-45e6-982a-79d070460e09",
-      "eventName": "AssociateAccessPolicy",
-      "eventSource": "eks.amazonaws.com",
-      "eventTime": "2024-08-18T12:43:49Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "90ea76d5-dacb-44a0-9710-81191e76c8a7",
-      "requestParameters": {
-         "accessScope": {
-            "type": "cluster"
-         },
-         "name": "beta-fish",
-         "policyArn": "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy",
-         "principalArn": "arn%3Aaws%3Aiam%3A%3A111122223333%3Arole%2FTrailDiscover"
-      },
-      "responseElements": {
-         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: eks:AssociateAccessPolicy on resource: arn:aws:eks:us-east-1:192374575148:access-entry/beta-fish/role/111122223333/TrailDiscover/*"
-      },
-      "sourceIPAddress": "109.196.12.142",
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_e791fd0b-b98a-48e6-a8ef-c38b2abc60a9 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#eks.associate-access-policy",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "eventCategory": "Management",
+        "eventID": "03b3c880-17ce-45e6-982a-79d070460e09",
+        "eventName": "AssociateAccessPolicy",
+        "eventSource": "eks.amazonaws.com",
+        "eventTime": "2024-08-18T12:43:49Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "90ea76d5-dacb-44a0-9710-81191e76c8a7",
+        "requestParameters": {
+            "accessScope": {
+                "type": "cluster"
+            },
+            "name": "beta-fish",
+            "policyArn": "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy",
+            "principalArn": "arn%3Aaws%3Aiam%3A%3A111122223333%3Arole%2FTrailDiscover"
+        },
+        "responseElements": {
+            "message": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: eks:AssociateAccessPolicy on resource: arn:aws:eks:us-east-1:192374575148:access-entry/beta-fish/role/111122223333/TrailDiscover/*"
+        },
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_e791fd0b-b98a-48e6-a8ef-c38b2abc60a9 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#eks.associate-access-policy",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

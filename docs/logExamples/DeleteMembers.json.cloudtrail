@@ -1,36 +1,36 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "eventCategory": "Management",
-      "eventID": "4aaf5b5d-9a18-4efa-afe7-2d0bdd50f21b",
-      "eventName": "DeleteMembers",
-      "eventSource": "guardduty.amazonaws.com",
-      "eventTime": "2024-08-18T17:05:31Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "664f5cfa-4a82-41a4-89eb-e0f4416dc1ff",
-      "requestParameters": {
-         "accountIds": [
-            "TrailDiscoverAccountIds"
-         ],
-         "detectorId": "TrailDiscoverDetectorId"
-      },
-      "responseElements": {
-         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: guardduty:DeleteMembers on resource: arn:aws:guardduty:us-east-1:192374575148:detector/TrailDiscoverDetectorId/member/delete"
-      },
-      "sourceIPAddress": "109.196.12.142",
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_87873ad0-6a90-4284-b73e-35af84a328ac cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.delete-members",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "eventCategory": "Management",
+        "eventID": "4aaf5b5d-9a18-4efa-afe7-2d0bdd50f21b",
+        "eventName": "DeleteMembers",
+        "eventSource": "guardduty.amazonaws.com",
+        "eventTime": "2024-08-18T17:05:31Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "664f5cfa-4a82-41a4-89eb-e0f4416dc1ff",
+        "requestParameters": {
+            "accountIds": [
+                "TrailDiscoverAccountIds"
+            ],
+            "detectorId": "TrailDiscoverDetectorId"
+        },
+        "responseElements": {
+            "message": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: guardduty:DeleteMembers on resource: arn:aws:guardduty:us-east-1:192374575148:detector/TrailDiscoverDetectorId/member/delete"
+        },
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_87873ad0-6a90-4284-b73e-35af84a328ac cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.delete-members",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

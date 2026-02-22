@@ -28,8 +28,13 @@
             "reason": "Changes in instance attributes could be used to facilitate the destruction of data on the instance, impacting the integrity and availability of information."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Executing commands through EC2 user data",

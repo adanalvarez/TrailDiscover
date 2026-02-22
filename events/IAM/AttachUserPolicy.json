@@ -60,6 +60,10 @@
         {
             "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
             "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        },
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
         }
     ],
     "researchLinks": [

@@ -29,8 +29,13 @@
             "reason": "Permissions can be used to manipulate Lambda functions to communicate over various application layer protocols, aiding in command and control."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS IAM Privilege Escalation Techniques",

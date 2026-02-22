@@ -1,39 +1,39 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateVolume on resource: arn:aws:ec2:us-east-1:192374575148:volume/* because no identity-based policy allows the ec2:CreateVolume action. Encoded authorization failure message: g0Ub4rKrQShHYz2-GOngoheA1A5D7g0JXHOSutAC6EcF3Zls4X8lfAYMniRI2F_lY0_xVKVcShgjq0Wvlq-pK9CfIj1hRVVz9yVf6RclUNOeA-UPd27q5raUBkXzxIGjYkMsqHHjBkteoSeoFQEjpu8KPTGrOdSksRQ7h5nRyWrSQcFy877BUubWuwd8FAXrnBh65Fv6GI6n4RWte2VMuV8AomQf_XnKfkFhPhAXywVE8tedU6qkvfzXw2BhDkPwVt0bq_xZRGyDsWaO84Y2-TqI-m87AHQDOt3LZfQY1IxP9Awy_1y1ljXEMFGxPmBkhPXfIX4gqfrmmv0Wnujmy5VYMutau1Vq_DYKzzEgdpuKoWA5YD4h78ZTHaTN5rZ2lnlEWHVVHu96EZ9CN4DgR29uC9zDDDTJTIJTk9kPRZtW8AiGqypW5FMv_-_pkt0h7RkQcBSMNOOhIs8KU2eGFxEDmqHnGXzqsYEh24cAb8c6dQuPL3Lxt6GNN2GC_7_9vNQTOOFY6spCuhJ3TgHZWXg3kq6N50iXFYJSCGPZGhxU_a6HTsxbYm1Tph1PFAMmXpeuFTl2KyRACyiv",
-      "eventCategory": "Management",
-      "eventID": "55387133-4415-40e8-b000-9976894db501",
-      "eventName": "CreateVolume",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:11:15Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "ed78606e-351b-44fe-848a-e52bc3afbeff",
-      "requestParameters": {
-         "clientToken": "765acc11-4f2d-4b0b-90fa-453ba116fac7",
-         "size": "80",
-         "zone": "us-east-1a"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_cd133f78-331e-436a-bcaf-304d550b3de2 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-volume",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:CreateVolume on resource: arn:aws:ec2:us-east-1:192374575148:volume/* because no identity-based policy allows the ec2:CreateVolume action. Encoded authorization failure message: g0Ub4rKrQShHYz2-GOngoheA1A5D7g0JXHOSutAC6EcF3Zls4X8lfAYMniRI2F_lY0_xVKVcShgjq0Wvlq-pK9CfIj1hRVVz9yVf6RclUNOeA-UPd27q5raUBkXzxIGjYkMsqHHjBkteoSeoFQEjpu8KPTGrOdSksRQ7h5nRyWrSQcFy877BUubWuwd8FAXrnBh65Fv6GI6n4RWte2VMuV8AomQf_XnKfkFhPhAXywVE8tedU6qkvfzXw2BhDkPwVt0bq_xZRGyDsWaO84Y2-TqI-m87AHQDOt3LZfQY1IxP9Awy_1y1ljXEMFGxPmBkhPXfIX4gqfrmmv0Wnujmy5VYMutau1Vq_DYKzzEgdpuKoWA5YD4h78ZTHaTN5rZ2lnlEWHVVHu96EZ9CN4DgR29uC9zDDDTJTIJTk9kPRZtW8AiGqypW5FMv_-_pkt0h7RkQcBSMNOOhIs8KU2eGFxEDmqHnGXzqsYEh24cAb8c6dQuPL3Lxt6GNN2GC_7_9vNQTOOFY6spCuhJ3TgHZWXg3kq6N50iXFYJSCGPZGhxU_a6HTsxbYm1Tph1PFAMmXpeuFTl2KyRACyiv",
+        "eventCategory": "Management",
+        "eventID": "55387133-4415-40e8-b000-9976894db501",
+        "eventName": "CreateVolume",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:11:15Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "ed78606e-351b-44fe-848a-e52bc3afbeff",
+        "requestParameters": {
+            "clientToken": "765acc11-4f2d-4b0b-90fa-453ba116fac7",
+            "size": "80",
+            "zone": "us-east-1a"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_cd133f78-331e-436a-bcaf-304d550b3de2 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-volume",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

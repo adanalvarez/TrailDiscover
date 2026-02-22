@@ -1,50 +1,50 @@
 [
-   {
-      "eventVersion": "1.11",
-      "userIdentity": {
-         "type": "AssumedRole",
-         "principalId": "AROA2TOHFASDFGHIL67BO:TrailDiscover",
-         "arn": "arn:aws:sts::123123123123:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d471234n/TrailDiscover",
-         "accountId": "123123123123",
-         "accessKeyId": "AROA2TOHFASDFGHIL67BO",
-         "sessionContext": {
-               "sessionIssuer": {
-                  "type": "Role",
-                  "principalId": "AROA2TOHFASDFGHIL67BO",
-                  "arn": "arn:aws:iam::123123123123:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d471234n",
-                  "accountId": "123123123123",
-                  "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d471234n"
-               },
-               "attributes": {
-                  "creationDate": "2025-09-07T19:18:59Z",
-                  "mfaAuthenticated": "false"
-               }
-         }
-      },
-      "eventTime": "2025-09-07T19:19:50Z",
-      "eventSource": "ses.amazonaws.com",
-      "eventName": "PutAccountDetails",
-      "awsRegion": "us-west-2",
-      "sourceIPAddress": "2.2.2.2",
-      "userAgent": "aws-cli/2.17.32",
-      "requestParameters": {
-         "mailType": "TRANSACTIONAL",
-         "websiteURL": "HIDDEN_DUE_TO_SECURITY_REASONS",
-         "contactLanguage": "EN",
-         "useCaseDescription": "HIDDEN_DUE_TO_SECURITY_REASONS"
-      },
-      "responseElements": null,
-      "requestID": "b4b81580-c719-4ff9-b466-e594d469589c",
-      "eventID": "1f59978b-bd90-4058-be12-91e2ecfb5c52",
-      "readOnly": false,
-      "eventType": "AwsApiCall",
-      "managementEvent": true,
-      "recipientAccountId": "123123123123",
-      "eventCategory": "Management",
-      "tlsDetails": {
-         "tlsVersion": "TLSv1.3",
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "email.us-west-2.amazonaws.com"
-      }
-   }  
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d471234n/TrailDiscover",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d471234n",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d471234n"
+                },
+                "attributes": {
+                    "creationDate": "2025-09-07T19:18:59Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2025-09-07T19:19:50Z",
+        "eventSource": "ses.amazonaws.com",
+        "eventName": "PutAccountDetails",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32",
+        "requestParameters": {
+            "mailType": "TRANSACTIONAL",
+            "websiteURL": "HIDDEN_DUE_TO_SECURITY_REASONS",
+            "contactLanguage": "EN",
+            "useCaseDescription": "HIDDEN_DUE_TO_SECURITY_REASONS"
+        },
+        "responseElements": null,
+        "requestID": "b4b81580-c719-4ff9-b466-e594d469589c",
+        "eventID": "1f59978b-bd90-4058-be12-91e2ecfb5c52",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "email.us-west-2.amazonaws.com"
+        }
+    }
 ]

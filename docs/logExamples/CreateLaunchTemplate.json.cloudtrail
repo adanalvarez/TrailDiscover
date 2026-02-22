@@ -1,0 +1,70 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d47002b"
+                },
+                "attributes": {
+                    "creationDate": "2026-02-22T16:10:39Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2026-02-22T16:12:52Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "CreateLaunchTemplate",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython m/Z,g,E,b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-launch-template",
+        "requestParameters": {
+            "CreateLaunchTemplateRequest": {
+                "LaunchTemplateName": "TrailDiscoverTemplate",
+                "LaunchTemplateData": {
+                    "ImageId": "ami-0b98a32b1c5e0d105",
+                    "InstanceType": "t2.micro"
+                },
+                "ClientToken": "0d7d7857-856d-4760-958d-618c55a9c449"
+            }
+        },
+        "responseElements": {
+            "CreateLaunchTemplateResponse": {
+                "xmlns": "http://ec2.amazonaws.com/doc/2016-11-15/",
+                "requestId": "233efbe8-989e-4d2f-a01c-35cb86aee282",
+                "launchTemplate": {
+                    "createTime": "2026-02-22T16:12:52.000Z",
+                    "createdBy": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+                    "launchTemplateId": "lt-0780d55503d605988",
+                    "latestVersionNumber": 1,
+                    "defaultVersionNumber": 1,
+                    "launchTemplateName": "TrailDiscoverTemplate",
+                    "operator": {
+                        "managed": false
+                    }
+                }
+            }
+        },
+        "requestID": "233efbe8-989e-4d2f-a01c-35cb86aee282",
+        "eventID": "1dce5fc1-713c-4899-acb9-f96aff4f9236",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+        }
+    }
+]

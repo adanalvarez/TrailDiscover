@@ -1,47 +1,47 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.InvalidSnapshotID.Malformed",
-      "errorMessage": "Value ( snap-1234567890abcdef0 ) for parameter SNAPSHOT is invalid. ",
-      "eventCategory": "Management",
-      "eventID": "d163aa4c-4f35-4949-b686-de24de8a95ab",
-      "eventName": "ModifySnapshotAttribute",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T15:05:48Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "cfff8a2f-3a93-42e2-b1b1-50e2a6adecd5",
-      "requestParameters": {
-         "attributeType": "CREATE_VOLUME_PERMISSION",
-         "createVolumePermission": {
-            "remove": {
-               "items": [
-                  {
-                     "userId": "123456789012"
-                  }
-               ]
-            }
-         },
-         "snapshotId": "snap-1234567890abcdef0"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_c1f1195c-10e8-448b-a9e8-332fdef84b60 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.modify-snapshot-attribute",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.InvalidSnapshotID.Malformed",
+        "errorMessage": "Value ( snap-1234567890abcdef0 ) for parameter SNAPSHOT is invalid. ",
+        "eventCategory": "Management",
+        "eventID": "d163aa4c-4f35-4949-b686-de24de8a95ab",
+        "eventName": "ModifySnapshotAttribute",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T15:05:48Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "cfff8a2f-3a93-42e2-b1b1-50e2a6adecd5",
+        "requestParameters": {
+            "attributeType": "CREATE_VOLUME_PERMISSION",
+            "createVolumePermission": {
+                "remove": {
+                    "items": [
+                        {
+                            "userId": "123456789012"
+                        }
+                    ]
+                }
+            },
+            "snapshotId": "snap-1234567890abcdef0"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_c1f1195c-10e8-448b-a9e8-332fdef84b60 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.modify-snapshot-attribute",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]
