@@ -1,39 +1,39 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DeleteNetworkAclEntry on resource: arn:aws:ec2:us-east-1:192374575148:network-acl/* because no identity-based policy allows the ec2:DeleteNetworkAclEntry action. Encoded authorization failure message: N6K77kyMrV4YsdiAQQalqwQ5bIgLLBzYYVW2Xs2dBgx8aelWXL3YxMOId1aINyu4b0jnmb7BmAWEO3WeM7Rm9QMkD9AzPIcrMj5k66VVIW3tVT3SXGj394attdwszI-zYKy30U-oj_1yAR_BbF68opHTNebwAY-7zgKAu9LMWHhPWxpYoNP_2jkhUlOQNoia53xMmsLw6YCRW4_aBFilNAEKt0oN9NDas7H583Tbk5z8ywXO1bSP1P3x4LilliGcBagMTfvglg1l-auKpm-sEAcLDQBu5pRoII1wdjfhe9D4rx2ms6XvzQ_tPW6DXDGhuwqh5op8Hm7ZOKdg2AWfkFQlXaluJC1maCDPNSroobuP5ybmr_4H2r4acfLXzMiBPB6r2-ury9HQnOxgCtzbhGVEkWvvkI3uuBV_Lpu9bPMtTuHuRxUvN1GadGWiFlis6F_w4XNfiD1jNRyYRx-WbwoRpoBx1fPLeLWY3gbrKUGQaBl6qkTJQLLnWel2Dg5HRYiwhxRXfG8-wbRbL7hdfJ_r",
-      "eventCategory": "Management",
-      "eventID": "fc33a564-92e9-46d2-83d0-2b5e985c770c",
-      "eventName": "DeleteNetworkAclEntry",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:37:04Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "00dc96de-89de-4449-b5b3-06f6d845bb30",
-      "requestParameters": {
-         "egress": false,
-         "networkAclId": "acl-5fb85d36",
-         "ruleNumber": 100
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_0b2635e3-f43c-404c-aa09-7b3aa6fd8be6 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.delete-network-acl-entry",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:DeleteNetworkAclEntry on resource: arn:aws:ec2:us-east-1:192374575148:network-acl/* because no identity-based policy allows the ec2:DeleteNetworkAclEntry action. Encoded authorization failure message: N6K77kyMrV4YsdiAQQalqwQ5bIgLLBzYYVW2Xs2dBgx8aelWXL3YxMOId1aINyu4b0jnmb7BmAWEO3WeM7Rm9QMkD9AzPIcrMj5k66VVIW3tVT3SXGj394attdwszI-zYKy30U-oj_1yAR_BbF68opHTNebwAY-7zgKAu9LMWHhPWxpYoNP_2jkhUlOQNoia53xMmsLw6YCRW4_aBFilNAEKt0oN9NDas7H583Tbk5z8ywXO1bSP1P3x4LilliGcBagMTfvglg1l-auKpm-sEAcLDQBu5pRoII1wdjfhe9D4rx2ms6XvzQ_tPW6DXDGhuwqh5op8Hm7ZOKdg2AWfkFQlXaluJC1maCDPNSroobuP5ybmr_4H2r4acfLXzMiBPB6r2-ury9HQnOxgCtzbhGVEkWvvkI3uuBV_Lpu9bPMtTuHuRxUvN1GadGWiFlis6F_w4XNfiD1jNRyYRx-WbwoRpoBx1fPLeLWY3gbrKUGQaBl6qkTJQLLnWel2Dg5HRYiwhxRXfG8-wbRbL7hdfJ_r",
+        "eventCategory": "Management",
+        "eventID": "fc33a564-92e9-46d2-83d0-2b5e985c770c",
+        "eventName": "DeleteNetworkAclEntry",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:37:04Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "00dc96de-89de-4449-b5b3-06f6d845bb30",
+        "requestParameters": {
+            "egress": false,
+            "networkAclId": "acl-5fb85d36",
+            "ruleNumber": 100
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_0b2635e3-f43c-404c-aa09-7b3aa6fd8be6 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.delete-network-acl-entry",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

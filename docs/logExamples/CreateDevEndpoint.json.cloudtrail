@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "Cross-account pass role is not allowed.",
-      "eventCategory": "Management",
-      "eventID": "e5add4a9-6030-4f41-b263-466cc1f81fec",
-      "eventName": "CreateDevEndpoint",
-      "eventSource": "glue.amazonaws.com",
-      "eventTime": "2024-08-18T15:52:07Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "aa1e3955-0940-4d4c-9088-3336aaf3724e",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "glue.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1fda45f0-9990-4d3c-8089-9d4a85d5fa7e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#glue.create-dev-endpoint",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "Cross-account pass role is not allowed.",
+        "eventCategory": "Management",
+        "eventID": "e5add4a9-6030-4f41-b263-466cc1f81fec",
+        "eventName": "CreateDevEndpoint",
+        "eventSource": "glue.amazonaws.com",
+        "eventTime": "2024-08-18T15:52:07Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "aa1e3955-0940-4d4c-9088-3336aaf3724e",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "glue.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1fda45f0-9990-4d3c-8089-9d4a85d5fa7e cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#glue.create-dev-endpoint",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

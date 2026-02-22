@@ -1,38 +1,38 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "eventCategory": "Management",
-      "eventID": "92e12c62-85ee-4a21-b8b5-4b7f0c7699cd",
-      "eventName": "CreateIPSet",
-      "eventSource": "guardduty.amazonaws.com",
-      "eventTime": "2024-08-18T16:58:13Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "0aaa43bf-c149-49eb-b8f2-7ed30c78fbca",
-      "requestParameters": {
-         "activate": true,
-         "clientToken": "08fc39c0-2fa9-499a-8a57-d6c941ce016c",
-         "detectorId": "12abc34d567e8fa901bc2d34eexample",
-         "format": "TXT",
-         "location": "s3://traildiscover/traildiscover.csv",
-         "name": "new-ip-set"
-      },
-      "responseElements": {
-         "message": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: guardduty:CreateIPSet on resource: arn:aws:guardduty:us-east-1:192374575148:detector/12abc34d567e8fa901bc2d34eexample/ipset/*"
-      },
-      "sourceIPAddress": "109.196.12.142",
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_85a4e8a9-b64d-47b4-b88a-ad589315ac0a cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.create-ip-set",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "eventCategory": "Management",
+        "eventID": "92e12c62-85ee-4a21-b8b5-4b7f0c7699cd",
+        "eventName": "CreateIPSet",
+        "eventSource": "guardduty.amazonaws.com",
+        "eventTime": "2024-08-18T16:58:13Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "0aaa43bf-c149-49eb-b8f2-7ed30c78fbca",
+        "requestParameters": {
+            "activate": true,
+            "clientToken": "08fc39c0-2fa9-499a-8a57-d6c941ce016c",
+            "detectorId": "12abc34d567e8fa901bc2d34eexample",
+            "format": "TXT",
+            "location": "s3://traildiscover/traildiscover.csv",
+            "name": "new-ip-set"
+        },
+        "responseElements": {
+            "message": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: guardduty:CreateIPSet on resource: arn:aws:guardduty:us-east-1:192374575148:detector/12abc34d567e8fa901bc2d34eexample/ipset/*"
+        },
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_85a4e8a9-b64d-47b4-b88a-ad589315ac0a cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#guardduty.create-ip-set",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

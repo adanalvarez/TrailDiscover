@@ -1,46 +1,46 @@
 [
-   {
-      "additionalEventData": {
-         "AuthenticationMethod": "AuthHeader",
-         "CipherSuite": "TLS_AES_128_GCM_SHA256",
-         "SignatureVersion": "SigV4",
-         "bytesTransferredIn": 0,
-         "bytesTransferredOut": 313,
-         "x-amz-id-2": "7ECiyQs7n5n1blMrnN+OFLGc8vo+8xLrWJ1jBzul/yBjAjyZGg8pIIU/h41k+BrCexdvjLu88kA="
-      },
-      "awsRegion": "us-east-1",
-      "errorCode": "NoSuchBucket",
-      "errorMessage": "The specified bucket does not exist",
-      "eventCategory": "Management",
-      "eventID": "fd0ec3d3-7af7-4189-b9b6-22c062675e35",
-      "eventName": "DeleteBucket",
-      "eventSource": "s3.amazonaws.com",
-      "eventTime": "2024-08-18T13:47:50Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "WBZW83A8Q2DW4K8X",
-      "requestParameters": {
-         "Host": "my-traildiscover-bucket.s3.us-east-1.amazonaws.com",
-         "bucketName": "my-traildiscover-bucket"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "my-traildiscover-bucket.s3.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1046abb4-c14f-4019-b2ac-f7c2b125f922 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.delete-bucket]",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "additionalEventData": {
+            "AuthenticationMethod": "AuthHeader",
+            "CipherSuite": "TLS_AES_128_GCM_SHA256",
+            "SignatureVersion": "SigV4",
+            "bytesTransferredIn": 0,
+            "bytesTransferredOut": 313,
+            "x-amz-id-2": "7ECiyQs7n5n1blMrnN+OFLGc8vo+8xLrWJ1jBzul/yBjAjyZGg8pIIU/h41k+BrCexdvjLu88kA="
+        },
+        "awsRegion": "us-east-1",
+        "errorCode": "NoSuchBucket",
+        "errorMessage": "The specified bucket does not exist",
+        "eventCategory": "Management",
+        "eventID": "fd0ec3d3-7af7-4189-b9b6-22c062675e35",
+        "eventName": "DeleteBucket",
+        "eventSource": "s3.amazonaws.com",
+        "eventTime": "2024-08-18T13:47:50Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "WBZW83A8Q2DW4K8X",
+        "requestParameters": {
+            "Host": "my-traildiscover-bucket.s3.us-east-1.amazonaws.com",
+            "bucketName": "my-traildiscover-bucket"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "my-traildiscover-bucket.s3.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_1046abb4-c14f-4019-b2ac-f7c2b125f922 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.delete-bucket]",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

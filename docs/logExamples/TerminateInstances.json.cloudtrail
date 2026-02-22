@@ -1,43 +1,43 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.InvalidInstanceID.Malformed",
-      "errorMessage": "The instance ID 'TrailDiscoverInstanceID' is malformed",
-      "eventCategory": "Management",
-      "eventID": "df132f5e-0208-4c24-803f-7efbc2aa3b68",
-      "eventName": "TerminateInstances",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:34:58Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "365d99f4-16ce-4f2a-94f9-03a97fb355a5",
-      "requestParameters": {
-         "instancesSet": {
-            "items": [
-               {
-                  "instanceId": "TrailDiscoverInstanceID"
-               }
-            ]
-         }
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_d4e69386-7c0d-468c-b31a-83bbff9c6f1c cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.terminate-instances",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.InvalidInstanceID.Malformed",
+        "errorMessage": "The instance ID 'TrailDiscoverInstanceID' is malformed",
+        "eventCategory": "Management",
+        "eventID": "df132f5e-0208-4c24-803f-7efbc2aa3b68",
+        "eventName": "TerminateInstances",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:34:58Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "365d99f4-16ce-4f2a-94f9-03a97fb355a5",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "TrailDiscoverInstanceID"
+                    }
+                ]
+            }
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_d4e69386-7c0d-468c-b31a-83bbff9c6f1c cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.terminate-instances",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

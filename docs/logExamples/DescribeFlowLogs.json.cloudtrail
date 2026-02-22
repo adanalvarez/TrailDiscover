@@ -1,46 +1,46 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeFlowLogs because no identity-based policy allows the ec2:DescribeFlowLogs action",
-      "eventCategory": "Management",
-      "eventID": "334740bc-7921-43c2-9fce-3f9ee10a5c44",
-      "eventName": "DescribeFlowLogs",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:56:41Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "82a2dff7-57ed-4f1c-9d01-2085334cc11b",
-      "requestParameters": {
-         "DescribeFlowLogsRequest": {
-            "Filter": {
-               "Name": "resource-id",
-               "Value": {
-                  "content": "TrailDiscoverResourceId",
-                  "tag": 1
-               },
-               "tag": 1
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:DescribeFlowLogs because no identity-based policy allows the ec2:DescribeFlowLogs action",
+        "eventCategory": "Management",
+        "eventID": "334740bc-7921-43c2-9fce-3f9ee10a5c44",
+        "eventName": "DescribeFlowLogs",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:56:41Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "82a2dff7-57ed-4f1c-9d01-2085334cc11b",
+        "requestParameters": {
+            "DescribeFlowLogsRequest": {
+                "Filter": {
+                    "Name": "resource-id",
+                    "Value": {
+                        "content": "TrailDiscoverResourceId",
+                        "tag": 1
+                    },
+                    "tag": 1
+                }
             }
-         }
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_076ea597-bea7-4319-828b-6d47e435a2a8 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-flow-logs",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_076ea597-bea7-4319-828b-6d47e435a2a8 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-flow-logs",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

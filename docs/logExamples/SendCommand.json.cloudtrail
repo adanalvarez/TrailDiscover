@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ssm:SendCommand on resource: arn:aws:ssm:us-east-1:192374575148:managed-instance/\"TrailDiscoverInstanceID\" because no identity-based policy allows the ssm:SendCommand action",
-      "eventCategory": "Management",
-      "eventID": "eb3f2f5d-0ed1-4d44-9180-2261bfc6925a",
-      "eventName": "SendCommand",
-      "eventSource": "ssm.amazonaws.com",
-      "eventTime": "2024-08-18T16:04:41Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.08",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "16b97e28-a0f8-4b56-ac74-3b987d5927ce",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
-         "clientProvidedHostHeader": "ssm.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.2"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2c8bc4e8-2b62-4859-abb0-f697d54ad6ba cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ssm.send-command",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ssm:SendCommand on resource: arn:aws:ssm:us-east-1:192374575148:managed-instance/\"TrailDiscoverInstanceID\" because no identity-based policy allows the ssm:SendCommand action",
+        "eventCategory": "Management",
+        "eventID": "eb3f2f5d-0ed1-4d44-9180-2261bfc6925a",
+        "eventName": "SendCommand",
+        "eventSource": "ssm.amazonaws.com",
+        "eventTime": "2024-08-18T16:04:41Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "16b97e28-a0f8-4b56-ac74-3b987d5927ce",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+            "clientProvidedHostHeader": "ssm.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.2"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_2c8bc4e8-2b62-4859-abb0-f697d54ad6ba cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ssm.send-command",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

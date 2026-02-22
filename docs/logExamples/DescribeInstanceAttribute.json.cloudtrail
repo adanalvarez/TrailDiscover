@@ -1,38 +1,38 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:DescribeInstanceAttribute on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:DescribeInstanceAttribute action. Encoded authorization failure message: s6Btf--2w927mnc7BsIaOh0wdRejNNh5B5fQuMB8v3PNOR2JVzoUU_ibr24E-czU9MrP8gTsJIwPra4SJI1yb0Fs7-rdQiC8zlb9N4HRhYn7qRTpZLyJR9BFRSqd1Qh9ESUXj5eoyr9vy3dNp1rbX4X3tbU0x5sa1ivQUdHVD7Re4zva0XurrddMfmTNIo1q1yqIAqf6cMB0ajFfI-XniNy4WbV8bdLApJp8Mmi2TZZi0VjWlvJzW2AuJ_fELpaQJ09zQCnye2qgdzvVtONdDzTx7IZn-cVNUuHjnH04mCyTek4u-K0OnJXtqyU61BgOr5fLYnU_Xt2j5wynrfN88-2MN93VG-Al7j3xRTxMCRm71GjBcF7Nb2c2idhrkCoVVkeQI3NCPOaSDl2lQWohHAT6NpnqVQf_69wp3pZHmzCD0CZH7fytwAwH3JBeHx-2JSNbMsIJ1-InCksxBIocemDeFUrs5Lh2zOW0xXQsI2fROfIZKOjBQUAuWtwEhAODLO0CLCUcGV5NhjXao0y4iRE",
-      "eventCategory": "Management",
-      "eventID": "cb53a8df-10a0-42d1-81af-88dffcd26191",
-      "eventName": "DescribeInstanceAttribute",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:48:15Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "19168e8a-681e-41cc-bbce-ff860c3ff3ad",
-      "requestParameters": {
-         "attribute": "TrailDiscoverAttribute",
-         "instanceId": "TrailDiscoverInstanceId"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_aba1cd49-60a0-477f-a75a-41fa56291cca cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-instance-attribute",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:DescribeInstanceAttribute on resource: arn:aws:ec2:us-east-1:192374575148:instance/* because no identity-based policy allows the ec2:DescribeInstanceAttribute action. Encoded authorization failure message: s6Btf--2w927mnc7BsIaOh0wdRejNNh5B5fQuMB8v3PNOR2JVzoUU_ibr24E-czU9MrP8gTsJIwPra4SJI1yb0Fs7-rdQiC8zlb9N4HRhYn7qRTpZLyJR9BFRSqd1Qh9ESUXj5eoyr9vy3dNp1rbX4X3tbU0x5sa1ivQUdHVD7Re4zva0XurrddMfmTNIo1q1yqIAqf6cMB0ajFfI-XniNy4WbV8bdLApJp8Mmi2TZZi0VjWlvJzW2AuJ_fELpaQJ09zQCnye2qgdzvVtONdDzTx7IZn-cVNUuHjnH04mCyTek4u-K0OnJXtqyU61BgOr5fLYnU_Xt2j5wynrfN88-2MN93VG-Al7j3xRTxMCRm71GjBcF7Nb2c2idhrkCoVVkeQI3NCPOaSDl2lQWohHAT6NpnqVQf_69wp3pZHmzCD0CZH7fytwAwH3JBeHx-2JSNbMsIJ1-InCksxBIocemDeFUrs5Lh2zOW0xXQsI2fROfIZKOjBQUAuWtwEhAODLO0CLCUcGV5NhjXao0y4iRE",
+        "eventCategory": "Management",
+        "eventID": "cb53a8df-10a0-42d1-81af-88dffcd26191",
+        "eventName": "DescribeInstanceAttribute",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:48:15Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "19168e8a-681e-41cc-bbce-ff860c3ff3ad",
+        "requestParameters": {
+            "attribute": "TrailDiscoverAttribute",
+            "instanceId": "TrailDiscoverInstanceId"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_aba1cd49-60a0-477f-a75a-41fa56291cca cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.describe-instance-attribute",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

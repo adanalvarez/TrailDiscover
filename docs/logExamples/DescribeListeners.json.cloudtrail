@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: elasticloadbalancing:DescribeListeners because no identity-based policy allows the elasticloadbalancing:DescribeListeners action",
-      "eventCategory": "Management",
-      "eventID": "8409750f-f72c-4d51-947a-f9b930708eb3",
-      "eventName": "DescribeListeners",
-      "eventSource": "elasticloadbalancing.amazonaws.com",
-      "eventTime": "2024-08-18T12:41:04Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "c994cc7e-23b4-4e07-ad91-db345f272027",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "elasticloadbalancing.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_9261cba4-f219-4db1-b981-be18163388de cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#elbv2.describe-listeners",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: elasticloadbalancing:DescribeListeners because no identity-based policy allows the elasticloadbalancing:DescribeListeners action",
+        "eventCategory": "Management",
+        "eventID": "8409750f-f72c-4d51-947a-f9b930708eb3",
+        "eventName": "DescribeListeners",
+        "eventSource": "elasticloadbalancing.amazonaws.com",
+        "eventTime": "2024-08-18T12:41:04Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "c994cc7e-23b4-4e07-ad91-db345f272027",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "elasticloadbalancing.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_9261cba4-f219-4db1-b981-be18163388de cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#elbv2.describe-listeners",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

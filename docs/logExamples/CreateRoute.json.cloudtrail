@@ -1,39 +1,52 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateRoute on resource: arn:aws:ec2:us-east-1:192374575148:*/* because no identity-based policy allows the ec2:CreateRoute action. Encoded authorization failure message: 2L9VcJAIQR6b051oiAT1ADvhlvaRfOpZxPjkAOhBJxJRitTZyhhqfVGTjq00npd6Gw5WAplqXU9LOlYY1xwVebSYuuEovONqYgk-KDVleDrtpctdsk-3Nmp6HMz83WkvUJtIcStNLVNmNPFQE5fmH0mL3I8sMH0OLdWQDZECppi72jhMQV1QPT8Ymf-aG0bgBmKXPYTJV5uabzI8doYZXVmkT6wrW_dDz4tjEhbs8KAh6dnNbBAPBLBl3AptJAdn3TyozpdhloFpGZy-d8XXR5qwnU9J25GM-lxtce6ZV9SjIYPOlekj87KmyVQrnJF1G75VEUHJHDVVaHZqxdI0O9JsoFocG-pJpCjoBWbHZnNT7Roc_RyX2jJ0uZbMR4S-7dJHVVpaH9lRBK1nNbgTFsX2teyycjD25G9wM_4vHs1K6pByn5OvAUDM2wev5HUpd6AJ1n4RFDHDWE7ZUyh9oCuVlw2rSHNJEsKh7lF7okrovsYjpIm2Izn9N8-N",
-      "eventCategory": "Management",
-      "eventID": "d121bef5-9ddc-4aed-aed8-861a375beacc",
-      "eventName": "CreateRoute",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:38:48Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "9a1038f5-d25a-4960-910b-934f509bca40",
-      "requestParameters": {
-         "destinationCidrBlock": "TrailDiscoverDestinationCidrBlock",
-         "gatewayId": "TrailDiscoverGatewayId",
-         "routeTableId": "TrailDiscoverRouteTableId"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_3d9bdb3b-4993-422a-90d2-f5e811724ebe cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-route",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "eventVersion": "1.09",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_38ed609eee440095/AdanAlvarez",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/cniso-central-3r/AWSReservedSSO_AdministratorAccess_38ed609eee440095",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_38ed609eee440095"
+                },
+                "attributes": {
+                    "creationDate": "2025-05-24T13:26:15Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2025-05-24T13:29:16Z",
+        "eventSource": "apigateway.amazonaws.com",
+        "eventName": "CreateRoute",
+        "awsRegion": "me-isob-eastcentral-1r",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.11.0 (+https://www.terraform.io) terraform-provider-aws/5.98.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.8 md/GOOS#linux md/GOARCH#amd64 api/apigatewayv2#1.27.1 m/g",
+        "requestParameters": {
+            "apiKeyRequired": false,
+            "routeKey": "GET /trigger",
+            "authorizationType": "NONE",
+            "apiId": "5614585pm4",
+            "target": "integrations/3hcdepi"
+        },
+        "responseElements": {
+            "authorizationType": "NONE",
+            "routeId": "p8hctvu",
+            "apiKeyRequired": false,
+            "routeKey": "GET /trigger",
+            "target": "integrations/3hcdepi"
+        },
+        "requestID": "1e5e7cbe-b3d1-44e2-a899-3766e45eaed9",
+        "eventID": "c202eb07-c30d-46f2-a098-f65cd97a115e",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management"
+    }
 ]

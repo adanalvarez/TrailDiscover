@@ -1,0 +1,45 @@
+{
+    "eventName": "CreateLaunchTemplate",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a launch template. A launch template contains the parameters to launch an instance.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact",
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1059 - Command and Scripting Interpreter",
+            "reason": "Launch templates can include UserData scripts that execute commands on instance startup, enabling execution of malicious code."
+        },
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Creating launch templates modifies the cloud compute infrastructure configuration, which can be leveraged to deploy unauthorized instances."
+        },
+        {
+            "technique": "T1105 - Ingress Tool Transfer",
+            "reason": "UserData in launch templates can be used to download and execute malicious payloads on instance startup."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateLaunchTemplate to define instance configurations with malicious UserData scripts, enabling automated deployment of cryptomining or other malicious workloads at scale.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 create-launch-template --launch-template-name TrailDiscoverTemplate --launch-template-data '{\"ImageId\":\"ami-0b98a32b1c5e0d105\",\"InstanceType\":\"t2.micro\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CreateLaunchTemplate"
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b/AdanAlvarez",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_1b74cd717d47002b",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_1b74cd717d47002b"
+                },
+                "attributes": {
+                    "creationDate": "2026-02-22T16:10:39Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2026-02-22T16:11:47Z",
+        "eventSource": "iam.amazonaws.com",
+        "eventName": "CreateServiceLinkedRole",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython m/b,E,Z,g cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-service-linked-role",
+        "requestParameters": {
+            "aWSServiceName": "autoscaling.amazonaws.com"
+        },
+        "responseElements": {
+            "role": {
+                "path": "/aws-service-role/autoscaling.amazonaws.com/",
+                "roleName": "AWSServiceRoleForAutoScaling",
+                "roleId": "AROA2TOHFHNG77URCH2HX",
+                "arn": "arn:aws:iam::111111111111:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
+                "createDate": "Feb 22, 2026, 4:11:47\u202fPM",
+                "assumeRolePolicyDocument": "%7B%22Version%22%3A%20%222012-10-17%22%2C%20%22Statement%22%3A%20%5B%7B%22Action%22%3A%20%5B%22sts%3AAssumeRole%22%5D%2C%20%22Effect%22%3A%20%22Allow%22%2C%20%22Principal%22%3A%20%7B%22Service%22%3A%20%5B%22autoscaling.amazonaws.com%22%5D%7D%7D%5D%7D"
+            }
+        },
+        "requestID": "d0486b1e-4d92-4974-a95f-5ec4d6377125",
+        "eventID": "44d2eea3-1a32-4840-a32b-1d577acbdb34",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "iam.amazonaws.com"
+        }
+    }
+]

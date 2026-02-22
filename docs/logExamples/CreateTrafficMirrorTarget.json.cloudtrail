@@ -1,42 +1,42 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "Client.UnauthorizedOperation",
-      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: ec2:CreateTrafficMirrorTarget on resource: arn:aws:ec2:us-east-1:192374575148:network-interface/* because no identity-based policy allows the ec2:CreateTrafficMirrorTarget action. Encoded authorization failure message: H7q_Ce16dv2QHxzQQzWtKzMHnAfDdtrbGBaK1JPNY7BDyRralS5VrS04LZPDVb00qAeL-9LICwyTGNPnw6WMLNLhI6xelM2dVEXvhM9cBriIgvBfJgffxMSUQbN3e-lXfdmm7407CsCQ_xBhbUT3Or1BcCESaOLKm7XSSl3-RrYsNXgjF8f4hTqTh8zfi8fviy6VOAtJbjV7Ol73ZxK7PGq30qZVaL4utsysXubvuIBv961D34obWDqElsnct4PF5LfiK-rZmmJBhWHFYpke9k8R2-w-WtgYOzw9VJAoO4OfnyDOeK4skZR8OiHAe-k60PRDMB9SUUU-l0l8GIz3BaXxzvU4QmEDrCU9om8vEo8h7pvKlhs9n5zXql1QsGL7PLclgKob5QD1MWmHwWe9sauKKhezc3Qe_naoQMO6tRqV4vQqkFLjkjdCmDxN5NVnYrZ8lUD2_YFb5gU5Ke7RGEqSi10RKB1gWZvuI0aBvxym26OBjHz6Oh2OuJ7rKUo4gpzFf-uaKbdnPHXzG6atD3W-BXvUNnDTffEjwEn_sg",
-      "eventCategory": "Management",
-      "eventID": "db312c37-74a0-46c7-a801-5e6da8c4d34d",
-      "eventName": "CreateTrafficMirrorTarget",
-      "eventSource": "ec2.amazonaws.com",
-      "eventTime": "2024-08-18T14:09:13Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "700e210b-b6ba-4968-8309-90f0ac13eef4",
-      "requestParameters": {
-         "CreateTrafficMirrorTargetRequest": {
-            "ClientToken": "1b22a7ef-cced-4535-9ebc-cdd46913c976",
-            "Description": "TrailDiscoverDescription",
-            "NetworkInterfaceId": "TrailDiscoverNetworkInterfaceId",
-            "NetworkLoadBalancerArn": "TrailDiscoverNetworkLoadBalancerArn"
-         }
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_fbb74a09-3b31-4160-bdc2-a680f206a0a8 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-traffic-mirror-target",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "Client.UnauthorizedOperation",
+        "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: ec2:CreateTrafficMirrorTarget on resource: arn:aws:ec2:us-east-1:192374575148:network-interface/* because no identity-based policy allows the ec2:CreateTrafficMirrorTarget action. Encoded authorization failure message: H7q_Ce16dv2QHxzQQzWtKzMHnAfDdtrbGBaK1JPNY7BDyRralS5VrS04LZPDVb00qAeL-9LICwyTGNPnw6WMLNLhI6xelM2dVEXvhM9cBriIgvBfJgffxMSUQbN3e-lXfdmm7407CsCQ_xBhbUT3Or1BcCESaOLKm7XSSl3-RrYsNXgjF8f4hTqTh8zfi8fviy6VOAtJbjV7Ol73ZxK7PGq30qZVaL4utsysXubvuIBv961D34obWDqElsnct4PF5LfiK-rZmmJBhWHFYpke9k8R2-w-WtgYOzw9VJAoO4OfnyDOeK4skZR8OiHAe-k60PRDMB9SUUU-l0l8GIz3BaXxzvU4QmEDrCU9om8vEo8h7pvKlhs9n5zXql1QsGL7PLclgKob5QD1MWmHwWe9sauKKhezc3Qe_naoQMO6tRqV4vQqkFLjkjdCmDxN5NVnYrZ8lUD2_YFb5gU5Ke7RGEqSi10RKB1gWZvuI0aBvxym26OBjHz6Oh2OuJ7rKUo4gpzFf-uaKbdnPHXzG6atD3W-BXvUNnDTffEjwEn_sg",
+        "eventCategory": "Management",
+        "eventID": "db312c37-74a0-46c7-a801-5e6da8c4d34d",
+        "eventName": "CreateTrafficMirrorTarget",
+        "eventSource": "ec2.amazonaws.com",
+        "eventTime": "2024-08-18T14:09:13Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "700e210b-b6ba-4968-8309-90f0ac13eef4",
+        "requestParameters": {
+            "CreateTrafficMirrorTargetRequest": {
+                "ClientToken": "1b22a7ef-cced-4535-9ebc-cdd46913c976",
+                "Description": "TrailDiscoverDescription",
+                "NetworkInterfaceId": "TrailDiscoverNetworkInterfaceId",
+                "NetworkLoadBalancerArn": "TrailDiscoverNetworkLoadBalancerArn"
+            }
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_fbb74a09-3b31-4160-bdc2-a680f206a0a8 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-traffic-mirror-target",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

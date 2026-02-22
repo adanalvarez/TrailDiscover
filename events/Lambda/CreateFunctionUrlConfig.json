@@ -1,0 +1,42 @@
+{
+    "eventName": "CreateFunctionUrlConfig",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Creates a Lambda function URL with the specified authorization type.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation",
+        "T1133 - External Remote Services"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1190 - Exploit Public-Facing Application",
+            "reason": "Creating a Lambda function URL with AuthType NONE exposes the function publicly, creating an unauthenticated entry point into the AWS environment."
+        },
+        {
+            "technique": "T1071 - Application Layer Protocol",
+            "reason": "Lambda function URLs provide HTTPS endpoints that can be used for command and control communication."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateFunctionUrlConfig with AuthType NONE to create a publicly accessible Lambda endpoint as a persistence backdoor, bypassing IAM authentication.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda create-function-url-config --function-name TrailDiscoverFunction --auth-type NONE"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-CreateFunctionUrlConfig"
+}

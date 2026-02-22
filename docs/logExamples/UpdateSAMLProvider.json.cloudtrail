@@ -1,51 +1,51 @@
 [
-   {
-      "eventVersion": "1.10",
-      "userIdentity": {
-         "type": "AssumedRole",
-         "principalId": "AROATI5GJIISF5A6XXXXX:TrailDiscover",
-         "arn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_AdministratorAccess_6c63ce732f255555/TrailDiscover",
-         "accountId": "123456789012",
-         "accessKeyId": "ASIATI5GJIISLXXXXXXX",
-         "sessionContext": {
-               "sessionIssuer": {
-                  "type": "Role",
-                  "principalId": "AROATI5GJIISF5A6XXXXX",
-                  "arn": "arn:aws:iam::123456789012:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_6c63ce732f255555",
-                  "accountId": "123456789012",
-                  "userName": "AWSReservedSSO_AdministratorAccess_6c63ce732f255555"
-               },
-               "attributes": {
-                  "creationDate": "2024-09-22T10:03:09Z",
-                  "mfaAuthenticated": "false"
-               }
-         }
-      },
-      "eventTime": "2024-09-22T10:08:30Z",
-      "eventSource": "iam.amazonaws.com",
-      "eventName": "UpdateSAMLProvider",
-      "awsRegion": "us-east-1",
-      "sourceIPAddress": "1.1.1.1",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-      "requestParameters": {
-         "sAMLMetadataDocument": "<md:EntityDescriptor xmlns=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:md=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" entityID=\"http://localhost:8080/auth/realms/AWS\" ID=\"ID_cb52c2d9-a63f-4558-ac10-5f47257fc7b1\"><md:IDPSSODescriptor protocolSupportEnumeration=\"urn:oasis:names:tc:SAML:2.0:protocol\" AuthnRequestsSigned=\"true\" WantAssertionsSigned=\"true\"><md:KeyDescriptor use=\"signing\"><ds:KeyInfo><ds:X509Data><ds:X509Certificate>XXXXX</ds:X509Certificate></ds:X509Data></ds:KeyInfo></md:KeyDescriptor><md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"ERROR:ENDPOINT_NOT_SET\"></md:SingleLogoutService><md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat><md:AssertionConsumerService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"https://signin.aws.amazon.com/saml\" isDefault=\"true\" index=\"1\"></md:AssertionConsumerService></md:IDPSSODescriptor></md:EntityDescriptor>",
-         "sAMLProviderArn": "arn:aws:iam::123456789012:saml-provider/AWSSSO_bafa1a00e8e55555_DO_NOT_DELETE"
-      },
-      "responseElements": {
-         "sAMLProviderArn": "arn:aws:iam::123456789012:saml-provider/AWSSSO_bafa1a00e8e55555_DO_NOT_DELETE"
-      },
-      "requestID": "f150e1e5-03aa-4d86-8e88-df9cdc749bc7",
-      "eventID": "8750c8bf-356a-4bda-bb78-1265a90b32a7",
-      "readOnly": false,
-      "eventType": "AwsApiCall",
-      "managementEvent": true,
-      "recipientAccountId": "123456789012",
-      "eventCategory": "Management",
-      "tlsDetails": {
-         "tlsVersion": "TLSv1.3",
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "iam.amazonaws.com"
-      },
-      "sessionCredentialFromConsole": "true"
-   }
+    {
+        "eventVersion": "1.10",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess_6c63ce732f255555/TrailDiscover",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess_6c63ce732f255555",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess_6c63ce732f255555"
+                },
+                "attributes": {
+                    "creationDate": "2024-09-22T10:03:09Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2024-09-22T10:08:30Z",
+        "eventSource": "iam.amazonaws.com",
+        "eventName": "UpdateSAMLProvider",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/0.0.0.0 Safari/537.36",
+        "requestParameters": {
+            "sAMLMetadataDocument": "<md:EntityDescriptor xmlns=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:md=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" entityID=\"http://localhost:8080/auth/realms/AWS\" ID=\"ID_cb52c2d9-a63f-4558-ac10-5f47257fc7b1\"><md:IDPSSODescriptor protocolSupportEnumeration=\"urn:oasis:names:tc:SAML:2.0:protocol\" AuthnRequestsSigned=\"true\" WantAssertionsSigned=\"true\"><md:KeyDescriptor use=\"signing\"><ds:KeyInfo><ds:X509Data><ds:X509Certificate>XXXXX</ds:X509Certificate></ds:X509Data></ds:KeyInfo></md:KeyDescriptor><md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"ERROR:ENDPOINT_NOT_SET\"></md:SingleLogoutService><md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat><md:AssertionConsumerService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"https://signin.aws.amazon.com/saml\" isDefault=\"true\" index=\"1\"></md:AssertionConsumerService></md:IDPSSODescriptor></md:EntityDescriptor>",
+            "sAMLProviderArn": "arn:aws:iam::111111111111:saml-provider/AWSSSO_bafa1a00e8e55555_DO_NOT_DELETE"
+        },
+        "responseElements": {
+            "sAMLProviderArn": "arn:aws:iam::111111111111:saml-provider/AWSSSO_bafa1a00e8e55555_DO_NOT_DELETE"
+        },
+        "requestID": "f150e1e5-03aa-4d86-8e88-df9cdc749bc7",
+        "eventID": "8750c8bf-356a-4bda-bb78-1265a90b32a7",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "iam.amazonaws.com"
+        },
+        "sessionCredentialFromConsole": "true"
+    }
 ]

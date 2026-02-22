@@ -1,0 +1,40 @@
+{
+    "eventName": "CreateAutoScalingGroup",
+    "eventSource": "autoscaling.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates an Auto Scaling group with the specified name and attributes.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1578 - Modify Cloud Compute Infrastructure",
+            "reason": "Creating Auto Scaling groups modifies cloud compute infrastructure to automatically provision instances, which attackers can abuse for large-scale resource hijacking."
+        },
+        {
+            "technique": "T1583 - Acquire Infrastructure",
+            "reason": "Auto Scaling groups allow attackers to acquire compute infrastructure at scale within a compromised AWS environment."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
+            "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateAutoScalingGroup to deploy large numbers of EC2 instances automatically for cryptomining or other resource hijacking campaigns, with aggressive scaling parameters to maximize resource consumption.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws autoscaling create-auto-scaling-group --auto-scaling-group-name TrailDiscoverASG --launch-template LaunchTemplateName=TrailDiscoverTemplate --min-size 1 --max-size 1"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/autoscaling#autoscaling-CreateAutoScalingGroup"
+}

@@ -1,35 +1,35 @@
 [
-   {
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "User: arn:aws:iam::192374575148:user/TrailDiscover is not authorized to perform: logs:DeleteLogGroup on resource: arn:aws:logs:us-east-1:192374575148:log-group:TrailDiscoverLogGroup:log-stream: because no identity-based policy allows the logs:DeleteLogGroup action",
-      "eventCategory": "Management",
-      "eventID": "377b81ba-c929-4b06-bf7c-c9126da6a7d7",
-      "eventName": "DeleteLogGroup",
-      "eventSource": "logs.amazonaws.com",
-      "eventTime": "2024-08-18T09:34:23Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": false,
-      "recipientAccountId": "192374575148",
-      "requestID": "a2072ef0-8f8e-4f38-8909-f91e12092476",
-      "requestParameters": null,
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "logs.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_9734af80-b90e-4f19-835b-fb231da95fbe cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#logs.delete-log-group",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "User: arn:aws:iam::111111111111:user/TrailDiscover is not authorized to perform: logs:DeleteLogGroup on resource: arn:aws:logs:us-east-1:192374575148:log-group:TrailDiscoverLogGroup:log-stream: because no identity-based policy allows the logs:DeleteLogGroup action",
+        "eventCategory": "Management",
+        "eventID": "377b81ba-c929-4b06-bf7c-c9126da6a7d7",
+        "eventName": "DeleteLogGroup",
+        "eventSource": "logs.amazonaws.com",
+        "eventTime": "2024-08-18T09:34:23Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "111111111111",
+        "requestID": "a2072ef0-8f8e-4f38-8909-f91e12092476",
+        "requestParameters": null,
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "logs.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_9734af80-b90e-4f19-835b-fb231da95fbe cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#logs.delete-log-group",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]

@@ -1,45 +1,45 @@
 [
-   {
-      "additionalEventData": {
-         "AuthenticationMethod": "AuthHeader",
-         "CipherSuite": "TLS_AES_128_GCM_SHA256",
-         "SignatureVersion": "SigV4",
-         "bytesTransferredIn": 0,
-         "bytesTransferredOut": 243,
-         "x-amz-id-2": "3lclGYeLUh0nMS5oLu7iAnx7gMxlXqIOe8KgzPw1pR5t+mZKn+ctYyPLMmeBtht/0ekt/1zo8BQ="
-      },
-      "awsRegion": "us-east-1",
-      "errorCode": "AccessDenied",
-      "errorMessage": "Access Denied",
-      "eventCategory": "Management",
-      "eventID": "d2124f15-7373-4465-a961-0deafcb64efc",
-      "eventName": "ListBuckets",
-      "eventSource": "s3.amazonaws.com",
-      "eventTime": "2024-08-18T13:38:53Z",
-      "eventType": "AwsApiCall",
-      "eventVersion": "1.09",
-      "managementEvent": true,
-      "readOnly": true,
-      "recipientAccountId": "192374575148",
-      "requestID": "QATTNJWHZ62EB0BT",
-      "requestParameters": {
-         "Host": "s3.us-east-1.amazonaws.com"
-      },
-      "responseElements": null,
-      "sourceIPAddress": "109.196.12.142",
-      "tlsDetails": {
-         "cipherSuite": "TLS_AES_128_GCM_SHA256",
-         "clientProvidedHostHeader": "s3.us-east-1.amazonaws.com",
-         "tlsVersion": "TLSv1.3"
-      },
-      "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#5.10.16.3-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_8ea3c33e-c227-4c3e-b063-e3773bb7bc33 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.list-buckets]",
-      "userIdentity": {
-         "accessKeyId": "AKIASZSTLCAWF4CPBKMF",
-         "accountId": "192374575148",
-         "arn": "arn:aws:iam::192374575148:user/TrailDiscover",
-         "principalId": "AIDASZSTLCAWCAFWFS22H",
-         "type": "IAMUser",
-         "userName": "TrailDiscover"
-      }
-   }
+    {
+        "additionalEventData": {
+            "AuthenticationMethod": "AuthHeader",
+            "CipherSuite": "TLS_AES_128_GCM_SHA256",
+            "SignatureVersion": "SigV4",
+            "bytesTransferredIn": 0,
+            "bytesTransferredOut": 243,
+            "x-amz-id-2": "3lclGYeLUh0nMS5oLu7iAnx7gMxlXqIOe8KgzPw1pR5t+mZKn+ctYyPLMmeBtht/0ekt/1zo8BQ="
+        },
+        "awsRegion": "us-east-1",
+        "errorCode": "AccessDenied",
+        "errorMessage": "Access Denied",
+        "eventCategory": "Management",
+        "eventID": "d2124f15-7373-4465-a961-0deafcb64efc",
+        "eventName": "ListBuckets",
+        "eventSource": "s3.amazonaws.com",
+        "eventTime": "2024-08-18T13:38:53Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.09",
+        "managementEvent": true,
+        "readOnly": true,
+        "recipientAccountId": "111111111111",
+        "requestID": "QATTNJWHZ62EB0BT",
+        "requestParameters": {
+            "Host": "s3.us-east-1.amazonaws.com"
+        },
+        "responseElements": null,
+        "sourceIPAddress": "0.0.0.0",
+        "tlsDetails": {
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "s3.us-east-1.amazonaws.com",
+            "tlsVersion": "TLSv1.3"
+        },
+        "userAgent": "[aws-cli/2.17.32 md/awscrt#0.21.2 ua/2.0 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.11.9 md/pyimpl#CPython exec-env/grimoire_8ea3c33e-c227-4c3e-b063-e3773bb7bc33 cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#s3api.list-buckets]",
+        "userIdentity": {
+            "accessKeyId": "AKIA****************",
+            "accountId": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/TrailDiscover",
+            "principalId": "AROA****************:User",
+            "type": "IAMUser",
+            "userName": "TrailDiscover"
+        }
+    }
 ]
