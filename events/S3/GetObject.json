@@ -89,6 +89,10 @@
         {
             "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
             "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        },
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
         }
     ],
     "researchLinks": [

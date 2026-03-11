@@ -1034,6 +1034,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [
@@ -2650,6 +2654,88 @@
         "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-CreateFunctionUrlConfig"
     },
     {
+        "eventName": "GetFunction20150331v2",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Returns information about the function or function version, with a link to download the deployment package.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery",
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1530 - Data from Cloud Storage Object",
+                "reason": "GetFunction provides a pre-signed URL to download the Lambda deployment package, which may contain source code, secrets, and proprietary logic."
+            },
+            {
+                "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+                "reason": "The downloaded Lambda code package may contain hardcoded credentials, API keys, or other sensitive configuration data."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetFunction to retrieve Lambda function source code and configuration, potentially exposing hardcoded secrets, API keys, and proprietary business logic.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws lambda get-function --function-name TrailDiscoverFunction"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-GetFunction"
+    },
+    {
+        "eventName": "GetFunctionConfiguration20150331v2",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Returns the version-specific settings of a Lambda function or version.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery",
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+                "reason": "GetFunctionConfiguration exposes environment variables which may contain hardcoded credentials, API keys, or database connection strings."
+            },
+            {
+                "technique": "T1580 - Cloud Infrastructure Discovery",
+                "reason": "Reveals detailed function configuration including VPC settings, IAM roles, and runtime environment, aiding in infrastructure mapping."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetFunctionConfiguration to inspect Lambda function settings, environment variables, and attached IAM roles to extract credentials or plan privilege escalation.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws lambda get-function-configuration --function-name TrailDiscoverFunction"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-GetFunctionConfiguration"
+    },
+    {
         "eventName": "Invoke",
         "eventSource": "lambda.amazonaws.com",
         "awsService": "Lambda",
@@ -2726,10 +2812,50 @@
         "simulation": [
             {
                 "type": "commandLine",
-                "value": "N/A"
+                "value": "aws lambda invoke --function-name TrailDiscoverFunction /dev/stdout"
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-InvokeFunction"
+    },
+    {
+        "eventName": "ListFunctions20150331",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Returns a list of Lambda functions, with the version-specific configuration of each.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1580 - Cloud Infrastructure Discovery",
+                "reason": "Listing Lambda functions reveals serverless compute resources, their runtimes, and configurations, aiding in cloud infrastructure discovery."
+            },
+            {
+                "technique": "T1087 - Account Discovery",
+                "reason": "Lambda function configurations can include IAM role ARNs, revealing information about accounts and roles used across the environment."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListFunctions to enumerate Lambda functions, identifying targets that may contain hardcoded secrets or have overly permissive IAM roles attached.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws lambda list-functions"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-ListFunctions"
     },
     {
         "eventName": "UpdateEventSourceMapping20150331",
@@ -3950,6 +4076,163 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/cloudshell#cloudshell-CreateSession"
+    },
+    {
+        "eventName": "BatchGetImage",
+        "eventSource": "ecr.amazonaws.com",
+        "awsService": "ECR",
+        "description": "Gets detailed information for an image. Images are specified with either an imageTag or imageDigest.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection",
+            "TA0010 - Exfiltration"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage Object"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1537 - Transfer Data to Cloud Account",
+                "reason": "Container images pulled via BatchGetImage can be saved as archives and exfiltrated, transferring proprietary code and secrets out of the environment."
+            },
+            {
+                "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+                "reason": "Docker images may contain hardcoded credentials, API keys, or configuration files with sensitive information embedded in image layers."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use BatchGetImage (triggered by docker pull) to exfiltrate private container images containing proprietary application code, embedded secrets, and internal configuration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecr batch-get-image --repository-name traildiscoverrepo --image-ids imageTag=latest"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-BatchGetImage"
+    },
+    {
+        "eventName": "DescribeImages",
+        "eventSource": "ecr.amazonaws.com",
+        "awsService": "ECR",
+        "description": "Returns metadata about the images in a repository.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1580 - Cloud Infrastructure Discovery",
+                "reason": "DescribeImages reveals image tags, digests, sizes, and push dates, helping adversaries identify the most recent or valuable container images for exfiltration."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeImages to enumerate available container image versions and tags in ECR repositories, identifying targets for exfiltration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecr describe-images --repository-name traildiscoverrepo"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-DescribeImages"
+    },
+    {
+        "eventName": "DescribeRepositories",
+        "eventSource": "ecr.amazonaws.com",
+        "awsService": "ECR",
+        "description": "Describes image repositories in a registry.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1580 - Cloud Infrastructure Discovery",
+                "reason": "Listing ECR repositories reveals the container image infrastructure, helping adversaries understand what applications are deployed and their organization."
+            },
+            {
+                "technique": "T1087 - Account Discovery",
+                "reason": "Repository ARNs and registry IDs expose AWS account information useful for further enumeration."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeRepositories to enumerate ECR repositories, identifying container images that may contain proprietary code, embedded secrets, or internal service logic.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecr describe-repositories"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-DescribeRepositories"
+    },
+    {
+        "eventName": "GetAuthorizationToken",
+        "eventSource": "ecr.amazonaws.com",
+        "awsService": "ECR",
+        "description": "Retrieves an authorization token that can be used to authenticate to an Amazon ECR registry.",
+        "mitreAttackTactics": [
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1528 - Steal Application Access Token"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1078.004 - Valid Accounts: Cloud Accounts",
+                "reason": "The authorization token obtained via GetAuthorizationToken allows authentication to ECR using AWS IAM credentials, which an attacker could use with compromised credentials."
+            },
+            {
+                "technique": "T1550.001 - Use Alternate Authentication Material: Application Access Token",
+                "reason": "The ECR authorization token is an application access token that can be used to authenticate Docker clients to pull or push container images."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetAuthorizationToken to authenticate a Docker client to Amazon ECR, enabling them to pull private container images containing proprietary code and secrets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecr get-login-password --region us-east-1"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-GetAuthorizationToken"
     },
     {
         "eventName": "DeleteMembers",
@@ -5774,6 +6057,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],
@@ -6985,6 +7272,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],
@@ -7053,6 +7344,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],
@@ -7485,8 +7780,13 @@
                 "reason": "The DescribeCluster call can provide insights into how the cluster is integrated with other AWS services and trust relationships, such as IAM roles and policies"
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "New attack vectors in EKS",
@@ -7585,8 +7885,13 @@
                 "reason": "Identifying clusters helps in understanding the internal network architecture and relationships."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "New attack vectors in EKS",
@@ -9262,6 +9567,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [
@@ -9522,6 +9831,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [
@@ -9584,6 +9897,10 @@
             {
                 "description": "Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],
@@ -13046,6 +13363,10 @@
             {
                 "description": "Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild",
                 "link": "https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [
@@ -13169,6 +13490,46 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeLaunchTemplates"
+    },
+    {
+        "eventName": "DescribeNetworkInterfaces",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Describes one or more of your network interfaces.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1016 - System Network Configuration Discovery",
+                "reason": "DescribeNetworkInterfaces reveals detailed network configuration including private/public IPs, subnets, security groups, and attachment details, aiding adversaries in mapping the network topology."
+            },
+            {
+                "technique": "T1046 - Network Service Discovery",
+                "reason": "By examining network interfaces, attackers can identify services attached to specific IPs and understand network exposure for further targeting."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeNetworkInterfaces to map network topology, identify public-facing resources, and plan lateral movement within the VPC.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 describe-network-interfaces"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeNetworkInterfaces"
     },
     {
         "eventName": "DescribeRegions",
@@ -15773,6 +16134,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],
@@ -16103,6 +16468,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+                "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
         "researchLinks": [],

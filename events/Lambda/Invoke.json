@@ -75,7 +75,7 @@
     "simulation": [
         {
             "type": "commandLine",
-            "value": "N/A"
+            "value": "aws lambda invoke --function-name TrailDiscoverFunction /dev/stdout"
         }
     ],
     "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-InvokeFunction"

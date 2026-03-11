@@ -32,8 +32,13 @@
             "reason": "Identifying clusters helps in understanding the internal network architecture and relationships."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "New attack vectors in EKS",

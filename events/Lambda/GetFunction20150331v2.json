@@ -1,0 +1,41 @@
+{
+    "eventName": "GetFunction20150331v2",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Returns information about the function or function version, with a link to download the deployment package.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1530 - Data from Cloud Storage Object",
+            "reason": "GetFunction provides a pre-signed URL to download the Lambda deployment package, which may contain source code, secrets, and proprietary logic."
+        },
+        {
+            "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+            "reason": "The downloaded Lambda code package may contain hardcoded credentials, API keys, or other sensitive configuration data."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetFunction to retrieve Lambda function source code and configuration, potentially exposing hardcoded secrets, API keys, and proprietary business logic.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda get-function --function-name TrailDiscoverFunction"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-GetFunction"
+}

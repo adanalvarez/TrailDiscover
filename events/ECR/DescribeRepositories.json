@@ -1,0 +1,40 @@
+{
+    "eventName": "DescribeRepositories",
+    "eventSource": "ecr.amazonaws.com",
+    "awsService": "ECR",
+    "description": "Describes image repositories in a registry.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Listing ECR repositories reveals the container image infrastructure, helping adversaries understand what applications are deployed and their organization."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Repository ARNs and registry IDs expose AWS account information useful for further enumeration."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeRepositories to enumerate ECR repositories, identifying container images that may contain proprietary code, embedded secrets, or internal service logic.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecr describe-repositories"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-DescribeRepositories"
+}
