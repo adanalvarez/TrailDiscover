@@ -1,0 +1,40 @@
+{
+    "eventName": "DescribeNetworkInterfaces",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Describes one or more of your network interfaces.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1016 - System Network Configuration Discovery",
+            "reason": "DescribeNetworkInterfaces reveals detailed network configuration including private/public IPs, subnets, security groups, and attachment details, aiding adversaries in mapping the network topology."
+        },
+        {
+            "technique": "T1046 - Network Service Discovery",
+            "reason": "By examining network interfaces, attackers can identify services attached to specific IPs and understand network exposure for further targeting."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeNetworkInterfaces to map network topology, identify public-facing resources, and plan lateral movement within the VPC.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 describe-network-interfaces"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeNetworkInterfaces"
+}

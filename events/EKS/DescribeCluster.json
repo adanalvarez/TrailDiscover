@@ -28,8 +28,13 @@
             "reason": "The DescribeCluster call can provide insights into how the cluster is integrated with other AWS services and trust relationships, such as IAM roles and policies"
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "New attack vectors in EKS",

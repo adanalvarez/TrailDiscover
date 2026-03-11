@@ -1,0 +1,36 @@
+{
+    "eventName": "DescribeImages",
+    "eventSource": "ecr.amazonaws.com",
+    "awsService": "ECR",
+    "description": "Returns metadata about the images in a repository.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "DescribeImages reveals image tags, digests, sizes, and push dates, helping adversaries identify the most recent or valuable container images for exfiltration."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeImages to enumerate available container image versions and tags in ECR repositories, identifying targets for exfiltration.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecr describe-images --repository-name traildiscoverrepo"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-DescribeImages"
+}

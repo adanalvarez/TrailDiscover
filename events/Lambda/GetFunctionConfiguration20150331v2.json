@@ -1,0 +1,41 @@
+{
+    "eventName": "GetFunctionConfiguration20150331v2",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Returns the version-specific settings of a Lambda function or version.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+            "reason": "GetFunctionConfiguration exposes environment variables which may contain hardcoded credentials, API keys, or database connection strings."
+        },
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Reveals detailed function configuration including VPC settings, IAM roles, and runtime environment, aiding in infrastructure mapping."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetFunctionConfiguration to inspect Lambda function settings, environment variables, and attached IAM roles to extract credentials or plan privilege escalation.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda get-function-configuration --function-name TrailDiscoverFunction"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-GetFunctionConfiguration"
+}

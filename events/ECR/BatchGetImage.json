@@ -1,0 +1,41 @@
+{
+    "eventName": "BatchGetImage",
+    "eventSource": "ecr.amazonaws.com",
+    "awsService": "ECR",
+    "description": "Gets detailed information for an image. Images are specified with either an imageTag or imageDigest.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection",
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1530 - Data from Cloud Storage Object"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1537 - Transfer Data to Cloud Account",
+            "reason": "Container images pulled via BatchGetImage can be saved as archives and exfiltrated, transferring proprietary code and secrets out of the environment."
+        },
+        {
+            "technique": "T1552.001 - Unsecured Credentials: Credentials In Files",
+            "reason": "Docker images may contain hardcoded credentials, API keys, or configuration files with sensitive information embedded in image layers."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use BatchGetImage (triggered by docker pull) to exfiltrate private container images containing proprietary application code, embedded secrets, and internal configuration.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecr batch-get-image --repository-name traildiscoverrepo --image-ids imageTag=latest"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-BatchGetImage"
+}

@@ -1,0 +1,40 @@
+{
+    "eventName": "GetAuthorizationToken",
+    "eventSource": "ecr.amazonaws.com",
+    "awsService": "ECR",
+    "description": "Retrieves an authorization token that can be used to authenticate to an Amazon ECR registry.",
+    "mitreAttackTactics": [
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1528 - Steal Application Access Token"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1078.004 - Valid Accounts: Cloud Accounts",
+            "reason": "The authorization token obtained via GetAuthorizationToken allows authentication to ECR using AWS IAM credentials, which an attacker could use with compromised credentials."
+        },
+        {
+            "technique": "T1550.001 - Use Alternate Authentication Material: Application Access Token",
+            "reason": "The ECR authorization token is an application access token that can be used to authenticate Docker clients to pull or push container images."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetAuthorizationToken to authenticate a Docker client to Amazon ECR, enabling them to pull private container images containing proprietary code and secrets.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecr get-login-password --region us-east-1"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecr#ecr-GetAuthorizationToken"
+}

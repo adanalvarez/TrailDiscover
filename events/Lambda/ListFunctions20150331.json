@@ -1,0 +1,40 @@
+{
+    "eventName": "ListFunctions20150331",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Returns a list of Lambda functions, with the version-specific configuration of each.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [
+        {
+            "technique": "T1580 - Cloud Infrastructure Discovery",
+            "reason": "Listing Lambda functions reveals serverless compute resources, their runtimes, and configurations, aiding in cloud infrastructure discovery."
+        },
+        {
+            "technique": "T1087 - Account Discovery",
+            "reason": "Lambda function configurations can include IAM role ARNs, revealing information about accounts and roles used across the environment."
+        }
+    ],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
+            "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListFunctions to enumerate Lambda functions, identifying targets that may contain hardcoded secrets or have overly permissive IAM roles attached.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda list-functions"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-ListFunctions"
+}
