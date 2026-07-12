@@ -51,6 +51,10 @@
         {
             "description": "LA Times homicide website throttles cryptojacking attack",
             "link": "https://www.tripwire.com/state-of-security/la-times-website-cryptojacking-attack"
+        },
+        {
+            "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+            "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
         }
     ],
     "researchLinks": [

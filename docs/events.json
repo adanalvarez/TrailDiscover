@@ -4675,6 +4675,10 @@
             {
                 "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
                 "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+            },
+            {
+                "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+                "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
             }
         ],
         "researchLinks": [
@@ -5297,6 +5301,10 @@
             {
                 "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
                 "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+            },
+            {
+                "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+                "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
             }
         ],
         "researchLinks": [
@@ -8200,6 +8208,37 @@
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-ScheduleKeyDeletion"
     },
     {
+        "eventName": "PurgeQueue",
+        "eventSource": "sqs.amazonaws.com",
+        "awsService": "SQS",
+        "description": "Deletes all messages available in a queue, including messages in flight.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+                "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use PurgeQueue to destroy queued messages, disrupt asynchronous processing, and cause data loss or operational outages.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sqs purge-queue --queue-url https://sqs.us-east-1.amazonaws.com/111111111111/TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sqs#sqs-PurgeQueue"
+    },
+    {
         "eventName": "CreateCase",
         "eventSource": "support.amazonaws.com",
         "awsService": "Support",
@@ -10342,6 +10381,10 @@
             {
                 "description": "LA Times homicide website throttles cryptojacking attack",
                 "link": "https://www.tripwire.com/state-of-security/la-times-website-cryptojacking-attack"
+            },
+            {
+                "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+                "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
             }
         ],
         "researchLinks": [
@@ -11844,8 +11887,13 @@
                 "reason": "Creating specific ACL rules might help attackers map out network connections and understand the network layout."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+                "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS EC2 Network Access Control List Creation",
