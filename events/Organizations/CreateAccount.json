@@ -4,12 +4,14 @@
     "awsService": "Organizations",
     "description": "Creates an AWS account that is automatically a member of the organization whose credentials made the request.",
     "mitreAttackTactics": [
-        "TA0005 - Defense Evasion"
+        "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
-        "T1535 - Unused/Unsupported Cloud Regions"
+        "T1136 - Create Account"
     ],
-    "mitreAttackSubTechniques": [],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1078 - Valid Accounts",

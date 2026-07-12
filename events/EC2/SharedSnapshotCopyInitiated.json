@@ -2,7 +2,7 @@
     "eventName": "SharedSnapshotCopyInitiated",
     "eventSource": "ec2.amazonaws.com",
     "awsService": "EC2",
-    "description": "Modifies the specified attribute of the specified instance.",
+    "description": "A snapshot shared with another AWS account was copied by that account.",
     "mitreAttackTactics": [
         "TA0010 - Exfiltration"
     ],
