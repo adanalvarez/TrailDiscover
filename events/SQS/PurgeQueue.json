@@ -1,0 +1,31 @@
+{
+    "eventName": "PurgeQueue",
+    "eventSource": "sqs.amazonaws.com",
+    "awsService": "SQS",
+    "description": "Deletes all messages available in a queue, including messages in flight.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+            "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use PurgeQueue to destroy queued messages, disrupt asynchronous processing, and cause data loss or operational outages.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sqs purge-queue --queue-url https://sqs.us-east-1.amazonaws.com/111111111111/TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sqs#sqs-PurgeQueue"
+}

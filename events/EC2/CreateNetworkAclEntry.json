@@ -45,8 +45,13 @@
             "reason": "Creating specific ACL rules might help attackers map out network connections and understand the network layout."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
+            "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS EC2 Network Access Control List Creation",
