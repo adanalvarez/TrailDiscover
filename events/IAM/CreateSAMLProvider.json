@@ -1,23 +1,29 @@
 {
-    "eventName": "StartSSO",
-    "eventSource": "sso.amazonaws.com",
-    "awsService": "SSO",
-    "description": "Initialize AWS IAM Identity Center",
+    "eventName": "CreateSAMLProvider",
+    "eventSource": "iam.amazonaws.com",
+    "awsService": "IAM",
+    "description": "Creates an IAM resource that describes an identity provider (IdP) that supports SAML 2.0.",
     "mitreAttackTactics": [
         "TA0003 - Persistence"
     ],
     "mitreAttackTechniques": [
         "T1136 - Create Account"
     ],
-    "mitreAttackSubTechniques": [],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
     "unverifiedMitreAttackTechniques": [
         {
-            "technique": "T1098 - Account Manipulation",
-            "reason": "By starting SSO, an adversary can manipulate IAM user accounts, adding or modifying permissions to maintain persistent access."
+            "technique": "T1078 - Valid Accounts",
+            "reason": " Creating a SAML provider can lead to the creation and use of valid credentials, allowing the adversary to maintain persistence."
         },
         {
-            "technique": "T1078 - Valid Accounts",
-            "reason": "Use of valid SSO credentials can help adversaries gain access to various services and resources without raising alarms."
+            "technique": "T1098 - Account Manipulation",
+            "reason": "The creation of a SAML provider involves the manipulation of account settings to allow federated authentication, which can be used by adversaries to maintain access and evade detection."
+        },
+        {
+            "technique": "T1556 - Modify Authentication Process",
+            "reason": "The creation of a SAML provider could be used to modify the authentication process, allowing adversaries to authenticate as different users within the AWS environment."
         }
     ],
     "usedInWild": true,
@@ -28,7 +34,7 @@
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers use StartSSO to establish persistent footholds.",
+    "securityImplications": "Attackers use CreateSAMLProvider to establish persistent footholds.",
     "alerting": [],
     "simulation": [
         {
@@ -36,5 +42,5 @@
             "value": "N/A"
         }
     ],
-    "permissions": "https://aws.permissions.cloud/iam/sso#sso-StartSSO"
+    "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateSAMLProvider"
 }

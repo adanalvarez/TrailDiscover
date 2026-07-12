@@ -4,12 +4,14 @@
     "awsService": "route53domains",
     "description": "This operation registers a domain. For some top-level domains (TLDs), this operation requires extra parameters.",
     "mitreAttackTactics": [
-        "TA0040 - Impact"
+        "TA0042 - Resource Development"
     ],
     "mitreAttackTechniques": [
-        "T1496 - Resource Hijacking"
+        "T1583 - Acquire Infrastructure"
     ],
-    "mitreAttackSubTechniques": [],
+    "mitreAttackSubTechniques": [
+        "T1583.001 - Acquire Infrastructure: Domains"
+    ],
     "unverifiedMitreAttackTechniques": [
         {
             "technique": "T1583 - Acquire Infrastructure",

@@ -2,7 +2,7 @@
     "eventName": "SharedSnapshotVolumeCreated",
     "eventSource": "ec2.amazonaws.com",
     "awsService": "EC2",
-    "description": "Modifies the specified attribute of the specified instance.",
+    "description": "A volume was created from a snapshot shared with another AWS account.",
     "mitreAttackTactics": [
         "TA0010 - Exfiltration"
     ],

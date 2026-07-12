@@ -2,7 +2,7 @@
     "eventName": "ListSubscriptions",
     "eventSource": "sns.amazonaws.com",
     "awsService": "SNS",
-    "description": "Lists the calling AWS account's dedicated origination numbers and their metadata.",
+    "description": "Returns a list of the requester's subscriptions to Amazon SNS topics.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
     ],
@@ -28,7 +28,7 @@
             "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
         }
     ],
-    "securityImplications": "Attackers might use ListSubscriptions to identify origination numbers for potential smishing campaings.",
+    "securityImplications": "Attackers might use ListSubscriptions to enumerate SNS topic subscriptions (endpoints and protocols) for reconnaissance, or to find data flows to hijack or redirect.",
     "alerting": [],
     "simulation": [
         {

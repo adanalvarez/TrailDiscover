@@ -6,7 +6,7 @@
     "mitreAttackTactics": [
         "TA0009 - Collection",
         "TA0011 - Command and Control",
-        "T1496 - Resource Hijacking"
+        "TA0040 - Impact"
     ],
     "mitreAttackTechniques": [
         "T1496 - Resource Hijacking",

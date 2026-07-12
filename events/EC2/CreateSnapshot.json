@@ -75,7 +75,7 @@
             "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-snapshot/"
         }
     ],
-    "securityImplications": "Attackers might use ModifySnapshotAttribute to alter permissions on EBS snapshots, potentially exposing sensitive data to unauthorized parties.",
+    "securityImplications": "Attackers might create a snapshot of an EBS volume so it can later be shared or copied to an attacker-controlled account or region to exfiltrate its data.",
     "alerting": [],
     "simulation": [
         {
