@@ -1,5 +1,5 @@
 {
-    "eventName": "GetPublicAccessBlock",
+    "eventName": "GetBucketPublicAccessBlock",
     "eventSource": "s3.amazonaws.com",
     "awsService": "S3",
     "description": "Retrieves the PublicAccessBlock configuration for an Amazon S3 bucket.",
@@ -33,6 +33,10 @@
         {
             "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
             "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+        },
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
         }
     ],
     "researchLinks": [],

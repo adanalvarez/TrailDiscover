@@ -1,0 +1,33 @@
+{
+    "eventName": "ExecuteCommand",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Runs a command remotely on a container within a task.",
+    "mitreAttackTactics": [
+        "TA0008 - Lateral Movement",
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1021 - Remote Services",
+        "T1609 - Container Administration Command"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ExecuteCommand to run commands inside a running ECS container through the ECS Exec feature, using the container's task role to explore the environment, read secrets, and move laterally.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs execute-command --cluster TrailDiscover --task TrailDiscover --container TrailDiscover --interactive --command /bin/sh"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ExecuteCommand"
+}

@@ -144,7 +144,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetHostedZoneCount OR ListDomains OR DescribeOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR GetCallerIdentity OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR GetTopicAttributes OR ListOriginationNumbers OR ListSubscriptions OR ListTopics OR GetCertificate OR IssueCertificate OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR ListFunctions20150331 OR GetQueryResults OR ListApplications OR ListRules OR ListTargetsByRule OR GetInstances OR GetRegions OR GetCostAndUsage OR GetCostForecast OR DescribeImages OR DescribeRepositories OR GetAccountAuthorizationDetails OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR SimulatePrincipalPolicy OR DescribeListeners OR DescribeLoadBalancers OR DescribeAccessEntry OR DescribeCluster OR ListAssociatedAccessPolicies OR ListClusters OR Search OR DescribeKey OR GetQueueAttributes OR LookupEvents OR GetIntrospectionSchema OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetTransitGatewayRouteTableAssociations OR DescribeEventAggregates OR DescribeEvents OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR GetParameters OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR ListIPSets OR GetServiceQuota OR ListServiceQuotas OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetHostedZoneCount OR ListDomains OR ListHostedZones OR DescribeOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR GetCallerIdentity OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR GetTopicAttributes OR ListOriginationNumbers OR ListSubscriptions OR ListTopics OR GetCertificate OR IssueCertificate OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR ListFunctions20150331 OR GetQueryResults OR ListApplications OR ListRules OR ListTargetsByRule OR GetInstances OR GetRegions OR GetCostAndUsage OR GetCostForecast OR DescribeImages OR DescribeRepositories OR GetAccountAuthorizationDetails OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR SimulatePrincipalPolicy OR DescribeListeners OR DescribeLoadBalancers OR DescribeAccessEntry OR DescribeCluster OR ListAssociatedAccessPolicies OR ListClusters OR Search OR DescribeKey OR GetQueueAttributes OR LookupEvents OR GetIntrospectionSchema OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetTransitGatewayRouteTableAssociations OR DescribeEventAggregates OR DescribeEvents OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR GetParameters OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR ListIPSets OR DescribeTaskDefinition OR DescribeTasks OR ListClusters OR ListTaskDefinitions OR ListTasks OR GetServiceQuota OR ListServiceQuotas OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -219,7 +219,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AssumeRoleWithWebIdentity OR SwitchRole OR AttachVolume OR AuthorizeSecurityGroupIngress OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR EnableSerialConsoleAccess OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR ModifyDBInstance OR ResumeSession OR SendCommand OR StartSession) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AssumeRoleWithWebIdentity OR SwitchRole OR AttachVolume OR AuthorizeSecurityGroupIngress OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR EnableSerialConsoleAccess OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR ModifyDBInstance OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -264,7 +264,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -347,7 +347,7 @@
                                                 }
                                             ],
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR ChangeResourceRecordSets OR CreateHostedZone OR RegisterDomain OR CreateAccount OR DescribeOrganization OR InviteAccountToOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR CreateStack OR AssumeRole OR GetCallerIdentity OR GetFederationToken OR GetSessionToken OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR Publish OR CreateLogStream OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR PutLogEvents OR ConsoleLogin OR GetSigninToken OR PasswordRecoveryRequested OR SwitchRole OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR Invoke OR ListFunctions20150331 OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateOrganization OR CreateUser OR RegisterToWorkMail OR GetQueryResults OR ListApplications OR PutRule OR PutTargets OR CreateInstances OR GetCostAndUsage OR GetCostForecast OR AuthorizeApplication OR CreateAlias OR CreateSession OR BatchGetImage OR DescribeImages OR DescribeRepositories OR GetAuthorizationToken OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreatePolicy OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR PutUserPolicy OR SimulatePrincipalPolicy OR StartSSO OR UpdateLoginProfile OR DescribeSecret OR GetSecretValue OR ListSecrets OR CreateServer OR CreateUser OR DescribeCluster OR ListClusters OR Search OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PurgeQueue OR CreateCase OR DeleteTrail OR LookupEvents OR PutEventSelectors OR UpdateTrail OR DeleteBucket OR DeleteObject OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObject OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR InvokeModelWithResponseStream OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR AttachVolume OR AuthorizeSecurityGroupEgress OR AuthorizeSecurityGroupIngress OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateImage OR CreateKeyPair OR CreateLaunchTemplate OR CreateNetworkAclEntry OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR DeleteFlowLogs OR DeleteSnapshot OR DeleteVolume OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR EnableSerialConsoleAccess OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetPasswordData OR GetTransitGatewayRouteTableAssociations OR ImportKeyPair OR ModifyInstanceAttribute OR ModifySnapshotAttribute OR ReplaceIamInstanceProfileAssociation OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR SharedSnapshotCopyInitiated OR SharedSnapshotVolumeCreated OR StartInstances OR StopInstances OR TerminateInstances OR DescribeEventAggregates OR DescribeEvents OR CreateDBSnapshot OR DeleteDBCluster OR DeleteDBInstance OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR ModifyActivityStream OR ModifyDBInstance OR ModifyDBSnapshotAttribute OR AcceptAgreementRequest OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR SendCommand OR StartSession OR CreateEmailIdentity OR DeleteIdentity OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR PutAccountDetails OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR DeleteDetector OR DeleteInvitations OR DisassociateFromMasterAccount OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR CreateCluster OR CreateService OR RegisterTaskDefinition OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage OR GetServiceQuota OR ListServiceQuotas OR RequestServiceQuotaIncrease OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR ChangeResourceRecordSets OR CreateHostedZone OR ListHostedZones OR RegisterDomain OR CreateAccount OR DescribeOrganization OR InviteAccountToOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR CreateStack OR AssumeRole OR GetCallerIdentity OR GetFederationToken OR GetSessionToken OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR Publish OR CreateLogStream OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR PutLogEvents OR ConsoleLogin OR GetSigninToken OR PasswordRecoveryRequested OR SwitchRole OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR Invoke OR ListFunctions20150331 OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateOrganization OR CreateUser OR RegisterToWorkMail OR GetQueryResults OR ListApplications OR PutRule OR PutTargets OR CreateInstances OR GetCostAndUsage OR GetCostForecast OR AuthorizeApplication OR CreateAlias OR CreateSession OR BatchGetImage OR DescribeImages OR DescribeRepositories OR GetAuthorizationToken OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreatePolicy OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR PutUserPolicy OR SimulatePrincipalPolicy OR StartSSO OR UpdateLoginProfile OR DescribeSecret OR GetSecretValue OR ListSecrets OR CreateServer OR CreateUser OR DescribeCluster OR ListClusters OR Search OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PurgeQueue OR CreateCase OR DeleteTrail OR LookupEvents OR PutEventSelectors OR UpdateTrail OR DeleteBucket OR DeleteObject OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObject OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR InvokeModelWithResponseStream OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR AttachVolume OR AuthorizeSecurityGroupEgress OR AuthorizeSecurityGroupIngress OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateImage OR CreateKeyPair OR CreateLaunchTemplate OR CreateNetworkAclEntry OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR DeleteFlowLogs OR DeleteSnapshot OR DeleteVolume OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR EnableSerialConsoleAccess OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetPasswordData OR GetTransitGatewayRouteTableAssociations OR ImportKeyPair OR ModifyInstanceAttribute OR ModifySnapshotAttribute OR ReplaceIamInstanceProfileAssociation OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR SharedSnapshotCopyInitiated OR SharedSnapshotVolumeCreated OR StartInstances OR StopInstances OR TerminateInstances OR DescribeEventAggregates OR DescribeEvents OR CreateDBSnapshot OR DeleteDBCluster OR DeleteDBInstance OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR ModifyActivityStream OR ModifyDBInstance OR ModifyDBSnapshotAttribute OR AcceptAgreementRequest OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR SendCommand OR StartSession OR CreateEmailIdentity OR DeleteIdentity OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR PutAccountDetails OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR DeleteDetector OR DeleteInvitations OR DisassociateFromMasterAccount OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR CreateCluster OR CreateService OR DescribeTaskDefinition OR DescribeTasks OR ExecuteCommand OR ListClusters OR ListTaskDefinitions OR ListTasks OR RegisterTaskDefinition OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage OR GetServiceQuota OR ListServiceQuotas OR RequestServiceQuotaIncrease OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
                                             }
                                         }
                                     ],
@@ -1219,6 +1219,67 @@
                         }
                     },
                     {
+                        "id": 1974061604,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ExecuteCommand](https://traildiscover.cloud/#ECS-ExecuteCommand)\n\n**Description:** Runs a command remotely on a container within a task.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 466743448,
+                        "definition": {
+                            "title": "ExecuteCommand",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ExecuteCommand $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 3413354729,
                         "definition": {
                             "type": "note",
@@ -1231,8 +1292,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 0,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1273,8 +1334,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1292,7 +1353,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1334,7 +1395,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1353,7 +1414,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1395,7 +1456,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1414,8 +1475,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1456,8 +1517,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1468,7 +1529,7 @@
                 "x": 0,
                 "y": 13,
                 "width": 12,
-                "height": 8
+                "height": 10
             }
         },
         {
@@ -4412,7 +4473,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 21,
+                "y": 23,
                 "width": 12,
                 "height": 34
             }
@@ -7053,7 +7114,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 55,
+                "y": 57,
                 "width": 12,
                 "height": 32
             }
@@ -10548,7 +10609,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 87,
+                "y": 89,
                 "width": 12,
                 "height": 40
             }
@@ -10810,7 +10871,7 @@
                         "id": 117859562,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListSecrets](https://traildiscover.cloud/#SecretsManager-ListSecrets)\n\n**Description:** Lists the secrets that are stored by Secrets Manager in the AWS account, not including secrets that are marked for deletion.\n\n**Related Incidents:**\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Detecting AI resource-hijacking with Composite Alerts](https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts)\n- [Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [ListSecrets](https://traildiscover.cloud/#SecretsManager-ListSecrets)\n\n**Description:** Lists the secrets that are stored by Secrets Manager in the AWS account, not including secrets that are marked for deletion.\n\n**Related Incidents:**\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Detecting AI resource-hijacking with Composite Alerts](https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts)\n- [Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -11054,7 +11115,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 127,
+                "y": 129,
                 "width": 12,
                 "height": 8
             }
@@ -11191,6 +11252,67 @@
                         }
                     },
                     {
+                        "id": 2671775859,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ListHostedZones](https://traildiscover.cloud/#Route53-ListHostedZones)\n\n**Description:** Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services account.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1164457703,
+                        "definition": {
+                            "title": "ListHostedZones",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ListHostedZones $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 237342583,
                         "definition": {
                             "type": "note",
@@ -11203,8 +11325,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 0,
+                            "x": 0,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -11245,8 +11367,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 0,
+                            "x": 2,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -11264,7 +11386,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11306,7 +11428,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11325,7 +11447,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11367,7 +11489,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11386,8 +11508,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 0,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11428,8 +11550,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11447,7 +11569,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11489,7 +11611,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11499,7 +11621,7 @@
                         "id": 1613106959,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetCallerIdentity](https://traildiscover.cloud/#STS-GetCallerIdentity)\n\n**Description:** Returns details about the IAM user or role whose credentials are used to call the operation.\n\n**Related Incidents:**\n- [When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability](https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/)\n- [GotRoot! AWS root Account Takeover](https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1)\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/)\n- [Detecting AI resource-hijacking with Composite Alerts](https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover](https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Threat Actors Using AWS WorkMail in Phishing Campaigns](https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n- [New attack vectors in EKS](https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features)\n- [Enumerate AWS Account ID from an EC2 Instance](https://hackingthe.cloud/aws/enumeration/account_id_from_ec2/)\n",
+                            "content": "### [GetCallerIdentity](https://traildiscover.cloud/#STS-GetCallerIdentity)\n\n**Description:** Returns details about the IAM user or role whose credentials are used to call the operation.\n\n**Related Incidents:**\n- [When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability](https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/)\n- [GotRoot! AWS root Account Takeover](https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1)\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Tales from the cloud trenches: Using malicious AWS activity to spot phishing campaigns](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-aws-activity-to-phishing/)\n- [Detecting AI resource-hijacking with Composite Alerts](https://www.lacework.com/blog/detecting-ai-resource-hijacking-with-composite-alerts)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover](https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Threat Actors Using AWS WorkMail in Phishing Campaigns](https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n- [New attack vectors in EKS](https://www.wiz.io/blog/new-attack-vectors-emerge-via-recent-eks-access-entries-and-pod-identity-features)\n- [Enumerate AWS Account ID from an EC2 Instance](https://hackingthe.cloud/aws/enumeration/account_id_from_ec2/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -11508,7 +11630,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11550,7 +11672,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11569,8 +11691,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11611,8 +11733,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11630,7 +11752,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11672,7 +11794,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11691,7 +11813,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11733,7 +11855,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11752,8 +11874,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 6,
+                            "x": 0,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -11794,8 +11916,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 6,
+                            "x": 2,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -11813,7 +11935,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -11855,7 +11977,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -11874,7 +11996,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -11916,7 +12038,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -11935,8 +12057,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 8,
+                            "x": 0,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -11977,8 +12099,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 8,
+                            "x": 2,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -11996,7 +12118,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -12038,7 +12160,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -12057,7 +12179,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -12099,7 +12221,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -12118,8 +12240,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 10,
+                            "x": 0,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -12160,8 +12282,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 10,
+                            "x": 2,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -12179,7 +12301,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -12221,7 +12343,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -12240,7 +12362,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -12282,7 +12404,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -12301,8 +12423,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 12,
+                            "x": 0,
+                            "y": 14,
                             "width": 2,
                             "height": 2
                         }
@@ -12343,8 +12465,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 12,
+                            "x": 2,
+                            "y": 14,
                             "width": 2,
                             "height": 2
                         }
@@ -12362,7 +12484,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -12404,7 +12526,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -12423,7 +12545,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -12465,7 +12587,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -12484,8 +12606,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 14,
+                            "x": 0,
+                            "y": 16,
                             "width": 2,
                             "height": 2
                         }
@@ -12526,8 +12648,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 14,
+                            "x": 2,
+                            "y": 16,
                             "width": 2,
                             "height": 2
                         }
@@ -12536,7 +12658,7 @@
                         "id": 3431802608,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListFunctions20150331](https://traildiscover.cloud/#Lambda-ListFunctions20150331)\n\n**Description:** Returns a list of Lambda functions, with the version-specific configuration of each.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [ListFunctions20150331](https://traildiscover.cloud/#Lambda-ListFunctions20150331)\n\n**Description:** Returns a list of Lambda functions, with the version-specific configuration of each.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -12545,7 +12667,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -12587,7 +12709,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -12606,7 +12728,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -12648,7 +12770,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -12667,8 +12789,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 16,
+                            "x": 0,
+                            "y": 18,
                             "width": 2,
                             "height": 2
                         }
@@ -12709,8 +12831,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 16,
+                            "x": 2,
+                            "y": 18,
                             "width": 2,
                             "height": 2
                         }
@@ -12728,7 +12850,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -12770,7 +12892,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -12789,7 +12911,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -12831,7 +12953,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -12850,8 +12972,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 18,
+                            "x": 0,
+                            "y": 20,
                             "width": 2,
                             "height": 2
                         }
@@ -12892,8 +13014,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 18,
+                            "x": 2,
+                            "y": 20,
                             "width": 2,
                             "height": 2
                         }
@@ -12911,7 +13033,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -12953,7 +13075,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -12972,7 +13094,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -13014,7 +13136,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -13033,8 +13155,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 20,
+                            "x": 0,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -13075,8 +13197,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 20,
+                            "x": 2,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -13094,7 +13216,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -13136,7 +13258,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -13155,7 +13277,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -13197,7 +13319,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -13216,8 +13338,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 22,
+                            "x": 0,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -13258,8 +13380,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 22,
+                            "x": 2,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -13277,7 +13399,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -13319,7 +13441,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -13338,7 +13460,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -13380,7 +13502,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -13399,8 +13521,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 24,
+                            "x": 0,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -13441,8 +13563,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 24,
+                            "x": 2,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -13460,7 +13582,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -13502,7 +13624,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -13521,7 +13643,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -13563,7 +13685,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -13573,7 +13695,7 @@
                         "id": 2479616526,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListAttachedUserPolicies](https://traildiscover.cloud/#IAM-ListAttachedUserPolicies)\n\n**Description:** Lists all managed policies that are attached to the specified IAM user.\n\n**Related Incidents:**\n- [Datadog threat roundup: top insights for Q4 2024](https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/)\n",
+                            "content": "### [ListAttachedUserPolicies](https://traildiscover.cloud/#IAM-ListAttachedUserPolicies)\n\n**Description:** Lists all managed policies that are attached to the specified IAM user.\n\n**Related Incidents:**\n- [Datadog threat roundup: top insights for Q4 2024](https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -13582,8 +13704,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 26,
+                            "x": 0,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -13624,8 +13746,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 26,
+                            "x": 2,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -13643,7 +13765,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -13685,7 +13807,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -13704,7 +13826,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -13746,7 +13868,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -13765,8 +13887,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 28,
+                            "x": 0,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -13807,8 +13929,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 28,
+                            "x": 2,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -13826,7 +13948,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -13868,7 +13990,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -13887,7 +14009,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -13929,7 +14051,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -13939,7 +14061,7 @@
                         "id": 2340960600,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListRoles](https://traildiscover.cloud/#IAM-ListRoles)\n\n**Description:** Lists the IAM roles that have the specified path prefix. \n\n**Related Incidents:**\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n**Related Research:**\n- [AWS - IAM Enum](https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum)\n",
+                            "content": "### [ListRoles](https://traildiscover.cloud/#IAM-ListRoles)\n\n**Description:** Lists the IAM roles that have the specified path prefix. \n\n**Related Incidents:**\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [AWS - IAM Enum](https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-services/aws-iam-enum)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -13948,8 +14070,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 30,
+                            "x": 0,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -13990,8 +14112,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 30,
+                            "x": 2,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -14009,7 +14131,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -14051,7 +14173,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -14070,7 +14192,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -14112,7 +14234,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -14131,8 +14253,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 32,
+                            "x": 0,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -14173,8 +14295,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 32,
+                            "x": 2,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -14192,7 +14314,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -14234,7 +14356,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -14253,7 +14375,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -14295,7 +14417,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -14305,7 +14427,7 @@
                         "id": 3007003433,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListUsers](https://traildiscover.cloud/#IAM-ListUsers)\n\n**Description:** Lists the IAM users that have the specified path prefix. If no path prefix is specified, the operation returns all users in the AWS account.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [Incident report: From CLI to console, chasing an attacker in AWS](https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/)\n- [Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Datadog threat roundup: top insights for Q4 2024](https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/)\n- [Threat Actors Using AWS WorkMail in Phishing Campaigns](https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n",
+                            "content": "### [ListUsers](https://traildiscover.cloud/#IAM-ListUsers)\n\n**Description:** Lists the IAM users that have the specified path prefix. If no path prefix is specified, the operation returns all users in the AWS account.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [Incident report: From CLI to console, chasing an attacker in AWS](https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/)\n- [Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)](https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Datadog threat roundup: top insights for Q4 2024](https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/)\n- [Threat Actors Using AWS WorkMail in Phishing Campaigns](https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -14314,8 +14436,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 34,
+                            "x": 0,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -14356,8 +14478,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 34,
+                            "x": 2,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -14375,7 +14497,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -14417,7 +14539,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -14436,7 +14558,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -14478,7 +14600,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -14497,8 +14619,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 36,
+                            "x": 0,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -14539,8 +14661,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 36,
+                            "x": 2,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -14558,7 +14680,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 38,
                             "width": 2,
                             "height": 2
@@ -14600,7 +14722,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 38,
                             "width": 2,
                             "height": 2
@@ -14619,7 +14741,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 38,
                             "width": 2,
                             "height": 2
@@ -14661,7 +14783,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 38,
                             "width": 2,
                             "height": 2
@@ -14680,8 +14802,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 38,
+                            "x": 0,
+                            "y": 40,
                             "width": 2,
                             "height": 2
                         }
@@ -14722,8 +14844,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 38,
+                            "x": 2,
+                            "y": 40,
                             "width": 2,
                             "height": 2
                         }
@@ -14741,7 +14863,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 40,
                             "width": 2,
                             "height": 2
@@ -14783,7 +14905,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 40,
                             "width": 2,
                             "height": 2
@@ -14802,7 +14924,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 40,
                             "width": 2,
                             "height": 2
@@ -14844,7 +14966,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 40,
                             "width": 2,
                             "height": 2
@@ -14863,8 +14985,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 40,
+                            "x": 0,
+                            "y": 42,
                             "width": 2,
                             "height": 2
                         }
@@ -14905,8 +15027,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 40,
+                            "x": 2,
+                            "y": 42,
                             "width": 2,
                             "height": 2
                         }
@@ -14924,7 +15046,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 42,
                             "width": 2,
                             "height": 2
@@ -14966,7 +15088,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 42,
                             "width": 2,
                             "height": 2
@@ -14985,7 +15107,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 42,
                             "width": 2,
                             "height": 2
@@ -15027,7 +15149,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 42,
                             "width": 2,
                             "height": 2
@@ -15046,8 +15168,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 42,
+                            "x": 0,
+                            "y": 44,
                             "width": 2,
                             "height": 2
                         }
@@ -15088,8 +15210,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 42,
+                            "x": 2,
+                            "y": 44,
                             "width": 2,
                             "height": 2
                         }
@@ -15107,7 +15229,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 44,
                             "width": 2,
                             "height": 2
@@ -15149,7 +15271,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 44,
                             "width": 2,
                             "height": 2
@@ -15168,7 +15290,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 44,
                             "width": 2,
                             "height": 2
@@ -15210,7 +15332,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 44,
                             "width": 2,
                             "height": 2
@@ -15229,8 +15351,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 44,
+                            "x": 0,
+                            "y": 46,
                             "width": 2,
                             "height": 2
                         }
@@ -15271,8 +15393,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 44,
+                            "x": 2,
+                            "y": 46,
                             "width": 2,
                             "height": 2
                         }
@@ -15290,7 +15412,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 46,
                             "width": 2,
                             "height": 2
@@ -15332,7 +15454,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 46,
                             "width": 2,
                             "height": 2
@@ -15351,7 +15473,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 46,
                             "width": 2,
                             "height": 2
@@ -15393,7 +15515,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 46,
                             "width": 2,
                             "height": 2
@@ -15412,8 +15534,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 46,
+                            "x": 0,
+                            "y": 48,
                             "width": 2,
                             "height": 2
                         }
@@ -15454,8 +15576,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 46,
+                            "x": 2,
+                            "y": 48,
                             "width": 2,
                             "height": 2
                         }
@@ -15473,7 +15595,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 48,
                             "width": 2,
                             "height": 2
@@ -15515,17 +15637,17 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 48,
                             "width": 2,
                             "height": 2
                         }
                     },
                     {
-                        "id": 1061916695,
+                        "id": 1987376070,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetPublicAccessBlock](https://traildiscover.cloud/#S3-GetPublicAccessBlock)\n\n**Description:** Retrieves the PublicAccessBlock configuration for an Amazon S3 bucket.\n\n**Related Incidents:**\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n",
+                            "content": "### [GetBucketPublicAccessBlock](https://traildiscover.cloud/#S3-GetBucketPublicAccessBlock)\n\n**Description:** Retrieves the PublicAccessBlock configuration for an Amazon S3 bucket.\n\n**Related Incidents:**\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -15534,16 +15656,16 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 48,
                             "width": 2,
                             "height": 2
                         }
                     },
                     {
-                        "id": 3849565835,
+                        "id": 480057914,
                         "definition": {
-                            "title": "GetPublicAccessBlock",
+                            "title": "GetBucketPublicAccessBlock",
                             "title_size": "16",
                             "title_align": "left",
                             "type": "query_value",
@@ -15561,7 +15683,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:GetPublicAccessBlock $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:GetBucketPublicAccessBlock $userIdentity.arn $network.client.ip $account"
                                             }
                                         }
                                     ],
@@ -15576,7 +15698,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 48,
                             "width": 2,
                             "height": 2
@@ -15595,8 +15717,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 48,
+                            "x": 0,
+                            "y": 50,
                             "width": 2,
                             "height": 2
                         }
@@ -15637,8 +15759,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 48,
+                            "x": 2,
+                            "y": 50,
                             "width": 2,
                             "height": 2
                         }
@@ -15656,7 +15778,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 50,
                             "width": 2,
                             "height": 2
@@ -15698,7 +15820,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 50,
                             "width": 2,
                             "height": 2
@@ -15717,7 +15839,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 50,
                             "width": 2,
                             "height": 2
@@ -15759,7 +15881,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 50,
                             "width": 2,
                             "height": 2
@@ -15778,8 +15900,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 50,
+                            "x": 0,
+                            "y": 52,
                             "width": 2,
                             "height": 2
                         }
@@ -15820,8 +15942,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 50,
+                            "x": 2,
+                            "y": 52,
                             "width": 2,
                             "height": 2
                         }
@@ -15839,7 +15961,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 52,
                             "width": 2,
                             "height": 2
@@ -15881,7 +16003,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 52,
                             "width": 2,
                             "height": 2
@@ -15900,7 +16022,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 52,
                             "width": 2,
                             "height": 2
@@ -15942,7 +16064,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 52,
                             "width": 2,
                             "height": 2
@@ -15952,7 +16074,7 @@
                         "id": 2755348236,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListBuckets](https://traildiscover.cloud/#S3-ListBuckets)\n\n**Description:** Returns a list of all buckets owned by the authenticated sender of the request.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n- [A Technical Analysis of the Capital One Cloud Misconfiguration Breach](https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach)\n- [Enumerate AWS Account ID from a Public S3 Bucket](https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/)\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n",
+                            "content": "### [ListBuckets](https://traildiscover.cloud/#S3-ListBuckets)\n\n**Description:** Returns a list of all buckets owned by the authenticated sender of the request.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n- [A Technical Analysis of the Capital One Cloud Misconfiguration Breach](https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach)\n- [Enumerate AWS Account ID from a Public S3 Bucket](https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/)\n- [Compromised Cloud Compute Credentials: Case Studies From the Wild](https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab)\n- [Muddled Libra\u2019s Evolution to the Cloud](https://unit42.paloaltonetworks.com/muddled-libra-evolution-to-cloud/)\n- [Tales from the cloud trenches: Raiding for AWS vaults, buckets and secrets](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -15961,8 +16083,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 52,
+                            "x": 0,
+                            "y": 54,
                             "width": 2,
                             "height": 2
                         }
@@ -16003,8 +16125,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 52,
+                            "x": 2,
+                            "y": 54,
                             "width": 2,
                             "height": 2
                         }
@@ -16022,7 +16144,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 54,
                             "width": 2,
                             "height": 2
@@ -16064,7 +16186,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 54,
                             "width": 2,
                             "height": 2
@@ -16083,7 +16205,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 54,
                             "width": 2,
                             "height": 2
@@ -16125,7 +16247,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 54,
                             "width": 2,
                             "height": 2
@@ -16144,8 +16266,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 54,
+                            "x": 0,
+                            "y": 56,
                             "width": 2,
                             "height": 2
                         }
@@ -16186,8 +16308,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 54,
+                            "x": 2,
+                            "y": 56,
                             "width": 2,
                             "height": 2
                         }
@@ -16205,7 +16327,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 56,
                             "width": 2,
                             "height": 2
@@ -16247,7 +16369,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 56,
                             "width": 2,
                             "height": 2
@@ -16266,7 +16388,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 56,
                             "width": 2,
                             "height": 2
@@ -16308,7 +16430,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 56,
                             "width": 2,
                             "height": 2
@@ -16327,8 +16449,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 56,
+                            "x": 0,
+                            "y": 58,
                             "width": 2,
                             "height": 2
                         }
@@ -16369,8 +16491,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 56,
+                            "x": 2,
+                            "y": 58,
                             "width": 2,
                             "height": 2
                         }
@@ -16388,7 +16510,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 58,
                             "width": 2,
                             "height": 2
@@ -16430,7 +16552,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 58,
                             "width": 2,
                             "height": 2
@@ -16449,7 +16571,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 58,
                             "width": 2,
                             "height": 2
@@ -16491,7 +16613,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 58,
                             "width": 2,
                             "height": 2
@@ -16510,8 +16632,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 58,
+                            "x": 0,
+                            "y": 60,
                             "width": 2,
                             "height": 2
                         }
@@ -16552,8 +16674,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 58,
+                            "x": 2,
+                            "y": 60,
                             "width": 2,
                             "height": 2
                         }
@@ -16571,7 +16693,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 60,
                             "width": 2,
                             "height": 2
@@ -16613,7 +16735,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 60,
                             "width": 2,
                             "height": 2
@@ -16632,7 +16754,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 60,
                             "width": 2,
                             "height": 2
@@ -16674,7 +16796,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 60,
                             "width": 2,
                             "height": 2
@@ -16693,8 +16815,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 60,
+                            "x": 0,
+                            "y": 62,
                             "width": 2,
                             "height": 2
                         }
@@ -16735,8 +16857,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 60,
+                            "x": 2,
+                            "y": 62,
                             "width": 2,
                             "height": 2
                         }
@@ -16754,7 +16876,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 62,
                             "width": 2,
                             "height": 2
@@ -16796,7 +16918,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 62,
                             "width": 2,
                             "height": 2
@@ -16815,7 +16937,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 62,
                             "width": 2,
                             "height": 2
@@ -16857,7 +16979,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 62,
                             "width": 2,
                             "height": 2
@@ -16876,8 +16998,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 62,
+                            "x": 0,
+                            "y": 64,
                             "width": 2,
                             "height": 2
                         }
@@ -16918,8 +17040,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 62,
+                            "x": 2,
+                            "y": 64,
                             "width": 2,
                             "height": 2
                         }
@@ -16937,7 +17059,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 64,
                             "width": 2,
                             "height": 2
@@ -16979,7 +17101,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 64,
                             "width": 2,
                             "height": 2
@@ -16998,7 +17120,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 64,
                             "width": 2,
                             "height": 2
@@ -17040,7 +17162,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 64,
                             "width": 2,
                             "height": 2
@@ -17059,8 +17181,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 64,
+                            "x": 0,
+                            "y": 66,
                             "width": 2,
                             "height": 2
                         }
@@ -17101,8 +17223,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 64,
+                            "x": 2,
+                            "y": 66,
                             "width": 2,
                             "height": 2
                         }
@@ -17120,7 +17242,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 66,
                             "width": 2,
                             "height": 2
@@ -17162,7 +17284,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 66,
                             "width": 2,
                             "height": 2
@@ -17181,7 +17303,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 66,
                             "width": 2,
                             "height": 2
@@ -17223,7 +17345,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 66,
                             "width": 2,
                             "height": 2
@@ -17242,8 +17364,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 66,
+                            "x": 0,
+                            "y": 68,
                             "width": 2,
                             "height": 2
                         }
@@ -17284,8 +17406,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 66,
+                            "x": 2,
+                            "y": 68,
                             "width": 2,
                             "height": 2
                         }
@@ -17303,7 +17425,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 68,
                             "width": 2,
                             "height": 2
@@ -17345,7 +17467,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 68,
                             "width": 2,
                             "height": 2
@@ -17364,7 +17486,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 68,
                             "width": 2,
                             "height": 2
@@ -17406,7 +17528,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 68,
                             "width": 2,
                             "height": 2
@@ -17425,8 +17547,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 68,
+                            "x": 0,
+                            "y": 70,
                             "width": 2,
                             "height": 2
                         }
@@ -17467,8 +17589,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 68,
+                            "x": 2,
+                            "y": 70,
                             "width": 2,
                             "height": 2
                         }
@@ -17486,7 +17608,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 70,
                             "width": 2,
                             "height": 2
@@ -17528,7 +17650,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 70,
                             "width": 2,
                             "height": 2
@@ -17547,7 +17669,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 70,
                             "width": 2,
                             "height": 2
@@ -17589,7 +17711,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 70,
                             "width": 2,
                             "height": 2
@@ -17608,8 +17730,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 70,
+                            "x": 0,
+                            "y": 72,
                             "width": 2,
                             "height": 2
                         }
@@ -17650,8 +17772,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 70,
+                            "x": 2,
+                            "y": 72,
                             "width": 2,
                             "height": 2
                         }
@@ -17660,7 +17782,7 @@
                         "id": 2725952243,
                         "definition": {
                             "type": "note",
-                            "content": "### [DescribeInstances](https://traildiscover.cloud/#EC2-DescribeInstances)\n\n**Description:** Describes the specified instances or all instances.\n\n**Related Incidents:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [Abusing VPC Traffic Mirroring in AWS](https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/)\n",
+                            "content": "### [DescribeInstances](https://traildiscover.cloud/#EC2-DescribeInstances)\n\n**Description:** Describes the specified instances or all instances.\n\n**Related Incidents:**\n- [Following attackers\u2019 (Cloud)trail in AWS: Methodology and findings in the wild](https://securitylabs.datadoghq.com/articles/following-attackers-trail-in-aws-methodology-findings-in-the-wild/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [Abusing VPC Traffic Mirroring in AWS](https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -17669,7 +17791,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 72,
                             "width": 2,
                             "height": 2
@@ -17711,7 +17833,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 72,
                             "width": 2,
                             "height": 2
@@ -17730,7 +17852,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 72,
                             "width": 2,
                             "height": 2
@@ -17772,7 +17894,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 72,
                             "width": 2,
                             "height": 2
@@ -17791,8 +17913,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 72,
+                            "x": 0,
+                            "y": 74,
                             "width": 2,
                             "height": 2
                         }
@@ -17833,8 +17955,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 72,
+                            "x": 2,
+                            "y": 74,
                             "width": 2,
                             "height": 2
                         }
@@ -17852,7 +17974,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 74,
                             "width": 2,
                             "height": 2
@@ -17894,7 +18016,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 74,
                             "width": 2,
                             "height": 2
@@ -17913,7 +18035,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 74,
                             "width": 2,
                             "height": 2
@@ -17955,7 +18077,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 74,
                             "width": 2,
                             "height": 2
@@ -17974,8 +18096,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 74,
+                            "x": 0,
+                            "y": 76,
                             "width": 2,
                             "height": 2
                         }
@@ -18016,8 +18138,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 74,
+                            "x": 2,
+                            "y": 76,
                             "width": 2,
                             "height": 2
                         }
@@ -18035,7 +18157,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 76,
                             "width": 2,
                             "height": 2
@@ -18077,7 +18199,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 76,
                             "width": 2,
                             "height": 2
@@ -18096,7 +18218,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 76,
                             "width": 2,
                             "height": 2
@@ -18138,7 +18260,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 76,
                             "width": 2,
                             "height": 2
@@ -18157,8 +18279,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 76,
+                            "x": 0,
+                            "y": 78,
                             "width": 2,
                             "height": 2
                         }
@@ -18199,8 +18321,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 76,
+                            "x": 2,
+                            "y": 78,
                             "width": 2,
                             "height": 2
                         }
@@ -18218,7 +18340,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 78,
                             "width": 2,
                             "height": 2
@@ -18260,7 +18382,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 78,
                             "width": 2,
                             "height": 2
@@ -18279,7 +18401,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 78,
                             "width": 2,
                             "height": 2
@@ -18321,7 +18443,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 78,
                             "width": 2,
                             "height": 2
@@ -18340,8 +18462,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 78,
+                            "x": 0,
+                            "y": 80,
                             "width": 2,
                             "height": 2
                         }
@@ -18382,8 +18504,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 78,
+                            "x": 2,
+                            "y": 80,
                             "width": 2,
                             "height": 2
                         }
@@ -18401,7 +18523,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 80,
                             "width": 2,
                             "height": 2
@@ -18443,7 +18565,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 80,
                             "width": 2,
                             "height": 2
@@ -18462,7 +18584,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 80,
                             "width": 2,
                             "height": 2
@@ -18504,7 +18626,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 80,
                             "width": 2,
                             "height": 2
@@ -18523,8 +18645,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 80,
+                            "x": 0,
+                            "y": 82,
                             "width": 2,
                             "height": 2
                         }
@@ -18565,8 +18687,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 80,
+                            "x": 2,
+                            "y": 82,
                             "width": 2,
                             "height": 2
                         }
@@ -18584,7 +18706,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 82,
                             "width": 2,
                             "height": 2
@@ -18626,7 +18748,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 82,
                             "width": 2,
                             "height": 2
@@ -18645,7 +18767,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 82,
                             "width": 2,
                             "height": 2
@@ -18687,7 +18809,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 82,
                             "width": 2,
                             "height": 2
@@ -18706,8 +18828,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 82,
+                            "x": 0,
+                            "y": 84,
                             "width": 2,
                             "height": 2
                         }
@@ -18748,8 +18870,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 82,
+                            "x": 2,
+                            "y": 84,
                             "width": 2,
                             "height": 2
                         }
@@ -18767,7 +18889,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 84,
                             "width": 2,
                             "height": 2
@@ -18809,7 +18931,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 84,
                             "width": 2,
                             "height": 2
@@ -18828,7 +18950,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 84,
                             "width": 2,
                             "height": 2
@@ -18870,7 +18992,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 84,
                             "width": 2,
                             "height": 2
@@ -18889,8 +19011,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 84,
+                            "x": 0,
+                            "y": 86,
                             "width": 2,
                             "height": 2
                         }
@@ -18931,8 +19053,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 84,
+                            "x": 2,
+                            "y": 86,
                             "width": 2,
                             "height": 2
                         }
@@ -18950,7 +19072,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 86,
                             "width": 2,
                             "height": 2
@@ -18992,7 +19114,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 86,
                             "width": 2,
                             "height": 2
@@ -19011,7 +19133,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 86,
                             "width": 2,
                             "height": 2
@@ -19053,7 +19175,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 86,
                             "width": 2,
                             "height": 2
@@ -19072,8 +19194,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 86,
+                            "x": 0,
+                            "y": 88,
                             "width": 2,
                             "height": 2
                         }
@@ -19114,8 +19236,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 86,
+                            "x": 2,
+                            "y": 88,
                             "width": 2,
                             "height": 2
                         }
@@ -19133,7 +19255,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 88,
                             "width": 2,
                             "height": 2
@@ -19175,7 +19297,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 88,
                             "width": 2,
                             "height": 2
@@ -19194,7 +19316,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 88,
                             "width": 2,
                             "height": 2
@@ -19236,7 +19358,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 88,
                             "width": 2,
                             "height": 2
@@ -19255,8 +19377,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 88,
+                            "x": 0,
+                            "y": 90,
                             "width": 2,
                             "height": 2
                         }
@@ -19297,8 +19419,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 88,
+                            "x": 2,
+                            "y": 90,
                             "width": 2,
                             "height": 2
                         }
@@ -19316,7 +19438,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 90,
                             "width": 2,
                             "height": 2
@@ -19358,7 +19480,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 90,
                             "width": 2,
                             "height": 2
@@ -19377,7 +19499,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 90,
                             "width": 2,
                             "height": 2
@@ -19419,7 +19541,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 90,
                             "width": 2,
                             "height": 2
@@ -19438,8 +19560,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 90,
+                            "x": 0,
+                            "y": 92,
                             "width": 2,
                             "height": 2
                         }
@@ -19480,8 +19602,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 90,
+                            "x": 2,
+                            "y": 92,
                             "width": 2,
                             "height": 2
                         }
@@ -19490,7 +19612,7 @@
                         "id": 995642685,
                         "definition": {
                             "type": "note",
-                            "content": "### [DescribeDBInstances](https://traildiscover.cloud/#RDS-DescribeDBInstances)\n\n**Description:** Describes provisioned RDS instances.\n\n**Related Incidents:**\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [DescribeDBInstances](https://traildiscover.cloud/#RDS-DescribeDBInstances)\n\n**Description:** Describes provisioned RDS instances.\n\n**Related Incidents:**\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -19499,7 +19621,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 92,
                             "width": 2,
                             "height": 2
@@ -19541,7 +19663,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 92,
                             "width": 2,
                             "height": 2
@@ -19560,7 +19682,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 92,
                             "width": 2,
                             "height": 2
@@ -19602,7 +19724,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 92,
                             "width": 2,
                             "height": 2
@@ -19621,8 +19743,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 92,
+                            "x": 0,
+                            "y": 94,
                             "width": 2,
                             "height": 2
                         }
@@ -19663,8 +19785,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 92,
+                            "x": 2,
+                            "y": 94,
                             "width": 2,
                             "height": 2
                         }
@@ -19682,7 +19804,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 94,
                             "width": 2,
                             "height": 2
@@ -19724,7 +19846,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 94,
                             "width": 2,
                             "height": 2
@@ -19743,7 +19865,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 94,
                             "width": 2,
                             "height": 2
@@ -19785,7 +19907,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 94,
                             "width": 2,
                             "height": 2
@@ -19804,8 +19926,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 94,
+                            "x": 0,
+                            "y": 96,
                             "width": 2,
                             "height": 2
                         }
@@ -19846,8 +19968,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 94,
+                            "x": 2,
+                            "y": 96,
                             "width": 2,
                             "height": 2
                         }
@@ -19865,7 +19987,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 96,
                             "width": 2,
                             "height": 2
@@ -19907,7 +20029,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 96,
                             "width": 2,
                             "height": 2
@@ -19926,7 +20048,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 96,
                             "width": 2,
                             "height": 2
@@ -19968,7 +20090,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 96,
                             "width": 2,
                             "height": 2
@@ -19987,8 +20109,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 96,
+                            "x": 0,
+                            "y": 98,
                             "width": 2,
                             "height": 2
                         }
@@ -20029,8 +20151,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 96,
+                            "x": 2,
+                            "y": 98,
                             "width": 2,
                             "height": 2
                         }
@@ -20048,7 +20170,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 98,
                             "width": 2,
                             "height": 2
@@ -20090,7 +20212,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 98,
                             "width": 2,
                             "height": 2
@@ -20109,7 +20231,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 98,
                             "width": 2,
                             "height": 2
@@ -20151,7 +20273,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 98,
                             "width": 2,
                             "height": 2
@@ -20170,8 +20292,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 98,
+                            "x": 0,
+                            "y": 100,
                             "width": 2,
                             "height": 2
                         }
@@ -20212,8 +20334,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 98,
+                            "x": 2,
+                            "y": 100,
                             "width": 2,
                             "height": 2
                         }
@@ -20231,7 +20353,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 100,
                             "width": 2,
                             "height": 2
@@ -20273,7 +20395,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 100,
                             "width": 2,
                             "height": 2
@@ -20292,7 +20414,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 100,
                             "width": 2,
                             "height": 2
@@ -20334,7 +20456,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 100,
                             "width": 2,
                             "height": 2
@@ -20353,8 +20475,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 100,
+                            "x": 0,
+                            "y": 102,
                             "width": 2,
                             "height": 2
                         }
@@ -20395,8 +20517,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 100,
+                            "x": 2,
+                            "y": 102,
                             "width": 2,
                             "height": 2
                         }
@@ -20414,7 +20536,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 102,
                             "width": 2,
                             "height": 2
@@ -20456,7 +20578,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 102,
                             "width": 2,
                             "height": 2
@@ -20475,7 +20597,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 102,
                             "width": 2,
                             "height": 2
@@ -20517,7 +20639,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 102,
                             "width": 2,
                             "height": 2
@@ -20536,8 +20658,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 102,
+                            "x": 0,
+                            "y": 104,
                             "width": 2,
                             "height": 2
                         }
@@ -20578,8 +20700,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 102,
+                            "x": 2,
+                            "y": 104,
                             "width": 2,
                             "height": 2
                         }
@@ -20597,7 +20719,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 104,
                             "width": 2,
                             "height": 2
@@ -20639,7 +20761,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 104,
                             "width": 2,
                             "height": 2
@@ -20658,7 +20780,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 104,
                             "width": 2,
                             "height": 2
@@ -20700,7 +20822,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 104,
                             "width": 2,
                             "height": 2
@@ -20719,8 +20841,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 104,
+                            "x": 0,
+                            "y": 106,
                             "width": 2,
                             "height": 2
                         }
@@ -20761,8 +20883,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 104,
+                            "x": 2,
+                            "y": 106,
                             "width": 2,
                             "height": 2
                         }
@@ -20780,7 +20902,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 106,
                             "width": 2,
                             "height": 2
@@ -20822,7 +20944,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 106,
                             "width": 2,
                             "height": 2
@@ -20841,7 +20963,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 106,
                             "width": 2,
                             "height": 2
@@ -20883,7 +21005,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 106,
                             "width": 2,
                             "height": 2
@@ -20902,8 +21024,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 106,
+                            "x": 0,
+                            "y": 108,
                             "width": 2,
                             "height": 2
                         }
@@ -20944,8 +21066,313 @@
                             "precision": 2
                         },
                         "layout": {
+                            "x": 2,
+                            "y": 108,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4159081847,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [DescribeTaskDefinition](https://traildiscover.cloud/#ECS-DescribeTaskDefinition)\n\n**Description:** Describes a task definition. You can specify a family and revision to find information about a specific task definition, or you can simply specify the family to find the latest ACTIVE revision in that family.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 108,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2651763691,
+                        "definition": {
+                            "title": "DescribeTaskDefinition",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:DescribeTaskDefinition $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 108,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4055893080,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [DescribeTasks](https://traildiscover.cloud/#ECS-DescribeTasks)\n\n**Description:** Describes a specified task or tasks.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 108,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2548574924,
+                        "definition": {
+                            "title": "DescribeTasks",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:DescribeTasks $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
                             "x": 10,
-                            "y": 106,
+                            "y": 108,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2820776618,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ListClusters](https://traildiscover.cloud/#ECS-ListClusters)\n\n**Description:** Returns a list of existing clusters.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 110,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1313458462,
+                        "definition": {
+                            "title": "ListClusters",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ListClusters $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 110,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 849967801,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ListTaskDefinitions](https://traildiscover.cloud/#ECS-ListTaskDefinitions)\n\n**Description:** Returns a list of task definitions that are registered to your account. You can filter the results by family name with the familyPrefix parameter or by status with the status parameter.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 110,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3736955828,
+                        "definition": {
+                            "title": "ListTaskDefinitions",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ListTaskDefinitions $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 110,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4292871405,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ListTasks](https://traildiscover.cloud/#ECS-ListTasks)\n\n**Description:** Returns a list of tasks. You can filter the results by cluster, task definition family, container instance, launch type, what IAM principal started the task, or by the desired status of the task.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 110,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2785553249,
+                        "definition": {
+                            "title": "ListTasks",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ListTasks $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 110,
                             "width": 2,
                             "height": 2
                         }
@@ -20964,7 +21391,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21006,7 +21433,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21025,7 +21452,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21067,7 +21494,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21086,7 +21513,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21128,7 +21555,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 108,
+                            "y": 112,
                             "width": 2,
                             "height": 2
                         }
@@ -21147,7 +21574,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 110,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -21189,7 +21616,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 110,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -21208,7 +21635,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 110,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -21250,7 +21677,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 110,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -21259,9 +21686,9 @@
             },
             "layout": {
                 "x": 0,
-                "y": 135,
+                "y": 137,
                 "width": 12,
-                "height": 114
+                "height": 118
             }
         },
         {
@@ -22187,14 +22614,75 @@
                             "width": 2,
                             "height": 2
                         }
+                    },
+                    {
+                        "id": 3427649779,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [ExecuteCommand](https://traildiscover.cloud/#ECS-ExecuteCommand)\n\n**Description:** Runs a command remotely on a container within a task.\n\n**Related Incidents:**\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 10,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1920331623,
+                        "definition": {
+                            "title": "ExecuteCommand",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:ExecuteCommand $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 10,
+                            "width": 2,
+                            "height": 2
+                        }
                     }
                 ]
             },
             "layout": {
                 "x": 0,
-                "y": 249,
+                "y": 255,
                 "width": 12,
-                "height": 12
+                "height": 14
             }
         },
         {
@@ -23003,7 +23491,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 261,
+                "y": 269,
                 "width": 12,
                 "height": 12
             }
@@ -23082,7 +23570,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 273,
+                "y": 281,
                 "width": 12,
                 "height": 4
             }
@@ -24381,7 +24869,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 277,
+                "y": 285,
                 "width": 12,
                 "height": 16
             }
@@ -27876,7 +28364,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 293,
+                "y": 301,
                 "width": 12,
                 "height": 40
             }
@@ -27955,7 +28443,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 333,
+                "y": 341,
                 "width": 12,
                 "height": 4
             }

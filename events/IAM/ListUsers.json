@@ -59,6 +59,10 @@
         {
             "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
             "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        },
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
         }
     ],
     "researchLinks": [

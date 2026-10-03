@@ -1,0 +1,31 @@
+{
+    "eventName": "ListClusters",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Returns a list of existing clusters.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListClusters to enumerate the ECS clusters in an account as a first step toward identifying container workloads to access.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs list-clusters"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListClusters"
+}

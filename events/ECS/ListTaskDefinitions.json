@@ -1,0 +1,31 @@
+{
+    "eventName": "ListTaskDefinitions",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Returns a list of task definitions that are registered to your account. You can filter the results by family name with the familyPrefix parameter or by status with the status parameter.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListTaskDefinitions to enumerate ECS task definitions, identifying workloads and configurations worth targeting.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs list-task-definitions"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListTaskDefinitions"
+}

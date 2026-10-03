@@ -1,0 +1,31 @@
+{
+    "eventName": "DescribeTasks",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Describes a specified task or tasks.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeTasks to inspect running ECS tasks for their containers and configuration, selecting targets for interactive container access.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs describe-tasks --cluster TrailDiscover --tasks TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-DescribeTasks"
+}

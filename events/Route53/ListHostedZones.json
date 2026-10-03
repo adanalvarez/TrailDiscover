@@ -1,0 +1,31 @@
+{
+    "eventName": "ListHostedZones",
+    "eventSource": "route53.amazonaws.com",
+    "awsService": "Route53",
+    "description": "Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListHostedZones to enumerate an account's Route 53 hosted zones, mapping the victim's internal and external DNS to find targets.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws route53 list-hosted-zones"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/route53#route53-ListHostedZones"
+}

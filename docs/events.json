@@ -389,6 +389,37 @@
         "permissions": "https://aws.permissions.cloud/iam/route53domains#route53domains-ListDomains"
     },
     {
+        "eventName": "ListHostedZones",
+        "eventSource": "route53.amazonaws.com",
+        "awsService": "Route53",
+        "description": "Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListHostedZones to enumerate an account's Route 53 hosted zones, mapping the victim's internal and external DNS to find targets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws route53 list-hosted-zones"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/route53#route53-ListHostedZones"
+    },
+    {
         "eventName": "RegisterDomain",
         "eventSource": "route53domains.amazonaws.com",
         "awsService": "route53domains",
@@ -1050,6 +1081,10 @@
             {
                 "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
                 "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -2887,6 +2922,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -6287,6 +6326,10 @@
             {
                 "description": "Datadog threat roundup: top insights for Q4 2024",
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -6542,6 +6585,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -6820,6 +6867,10 @@
             {
                 "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
                 "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -7585,6 +7636,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -9545,7 +9600,7 @@
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-GetBucketPolicy"
     },
     {
-        "eventName": "GetPublicAccessBlock",
+        "eventName": "GetBucketPublicAccessBlock",
         "eventSource": "s3.amazonaws.com",
         "awsService": "S3",
         "description": "Retrieves the PublicAccessBlock configuration for an Amazon S3 bucket.",
@@ -9579,6 +9634,10 @@
             {
                 "description": "Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments",
                 "link": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -10138,6 +10197,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -13681,6 +13744,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -16404,6 +16471,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -19028,6 +19099,194 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-CreateService"
+    },
+    {
+        "eventName": "DescribeTaskDefinition",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Describes a task definition. You can specify a family and revision to find information about a specific task definition, or you can simply specify the family to find the latest ACTIVE revision in that family.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeTaskDefinition to inspect an ECS task definition for its container images, environment variables, and IAM task role, revealing secrets and privileged targets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs describe-task-definition --task-definition TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-DescribeTaskDefinition"
+    },
+    {
+        "eventName": "DescribeTasks",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Describes a specified task or tasks.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeTasks to inspect running ECS tasks for their containers and configuration, selecting targets for interactive container access.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs describe-tasks --cluster TrailDiscover --tasks TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-DescribeTasks"
+    },
+    {
+        "eventName": "ExecuteCommand",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Runs a command remotely on a container within a task.",
+        "mitreAttackTactics": [
+            "TA0008 - Lateral Movement",
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1021 - Remote Services",
+            "T1609 - Container Administration Command"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ExecuteCommand to run commands inside a running ECS container through the ECS Exec feature, using the container's task role to explore the environment, read secrets, and move laterally.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs execute-command --cluster TrailDiscover --task TrailDiscover --container TrailDiscover --interactive --command /bin/sh"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ExecuteCommand"
+    },
+    {
+        "eventName": "ListClusters",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Returns a list of existing clusters.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListClusters to enumerate the ECS clusters in an account as a first step toward identifying container workloads to access.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs list-clusters"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListClusters"
+    },
+    {
+        "eventName": "ListTaskDefinitions",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Returns a list of task definitions that are registered to your account. You can filter the results by family name with the familyPrefix parameter or by status with the status parameter.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListTaskDefinitions to enumerate ECS task definitions, identifying workloads and configurations worth targeting.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs list-task-definitions"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListTaskDefinitions"
+    },
+    {
+        "eventName": "ListTasks",
+        "eventSource": "ecs.amazonaws.com",
+        "awsService": "ECS",
+        "description": "Returns a list of tasks. You can filter the results by cluster, task definition family, container instance, launch type, what IAM principal started the task, or by the desired status of the task.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+                "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListTasks to enumerate running ECS tasks in a cluster, identifying live containers to target for interactive access.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ecs list-tasks --cluster TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListTasks"
     },
     {
         "eventName": "RegisterTaskDefinition",
