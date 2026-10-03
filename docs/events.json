@@ -20257,6 +20257,131 @@
         "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
     },
     {
+        "eventName": "GetMemory",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Retrieve an existing Amazon Bedrock AgentCore Memory resource.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Cracks in the Bedrock: Agent God Mode",
+                "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+            }
+        ],
+        "securityImplications": "Attackers might use GetMemory to fetch the details of another agent's Bedrock AgentCore Memory resource, a first step toward reading that agent's stored data.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore-control get-memory --memory-id TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-GetMemory"
+    },
+    {
+        "eventName": "InvokeAgentRuntime",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Sends a request to an agent or tool hosted in an Amazon Bedrock AgentCore Runtime and receives responses in real-time.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Cracks in the Bedrock: Agent God Mode",
+                "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+            }
+        ],
+        "securityImplications": "Attackers might use InvokeAgentRuntime to trigger the execution of any other Bedrock AgentCore agent runtime in the account, pivoting between agents under overly broad default permissions.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore invoke-agent-runtime --agent-runtime-arn arn:aws:bedrock-agentcore:us-east-1:111111111111:runtime/TrailDiscover --payload e30= output.json"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-InvokeAgentRuntime"
+    },
+    {
+        "eventName": "InvokeCodeInterpreter",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Invokes a code interpreter session to run code in Amazon Bedrock AgentCore.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution",
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Cracks in the Bedrock: Agent God Mode",
+                "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+            }
+        ],
+        "securityImplications": "Attackers might use InvokeCodeInterpreter to run code in a Bedrock AgentCore Code Interpreter, where actions execute with the interpreter's own IAM permissions rather than the caller's, escalating their privileges.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore invoke-code-interpreter --code-interpreter-identifier TrailDiscover --session-id TrailDiscover --name executeCode --arguments '{\"language\":\"python\",\"code\":\"print(1)\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-InvokeCodeInterpreter"
+    },
+    {
+        "eventName": "RetrieveMemoryRecords",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Searches for and retrieves memory records from an AgentCore Memory resource based on specified search criteria.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Cracks in the Bedrock: Agent God Mode",
+                "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+            }
+        ],
+        "securityImplications": "Attackers might use RetrieveMemoryRecords to read the stored memory records of other agents in the account, leaking their conversation history and data context.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore retrieve-memory-records --memory-id TrailDiscover --namespace /TrailDiscover --search-criteria searchQuery=TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-RetrieveMemoryRecords"
+    },
+    {
         "eventName": "GetServiceQuota",
         "eventSource": "servicequotas.amazonaws.com",
         "awsService": "ServiceQuotas",

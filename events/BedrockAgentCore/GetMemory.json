@@ -1,0 +1,31 @@
+{
+    "eventName": "GetMemory",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Retrieve an existing Amazon Bedrock AgentCore Memory resource.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Cracks in the Bedrock: Agent God Mode",
+            "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetMemory to fetch the details of another agent's Bedrock AgentCore Memory resource, a first step toward reading that agent's stored data.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore-control get-memory --memory-id TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-GetMemory"
+}

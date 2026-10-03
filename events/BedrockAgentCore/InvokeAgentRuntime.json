@@ -1,0 +1,31 @@
+{
+    "eventName": "InvokeAgentRuntime",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Sends a request to an agent or tool hosted in an Amazon Bedrock AgentCore Runtime and receives responses in real-time.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Cracks in the Bedrock: Agent God Mode",
+            "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+        }
+    ],
+    "securityImplications": "Attackers might use InvokeAgentRuntime to trigger the execution of any other Bedrock AgentCore agent runtime in the account, pivoting between agents under overly broad default permissions.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore invoke-agent-runtime --agent-runtime-arn arn:aws:bedrock-agentcore:us-east-1:111111111111:runtime/TrailDiscover --payload e30= output.json"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-InvokeAgentRuntime"
+}

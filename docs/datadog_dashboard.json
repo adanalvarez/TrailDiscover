@@ -144,7 +144,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetHostedZoneCount OR ListDomains OR ListHostedZones OR DescribeOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR GetCallerIdentity OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR GetTopicAttributes OR ListOriginationNumbers OR ListSubscriptions OR ListTopics OR GetCertificate OR IssueCertificate OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR ListFunctions20150331 OR GetQueryResults OR ListApplications OR ListRules OR ListTargetsByRule OR GetInstances OR GetRegions OR GetCostAndUsage OR GetCostForecast OR DescribeImages OR DescribeRepositories OR GetAccountAuthorizationDetails OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR SimulatePrincipalPolicy OR DescribeListeners OR DescribeLoadBalancers OR DescribeAccessEntry OR DescribeCluster OR ListAssociatedAccessPolicies OR ListClusters OR Search OR DescribeKey OR GetQueueAttributes OR LookupEvents OR GetIntrospectionSchema OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetTransitGatewayRouteTableAssociations OR DescribeEventAggregates OR DescribeEvents OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR GetParameters OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR ListIPSets OR DescribeTaskDefinition OR DescribeTasks OR ListClusters OR ListTaskDefinitions OR ListTasks OR GetServiceQuota OR ListServiceQuotas OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetHostedZoneCount OR ListDomains OR ListHostedZones OR DescribeOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR GetCallerIdentity OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR GetTopicAttributes OR ListOriginationNumbers OR ListSubscriptions OR ListTopics OR GetCertificate OR IssueCertificate OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR ListFunctions20150331 OR GetQueryResults OR ListApplications OR ListRules OR ListTargetsByRule OR GetInstances OR GetRegions OR GetCostAndUsage OR GetCostForecast OR DescribeImages OR DescribeRepositories OR GetAccountAuthorizationDetails OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR SimulatePrincipalPolicy OR DescribeListeners OR DescribeLoadBalancers OR DescribeAccessEntry OR DescribeCluster OR ListAssociatedAccessPolicies OR ListClusters OR Search OR DescribeKey OR GetQueueAttributes OR LookupEvents OR GetIntrospectionSchema OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetTransitGatewayRouteTableAssociations OR DescribeEventAggregates OR DescribeEvents OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR GetParameters OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR ListIPSets OR DescribeTaskDefinition OR DescribeTasks OR ListClusters OR ListTaskDefinitions OR ListTasks OR GetMemory OR GetServiceQuota OR ListServiceQuotas OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -204,7 +204,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR GetCredentialsForIdentity OR GetId OR AddPermission20150331v2 OR CreateEventSourceMapping20150331 OR CreateFunction20150331 OR Invoke OR UpdateEventSourceMapping20150331 OR AddRoleToInstanceProfile OR AddUserToGroup OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateGroup OR CreateLoginProfile OR CreatePolicy OR CreatePolicyVersion OR DeleteRolePermissionsBoundary OR DeleteRolePolicy OR DeleteUserPermissionsBoundary OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR PutGroupPolicy OR PutRolePermissionsBoundary OR PutRolePolicy OR PutUserPermissionsBoundary OR PutUserPolicy OR SetDefaultPolicyVersion OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR AssociateAccessPolicy OR CreateAccessEntry OR ModifyInstanceAttribute OR ReplaceIamInstanceProfileAssociation OR CreateDevEndpoint OR CreateJob OR UpdateDevEndpoint OR UpdateJob OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR GetCredentialsForIdentity OR GetId OR AddPermission20150331v2 OR CreateEventSourceMapping20150331 OR CreateFunction20150331 OR Invoke OR UpdateEventSourceMapping20150331 OR AddRoleToInstanceProfile OR AddUserToGroup OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateGroup OR CreateLoginProfile OR CreatePolicy OR CreatePolicyVersion OR DeleteRolePermissionsBoundary OR DeleteRolePolicy OR DeleteUserPermissionsBoundary OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR PutGroupPolicy OR PutRolePermissionsBoundary OR PutRolePolicy OR PutUserPermissionsBoundary OR PutUserPolicy OR SetDefaultPolicyVersion OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR AssociateAccessPolicy OR CreateAccessEntry OR ModifyInstanceAttribute OR ReplaceIamInstanceProfileAssociation OR CreateDevEndpoint OR CreateJob OR UpdateDevEndpoint OR UpdateJob OR InvokeCodeInterpreter OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -249,7 +249,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateAgent OR CreateAgentActionGroup OR UpdateAgent OR UpdateFlow OR UpdatePrompt OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateAgent OR CreateAgentActionGroup OR UpdateAgent OR UpdateFlow OR UpdatePrompt OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR InvokeAgentRuntime OR InvokeCodeInterpreter OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -264,7 +264,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail OR RetrieveMemoryRecords) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -1829,6 +1829,128 @@
                         }
                     },
                     {
+                        "id": 36554808,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [InvokeAgentRuntime](https://traildiscover.cloud/#BedrockAgentCore-InvokeAgentRuntime)\n\n**Description:** Sends a request to an agent or tool hosted in an Amazon Bedrock AgentCore Runtime and receives responses in real-time.\n\n**Related Research:**\n- [Cracks in the Bedrock: Agent God Mode](https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2824203948,
+                        "definition": {
+                            "title": "InvokeAgentRuntime",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:InvokeAgentRuntime $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1493809906,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [InvokeCodeInterpreter](https://traildiscover.cloud/#BedrockAgentCore-InvokeCodeInterpreter)\n\n**Description:** Invokes a code interpreter session to run code in Amazon Bedrock AgentCore.\n\n**Related Research:**\n- [Cracks in the Bedrock: Agent God Mode](https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4281459046,
+                        "definition": {
+                            "title": "InvokeCodeInterpreter",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:InvokeCodeInterpreter $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 3413354729,
                         "definition": {
                             "type": "note",
@@ -1841,8 +1963,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 8,
+                            "x": 0,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1883,8 +2005,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 8,
+                            "x": 2,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1902,8 +2024,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 8,
+                            "x": 4,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1944,8 +2066,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 8,
+                            "x": 6,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1963,7 +2085,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -2005,7 +2127,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -2024,8 +2146,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 10,
+                            "x": 0,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -2066,8 +2188,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 10,
+                            "x": 2,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -2078,7 +2200,7 @@
                 "x": 0,
                 "y": 15,
                 "width": 12,
-                "height": 14
+                "height": 16
             }
         },
         {
@@ -5083,7 +5205,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 29,
+                "y": 31,
                 "width": 12,
                 "height": 36
             }
@@ -7660,6 +7782,67 @@
                         }
                     },
                     {
+                        "id": 93979686,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [InvokeCodeInterpreter](https://traildiscover.cloud/#BedrockAgentCore-InvokeCodeInterpreter)\n\n**Description:** Invokes a code interpreter session to run code in Amazon Bedrock AgentCore.\n\n**Related Research:**\n- [Cracks in the Bedrock: Agent God Mode](https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 28,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2881628826,
+                        "definition": {
+                            "title": "InvokeCodeInterpreter",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:InvokeCodeInterpreter $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 28,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 4045618208,
                         "definition": {
                             "type": "note",
@@ -7672,7 +7855,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -7714,7 +7897,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -7724,7 +7907,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 65,
+                "y": 67,
                 "width": 12,
                 "height": 32
             }
@@ -11402,7 +11585,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 97,
+                "y": 99,
                 "width": 12,
                 "height": 42
             }
@@ -12091,7 +12274,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 139,
+                "y": 141,
                 "width": 12,
                 "height": 10
             }
@@ -22354,6 +22537,67 @@
                         }
                     },
                     {
+                        "id": 697214745,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [GetMemory](https://traildiscover.cloud/#BedrockAgentCore-GetMemory)\n\n**Description:** Retrieve an existing Amazon Bedrock AgentCore Memory resource.\n\n**Related Research:**\n- [Cracks in the Bedrock: Agent God Mode](https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 112,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3484863885,
+                        "definition": {
+                            "title": "GetMemory",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:GetMemory $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 112,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 384525855,
                         "definition": {
                             "type": "note",
@@ -22366,7 +22610,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 112,
                             "width": 2,
                             "height": 2
@@ -22408,7 +22652,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 112,
                             "width": 2,
                             "height": 2
@@ -22427,7 +22671,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 112,
                             "width": 2,
                             "height": 2
@@ -22469,7 +22713,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 112,
                             "width": 2,
                             "height": 2
@@ -22488,8 +22732,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 112,
+                            "x": 0,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -22530,8 +22774,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 112,
+                            "x": 2,
+                            "y": 114,
                             "width": 2,
                             "height": 2
                         }
@@ -22549,7 +22793,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 114,
                             "width": 2,
                             "height": 2
@@ -22591,7 +22835,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 114,
                             "width": 2,
                             "height": 2
@@ -22610,7 +22854,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 114,
                             "width": 2,
                             "height": 2
@@ -22652,7 +22896,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 114,
                             "width": 2,
                             "height": 2
@@ -22662,7 +22906,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 149,
+                "y": 151,
                 "width": 12,
                 "height": 118
             }
@@ -23656,7 +23900,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 267,
+                "y": 269,
                 "width": 12,
                 "height": 14
             }
@@ -24462,12 +24706,73 @@
                             "width": 2,
                             "height": 2
                         }
+                    },
+                    {
+                        "id": 1924247469,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [RetrieveMemoryRecords](https://traildiscover.cloud/#BedrockAgentCore-RetrieveMemoryRecords)\n\n**Description:** Searches for and retrieves memory records from an AgentCore Memory resource based on specified search criteria.\n\n**Related Research:**\n- [Cracks in the Bedrock: Agent God Mode](https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 416929313,
+                        "definition": {
+                            "title": "RetrieveMemoryRecords",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:RetrieveMemoryRecords $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 8,
+                            "width": 2,
+                            "height": 2
+                        }
                     }
                 ]
             },
             "layout": {
                 "x": 0,
-                "y": 281,
+                "y": 283,
                 "width": 12,
                 "height": 12
             }
@@ -24546,7 +24851,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 293,
+                "y": 295,
                 "width": 12,
                 "height": 4
             }
@@ -25845,7 +26150,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 297,
+                "y": 299,
                 "width": 12,
                 "height": 16
             }
@@ -29401,7 +29706,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 313,
+                "y": 315,
                 "width": 12,
                 "height": 42
             }
@@ -29480,7 +29785,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 355,
+                "y": 357,
                 "width": 12,
                 "height": 4
             }
