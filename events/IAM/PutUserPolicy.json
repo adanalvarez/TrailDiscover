@@ -50,6 +50,10 @@
         {
             "description": "AWS IAM Privilege Escalation Techniques",
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Obfuscated Admin IAM Policy",
+            "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
         }
     ],
     "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",

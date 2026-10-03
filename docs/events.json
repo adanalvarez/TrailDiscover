@@ -5382,7 +5382,12 @@
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Obfuscated Admin IAM Policy",
+                "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
+            }
+        ],
         "securityImplications": "Attackers might use CreatePolicy to create new IAM policies that later they can use for potentially granting themselves elevated permissions.",
         "alerting": [
             {
@@ -5428,6 +5433,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Obfuscated Admin IAM Policy",
+                "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
             }
         ],
         "securityImplications": "Attackers might use CreatePolicyVersion to modify IAM policies, potentially granting themselves elevated permissions.",
@@ -7108,6 +7117,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Obfuscated Admin IAM Policy",
+                "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
             }
         ],
         "securityImplications": "Attackers might use PutGroupPolicy to modify permissions of a group, potentially granting unauthorized access to sensitive resources.",
@@ -7189,6 +7202,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Obfuscated Admin IAM Policy",
+                "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
             }
         ],
         "securityImplications": "Attackers might use PutRolePolicy to modify permissions of IAM roles, potentially granting unauthorized access to AWS resources.",
@@ -7302,6 +7319,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Obfuscated Admin IAM Policy",
+                "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
             }
         ],
         "securityImplications": "Attackers use PutUserPolicy to grant an inline policy to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",

@@ -3680,7 +3680,7 @@
                         "id": 3029688625,
                         "definition": {
                             "type": "note",
-                            "content": "### [PutUserPolicy](https://traildiscover.cloud/#IAM-PutUserPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM user.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [PutUserPolicy](https://traildiscover.cloud/#IAM-PutUserPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM user.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -6077,7 +6077,7 @@
                         "id": 827103310,
                         "definition": {
                             "type": "note",
-                            "content": "### [CreatePolicy](https://traildiscover.cloud/#IAM-CreatePolicy)\n\n**Description:** Creates a new managed policy for your AWS account.\n\n**Related Incidents:**\n- [New Developments in LLM Hijacking Activity](https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws)\n- [From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover](https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign)\n",
+                            "content": "### [CreatePolicy](https://traildiscover.cloud/#IAM-CreatePolicy)\n\n**Description:** Creates a new managed policy for your AWS account.\n\n**Related Incidents:**\n- [New Developments in LLM Hijacking Activity](https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws)\n- [From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover](https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign)\n**Related Research:**\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -6138,7 +6138,7 @@
                         "id": 417935644,
                         "definition": {
                             "type": "note",
-                            "content": "### [CreatePolicyVersion](https://traildiscover.cloud/#IAM-CreatePolicyVersion)\n\n**Description:** Creates a new version of the specified managed policy.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [CreatePolicyVersion](https://traildiscover.cloud/#IAM-CreatePolicyVersion)\n\n**Description:** Creates a new version of the specified managed policy.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -6565,7 +6565,7 @@
                         "id": 374667419,
                         "definition": {
                             "type": "note",
-                            "content": "### [PutGroupPolicy](https://traildiscover.cloud/#IAM-PutGroupPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM group.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [PutGroupPolicy](https://traildiscover.cloud/#IAM-PutGroupPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM group.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -6687,7 +6687,7 @@
                         "id": 581583474,
                         "definition": {
                             "type": "note",
-                            "content": "### [PutRolePolicy](https://traildiscover.cloud/#IAM-PutRolePolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM role.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [PutRolePolicy](https://traildiscover.cloud/#IAM-PutRolePolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM role.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -6809,7 +6809,7 @@
                         "id": 1559765163,
                         "definition": {
                             "type": "note",
-                            "content": "### [PutUserPolicy](https://traildiscover.cloud/#IAM-PutUserPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM user.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [PutUserPolicy](https://traildiscover.cloud/#IAM-PutUserPolicy)\n\n**Description:** Adds or updates an inline policy document that is embedded in the specified IAM user.\n\n**Related Incidents:**\n- [The curious case of DangerDev@protonmail.me](https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me)\n- [ANATOMY OF AN ATTACK: EXPOSED KEYS TO CRYPTO MINING](https://permiso.io/blog/s/anatomy-of-attack-exposed-keys-to-crypto-mining/)\n- [UNMASKING GUI-VIL: FINANCIALLY MOTIVATED CLOUD THREAT ACTOR](https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Obfuscated Admin IAM Policy](https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
