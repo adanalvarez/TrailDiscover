@@ -85,6 +85,10 @@
         {
             "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
             "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        },
+        {
+            "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+            "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
         }
     ],
     "researchLinks": [

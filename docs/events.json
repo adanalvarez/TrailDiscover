@@ -542,6 +542,10 @@
             {
                 "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
                 "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+            },
+            {
+                "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+                "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
             }
         ],
         "researchLinks": [],
@@ -1085,6 +1089,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+                "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
             }
         ],
         "researchLinks": [
@@ -6247,6 +6255,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+                "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
             }
         ],
         "researchLinks": [],
@@ -10201,6 +10213,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+                "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
             }
         ],
         "researchLinks": [
