@@ -174,7 +174,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(InviteAccountToOrganization OR LeaveOrganization OR CreateLogStream OR DeleteAlarms OR DeleteLogGroup OR DeleteLogStream OR PutLogEvents OR DeleteRule OR DisableRule OR PutRule OR RemoveTargets OR CreateInstances OR DeleteMembers OR DeactivateMFADevice OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR CreateRule OR CreateCase OR DeleteTrail OR PutEventSelectors OR StopLogging OR UpdateTrail OR CreateApiKey OR UpdateGraphqlApi OR UpdateResolver OR DeleteBucketPolicy OR DeleteFlowLogs OR DeleteNetworkAcl OR DeleteNetworkAclEntry OR StopInstances OR TerminateInstances OR AuthorizeDBSecurityGroupIngress OR ModifyActivityStream OR DeleteIdentity OR PutAccountDetails OR CreateFilter OR CreateIPSet OR DeleteDetector OR DeleteInvitations OR DeleteMembers OR DeletePublishingDestination OR DisassociateFromMasterAccount OR DisassociateMembers OR StopMonitoringMembers OR UpdateDetector OR UpdateIPSet OR DeleteConfigRule OR DeleteConfigurationRecorder OR DeleteDeliveryChannel OR StopConfigurationRecorder OR DeleteRuleGroup OR DeleteWebACL OR UpdateIPSet) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(InviteAccountToOrganization OR LeaveOrganization OR CreateLogStream OR DeleteAlarms OR DeleteLogGroup OR DeleteLogStream OR PutLogEvents OR DeleteRule OR DisableRule OR PutRule OR RemoveTargets OR CreateInstances OR DeleteMembers OR DeactivateMFADevice OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR CreateRule OR CreateCase OR DeleteTrail OR PutEventSelectors OR StopLogging OR UpdateTrail OR CreateApiKey OR UpdateGraphqlApi OR UpdateResolver OR DeleteBucketPolicy OR DeleteGuardrail OR PutModelInvocationLoggingConfiguration OR UpdateGuardrail OR DeleteFlowLogs OR DeleteNetworkAcl OR DeleteNetworkAclEntry OR StopInstances OR TerminateInstances OR AuthorizeDBSecurityGroupIngress OR ModifyActivityStream OR DeleteIdentity OR PutAccountDetails OR CreateFilter OR CreateIPSet OR DeleteDetector OR DeleteInvitations OR DeleteMembers OR DeletePublishingDestination OR DisassociateFromMasterAccount OR DisassociateMembers OR StopMonitoringMembers OR UpdateDetector OR UpdateIPSet OR DeleteConfigRule OR DeleteConfigurationRecorder OR DeleteDeliveryChannel OR StopConfigurationRecorder OR DeleteRuleGroup OR DeleteWebACL OR UpdateIPSet) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -249,7 +249,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateAgent OR CreateAgentActionGroup OR UpdateAgent OR UpdateFlow OR UpdatePrompt OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -1100,7 +1100,7 @@
                         "id": 2070992880,
                         "definition": {
                             "type": "note",
-                            "content": "### [PublishLayerVersion20181031](https://traildiscover.cloud/#Lambda-PublishLayerVersion20181031)\n\n**Description:** Creates an Lambda layer from a ZIP archive. Each time you call PublishLayerVersion with the same layer name, a new version is created.\n\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
+                            "content": "### [PublishLayerVersion20181031](https://traildiscover.cloud/#Lambda-PublishLayerVersion20181031)\n\n**Description:** Creates an Lambda layer from a ZIP archive. Each time you call PublishLayerVersion with the same layer name, a new version is created.\n\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -1219,6 +1219,311 @@
                         }
                     },
                     {
+                        "id": 603869695,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [CreateAgent](https://traildiscover.cloud/#Bedrock-CreateAgent)\n\n**Description:** Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1244035187,
+                        "definition": {
+                            "title": "CreateAgent",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:CreateAgent $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1837075893,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [CreateAgentActionGroup](https://traildiscover.cloud/#Bedrock-CreateAgentActionGroup)\n\n**Description:** Creates an action group for an agent. An action group represents the actions that an agent can carry out for the customer by defining the APIs that an agent can call and the logic for calling them.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 329757737,
+                        "definition": {
+                            "title": "CreateAgentActionGroup",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:CreateAgentActionGroup $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 478202892,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdateAgent](https://traildiscover.cloud/#Bedrock-UpdateAgent)\n\n**Description:** Updates the configuration of an agent.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3265852032,
+                        "definition": {
+                            "title": "UpdateAgent",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdateAgent $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1863798582,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdateFlow](https://traildiscover.cloud/#Bedrock-UpdateFlow)\n\n**Description:** Modifies a flow. Include both fields that you want to keep and fields that you want to change.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 356480426,
+                        "definition": {
+                            "title": "UpdateFlow",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdateFlow $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 406205930,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdatePrompt](https://traildiscover.cloud/#Bedrock-UpdatePrompt)\n\n**Description:** Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to replace.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3193855070,
+                        "definition": {
+                            "title": "UpdatePrompt",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdatePrompt $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 4222595249,
                         "definition": {
                             "type": "note",
@@ -1231,8 +1536,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
-                            "y": 2,
+                            "x": 8,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1273,8 +1578,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
-                            "y": 2,
+                            "x": 10,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1292,8 +1597,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 2,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1334,8 +1639,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 2,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1353,8 +1658,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 4,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1395,8 +1700,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 6,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1414,8 +1719,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
-                            "y": 4,
+                            "x": 8,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1456,8 +1761,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
-                            "y": 4,
+                            "x": 10,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1475,8 +1780,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 4,
+                            "x": 0,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1517,8 +1822,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 4,
+                            "x": 2,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1536,8 +1841,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 4,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1578,8 +1883,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 6,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1597,8 +1902,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
-                            "y": 6,
+                            "x": 8,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1639,8 +1944,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
-                            "y": 6,
+                            "x": 10,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -1658,8 +1963,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 6,
+                            "x": 0,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1700,8 +2005,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 6,
+                            "x": 2,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1719,8 +2024,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 6,
+                            "x": 4,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1761,8 +2066,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 6,
+                            "x": 6,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -1773,7 +2078,7 @@
                 "x": 0,
                 "y": 15,
                 "width": 12,
-                "height": 10
+                "height": 14
             }
         },
         {
@@ -2460,7 +2765,7 @@
                         "id": 1654505545,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n",
+                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -4717,7 +5022,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 25,
+                "y": 29,
                 "width": 12,
                 "height": 34
             }
@@ -7358,7 +7663,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 59,
+                "y": 63,
                 "width": 12,
                 "height": 32
             }
@@ -7681,7 +7986,7 @@
                         "id": 1461426953,
                         "definition": {
                             "type": "note",
-                            "content": "### [DeleteLogStream](https://traildiscover.cloud/#CloudWatchLogs-DeleteLogStream)\n\n**Description:** Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.\n\n**Related Research:**\n- [Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail](https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/)\n",
+                            "content": "### [DeleteLogStream](https://traildiscover.cloud/#CloudWatchLogs-DeleteLogStream)\n\n**Description:** Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.\n\n**Related Research:**\n- [Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail](https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -9203,6 +9508,189 @@
                         }
                     },
                     {
+                        "id": 774133985,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [DeleteGuardrail](https://traildiscover.cloud/#Bedrock-DeleteGuardrail)\n\n**Description:** Deletes a guardrail.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3561783125,
+                        "definition": {
+                            "title": "DeleteGuardrail",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:DeleteGuardrail $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4047226803,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [PutModelInvocationLoggingConfiguration](https://traildiscover.cloud/#Bedrock-PutModelInvocationLoggingConfiguration)\n\n**Description:** Set the configuration values for model invocation logging.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2539908647,
+                        "definition": {
+                            "title": "PutModelInvocationLoggingConfiguration",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:PutModelInvocationLoggingConfiguration $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3154682207,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdateGuardrail](https://traildiscover.cloud/#Bedrock-UpdateGuardrail)\n\n**Description:** Updates a guardrail with the values you specify.\n\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1647364051,
+                        "definition": {
+                            "title": "UpdateGuardrail",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdateGuardrail $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 20,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 114576655,
                         "definition": {
                             "type": "note",
@@ -9216,7 +9704,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9258,7 +9746,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9277,7 +9765,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9319,7 +9807,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9338,7 +9826,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9380,7 +9868,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 20,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -9399,7 +9887,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9441,7 +9929,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9460,7 +9948,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9502,7 +9990,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9521,7 +10009,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9563,7 +10051,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 22,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -9582,7 +10070,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9624,7 +10112,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9643,7 +10131,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9685,7 +10173,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9704,7 +10192,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9746,7 +10234,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 24,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -9765,7 +10253,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9807,7 +10295,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9826,7 +10314,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9868,7 +10356,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9887,7 +10375,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9929,7 +10417,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 26,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -9948,7 +10436,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -9990,7 +10478,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -10009,7 +10497,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -10051,7 +10539,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -10070,7 +10558,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -10112,7 +10600,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 28,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -10131,7 +10619,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10173,7 +10661,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10192,7 +10680,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10234,7 +10722,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10253,7 +10741,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10295,7 +10783,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 30,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -10314,7 +10802,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10356,7 +10844,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10375,7 +10863,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10417,7 +10905,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10436,7 +10924,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10478,7 +10966,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 32,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -10497,7 +10985,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10539,7 +11027,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10558,7 +11046,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10600,7 +11088,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10619,7 +11107,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10661,7 +11149,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 34,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -10680,7 +11168,7 @@
                         },
                         "layout": {
                             "x": 0,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10722,7 +11210,7 @@
                         },
                         "layout": {
                             "x": 2,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10741,7 +11229,7 @@
                         },
                         "layout": {
                             "x": 4,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10783,7 +11271,7 @@
                         },
                         "layout": {
                             "x": 6,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10802,7 +11290,7 @@
                         },
                         "layout": {
                             "x": 8,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10844,7 +11332,7 @@
                         },
                         "layout": {
                             "x": 10,
-                            "y": 36,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -10853,9 +11341,9 @@
             },
             "layout": {
                 "x": 0,
-                "y": 91,
+                "y": 95,
                 "width": 12,
-                "height": 40
+                "height": 42
             }
         },
         {
@@ -11481,7 +11969,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 131,
+                "y": 137,
                 "width": 12,
                 "height": 10
             }
@@ -16684,7 +17172,7 @@
                         "id": 1562293992,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetKnowledgeBase](https://traildiscover.cloud/#Bedrock-GetKnowledgeBase)\n\n**Description:** Retrieves configuration details for a specific Amazon Bedrock knowledge base.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n",
+                            "content": "### [GetKnowledgeBase](https://traildiscover.cloud/#Bedrock-GetKnowledgeBase)\n\n**Description:** Retrieves configuration details for a specific Amazon Bedrock knowledge base.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -22052,7 +22540,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 141,
+                "y": 147,
                 "width": 12,
                 "height": 118
             }
@@ -23046,7 +23534,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 259,
+                "y": 265,
                 "width": 12,
                 "height": 14
             }
@@ -23125,7 +23613,7 @@
                         "id": 4148342730,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n",
+                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -23857,7 +24345,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 273,
+                "y": 279,
                 "width": 12,
                 "height": 12
             }
@@ -23936,7 +24424,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 285,
+                "y": 291,
                 "width": 12,
                 "height": 4
             }
@@ -24137,7 +24625,7 @@
                         "id": 3212810754,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetObject](https://traildiscover.cloud/#S3-GetObject)\n\n**Description:** Retrieves an object from Amazon S3.\n\n**Related Incidents:**\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/)\n- [Incident 2 - Additional details of the attack](https://support.lastpass.com/s/document-item?language=en_US&bundleId=lastpass&topicId=LastPass/incident-2-details.html&_LANG=enus)\n- [Aruba Central Security Incident](https://web.archive.org/web/20250118002136/https://www.arubanetworks.com/support-services/security-bulletins/central-incident-faq/)\n- [Sendtech Pte. Ltd](https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Commissions-Decisions/Decision---Sendtech-Pte-Ltd---220721.ashx?la=en)\n- [GotRoot! AWS root Account Takeover](https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1)\n- [A Technical Analysis of the Capital One Cloud Misconfiguration Breach](https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach)\n- [Chegg, Inc](https://www.ftc.gov/system/files/ftc_gov/pdf/2023151-Chegg-Complaint.pdf)\n- [Scattered Spider Attack Analysis](https://www.reliaquest.com/blog/scattered-spider-attack-analysis-account-compromise/)\n- [Enumerate AWS Account ID from a Public S3 Bucket](https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n- [Top employee monitoring app leaks 21 million screenshots on thousands of users](https://www.techradar.com/pro/security/top-employee-monitoring-app-leaks-21-million-screenshots-on-thousands-of-users)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [Data Exfiltration through S3 Server Access Logs](https://hackingthe.cloud/aws/exploitation/s3_server_access_logs/)\n- [S3 Streaming Copy](https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/)\n- [Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets](https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets)\n",
+                            "content": "### [GetObject](https://traildiscover.cloud/#S3-GetObject)\n\n**Description:** Retrieves an object from Amazon S3.\n\n**Related Incidents:**\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining](https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/)\n- [Incident 2 - Additional details of the attack](https://support.lastpass.com/s/document-item?language=en_US&bundleId=lastpass&topicId=LastPass/incident-2-details.html&_LANG=enus)\n- [Aruba Central Security Incident](https://web.archive.org/web/20250118002136/https://www.arubanetworks.com/support-services/security-bulletins/central-incident-faq/)\n- [Sendtech Pte. Ltd](https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Commissions-Decisions/Decision---Sendtech-Pte-Ltd---220721.ashx?la=en)\n- [GotRoot! AWS root Account Takeover](https://medium.com/@gchib/naturesbasket-aws-root-account-takeover-e4aa5c5e95e1)\n- [A Technical Analysis of the Capital One Cloud Misconfiguration Breach](https://www.fugue.co/blog/a-technical-analysis-of-the-capital-one-cloud-misconfiguration-breach)\n- [Chegg, Inc](https://www.ftc.gov/system/files/ftc_gov/pdf/2023151-Chegg-Complaint.pdf)\n- [Scattered Spider Attack Analysis](https://www.reliaquest.com/blog/scattered-spider-attack-analysis-account-compromise/)\n- [Enumerate AWS Account ID from a Public S3 Bucket](https://hackingthe.cloud/aws/enumeration/account_id_from_s3_bucket/)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n- [Top employee monitoring app leaks 21 million screenshots on thousands of users](https://www.techradar.com/pro/security/top-employee-monitoring-app-leaks-21-million-screenshots-on-thousands-of-users)\n- [Crimson Collective: A New Threat Group Observed Operating in the Cloud](https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/)\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [Data Exfiltration through S3 Server Access Logs](https://hackingthe.cloud/aws/exploitation/s3_server_access_logs/)\n- [S3 Streaming Copy](https://hackingthe.cloud/aws/exploitation/s3_streaming_copy/)\n- [Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets](https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -25235,7 +25723,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 289,
+                "y": 295,
                 "width": 12,
                 "height": 16
             }
@@ -25619,7 +26107,7 @@
                         "id": 2154513665,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n",
+                            "content": "### [UpdateFunctionCode20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionCode20150331v2)\n\n**Description:** Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [Hunting for signs of persistence in the cloud: an IR guide following the CircleCI incident](https://www.wiz.io/blog/hunting-for-signs-of-persistence-in-the-cloud-an-ir-guide)\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies](https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c)\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -26717,7 +27205,7 @@
                         "id": 2867464004,
                         "definition": {
                             "type": "note",
-                            "content": "### [DeleteObject](https://traildiscover.cloud/#S3-DeleteObject)\n\n**Description:** Removes an object from a bucket. The behavior depends on the bucket's versioning state.\n\n**Related Incidents:**\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [The attack on ONUS \u2013 A real-life case of the Log4Shell vulnerability](https://cystack.net/research/the-attack-on-onus-a-real-life-case-of-the-log4shell-vulnerability)\n- [20/20 Eye Care Network and Hearing Care Network notify 3,253,822 health plan members of breach that deleted contents of AWS buckets](https://www.databreaches.net/20-20-eye-care-network-and-hearing-care-network-notify-3253822-health-plan-members-of-breach-that-deleted-contents-of-aws-buckets/)\n- [Hacker Puts Hosting Service Code Spaces Out of Business](https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/)\n- [New tactics and techniques for proactive threat detection](https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n",
+                            "content": "### [DeleteObject](https://traildiscover.cloud/#S3-DeleteObject)\n\n**Description:** Removes an object from a bucket. The behavior depends on the bucket's versioning state.\n\n**Related Incidents:**\n- [Ransomware in the cloud](https://www.invictus-ir.com/news/ransomware-in-the-cloud)\n- [The attack on ONUS \u2013 A real-life case of the Log4Shell vulnerability](https://cystack.net/research/the-attack-on-onus-a-real-life-case-of-the-log4shell-vulnerability)\n- [20/20 Eye Care Network and Hearing Care Network notify 3,253,822 health plan members of breach that deleted contents of AWS buckets](https://www.databreaches.net/20-20-eye-care-network-and-hearing-care-network-notify-3253822-health-plan-members-of-breach-that-deleted-contents-of-aws-buckets/)\n- [Hacker Puts Hosting Service Code Spaces Out of Business](https://threatpost.com/hacker-puts-hosting-service-code-spaces-out-of-business/106761/)\n- [New tactics and techniques for proactive threat detection](https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf)\n- [Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/)\n- [Securing a SaaS Company's AWS Environment After a Breach](https://badshah.io/case-studies/saas-aws-breach/)\n**Related Research:**\n- [We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them](https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -28730,7 +29218,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 305,
+                "y": 311,
                 "width": 12,
                 "height": 40
             }
@@ -28809,7 +29297,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 345,
+                "y": 351,
                 "width": 12,
                 "height": 4
             }

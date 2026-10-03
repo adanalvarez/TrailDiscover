@@ -17,6 +17,10 @@
         {
             "description": "\"But without PassRole it should be fine\", Lambda edition",
             "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+        },
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
         }
     ],
     "securityImplications": "Attackers might use PublishLayerVersion to publish a malicious Lambda layer in an account they control, which is then attached to a victim function so their code runs under the function's execution role without needing iam:PassRole.",

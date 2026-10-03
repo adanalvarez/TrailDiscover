@@ -27,7 +27,12 @@
             "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
     "securityImplications": "Attackers might use GetKnowledgeBase to understand how proprietary data is ingested and where to pivot for data exfiltration or tampering.",
     "alerting": [],
     "simulation": [

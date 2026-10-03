@@ -1,0 +1,31 @@
+{
+    "eventName": "UpdateAgent",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Updates the configuration of an agent.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateAgent to rewrite a Bedrock agent's base prompt so it leaks its internal instructions and tool schemas, or to redirect it to attacker-controlled behavior.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent update-agent --agent-id TrailDiscover --agent-name TrailDiscover --agent-resource-role-arn arn:aws:iam::111111111111:role/TrailDiscover --foundation-model anthropic.claude-v2"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateAgent"
+}

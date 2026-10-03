@@ -28,6 +28,10 @@
         {
             "description": "Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail",
             "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
+        },
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
         }
     ],
     "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS.",

@@ -1949,6 +1949,10 @@
             {
                 "description": "Generate Strong Security Signals with Sumo Logic & AWS Cloudtrail",
                 "link": "https://expel.com/blog/following-cloudtrail-generating-aws-security-signals-sumo-logic/"
+            },
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
             }
         ],
         "securityImplications": "Attackers might use DeleteLogStream to erase CloudWatch logs, erasing evidence of their activities within AWS.",
@@ -3094,6 +3098,10 @@
             {
                 "description": "\"But without PassRole it should be fine\", Lambda edition",
                 "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            },
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
             }
         ],
         "securityImplications": "Attackers might use PublishLayerVersion to publish a malicious Lambda layer in an account they control, which is then attached to a victim function so their code runs under the function's execution role without needing iam:PassRole.",
@@ -3227,6 +3235,10 @@
             {
                 "description": "How Attackers Can Misuse AWS CloudFront Access to Make It \u2018Rain\u2019 Cookies",
                 "link": "https://medium.com/@adan.alvarez/how-attackers-can-misuse-aws-cloudfront-access-to-make-it-rain-cookies-acf9ce87541c"
+            },
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
             }
         ],
         "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
@@ -9486,7 +9498,12 @@
                 "link": "https://badshah.io/case-studies/saas-aws-breach/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
         "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets.",
         "alerting": [],
         "simulation": [
@@ -10122,6 +10139,10 @@
             {
                 "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
                 "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            },
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
             }
         ],
         "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",
@@ -10910,6 +10931,68 @@
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-PutObject"
     },
     {
+        "eventName": "CreateAgent",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateAgent to stand up a malicious Bedrock agent, or combined with CreateAgentActionGroup to run attacker-controlled actions under the cover of a normal AI workflow.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent create-agent --agent-name TrailDiscover --agent-resource-role-arn arn:aws:iam::111111111111:role/TrailDiscover --foundation-model anthropic.claude-v2"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateAgent"
+    },
+    {
+        "eventName": "CreateAgentActionGroup",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Creates an action group for an agent. An action group represents the actions that an agent can carry out for the customer by defining the APIs that an agent can call and the logic for calling them.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateAgentActionGroup to attach a malicious executor to a legitimate Bedrock agent, enabling unauthorized actions such as database modifications or user creation under the cover of a normal AI workflow.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent create-agent-action-group --agent-id TrailDiscover --agent-version DRAFT --action-group-name TrailDiscover --action-group-executor lambda=arn:aws:lambda:us-east-1:111111111111:function:TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateAgentActionGroup"
+    },
+    {
         "eventName": "CreateFoundationModelAgreement",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -10956,6 +11039,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateFoundationModelAgreement"
+    },
+    {
+        "eventName": "DeleteGuardrail",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Deletes a guardrail.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1562.001 - Impair Defenses: Disable or Modify Tools"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use DeleteGuardrail to remove a Bedrock guardrail entirely, stripping the content and prompt-injection protections around a model.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock delete-guardrail --guardrail-identifier TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-DeleteGuardrail"
     },
     {
         "eventName": "GetFoundationModelAvailability",
@@ -11038,7 +11154,12 @@
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
         "securityImplications": "Attackers might use GetKnowledgeBase to understand how proprietary data is ingested and where to pivot for data exfiltration or tampering.",
         "alerting": [],
         "simulation": [
@@ -11720,6 +11841,39 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutFoundationModelEntitlement"
     },
     {
+        "eventName": "PutModelInvocationLoggingConfiguration",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Set the configuration values for model invocation logging.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use PutModelInvocationLoggingConfiguration to redirect Bedrock model-invocation logs to a bucket they control, silently capturing every prompt and response while removing the victim's audit trail.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock put-model-invocation-logging-configuration --logging-config '{\"s3Config\":{\"bucketName\":\"TrailDiscover\",\"keyPrefix\":\"bedrock\"}}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutModelInvocationLoggingConfiguration"
+    },
+    {
         "eventName": "PutUseCaseForModelAccess",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -11774,6 +11928,132 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutUseCaseForModelAccess"
+    },
+    {
+        "eventName": "UpdateAgent",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Updates the configuration of an agent.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateAgent to rewrite a Bedrock agent's base prompt so it leaks its internal instructions and tool schemas, or to redirect it to attacker-controlled behavior.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent update-agent --agent-id TrailDiscover --agent-name TrailDiscover --agent-resource-role-arn arn:aws:iam::111111111111:role/TrailDiscover --foundation-model anthropic.claude-v2"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateAgent"
+    },
+    {
+        "eventName": "UpdateFlow",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Modifies a flow. Include both fields that you want to keep and fields that you want to change.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateFlow to inject a malicious S3 or Lambda node into a Bedrock flow's data path, routing sensitive data to attacker-controlled infrastructure or executing attacker code mid-workflow.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent update-flow --flow-identifier TrailDiscover --name TrailDiscover --execution-role-arn arn:aws:iam::111111111111:role/TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateFlow"
+    },
+    {
+        "eventName": "UpdateGuardrail",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Updates a guardrail with the values you specify.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1562.001 - Impair Defenses: Disable or Modify Tools"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateGuardrail to weaken a Bedrock guardrail, lowering content filters or removing topic restrictions so the model becomes easier to manipulate.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock update-guardrail --guardrail-identifier TrailDiscover --name TrailDiscover --blocked-input-messaging blocked --blocked-outputs-messaging blocked"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateGuardrail"
+    },
+    {
+        "eventName": "UpdatePrompt",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to replace.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+                "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdatePrompt to poison a managed Bedrock prompt template, injecting instructions that subvert every agent or flow that uses it, with the change taking effect in-flight and without redeployment.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent update-prompt --prompt-identifier TrailDiscover --name TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdatePrompt"
     },
     {
         "eventName": "AttachVolume",

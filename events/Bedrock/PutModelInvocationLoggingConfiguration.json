@@ -1,0 +1,33 @@
+{
+    "eventName": "PutModelInvocationLoggingConfiguration",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Set the configuration values for model invocation logging.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use PutModelInvocationLoggingConfiguration to redirect Bedrock model-invocation logs to a bucket they control, silently capturing every prompt and response while removing the victim's audit trail.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock put-model-invocation-logging-configuration --logging-config '{\"s3Config\":{\"bucketName\":\"TrailDiscover\",\"keyPrefix\":\"bedrock\"}}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutModelInvocationLoggingConfiguration"
+}
