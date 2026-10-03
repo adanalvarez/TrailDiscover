@@ -31,6 +31,10 @@
         {
             "description": "AWS STS GetSessionToken Abuse",
             "link": "https://www.elastic.co/guide/en/security/7.17/aws-sts-getsessiontoken-abuse.html"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",

@@ -1,0 +1,38 @@
+{
+    "eventName": "VerifyDomainDkim",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Returns a set of DKIM tokens for a domain identity.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use VerifyDomainDkim to enable DKIM for a domain they control, so phishing or spam sent from the victim's account passes email authentication checks.",
+    "alerting": [
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/resource_development_ses_identity_verified_then_deleted.toml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses verify-domain-dkim --domain traildiscover.example.com"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-VerifyDomainDkim"
+}

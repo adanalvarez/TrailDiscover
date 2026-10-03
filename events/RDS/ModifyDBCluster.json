@@ -1,0 +1,31 @@
+{
+    "eventName": "ModifyDBCluster",
+    "eventSource": "rds.amazonaws.com",
+    "awsService": "RDS",
+    "description": "Modifies the settings of an Amazon Aurora DB cluster or a Multi-AZ DB cluster. You can change one or more settings by specifying these parameters and the new values in the request.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1578 - Modify Cloud Compute Infrastructure"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ModifyDBCluster to attach an attacker-controlled security group to an Amazon Aurora DB cluster, opening a network path from their staging infrastructure to the database.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws rds modify-db-cluster --db-cluster-identifier TrailDiscover --vpc-security-group-ids sg-11111111111111111"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyDBCluster"
+}

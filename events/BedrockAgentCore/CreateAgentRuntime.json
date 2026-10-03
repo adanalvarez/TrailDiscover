@@ -1,0 +1,31 @@
+{
+    "eventName": "CreateAgentRuntime",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Creates an Amazon Bedrock AgentCore Runtime.",
+    "mitreAttackTactics": [
+        "TA0011 - Command and Control"
+    ],
+    "mitreAttackTechniques": [
+        "T1102 - Web Service"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+            "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateAgentRuntime to deploy a Bedrock AgentCore runtime as a covert command-and-control endpoint whose server-side requests originate from AWS infrastructure, bypassing the victim's VPC-endpoint data-perimeter controls.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore-control create-agent-runtime --agent-runtime-name TrailDiscover --agent-runtime-artifact '{\"containerConfiguration\":{\"containerUri\":\"111111111111.dkr.ecr.us-east-1.amazonaws.com/traildiscover:latest\"}}' --role-arn arn:aws:iam::111111111111:role/TrailDiscover --network-configuration '{\"networkMode\":\"PUBLIC\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-CreateAgentRuntime"
+}

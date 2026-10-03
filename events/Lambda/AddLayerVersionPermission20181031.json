@@ -1,0 +1,31 @@
+{
+    "eventName": "AddLayerVersionPermission20181031",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Adds permissions to the resource-based policy of a version of an Lambda layer. Use this action to grant layer usage permission to other accounts. You can grant permission to a single account, all accounts in an organization, or all Amazon Web Services accounts.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "\"But without PassRole it should be fine\", Lambda edition",
+            "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+        }
+    ],
+    "securityImplications": "Attackers might use AddLayerVersionPermission to share a malicious Lambda layer from their account with a victim account, so the victim function can attach it and run the attacker's code under its execution role.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda add-layer-version-permission --layer-name TrailDiscover --version-number 1 --statement-id share --action lambda:GetLayerVersion --principal 111111111111"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-AddLayerVersionPermission"
+}

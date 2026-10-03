@@ -47,6 +47,10 @@
         {
             "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
             "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        },
+        {
+            "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+            "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
         }
     ],
     "researchLinks": [

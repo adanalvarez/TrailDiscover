@@ -1,0 +1,31 @@
+{
+    "eventName": "ExecuteStatement",
+    "eventSource": "redshift-data.amazonaws.com",
+    "awsService": "RedshiftData",
+    "description": "Runs an SQL statement, which can be data manipulation language (DML) or data definition language (DDL). This statement must be a single SQL statement.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1530 - Data from Cloud Storage"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ExecuteStatement from the Redshift Data API to run high-volume SQL queries against a data warehouse and read or exfiltrate its contents.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws redshift-data execute-statement --cluster-identifier TrailDiscover --database TrailDiscover --sql \"SELECT 1\""
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/redshift-data#redshift-data-ExecuteStatement"
+}

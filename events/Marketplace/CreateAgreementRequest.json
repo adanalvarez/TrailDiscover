@@ -1,0 +1,31 @@
+{
+    "eventName": "CreateAgreementRequest",
+    "eventSource": "agreement-marketplace.amazonaws.com",
+    "awsService": "Marketplace",
+    "description": "Creates an AWS Marketplace agreement request to subscribe to a listing, such as a Bedrock third-party foundation model.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1098 - Account Manipulation"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Someone Else Is Using Your AI",
+            "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateAgreementRequest to subscribe the victim account to premium Bedrock foundation models through AWS Marketplace, setting up LLMjacking that bills the inference to the victim.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "N/A"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-CreateAgreementRequest"
+}

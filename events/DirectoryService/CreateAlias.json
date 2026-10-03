@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateAlias",
+    "eventSource": "ds.amazonaws.com",
+    "awsService": "DirectoryService",
+    "description": "Creates an alias for a directory and assigns the alias to the directory.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateAlias to name the directory behind a WorkMail organization they set up for phishing; an unexpected call can reveal that email infrastructure is being created in the account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ds create-alias --directory-id d-1111111111 --alias traildiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ds#ds-CreateAlias"
+}

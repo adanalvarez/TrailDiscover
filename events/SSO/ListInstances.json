@@ -1,0 +1,31 @@
+{
+    "eventName": "ListInstances",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Lists the details of the organization and account instances of IAM Identity Center that were created in or visible to the account calling this API.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+            "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListInstances to enumerate the IAM Identity Center instances in an account, mapping its single sign-on footprint as part of reconnaissance with a stolen key.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sso-admin list-instances"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sso#sso-ListInstances"
+}

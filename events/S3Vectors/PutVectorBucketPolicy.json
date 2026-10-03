@@ -1,0 +1,31 @@
+{
+    "eventName": "PutVectorBucketPolicy",
+    "eventSource": "s3vectors.amazonaws.com",
+    "awsService": "S3Vectors",
+    "description": "Creates a bucket policy for a vector bucket.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1048 - Exfiltration Over Alternative Protocol"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+            "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+        }
+    ],
+    "securityImplications": "Attackers might use PutVectorBucketPolicy to attach a vector-bucket policy that grants an attacker-controlled account full cross-account access to the vectors, a one-call persistence and data-access backdoor.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3vectors put-vector-bucket-policy --vector-bucket-name TrailDiscover --policy '{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::111111111111:root\"},\"Action\":\"s3vectors:*\",\"Resource\":\"*\"}]}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-PutVectorBucketPolicy"
+}

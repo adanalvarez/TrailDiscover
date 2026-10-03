@@ -55,12 +55,20 @@
         {
             "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
             "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+        },
+        {
+            "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+            "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
         }
     ],
     "researchLinks": [
         {
             "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
             "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+        },
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
         }
     ],
     "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",

@@ -1,0 +1,35 @@
+{
+    "eventName": "CreateAgentActionGroup",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Creates an action group for an agent. An action group represents the actions that an agent can carry out for the customer by defining the APIs that an agent can call and the logic for calling them.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        },
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateAgentActionGroup to attach a malicious executor to a legitimate Bedrock agent, enabling unauthorized actions such as database modifications or user creation under the cover of a normal AI workflow.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent create-agent-action-group --agent-id TrailDiscover --agent-version DRAFT --action-group-name TrailDiscover --action-group-executor lambda=arn:aws:lambda:us-east-1:111111111111:function:TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateAgentActionGroup"
+}

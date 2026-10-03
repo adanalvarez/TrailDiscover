@@ -39,6 +39,10 @@
         {
             "description": "AWS IAM Privilege Escalation Techniques",
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers use AttachRolePolicy to grant malicious policies to IAM roles, potentially escalating privileges or enabling unauthorized access to AWS resources.",

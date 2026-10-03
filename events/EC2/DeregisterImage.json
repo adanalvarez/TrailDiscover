@@ -1,0 +1,31 @@
+{
+    "eventName": "DeregisterImage",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Deregisters the specified AMI. A deregistered AMI can't be used to launch new instances.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
+            "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DeregisterImage to delete AMIs that are needed to rebuild infrastructure, making it harder for a victim to recover from an incident.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 deregister-image --image-id ami-11111111111111111"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeregisterImage"
+}

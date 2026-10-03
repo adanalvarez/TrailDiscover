@@ -1,0 +1,31 @@
+{
+    "eventName": "RetrieveMemoryRecords",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Searches for and retrieves memory records from an AgentCore Memory resource based on specified search criteria.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1530 - Data from Cloud Storage"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Cracks in the Bedrock: Agent God Mode",
+            "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+        }
+    ],
+    "securityImplications": "Attackers might use RetrieveMemoryRecords to read the stored memory records of other agents in the account, leaking their conversation history and data context.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore retrieve-memory-records --memory-id TrailDiscover --namespace /TrailDiscover --search-criteria searchQuery=TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-RetrieveMemoryRecords"
+}

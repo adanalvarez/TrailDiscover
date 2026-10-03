@@ -20,6 +20,10 @@
         {
             "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        },
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
         }
     ],
     "researchLinks": [],

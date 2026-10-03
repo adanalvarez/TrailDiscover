@@ -1,0 +1,31 @@
+{
+    "eventName": "CreateAgent",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateAgent to stand up a malicious Bedrock agent, or combined with CreateAgentActionGroup to run attacker-controlled actions under the cover of a normal AI workflow.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent create-agent --agent-name TrailDiscover --agent-resource-role-arn arn:aws:iam::111111111111:role/TrailDiscover --foundation-model anthropic.claude-v2"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-CreateAgent"
+}

@@ -1,0 +1,37 @@
+{
+    "eventName": "UpdateGuardrail",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Updates a guardrail with the values you specify.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1562.001 - Impair Defenses: Disable or Modify Tools"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        },
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateGuardrail to weaken a Bedrock guardrail, lowering content filters or removing topic restrictions so the model becomes easier to manipulate.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock update-guardrail --guardrail-identifier TrailDiscover --name TrailDiscover --blocked-input-messaging blocked --blocked-outputs-messaging blocked"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateGuardrail"
+}

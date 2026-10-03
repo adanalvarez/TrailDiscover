@@ -1,0 +1,31 @@
+{
+    "eventName": "UpdatePrompt",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Modifies a prompt in your prompt library. Include both fields that you want to keep and fields that you want to replace.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdatePrompt to poison a managed Bedrock prompt template, injecting instructions that subvert every agent or flow that uses it, with the change taking effect in-flight and without redeployment.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent update-prompt --prompt-identifier TrailDiscover --name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdatePrompt"
+}

@@ -1,0 +1,31 @@
+{
+    "eventName": "UpdateFlow",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Modifies a flow. Include both fields that you want to keep and fields that you want to change.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateFlow to inject a malicious S3 or Lambda node into a Bedrock flow's data path, routing sensitive data to attacker-controlled infrastructure or executing attacker code mid-workflow.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent update-flow --flow-identifier TrailDiscover --name TrailDiscover --execution-role-arn arn:aws:iam::111111111111:role/TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-UpdateFlow"
+}

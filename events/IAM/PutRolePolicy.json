@@ -16,12 +16,25 @@
             "reason": "Modifying IAM role policies can be used to restrict or remove access to certain users or roles, aiding in defense evasion."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        }
+    ],
     "researchLinks": [
         {
             "description": "AWS IAM Privilege Escalation Techniques",
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Obfuscated Admin IAM Policy",
+            "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use PutRolePolicy to modify permissions of IAM roles, potentially granting unauthorized access to AWS resources.",

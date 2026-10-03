@@ -1,0 +1,32 @@
+{
+    "eventName": "InvokeCodeInterpreter",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Invokes a code interpreter session to run code in Amazon Bedrock AgentCore.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Cracks in the Bedrock: Agent God Mode",
+            "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+        }
+    ],
+    "securityImplications": "Attackers might use InvokeCodeInterpreter to run code in a Bedrock AgentCore Code Interpreter, where actions execute with the interpreter's own IAM permissions rather than the caller's, escalating their privileges.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore invoke-code-interpreter --code-interpreter-identifier TrailDiscover --session-id TrailDiscover --name executeCode --arguments '{\"language\":\"python\",\"code\":\"print(1)\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-InvokeCodeInterpreter"
+}

@@ -1,0 +1,31 @@
+{
+    "eventName": "AcceptHandshake",
+    "eventSource": "organizations.amazonaws.com",
+    "awsService": "Organizations",
+    "description": "Accepts a handshake by sending an ACCEPTED response to the sender.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1666 - Modify Cloud Resource Hierarchy"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+            "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AcceptHandshake to accept an organization invitation, pulling a victim account into an attacker-controlled organization so they can apply policies and consolidate control while locking out the legitimate owner.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws organizations accept-handshake --handshake-id h-1111111111111111111111111111111111"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-AcceptHandshake"
+}

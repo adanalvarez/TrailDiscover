@@ -1,0 +1,38 @@
+{
+    "eventName": "VerifyDomainIdentity",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Adds a domain to the list of identities for your Amazon SES account in the current Amazon Web Services Region and attempts to verify it.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use VerifyDomainIdentity to register a domain they control as a sending identity in the victim's account, so phishing or spam is sent through the victim's SES or WorkMail infrastructure and reputation.",
+    "alerting": [
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/resource_development_ses_identity_verified_then_deleted.toml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses verify-domain-identity --domain traildiscover.example.com"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-VerifyDomainIdentity"
+}

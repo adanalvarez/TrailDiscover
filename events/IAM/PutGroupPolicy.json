@@ -26,6 +26,10 @@
         {
             "description": "AWS IAM Privilege Escalation Techniques",
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "Obfuscated Admin IAM Policy",
+            "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
         }
     ],
     "securityImplications": "Attackers might use PutGroupPolicy to modify permissions of a group, potentially granting unauthorized access to sensitive resources.",

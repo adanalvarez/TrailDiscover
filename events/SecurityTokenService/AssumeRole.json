@@ -33,6 +33,14 @@
         {
             "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
             "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        },
+        {
+            "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+            "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
         }
     ],
     "researchLinks": [
@@ -43,6 +51,18 @@
         {
             "description": "Detecting and removing risky actions out of your IAM security policies",
             "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        },
+        {
+            "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+            "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+        },
+        {
+            "description": "Detect Public Resource Exposure via Session Policy Error Messages",
+            "link": "https://hackingthe.cloud/aws/enumeration/detect_public_resource_exposure_via_error_messages/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",

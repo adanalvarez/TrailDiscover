@@ -71,6 +71,42 @@
         {
             "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        },
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        },
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        },
+        {
+            "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+            "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
+        },
+        {
+            "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+            "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+        },
+        {
+            "description": "AI agent at the wheel: How an attacker used LLMs to move from a CVE to an internal database in 4 pivots",
+            "link": "https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        },
+        {
+            "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+            "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+        },
+        {
+            "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+            "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+        },
+        {
+            "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+            "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
         }
     ],
     "researchLinks": [
@@ -85,6 +121,18 @@
         {
             "description": "Enumerate AWS Account ID from an EC2 Instance",
             "link": "https://hackingthe.cloud/aws/enumeration/account_id_from_ec2/"
+        },
+        {
+            "description": "Bypass GuardDuty Pentest Findings via Botocore Config",
+            "link": "https://hackingthe.cloud/aws/avoiding-detection/guardduty-pentest-botocore/"
+        },
+        {
+            "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+            "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",

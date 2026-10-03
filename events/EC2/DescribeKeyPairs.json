@@ -25,6 +25,10 @@
         {
             "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
             "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+        },
+        {
+            "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+            "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
         }
     ],
     "researchLinks": [],

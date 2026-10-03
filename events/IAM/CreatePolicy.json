@@ -24,7 +24,12 @@
             "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Obfuscated Admin IAM Policy",
+            "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
+        }
+    ],
     "securityImplications": "Attackers might use CreatePolicy to create new IAM policies that later they can use for potentially granting themselves elevated permissions.",
     "alerting": [
         {

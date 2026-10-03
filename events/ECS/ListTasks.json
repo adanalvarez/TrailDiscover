@@ -1,0 +1,31 @@
+{
+    "eventName": "ListTasks",
+    "eventSource": "ecs.amazonaws.com",
+    "awsService": "ECS",
+    "description": "Returns a list of tasks. You can filter the results by cluster, task definition family, container instance, launch type, what IAM principal started the task, or by the desired status of the task.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
+            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListTasks to enumerate running ECS tasks in a cluster, identifying live containers to target for interactive access.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ecs list-tasks --cluster TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListTasks"
+}

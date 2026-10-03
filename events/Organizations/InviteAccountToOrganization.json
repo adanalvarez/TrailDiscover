@@ -7,7 +7,7 @@
         "TA0005 - Defense Evasion"
     ],
     "mitreAttackTechniques": [
-        "T1535 - Unused/Unsupported Cloud Regions"
+        "T1666 - Modify Cloud Resource Hierarchy"
     ],
     "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [
@@ -29,6 +29,10 @@
         {
             "description": "New tactics and techniques for proactive threat detection",
             "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+        },
+        {
+            "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+            "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
         }
     ],
     "researchLinks": [],

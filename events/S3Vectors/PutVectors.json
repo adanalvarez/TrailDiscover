@@ -1,0 +1,33 @@
+{
+    "eventName": "PutVectors",
+    "eventSource": "s3vectors.amazonaws.com",
+    "awsService": "S3Vectors",
+    "description": "Adds one or more vectors to a vector index.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1565 - Data Manipulation"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1565.001 - Data Manipulation: Stored Data Manipulation"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+            "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+        }
+    ],
+    "securityImplications": "Attackers might use PutVectors to plant poisoned vectors with forged chunk text and spoofed citation URLs into a RAG knowledge base, manipulating the responses of any LLM that retrieves from it.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3vectors put-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --vectors '[{\"key\":\"TrailDiscover\",\"data\":{\"float32\":[0.1,0.2]}}]'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-PutVectors"
+}

@@ -1,0 +1,31 @@
+{
+    "eventName": "InvokeAgent",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Sends a prompt for the agent to process and respond to.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+        }
+    ],
+    "securityImplications": "Attackers might use InvokeAgent to run a Bedrock agent (including one they have hijacked) to perform actions or extract data; the call is a CloudTrail data event that is not logged by default.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent-runtime invoke-agent --agent-id TrailDiscover --agent-alias-id TrailDiscover --session-id TrailDiscover --input-text TrailDiscover output.txt"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeAgent"
+}

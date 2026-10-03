@@ -1,0 +1,35 @@
+{
+    "eventName": "PublishLayerVersion20181031",
+    "eventSource": "lambda.amazonaws.com",
+    "awsService": "Lambda",
+    "description": "Creates an Lambda layer from a ZIP archive. Each time you call PublishLayerVersion with the same layer name, a new version is created.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "\"But without PassRole it should be fine\", Lambda edition",
+            "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+        },
+        {
+            "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
+            "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        }
+    ],
+    "securityImplications": "Attackers might use PublishLayerVersion to publish a malicious Lambda layer in an account they control, which is then attached to a victim function so their code runs under the function's execution role without needing iam:PassRole.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws lambda publish-layer-version --layer-name TrailDiscover --zip-file fileb://layer.zip --compatible-runtimes python3.12"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-PublishLayerVersion"
+}

@@ -1,0 +1,33 @@
+{
+    "eventName": "AssumeRoot",
+    "eventSource": "sts.amazonaws.com",
+    "awsService": "STS",
+    "description": "Returns a set of short term credentials you can use to perform privileged tasks on a member account in your organization. You must use credentials from an Organizations management account or a delegated administrator account for IAM to call AssumeRoot.",
+    "mitreAttackTactics": [
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1548 - Abuse Elevation Control Mechanism"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1548.005 - Abuse Elevation Control Mechanism: Temporary Elevated Cloud Access"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+            "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use AssumeRoot from a compromised Organizations management or delegated-administrator account to obtain root access to a member account, bypassing the access controls that the member account's administrator configured.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sts assume-root --target-principal 111111111111 --task-policy-arn arn=arn:aws:iam::aws:policy/root-task/S3UnlockBucketPolicy"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sts#sts-AssumeRoot"
+}

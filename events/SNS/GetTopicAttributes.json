@@ -1,0 +1,35 @@
+{
+    "eventName": "GetTopicAttributes",
+    "eventSource": "sns.amazonaws.com",
+    "awsService": "SNS",
+    "description": "Returns all of the properties of a topic. Topic properties returned might differ based on the authorization of the user.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+            "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+        },
+        {
+            "description": "Detect Public Resource Exposure via Session Policy Error Messages",
+            "link": "https://hackingthe.cloud/aws/enumeration/detect_public_resource_exposure_via_error_messages/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetTopicAttributes to read an SNS topic's properties, including its resource policy, to find topics that are publicly or cross-account accessible. When the call is made with a deny-all session policy, the access-denied error reveals the resource policy's decision without touching the topic or leaving a trace in the target account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sns get-topic-attributes --topic-arn arn:aws:sns:us-east-1:111111111111:TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sns#sns-GetTopicAttributes"
+}

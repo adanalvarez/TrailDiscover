@@ -1,0 +1,31 @@
+{
+    "eventName": "CreateTokenWithIAM",
+    "eventSource": "sso-oauth.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Creates and returns access and refresh tokens for authorized client applications that are authenticated using any IAM entity, such as a service role or user.",
+    "mitreAttackTactics": [
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1528 - Steal Application Access Token"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+            "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateTokenWithIAM to mint IAM Identity Center access and refresh tokens from a compromised IAM entity or application, impersonating a user's single sign-on access to AWS accounts.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sso-oidc create-token-with-iam --client-id TrailDiscover --grant-type urn:ietf:params:oauth:grant-type:jwt-bearer --assertion TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sso-oauth#sso-oauth-CreateTokenWithIAM"
+}

@@ -25,6 +25,10 @@
         {
             "description": "When a Zero Day and Access Keys Collide in the Cloud: Responding to the SugarCRM Zero-Day Vulnerability",
             "link": "https://unit42.paloaltonetworks.com/sugarcrm-cloud-incident-black-hat/"
+        },
+        {
+            "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
+            "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
         }
     ],
     "researchLinks": [],

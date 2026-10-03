@@ -35,7 +35,12 @@
             "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+        }
+    ],
     "securityImplications": "Attackers might use DeleteBucket to delete resources.",
     "alerting": [],
     "simulation": [

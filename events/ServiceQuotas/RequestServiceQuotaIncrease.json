@@ -25,6 +25,10 @@
         {
             "description": "Incident report: From CLI to console, chasing an attacker in AWS",
             "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+        },
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
         }
     ],
     "researchLinks": [],
