@@ -1,59 +1,89 @@
 // script.js
 document.addEventListener("DOMContentLoaded", function() {
     const viewer = document.getElementById('jsonViewer');
+    const meta = document.getElementById('logMeta');
+    const title = document.getElementById('logTitle');
+    const backLink = document.getElementById('backLink');
+    const copyButton = document.getElementById('copyLog');
+    const NAME_PATTERN = /^[a-zA-Z0-9\-_]+$/;
 
-    function getEventFileName() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const eventName = urlParams.get('event'); // Get 'event' parameter from URL
-    
-        // Validate the eventName to contain only allowed characters
-        if (eventName && /^[a-zA-Z0-9\-_]+$/.test(eventName)) {
-            return `${eventName}.json.cloudtrail`;
-        } else {
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventName = urlParams.get('event'); // Get 'event' parameter from URL
+    const service = urlParams.get('service'); // Optional AWS service, e.g. 'IAM'
+
+    // Validate the parameters to contain only allowed characters
+    function candidateFiles() {
+        if (!eventName || !NAME_PATTERN.test(eventName)) {
             console.error('Invalid event name provided. Only CloudTrail eventNames accepted');
-            return 'default.json'; 
+            return [];
         }
+        const files = [`${eventName}.json.cloudtrail`];
+        // Event names are not unique across services; prefer the service-specific copy when it exists.
+        if (service && NAME_PATTERN.test(service)) files.unshift(`${service}-${eventName}.json.cloudtrail`);
+        return files;
     }
-    
 
-    function createJsonHtml(obj, indent = 0) {
-        const indentSpace = '&nbsp;'.repeat(indent * 4); // Creates indentation
-        if (typeof obj === 'object' && obj !== null) {
-            if (Array.isArray(obj)) {
-                const items = obj.map(item => `${createJsonHtml(item, indent + 1)}`);
-                return `[ <br>${indentSpace}${items.join(', <br>' + indentSpace)}<br>${indentSpace}]`;
+    function esc(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    function highlightJson(json) {
+        const re = /("(?:\\u[a-fA-F0-9]{4}|\\[^u]|[^\\"])*")(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g;
+        let out = '';
+        let last = 0;
+        let m;
+        while ((m = re.exec(json))) {
+            out += esc(json.slice(last, m.index));
+            if (m[1]) {
+                out += m[2]
+                    ? `<span class="j-key">${esc(m[1])}</span>${esc(m[2])}`
+                    : `<span class="j-str">${esc(m[1])}</span>`;
+            } else if (m[3]) {
+                out += `<span class="j-lit">${m[3]}</span>`;
             } else {
-                const props = Object.keys(obj).map(key => {
-                    return `${indentSpace}<span class="key">${key}:</span> ${createJsonHtml(obj[key], indent + 1)}`;
-                });
-                return `{<br>${props.join(',<br>')}<br>${indentSpace}}`;
+                out += `<span class="j-num">${m[0]}</span>`;
             }
-        } else {
-            return formatPrimitive(obj);
+            last = re.lastIndex;
         }
+        return out + esc(json.slice(last));
     }
 
-    function formatPrimitive(value) {
-        if (typeof value === 'string') return `<span class="string">"${value}"</span>`;
-        if (typeof value === 'number') return `<span class="number">${value}</span>`;
-        if (typeof value === 'boolean') return `<span class="boolean">${value}</span>`;
-        if (value === null) return `<span class="null">null</span>`;
-        return value; // Fallback for other types, if any
+    async function load() {
+        const files = candidateFiles();
+        if (!files.length) throw new Error('No valid event name in the URL.');
+        for (const fileName of files) {
+            const response = await fetch(fileName);
+            if (response.ok) return response.json();
+        }
+        throw new Error('No example log found for ' + eventName);
     }
 
-    const fileName = getEventFileName();
-    fetch(fileName)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok for ' + fileName);
-            }
-            return response.json();
-        })
+    if (eventName && NAME_PATTERN.test(eventName)) {
+        title.textContent = eventName;
+        document.title = `${eventName} - CloudTrail Log Example - TrailDiscover`;
+        if (service && NAME_PATTERN.test(service)) backLink.href = `../#${service}-${eventName}`;
+    }
+
+    load()
         .then(jsonData => {
-            viewer.innerHTML = createJsonHtml(jsonData);
+            const text = JSON.stringify(jsonData, null, 2);
+            const records = Array.isArray(jsonData) ? jsonData.length : 1;
+            viewer.innerHTML = highlightJson(text);
+            meta.textContent = `${records} ${records === 1 ? 'record' : 'records'}`;
+            copyButton.disabled = false;
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(text).then(() => {
+                    copyButton.textContent = 'Copied';
+                    setTimeout(() => { copyButton.textContent = 'Copy'; }, 1500);
+                });
+            });
         })
         .catch(error => {
             console.error('Error loading the JSON file:', error);
+            meta.textContent = 'Not available';
             viewer.textContent = 'Failed to load JSON data: ' + error.message;
         });
 });

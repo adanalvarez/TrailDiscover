@@ -8,72 +8,151 @@
     <meta property="og:title" content="TrailDiscover">
     <meta property="og:description" content="CloudTrail Events mapped to real incidents">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#8ECAE6">
     <title>TrailDiscover - AWS CloudTrail Event Discovery</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a65a2f1386.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container-fluid">
-            <div class="logo-container">
-                <img src="logo.png" alt="TrailDiscover Logo" class="logo" loading="eager">
+    <a class="skip-link" href="#results">Skip to results</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <h1 class="brand">
+                <a href="./">
+                    <img src="logo.png" alt="TrailDiscover" class="brand__logo" width="509" height="210" loading="eager">
+                </a>
+            </h1>
+            <div class="site-header__text">
+                <p class="tagline">CloudTrail events mapped to real-world incidents, research and MITRE ATT&amp;CK.</p>
+                <p class="stats" id="stats">&nbsp;</p>
             </div>
+            <nav class="site-nav" aria-label="Project">
+                <a href="https://github.com/adanalvarez/TrailDiscover">GitHub</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover#mcp-server">MCP server</a>
+                <span class="site-nav__data">Data: <a href="events.json">JSON</a> <a href="events.csv">CSV</a></span>
+            </nav>
         </div>
     </header>
+
     <main>
-        <div class="container-fluid">
-        <div class="filter-controls">
-            <button id="toggleUsedInWild" class="btn btn-wild">Used in the Wild</button>
-            <select id="mitreAttackTacticFilter" class="form-control">
-                <option value="">All Tactics</option>
-                <option value="TA0001 - Initial Access">Initial Access</option>
-                <option value="TA0002 - Execution">Execution</option>
-                <option value="TA0003 - Persistence">Persistence</option>
-                <option value="TA0004 - Privilege Escalation">Privilege Escalation</option>
-                <option value="TA0005 - Defense Evasion">Defense Evasion</option>
-                <option value="TA0006 - Credential Access">Credential Access</option>
-                <option value="TA0007 - Discovery">Discovery</option>
-                <option value="TA0008 - Lateral Movement">Lateral Movement</option>
-                <option value="TA0009 - Collection">Collection</option>
-                <option value="TA0010 - Exfiltration">Exfiltration</option>
-                <option value="TA0011 - Command and Control">Command and Control</option>
-                <option value="TA0040 - Impact">Impact</option>
-            </select>
-        </div>
-        <div id="grid" class="gridjs"></div>
-        </div>
+        <section class="controls" id="controls" aria-label="Search and filters">
+            <div class="wrap">
+                <div class="controls__row">
+                    <div class="search">
+                        <svg class="search__icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.75" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M13 13l4.25 4.25" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        <label for="search" class="visually-hidden">Search events</label>
+                        <input id="search" class="search__input" type="search" autocomplete="off" spellcheck="false"
+                               placeholder="Search event, service, ATT&amp;CK ID, incident, or keyword">
+                        <kbd class="search__kbd" aria-hidden="true">/</kbd>
+                    </div>
+                    <div class="filter-group">
+                        <label for="serviceFilter" class="visually-hidden">AWS service</label>
+                        <select id="serviceFilter" class="select">
+                            <option value="">All AWS services</option>
+                        </select>
+                        <button type="button" id="wildToggle" class="wild-toggle" aria-pressed="false"
+                                title="Only show events with documented attacker use in public incident reports">
+                            <span class="wild-dot" aria-hidden="true"></span>
+                            <span>Seen in the wild</span>
+                            <span class="count" id="wildCount"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="facets" aria-label="ATT&amp;CK tactic filter">
+            <div class="wrap">
+                <div class="tactics" role="group" aria-labelledby="tacticsLabel">
+                    <span class="tactics__label" id="tacticsLabel">ATT&amp;CK tactic</span>
+                    <div class="tactics__list" id="tacticFilter"></div>
+                </div>
+            </div>
+        </section>
+
+        <noscript>
+            <p class="wrap noscript">TrailDiscover needs JavaScript to search the events. The data is also available as <a href="events.json">JSON</a> and <a href="events.csv">CSV</a>.</p>
+        </noscript>
+        <section class="results wrap" id="results" aria-label="Events">
+            <div class="results__bar">
+                <p class="results__count" id="resultCount" aria-live="polite" tabindex="-1">Loading events…</p>
+                <button type="button" class="link-button" id="clearFilters" hidden>Clear filters</button>
+                <div class="results__sort">
+                    <label for="sortSelect">Sort</label>
+                    <select id="sortSelect" class="select select--compact">
+                        <option value="default">Most evidence</option>
+                        <option value="name">Event name</option>
+                        <option value="service">AWS service</option>
+                        <option value="tactic">ATT&amp;CK tactic</option>
+                        <option value="incidents">Incidents</option>
+                        <option value="research">Research</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-card" id="tableCard" hidden>
+                <table class="events" id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="c-event" data-sort="name"><button type="button">Event Name</button></th>
+                            <th scope="col" class="c-service" data-sort="service"><button type="button">AWS Service</button></th>
+                            <th scope="col" class="c-tactics" data-sort="tactic"><button type="button"><span><span class="th-prefix">MITRE ATT&amp;CK </span>Tactics</span></button></th>
+                            <th scope="col" class="c-tech"><span class="th-prefix">MITRE ATT&amp;CK </span>Techniques</th>
+                            <th scope="col" class="c-num" data-sort="incidents"><button type="button">Incidents</button></th>
+                            <th scope="col" class="c-num" data-sort="research"><button type="button">Research</button></th>
+                            <th scope="col" class="c-wild" data-sort="wild"><button type="button">In the Wild</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventsBody"></tbody>
+                </table>
+                <div class="pager">
+                    <p class="pager__info" id="pageInfo"></p>
+                    <nav class="pager__nav" id="pageNav" aria-label="Pages"></nav>
+                </div>
+            </div>
+            <div class="empty" id="emptyState" hidden>
+                <p class="empty__title">No events match these filters.</p>
+                <p>Search covers event names, services, event sources, ATT&amp;CK IDs, incident and research titles, and descriptions.</p>
+                <button type="button" class="button" id="emptyClear">Clear filters</button>
+            </div>
+        </section>
     </main>
-    
-    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <p>TrailDiscover is an open-source project. ATT&amp;CK mappings are a best-effort interpretation of how each API can be used; check the linked sources.</p>
+            <p>
+                <a href="https://github.com/adanalvarez/TrailDiscover">Edit on GitHub</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover#how-to-contribute">How to contribute</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover#mcp-server">MCP server</a>
+            </p>
+        </div>
+    </footer>
+
+    <dialog class="drawer" id="drawer" aria-labelledby="drawerTitle">
+        <div class="drawer__bar">
+            <div class="drawer__nav">
+                <button type="button" class="icon-button" id="drawerPrev" title="Previous event (k)" aria-label="Previous event">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 12.5l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button type="button" class="icon-button" id="drawerNext" title="Next event (j)" aria-label="Next event">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <span class="drawer__pos" id="drawerPos"></span>
             </div>
-            <div class="modal-body" id="eventModalBody">
-            <!-- Event data will be inserted here -->
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="drawer__actions">
+                <button type="button" class="button button--ghost" id="copyLink">Copy link</button>
+                <button type="button" class="icon-button" id="drawerClose" aria-label="Close details" title="Close (Esc)">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9m0-9l-9 9" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                </button>
             </div>
         </div>
-        </div>
-    </div>
-    
-    <a href="https://github.com/adanalvarez/TrailDiscover" class="btn btn-secondary edit-on-github">
-        <i class="fa fa-github"></i> Edit on GitHub
-    </a>
-    
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
-    <script src="initializeGrid.js"></script>
+        <div class="drawer__body" id="drawerBody"></div>
+    </dialog>
+
+    <script src="app.js"></script>
 </body>
 </html>
