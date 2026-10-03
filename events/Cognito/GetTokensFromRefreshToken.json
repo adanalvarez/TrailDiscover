@@ -1,0 +1,35 @@
+{
+    "eventName": "GetTokensFromRefreshToken",
+    "eventSource": "cognito-idp.amazonaws.com",
+    "awsService": "CognitoIdentityProvider",
+    "description": "Given a refresh token, issues new ID, access, and optionally refresh tokens for the user who owns the submitted token.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence",
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1528 - Steal Application Access Token",
+        "T1078 - Valid Accounts"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
+            "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetTokensFromRefreshToken with a stolen Cognito refresh token to silently mint fresh ID and access tokens, maintaining access to the victim's account while the legitimate user's session continues normally.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cognito-idp get-tokens-from-refresh-token --client-id TrailDiscover --refresh-token TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-GetTokensFromRefreshToken"
+}

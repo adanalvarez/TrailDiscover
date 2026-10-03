@@ -114,7 +114,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR CreateAccount OR AssumeRole OR GetFederationToken OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateUser OR RegisterToWorkMail OR PutRule OR PutTargets OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR PutUserPolicy OR StartSSO OR UpdateAccessKey OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR CreateApiKey OR UpdateGraphqlApi OR UpdateResolver OR AuthorizeSecurityGroupIngress OR CreateDefaultVpc OR CreateKeyPair OR CreateNetworkAclEntry OR CreateSecurityGroup OR ImportKeyPair OR RunInstances OR StartInstances OR AcceptAgreementRequest OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR CreateAccount OR AssumeRole OR GetFederationToken OR GetTokensFromRefreshToken OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateUser OR RegisterToWorkMail OR PutRule OR PutTargets OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR PutUserPolicy OR StartSSO OR UpdateAccessKey OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR CreateApiKey OR UpdateGraphqlApi OR UpdateResolver OR AuthorizeSecurityGroupIngress OR CreateDefaultVpc OR CreateKeyPair OR CreateNetworkAclEntry OR CreateSecurityGroup OR ImportKeyPair OR RunInstances OR StartInstances OR AcceptAgreementRequest OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -129,7 +129,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(ChangeResourceRecordSets OR CreateHostedZone OR CreateStack OR Publish OR CreateFunction20150331 OR Invoke OR UpdateFunctionCode20150331v2 OR CreateOrganization OR DeleteFileSystem OR DeleteMountTarget OR DeleteRule OR DisableRule OR PutRule OR RemoveTargets OR CreateInstances OR AuthorizeApplication OR CreateAlias OR CreateKey OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PutKeyPolicy OR ScheduleKeyDeletion OR PurgeQueue OR DeleteBucket OR DeleteObject OR PutBucketEncryption OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR InvokeModel OR InvokeModelWithResponseStream OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateLaunchTemplate OR DeleteSnapshot OR DeleteVolume OR RunInstances OR StartInstances OR StopInstances OR TerminateInstances OR DeleteDBCluster OR DeleteDBInstance OR DeleteGlobalCluster OR CreateEmailIdentity OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR CreateCluster OR CreateService OR RegisterTaskDefinition OR RequestServiceQuotaIncrease) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(ChangeResourceRecordSets OR CreateHostedZone OR CreateStack OR Publish OR CreateFunction20150331 OR Invoke OR UpdateFunctionCode20150331v2 OR CreateOrganization OR DeleteFileSystem OR DeleteMountTarget OR DeleteRule OR DisableRule OR PutRule OR RemoveTargets OR CreateInstances OR AuthorizeApplication OR CreateAlias OR CreateKey OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PutKeyPolicy OR ScheduleKeyDeletion OR PurgeQueue OR DeleteBucket OR DeleteObject OR PutBucketEncryption OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR InvokeModel OR InvokeModelWithResponseStream OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateLaunchTemplate OR DeleteSnapshot OR DeleteVolume OR DeregisterImage OR RunInstances OR StartInstances OR StopInstances OR TerminateInstances OR DeleteDBCluster OR DeleteDBInstance OR DeleteGlobalCluster OR CreateEmailIdentity OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR CreateCluster OR CreateService OR RegisterTaskDefinition OR RequestServiceQuotaIncrease) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -234,7 +234,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AuthorizeOAuth2Access OR CreateOAuth2Token OR GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetTokensFromRefreshToken OR AuthorizeOAuth2Access OR CreateOAuth2Token OR GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -347,7 +347,7 @@
                                                 }
                                             ],
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR ChangeResourceRecordSets OR CreateHostedZone OR ListHostedZones OR RegisterDomain OR CreateAccount OR DescribeOrganization OR InviteAccountToOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR CreateStack OR AssumeRole OR GetCallerIdentity OR GetFederationToken OR GetSessionToken OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR Publish OR CreateLogStream OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR PutLogEvents OR ConsoleLogin OR GetSigninToken OR PasswordRecoveryRequested OR SwitchRole OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR Invoke OR ListFunctions20150331 OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateOrganization OR CreateUser OR RegisterToWorkMail OR GetQueryResults OR ListApplications OR PutRule OR PutTargets OR CreateInstances OR GetCostAndUsage OR GetCostForecast OR AuthorizeApplication OR CreateAlias OR CreateSession OR BatchGetImage OR DescribeImages OR DescribeRepositories OR GetAuthorizationToken OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreatePolicy OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR PutUserPolicy OR SimulatePrincipalPolicy OR StartSSO OR UpdateLoginProfile OR DescribeSecret OR GetSecretValue OR ListSecrets OR CreateServer OR CreateUser OR DescribeCluster OR ListClusters OR Search OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PurgeQueue OR CreateCase OR DeleteTrail OR LookupEvents OR PutEventSelectors OR UpdateTrail OR DeleteBucket OR DeleteObject OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObject OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR InvokeModelWithResponseStream OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR AttachVolume OR AuthorizeSecurityGroupEgress OR AuthorizeSecurityGroupIngress OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateImage OR CreateKeyPair OR CreateLaunchTemplate OR CreateNetworkAclEntry OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR DeleteFlowLogs OR DeleteSnapshot OR DeleteVolume OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR EnableSerialConsoleAccess OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetPasswordData OR GetTransitGatewayRouteTableAssociations OR ImportKeyPair OR ModifyInstanceAttribute OR ModifySnapshotAttribute OR ReplaceIamInstanceProfileAssociation OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR SharedSnapshotCopyInitiated OR SharedSnapshotVolumeCreated OR StartInstances OR StopInstances OR TerminateInstances OR DescribeEventAggregates OR DescribeEvents OR CreateDBSnapshot OR DeleteDBCluster OR DeleteDBInstance OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR ModifyActivityStream OR ModifyDBInstance OR ModifyDBSnapshotAttribute OR AcceptAgreementRequest OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR SendCommand OR StartSession OR CreateEmailIdentity OR DeleteIdentity OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR PutAccountDetails OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR DeleteDetector OR DeleteInvitations OR DisassociateFromMasterAccount OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR CreateCluster OR CreateService OR DescribeTaskDefinition OR DescribeTasks OR ExecuteCommand OR ListClusters OR ListTaskDefinitions OR ListTasks OR RegisterTaskDefinition OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage OR GetServiceQuota OR ListServiceQuotas OR RequestServiceQuotaIncrease OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddMemberToGroup OR CreateAccountAssignment OR CreateGroup OR CreateUser OR UpdateSsoConfiguration OR ChangeResourceRecordSets OR CreateHostedZone OR ListHostedZones OR RegisterDomain OR CreateAccount OR DescribeOrganization OR InviteAccountToOrganization OR ListAccounts OR ListOrganizationalUnitsForParent OR ListAccessPolicies OR ListCollections OR CreateStack OR AssumeRole OR GetCallerIdentity OR GetFederationToken OR GetSessionToken OR GetSMSAttributes OR GetSMSSandboxAccountStatus OR Publish OR GetTokensFromRefreshToken OR CreateLogStream OR DescribeAlarms OR DescribeAlarmsForMetric OR DescribeLogGroups OR DescribeLogStreams OR DescribeSubscriptionFilters OR GetLogRecord OR PutLogEvents OR ConsoleLogin OR GetSigninToken OR PasswordRecoveryRequested OR SwitchRole OR AddPermission20150331v2 OR CreateFunction20150331 OR CreateFunctionUrlConfig OR GetFunction20150331v2 OR GetFunctionConfiguration20150331v2 OR Invoke OR ListFunctions20150331 OR UpdateFunctionCode20150331v2 OR UpdateFunctionConfiguration20150331v2 OR CreateOrganization OR CreateUser OR RegisterToWorkMail OR GetQueryResults OR ListApplications OR PutRule OR PutTargets OR CreateInstances OR GetCostAndUsage OR GetCostForecast OR AuthorizeApplication OR CreateAlias OR CreateSession OR BatchGetImage OR DescribeImages OR DescribeRepositories OR GetAuthorizationToken OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR CreateAccessKey OR CreateLoginProfile OR CreateOpenIDConnectProvider OR CreatePolicy OR CreateRole OR CreateSAMLProvider OR CreateServiceLinkedRole OR CreateUser OR DeleteAccessKey OR DeleteLoginProfile OR DeleteUser OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR GetLoginProfile OR GetUser OR ListAccessKeys OR ListAccountAliases OR ListAttachedRolePolicies OR ListAttachedUserPolicies OR ListGroups OR ListGroupsForUser OR ListInstanceProfiles OR ListOpenIDConnectProviders OR ListRolePolicies OR ListRoles OR ListSAMLProviders OR ListSSHPublicKeys OR ListServiceSpecificCredentials OR ListSigningCertificates OR ListUserPolicies OR ListUsers OR PutUserPolicy OR SimulatePrincipalPolicy OR StartSSO OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR DescribeSecret OR GetSecretValue OR ListSecrets OR CreateServer OR CreateUser OR DescribeCluster OR ListClusters OR Search OR Encrypt OR GenerateDataKeyWithoutPlaintext OR PurgeQueue OR CreateCase OR DeleteTrail OR LookupEvents OR PutEventSelectors OR UpdateTrail OR DeleteBucket OR DeleteObject OR GetBucketAccelerateConfiguration OR GetBucketAcl OR GetBucketLifecycle OR GetBucketLocation OR GetBucketLogging OR GetBucketOwnershipControls OR GetBucketPolicy OR GetBucketPublicAccessBlock OR GetBucketReplication OR GetBucketRequestPayment OR GetBucketTagging OR GetBucketVersioning OR GetObject OR GetObjectLockConfiguration OR HeadObject OR ListBuckets OR ListObjects OR ListVaults OR PutBucketLifecycle OR PutBucketVersioning OR PutObject OR CreateFoundationModelAgreement OR GetFoundationModelAvailability OR GetKnowledgeBase OR GetModelInvocationLoggingConfiguration OR GetUseCaseForModelAccess OR InvokeModel OR InvokeModelWithResponseStream OR ListAgents OR ListCustomModels OR ListFoundationModelAgreementOffers OR ListFoundationModels OR ListInferenceProfiles OR ListKnowledgeBases OR ListModelInvocationJobs OR ListProvisionedModelThroughputs OR PutFoundationModelEntitlement OR PutUseCaseForModelAccess OR AttachVolume OR AuthorizeSecurityGroupEgress OR AuthorizeSecurityGroupIngress OR CreateAutoScalingGroup OR CreateDefaultVpc OR CreateImage OR CreateKeyPair OR CreateLaunchTemplate OR CreateNetworkAclEntry OR CreateSecurityGroup OR CreateSnapshot OR CreateVolume OR DeleteFlowLogs OR DeleteSnapshot OR DeleteVolume OR DeregisterImage OR DescribeAccountAttributes OR DescribeAvailabilityZones OR DescribeBundleTasks OR DescribeCarrierGateways OR DescribeClientVpnRoutes OR DescribeDhcpOptions OR DescribeFlowLogs OR DescribeHosts OR DescribeImages OR DescribeInstanceAttribute OR DescribeInstanceStatus OR DescribeInstanceTypes OR DescribeInstances OR DescribeInternetGateways OR DescribeKeyPairs OR DescribeLaunchTemplates OR DescribeNetworkInterfaces OR DescribeRegions OR DescribeRouteTables OR DescribeSecurityGroups OR DescribeSnapshotAttribute OR DescribeSnapshotTierStatus OR DescribeSnapshots OR DescribeSubnets OR DescribeTags OR DescribeTransitGatewayMulticastDomains OR DescribeVolumeStatus OR DescribeVolumes OR DescribeVolumesModifications OR DescribeVpcEndpointConnectionNotifications OR DescribeVpcs OR EnableSerialConsoleAccess OR GetConsoleScreenshot OR GetEbsDefaultKmsKeyId OR GetEbsEncryptionByDefault OR GetFlowLogsIntegrationTemplate OR GetLaunchTemplateData OR GetPasswordData OR GetTransitGatewayRouteTableAssociations OR ImportKeyPair OR ModifyInstanceAttribute OR ModifySnapshotAttribute OR ReplaceIamInstanceProfileAssociation OR RunInstances OR SendSSHPublicKey OR SendSerialConsoleSSHPublicKey OR SharedSnapshotCopyInitiated OR SharedSnapshotVolumeCreated OR StartInstances OR StopInstances OR TerminateInstances OR DescribeEventAggregates OR DescribeEvents OR CreateDBSnapshot OR DeleteDBCluster OR DeleteDBInstance OR DescribeBlueGreenDeployments OR DescribeDBClusters OR DescribeDBEngineVersions OR DescribeDBInstances OR DescribeDBProxies OR DescribeDBSnapshots OR DescribeDBSubnetGroups OR DescribeExportTasks OR DescribeGlobalClusters OR DescribeOrderableDBInstanceOptions OR DescribePendingMaintenanceActions OR DescribeValidDBInstanceModifications OR ModifyActivityStream OR ModifyDBInstance OR ModifyDBSnapshotAttribute OR AcceptAgreementRequest OR GetListingView OR SearchAgreements OR DescribeInstanceInformation OR SendCommand OR StartSession OR CreateEmailIdentity OR DeleteIdentity OR GetAccount OR GetAccountSendingEnabled OR GetIdentityVerificationAttributes OR GetSendQuota OR ListEmailIdentities OR ListIdentities OR PutAccountDetails OR SendEmail OR SendRawEmail OR UpdateAccountSendingEnabled OR VerifyDomainDkim OR VerifyDomainIdentity OR VerifyEmailIdentity OR DeleteDetector OR DeleteInvitations OR DisassociateFromMasterAccount OR GetDetector OR GetFindings OR ListDetectors OR ListFindings OR CreateCluster OR CreateService OR DescribeTaskDefinition OR DescribeTasks OR ExecuteCommand OR ListClusters OR ListTaskDefinitions OR ListTasks OR RegisterTaskDefinition OR CreateApi OR CreateIntegration OR CreateRoute OR CreateStage OR GetServiceQuota OR ListServiceQuotas OR RequestServiceQuotaIncrease OR ListEndpoints OR ListModels OR ListTrainingJobs) $userIdentity.arn $network.client.ip $account"
                                             }
                                         }
                                     ],
@@ -2579,6 +2579,67 @@
                         }
                     },
                     {
+                        "id": 3324596812,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [GetTokensFromRefreshToken](https://traildiscover.cloud/#CognitoIdentityProvider-GetTokensFromRefreshToken)\n\n**Description:** Given a refresh token, issues new ID, access, and optionally refresh tokens for the user who owns the submitted token.\n\n**Related Incidents:**\n- [What the March 2026 Threat Technique Catalog update means for your AWS environment](https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1817278656,
+                        "definition": {
+                            "title": "GetTokensFromRefreshToken",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:GetTokensFromRefreshToken $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 491995674,
                         "definition": {
                             "type": "note",
@@ -2591,8 +2652,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -2633,8 +2694,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -2652,7 +2713,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -2694,7 +2755,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -2713,7 +2774,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -2755,7 +2816,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -2774,8 +2835,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 6,
+                            "x": 0,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -2816,8 +2877,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 6,
+                            "x": 2,
+                            "y": 8,
                             "width": 2,
                             "height": 2
                         }
@@ -2835,7 +2896,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -2877,7 +2938,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -2896,7 +2957,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -2938,7 +2999,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 8,
                             "width": 2,
                             "height": 2
@@ -2957,8 +3018,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 8,
+                            "x": 0,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -2999,8 +3060,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 8,
+                            "x": 2,
+                            "y": 10,
                             "width": 2,
                             "height": 2
                         }
@@ -3018,7 +3079,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -3060,7 +3121,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -3079,7 +3140,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -3121,7 +3182,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 10,
                             "width": 2,
                             "height": 2
@@ -3140,8 +3201,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 10,
+                            "x": 0,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -3182,8 +3243,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 10,
+                            "x": 2,
+                            "y": 12,
                             "width": 2,
                             "height": 2
                         }
@@ -3201,7 +3262,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -3243,7 +3304,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -3262,7 +3323,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -3304,7 +3365,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 12,
                             "width": 2,
                             "height": 2
@@ -3323,8 +3384,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 12,
+                            "x": 0,
+                            "y": 14,
                             "width": 2,
                             "height": 2
                         }
@@ -3365,8 +3426,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 12,
+                            "x": 2,
+                            "y": 14,
                             "width": 2,
                             "height": 2
                         }
@@ -3384,7 +3445,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -3426,7 +3487,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -3445,7 +3506,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -3487,7 +3548,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 14,
                             "width": 2,
                             "height": 2
@@ -3506,8 +3567,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 14,
+                            "x": 0,
+                            "y": 16,
                             "width": 2,
                             "height": 2
                         }
@@ -3548,8 +3609,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 14,
+                            "x": 2,
+                            "y": 16,
                             "width": 2,
                             "height": 2
                         }
@@ -3567,7 +3628,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -3609,7 +3670,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -3628,7 +3689,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -3670,7 +3731,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 16,
                             "width": 2,
                             "height": 2
@@ -3689,8 +3750,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 16,
+                            "x": 0,
+                            "y": 18,
                             "width": 2,
                             "height": 2
                         }
@@ -3731,8 +3792,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 16,
+                            "x": 2,
+                            "y": 18,
                             "width": 2,
                             "height": 2
                         }
@@ -3750,7 +3811,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -3792,7 +3853,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -3811,7 +3872,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -3853,7 +3914,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 18,
                             "width": 2,
                             "height": 2
@@ -3863,7 +3924,7 @@
                         "id": 1463830930,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateAssumeRolePolicy](https://traildiscover.cloud/#IAM-UpdateAssumeRolePolicy)\n\n**Description:** Updates the policy that grants an IAM entity permission to assume a role.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [AWS IAM Persistence Methods](https://hackingthe.cloud/aws/post_exploitation/iam_persistence/)\n",
+                            "content": "### [UpdateAssumeRolePolicy](https://traildiscover.cloud/#IAM-UpdateAssumeRolePolicy)\n\n**Description:** Updates the policy that grants an IAM entity permission to assume a role.\n\n**Related Incidents:**\n- [What the March 2026 Threat Technique Catalog update means for your AWS environment](https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [AWS IAM Persistence Methods](https://hackingthe.cloud/aws/post_exploitation/iam_persistence/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -3872,8 +3933,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 18,
+                            "x": 0,
+                            "y": 20,
                             "width": 2,
                             "height": 2
                         }
@@ -3914,8 +3975,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 18,
+                            "x": 2,
+                            "y": 20,
                             "width": 2,
                             "height": 2
                         }
@@ -3933,7 +3994,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -3975,7 +4036,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -3994,7 +4055,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -4036,7 +4097,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 20,
                             "width": 2,
                             "height": 2
@@ -4055,8 +4116,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 20,
+                            "x": 0,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -4097,8 +4158,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 20,
+                            "x": 2,
+                            "y": 22,
                             "width": 2,
                             "height": 2
                         }
@@ -4116,7 +4177,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -4158,7 +4219,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -4177,7 +4238,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -4219,7 +4280,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 22,
                             "width": 2,
                             "height": 2
@@ -4238,8 +4299,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 22,
+                            "x": 0,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -4280,8 +4341,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 22,
+                            "x": 2,
+                            "y": 24,
                             "width": 2,
                             "height": 2
                         }
@@ -4299,7 +4360,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -4341,7 +4402,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -4360,7 +4421,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -4402,7 +4463,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 24,
                             "width": 2,
                             "height": 2
@@ -4421,8 +4482,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 24,
+                            "x": 0,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -4463,8 +4524,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 24,
+                            "x": 2,
+                            "y": 26,
                             "width": 2,
                             "height": 2
                         }
@@ -4482,7 +4543,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -4524,7 +4585,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -4543,7 +4604,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -4585,7 +4646,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -4604,8 +4665,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 26,
+                            "x": 0,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -4646,8 +4707,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 26,
+                            "x": 2,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -4665,7 +4726,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -4707,7 +4768,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -4726,7 +4787,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -4768,7 +4829,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -4787,8 +4848,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 28,
+                            "x": 0,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -4829,8 +4890,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 28,
+                            "x": 2,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -4848,7 +4909,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -4890,7 +4951,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -4909,7 +4970,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -4951,7 +5012,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -4970,8 +5031,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 30,
+                            "x": 0,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -5012,8 +5073,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 30,
+                            "x": 2,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -5024,7 +5085,7 @@
                 "x": 0,
                 "y": 29,
                 "width": 12,
-                "height": 34
+                "height": 36
             }
         },
         {
@@ -6931,7 +6992,7 @@
                         "id": 699889431,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateAssumeRolePolicy](https://traildiscover.cloud/#IAM-UpdateAssumeRolePolicy)\n\n**Description:** Updates the policy that grants an IAM entity permission to assume a role.\n\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [AWS IAM Persistence Methods](https://hackingthe.cloud/aws/post_exploitation/iam_persistence/)\n",
+                            "content": "### [UpdateAssumeRolePolicy](https://traildiscover.cloud/#IAM-UpdateAssumeRolePolicy)\n\n**Description:** Updates the policy that grants an IAM entity permission to assume a role.\n\n**Related Incidents:**\n- [What the March 2026 Threat Technique Catalog update means for your AWS environment](https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [AWS IAM Persistence Methods](https://hackingthe.cloud/aws/post_exploitation/iam_persistence/)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -7663,7 +7724,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 63,
+                "y": 65,
                 "width": 12,
                 "height": 32
             }
@@ -11341,7 +11402,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 95,
+                "y": 97,
                 "width": 12,
                 "height": 42
             }
@@ -11356,6 +11417,67 @@
                 "show_title": true,
                 "widgets": [
                     {
+                        "id": 1891829962,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [GetTokensFromRefreshToken](https://traildiscover.cloud/#CognitoIdentityProvider-GetTokensFromRefreshToken)\n\n**Description:** Given a refresh token, issues new ID, access, and optionally refresh tokens for the user who owns the submitted token.\n\n**Related Incidents:**\n- [What the March 2026 Threat Technique Catalog update means for your AWS environment](https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 384511806,
+                        "definition": {
+                            "title": "GetTokensFromRefreshToken",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:GetTokensFromRefreshToken $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 184791729,
                         "definition": {
                             "type": "note",
@@ -11368,7 +11490,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -11410,7 +11532,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -11429,7 +11551,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -11471,7 +11593,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -11490,8 +11612,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 0,
+                            "x": 0,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -11532,8 +11654,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 0,
+                            "x": 2,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -11551,7 +11673,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11593,7 +11715,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11612,7 +11734,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11654,7 +11776,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11673,8 +11795,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 0,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11715,8 +11837,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11734,7 +11856,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11776,7 +11898,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11795,7 +11917,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11837,7 +11959,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11856,8 +11978,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11898,8 +12020,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11917,7 +12039,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11959,7 +12081,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -11969,7 +12091,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 137,
+                "y": 139,
                 "width": 12,
                 "height": 10
             }
@@ -22540,7 +22662,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 147,
+                "y": 149,
                 "width": 12,
                 "height": 118
             }
@@ -23534,7 +23656,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 265,
+                "y": 267,
                 "width": 12,
                 "height": 14
             }
@@ -24345,7 +24467,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 279,
+                "y": 281,
                 "width": 12,
                 "height": 12
             }
@@ -24424,7 +24546,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 291,
+                "y": 293,
                 "width": 12,
                 "height": 4
             }
@@ -25723,7 +25845,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 295,
+                "y": 297,
                 "width": 12,
                 "height": 16
             }
@@ -28117,6 +28239,67 @@
                         }
                     },
                     {
+                        "id": 928531065,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [DeregisterImage](https://traildiscover.cloud/#EC2-DeregisterImage)\n\n**Description:** Deregisters the specified AMI. A deregistered AMI can't be used to launch new instances.\n\n**Related Incidents:**\n- [What the March 2026 Threat Technique Catalog update means for your AWS environment](https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 26,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3716180205,
+                        "definition": {
+                            "title": "DeregisterImage",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:DeregisterImage $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 26,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 3865915523,
                         "definition": {
                             "type": "note",
@@ -28129,7 +28312,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -28171,7 +28354,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -28190,7 +28373,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -28232,7 +28415,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 26,
                             "width": 2,
                             "height": 2
@@ -28251,8 +28434,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 26,
+                            "x": 0,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -28293,8 +28476,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 26,
+                            "x": 2,
+                            "y": 28,
                             "width": 2,
                             "height": 2
                         }
@@ -28312,7 +28495,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -28354,7 +28537,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -28373,7 +28556,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -28415,7 +28598,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 28,
                             "width": 2,
                             "height": 2
@@ -28434,8 +28617,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 28,
+                            "x": 0,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -28476,8 +28659,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 28,
+                            "x": 2,
+                            "y": 30,
                             "width": 2,
                             "height": 2
                         }
@@ -28495,7 +28678,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -28537,7 +28720,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -28556,7 +28739,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -28598,7 +28781,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 30,
                             "width": 2,
                             "height": 2
@@ -28617,8 +28800,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 30,
+                            "x": 0,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -28659,8 +28842,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 30,
+                            "x": 2,
+                            "y": 32,
                             "width": 2,
                             "height": 2
                         }
@@ -28678,7 +28861,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -28720,7 +28903,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -28739,7 +28922,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -28781,7 +28964,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 32,
                             "width": 2,
                             "height": 2
@@ -28800,8 +28983,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 32,
+                            "x": 0,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -28842,8 +29025,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 32,
+                            "x": 2,
+                            "y": 34,
                             "width": 2,
                             "height": 2
                         }
@@ -28861,7 +29044,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -28903,7 +29086,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -28922,7 +29105,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -28964,7 +29147,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 34,
                             "width": 2,
                             "height": 2
@@ -28983,8 +29166,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 34,
+                            "x": 0,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -29025,8 +29208,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 34,
+                            "x": 2,
+                            "y": 36,
                             "width": 2,
                             "height": 2
                         }
@@ -29044,7 +29227,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 4,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -29086,7 +29269,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 6,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -29105,7 +29288,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -29147,7 +29330,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 36,
                             "width": 2,
                             "height": 2
@@ -29166,8 +29349,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 36,
+                            "x": 0,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -29208,8 +29391,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 36,
+                            "x": 2,
+                            "y": 38,
                             "width": 2,
                             "height": 2
                         }
@@ -29218,9 +29401,9 @@
             },
             "layout": {
                 "x": 0,
-                "y": 311,
+                "y": 313,
                 "width": 12,
-                "height": 40
+                "height": 42
             }
         },
         {
@@ -29297,7 +29480,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 351,
+                "y": 355,
                 "width": 12,
                 "height": 4
             }

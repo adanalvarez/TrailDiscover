@@ -1781,6 +1781,41 @@
         "permissions": "https://aws.permissions.cloud/iam/cognito-identity#cognito-identity-GetId"
     },
     {
+        "eventName": "GetTokensFromRefreshToken",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Given a refresh token, issues new ID, access, and optionally refresh tokens for the user who owns the submitted token.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence",
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1528 - Steal Application Access Token",
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetTokensFromRefreshToken with a stolen Cognito refresh token to silently mint fresh ID and access tokens, maintaining access to the victim's account while the legitimate user's session continues normally.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp get-tokens-from-refresh-token --client-id TrailDiscover --refresh-token TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-GetTokensFromRefreshToken"
+    },
+    {
         "eventName": "CreateLogStream",
         "eventSource": "logs.amazonaws.com",
         "awsService": "CloudWatchLogs",
@@ -7532,7 +7567,9 @@
         "mitreAttackTechniques": [
             "T1098 - Account Manipulation"
         ],
-        "mitreAttackSubTechniques": [],
+        "mitreAttackSubTechniques": [
+            "T1098.003 - Account Manipulation: Additional Cloud Roles"
+        ],
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1078 - Valid Accounts",
@@ -7543,8 +7580,13 @@
                 "reason": "Attackers can allow access from an account they control to assume a valid role that is used in the organization making the access appear legitimate"
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
@@ -13582,6 +13624,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeleteVolume"
+    },
+    {
+        "eventName": "DeregisterImage",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Deregisters the specified AMI. A deregistered AMI can't be used to launch new instances.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DeregisterImage to delete AMIs that are needed to rebuild infrastructure, making it harder for a victim to recover from an incident.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 deregister-image --image-id ami-11111111111111111"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DeregisterImage"
     },
     {
         "eventName": "DescribeAccountAttributes",
