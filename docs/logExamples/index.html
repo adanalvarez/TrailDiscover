@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudTrail Log Example Viewer</title>
+    <meta name="theme-color" content="#8ECAE6">
+    <title>CloudTrail Log Example Viewer - TrailDiscover</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <!-- Notification about the tool used to generate the log -->
-    <div class="notification">
-        This log was generated using the tool <a href="https://github.com/DataDog/grimoire" target="_blank">Grimoire</a>.
-    </div>
-    
-    <div id="jsonViewer" class="json-viewer"></div>
-    <div class="back-button-container">
-        <button onclick="window.history.back();" class="back-button">Go Back</button>
-    </div>
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a href="../" class="brand" aria-label="TrailDiscover home">
+                <img src="../logo.png" alt="TrailDiscover" class="brand__logo" width="509" height="210">
+            </a>
+            <div class="site-header__text">
+                <p class="tagline">Example CloudTrail log</p>
+            </div>
+            <nav class="site-nav" aria-label="Project">
+                <a href="https://github.com/adanalvarez/TrailDiscover">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap log-page">
+        <p class="log-page__back"><a href="../" id="backLink">← Back to TrailDiscover</a></p>
+        <h1 class="log-page__title mono" id="logTitle">Example log</h1>
+        <p class="log-page__note">This log was generated using the tool <a href="https://github.com/DataDog/grimoire" target="_blank" rel="noopener">Grimoire</a> in a test environment. Account details are redacted.</p>
+
+        <div class="code-block code-block--log">
+            <div class="code-block__bar">
+                <span id="logMeta">Loading…</span>
+                <button type="button" class="button button--ghost button--small" id="copyLog" disabled>Copy</button>
+            </div>
+            <pre class="mono"><code id="jsonViewer"></code></pre>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
