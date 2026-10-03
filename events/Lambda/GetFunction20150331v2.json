@@ -28,7 +28,12 @@
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "\"But without PassRole it should be fine\", Lambda edition",
+            "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+        }
+    ],
     "securityImplications": "Attackers might use GetFunction to retrieve Lambda function source code and configuration, potentially exposing hardcoded secrets, API keys, and proprietary business logic.",
     "alerting": [],
     "simulation": [

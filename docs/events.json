@@ -2508,6 +2508,37 @@
         "permissions": "N/A"
     },
     {
+        "eventName": "AddLayerVersionPermission20181031",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Adds permissions to the resource-based policy of a version of an Lambda layer. Use this action to grant layer usage permission to other accounts. You can grant permission to a single account, all accounts in an organization, or all Amazon Web Services accounts.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            }
+        ],
+        "securityImplications": "Attackers might use AddLayerVersionPermission to share a malicious Lambda layer from their account with a victim account, so the victim function can attach it and run the attacker's code under its execution role.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws lambda add-layer-version-permission --layer-name TrailDiscover --version-number 1 --statement-id share --action lambda:GetLayerVersion --principal 111111111111"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-AddLayerVersionPermission"
+    },
+    {
         "eventName": "AddPermission20150331v2",
         "eventSource": "lambda.amazonaws.com",
         "awsService": "Lambda",
@@ -2769,7 +2800,12 @@
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            }
+        ],
         "securityImplications": "Attackers might use GetFunction to retrieve Lambda function source code and configuration, potentially exposing hardcoded secrets, API keys, and proprietary business logic.",
         "alerting": [],
         "simulation": [
@@ -2810,7 +2846,12 @@
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            }
+        ],
         "securityImplications": "Attackers might use GetFunctionConfiguration to inspect Lambda function settings, environment variables, and attached IAM roles to extract credentials or plan privilege escalation.",
         "alerting": [],
         "simulation": [
@@ -2891,6 +2932,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
             }
         ],
         "securityImplications": "Attackers might use Invoke to execute previously modified functions in AWS Lambda.",
@@ -2936,7 +2981,12 @@
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            }
+        ],
         "securityImplications": "Attackers might use ListFunctions to enumerate Lambda functions, identifying targets that may contain hardcoded secrets or have overly permissive IAM roles attached.",
         "alerting": [],
         "simulation": [
@@ -2946,6 +2996,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-ListFunctions"
+    },
+    {
+        "eventName": "PublishLayerVersion20181031",
+        "eventSource": "lambda.amazonaws.com",
+        "awsService": "Lambda",
+        "description": "Creates an Lambda layer from a ZIP archive. Each time you call PublishLayerVersion with the same layer name, a new version is created.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+            }
+        ],
+        "securityImplications": "Attackers might use PublishLayerVersion to publish a malicious Lambda layer in an account they control, which is then attached to a victim function so their code runs under the function's execution role without needing iam:PassRole.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws lambda publish-layer-version --layer-name TrailDiscover --zip-file fileb://layer.zip --compatible-runtimes python3.12"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-PublishLayerVersion"
     },
     {
         "eventName": "UpdateEventSourceMapping20150331",
@@ -3125,6 +3206,10 @@
             {
                 "description": "LambdaSpy - Implanting the Lambda execution environment (Part two)",
                 "link": "https://www.clearvector.com/blog/lambda-spy/"
+            },
+            {
+                "description": "\"But without PassRole it should be fine\", Lambda edition",
+                "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
             }
         ],
         "securityImplications": "Attackers might use UpdateFunctionConfiguration to modify the behavior of Lambda functions, adding a layer that can allow persistence and/or data exfiltration.",

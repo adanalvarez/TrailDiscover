@@ -31,7 +31,12 @@
             "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "\"But without PassRole it should be fine\", Lambda edition",
+            "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
+        }
+    ],
     "securityImplications": "Attackers might use ListFunctions to enumerate Lambda functions, identifying targets that may contain hardcoded secrets or have overly permissive IAM roles attached.",
     "alerting": [],
     "simulation": [

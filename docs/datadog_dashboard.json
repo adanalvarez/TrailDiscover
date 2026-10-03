@@ -83,15 +83,15 @@
                                             "formula": "query8"
                                         },
                                         {
-                                            "alias": "TA0009 - Collection",
+                                            "alias": "TA0002 - Execution",
                                             "formula": "query9"
                                         },
                                         {
-                                            "alias": "TA0006 - Credential Access",
+                                            "alias": "TA0009 - Collection",
                                             "formula": "query10"
                                         },
                                         {
-                                            "alias": "TA0002 - Execution",
+                                            "alias": "TA0006 - Credential Access",
                                             "formula": "query11"
                                         },
                                         {
@@ -234,7 +234,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -249,7 +249,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -264,7 +264,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -914,6 +914,128 @@
                 "show_title": true,
                 "widgets": [
                     {
+                        "id": 3890324723,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [AddLayerVersionPermission20181031](https://traildiscover.cloud/#Lambda-AddLayerVersionPermission20181031)\n\n**Description:** Adds permissions to the resource-based policy of a version of an Lambda layer. Use this action to grant layer usage permission to other accounts. You can grant permission to a single account, all accounts in an organization, or all Amazon Web Services accounts.\n\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 235522919,
+                        "definition": {
+                            "title": "AddLayerVersionPermission20181031",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:AddLayerVersionPermission20181031 $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2070992880,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [PublishLayerVersion20181031](https://traildiscover.cloud/#Lambda-PublishLayerVersion20181031)\n\n**Description:** Creates an Lambda layer from a ZIP archive. Each time you call PublishLayerVersion with the same layer name, a new version is created.\n\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 563674724,
+                        "definition": {
+                            "title": "PublishLayerVersion20181031",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:PublishLayerVersion20181031 $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 3386650151,
                         "definition": {
                             "type": "note",
@@ -926,7 +1048,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -968,7 +1090,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -987,8 +1109,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 0,
+                            "x": 0,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -1029,8 +1151,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 0,
+                            "x": 2,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -1048,8 +1170,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 0,
+                            "x": 4,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -1090,8 +1212,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 0,
+                            "x": 6,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -1109,7 +1231,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -1151,7 +1273,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -1170,8 +1292,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 2,
+                            "x": 0,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1212,8 +1334,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 2,
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1231,8 +1353,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 4,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1273,8 +1395,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 6,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -1292,7 +1414,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1334,7 +1456,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -1353,8 +1475,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1395,8 +1517,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1414,8 +1536,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 4,
+                            "x": 4,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1456,8 +1578,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 4,
+                            "x": 6,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -1475,7 +1597,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -1517,7 +1639,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 6,
                             "width": 2,
                             "height": 2
@@ -2277,7 +2399,7 @@
                         "id": 3787276042,
                         "definition": {
                             "type": "note",
-                            "content": "### [UpdateFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionConfiguration20150331v2)\n\n**Description:** Modify the version-specific settings of a Lambda function.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [LambdaSpy - Implanting the Lambda execution environment (Part two)](https://www.clearvector.com/blog/lambda-spy/)\n",
+                            "content": "### [UpdateFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-UpdateFunctionConfiguration20150331v2)\n\n**Description:** Modify the version-specific settings of a Lambda function.\n\n**Related Incidents:**\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [Enhancing Your Security Visibility and DetectionResponse Operations in AWS](https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf)\n- [LambdaSpy - Implanting the Lambda execution environment (Part two)](https://www.clearvector.com/blog/lambda-spy/)\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -4857,7 +4979,7 @@
                         "id": 3780289088,
                         "definition": {
                             "type": "note",
-                            "content": "### [Invoke](https://traildiscover.cloud/#Lambda-Invoke)\n\n**Description:** Invokes a Lambda function.\n\n**Related Incidents:**\n- [Mining Crypto](https://twitter.com/jonnyplatt/status/1471453527390277638)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [Invoke](https://traildiscover.cloud/#Lambda-Invoke)\n\n**Description:** Invokes a Lambda function.\n\n**Related Incidents:**\n- [Mining Crypto](https://twitter.com/jonnyplatt/status/1471453527390277638)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -10627,7 +10749,7 @@
                         "id": 1641109266,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-GetFunctionConfiguration20150331v2)\n\n**Description:** Returns the version-specific settings of a Lambda function or version.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [GetFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-GetFunctionConfiguration20150331v2)\n\n**Description:** Returns the version-specific settings of a Lambda function or version.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -12536,7 +12658,7 @@
                         "id": 426941431,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetFunction20150331v2](https://traildiscover.cloud/#Lambda-GetFunction20150331v2)\n\n**Description:** Returns information about the function or function version, with a link to download the deployment package.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [GetFunction20150331v2](https://traildiscover.cloud/#Lambda-GetFunction20150331v2)\n\n**Description:** Returns information about the function or function version, with a link to download the deployment package.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -12597,7 +12719,7 @@
                         "id": 1252826196,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-GetFunctionConfiguration20150331v2)\n\n**Description:** Returns the version-specific settings of a Lambda function or version.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [GetFunctionConfiguration20150331v2](https://traildiscover.cloud/#Lambda-GetFunctionConfiguration20150331v2)\n\n**Description:** Returns the version-specific settings of a Lambda function or version.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -12658,7 +12780,7 @@
                         "id": 3431802608,
                         "definition": {
                             "type": "note",
-                            "content": "### [ListFunctions20150331](https://traildiscover.cloud/#Lambda-ListFunctions20150331)\n\n**Description:** Returns a list of Lambda functions, with the version-specific configuration of each.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n",
+                            "content": "### [ListFunctions20150331](https://traildiscover.cloud/#Lambda-ListFunctions20150331)\n\n**Description:** Returns a list of Lambda functions, with the version-specific configuration of each.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n- [Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild](https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild)\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -22698,7 +22820,7 @@
                         "id": 3395562877,
                         "definition": {
                             "type": "note",
-                            "content": "### [GetFunction20150331v2](https://traildiscover.cloud/#Lambda-GetFunction20150331v2)\n\n**Description:** Returns information about the function or function version, with a link to download the deployment package.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n",
+                            "content": "### [GetFunction20150331v2](https://traildiscover.cloud/#Lambda-GetFunction20150331v2)\n\n**Description:** Returns information about the function or function version, with a link to download the deployment package.\n\n**Related Incidents:**\n- [Investigating Suspected DPRK-Linked Crypto Intrusions](https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/)\n**Related Research:**\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",
@@ -25192,7 +25314,7 @@
                         "id": 160708589,
                         "definition": {
                             "type": "note",
-                            "content": "### [Invoke](https://traildiscover.cloud/#Lambda-Invoke)\n\n**Description:** Invokes a Lambda function.\n\n**Related Incidents:**\n- [Mining Crypto](https://twitter.com/jonnyplatt/status/1471453527390277638)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n",
+                            "content": "### [Invoke](https://traildiscover.cloud/#Lambda-Invoke)\n\n**Description:** Invokes a Lambda function.\n\n**Related Incidents:**\n- [Mining Crypto](https://twitter.com/jonnyplatt/status/1471453527390277638)\n- [Cloud Security Stories: From Risky Permissions to Ransomware Execution](https://sonraisecurity.com/blog/cloud-security-stories-from-risky-permissions-to-ransomware-execution/)\n- [AI-assisted cloud intrusion achieves admin access in 8 minutes](https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes)\n**Related Research:**\n- [AWS IAM Privilege Escalation Techniques](https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/)\n- [\"But without PassRole it should be fine\", Lambda edition](https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition)\n",
                             "background_color": "white",
                             "font_size": "14",
                             "text_align": "left",

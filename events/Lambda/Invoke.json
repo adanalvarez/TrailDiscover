@@ -68,6 +68,10 @@
         {
             "description": "AWS IAM Privilege Escalation Techniques",
             "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+        },
+        {
+            "description": "\"But without PassRole it should be fine\", Lambda edition",
+            "link": "https://www.plerion.com/blog/without-passrole-it-fine-lambda-edition"
         }
     ],
     "securityImplications": "Attackers might use Invoke to execute previously modified functions in AWS Lambda.",
