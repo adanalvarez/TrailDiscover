@@ -41,7 +41,12 @@
             "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
         }
     ],
-    "researchLinks": [],
+    "researchLinks": [
+        {
+            "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+            "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+        }
+    ],
     "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access.",
     "alerting": [],
     "simulation": [

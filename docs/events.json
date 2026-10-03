@@ -866,6 +866,10 @@
             {
                 "description": "Detecting and removing risky actions out of your IAM security policies",
                 "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+            },
+            {
+                "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+                "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
             }
         ],
         "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",
@@ -1288,6 +1292,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/sns#sns-GetSMSSandboxAccountStatus"
+    },
+    {
+        "eventName": "GetTopicAttributes",
+        "eventSource": "sns.amazonaws.com",
+        "awsService": "SNS",
+        "description": "Returns all of the properties of a topic. Topic properties returned might differ based on the authorization of the user.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+                "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+            }
+        ],
+        "securityImplications": "Attackers might use GetTopicAttributes to read an SNS topic's properties, including its resource policy, to find topics that are publicly or cross-account accessible. When the call is made with a deny-all session policy, the access-denied error reveals the resource policy's decision without touching the topic or leaving a trace in the target account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sns get-topic-attributes --topic-arn arn:aws:sns:us-east-1:111111111111:TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sns#sns-GetTopicAttributes"
     },
     {
         "eventName": "ListOriginationNumbers",
@@ -5231,7 +5266,12 @@
                 "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+                "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+            }
+        ],
         "securityImplications": "Attackers use CreateRole to create roles with trust policies that allow principals from an attacker-controlled AWS account, establishing persistent unauthorized access.",
         "alerting": [],
         "simulation": [
@@ -8395,6 +8435,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-ScheduleKeyDeletion"
+    },
+    {
+        "eventName": "GetQueueAttributes",
+        "eventSource": "sqs.amazonaws.com",
+        "awsService": "SQS",
+        "description": "Gets attributes for the specified queue.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
+                "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+            }
+        ],
+        "securityImplications": "Attackers might use GetQueueAttributes to read an SQS queue's attributes, including its resource policy, to find queues that are publicly or cross-account accessible. When the call is made with a deny-all session policy, the access-denied error reveals the resource policy's decision without touching the queue or leaving a trace in the target account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sqs get-queue-attributes --queue-url https://sqs.us-east-1.amazonaws.com/111111111111/TrailDiscover --attribute-names All"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sqs#sqs-GetQueueAttributes"
     },
     {
         "eventName": "PurgeQueue",
