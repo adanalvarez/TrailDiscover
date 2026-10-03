@@ -17,6 +17,10 @@
         {
             "description": "Cracks in the Bedrock: Agent God Mode",
             "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+        },
+        {
+            "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+            "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
         }
     ],
     "securityImplications": "Attackers might use InvokeAgentRuntime to trigger the execution of any other Bedrock AgentCore agent runtime in the account, pivoting between agents under overly broad default permissions.",

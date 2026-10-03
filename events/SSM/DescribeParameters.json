@@ -1,0 +1,33 @@
+{
+    "eventName": "DescribeParameters",
+    "eventSource": "ssm.amazonaws.com",
+    "awsService": "SSM",
+    "description": "Lists the parameters in your Amazon Web Services account or the parameters shared with you when you enable the Shared option.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0006 - Credential Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery",
+        "T1552 - Unsecured Credentials"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+            "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use DescribeParameters to enumerate the names of SSM Parameter Store parameters, identifying stored secrets and SecureString values to retrieve and harvest.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ssm describe-parameters"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeParameters"
+}

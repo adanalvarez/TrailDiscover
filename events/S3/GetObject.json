@@ -111,6 +111,14 @@
         {
             "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
             "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        },
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",

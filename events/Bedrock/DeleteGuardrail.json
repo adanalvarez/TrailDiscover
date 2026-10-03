@@ -19,6 +19,10 @@
         {
             "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
             "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        },
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
         }
     ],
     "securityImplications": "Attackers might use DeleteGuardrail to remove a Bedrock guardrail entirely, stripping the content and prompt-injection protections around a model.",

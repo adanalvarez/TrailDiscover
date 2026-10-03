@@ -50,6 +50,10 @@
         {
             "description": "Disrupting AWS logging",
             "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+        },
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
         }
     ],
     "securityImplications": "Attackers might use DeleteTrail to disrupting AWS logging.",

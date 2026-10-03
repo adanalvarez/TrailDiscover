@@ -19,7 +19,7 @@
             "reason": "By stopping the logging, the adversary prevents the creation of future log entries, effectively removing indicators that would otherwise be generated, thus evading detection and hindering incident response efforts."
         }
     ],
-    "usedInWild": false,
+    "usedInWild": true,
     "incidents": [
         {
             "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
@@ -50,6 +50,10 @@
         {
             "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
             "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+        },
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
         }
     ],
     "securityImplications": "Attackers might use StopLogging to disrupting AWS logging.",

@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateTrail",
+    "eventSource": "cloudtrail.amazonaws.com",
+    "awsService": "CloudTrail",
+    "description": "Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.",
+    "mitreAttackTactics": [
+        "TA0005 - Defense Evasion"
+    ],
+    "mitreAttackTechniques": [
+        "T1562 - Impair Defenses"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+            "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateTrail to redirect CloudTrail logs to a bucket or KMS key they control, both blinding the victim's own logging and giving the attacker continuous visibility into the account's activity.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cloudtrail create-trail --name TrailDiscover --s3-bucket-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cloudtrail#cloudtrail-CreateTrail"
+}

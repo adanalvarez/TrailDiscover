@@ -19,6 +19,10 @@
         {
             "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
             "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+        },
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
         }
     ],
     "securityImplications": "Attackers might use PutModelInvocationLoggingConfiguration to redirect Bedrock model-invocation logs to a bucket they control, silently capturing every prompt and response while removing the victim's audit trail.",

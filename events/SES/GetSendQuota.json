@@ -61,6 +61,10 @@
         {
             "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
             "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
         }
     ],
     "researchLinks": [

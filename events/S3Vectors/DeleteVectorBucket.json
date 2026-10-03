@@ -1,0 +1,31 @@
+{
+    "eventName": "DeleteVectorBucket",
+    "eventSource": "s3vectors.amazonaws.com",
+    "awsService": "S3Vectors",
+    "description": "Deletes a vector bucket.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+            "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteVectorBucket to delete an entire vector bucket, destroying the data behind a RAG knowledge base.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3vectors delete-vector-bucket --vector-bucket-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-DeleteVectorBucket"
+}

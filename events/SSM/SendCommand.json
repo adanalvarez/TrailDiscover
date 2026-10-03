@@ -39,6 +39,14 @@
         {
             "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
             "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+        },
+        {
+            "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+            "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
         }
     ],
     "researchLinks": [

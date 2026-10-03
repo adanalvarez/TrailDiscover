@@ -1,0 +1,33 @@
+{
+    "eventName": "ListAccountRoles",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Lists all roles that are assigned to the user for a given AWS account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+            "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+        }
+    ],
+    "securityImplications": "Attackers might use ListAccountRoles with a stolen IAM Identity Center token to enumerate the roles the compromised identity can assume in a given AWS account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sso list-account-roles --access-token TrailDiscover --account-id 111111111111"
+        }
+    ],
+    "permissions": "N/A"
+}

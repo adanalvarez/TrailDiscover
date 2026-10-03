@@ -59,6 +59,10 @@
         {
             "description": "My AWS Account Got Hacked - Here Is What Happened",
             "link": "https://zviwex.com/posts/aws-account-hacked"
+        },
+        {
+            "description": "Password spraying campaign targets AWS root user accounts across 150+ organizations",
+            "link": "https://securitylabs.datadoghq.com/articles/aws-root-user-bruteforce-campaign/"
         }
     ],
     "researchLinks": [

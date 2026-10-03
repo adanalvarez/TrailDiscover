@@ -1,0 +1,31 @@
+{
+    "eventName": "Retrieve",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Queries a knowledge base and retrieves information from it.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1530 - Data from Cloud Storage"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+            "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+        }
+    ],
+    "securityImplications": "Attackers might use Retrieve to issue high-volume queries against a Bedrock knowledge base and pull indexed proprietary data directly, bypassing the application.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agent-runtime retrieve --knowledge-base-id TrailDiscover --retrieval-query '{\"text\":\"TrailDiscover\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-Retrieve"
+}

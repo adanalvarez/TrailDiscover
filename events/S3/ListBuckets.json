@@ -93,6 +93,10 @@
         {
             "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
             "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
         }
     ],
     "researchLinks": [

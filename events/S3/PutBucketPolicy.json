@@ -34,6 +34,10 @@
         {
             "description": "Detecting and removing risky actions out of your IAM security policies",
             "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data.",

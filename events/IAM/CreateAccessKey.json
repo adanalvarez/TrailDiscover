@@ -70,6 +70,10 @@
         {
             "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
             "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
         }
     ],
     "researchLinks": [
@@ -84,6 +88,10 @@
         {
             "description": "AWS IAM Persistence Methods",
             "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",

@@ -65,6 +65,10 @@
         {
             "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
             "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+        },
+        {
+            "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+            "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
         }
     ],
     "researchLinks": [

@@ -90,12 +90,20 @@
         {
             "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
             "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+        },
+        {
+            "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+            "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
         }
     ],
     "researchLinks": [
         {
             "description": "Opening a security group to the Internet",
             "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/opening-security-group-port/"
+        },
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
         }
     ],
     "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",

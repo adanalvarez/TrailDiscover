@@ -26,8 +26,13 @@
             "reason": "If parameter values include credentials or tokens, the attacker could use them to access valid accounts, facilitating further malicious activity."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+            "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Detecting and removing risky actions out of your IAM security policies",

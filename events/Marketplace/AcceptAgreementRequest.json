@@ -25,6 +25,10 @@
         {
             "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
             "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+        },
+        {
+            "description": "Someone Else Is Using Your AI",
+            "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
         }
     ],
     "researchLinks": [],

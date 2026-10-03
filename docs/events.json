@@ -97,6 +97,37 @@
         "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateGroup"
     },
     {
+        "eventName": "CreateTokenWithIAM",
+        "eventSource": "sso-oauth.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Creates and returns access and refresh tokens for authorized client applications that are authenticated using any IAM entity, such as a service role or user.",
+        "mitreAttackTactics": [
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1528 - Steal Application Access Token"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateTokenWithIAM to mint IAM Identity Center access and refresh tokens from a compromised IAM entity or application, impersonating a user's single sign-on access to AWS accounts.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso-oidc create-token-with-iam --client-id TrailDiscover --grant-type urn:ietf:params:oauth:grant-type:jwt-bearer --assertion TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso-oauth#sso-oauth-CreateTokenWithIAM"
+    },
+    {
         "eventName": "CreateUser",
         "eventSource": "sso-directory.amazonaws.com",
         "awsService": "SSO",
@@ -128,6 +159,105 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateUser"
+    },
+    {
+        "eventName": "GetRoleCredentials",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Returns the STS short-term credentials for a given role name that is assigned to the user.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+            }
+        ],
+        "securityImplications": "Attackers might use GetRoleCredentials with a stolen IAM Identity Center token to obtain short-term STS credentials for an assigned role, gaining access to the AWS account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso get-role-credentials --role-name TrailDiscover --account-id 111111111111 --access-token TrailDiscover"
+            }
+        ],
+        "permissions": "N/A"
+    },
+    {
+        "eventName": "ListAccountRoles",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Lists all roles that are assigned to the user for a given AWS account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1087 - Account Discovery"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1087.004 - Account Discovery: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+            }
+        ],
+        "securityImplications": "Attackers might use ListAccountRoles with a stolen IAM Identity Center token to enumerate the roles the compromised identity can assume in a given AWS account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso list-account-roles --access-token TrailDiscover --account-id 111111111111"
+            }
+        ],
+        "permissions": "N/A"
+    },
+    {
+        "eventName": "ListAccounts",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Lists all AWS accounts assigned to the user. These AWS accounts are assigned by the administrator of the account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1087 - Account Discovery"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1087.004 - Account Discovery: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+            }
+        ],
+        "securityImplications": "Attackers might use ListAccounts with a stolen IAM Identity Center token to enumerate the AWS accounts the compromised identity is assigned, mapping reachable targets.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso list-accounts --access-token TrailDiscover"
+            }
+        ],
+        "permissions": "N/A"
     },
     {
         "eventName": "ListInstances",
@@ -497,6 +627,37 @@
         "permissions": "https://aws.permissions.cloud/iam/route53domains#route53domains-RegisterDomain"
     },
     {
+        "eventName": "AcceptHandshake",
+        "eventSource": "organizations.amazonaws.com",
+        "awsService": "Organizations",
+        "description": "Accepts a handshake by sending an ACCEPTED response to the sender.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1666 - Modify Cloud Resource Hierarchy"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use AcceptHandshake to accept an organization invitation, pulling a victim account into an attacker-controlled organization so they can apply policies and consolidate control while locking out the legitimate owner.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws organizations accept-handshake --handshake-id h-1111111111111111111111111111111111"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-AcceptHandshake"
+    },
+    {
         "eventName": "CreateAccount",
         "eventSource": "organizations.amazonaws.com",
         "awsService": "Organizations",
@@ -599,7 +760,7 @@
             "TA0005 - Defense Evasion"
         ],
         "mitreAttackTechniques": [
-            "T1535 - Unused/Unsupported Cloud Regions"
+            "T1666 - Modify Cloud Resource Hierarchy"
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
@@ -621,6 +782,10 @@
             {
                 "description": "New tactics and techniques for proactive threat detection",
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            },
+            {
+                "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
             }
         ],
         "researchLinks": [],
@@ -762,6 +927,101 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/organizations#organizations-ListOrganizationalUnitsForParent"
+    },
+    {
+        "eventName": "ExecuteStatement",
+        "eventSource": "redshift-data.amazonaws.com",
+        "awsService": "RedshiftData",
+        "description": "Runs an SQL statement, which can be data manipulation language (DML) or data definition language (DDL). This statement must be a single SQL statement.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ExecuteStatement from the Redshift Data API to run high-volume SQL queries against a data warehouse and read or exfiltrate its contents.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws redshift-data execute-statement --cluster-identifier TrailDiscover --database TrailDiscover --sql \"SELECT 1\""
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/redshift-data#redshift-data-ExecuteStatement"
+    },
+    {
+        "eventName": "GetClusterCredentials",
+        "eventSource": "redshift.amazonaws.com",
+        "awsService": "Redshift",
+        "description": "Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetClusterCredentials to mint temporary database credentials for an Amazon Redshift cluster through IAM authentication, giving them direct login access to the data warehouse.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws redshift get-cluster-credentials --db-user TrailDiscover --cluster-identifier TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/redshift#redshift-GetClusterCredentials"
+    },
+    {
+        "eventName": "ModifyCluster",
+        "eventSource": "redshift.amazonaws.com",
+        "awsService": "Redshift",
+        "description": "Modifies the settings for a cluster.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1578 - Modify Cloud Compute Infrastructure"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ModifyCluster to attach an attacker-controlled security group to an Amazon Redshift cluster, opening a network path from their staging infrastructure to the data warehouse.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws redshift modify-cluster --cluster-identifier TrailDiscover --vpc-security-group-ids sg-11111111111111111"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/redshift#redshift-ModifyCluster"
     },
     {
         "eventName": "ListAccessPolicies",
@@ -922,6 +1182,14 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+                "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
             }
         ],
         "researchLinks": [
@@ -940,6 +1208,10 @@
             {
                 "description": "Detect Public Resource Exposure via Session Policy Error Messages",
                 "link": "https://hackingthe.cloud/aws/enumeration/detect_public_resource_exposure_via_error_messages/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",
@@ -984,6 +1256,10 @@
             {
                 "description": "AWS - STS Privesc",
                 "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-sts-privesc"
+            },
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
             }
         ],
         "securityImplications": "Attackers might use AssumeRoleWithSAML to impersonate legitimate users and gain unauthorized access to an AWS role.",
@@ -1042,6 +1318,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/sts#sts-AssumeRoleWithWebIdentity"
+    },
+    {
+        "eventName": "AssumeRoot",
+        "eventSource": "sts.amazonaws.com",
+        "awsService": "STS",
+        "description": "Returns a set of short term credentials you can use to perform privileged tasks on a member account in your organization. You must use credentials from an Organizations management account or a delegated administrator account for IAM to call AssumeRoot.",
+        "mitreAttackTactics": [
+            "TA0004 - Privilege Escalation"
+        ],
+        "mitreAttackTechniques": [
+            "T1548 - Abuse Elevation Control Mechanism"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1548.005 - Abuse Elevation Control Mechanism: Temporary Elevated Cloud Access"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "What the June 2026 Threat Technique Catalog update means for your AWS environment",
+                "link": "https://aws.amazon.com/blogs/security/what-the-june-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use AssumeRoot from a compromised Organizations management or delegated-administrator account to obtain root access to a member account, bypassing the access controls that the member account's administrator configured.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sts assume-root --target-principal 111111111111 --task-policy-arn arn=arn:aws:iam::aws:policy/root-task/S3UnlockBucketPolicy"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sts#sts-AssumeRoot"
     },
     {
         "eventName": "GetCallerIdentity",
@@ -1132,6 +1441,26 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "AI agent at the wheel: How an attacker used LLMs to move from a CVE to an internal database in 4 pivots",
+                "link": "https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+                "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+            },
+            {
+                "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+                "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
             }
         ],
         "researchLinks": [
@@ -1150,6 +1479,14 @@
             {
                 "description": "Bypass GuardDuty Pentest Findings via Botocore Config",
                 "link": "https://hackingthe.cloud/aws/avoiding-detection/guardduty-pentest-botocore/"
+            },
+            {
+                "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+                "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",
@@ -1272,6 +1609,10 @@
             {
                 "description": "AWS STS GetSessionToken Abuse",
                 "link": "https://www.elastic.co/guide/en/security/7.17/aws-sts-getsessiontoken-abuse.html"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use GetSessionToken to obtain temporary access credentials.",
@@ -2471,6 +2812,10 @@
             {
                 "description": "My AWS Account Got Hacked - Here Is What Happened",
                 "link": "https://zviwex.com/posts/aws-account-hacked"
+            },
+            {
+                "description": "Password spraying campaign targets AWS root user accounts across 150+ organizations",
+                "link": "https://securitylabs.datadoghq.com/articles/aws-root-user-bruteforce-campaign/"
             }
         ],
         "researchLinks": [
@@ -3329,6 +3674,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use UpdateFunctionCode to modify the code of a Lambda function, potentially injecting malicious code.",
@@ -3552,6 +3901,256 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/athena#athena-GetQueryResults"
+    },
+    {
+        "eventName": "DeleteVectorBucket",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Deletes a vector bucket.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use DeleteVectorBucket to delete an entire vector bucket, destroying the data behind a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors delete-vector-bucket --vector-bucket-name TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-DeleteVectorBucket"
+    },
+    {
+        "eventName": "DeleteVectors",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Deletes one or more vectors in a vector index.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1485 - Data Destruction"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use DeleteVectors to erase stored vectors from an index, destroying the data behind a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors delete-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --keys TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-DeleteVectors"
+    },
+    {
+        "eventName": "GetVectors",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Returns vector attributes.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use GetVectors to read the attributes of stored vectors, extracting the indexed data behind a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors get-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --keys TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-GetVectors"
+    },
+    {
+        "eventName": "ListIndexes",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Returns a list of all the vector indexes within the specified vector bucket.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use ListIndexes to enumerate the vector indexes in a vector bucket while mapping a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors list-indexes --vector-bucket-name TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-ListIndexes"
+    },
+    {
+        "eventName": "ListVectors",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "List vectors in the specified vector index.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use ListVectors to enumerate the vectors stored in an index, mapping the data behind a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors list-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-ListVectors"
+    },
+    {
+        "eventName": "PutVectorBucketPolicy",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Creates a bucket policy for a vector bucket.",
+        "mitreAttackTactics": [
+            "TA0010 - Exfiltration"
+        ],
+        "mitreAttackTechniques": [
+            "T1048 - Exfiltration Over Alternative Protocol"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use PutVectorBucketPolicy to attach a vector-bucket policy that grants an attacker-controlled account full cross-account access to the vectors, a one-call persistence and data-access backdoor.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors put-vector-bucket-policy --vector-bucket-name TrailDiscover --policy '{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::111111111111:root\"},\"Action\":\"s3vectors:*\",\"Resource\":\"*\"}]}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-PutVectorBucketPolicy"
+    },
+    {
+        "eventName": "PutVectors",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Adds one or more vectors to a vector index.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1565 - Data Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1565.001 - Data Manipulation: Stored Data Manipulation"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use PutVectors to plant poisoned vectors with forged chunk text and spoofed citation URLs into a RAG knowledge base, manipulating the responses of any LLM that retrieves from it.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors put-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --vectors '[{\"key\":\"TrailDiscover\",\"data\":{\"float32\":[0.1,0.2]}}]'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-PutVectors"
+    },
+    {
+        "eventName": "QueryVectors",
+        "eventSource": "s3vectors.amazonaws.com",
+        "awsService": "S3Vectors",
+        "description": "Performs an approximate nearest neighbor search query in a vector index using a query vector. By default, it returns the keys of approximate nearest neighbors.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+                "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+            }
+        ],
+        "securityImplications": "Attackers might use QueryVectors to run semantic searches against a vector index and pull back indexed proprietary content behind a RAG knowledge base.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws s3vectors query-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --query-vector float32=0.1,0.2 --top-k 10"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-QueryVectors"
     },
     {
         "eventName": "CreateFunction",
@@ -4965,6 +5564,10 @@
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers use AttachRolePolicy to grant malicious policies to IAM roles, potentially escalating privileges or enabling unauthorized access to AWS resources.",
@@ -5056,12 +5659,20 @@
             {
                 "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
                 "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
                 "link": "https://hackingthe.cloud/aws/exploitation/iam_privilege_escalation/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers use AttachUserPolicy to grant malicious policies to IAM users, potentially escalating privileges or enabling unauthorized access to AWS resources.",
@@ -5207,6 +5818,10 @@
             {
                 "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
                 "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
@@ -5221,6 +5836,10 @@
             {
                 "description": "AWS IAM Persistence Methods",
                 "link": "https://hackingthe.cloud/aws/post_exploitation/iam_persistence/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use CreateAccessKey to generate unauthorized access keys, enabling them to gain illicit access to AWS services and resources.",
@@ -5698,6 +6317,39 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateServiceLinkedRole"
     },
     {
+        "eventName": "CreateServiceSpecificCredential",
+        "eventSource": "iam.amazonaws.com",
+        "awsService": "IAM",
+        "description": "Generates a set of credentials consisting of a user name and password that can be used to access the service specified in the request. These credentials are generated by IAM, and can be used only for the specified service.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Someone Else Is Using Your AI",
+                "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateServiceSpecificCredential to generate long-term service credentials, such as a Bedrock API key, for an identity they control, maintaining access to invoke models independently of the IAM access key.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws iam create-service-specific-credential --user-name TrailDiscover --service-name bedrock.amazonaws.com"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateServiceSpecificCredential"
+    },
+    {
         "eventName": "CreateUser",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -5819,6 +6471,14 @@
             {
                 "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
                 "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "Someone Else Is Using Your AI",
+                "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
             }
         ],
         "researchLinks": [
@@ -6887,6 +7547,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
@@ -7298,8 +7962,13 @@
                 "reason": "Modifying IAM role policies can be used to restrict or remove access to certain users or roles, aiding in defense evasion."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "AWS IAM Privilege Escalation Techniques",
@@ -7308,6 +7977,10 @@
             {
                 "description": "Obfuscated Admin IAM Policy",
                 "link": "https://hackingthe.cloud/aws/exploitation/obfuscated_admin_policy/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use PutRolePolicy to modify permissions of IAM roles, potentially granting unauthorized access to AWS resources.",
@@ -7881,9 +8554,30 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "AI agent at the wheel: How an attacker used LLMs to move from a CVE to an internal database in 4 pivots",
+                "link": "https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+                "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use GetSecretValue to illicitly access sensitive information stored in the SecretsManager.",
         "alerting": [],
         "simulation": [
@@ -7957,6 +8651,22 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "AI agent at the wheel: How an attacker used LLMs to move from a CVE to an internal database in 4 pivots",
+                "link": "https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+                "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
         "researchLinks": [],
@@ -8605,6 +9315,37 @@
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-CreateKey"
     },
     {
+        "eventName": "Decrypt",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Decrypts ciphertext that was encrypted by a KMS key.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
+            }
+        ],
+        "securityImplications": "Attackers might use Decrypt with a KMS key tied to another workload to decrypt that workload's protected data, reading it even though they are not the role that owns the key.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms decrypt --ciphertext-blob fileb://ciphertext --key-id TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-Decrypt"
+    },
+    {
         "eventName": "DescribeKey",
         "eventSource": "kms.amazonaws.com",
         "awsService": "KMS",
@@ -8679,6 +9420,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-Encrypt"
+    },
+    {
+        "eventName": "GenerateDataKey",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Returns a unique symmetric data key for use outside of KMS. This operation returns a plaintext copy of the data key and a copy that is encrypted under a symmetric encryption KMS key that you specify.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1486 - Data Encrypted for Impact"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
+            }
+        ],
+        "securityImplications": "Attackers might use GenerateDataKey on a KMS key they do not own to obtain data keys for encrypting a victim's data, for example as part of a ransomware operation.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms generate-data-key --key-id TrailDiscover --key-spec AES_256"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-GenerateDataKey"
     },
     {
         "eventName": "GenerateDataKeyWithoutPlaintext",
@@ -8912,6 +9684,39 @@
         "permissions": "https://aws.permissions.cloud/iam/support#support-CreateCase"
     },
     {
+        "eventName": "CreateTrail",
+        "eventSource": "cloudtrail.amazonaws.com",
+        "awsService": "CloudTrail",
+        "description": "Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateTrail to redirect CloudTrail logs to a bucket or KMS key they control, both blinding the victim's own logging and giving the attacker continuous visibility into the account's activity.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cloudtrail create-trail --name TrailDiscover --s3-bucket-name TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cloudtrail#cloudtrail-CreateTrail"
+    },
+    {
         "eventName": "DeleteTrail",
         "eventSource": "cloudtrail.amazonaws.com",
         "awsService": "CloudTrail",
@@ -8963,6 +9768,10 @@
             {
                 "description": "Disrupting AWS logging",
                 "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
             }
         ],
         "securityImplications": "Attackers might use DeleteTrail to disrupting AWS logging.",
@@ -9120,7 +9929,7 @@
                 "reason": "By stopping the logging, the adversary prevents the creation of future log entries, effectively removing indicators that would otherwise be generated, thus evading detection and hindering incident response efforts."
             }
         ],
-        "usedInWild": false,
+        "usedInWild": true,
         "incidents": [
             {
                 "description": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
@@ -9151,6 +9960,10 @@
             {
                 "description": "Enhancing Your Security Visibility and DetectionResponse Operations in AWS",
                 "link": "https://pages.awscloud.com/rs/112-TZM-766/images/Visibility_detect_respond_AWS_SANS_whitepaper.pdf"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
             }
         ],
         "securityImplications": "Attackers might use StopLogging to disrupting AWS logging.",
@@ -9219,6 +10032,10 @@
             {
                 "description": "Disrupting AWS logging",
                 "link": "https://medium.com/daniel-grzelak/disrupting-aws-logging-a42e437d6594"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
             }
         ],
         "securityImplications": "Attackers might use UpdateTrail to disrupting AWS logging.",
@@ -9495,7 +10312,12 @@
                 "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+            }
+        ],
         "securityImplications": "Attackers might use DeleteBucket to delete resources.",
         "alerting": [],
         "simulation": [
@@ -9636,6 +10458,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
             }
         ],
         "securityImplications": "Attackers might use DeleteObject to erase crucial data from S3 buckets.",
@@ -10277,6 +11103,14 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use GetObject to download data from S3 buckets.",
@@ -10539,6 +11373,10 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
@@ -10867,6 +11705,10 @@
             {
                 "description": "Detecting and removing risky actions out of your IAM security policies",
                 "link": "https://www.solvo.cloud/blog/detecting-and-removing-risky-actions-out-of-your-iam-security-policies/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use PutBucketPolicy to modify bucket permissions, potentially allowing unauthorized access to sensitive data.",
@@ -11050,12 +11892,20 @@
             {
                 "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
                 "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+            },
+            {
+                "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+                "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
             }
         ],
         "researchLinks": [
             {
                 "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
                 "link": "https://blog.pepperclipp.com/pepperclipp-public/encrypting-buckets-for-compliance-and-ransom-how-attackers-can-use-kms-to-ransomware-s3-buckets"
+            },
+            {
+                "description": "Blinding the Watchmen: Abusing Cloud Logging Services for Defense Evasion and Visibility",
+                "link": "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
             }
         ],
         "securityImplications": "Attackers might use PutObject to upload malicious content or overwrite existing files in S3 buckets.",
@@ -11118,6 +11968,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use CreateAgentActionGroup to attach a malicious executor to a legitimate Bedrock agent, enabling unauthorized actions such as database modifications or user creation under the cover of a normal AI workflow.",
@@ -11163,7 +12017,12 @@
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use CreateFoundationModelAgreement to prepare for using foundation models for resource hijacking.",
         "alerting": [],
         "simulation": [
@@ -11199,6 +12058,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use DeleteGuardrail to remove a Bedrock guardrail entirely, stripping the content and prompt-injection protections around a model.",
@@ -11210,6 +12073,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-DeleteGuardrail"
+    },
+    {
+        "eventName": "DeleteModelInvocationLoggingConfiguration",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Delete the invocation logging.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1562 - Impair Defenses"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
+        "securityImplications": "Attackers might use DeleteModelInvocationLoggingConfiguration to turn off Bedrock model-invocation logging before abusing models, removing the record of their prompts and responses.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock delete-model-invocation-logging-configuration"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-DeleteModelInvocationLoggingConfiguration"
     },
     {
         "eventName": "GetFoundationModelAvailability",
@@ -11248,7 +12144,12 @@
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use GetFoundationModelAvailability to enumerate accessible models",
         "alerting": [],
         "simulation": [
@@ -11296,6 +12197,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use GetKnowledgeBase to understand how proprietary data is ingested and where to pivot for data exfiltration or tampering.",
@@ -11361,7 +12266,12 @@
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use GetModelInvocationLoggingConfiguration to check S3 and Cloudwatch logging configuration.",
         "alerting": [],
         "simulation": [
@@ -11433,6 +12343,37 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-GetUseCaseForModelAccess"
     },
     {
+        "eventName": "InvokeAgent",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Sends a prompt for the agent to process and respond to.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
+        "securityImplications": "Attackers might use InvokeAgent to run a Bedrock agent (including one they have hijacked) to perform actions or extract data; the call is a CloudTrail data event that is not logged by default.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent-runtime invoke-agent --agent-id TrailDiscover --agent-alias-id TrailDiscover --session-id TrailDiscover --input-text TrailDiscover output.txt"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeAgent"
+    },
+    {
         "eventName": "InvokeModel",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -11489,9 +12430,22 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "Someone Else Is Using Your AI",
+                "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
+            },
+            {
+                "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+                "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use InvokeModel to check if the credentials have access to the LLMs and they have been enabled and invoke the model for resource hijacking.",
         "alerting": [],
         "simulation": [
@@ -11555,7 +12509,12 @@
                 "link": "https://www.wiz.io/blog/jinx-2401-llm-hijacking-aws"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use InvokeModelWithResponseStream to invoke the model for resource hijacking.",
         "alerting": [],
         "simulation": [
@@ -11741,9 +12700,18 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+                "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use ListFoundationModels to enumerate accessible models.",
         "alerting": [],
         "simulation": [
@@ -11785,6 +12753,10 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+                "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
             }
         ],
         "researchLinks": [],
@@ -11935,6 +12907,37 @@
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-ListProvisionedModelThroughputs"
     },
     {
+        "eventName": "PrepareAgent",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Creates a DRAFT version of the agent that can be used for internal testing.",
+        "mitreAttackTactics": [
+            "TA0002 - Execution"
+        ],
+        "mitreAttackTechniques": [
+            "T1648 - Serverless Execution"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
+        "securityImplications": "Attackers might use PrepareAgent to activate a Bedrock agent they have modified (for example with a rewritten prompt or a malicious action group), making the change take effect without redeploying the application.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent prepare-agent --agent-id TrailDiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PrepareAgent"
+    },
+    {
         "eventName": "PutFoundationModelEntitlement",
         "eventSource": "bedrock.amazonaws.com",
         "awsService": "Bedrock",
@@ -12011,6 +13014,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use PutModelInvocationLoggingConfiguration to redirect Bedrock model-invocation logs to a bucket they control, silently capturing every prompt and response while removing the victim's audit trail.",
@@ -12064,7 +13071,12 @@
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
             }
         ],
-        "researchLinks": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
         "securityImplications": "Attackers might use PutUseCaseForModelAccess to prepare for using foundation models for resource hijacking.",
         "alerting": [],
         "simulation": [
@@ -12078,6 +13090,68 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-PutUseCaseForModelAccess"
+    },
+    {
+        "eventName": "Retrieve",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Queries a knowledge base and retrieves information from it.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
+        "securityImplications": "Attackers might use Retrieve to issue high-volume queries against a Bedrock knowledge base and pull indexed proprietary data directly, bypassing the application.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent-runtime retrieve --knowledge-base-id TrailDiscover --retrieval-query '{\"text\":\"TrailDiscover\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-Retrieve"
+    },
+    {
+        "eventName": "RetrieveAndGenerate",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Queries a knowledge base and generates responses based on the retrieved results and using the specified foundation model or inference profile.",
+        "mitreAttackTactics": [
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
+            }
+        ],
+        "securityImplications": "Attackers might use RetrieveAndGenerate to query a Bedrock knowledge base and have a model summarize indexed proprietary data, extracting it while bypassing the application.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agent-runtime retrieve-and-generate --input '{\"text\":\"TrailDiscover\"}' --retrieve-and-generate-configuration '{\"type\":\"KNOWLEDGE_BASE\",\"knowledgeBaseConfiguration\":{\"knowledgeBaseId\":\"TrailDiscover\",\"modelArn\":\"anthropic.claude-v2\"}}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-RetrieveAndGenerate"
     },
     {
         "eventName": "UpdateAgent",
@@ -12098,6 +13172,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use UpdateAgent to rewrite a Bedrock agent's base prompt so it leaks its internal instructions and tool schemas, or to redirect it to attacker-controlled behavior.",
@@ -12162,6 +13240,10 @@
             {
                 "description": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
                 "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html"
+            },
+            {
+                "description": "Detecting AWS Bedrock Abuse: From LLMjacking to the Hidden Attack Vectors",
+                "link": "https://www.abstract.security/blog/detecting-aws-bedrock-abuse-from-llmjacking-to-the-hidden-attack-vectors"
             }
         ],
         "securityImplications": "Attackers might use UpdateGuardrail to weaken a Bedrock guardrail, lowering content filters or removing topic restrictions so the model becomes easier to manipulate.",
@@ -12440,12 +13522,20 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
             {
                 "description": "Opening a security group to the Internet",
                 "link": "https://securitylabs.datadoghq.com/cloud-security-atlas/attacks/opening-security-group-port/"
+            },
+            {
+                "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+                "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
             }
         ],
         "securityImplications": "Attackers might use AuthorizeSecurityGroupIngress to allow access to resources to gain persistence or move laterally.",
@@ -14392,6 +15482,10 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
         "researchLinks": [
@@ -14472,6 +15566,10 @@
             {
                 "description": "Behind the scenes in the Expel SOC: Alert-to-fix in AWS",
                 "link": "https://expel.com/blog/behind-the-scenes-expel-soc-alert-aws/"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
         "researchLinks": [],
@@ -14627,6 +15725,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [],
@@ -14853,6 +15955,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [],
@@ -16149,6 +17255,10 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
         "researchLinks": [
@@ -17049,6 +18159,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [],
@@ -17421,6 +18535,37 @@
         "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyActivityStream"
     },
     {
+        "eventName": "ModifyDBCluster",
+        "eventSource": "rds.amazonaws.com",
+        "awsService": "RDS",
+        "description": "Modifies the settings of an Amazon Aurora DB cluster or a Multi-AZ DB cluster. You can change one or more settings by specifying these parameters and the new values in the request.",
+        "mitreAttackTactics": [
+            "TA0005 - Defense Evasion"
+        ],
+        "mitreAttackTechniques": [
+            "T1578 - Modify Cloud Compute Infrastructure"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ModifyDBCluster to attach an attacker-controlled security group to an Amazon Aurora DB cluster, opening a network path from their staging infrastructure to the database.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws rds modify-db-cluster --db-cluster-identifier TrailDiscover --vpc-security-group-ids sg-11111111111111111"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/rds#rds-ModifyDBCluster"
+    },
+    {
         "eventName": "ModifyDBInstance",
         "eventSource": "rds.amazonaws.com",
         "awsService": "RDS",
@@ -17628,6 +18773,10 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "Someone Else Is Using Your AI",
+                "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
             }
         ],
         "researchLinks": [],
@@ -17640,6 +18789,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-AcceptAgreementRequest"
+    },
+    {
+        "eventName": "CreateAgreementRequest",
+        "eventSource": "agreement-marketplace.amazonaws.com",
+        "awsService": "Marketplace",
+        "description": "Creates an AWS Marketplace agreement request to subscribe to a listing, such as a Bedrock third-party foundation model.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1098 - Account Manipulation"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Someone Else Is Using Your AI",
+                "link": "https://www.fortinet.com/blog/threat-research/someone-else-is-using-your-ai"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateAgreementRequest to subscribe the victim account to premium Bedrock foundation models through AWS Marketplace, setting up LLMjacking that bills the inference to the victim.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/aws-marketplace#aws-marketplace-CreateAgreementRequest"
     },
     {
         "eventName": "GetListingView",
@@ -17966,6 +19146,10 @@
             {
                 "description": "The curious case of DangerDev@protonmail.me",
                 "link": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me"
+            },
+            {
+                "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
+                "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
             }
         ],
         "researchLinks": [],
@@ -17978,6 +19162,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeInstanceInformation"
+    },
+    {
+        "eventName": "DescribeParameters",
+        "eventSource": "ssm.amazonaws.com",
+        "awsService": "SSM",
+        "description": "Lists the parameters in your Amazon Web Services account or the parameters shared with you when you enable the Shared option.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery",
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery",
+            "T1552 - Unsecured Credentials"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+                "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use DescribeParameters to enumerate the names of SSM Parameter Store parameters, identifying stored secrets and SecureString values to retrieve and harvest.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ssm describe-parameters"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeParameters"
     },
     {
         "eventName": "GetParameters",
@@ -18007,8 +19224,13 @@
                 "reason": "If parameter values include credentials or tokens, the attacker could use them to access valid accounts, facilitating further malicious activity."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
+                "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Detecting and removing risky actions out of your IAM security policies",
@@ -18116,6 +19338,14 @@
             {
                 "description": "Cloud-Conscious Tactics, Techniques,and Procedures (TTPs)",
                 "link": "https://fwdcloudsec.org/assets/presentations/2024/europe/sebastian-walla-cloud-conscious-tactics-techniques-and-procedures-an-overview.pdf"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
+                "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
             }
         ],
         "researchLinks": [
@@ -18454,6 +19684,10 @@
             {
                 "description": "SES-PIONAGE",
                 "link": "https://permiso.io/blog/s/aws-ses-pionage-detecting-ses-abuse/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [],
@@ -18530,6 +19764,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
@@ -18643,6 +19881,10 @@
             {
                 "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
                 "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [
@@ -18915,6 +20157,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
+                "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
             }
         ],
         "researchLinks": [],
@@ -20336,6 +21582,37 @@
         "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
     },
     {
+        "eventName": "CreateAgentRuntime",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Creates an Amazon Bedrock AgentCore Runtime.",
+        "mitreAttackTactics": [
+            "TA0011 - Command and Control"
+        ],
+        "mitreAttackTechniques": [
+            "T1102 - Web Service"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+                "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
+            }
+        ],
+        "securityImplications": "Attackers might use CreateAgentRuntime to deploy a Bedrock AgentCore runtime as a covert command-and-control endpoint whose server-side requests originate from AWS infrastructure, bypassing the victim's VPC-endpoint data-perimeter controls.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore-control create-agent-runtime --agent-runtime-name TrailDiscover --agent-runtime-artifact '{\"containerConfiguration\":{\"containerUri\":\"111111111111.dkr.ecr.us-east-1.amazonaws.com/traildiscover:latest\"}}' --role-arn arn:aws:iam::111111111111:role/TrailDiscover --network-configuration '{\"networkMode\":\"PUBLIC\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-CreateAgentRuntime"
+    },
+    {
         "eventName": "GetMemory",
         "eventSource": "bedrock-agentcore.amazonaws.com",
         "awsService": "BedrockAgentCore",
@@ -20385,6 +21662,10 @@
             {
                 "description": "Cracks in the Bedrock: Agent God Mode",
                 "link": "https://unit42.paloaltonetworks.com/exploit-of-aws-agentcore-iam-god-mode/"
+            },
+            {
+                "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+                "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
             }
         ],
         "securityImplications": "Attackers might use InvokeAgentRuntime to trigger the execution of any other Bedrock AgentCore agent runtime in the account, pivoting between agents under overly broad default permissions.",
@@ -20459,6 +21740,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-RetrieveMemoryRecords"
+    },
+    {
+        "eventName": "UpdateAgentRuntime",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "awsService": "BedrockAgentCore",
+        "description": "Updates an existing Amazon Bedrock AgentCore Runtime.",
+        "mitreAttackTactics": [
+            "TA0010 - Exfiltration"
+        ],
+        "mitreAttackTechniques": [
+            "T1567 - Exfiltration Over Web Service"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+                "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
+            }
+        ],
+        "securityImplications": "Attackers might use UpdateAgentRuntime to exfiltrate data by encoding it in the runtime's discovery URL; AgentCore's server-side validation request carries the data out from AWS infrastructure, bypassing the victim's data-perimeter controls.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-agentcore-control update-agent-runtime --agent-runtime-id TrailDiscover --agent-runtime-artifact '{\"containerConfiguration\":{\"containerUri\":\"111111111111.dkr.ecr.us-east-1.amazonaws.com/traildiscover:latest\"}}' --role-arn arn:aws:iam::111111111111:role/TrailDiscover --network-configuration '{\"networkMode\":\"PUBLIC\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-UpdateAgentRuntime"
     },
     {
         "eventName": "GetServiceQuota",

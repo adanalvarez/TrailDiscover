@@ -29,6 +29,10 @@
         {
             "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
             "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+        },
+        {
+            "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
+            "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
         }
     ],
     "researchLinks": [],

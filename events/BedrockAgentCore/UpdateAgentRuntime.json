@@ -1,0 +1,31 @@
+{
+    "eventName": "UpdateAgentRuntime",
+    "eventSource": "bedrock-agentcore.amazonaws.com",
+    "awsService": "BedrockAgentCore",
+    "description": "Updates an existing Amazon Bedrock AgentCore Runtime.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1567 - Exfiltration Over Web Service"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "No Way Out? Bypassing the AWS Data Perimeter with Bedrock AgentCore",
+            "link": "https://www.upwind.io/feed/no-way-out-bypassing-aws-data-perimeter-bedrock-agentcore"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateAgentRuntime to exfiltrate data by encoding it in the runtime's discovery URL; AgentCore's server-side validation request carries the data out from AWS infrastructure, bypassing the victim's data-perimeter controls.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-agentcore-control update-agent-runtime --agent-runtime-id TrailDiscover --agent-runtime-artifact '{\"containerConfiguration\":{\"containerUri\":\"111111111111.dkr.ecr.us-east-1.amazonaws.com/traildiscover:latest\"}}' --role-arn arn:aws:iam::111111111111:role/TrailDiscover --network-configuration '{\"networkMode\":\"PUBLIC\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock-agentcore#bedrock-agentcore-UpdateAgentRuntime"
+}

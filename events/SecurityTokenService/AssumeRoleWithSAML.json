@@ -30,6 +30,10 @@
         {
             "description": "AWS - STS Privesc",
             "link": "https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-sts-privesc"
+        },
+        {
+            "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+            "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
         }
     ],
     "securityImplications": "Attackers might use AssumeRoleWithSAML to impersonate legitimate users and gain unauthorized access to an AWS role.",

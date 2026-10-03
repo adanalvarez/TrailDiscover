@@ -1,0 +1,31 @@
+{
+    "eventName": "DeleteVectors",
+    "eventSource": "s3vectors.amazonaws.com",
+    "awsService": "S3Vectors",
+    "description": "Deletes one or more vectors in a vector index.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1485 - Data Destruction"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+            "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+        }
+    ],
+    "securityImplications": "Attackers might use DeleteVectors to erase stored vectors from an index, destroying the data behind a RAG knowledge base.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3vectors delete-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover --keys TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-DeleteVectors"
+}

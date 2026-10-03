@@ -1,0 +1,31 @@
+{
+    "eventName": "ListVectors",
+    "eventSource": "s3vectors.amazonaws.com",
+    "awsService": "S3Vectors",
+    "description": "List vectors in the specified vector index.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Security Analysis of Amazon S3 Vectors and LLM Retrieval",
+            "link": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning"
+        }
+    ],
+    "securityImplications": "Attackers might use ListVectors to enumerate the vectors stored in an index, mapping the data behind a RAG knowledge base.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws s3vectors list-vectors --vector-bucket-name TrailDiscover --index-name TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/s3vectors#s3vectors-ListVectors"
+}

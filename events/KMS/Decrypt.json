@@ -1,0 +1,31 @@
+{
+    "eventName": "Decrypt",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Decrypts ciphertext that was encrypted by a KMS key.",
+    "mitreAttackTactics": [
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1530 - Data from Cloud Storage"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
+            "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
+        }
+    ],
+    "securityImplications": "Attackers might use Decrypt with a KMS key tied to another workload to decrypt that workload's protected data, reading it even though they are not the role that owns the key.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms decrypt --ciphertext-blob fileb://ciphertext --key-id TrailDiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-Decrypt"
+}

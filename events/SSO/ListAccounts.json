@@ -1,0 +1,33 @@
+{
+    "eventName": "ListAccounts",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Lists all AWS accounts assigned to the user. These AWS accounts are assigned by the administrator of the account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1087 - Account Discovery"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1087.004 - Account Discovery: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Apps can now impersonate human access to AWS via IAM Identity Center",
+            "link": "https://awsteele.com/blog/2026/07/01/apps-can-now-impersonate-human-access-to-aws-via-iam-identity-center.html"
+        }
+    ],
+    "securityImplications": "Attackers might use ListAccounts with a stolen IAM Identity Center token to enumerate the AWS accounts the compromised identity is assigned, mapping reachable targets.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sso list-accounts --access-token TrailDiscover"
+        }
+    ],
+    "permissions": "N/A"
+}
