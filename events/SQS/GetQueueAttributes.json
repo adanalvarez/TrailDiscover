@@ -17,6 +17,10 @@
         {
             "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
             "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+        },
+        {
+            "description": "Detect Public Resource Exposure via Session Policy Error Messages",
+            "link": "https://hackingthe.cloud/aws/enumeration/detect_public_resource_exposure_via_error_messages/"
         }
     ],
     "securityImplications": "Attackers might use GetQueueAttributes to read an SQS queue's attributes, including its resource policy, to find queues that are publicly or cross-account accessible. When the call is made with a deny-all session policy, the access-denied error reveals the resource policy's decision without touching the queue or leaving a trace in the target account.",

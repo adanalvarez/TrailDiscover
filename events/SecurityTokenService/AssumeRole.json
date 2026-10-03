@@ -47,6 +47,10 @@
         {
             "description": "Don\u2019t expose yourself in public - let AWS error messages do it for you",
             "link": "https://www.plerion.com/blog/dont-expose-yourself-in-public-let-aws-error-messages-do-it"
+        },
+        {
+            "description": "Detect Public Resource Exposure via Session Policy Error Messages",
+            "link": "https://hackingthe.cloud/aws/enumeration/detect_public_resource_exposure_via_error_messages/"
         }
     ],
     "securityImplications": "Attackers might use AssumeRole to gain unauthorized access to an AWS role. This might allow them to gain initial access, escalate privileges or in specific scenarios gain persistence.",
