@@ -1,0 +1,44 @@
+{
+    "eventName": "CreateNotebookInstanceLifecycleConfig",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Creates a lifecycle configuration that you can associate with a notebook instance. A lifecycle configuration is a collection of shell scripts that run when you create or start a notebook instance.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/"
+        },
+        {
+            "description": "Privilege escalation with SageMaker and there's more hiding in execution roles",
+            "link": "https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateNotebookInstanceLifecycleConfig to stage a malicious on-start shell script that later runs on a notebook instance under its IAM execution role.",
+    "alerting": [
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/persistence_sagemaker_lifecycle_config_suspicious_script_content.toml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker create-notebook-instance-lifecycle-config --notebook-instance-lifecycle-config-name TrailDiscover --on-start Content=IyEvYmluL2Jhc2gKZWNobyBUcmFpbERpc2NvdmVy"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-CreateNotebookInstanceLifecycleConfig"
+}

@@ -1,0 +1,39 @@
+{
+    "eventName": "StartNotebookInstance",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After configuring the notebook instance, SageMaker AI sets the notebook instance status to InService.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/"
+        },
+        {
+            "description": "Privilege escalation with SageMaker and there's more hiding in execution roles",
+            "link": "https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles"
+        }
+    ],
+    "securityImplications": "Attackers might use StartNotebookInstance to restart a notebook instance that has a malicious lifecycle configuration attached, triggering their script to run under the notebook's IAM execution role.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker start-notebook-instance --notebook-instance-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-StartNotebookInstance"
+}

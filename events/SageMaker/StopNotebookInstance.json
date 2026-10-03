@@ -1,0 +1,39 @@
+{
+    "eventName": "StopNotebookInstance",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Terminates the ML compute instance. Before terminating the instance, SageMaker AI disconnects the ML storage volume from it. SageMaker AI preserves the ML storage volume.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/"
+        },
+        {
+            "description": "Privilege escalation with SageMaker and there's more hiding in execution roles",
+            "link": "https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles"
+        }
+    ],
+    "securityImplications": "Attackers might use StopNotebookInstance to stop a notebook instance so that a malicious lifecycle configuration can be attached, since a lifecycle configuration can only be changed while the instance is stopped.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker stop-notebook-instance --notebook-instance-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-StopNotebookInstance"
+}

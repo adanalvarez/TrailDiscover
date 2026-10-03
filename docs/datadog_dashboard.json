@@ -204,7 +204,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR GetCredentialsForIdentity OR GetId OR AddPermission20150331v2 OR CreateEventSourceMapping20150331 OR CreateFunction20150331 OR Invoke OR UpdateEventSourceMapping20150331 OR AddRoleToInstanceProfile OR AddUserToGroup OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateGroup OR CreateLoginProfile OR CreatePolicy OR CreatePolicyVersion OR DeleteRolePermissionsBoundary OR DeleteRolePolicy OR DeleteUserPermissionsBoundary OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR PutGroupPolicy OR PutRolePermissionsBoundary OR PutRolePolicy OR PutUserPermissionsBoundary OR PutUserPolicy OR SetDefaultPolicyVersion OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR AssociateAccessPolicy OR CreateAccessEntry OR ModifyInstanceAttribute OR ReplaceIamInstanceProfileAssociation OR CreateDevEndpoint OR CreateJob OR UpdateDevEndpoint OR UpdateJob) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR GetCredentialsForIdentity OR GetId OR AddPermission20150331v2 OR CreateEventSourceMapping20150331 OR CreateFunction20150331 OR Invoke OR UpdateEventSourceMapping20150331 OR AddRoleToInstanceProfile OR AddUserToGroup OR AttachGroupPolicy OR AttachRolePolicy OR AttachUserPolicy OR ChangePassword OR CreateAccessKey OR CreateGroup OR CreateLoginProfile OR CreatePolicy OR CreatePolicyVersion OR DeleteRolePermissionsBoundary OR DeleteRolePolicy OR DeleteUserPermissionsBoundary OR DeleteUserPolicy OR DetachRolePolicy OR DetachUserPolicy OR PutGroupPolicy OR PutRolePermissionsBoundary OR PutRolePolicy OR PutUserPermissionsBoundary OR PutUserPolicy OR SetDefaultPolicyVersion OR UpdateAssumeRolePolicy OR UpdateLoginProfile OR UpdateSAMLProvider OR AssociateAccessPolicy OR CreateAccessEntry OR ModifyInstanceAttribute OR ReplaceIamInstanceProfileAssociation OR CreateDevEndpoint OR CreateJob OR UpdateDevEndpoint OR UpdateJob OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -264,7 +264,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -1217,6 +1217,250 @@
                             "width": 2,
                             "height": 2
                         }
+                    },
+                    {
+                        "id": 3413354729,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [CreateNotebookInstanceLifecycleConfig](https://traildiscover.cloud/#SageMaker-CreateNotebookInstanceLifecycleConfig)\n\n**Description:** Creates a lifecycle configuration that you can associate with a notebook instance. A lifecycle configuration is a collection of shell scripts that run when you create or start a notebook instance.\n\n**Related Research:**\n- [Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration](https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/)\n- [Privilege escalation with SageMaker and there's more hiding in execution roles](https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1906036573,
+                        "definition": {
+                            "title": "CreateNotebookInstanceLifecycleConfig",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:CreateNotebookInstanceLifecycleConfig $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1448436792,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [StartNotebookInstance](https://traildiscover.cloud/#SageMaker-StartNotebookInstance)\n\n**Description:** Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After configuring the notebook instance, SageMaker AI sets the notebook instance status to InService.\n\n**Related Research:**\n- [Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration](https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/)\n- [Privilege escalation with SageMaker and there's more hiding in execution roles](https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 4236085932,
+                        "definition": {
+                            "title": "StartNotebookInstance",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:StartNotebookInstance $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2085687121,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [StopNotebookInstance](https://traildiscover.cloud/#SageMaker-StopNotebookInstance)\n\n**Description:** Terminates the ML compute instance. Before terminating the instance, SageMaker AI disconnects the ML storage volume from it. SageMaker AI preserves the ML storage volume.\n\n**Related Research:**\n- [Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration](https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/)\n- [Privilege escalation with SageMaker and there's more hiding in execution roles](https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 578368965,
+                        "definition": {
+                            "title": "StopNotebookInstance",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:StopNotebookInstance $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3397303667,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdateNotebookInstance](https://traildiscover.cloud/#SageMaker-UpdateNotebookInstance)\n\n**Description:** Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for your notebook instance to accommodate changes in your workload requirements.\n\n**Related Research:**\n- [Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration](https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/)\n- [Privilege escalation with SageMaker and there's more hiding in execution roles](https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 8,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1889985511,
+                        "definition": {
+                            "title": "UpdateNotebookInstance",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdateNotebookInstance $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 10,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
                     }
                 ]
             },
@@ -1224,7 +1468,7 @@
                 "x": 0,
                 "y": 13,
                 "width": 12,
-                "height": 6
+                "height": 8
             }
         },
         {
@@ -4168,7 +4412,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 19,
+                "y": 21,
                 "width": 12,
                 "height": 34
             }
@@ -6743,14 +6987,75 @@
                             "width": 2,
                             "height": 2
                         }
+                    },
+                    {
+                        "id": 4045618208,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [UpdateNotebookInstance](https://traildiscover.cloud/#SageMaker-UpdateNotebookInstance)\n\n**Description:** Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for your notebook instance to accommodate changes in your workload requirements.\n\n**Related Research:**\n- [Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration](https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/)\n- [Privilege escalation with SageMaker and there's more hiding in execution roles](https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 28,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2538300052,
+                        "definition": {
+                            "title": "UpdateNotebookInstance",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:UpdateNotebookInstance $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 28,
+                            "width": 2,
+                            "height": 2
+                        }
                     }
                 ]
             },
             "layout": {
                 "x": 0,
-                "y": 53,
+                "y": 55,
                 "width": 12,
-                "height": 30
+                "height": 32
             }
         },
         {
@@ -10243,7 +10548,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 83,
+                "y": 87,
                 "width": 12,
                 "height": 40
             }
@@ -10749,7 +11054,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 123,
+                "y": 127,
                 "width": 12,
                 "height": 8
             }
@@ -20832,7 +21137,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 131,
+                "y": 135,
                 "width": 12,
                 "height": 112
             }
@@ -21765,7 +22070,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 243,
+                "y": 247,
                 "width": 12,
                 "height": 12
             }
@@ -22576,7 +22881,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 255,
+                "y": 259,
                 "width": 12,
                 "height": 12
             }
@@ -22655,7 +22960,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 267,
+                "y": 271,
                 "width": 12,
                 "height": 4
             }
@@ -23954,7 +24259,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 271,
+                "y": 275,
                 "width": 12,
                 "height": 16
             }
@@ -27449,7 +27754,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 287,
+                "y": 291,
                 "width": 12,
                 "height": 40
             }
@@ -27528,7 +27833,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 327,
+                "y": 331,
                 "width": 12,
                 "height": 4
             }

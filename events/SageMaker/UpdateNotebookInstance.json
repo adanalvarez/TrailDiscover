@@ -1,0 +1,40 @@
+{
+    "eventName": "UpdateNotebookInstance",
+    "eventSource": "sagemaker.amazonaws.com",
+    "awsService": "SageMaker",
+    "description": "Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for your notebook instance to accommodate changes in your workload requirements.",
+    "mitreAttackTactics": [
+        "TA0002 - Execution",
+        "TA0004 - Privilege Escalation"
+    ],
+    "mitreAttackTechniques": [
+        "T1648 - Serverless Execution"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Execute Commands on SageMaker Notebook Instance via Lifecycle Configuration",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config/"
+        },
+        {
+            "description": "Privilege escalation with SageMaker and there's more hiding in execution roles",
+            "link": "https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles"
+        }
+    ],
+    "securityImplications": "Attackers might use UpdateNotebookInstance to attach a malicious lifecycle configuration to a stopped notebook instance, so their code runs under the notebook's IAM execution role when it restarts, escalating their privileges.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws sagemaker update-notebook-instance --notebook-instance-name TrailDiscover --lifecycle-config-name TrailDiscover"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.execution.sagemaker-update-lifecycle-config"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/sagemaker#sagemaker-UpdateNotebookInstance"
+}
