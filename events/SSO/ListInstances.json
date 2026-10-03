@@ -1,8 +1,8 @@
 {
-    "eventName": "ListClusters",
-    "eventSource": "ecs.amazonaws.com",
-    "awsService": "ECS",
-    "description": "Returns a list of existing clusters.",
+    "eventName": "ListInstances",
+    "eventSource": "sso.amazonaws.com",
+    "awsService": "SSO",
+    "description": "Lists the details of the organization and account instances of IAM Identity Center that were created in or visible to the account calling this API.",
     "mitreAttackTactics": [
         "TA0007 - Discovery"
     ],
@@ -14,22 +14,18 @@
     "usedInWild": true,
     "incidents": [
         {
-            "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
-            "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
-        },
-        {
             "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
             "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
         }
     ],
     "researchLinks": [],
-    "securityImplications": "Attackers might use ListClusters to enumerate the ECS clusters in an account as a first step toward identifying container workloads to access.",
+    "securityImplications": "Attackers might use ListInstances to enumerate the IAM Identity Center instances in an account, mapping its single sign-on footprint as part of reconnaissance with a stolen key.",
     "alerting": [],
     "simulation": [
         {
             "type": "commandLine",
-            "value": "aws ecs list-clusters"
+            "value": "aws sso-admin list-instances"
         }
     ],
-    "permissions": "https://aws.permissions.cloud/iam/ecs#ecs-ListClusters"
+    "permissions": "https://aws.permissions.cloud/iam/sso#sso-ListInstances"
 }

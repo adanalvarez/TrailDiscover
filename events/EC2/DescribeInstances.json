@@ -61,6 +61,10 @@
         {
             "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
             "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        },
+        {
+            "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+            "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
         }
     ],
     "researchLinks": [

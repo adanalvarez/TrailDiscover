@@ -130,6 +130,37 @@
         "permissions": "https://aws.permissions.cloud/iam/sso-directory#sso-directory-CreateUser"
     },
     {
+        "eventName": "ListInstances",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Lists the details of the organization and account instances of IAM Identity Center that were created in or visible to the account calling this API.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListInstances to enumerate the IAM Identity Center instances in an account, mapping its single sign-on footprint as part of reconnaissance with a stolen key.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws sso-admin list-instances"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso#sso-ListInstances"
+    },
+    {
         "eventName": "UpdateSsoConfiguration",
         "eventSource": "sso.amazonaws.com",
         "awsService": "SSO",
@@ -1097,6 +1128,10 @@
             {
                 "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
                 "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [
@@ -2109,6 +2144,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -3108,6 +3147,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [
@@ -4397,6 +4440,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -6577,6 +6624,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -10484,6 +10535,10 @@
             {
                 "description": "Investigating Two Variants of the Trivy Supply-Chain Compromise",
                 "link": "https://kudelskisecurity.com/research/investigating-two-variants-of-the-trivy-supply-chain-compromise"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [
@@ -11430,6 +11485,10 @@
             {
                 "description": "Datadog threat roundup: top insights for Q4 2024",
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -11722,6 +11781,10 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -11802,6 +11865,10 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -14321,6 +14388,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [
@@ -19786,6 +19857,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
@@ -20589,6 +20664,10 @@
             {
                 "description": "AI-assisted cloud intrusion achieves admin access in 8 minutes",
                 "link": "https://www.sysdig.com/blog/ai-assisted-cloud-intrusion-achieves-admin-access-in-8-minutes"
+            },
+            {
+                "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
+                "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
             }
         ],
         "researchLinks": [],
