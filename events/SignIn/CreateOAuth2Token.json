@@ -1,0 +1,39 @@
+{
+    "eventName": "CreateOAuth2Token",
+    "eventSource": "signin.amazonaws.com",
+    "awsService": "SignIn",
+    "description": "Exchanges an authorization code for an OAuth 2.0 access token and refresh token that can be used to access AWS services from developer tools and applications.",
+    "mitreAttackTactics": [
+        "TA0006 - Credential Access",
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1528 - Steal Application Access Token",
+        "T1078 - Valid Accounts"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "AWS Login Phishing Attack: How Attackers Exploit New Authentication",
+            "link": "https://www.mitiga.io/blog/inside-aws-login-exploring-a-new-phishing-method"
+        },
+        {
+            "description": "Phishing for AWS credentials via the new AWS login flow",
+            "link": "https://medium.com/@adan.alvarez/phishing-for-aws-credentials-via-the-new-aws-login-flow-39f6969b4eae"
+        }
+    ],
+    "securityImplications": "Attackers might use CreateOAuth2Token to exchange a phished authorization code from the AWS login cross-device flow for OAuth 2.0 access and refresh tokens, giving them persistent access to the victim's AWS account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws login --remote"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/signin#signin-CreateOAuth2Token"
+}

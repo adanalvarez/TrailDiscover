@@ -83,15 +83,15 @@
                                             "formula": "query8"
                                         },
                                         {
-                                            "alias": "TA0002 - Execution",
+                                            "alias": "TA0006 - Credential Access",
                                             "formula": "query9"
                                         },
                                         {
-                                            "alias": "TA0009 - Collection",
+                                            "alias": "TA0002 - Execution",
                                             "formula": "query10"
                                         },
                                         {
-                                            "alias": "TA0006 - Credential Access",
+                                            "alias": "TA0009 - Collection",
                                             "formula": "query11"
                                         },
                                         {
@@ -189,7 +189,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR AssumeRoleWithSAML OR AssumeRoleWithWebIdentity OR GetSessionToken OR ConsoleLogin OR GetSigninToken OR PasswordRecoveryRequested OR CreateFunctionUrlConfig) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AssumeRole OR AssumeRoleWithSAML OR AssumeRoleWithWebIdentity OR GetSessionToken OR AuthorizeOAuth2Access OR ConsoleLogin OR CreateOAuth2Token OR GetSigninToken OR PasswordRecoveryRequested OR CreateFunctionUrlConfig) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -234,7 +234,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AuthorizeOAuth2Access OR CreateOAuth2Token OR GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -249,7 +249,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(AddLayerVersionPermission20181031 OR PublishLayerVersion20181031 OR CreateSession OR CreateLaunchTemplate OR ResumeSession OR SendCommand OR StartSession OR ExecuteCommand OR CreateNotebookInstanceLifecycleConfig OR StartNotebookInstance OR StopNotebookInstance OR UpdateNotebookInstance) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -264,7 +264,7 @@
                                                 "aggregation": "count"
                                             },
                                             "search": {
-                                                "query": "source:cloudtrail @evt.name:(GetFunctionConfiguration20150331v2 OR GetAuthorizationToken OR DescribeSecret OR GetSecretValue OR ListSecrets OR GetPasswordData OR ModifyDBInstance OR GetParameters) $userIdentity.arn $network.client.ip $account"
+                                                "query": "source:cloudtrail @evt.name:(GetFunction20150331v2 OR UpdateFunctionCode20150331v2 OR CreateFunction OR PublishFunction OR UpdateDistribution OR BatchGetImage OR CreateInstanceExportTask OR CreateRoute OR CreateTrafficMirrorFilter OR CreateTrafficMirrorFilterRule OR CreateTrafficMirrorSession OR CreateTrafficMirrorTarget OR SendEmail) $userIdentity.arn $network.client.ip $account"
                                             },
                                             "group_by": [],
                                             "storage": "hot"
@@ -652,6 +652,67 @@
                         }
                     },
                     {
+                        "id": 4045680259,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [AuthorizeOAuth2Access](https://traildiscover.cloud/#SignIn-AuthorizeOAuth2Access)\n\n**Description:** Authenticates through a browser and obtains an OAuth 2.0 authorization code for credential exchange, as part of the AWS sign-in (AWS login) flow.\n\n**Related Research:**\n- [AWS Login Phishing Attack: How Attackers Exploit New Authentication](https://www.mitiga.io/blog/inside-aws-login-exploring-a-new-phishing-method)\n- [Phishing for AWS credentials via the new AWS login flow](https://medium.com/@adan.alvarez/phishing-for-aws-credentials-via-the-new-aws-login-flow-39f6969b4eae)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2637700990,
+                        "definition": {
+                            "title": "AuthorizeOAuth2Access",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:AuthorizeOAuth2Access $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 1937691763,
                         "definition": {
                             "type": "note",
@@ -664,7 +725,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
+                            "x": 8,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -706,8 +767,69 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
+                            "x": 10,
                             "y": 2,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 3315836927,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [CreateOAuth2Token](https://traildiscover.cloud/#SignIn-CreateOAuth2Token)\n\n**Description:** Exchanges an authorization code for an OAuth 2.0 access token and refresh token that can be used to access AWS services from developer tools and applications.\n\n**Related Research:**\n- [AWS Login Phishing Attack: How Attackers Exploit New Authentication](https://www.mitiga.io/blog/inside-aws-login-exploring-a-new-phishing-method)\n- [Phishing for AWS credentials via the new AWS login flow](https://medium.com/@adan.alvarez/phishing-for-aws-credentials-via-the-new-aws-login-flow-39f6969b4eae)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 4,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1808518771,
+                        "definition": {
+                            "title": "CreateOAuth2Token",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:CreateOAuth2Token $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -725,8 +847,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 4,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -767,8 +889,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 6,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -786,7 +908,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -828,7 +950,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -847,8 +969,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -889,8 +1011,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -901,7 +1023,7 @@
                 "x": 0,
                 "y": 5,
                 "width": 12,
-                "height": 8
+                "height": 10
             }
         },
         {
@@ -1649,7 +1771,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 13,
+                "y": 15,
                 "width": 12,
                 "height": 10
             }
@@ -4595,7 +4717,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 23,
+                "y": 25,
                 "width": 12,
                 "height": 34
             }
@@ -7236,7 +7358,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 57,
+                "y": 59,
                 "width": 12,
                 "height": 32
             }
@@ -10731,7 +10853,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 89,
+                "y": 91,
                 "width": 12,
                 "height": 40
             }
@@ -10746,6 +10868,128 @@
                 "show_title": true,
                 "widgets": [
                     {
+                        "id": 184791729,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [AuthorizeOAuth2Access](https://traildiscover.cloud/#SignIn-AuthorizeOAuth2Access)\n\n**Description:** Authenticates through a browser and obtains an OAuth 2.0 authorization code for credential exchange, as part of the AWS sign-in (AWS login) flow.\n\n**Related Research:**\n- [AWS Login Phishing Attack: How Attackers Exploit New Authentication](https://www.mitiga.io/blog/inside-aws-login-exploring-a-new-phishing-method)\n- [Phishing for AWS credentials via the new AWS login flow](https://medium.com/@adan.alvarez/phishing-for-aws-credentials-via-the-new-aws-login-flow-39f6969b4eae)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2972440869,
+                        "definition": {
+                            "title": "AuthorizeOAuth2Access",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:AuthorizeOAuth2Access $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 2,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 1602432045,
+                        "definition": {
+                            "type": "note",
+                            "content": "### [CreateOAuth2Token](https://traildiscover.cloud/#SignIn-CreateOAuth2Token)\n\n**Description:** Exchanges an authorization code for an OAuth 2.0 access token and refresh token that can be used to access AWS services from developer tools and applications.\n\n**Related Research:**\n- [AWS Login Phishing Attack: How Attackers Exploit New Authentication](https://www.mitiga.io/blog/inside-aws-login-exploring-a-new-phishing-method)\n- [Phishing for AWS credentials via the new AWS login flow](https://medium.com/@adan.alvarez/phishing-for-aws-credentials-via-the-new-aws-login-flow-39f6969b4eae)\n",
+                            "background_color": "white",
+                            "font_size": "14",
+                            "text_align": "left",
+                            "vertical_align": "top",
+                            "show_tick": false,
+                            "has_padding": true
+                        },
+                        "layout": {
+                            "x": 4,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
+                        "id": 2242597537,
+                        "definition": {
+                            "title": "CreateOAuth2Token",
+                            "title_size": "16",
+                            "title_align": "left",
+                            "type": "query_value",
+                            "requests": [
+                                {
+                                    "response_format": "scalar",
+                                    "queries": [
+                                        {
+                                            "data_source": "logs",
+                                            "name": "query1",
+                                            "indexes": [
+                                                "*"
+                                            ],
+                                            "compute": {
+                                                "aggregation": "count"
+                                            },
+                                            "search": {
+                                                "query": "source:cloudtrail @evt.name:CreateOAuth2Token $userIdentity.arn $network.client.ip $account"
+                                            }
+                                        }
+                                    ],
+                                    "formulas": [
+                                        {
+                                            "formula": "query1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "autoscale": true,
+                            "precision": 2
+                        },
+                        "layout": {
+                            "x": 6,
+                            "y": 0,
+                            "width": 2,
+                            "height": 2
+                        }
+                    },
+                    {
                         "id": 1641109266,
                         "definition": {
                             "type": "note",
@@ -10758,7 +11002,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -10800,7 +11044,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 0,
                             "width": 2,
                             "height": 2
@@ -10819,8 +11063,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 0,
+                            "x": 0,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -10861,8 +11105,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 0,
+                            "x": 2,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -10880,8 +11124,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 0,
+                            "x": 4,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -10922,8 +11166,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 0,
+                            "x": 6,
+                            "y": 2,
                             "width": 2,
                             "height": 2
                         }
@@ -10941,7 +11185,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -10983,7 +11227,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 2,
                             "width": 2,
                             "height": 2
@@ -11002,8 +11246,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 2,
+                            "x": 0,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11044,8 +11288,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 2,
+                            "x": 2,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11063,8 +11307,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 8,
-                            "y": 2,
+                            "x": 4,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11105,8 +11349,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 10,
-                            "y": 2,
+                            "x": 6,
+                            "y": 4,
                             "width": 2,
                             "height": 2
                         }
@@ -11124,7 +11368,7 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 0,
+                            "x": 8,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11166,7 +11410,7 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 2,
+                            "x": 10,
                             "y": 4,
                             "width": 2,
                             "height": 2
@@ -11185,8 +11429,8 @@
                             "has_padding": true
                         },
                         "layout": {
-                            "x": 4,
-                            "y": 4,
+                            "x": 0,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11227,8 +11471,8 @@
                             "precision": 2
                         },
                         "layout": {
-                            "x": 6,
-                            "y": 4,
+                            "x": 2,
+                            "y": 6,
                             "width": 2,
                             "height": 2
                         }
@@ -11237,9 +11481,9 @@
             },
             "layout": {
                 "x": 0,
-                "y": 129,
+                "y": 131,
                 "width": 12,
-                "height": 8
+                "height": 10
             }
         },
         {
@@ -21808,7 +22052,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 137,
+                "y": 141,
                 "width": 12,
                 "height": 118
             }
@@ -22802,7 +23046,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 255,
+                "y": 259,
                 "width": 12,
                 "height": 14
             }
@@ -23613,7 +23857,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 269,
+                "y": 273,
                 "width": 12,
                 "height": 12
             }
@@ -23692,7 +23936,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 281,
+                "y": 285,
                 "width": 12,
                 "height": 4
             }
@@ -24991,7 +25235,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 285,
+                "y": 289,
                 "width": 12,
                 "height": 16
             }
@@ -28486,7 +28730,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 301,
+                "y": 305,
                 "width": 12,
                 "height": 40
             }
@@ -28565,7 +28809,7 @@
             },
             "layout": {
                 "x": 0,
-                "y": 341,
+                "y": 345,
                 "width": 12,
                 "height": 4
             }
