@@ -116,6 +116,10 @@
         {
             "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
             "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+        },
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
         }
     ],
     "researchLinks": [

@@ -1,0 +1,33 @@
+{
+    "eventName": "RegisterToWorkMail",
+    "eventSource": "workmail.amazonaws.com",
+    "awsService": "WorkMail",
+    "description": "Registers an existing and disabled user, group, or resource for WorkMail use by associating a mailbox and calendaring capabilities.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use RegisterToWorkMail to give a WorkMail user a mailbox, so it can immediately send email to external recipients through the web client or SMTP.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws workmail register-to-work-mail --organization-id m-11111111111111111111111111111111 --entity-id TrailDiscoverUserId --email traildiscover@traildiscover.example.com"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-RegisterToWorkMail"
+}

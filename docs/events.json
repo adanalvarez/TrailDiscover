@@ -11,7 +11,7 @@
             "T1098 - Account Manipulation"
         ],
         "mitreAttackSubTechniques": [
-            "T1098.001 - Account Manipulation: Additional Cloud Credentials"
+            "T1098.003 - Account Manipulation: Additional Cloud Roles"
         ],
         "unverifiedMitreAttackTechniques": [],
         "usedInWild": true,
@@ -394,12 +394,14 @@
         "awsService": "route53domains",
         "description": "This operation registers a domain. For some top-level domains (TLDs), this operation requires extra parameters.",
         "mitreAttackTactics": [
-            "TA0040 - Impact"
+            "TA0042 - Resource Development"
         ],
         "mitreAttackTechniques": [
-            "T1496 - Resource Hijacking"
+            "T1583 - Acquire Infrastructure"
         ],
-        "mitreAttackSubTechniques": [],
+        "mitreAttackSubTechniques": [
+            "T1583.001 - Acquire Infrastructure: Domains"
+        ],
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1583 - Acquire Infrastructure",
@@ -438,12 +440,14 @@
         "awsService": "Organizations",
         "description": "Creates an AWS account that is automatically a member of the organization whose credentials made the request.",
         "mitreAttackTactics": [
-            "TA0005 - Defense Evasion"
+            "TA0003 - Persistence"
         ],
         "mitreAttackTechniques": [
-            "T1535 - Unused/Unsupported Cloud Regions"
+            "T1136 - Create Account"
         ],
-        "mitreAttackSubTechniques": [],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1078 - Valid Accounts",
@@ -1038,6 +1042,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -1321,7 +1329,7 @@
         "eventName": "ListSubscriptions",
         "eventSource": "sns.amazonaws.com",
         "awsService": "SNS",
-        "description": "Lists the calling AWS account's dedicated origination numbers and their metadata.",
+        "description": "Returns a list of the requester's subscriptions to Amazon SNS topics.",
         "mitreAttackTactics": [
             "TA0007 - Discovery"
         ],
@@ -1347,7 +1355,7 @@
                 "link": "https://permiso.io/blog/s/smishing-attack-on-aws-sms-new-phone-who-dis/"
             }
         ],
-        "securityImplications": "Attackers might use ListSubscriptions to identify origination numbers for potential smishing campaings.",
+        "securityImplications": "Attackers might use ListSubscriptions to enumerate SNS topic subscriptions (endpoints and protocols) for reconnaissance, or to find data flows to hijack or redirect.",
         "alerting": [],
         "simulation": [
             {
@@ -3052,6 +3060,105 @@
         "permissions": "https://aws.permissions.cloud/iam/lambda#lambda-UpdateFunctionConfiguration"
     },
     {
+        "eventName": "CreateOrganization",
+        "eventSource": "workmail.amazonaws.com",
+        "awsService": "WorkMail",
+        "description": "Creates a new WorkMail organization. Optionally, you can choose to associate an existing AWS Directory Service directory with your organization.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateOrganization to set up a WorkMail email environment in the victim's account, which, unlike SES, has no sandbox and can email external recipients immediately.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws workmail create-organization --alias traildiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-CreateOrganization"
+    },
+    {
+        "eventName": "CreateUser",
+        "eventSource": "workmail.amazonaws.com",
+        "awsService": "WorkMail",
+        "description": "Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateUser in WorkMail to create mailbox users with business-like addresses that act as phishing senders and give them access that does not depend on IAM.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws workmail create-user --organization-id m-11111111111111111111111111111111 --name traildiscover --display-name TrailDiscover --password 'TrailDiscover123!'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-CreateUser"
+    },
+    {
+        "eventName": "RegisterToWorkMail",
+        "eventSource": "workmail.amazonaws.com",
+        "awsService": "WorkMail",
+        "description": "Registers an existing and disabled user, group, or resource for WorkMail use by associating a mailbox and calendaring capabilities.",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use RegisterToWorkMail to give a WorkMail user a mailbox, so it can immediately send email to external recipients through the web client or SMTP.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws workmail register-to-work-mail --organization-id m-11111111111111111111111111111111 --entity-id TrailDiscoverUserId --email traildiscover@traildiscover.example.com"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-RegisterToWorkMail"
+    },
+    {
         "eventName": "GetQueryResults",
         "eventSource": "athena.amazonaws.com",
         "awsService": "Athena",
@@ -4031,6 +4138,72 @@
         "permissions": "https://aws.permissions.cloud/iam/ce#ce-GetCostForecast"
     },
     {
+        "eventName": "AuthorizeApplication",
+        "eventSource": "ds.amazonaws.com",
+        "awsService": "DirectoryService",
+        "description": "Authorizes an application for your AWS Directory.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use AuthorizeApplication to authorize WorkMail on the directory of an organization they set up for phishing; an unexpected call can reveal that email infrastructure is being created in the account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ds#ds-AuthorizeApplication"
+    },
+    {
+        "eventName": "CreateAlias",
+        "eventSource": "ds.amazonaws.com",
+        "awsService": "DirectoryService",
+        "description": "Creates an alias for a directory and assigns the alias to the directory.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use CreateAlias to name the directory behind a WorkMail organization they set up for phishing; an unexpected call can reveal that email infrastructure is being created in the account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ds create-alias --directory-id d-1111111111 --alias traildiscover"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ds#ds-CreateAlias"
+    },
+    {
         "eventName": "CreateSession",
         "eventSource": "cloudshell.amazonaws.com",
         "awsService": "CloudShell",
@@ -4528,6 +4701,10 @@
             {
                 "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
                 "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -4833,6 +5010,10 @@
             {
                 "description": "GuardDuty Extended Threat Detection uncovers cryptomining campaign on Amazon EC2 and Amazon ECS",
                 "link": "https://aws.amazon.com/blogs/security/cryptomining-campaign-targeting-amazon-ec2-and-amazon-ecs/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -5112,46 +5293,6 @@
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-CreateSAMLProvider"
     },
     {
-        "eventName": "StartSSO",
-        "eventSource": "sso.amazonaws.com",
-        "awsService": "SSO",
-        "description": "Initialize AWS IAM Identity Center",
-        "mitreAttackTactics": [
-            "TA0003 - Persistence"
-        ],
-        "mitreAttackTechniques": [
-            "T1136 - Create Account"
-        ],
-        "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1098 - Account Manipulation",
-                "reason": "By starting SSO, an adversary can manipulate IAM user accounts, adding or modifying permissions to maintain persistent access."
-            },
-            {
-                "technique": "T1078 - Valid Accounts",
-                "reason": "Use of valid SSO credentials can help adversaries gain access to various services and resources without raising alarms."
-            }
-        ],
-        "usedInWild": true,
-        "incidents": [
-            {
-                "description": "New tactics and techniques for proactive threat detection",
-                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
-            }
-        ],
-        "researchLinks": [],
-        "securityImplications": "Attackers use StartSSO to establish persistent footholds.",
-        "alerting": [],
-        "simulation": [
-            {
-                "type": "commandLine",
-                "value": "N/A"
-            }
-        ],
-        "permissions": "https://aws.permissions.cloud/iam/sso#sso-StartSSO"
-    },
-    {
         "eventName": "CreateServiceLinkedRole",
         "eventSource": "iam.amazonaws.com",
         "awsService": "IAM",
@@ -5305,6 +5446,10 @@
             {
                 "description": "Inside an AI-Assisted Cloud Attack: Familiar Techniques at Unfamiliar Speed",
                 "link": "https://www.sygnia.co/blog/inside-an-ai-assisted-cloud-attack/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -6631,6 +6776,10 @@
             {
                 "description": "Datadog threat roundup: top insights for Q4 2024",
                 "link": "https://securitylabs.datadoghq.com/articles/2024-q4-threat-roundup/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -6979,6 +7128,46 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/iam#iam-SimulatePrincipalPolicy"
+    },
+    {
+        "eventName": "StartSSO",
+        "eventSource": "sso.amazonaws.com",
+        "awsService": "SSO",
+        "description": "Initialize AWS IAM Identity Center",
+        "mitreAttackTactics": [
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [
+            {
+                "technique": "T1098 - Account Manipulation",
+                "reason": "By starting SSO, an adversary can manipulate IAM user accounts, adding or modifying permissions to maintain persistent access."
+            },
+            {
+                "technique": "T1078 - Valid Accounts",
+                "reason": "Use of valid SSO credentials can help adversaries gain access to various services and resources without raising alarms."
+            }
+        ],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "New tactics and techniques for proactive threat detection",
+                "link": "https://reinforce.awsevents.com/content/dam/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers use StartSSO to establish persistent footholds.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "N/A"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/sso#sso-StartSSO"
     },
     {
         "eventName": "UpdateAccessKey",
@@ -8258,6 +8447,10 @@
             {
                 "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [],
@@ -12152,7 +12345,7 @@
                 "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-snapshot/"
             }
         ],
-        "securityImplications": "Attackers might use ModifySnapshotAttribute to alter permissions on EBS snapshots, potentially exposing sensitive data to unauthorized parties.",
+        "securityImplications": "Attackers might create a snapshot of an EBS volume so it can later be shared or copied to an attacker-controlled account or region to exfiltrate its data.",
         "alerting": [],
         "simulation": [
             {
@@ -12507,9 +12700,11 @@
             "TA0005 - Defense Evasion"
         ],
         "mitreAttackTechniques": [
-            "T1089 - Disabling Security Tools"
+            "T1562 - Impair Defenses"
         ],
-        "mitreAttackSubTechniques": [],
+        "mitreAttackSubTechniques": [
+            "T1562.008 - Impair Defenses: Disable or Modify Cloud Logs"
+        ],
         "unverifiedMitreAttackTechniques": [
             {
                 "technique": "T1070 - Indicator Removal",
@@ -13631,54 +13826,6 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-DescribeRegions"
-    },
-    {
-        "eventName": "GetLaunchTemplateData",
-        "eventSource": "ec2.amazonaws.com",
-        "awsService": "EC2",
-        "description": "Retrieves the configuration data of the specified instance. You can use this data to create a launch template.",
-        "mitreAttackTactics": [
-            "TA0007 - Discovery"
-        ],
-        "mitreAttackTechniques": [
-            "T1580 - Cloud Infrastructure Discovery"
-        ],
-        "mitreAttackSubTechniques": [],
-        "unverifiedMitreAttackTechniques": [
-            {
-                "technique": "T1082 - System Information Discovery",
-                "reason": "The GetLaunchTemplateData API call retrieves configuration data of an instance, providing detailed information about the system, including its configurations and metadata."
-            },
-            {
-                "technique": "T1046 - Network Service Scanning",
-                "reason": "Information about the instance's network configurations can aid in scanning for active services and identifying potential targets"
-            },
-            {
-                "technique": "T1560 - Archive Collected Data",
-                "reason": "Adversaries might use the gathered configuration data to create archives for exfiltration purposes"
-            },
-            {
-                "technique": "T1033 - System Owner/User Discovery",
-                "reason": "The GetLaunchTemplateData call may reveal information about the system owner or users associated with the instance."
-            }
-        ],
-        "usedInWild": true,
-        "incidents": [
-            {
-                "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
-                "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
-            }
-        ],
-        "researchLinks": [],
-        "securityImplications": "Attackers might use GetLaunchTemplateData to obtain configurations of EC2 launch templates, identifying predefined instance settings or network configuration.",
-        "alerting": [],
-        "simulation": [
-            {
-                "type": "commandLine",
-                "value": "aws ec2 get-launch-template-data --instance-id TrailDiscoverInstanceId"
-            }
-        ],
-        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-GetLaunchTemplateData"
     },
     {
         "eventName": "DescribeRouteTables",
@@ -15321,7 +15468,7 @@
         "eventName": "SharedSnapshotCopyInitiated",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
-        "description": "Modifies the specified attribute of the specified instance.",
+        "description": "A snapshot shared with another AWS account was copied by that account.",
         "mitreAttackTactics": [
             "TA0010 - Exfiltration"
         ],
@@ -15382,7 +15529,7 @@
         "eventName": "SharedSnapshotVolumeCreated",
         "eventSource": "ec2.amazonaws.com",
         "awsService": "EC2",
-        "description": "Modifies the specified attribute of the specified instance.",
+        "description": "A volume was created from a snapshot shared with another AWS account.",
         "mitreAttackTactics": [
             "TA0010 - Exfiltration"
         ],
@@ -17427,6 +17574,10 @@
             {
                 "description": "From Compromised Keys to Phishing Campaigns: Inside a Cloud Email Service Takeover",
                 "link": "https://www.wiz.io/blog/wiz-discovers-cloud-email-abuse-campaign"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -17702,6 +17853,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [
@@ -17761,7 +17916,7 @@
         "mitreAttackTactics": [
             "TA0009 - Collection",
             "TA0011 - Command and Control",
-            "T1496 - Resource Hijacking"
+            "TA0040 - Impact"
         ],
         "mitreAttackTechniques": [
             "T1496 - Resource Hijacking",
@@ -17793,6 +17948,39 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ses#ses-SendEmail"
+    },
+    {
+        "eventName": "SendRawEmail",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Composes an email message and immediately queues it for sending.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use SendRawEmail to send phishing or spam from the victim's account using its verified identities. When the email is sent from the WorkMail web client, the event is logged as an AWS service call from WorkMail, without the attacker's IP address.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ses send-raw-email --cli-binary-format raw-in-base64-out --raw-message '{\"Data\":\"From: sender@traildiscover.example.com\\nTo: recipient@traildiscover.example.com\\nSubject: TrailDiscover\\n\\nTrailDiscover test\"}'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-SendRawEmail"
     },
     {
         "eventName": "UpdateAccountSendingEnabled",
@@ -17837,6 +18025,82 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ses#ses-UpdateAccountSendingEnabled"
+    },
+    {
+        "eventName": "VerifyDomainDkim",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Returns a set of DKIM tokens for a domain identity.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use VerifyDomainDkim to enable DKIM for a domain they control, so phishing or spam sent from the victim's account passes email authentication checks.",
+        "alerting": [
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/resource_development_ses_identity_verified_then_deleted.toml"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ses verify-domain-dkim --domain traildiscover.example.com"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-VerifyDomainDkim"
+    },
+    {
+        "eventName": "VerifyDomainIdentity",
+        "eventSource": "ses.amazonaws.com",
+        "awsService": "SES",
+        "description": "Adds a domain to the list of identities for your Amazon SES account in the current Amazon Web Services Region and attempts to verify it.",
+        "mitreAttackTactics": [
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use VerifyDomainIdentity to register a domain they control as a sending identity in the victim's account, so phishing or spam is sent through the victim's SES or WorkMail infrastructure and reputation.",
+        "alerting": [
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/resource_development_ses_identity_verified_then_deleted.toml"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ses verify-domain-identity --domain traildiscover.example.com"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ses#ses-VerifyDomainIdentity"
     },
     {
         "eventName": "VerifyEmailIdentity",
@@ -19138,7 +19402,7 @@
             "TA0007 - Discovery"
         ],
         "mitreAttackTechniques": [
-            "T1087 - Account Discovery"
+            "T1580 - Cloud Infrastructure Discovery"
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [
@@ -19209,6 +19473,10 @@
             {
                 "description": "Incident report: From CLI to console, chasing an attacker in AWS",
                 "link": "https://expel.com/blog/incident-report-from-cli-to-console-chasing-an-attacker-in-aws/"
+            },
+            {
+                "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+                "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
             }
         ],
         "researchLinks": [],

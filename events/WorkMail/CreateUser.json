@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateUser",
+    "eventSource": "workmail.amazonaws.com",
+    "awsService": "WorkMail",
+    "description": "Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation.",
+    "mitreAttackTactics": [
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateUser in WorkMail to create mailbox users with business-like addresses that act as phishing senders and give them access that does not depend on IAM.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws workmail create-user --organization-id m-11111111111111111111111111111111 --name traildiscover --display-name TrailDiscover --password 'TrailDiscover123!'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-CreateUser"
+}

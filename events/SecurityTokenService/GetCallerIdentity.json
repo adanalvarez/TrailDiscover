@@ -71,6 +71,10 @@
         {
             "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        },
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
         }
     ],
     "researchLinks": [

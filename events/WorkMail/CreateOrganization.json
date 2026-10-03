@@ -1,0 +1,33 @@
+{
+    "eventName": "CreateOrganization",
+    "eventSource": "workmail.amazonaws.com",
+    "awsService": "WorkMail",
+    "description": "Creates a new WorkMail organization. Optionally, you can choose to associate an existing AWS Directory Service directory with your organization.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use CreateOrganization to set up a WorkMail email environment in the victim's account, which, unlike SES, has no sandbox and can email external recipients immediately.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws workmail create-organization --alias traildiscover"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-CreateOrganization"
+}

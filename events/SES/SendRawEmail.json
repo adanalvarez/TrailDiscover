@@ -1,0 +1,33 @@
+{
+    "eventName": "SendRawEmail",
+    "eventSource": "ses.amazonaws.com",
+    "awsService": "SES",
+    "description": "Composes an email message and immediately queues it for sending.",
+    "mitreAttackTactics": [
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Threat Actors Using AWS WorkMail in Phishing Campaigns",
+            "link": "https://www.rapid7.com/blog/post/dr-threat-actors-aws-workmail-phishing-campaigns/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use SendRawEmail to send phishing or spam from the victim's account using its verified identities. When the email is sent from the WorkMail web client, the event is logged as an AWS service call from WorkMail, without the attacker's IP address.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ses send-raw-email --cli-binary-format raw-in-base64-out --raw-message '{\"Data\":\"From: sender@traildiscover.example.com\\nTo: recipient@traildiscover.example.com\\nSubject: TrailDiscover\\n\\nTrailDiscover test\"}'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ses#ses-SendRawEmail"
+}
