@@ -29,6 +29,7 @@
 
     --row-hover: #EEF7FB;
     --row-open: #E0F0F8;
+    --strip: #DCEEF5;              /* presence tint for tactic strips (Insights) */
 
     --radius: 6px;
     --radius-card: 8px;
@@ -203,6 +204,12 @@ kbd,
 
 .site-nav a {
     color: var(--on-sky);
+}
+
+.site-nav a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--navy);
 }
 
 .site-nav__data {
@@ -1321,8 +1328,559 @@ kbd,
 }
 
 /* ------------------------------------------------------------------ */
+/* Event table: scope notes, drawer source lines, link to Insights      */
+/* ------------------------------------------------------------------ */
+
+.tactics__more {
+    align-self: center;
+    margin-left: auto;
+    font-size: 13px;
+    white-space: nowrap;
+    color: var(--navy);
+}
+
+.scope {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.scope__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 10px 14px;
+    font-size: 14px;
+    background: var(--surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--card-shadow);
+}
+
+.scope__item p,
+.scope__note {
+    margin: 0;
+}
+
+.scope__note {
+    font-size: 14px;
+    color: var(--on-sky);
+}
+
+.scope__domain {
+    margin-left: 4px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.scope__actions {
+    display: flex;
+    gap: 16px;
+    white-space: nowrap;
+}
+
+.source-line {
+    display: block;
+    margin-top: 2px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Insights page                                                       */
+/* ------------------------------------------------------------------ */
+
+.insights {
+    display: grid;
+    gap: 18px;
+    padding-top: 8px;
+}
+
+.ins-card {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+    padding: 22px 24px;
+    background: var(--surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--card-shadow);
+    scroll-margin-top: 12px;
+}
+
+.ins-card > * {
+    min-width: 0;
+}
+
+.ins-title {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ins-head {
+    display: grid;
+    gap: 4px;
+}
+
+.ins-lede,
+.ins-sub {
+    margin: 0;
+    max-width: 80ch;
+}
+
+.ins-lede {
+    font-size: 16px;
+}
+
+.ins-sub {
+    font-size: 14.5px;
+    color: var(--muted);
+}
+
+.ins-intro__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 14px;
+}
+
+.ins-howto,
+.ins-start {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.ins-howto h3,
+.ins-start h3 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ins-howto p {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.ins-start ul {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+.ins-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ins-controls,
+.ins-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+}
+
+.ins-filter {
+    flex: 1 1 260px;
+    max-width: 460px;
+    height: 38px;
+    padding: 0 12px;
+    font: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--control-border);
+    border-radius: var(--radius);
+}
+
+.ins-filter:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(2, 48, 71, 0.22);
+}
+
+.ins-count,
+.ins-note,
+.ins-legend {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.ins-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ins-swatch {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 20px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--navy);
+    background: var(--strip);
+    border-radius: 2px;
+}
+
+.ins-tag {
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 11.5px;
+    line-height: 18px;
+    color: var(--muted);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+}
+
+.ins-warning {
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    font-size: 13.5px;
+    background: var(--wild-bg);
+    border: 1px solid var(--wild-border);
+    border-radius: var(--radius);
+}
+
+.ins-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.ins-caveat {
+    display: grid;
+    gap: 4px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+.ins-caveat p {
+    margin: 0;
+    max-width: 95ch;
+}
+
+.ins-more {
+    display: flex;
+    justify-content: center;
+}
+
+.ins-filter-note {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: var(--surface-2);
+    border-radius: var(--radius);
+}
+
+.ins-count:focus {
+    outline: none;
+}
+
+.ins-empty {
+    padding: 18px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Strip tables: rows with a 13-cell presence strip in ATT&CK order */
+.strip-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.strip-table th,
+.strip-table td {
+    border-bottom: 1px solid var(--border);
+}
+
+.strip-table thead th {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: bottom;
+    color: #fff;
+    background: var(--navy);
+}
+
+.strip-table thead th button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.strip-table thead th button:hover {
+    color: #BFE3F2;
+}
+
+.strip-table thead th button:focus-visible {
+    outline: 2px solid var(--sky);
+    outline-offset: -3px;
+}
+
+.strip-table thead th[aria-sort] button::after {
+    content: "↓";
+    content: "↓" / "";
+    font-weight: 400;
+}
+
+.strip-table thead th[aria-sort="ascending"] button::after {
+    content: "↑";
+    content: "↑" / "";
+}
+
+.strip-table thead .strip__head {
+    width: 34px;
+}
+
+.strip-table thead .strip__head button {
+    justify-content: flex-start;
+    padding: 8px 0;
+    font-size: 12.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.strip-table .col-source {
+    min-width: 240px;
+    padding: 6px 12px;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+}
+
+.strip-table .col-num {
+    width: 76px;
+    padding: 6px 12px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: top;
+    font-variant-numeric: tabular-nums;
+}
+
+.strip-table thead .col-num button {
+    justify-content: flex-end;
+}
+
+.strip-table tbody tr:hover th,
+.strip-table tbody tr:hover td {
+    background: var(--row-hover);
+}
+
+.strip-table tbody tr.is-target th,
+.strip-table tbody tr.is-target td,
+.ins-singles li.is-target {
+    background: var(--row-open);
+}
+
+.strip__cell {
+    width: 34px;
+    min-width: 34px;
+    padding: 0;
+    font-size: 12.5px;
+    font-weight: 500;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    border-left: 1px solid var(--border);
+}
+
+.strip-table tbody .strip__cell.is-on,
+.strip-table tbody tr:hover .strip__cell.is-on {
+    background: var(--strip);
+}
+
+.strip__cell a {
+    display: block;
+    line-height: 30px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.strip__cell a:hover {
+    text-decoration: underline;
+}
+
+.src-title {
+    font-weight: 500;
+}
+
+.src-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 10px;
+    margin-top: 2px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.src-meta .mono,
+.src-domain {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.src-note {
+    margin: 2px 0 0;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.count-bar {
+    display: block;
+    max-width: 52px;
+    height: 4px;
+    margin-top: 5px;
+    margin-left: auto;
+    background: var(--blue);
+    border-radius: 0 2px 2px 0;
+}
+
+.strip-line {
+    display: none;
+}
+
+.ins-singles {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.ins-singles summary {
+    font-weight: 500;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.ins-singles ul {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    font-size: 13.5px;
+    columns: 2 320px;
+    column-gap: 28px;
+}
+
+.ins-singles li {
+    padding: 2px 0;
+    break-inside: avoid;
+}
+
+/* ATT&CK technique index */
+.tech-index {
+    columns: 2 380px;
+    column-gap: 32px;
+}
+
+.tech-group {
+    margin: 0 0 18px;
+    break-inside: avoid;
+}
+
+.tech-group h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+    margin: 0 0 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-strong);
+}
+
+.tech-group h3 > a:first-child {
+    color: var(--navy);
+}
+
+.tech-group__count {
+    margin-left: auto;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.tech-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-row {
+    display: grid;
+    grid-template-columns: 78px 1fr auto;
+    align-items: baseline;
+    gap: 2px 10px;
+    padding: 3px 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.tech-row--sub {
+    padding-left: 14px;
+    font-size: 13.5px;
+}
+
+.tech-id {
+    font-size: 12.5px;
+    font-weight: 500;
+}
+
+.tech-counts {
+    font-size: 13px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.tech-wild {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+    color: var(--wild-ink);
+}
+
+.tech-unplaced {
+    margin: 6px 0 0;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
+
+/* The definition after the stats line only fits on wide screens; the toggle's title repeats it. */
+@media (max-width: 1520px) {
+    .stats__def {
+        display: none;
+    }
+}
 
 @media (max-width: 1180px) {
     .tech__name {
@@ -1347,9 +1905,6 @@ kbd,
         padding-right: 10px;
     }
 
-    .stats__def {
-        display: none;
-    }
 }
 
 @media (max-width: 960px) {
@@ -1394,6 +1949,48 @@ kbd,
 
 /* Phones: the table becomes a list inside the same white card. */
 @media (max-width: 760px) {
+    .ins-card {
+        padding: 18px 16px;
+    }
+
+    /* The tactic strip becomes a line of text under each row. */
+    .strip-table .strip__head,
+    .strip-table .strip__cell {
+        display: none;
+    }
+
+    .strip-line {
+        display: block;
+        margin: 4px 0 0;
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .strip-table .col-source {
+        min-width: 0;
+    }
+
+    .strip-table .col-num {
+        width: auto;
+        padding-left: 6px;
+        padding-right: 8px;
+    }
+
+    .tech-row,
+    .tech-row--sub {
+        grid-template-columns: 78px 1fr;
+    }
+
+    .tech-counts {
+        grid-column: 2;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .scope__actions {
+        white-space: normal;
+    }
+
     .wrap {
         padding: 0 12px;
     }

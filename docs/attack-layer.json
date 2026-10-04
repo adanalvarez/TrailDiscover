@@ -1,0 +1,1731 @@
+{
+ "name": "TrailDiscover: catalogued CloudTrail events",
+ "versions": {
+  "attack": "18",
+  "navigator": "5.1.0",
+  "layer": "4.5"
+ },
+ "domain": "enterprise-attack",
+ "description": "ATT&CK techniques that TrailDiscover maps catalogued AWS CloudTrail API calls to. Presence only: it does not show how often attackers use a technique, risk, or detection coverage. Generated from events.json (data version eea1f3dcdf59), ATT&CK v18.1.",
+ "sorting": 0,
+ "layout": {
+  "layout": "side",
+  "showID": true,
+  "showName": true,
+  "showAggregateScores": false,
+  "countUnscored": false
+ },
+ "hideDisabled": false,
+ "techniques": [
+  {
+   "techniqueID": "T1583",
+   "tactic": "resource-development",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "route53domains-RegisterDomain"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1583&tactic=TA0042"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1583.001",
+   "tactic": "resource-development",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "route53domains-RegisterDomain"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1583.001&tactic=TA0042"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078",
+   "tactic": "initial-access",
+   "color": "#8ECAE6",
+   "comment": "6 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken, SignIn-PasswordRecoveryRequested"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078&tactic=TA0001"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1078.004",
+   "tactic": "initial-access",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.004&tactic=TA0001"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1133",
+   "tactic": "initial-access",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Lambda-CreateFunctionUrlConfig"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1133&tactic=TA0001"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1199",
+   "tactic": "initial-access",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "STS-AssumeRole, STS-AssumeRoleWithSAML, STS-AssumeRoleWithWebIdentity, STS-GetSessionToken"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1199&tactic=TA0001"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1059",
+   "tactic": "execution",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CloudShell-CreateSession"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1059&tactic=TA0002"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1059.009",
+   "tactic": "execution",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CloudShell-CreateSession"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1059.009&tactic=TA0002"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1609",
+   "tactic": "execution",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "ECS-ExecuteCommand"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1609&tactic=TA0002"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1648",
+   "tactic": "execution",
+   "color": "#8ECAE6",
+   "comment": "15 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-CreateAgent, Bedrock-CreateAgentActionGroup, Bedrock-InvokeAgent, Bedrock-PrepareAgent, Bedrock-UpdateAgent, Bedrock-UpdateFlow, Bedrock-UpdatePrompt, BedrockAgentCore-InvokeAgentRuntime, BedrockAgentCore-InvokeCodeInterpreter, Lambda-AddLayerVersionPermission20181031, Lambda-PublishLayerVersion20181031, SageMaker-CreateNotebookInstanceLifecycleConfig, SageMaker-StartNotebookInstance, SageMaker-StopNotebookInstance, SageMaker-UpdateNotebookInstance"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1648&tactic=TA0002"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1651",
+   "tactic": "execution",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "SSM-ResumeSession, SSM-SendCommand, SSM-StartSession"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1651&tactic=TA0002"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "6 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole, STS-GetFederationToken"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1078.001",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-CreateLoginProfile"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.001&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078.004",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.004&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1098",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "29 catalogued CloudTrail events in TrailDiscover (26 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-AuthorizeSecurityGroupIngress, EC2-CreateDefaultVpc, EC2-CreateKeyPair, EC2-CreateNetworkAclEntry, EC2-CreateSecurityGroup, EC2-ImportKeyPair, EC2-RunInstances, EC2-StartInstances, IAM-AttachUserPolicy, IAM-CreateLoginProfile, IAM-CreateServiceLinkedRole, IAM-CreateServiceSpecificCredential, IAM-PutUserPolicy, IAM-UpdateAccessKey, IAM-UpdateAssumeRolePolicy, IAM-UpdateLoginProfile, IAM-UpdateSAMLProvider, Lambda-AddPermission20150331v2, Lambda-CreateFunction20150331, Lambda-CreateFunctionUrlConfig, Lambda-UpdateFunctionCode20150331v2, Lambda-UpdateFunctionConfiguration20150331v2, Marketplace-AcceptAgreementRequest, Marketplace-CreateAgreementRequest, SSO-AddMemberToGroup, SSO-CreateAccountAssignment, SSO-CreateGroup, SSO-CreateUser, SSO-UpdateSsoConfiguration"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1098.001",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateKeyPair, EC2-ImportKeyPair, IAM-CreateLoginProfile, IAM-CreateServiceSpecificCredential, SSO-CreateUser"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098.001&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1098.003",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-AttachUserPolicy, IAM-PutUserPolicy, IAM-UpdateAssumeRolePolicy, SSO-AddMemberToGroup, SSO-CreateGroup"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098.003&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1133",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateNetworkAclEntry, Lambda-CreateFunctionUrlConfig"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1133&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1136",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "14 catalogued CloudTrail events in TrailDiscover (13 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, SSO-StartSSO, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1136&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1136.001",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-CreateUser"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1136.001&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1136.003",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "12 catalogued CloudTrail events in TrailDiscover (12 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1136.003&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1546",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "events-PutRule, events-PutTargets"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1546&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1556",
+   "tactic": "persistence",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "AppSync-CreateApiKey, AppSync-UpdateGraphqlApi, AppSync-UpdateResolver"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1556&tactic=TA0003"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentity-GetCredentialsForIdentity, CognitoIdentity-GetId, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, Redshift-GetClusterCredentials, SSO-GetRoleCredentials, STS-AssumeRole"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1078.001",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentity-GetCredentialsForIdentity, CognitoIdentity-GetId, IAM-CreateLoginProfile"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.001&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078.002",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentity-GetCredentialsForIdentity, CognitoIdentity-GetId"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.002&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078.003",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentity-GetCredentialsForIdentity"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.003&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1078.004",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentity-GetCredentialsForIdentity, CognitoIdentity-GetId, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, Redshift-GetClusterCredentials, SSO-GetRoleCredentials, STS-AssumeRole"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1078.004&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1098",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "36 catalogued CloudTrail events in TrailDiscover (16 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-ModifyInstanceAttribute, EC2-ReplaceIamInstanceProfileAssociation, EKS-AssociateAccessPolicy, EKS-CreateAccessEntry, Glue-CreateDevEndpoint, Glue-CreateJob, Glue-UpdateDevEndpoint, Glue-UpdateJob, IAM-AddRoleToInstanceProfile, IAM-AddUserToGroup, IAM-AttachGroupPolicy, IAM-AttachRolePolicy, IAM-AttachUserPolicy, IAM-CreateGroup, IAM-CreateLoginProfile, IAM-CreatePolicy, IAM-CreatePolicyVersion, IAM-DeleteRolePermissionsBoundary, IAM-DeleteRolePolicy, IAM-DeleteUserPermissionsBoundary, IAM-DeleteUserPolicy, IAM-DetachRolePolicy, IAM-DetachUserPolicy, IAM-PutGroupPolicy, IAM-PutRolePermissionsBoundary, IAM-PutRolePolicy, IAM-PutUserPermissionsBoundary, IAM-PutUserPolicy, IAM-SetDefaultPolicyVersion, IAM-UpdateAssumeRolePolicy, IAM-UpdateLoginProfile, IAM-UpdateSAMLProvider, Lambda-AddPermission20150331v2, Lambda-CreateEventSourceMapping20150331, Lambda-CreateFunction20150331, Lambda-UpdateEventSourceMapping20150331"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1098.001",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-AddRoleToInstanceProfile, IAM-CreateLoginProfile"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098.001&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1098.003",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (6 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-ReplaceIamInstanceProfileAssociation, IAM-AttachGroupPolicy, IAM-AttachUserPolicy, IAM-CreateGroup, IAM-CreatePolicy, IAM-CreatePolicyVersion, IAM-PutUserPolicy, IAM-UpdateAssumeRolePolicy"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1098.003&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1548",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "STS-AssumeRoot"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1548&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1548.005",
+   "tactic": "privilege-escalation",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "STS-AssumeRoot"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1548.005&tactic=TA0004"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1070",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "6 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-TerminateInstances, IAM-DeleteAccessKey, IAM-DeleteLoginProfile, IAM-DeleteUser, Organizations-LeaveOrganization, SES-DeleteIdentity"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1070&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1070.004",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-TerminateInstances"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1070.004&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1556",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "AppSync-CreateApiKey, AppSync-UpdateGraphqlApi, AppSync-UpdateResolver"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1556&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1562",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "37 catalogued CloudTrail events in TrailDiscover (10 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-DeleteGuardrail, Bedrock-DeleteModelInvocationLoggingConfiguration, Bedrock-PutModelInvocationLoggingConfiguration, Bedrock-UpdateGuardrail, CloudTrail-CreateTrail, CloudTrail-DeleteTrail, CloudTrail-PutEventSelectors, CloudTrail-StopLogging, CloudTrail-UpdateTrail, CloudWatch-DeleteAlarms, CloudWatchLogs-CreateLogStream, CloudWatchLogs-DeleteLogGroup, CloudWatchLogs-DeleteLogStream, CloudWatchLogs-PutLogEvents, Config-DeleteConfigRule, Config-DeleteConfigurationRecorder, Config-DeleteDeliveryChannel, Config-StopConfigurationRecorder, EC2-DeleteFlowLogs, EC2-DeleteNetworkAcl, EC2-DeleteNetworkAclEntry, GuardDuty-CreateFilter, GuardDuty-CreateIPSet, GuardDuty-DeleteDetector, GuardDuty-DeleteInvitations, GuardDuty-DeleteMembers, GuardDuty-DeletePublishingDestination, GuardDuty-DisassociateFromMasterAccount, GuardDuty-DisassociateMembers, GuardDuty-StopMonitoringMembers, GuardDuty-UpdateDetector, GuardDuty-UpdateIPSet, IAM-DeactivateMFADevice, SecurityHub-DeleteMembers, WAFV2-DeleteRuleGroup, WAFV2-DeleteWebACL, WAFV2-UpdateIPSet"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1562.001",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "27 catalogued CloudTrail events in TrailDiscover (8 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-DeleteGuardrail, Bedrock-UpdateGuardrail, CloudTrail-DeleteTrail, CloudTrail-PutEventSelectors, CloudTrail-StopLogging, CloudTrail-UpdateTrail, CloudWatch-DeleteAlarms, CloudWatchLogs-CreateLogStream, CloudWatchLogs-DeleteLogGroup, CloudWatchLogs-DeleteLogStream, Config-DeleteConfigRule, Config-DeleteConfigurationRecorder, Config-DeleteDeliveryChannel, Config-StopConfigurationRecorder, EC2-DeleteNetworkAclEntry, GuardDuty-CreateFilter, GuardDuty-CreateIPSet, GuardDuty-DeleteDetector, GuardDuty-DeleteInvitations, GuardDuty-DeleteMembers, GuardDuty-DeletePublishingDestination, GuardDuty-DisassociateFromMasterAccount, GuardDuty-DisassociateMembers, GuardDuty-StopMonitoringMembers, GuardDuty-UpdateDetector, GuardDuty-UpdateIPSet, IAM-DeactivateMFADevice"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562.001&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1562.004",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-DeleteNetworkAclEntry"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562.004&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1562.006",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CloudWatch-DeleteAlarms, GuardDuty-DeleteInvitations"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562.006&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1562.007",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-DeleteNetworkAcl, WAFV2-DeleteRuleGroup, WAFV2-DeleteWebACL, WAFV2-UpdateIPSet"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562.007&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1562.008",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-DeleteModelInvocationLoggingConfiguration, Bedrock-PutModelInvocationLoggingConfiguration, CloudTrail-CreateTrail, CloudTrail-DeleteTrail, CloudTrail-StopLogging, CloudWatchLogs-PutLogEvents, EC2-DeleteFlowLogs, GuardDuty-StopMonitoringMembers"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1562.008&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1578",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "24 catalogued CloudTrail events in TrailDiscover (15 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "AppSync-CreateApiKey, AppSync-UpdateGraphqlApi, AppSync-UpdateResolver, EC2-StopInstances, ELBv2-CreateRule, IAM-DeleteAccessKey, IAM-DeleteLoginProfile, IAM-DeleteUser, IAM-DeleteUserPolicy, IAM-DetachRolePolicy, IAM-DetachUserPolicy, Lightsail-CreateInstances, RDS-AuthorizeDBSecurityGroupIngress, RDS-ModifyActivityStream, RDS-ModifyDBCluster, Redshift-ModifyCluster, S3-DeleteBucketPolicy, SES-DeleteIdentity, SES-PutAccountDetails, Support-CreateCase, events-DeleteRule, events-DisableRule, events-PutRule, events-RemoveTargets"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1578&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1578.002",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Lightsail-CreateInstances"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1578.002&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1578.003",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-StopInstances"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1578.003&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1578.005",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "SES-PutAccountDetails, Support-CreateCase"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1578.005&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1666",
+   "tactic": "defense-evasion",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Organizations-AcceptHandshake, Organizations-InviteAccountToOrganization"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1666&tactic=TA0005"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1528",
+   "tactic": "credential-access",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, ECR-GetAuthorizationToken, SSO-CreateTokenWithIAM, SignIn-AuthorizeOAuth2Access, SignIn-CreateOAuth2Token"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1528&tactic=TA0006"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1552",
+   "tactic": "credential-access",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "SSM-DescribeParameters, SSM-GetParameters"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1552&tactic=TA0006"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1555",
+   "tactic": "credential-access",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-GetPasswordData, SecretsManager-DescribeSecret, SecretsManager-GetSecretValue, SecretsManager-ListSecrets"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1555&tactic=TA0006"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1555.006",
+   "tactic": "credential-access",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "SecretsManager-DescribeSecret, SecretsManager-GetSecretValue"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1555.006&tactic=TA0006"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1556",
+   "tactic": "credential-access",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "RDS-ModifyDBInstance"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1556&tactic=TA0006"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1040",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "ACMPCA-GetCertificate, ACMPCA-IssueCertificate"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1040&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1069",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "OpenSearchServerless-ListAccessPolicies"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1069&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1087",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "28 catalogued CloudTrail events in TrailDiscover (25 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListOpenIDConnectProviders, IAM-ListRolePolicies, IAM-ListRoles, IAM-ListSAMLProviders, IAM-ListSSHPublicKeys, IAM-ListServiceSpecificCredentials, IAM-ListSigningCertificates, IAM-ListUserPolicies, IAM-ListUsers, IAM-SimulatePrincipalPolicy, ResourceExplorer-Search, SES-GetAccount, SES-GetAccountSendingEnabled, SES-ListEmailIdentities, SES-ListIdentities, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1087&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1087.004",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "15 catalogued CloudTrail events in TrailDiscover (12 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListUsers, SES-GetAccount, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1087.004&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1526",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "43 catalogued CloudTrail events in TrailDiscover (36 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "AppSync-GetIntrospectionSchema, CloudWatch-DescribeAlarms, CloudWatch-DescribeAlarmsForMetric, CostExplorer-GetCostAndUsage, CostExplorer-GetCostForecast, ECR-DescribeImages, ECR-DescribeRepositories, ELBv2-DescribeListeners, ELBv2-DescribeLoadBalancers, GuardDuty-GetDetector, GuardDuty-GetFindings, GuardDuty-ListDetectors, GuardDuty-ListFindings, GuardDuty-ListIPSets, Health-DescribeEventAggregates, Health-DescribeEvents, KMS-DescribeKey, Lambda-GetFunction20150331v2, Lambda-GetFunctionConfiguration20150331v2, Lambda-ListFunctions20150331, Organizations-DescribeOrganization, Organizations-ListAccounts, Organizations-ListOrganizationalUnitsForParent, S3-GetBucketAccelerateConfiguration, S3-GetBucketAcl, S3-GetBucketLifecycle, S3-GetBucketLocation, S3-GetBucketLogging, S3-GetBucketOwnershipControls, S3-GetBucketPolicy, S3-GetBucketPublicAccessBlock, S3-GetBucketReplication, S3-GetBucketRequestPayment, S3-GetBucketTagging, S3-GetBucketVersioning, S3-GetObjectLockConfiguration, S3-ListBuckets, SES-GetIdentityVerificationAttributes, SSM-DescribeParameters, SSM-GetParameters, ServiceCatalog-ListApplications, events-ListRules, events-ListTargetsByRule"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1526&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1580",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "102 catalogued CloudTrail events in TrailDiscover (88 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Athena-GetQueryResults, Bedrock-GetFoundationModelAvailability, Bedrock-GetKnowledgeBase, Bedrock-GetModelInvocationLoggingConfiguration, Bedrock-GetUseCaseForModelAccess, Bedrock-InvokeModel, Bedrock-ListAgents, Bedrock-ListCustomModels, Bedrock-ListFoundationModelAgreementOffers, Bedrock-ListFoundationModels, Bedrock-ListInferenceProfiles, Bedrock-ListKnowledgeBases, Bedrock-ListModelInvocationJobs, Bedrock-ListProvisionedModelThroughputs, BedrockAgentCore-GetMemory, CloudWatchLogs-DescribeLogGroups, CloudWatchLogs-DescribeLogStreams, CloudWatchLogs-DescribeSubscriptionFilters, CloudWatchLogs-GetLogRecord, EC2-DescribeAccountAttributes, EC2-DescribeAvailabilityZones, EC2-DescribeBundleTasks, EC2-DescribeCarrierGateways, EC2-DescribeClientVpnRoutes, EC2-DescribeDhcpOptions, EC2-DescribeFlowLogs, EC2-DescribeHosts, EC2-DescribeImages, EC2-DescribeInstanceAttribute, EC2-DescribeInstanceStatus, EC2-DescribeInstanceTypes, EC2-DescribeInstances, EC2-DescribeInternetGateways, EC2-DescribeKeyPairs, EC2-DescribeLaunchTemplates, EC2-DescribeNetworkInterfaces, EC2-DescribeRegions, EC2-DescribeRouteTables, EC2-DescribeSecurityGroups, EC2-DescribeSnapshotAttribute, EC2-DescribeSnapshotTierStatus, EC2-DescribeSnapshots, EC2-DescribeSubnets, EC2-DescribeTags, EC2-DescribeTransitGatewayMulticastDomains, EC2-DescribeVolumeStatus, EC2-DescribeVolumes, EC2-DescribeVolumesModifications, EC2-DescribeVpcEndpointConnectionNotifications, EC2-DescribeVpcs, EC2-GetConsoleScreenshot, EC2-GetEbsDefaultKmsKeyId, EC2-GetEbsEncryptionByDefault, EC2-GetFlowLogsIntegrationTemplate, EC2-GetLaunchTemplateData, EC2-GetTransitGatewayRouteTableAssociations, ECS-DescribeTaskDefinition, ECS-DescribeTasks, ECS-ListClusters, ECS-ListTaskDefinitions, ECS-ListTasks, EKS-DescribeAccessEntry, EKS-DescribeCluster, EKS-ListAssociatedAccessPolicies, EKS-ListClusters, LightSail-GetInstances, LightSail-GetRegions, Marketplace-GetListingView, Marketplace-SearchAgreements, OpenSearchServerless-ListCollections, RDS-DescribeBlueGreenDeployments, RDS-DescribeDBClusters, RDS-DescribeDBEngineVersions, RDS-DescribeDBInstances, RDS-DescribeDBProxies, RDS-DescribeDBSnapshots, RDS-DescribeDBSubnetGroups, RDS-DescribeExportTasks, RDS-DescribeGlobalClusters, RDS-DescribeOrderableDBInstanceOptions, RDS-DescribePendingMaintenanceActions, RDS-DescribeValidDBInstanceModifications, Route53-GetHostedZoneCount, Route53-ListHostedZones, S3Vectors-ListIndexes, S3Vectors-ListVectors, SES-GetSendQuota, SNS-GetSMSAttributes, SNS-GetSMSSandboxAccountStatus, SNS-GetTopicAttributes, SNS-ListOriginationNumbers, SNS-ListSubscriptions, SNS-ListTopics, SQS-GetQueueAttributes, SSM-DescribeInstanceInformation, SSO-ListInstances, SageMaker-ListEndpoints, SageMaker-ListModels, SageMaker-ListTrainingJobs, ServiceQuotas-GetServiceQuota, ServiceQuotas-ListServiceQuotas, route53domains-ListDomains"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1580&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1619",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "S3-HeadObject, S3-ListObjects, S3-ListVaults"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1619&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1654",
+   "tactic": "discovery",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CloudTrail-LookupEvents"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1654&tactic=TA0007"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1021",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "14 catalogued CloudTrail events in TrailDiscover (13 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-AttachVolume, EC2-AuthorizeSecurityGroupIngress, EC2-CreateSecurityGroup, EC2-CreateSnapshot, EC2-CreateVolume, EC2-EnableSerialConsoleAccess, EC2-RunInstances, EC2InstanceConnect-SendSSHPublicKey, EC2InstanceConnect-SendSerialConsoleSSHPublicKey, ECS-ExecuteCommand, SSM-ResumeSession, SSM-SendCommand, SSM-StartSession, SignIn-SwitchRole"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1021&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1021.001",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateSecurityGroup"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1021.001&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1021.004",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-AuthorizeSecurityGroupIngress, EC2-CreateSecurityGroup, EC2InstanceConnect-SendSSHPublicKey, EC2InstanceConnect-SendSerialConsoleSSHPublicKey"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1021.004&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1021.007",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-AttachVolume, EC2-AuthorizeSecurityGroupIngress, EC2-CreateVolume"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1021.007&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1021.008",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-EnableSerialConsoleAccess"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1021.008&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1550",
+   "tactic": "lateral-movement",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "RDS-ModifyDBInstance, STS-AssumeRoleWithWebIdentity"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1550&tactic=TA0008"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1005",
+   "tactic": "collection",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateInstanceExportTask"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1005&tactic=TA0009"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1074",
+   "tactic": "collection",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateRoute, EC2-CreateTrafficMirrorFilter, EC2-CreateTrafficMirrorFilterRule, EC2-CreateTrafficMirrorSession, EC2-CreateTrafficMirrorTarget"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1074&tactic=TA0009"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1074.002",
+   "tactic": "collection",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateTrafficMirrorFilter"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1074.002&tactic=TA0009"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1119",
+   "tactic": "collection",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "CloudFront-CreateFunction, CloudFront-PublishFunction, CloudFront-UpdateDistribution, Lambda-UpdateFunctionCode20150331v2"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1119&tactic=TA0009"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1530",
+   "tactic": "collection",
+   "color": "#8ECAE6",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-Retrieve, Bedrock-RetrieveAndGenerate, BedrockAgentCore-RetrieveMemoryRecords, ECR-BatchGetImage, KMS-Decrypt, RedshiftData-ExecuteStatement, S3Vectors-GetVectors, S3Vectors-QueryVectors"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1530&tactic=TA0009"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1102",
+   "tactic": "command-and-control",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "BedrockAgentCore-CreateAgentRuntime"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1102&tactic=TA0011"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1048",
+   "tactic": "exfiltration",
+   "color": "#8ECAE6",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-AuthorizeSecurityGroupEgress, S3-GetObject, S3-PutBucketAcl, S3-PutBucketPolicy, S3Vectors-PutVectorBucketPolicy"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1048&tactic=TA0010"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1537",
+   "tactic": "exfiltration",
+   "color": "#8ECAE6",
+   "comment": "16 catalogued CloudTrail events in TrailDiscover (10 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-CreateImage, EC2-CreateInstanceExportTask, EC2-CreateSnapshot, EC2-ModifyImageAttribute, EC2-ModifySnapshotAttribute, EC2-SharedSnapshotCopyInitiated, EC2-SharedSnapshotVolumeCreated, RDS-CreateDBSecurityGroup, RDS-CreateDBSnapshot, RDS-ModifyDBSnapshotAttribute, RDS-StartExportTask, S3-JobCreated, S3-PutBucketReplication, S3-PutBucketVersioning, TransferFamily-CreateServer, TransferFamily-CreateUser"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1537&tactic=TA0010"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1567",
+   "tactic": "exfiltration",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (0 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "BedrockAgentCore-UpdateAgentRuntime"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1567&tactic=TA0010"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1485",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "16 catalogued CloudTrail events in TrailDiscover (10 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-DeleteSnapshot, EC2-DeleteVolume, EC2-DeregisterImage, EC2-TerminateInstances, KMS-ScheduleKeyDeletion, RDS-DeleteDBCluster, RDS-DeleteDBInstance, RDS-DeleteGlobalCluster, S3-DeleteBucket, S3-DeleteObject, S3-PutBucketLifecycle, S3Vectors-DeleteVectorBucket, S3Vectors-DeleteVectors, SQS-PurgeQueue, elasticfilesystem-DeleteFileSystem, elasticfilesystem-DeleteMountTarget"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1485&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1486",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "6 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "KMS-CreateKey, KMS-Encrypt, KMS-GenerateDataKey, KMS-GenerateDataKeyWithoutPlaintext, KMS-PutKeyPolicy, S3-PutBucketEncryption"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1486&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1489",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "4 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "events-DeleteRule, events-DisableRule, events-PutRule, events-RemoveTargets"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1489&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1490",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "S3-PutBucketVersioning"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1490&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1496",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "32 catalogued CloudTrail events in TrailDiscover (32 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "Bedrock-CreateFoundationModelAgreement, Bedrock-InvokeModel, Bedrock-InvokeModelWithResponseStream, Bedrock-PutFoundationModelEntitlement, Bedrock-PutUseCaseForModelAccess, CloudFormation-CreateStack, DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, EC2-CreateAutoScalingGroup, EC2-CreateDefaultVpc, EC2-CreateLaunchTemplate, EC2-RunInstances, EC2-StartInstances, ECS-CreateCluster, ECS-CreateService, ECS-RegisterTaskDefinition, Lambda-CreateFunction20150331, Lambda-Invoke, Lambda-UpdateFunctionCode20150331v2, Lightsail-CreateInstances, Route53-ChangeResourceRecordSets, Route53-CreateHostedZone, SES-CreateEmailIdentity, SES-SendEmail, SES-SendRawEmail, SES-UpdateAccountSendingEnabled, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, SES-VerifyEmailIdentity, SNS-Publish, ServiceQuotas-RequestServiceQuotaIncrease, WorkMail-CreateOrganization"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1496&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1496.004",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "7 catalogued CloudTrail events in TrailDiscover (7 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, SES-SendEmail, SES-SendRawEmail, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, WorkMail-CreateOrganization"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1496.004&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1499",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "1 catalogued CloudTrail event in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "EC2-StopInstances"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1499&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  },
+  {
+   "techniqueID": "T1565",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "S3-PutObject, S3Vectors-PutVectors"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1565&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": true
+  },
+  {
+   "techniqueID": "T1565.001",
+   "tactic": "impact",
+   "color": "#8ECAE6",
+   "comment": "2 catalogued CloudTrail events in TrailDiscover (1 seen in the wild)",
+   "enabled": true,
+   "metadata": [
+    {
+     "name": "Events",
+     "value": "S3-PutObject, S3Vectors-PutVectors"
+    }
+   ],
+   "links": [
+    {
+     "label": "Open in TrailDiscover",
+     "url": "https://traildiscover.cloud/?technique=T1565.001&tactic=TA0040"
+    }
+   ],
+   "showSubtechniques": false
+  }
+ ],
+ "gradient": {
+  "colors": [
+   "#ffffff",
+   "#8ECAE6"
+  ],
+  "minValue": 0,
+  "maxValue": 1
+ },
+ "legendItems": [
+  {
+   "label": "Catalogued in TrailDiscover",
+   "color": "#8ECAE6"
+  }
+ ],
+ "metadata": [
+  {
+   "name": "Source",
+   "value": "https://traildiscover.cloud/insights.html#techniques"
+  }
+ ],
+ "links": [
+  {
+   "label": "TrailDiscover Insights",
+   "url": "https://traildiscover.cloud/insights.html#techniques"
+  }
+ ],
+ "showTacticRowBackground": true,
+ "tacticRowBackground": "#023047",
+ "selectTechniquesAcrossTactics": false,
+ "selectSubtechniquesWithParent": false
+}

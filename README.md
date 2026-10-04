@@ -12,12 +12,15 @@ I started TrailDiscover because I often wondered if certain AWS commands had bee
 
 The easiest way to consume this information is via the website: https://traildiscover.cloud/
 
+- **[Events](https://traildiscover.cloud/)**: search and filter every event, and open one to see its details, sources and example log.
+- **[Insights](https://traildiscover.cloud/insights.html)**: the public incident sources behind the evidence, the MITRE ATT&CK techniques the events map to (also as an [ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/) layer), and the AWS services involved.
+
 ## What's in the Project
 
 Here's what you'll find in TrailDiscover:
 - **Events Folder**: This is the main folder, here each AWS service has its own folder and inside you will find a JSON file for each event, like `CloudTrail/DeleteTrail.json` or `Cognito/GetCredentialsForIdentity.json`.
 - **Docs Folder**: This folder contains a website where you can search through the events easily. You can access the website via: https://traildiscover.cloud/
-- **Tools Folder**: Contains `build.py`, a single pipeline that formats events, redacts CloudTrail logs, copies log examples to docs, and generates `events.json`, `events.csv`, and `datadog_dashboard.json`. Additional helper scripts are included for Grimoire log retrieval, Sigma rule matching, and security implication generation.
+- **Tools Folder**: Contains `build.py`, a single pipeline that formats events, redacts CloudTrail logs, copies log examples to docs, and generates the files the website uses (`events.json`, `events.csv`, `datadog_dashboard.json`, and the ATT&CK files for the Insights page). `updateAttackLookup.py` refreshes the pinned MITRE ATT&CK data in `tools/attack/`; it is only needed when moving to a new ATT&CK version. Additional helper scripts are included for Grimoire log retrieval, Sigma rule matching, and security implication generation.
 
 ### How Events Are Structured
 
@@ -41,7 +44,7 @@ PRs are welcome. Here’s how you can contribute:
 
 **Adding New Events**: You can contribute by adding new event files to the `events` folder within the respective service directory. Make sure to include all the relevant details as described in the event structure section.
 
-**Update Event Details:** Add any new findings or details that can provide a better understanding of the event's implications, use in real-world attacks, or links to researchs where the event is mentioned.
+**Update Event Details:** Add any new findings or details that can provide a better understanding of the event's implications, use in real-world attacks, or links to researchs where the event is mentioned. When the same incident report applies to several events, use the same URL and title in each, so the Insights page counts it as one source.
 
 **Updating The Web**: After adding or updating events, run `python3 build.py` from the `tools` folder to format, redact, and generate all output files. This ensures that the website stays up-to-date with the latest event information.
 

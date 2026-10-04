@@ -3,22 +3,10 @@
 
     const REPO_URL = 'https://github.com/adanalvarez/TrailDiscover';
 
-    // ATT&CK enterprise tactics in kill-chain order (only those used by cloud events).
-    const TACTICS = [
-        ['TA0001', 'Initial Access'],
-        ['TA0002', 'Execution'],
-        ['TA0003', 'Persistence'],
-        ['TA0004', 'Privilege Escalation'],
-        ['TA0005', 'Defense Evasion'],
-        ['TA0006', 'Credential Access'],
-        ['TA0007', 'Discovery'],
-        ['TA0008', 'Lateral Movement'],
-        ['TA0009', 'Collection'],
-        ['TA0010', 'Exfiltration'],
-        ['TA0011', 'Command and Control'],
-        ['TA0040', 'Impact'],
-    ];
-    const TACTIC_ORDER = new Map(TACTICS.map(([id], i) => [id, i]));
+    const {
+        TACTIC_ORDER, esc, safeUrl, extLink, domainOf, plural, splitAttack, attackUrl,
+        eventId, sourceId, sourceIdsOf, indexSources, uniqueEvents, activeTactics, serviceLabels,
+    } = window.TD;
 
     const PAGE_SIZE = 25;
 
@@ -55,6 +43,7 @@
         drawerPos: document.getElementById('drawerPos'),
         drawerClose: document.getElementById('drawerClose'),
         copyLink: document.getElementById('copyLink'),
+        scope: document.getElementById('scopeBar'),
     };
 
     const state = {
@@ -65,12 +54,23 @@
         sort: 'default',
         dir: SORT_DIRECTIONS.default,
         page: 1,
+        // Scope filters, reached from links rather than from the filter controls.
+        incident: '',       // incident source id (TD.sourceId of the URL)
+        technique: '',      // ATT&CK technique or sub-technique id, e.g. "T1098.001"
+        minSources: 0,      // at least this many incident sources
+        noSources: false,   // only events without any incident source (research links only)
     };
+    // Defaults used when a scope note's Clear button is pressed.
+    const SCOPE_DEFAULTS = { incident: '', technique: '', minSources: 0, noSources: false };
+    let unknownScope = '';  // 'incident' or 'technique' when a link named something not in the catalogue
+    let tactics = [];       // [id, name] of the tactics the catalogue uses, in ATT&CK order
+    let lastScopeHtml = '';
 
     let events = [];        // prepared events
     let byId = new Map();   // lower-cased "Service-EventName" -> event
     let services = [];      // [{ key, label }]
     let techniqueCounts = new Map();
+    let sources = new Map();  // incident source id -> { id, url, title, domain, eventIds }
     let visible = [];       // current filtered + sorted list
     let openId = null;      // id of the event shown in the drawer
     let returnFocusTo = null;
@@ -79,53 +79,9 @@
     // Helpers
     // ------------------------------------------------------------------
 
-    function esc(value) {
-        return String(value == null ? '' : value)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;');
-    }
-
-    function safeUrl(url) {
-        return /^https?:\/\//i.test(url || '') ? url : '';
-    }
-
-    function extLink(url, text, className) {
-        const href = safeUrl(url);
-        if (!href) return esc(text);
-        return `<a href="${esc(href)}" target="_blank" rel="noopener"${className ? ` class="${className}"` : ''}>${esc(text)}</a>`;
-    }
-
-    function domainOf(url) {
-        try {
-            return new URL(url).hostname.replace(/^www\./, '');
-        } catch (e) {
-            return '';
-        }
-    }
-
     // Allow long CamelCase API names to wrap between words, e.g. Authorize<wbr>Security<wbr>Group...
     function breakable(name) {
         return esc(name).replace(/([a-z0-9])([A-Z])/g, '$1<wbr>$2');
-    }
-
-    function plural(n, one) {
-        return `${n} ${n === 1 ? one : one + 's'}`;
-    }
-
-    // "TA0003 - Persistence" -> { id: "TA0003", name: "Persistence" }
-    function splitAttack(value) {
-        const m = /^\s*(TA?\d{4}(?:\.\d{3})?)\s*-\s*(.+)$/.exec(value || '');
-        return m ? { id: m[1], name: m[2].trim() } : { id: '', name: String(value || '') };
-    }
-
-    function attackUrl(id) {
-        if (/^TA\d{4}$/.test(id)) return `https://attack.mitre.org/tactics/${id}/`;
-        const m = /^(T\d{4})(?:\.(\d{3}))?$/.exec(id);
-        if (!m) return '';
-        return `https://attack.mitre.org/techniques/${m[1]}/${m[2] ? m[2] + '/' : ''}`;
     }
 
     function tokenize(query) {
@@ -146,10 +102,11 @@
         const incidents = raw.incidents || [];
         const research = raw.researchLinks || [];
         const attackText = tactics.concat(techniques, subTechniques).map(t => `${t.id} ${t.name}`).join(' ');
+        const sourceIds = sourceIdsOf(raw);
 
         return {
             raw,
-            id: `${raw.awsService}-${raw.eventName}`,
+            id: eventId(raw),
             name: raw.eventName,
             service: raw.awsService,
             serviceKey: raw.awsService.toLowerCase(),
@@ -160,6 +117,8 @@
             tactics,
             techniques,
             subTechniques,
+            techIds: [...new Set(techniques.concat(subTechniques).map(t => t.id).filter(Boolean))],
+            sourceIds,
             firstTactic: Math.min(...tactics.map(t => TACTIC_ORDER.has(t.id) ? TACTIC_ORDER.get(t.id) : 99), 99),
             cli,
             stratus: simulation.filter(s => s.type === 'stratusRedTeam' && safeUrl(s.value)).map(s => s.value),
@@ -181,21 +140,15 @@
     function buildIndexes() {
         byId = new Map(events.map(ev => [ev.id.toLowerCase(), ev]));
 
-        const serviceMap = new Map();
-        events.forEach(ev => {
-            const entry = serviceMap.get(ev.serviceKey) || { key: ev.serviceKey, spellings: new Map() };
-            entry.spellings.set(ev.service, (entry.spellings.get(ev.service) || 0) + 1);
-            serviceMap.set(ev.serviceKey, entry);
-        });
-        services = [...serviceMap.values()].map(s => ({
-            key: s.key,
-            label: [...s.spellings.entries()].sort((a, b) => b[1] - a[1])[0][0],
-        })).sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' }));
+        const raws = events.map(ev => ev.raw);
+        services = [...serviceLabels(raws)].map(([key, label]) => ({ key, label }))
+            .sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' }));
+        tactics = activeTactics(raws);
 
         techniqueCounts = new Map();
-        events.forEach(ev => ev.techniques.forEach(t => {
-            if (t.id) techniqueCounts.set(t.id, (techniqueCounts.get(t.id) || 0) + 1);
-        }));
+        events.forEach(ev => ev.techIds.forEach(id => techniqueCounts.set(id, (techniqueCounts.get(id) || 0) + 1)));
+
+        sources = indexSources(raws);
     }
 
     // ------------------------------------------------------------------
@@ -221,6 +174,10 @@
     }
 
     function matchesFacets(ev, skip) {
+        if (state.incident && !ev.sourceIds.includes(state.incident)) return false;
+        if (state.technique && !ev.techIds.includes(state.technique)) return false;
+        if (state.minSources && ev.sourceIds.length < state.minSources) return false;
+        if (state.noSources && ev.sourceIds.length) return false;
         if (skip !== 'wild' && state.wild && !ev.wild) return false;
         if (skip !== 'service' && state.service && ev.serviceKey !== state.service) return false;
         if (skip !== 'tactic' && state.tactics.size && !ev.tactics.some(t => state.tactics.has(t.id))) return false;
@@ -235,10 +192,10 @@
             case 'name': return byName;
             case 'service': return (a, b) => a.service.localeCompare(b.service, 'en', { sensitivity: 'base' }) || byName(a, b);
             case 'tactic': return (a, b) => (a.firstTactic - b.firstTactic) || byName(a, b);
-            case 'incidents': return (a, b) => (a.incidents.length - b.incidents.length) || -byName(a, b);
+            case 'incidents': return (a, b) => (a.sourceIds.length - b.sourceIds.length) || -byName(a, b);
             case 'research': return (a, b) => (a.research.length - b.research.length) || -byName(a, b);
             default: // evidence: seen in the wild, then number of incidents, then research
-                return (a, b) => (a.wild - b.wild) || (a.incidents.length - b.incidents.length) ||
+                return (a, b) => (a.wild - b.wild) || (a.sourceIds.length - b.sourceIds.length) ||
                     (a.research.length - b.research.length) || -byName(a, b);
         }
     }
@@ -309,7 +266,7 @@
             if (!matchesFacets(ev, 'tactic')) return;
             new Set(ev.tactics.map(t => t.id)).forEach(id => counts.set(id, (counts.get(id) || 0) + 1));
         });
-        el.tactics.innerHTML = TACTICS.map(([id, name]) => {
+        el.tactics.innerHTML = tactics.map(([id, name]) => {
             const n = counts.get(id) || 0;
             const active = state.tactics.has(id);
             return `<button type="button" class="chip${active ? ' is-active' : ''}" data-tactic="${id}" aria-pressed="${active}"` +
@@ -358,7 +315,7 @@
             `<td class="c-service" title="${esc(ev.service)}">${esc(ev.service)}</td>` +
             `<td class="c-tactics" title="${esc(tactics)}">${esc(tactics)}</td>` +
             `<td class="c-tech" title="${esc(techniquesTitle)}">${techniques}</td>` +
-            `<td class="c-num c-inc">${num(ev.incidents.length, 'incident')}</td>` +
+            `<td class="c-num c-inc">${num(ev.sourceIds.length, 'incident')}</td>` +
             `<td class="c-num c-res">${num(ev.research.length, 'research link')}</td>` +
             `<td class="c-wild">${ev.wild ? WILD_BADGE : '<span class="no-evidence" title="No documented in-the-wild use referenced yet">—</span>'}</td>` +
             `</tr>`;
@@ -398,7 +355,55 @@
     }
 
     function hasFilters() {
-        return !!(state.q || state.service || state.tactics.size || state.wild);
+        return !!(state.q || state.service || state.tactics.size || state.wild ||
+            state.incident || state.technique || state.minSources || state.noSources);
+    }
+
+    // Removable notes for filters that come from links (an incident source, a technique, a number of
+    // incident sources). They have no control of their own on the page.
+    function renderScope() {
+        const parts = [];
+        const clear = key => `<button type="button" class="link-button" data-clear-scope="${key}">Clear</button>`;
+        if (unknownScope) {
+            parts.push(`<p class="scope__note">That ${unknownScope === 'incident' ? 'incident source' : 'technique'} is not in the catalogue, so it is not applied.</p>`);
+        }
+        if (state.incident && sources.has(state.incident)) {
+            const src = sources.get(state.incident);
+            parts.push(`<div class="scope__item"><p>Events catalogued from ${extLink(src.url, src.title)}` +
+                ` <span class="mono scope__domain">${esc(src.domain)}</span></p>` +
+                `<p class="scope__actions"><a href="insights.html?source=${src.id}#incident-sources">See this source in Insights</a>` +
+                `${clear('incident')}</p></div>`);
+        }
+        if (state.technique) {
+            const name = techniqueName(state.technique);
+            parts.push(`<div class="scope__item"><p>Events mapped to ${extLink(attackUrl(state.technique), state.technique, 'mono')}` +
+                `${name ? ' ' + esc(name) : ''}</p><p class="scope__actions">${clear('technique')}</p></div>`);
+        }
+        if (state.minSources) {
+            const label = state.minSources === 1 ? 'Linked from at least one incident source' : `Linked from ${state.minSources} or more incident sources`;
+            parts.push(`<div class="scope__item"><p>${label}. <span class="muted">Counts reflect what curators linked, not how often attacks happen.</span></p>` +
+                `<p class="scope__actions">${clear('minSources')}</p></div>`);
+        }
+        if (state.noSources) {
+            parts.push(`<div class="scope__item"><p>No incident source linked yet: these events are backed by research links only. ` +
+                `<a href="${REPO_URL}#how-to-contribute" target="_blank" rel="noopener">Know an incident report? Contribute it</a>.</p>` +
+                `<p class="scope__actions">${clear('noSources')}</p></div>`);
+        }
+        // Only touch the live region when the notes change, so typing in search is not re-announced.
+        const html = parts.join('');
+        if (html !== lastScopeHtml) {
+            el.scope.innerHTML = html;
+            lastScopeHtml = html;
+        }
+        el.scope.hidden = parts.length === 0;
+    }
+
+    function techniqueName(id) {
+        for (const ev of events) {
+            const t = ev.techniques.concat(ev.subTechniques).find(x => x.id === id && x.name);
+            if (t) return t.name;
+        }
+        return '';
     }
 
     function render() {
@@ -420,6 +425,7 @@
         el.empty.hidden = list.length > 0;
         el.tableCard.hidden = list.length === 0;
         el.clear.hidden = !hasFilters();
+        renderScope();
 
         const total = events.length;
         el.count.innerHTML = list.length === total
@@ -432,6 +438,7 @@
     // Filters, search and sort changes start again from the first page.
     function refresh() {
         state.page = 1;
+        unknownScope = '';
         render();
         revealResults();
     }
@@ -447,6 +454,7 @@
         const wild = events.filter(ev => ev.wild).length;
         el.stats.innerHTML =
             `${events.length} events · ${services.length} AWS services · ` +
+            `<a href="insights.html#incident-sources">${sources.size} incident sources</a> · ` +
             `<span class="stats__wild"><span class="wild-dot" aria-hidden="true"></span>${wild} seen in the wild</span>` +
             ` <span class="stats__def">(documented attacker use in public incident reports)</span>`;
     }
@@ -466,6 +474,10 @@
         }
         if (state.tactics.size) p.set('tactic', [...state.tactics].join(','));
         if (state.wild) p.set('wild', '1');
+        if (state.incident) p.set('incident', state.incident);
+        if (state.technique) p.set('technique', state.technique);
+        if (state.minSources) p.set('minsources', state.minSources);
+        if (state.noSources) p.set('nosources', '1');
         if (state.sort !== 'default') p.set('sort', state.sort);
         if (state.dir !== SORT_DIRECTIONS[state.sort]) p.set('order', state.dir === 1 ? 'asc' : 'desc');
         if (state.page > 1) p.set('page', state.page);
@@ -499,6 +511,13 @@
         const order = p.get('order');
         state.dir = order === 'asc' ? 1 : order === 'desc' ? -1 : SORT_DIRECTIONS[state.sort];
         state.page = Math.max(1, parseInt(p.get('page'), 10) || 1);
+        const incident = (p.get('incident') || '').toLowerCase();
+        const technique = (p.get('technique') || '').toUpperCase();
+        state.incident = sources.has(incident) ? incident : '';
+        state.technique = techniqueCounts.has(technique) ? technique : '';
+        unknownScope = incident && !state.incident ? 'incident' : technique && !state.technique ? 'technique' : '';
+        state.minSources = Math.max(0, parseInt(p.get('minsources'), 10) || 0);
+        state.noSources = p.get('nosources') === '1';
         el.search.value = state.q;
     }
 
@@ -524,13 +543,25 @@
         return `<section class="panel-section"${extra || ''}><h3 class="panel-section__title">${title}</h3>${body}</section>`;
     }
 
-    function linkList(items) {
+    // `ev` is passed for incident links, which get a line pointing at the other events
+    // catalogued from the same source.
+    function linkList(items, ev) {
         if (!items.length) return '';
         return `<ol class="source-list">` + items.map(item => {
             const domain = domainOf(item.link);
             return `<li>${extLink(item.link, item.description || item.link)}` +
-                (domain ? ` <span class="source-list__domain mono">${esc(domain)}</span>` : '') + `</li>`;
+                (domain ? ` <span class="source-list__domain mono">${esc(domain)}</span>` : '') +
+                (ev ? sourceLine(item, ev) : '') + `</li>`;
         }).join('') + `</ol>`;
+    }
+
+    function sourceLine(item, ev) {
+        const src = safeUrl(item.link) && sources.get(sourceId(item.link));
+        if (!src || src.eventIds.length < 2) return '';
+        const which = `<span class="visually-hidden"> (${esc(src.title)})</span>`;
+        return `<span class="source-line"><a href="./?incident=${src.id}" data-pivot-incident="${src.id}">` +
+            `${src.eventIds.length} events catalogued from this source${which}</a> · ` +
+            `<a href="./?incident=${src.id}&amp;sort=tactic#${esc(ev.id)}" data-walk-incident="${src.id}">Walk through them${which}</a></span>`;
     }
 
     function attackRows(label, items, withPivot) {
@@ -541,7 +572,7 @@
                 const id = t.id ? (url ? extLink(url, t.id, 'mono attack-id') : `<span class="mono attack-id">${esc(t.id)}</span>`) : '';
                 const count = withPivot && t.id ? techniqueCounts.get(t.id) || 0 : 0;
                 const pivot = count > 1
-                    ? ` <button type="button" class="link-button pivot" data-pivot-q="${esc(t.id)}">${count} events</button>`
+                    ? ` <button type="button" class="link-button pivot" data-pivot-technique="${esc(t.id)}">${count} events</button>`
                     : '';
                 return `<li>${id} <span>${esc(t.name)}</span>${pivot}</li>`;
             }).join('') + `</ul></div>`;
@@ -594,14 +625,17 @@
     }
 
     function evidenceSummary(ev) {
-        const inc = ev.incidents.length;
+        const inc = ev.sourceIds.length;
+        const sourcesLink = `<a href="#sec-incidents" data-scroll="sec-incidents">${inc} of the ${sources.size} incident sources</a> TrailDiscover links`;
+        const more = inc >= 2 && events.some(e => e.sourceIds.length > inc)
+            ? ` <button type="button" class="link-button" data-pivot-minsources="${inc + 1}">Events linked from more sources</button>`
+            : '';
         if (ev.wild) {
-            return `<p class="evidence">${WILD_BADGE}<span>Documented attacker use in ` +
-                `<a href="#sec-incidents" data-scroll="sec-incidents">${plural(inc, 'incident report')}</a>.</span></p>`;
+            return `<p class="evidence">${WILD_BADGE}<span>` +
+                (inc ? `Documented attacker use in ${sourcesLink}.` : 'No incident source linked yet.') + `${more}</span></p>`;
         }
         return `<p class="evidence"><span class="no-evidence-badge">Unconfirmed</span><span>No documented in-the-wild use referenced yet` +
-            (inc ? `; mentioned in <a href="#sec-incidents" data-scroll="sec-incidents">${plural(inc, 'incident report')}</a>` : '') +
-            `.</span></p>`;
+            (inc ? `; mentioned in ${sourcesLink}` : '') + `.${more}</span></p>`;
     }
 
     function renderDrawer(ev) {
@@ -630,10 +664,10 @@
         html.push(section('MITRE ATT&amp;CK mapping',
             attackRows('Tactics', ev.tactics, false) +
             attackRows('Techniques', ev.techniques, true) +
-            attackRows('Sub-techniques', ev.subTechniques, false)));
+            attackRows('Sub-techniques', ev.subTechniques, true)));
 
-        html.push(section(`Incidents <span class="count">${ev.incidents.length}</span>`,
-            ev.incidents.length ? linkList(ev.incidents) : `<p class="muted">No incident reports referenced yet.</p>`,
+        html.push(section(`Incident sources <span class="count">${ev.incidents.length}</span>`,
+            ev.incidents.length ? linkList(ev.incidents, ev) : `<p class="muted">No incident sources referenced yet.</p>`,
             ' id="sec-incidents"'));
         html.push(section(`Research <span class="count">${ev.research.length}</span>`,
             ev.research.length ? linkList(ev.research) : `<p class="muted">No research referenced yet.</p>`));
@@ -652,12 +686,15 @@
         el.drawerBody.scrollTop = 0;
         el.drawer.dataset.cli = ev.cli;
 
-        const index = visible.findIndex(v => v.id === ev.id);
+        updateDrawerNav();
+        loadLog(ev);
+    }
+
+    function updateDrawerNav() {
+        const index = visible.findIndex(v => v.id === openId);
         el.drawerPrev.disabled = index <= 0;
         el.drawerNext.disabled = index < 0 || index >= visible.length - 1;
         el.drawerPos.textContent = index >= 0 ? `${index + 1} of ${visible.length}` : '';
-
-        loadLog(ev);
     }
 
     // Logs are copied to docs/logExamples as "<EventName>.json.cloudtrail"; some older copies
@@ -763,7 +800,7 @@
         returnFocusTo = trigger || null;
         if (location.hash.replace(/^#/, '').toLowerCase() !== id.toLowerCase()) {
             writeUrl(); // the list's entry must hold the current filters before we push
-            history.pushState({ traildiscover: id }, '', location.pathname + location.search + '#' + id);
+            history.pushState({ traildiscover: id, list: withoutPage(queryString()) }, '', location.pathname + location.search + '#' + id);
         }
         showEvent(id);
     }
@@ -784,14 +821,47 @@
         returnFocusTo = null;
     }
 
-    // If we pushed the drawer's history entry, go back to the list's entry; otherwise (deep link)
-    // just drop the hash.
+    // If we pushed the drawer's history entry and the list is still the one it was opened from,
+    // go back to the list's entry. Otherwise (deep link, or the list was scoped from inside the
+    // drawer) drop the hash and keep the current list; Back then returns to the earlier list.
     function closeEvent() {
         hideDrawer();
-        if (history.state && history.state.traildiscover) {
+        const opened = history.state;
+        if (opened && opened.traildiscover && opened.list === withoutPage(queryString())) {
             history.back();
         } else {
-            history.replaceState(null, '', location.pathname + location.search);
+            clearTimeout(urlTimer);
+            history.replaceState(null, '', location.pathname + queryString());
+        }
+    }
+
+    // "Walk through them": scope the list to one incident source in ATT&CK order and keep the
+    // drawer open on the current event, so Prev/Next and j/k step through that source.
+    function walkSource(id) {
+        const listBefore = withoutPage(queryString());
+        const urlBefore = location.pathname + queryString();
+        Object.assign(state, {
+            q: '', service: '', tactics: new Set(), wild: false, technique: '', minSources: 0, noSources: false,
+            incident: id, sort: 'tactic', dir: SORT_DIRECTIONS.tactic, page: 1,
+        });
+        unknownScope = '';
+        el.search.value = '';
+        render();
+        const index = visible.findIndex(v => v.id === openId);
+        if (index >= 0 && Math.floor(index / PAGE_SIZE) + 1 !== state.page) {
+            state.page = Math.floor(index / PAGE_SIZE) + 1;
+            render();
+        }
+        markOpenRow();
+        updateDrawerNav();
+        clearTimeout(urlTimer);
+        const scoped = location.pathname + queryString() + location.hash;
+        if (history.state && history.state.traildiscover) {
+            history.replaceState(history.state, '', scoped);
+        } else {
+            // Opened from a link: keep the earlier list as its own entry so Back returns to it.
+            history.replaceState(null, '', urlBefore);
+            history.pushState({ traildiscover: openId, list: listBefore }, '', scoped);
         }
     }
 
@@ -820,6 +890,7 @@
             clearTimeout(urlTimer);
             readUrl();
             render();
+            if (el.drawer.open) updateDrawerNav();
         } else if (location.search !== queryString()) {
             updateUrl();
         }
@@ -838,6 +909,15 @@
         state.service = filter.service || '';
         state.tactics = new Set(filter.tactic ? [filter.tactic] : []);
         state.wild = false;
+        state.incident = filter.incident || '';
+        state.technique = filter.technique || '';
+        state.minSources = filter.minSources || 0;
+        state.noSources = false;
+        if (filter.sort) {
+            state.sort = filter.sort;
+            state.dir = SORT_DIRECTIONS[filter.sort];
+        }
+        unknownScope = '';
         state.page = 1;
         el.search.value = state.q;
         returnFocusTo = el.count;
@@ -929,6 +1009,10 @@
             state.service = '';
             state.tactics.clear();
             state.wild = false;
+            state.incident = '';
+            state.technique = '';
+            state.minSources = 0;
+            state.noSources = false;
             el.search.value = '';
             refresh();
             el.search.focus();
@@ -994,8 +1078,30 @@
             if (svc) return pivot({ service: svc.dataset.pivotService });
             const tac = e.target.closest('[data-pivot-tactic]');
             if (tac) return pivot({ tactic: tac.dataset.pivotTactic });
-            const q = e.target.closest('[data-pivot-q]');
-            if (q) return pivot({ q: q.dataset.pivotQ });
+            const tech = e.target.closest('[data-pivot-technique]');
+            if (tech) return pivot({ technique: tech.dataset.pivotTechnique });
+            const more = e.target.closest('[data-pivot-minsources]');
+            if (more) return pivot({ minSources: Number(more.dataset.pivotMinsources), sort: 'incidents' });
+            // Source links are real links: let modified clicks open a new tab.
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+            const inc = e.target.closest('[data-pivot-incident]');
+            if (inc) {
+                e.preventDefault();
+                return pivot({ incident: inc.dataset.pivotIncident });
+            }
+            const walk = e.target.closest('[data-walk-incident]');
+            if (walk) {
+                e.preventDefault();
+                return walkSource(walk.dataset.walkIncident);
+            }
+        });
+
+        el.scope.addEventListener('click', e => {
+            const btn = e.target.closest('[data-clear-scope]');
+            if (!btn) return;
+            state[btn.dataset.clearScope] = SCOPE_DEFAULTS[btn.dataset.clearScope];
+            refresh();
+            el.count.focus();
         });
 
         document.addEventListener('keydown', e => {
@@ -1040,9 +1146,7 @@
     fetch('events.json')
         .then(r => r.json())
         .then(data => {
-            // Skip duplicate entries (a stale events.json can list an event twice).
-            const seen = new Set();
-            events = data.map(prepare).filter(ev => !seen.has(ev.id) && seen.add(ev.id));
+            events = uniqueEvents(data).map(prepare);
             buildIndexes();
             updateStats();
             readUrl();
