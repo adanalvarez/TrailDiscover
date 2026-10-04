@@ -1,0 +1,64 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess/TrailDiscover",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess"
+                },
+                "attributes": {
+                    "creationDate": "2026-10-03T12:17:59Z",
+                    "mfaAuthenticated": "false"
+                }
+            },
+            "onBehalfOf": {
+                "userId": "e18bb5b0-2061-70ca-a319-0f111bfc93ce",
+                "identityStoreArn": "arn:aws:identitystore::111111111111:identitystore/d-9a670c783a"
+            }
+        },
+        "eventTime": "2026-10-03T12:29:40Z",
+        "eventSource": "bedrock-agentcore.amazonaws.com",
+        "eventName": "UpdateAgentRuntime",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython exec-env/TrailDiscover-Capture m/b,Z,n,E cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#bedrock-agentcore-control.update-agent-runtime",
+        "errorCode": "AccessDenied",
+        "requestParameters": {
+            "networkConfiguration": {
+                "networkMode": "PUBLIC"
+            },
+            "agentRuntimeArtifact": {
+                "containerConfiguration": {
+                    "containerUri": "111111111111.dkr.ecr.us-east-1.amazonaws.com/td:latest"
+                }
+            },
+            "roleArn": "arn:aws:iam::111111111111:role/TD",
+            "clientToken": "d384c665-d67d-454c-b8f2-7bcdfc04f7f8",
+            "agentRuntimeId": "nonexistent"
+        },
+        "responseElements": {
+            "Access-Control-Expose-Headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-trace-id",
+            "message": "User: arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess/TrailDiscover is not authorized to perform: bedrock-agentcore:UpdateAgentRuntime"
+        },
+        "requestID": "241e57a1-3d29-45fd-b206-6fc0f0e38e8a",
+        "eventID": "59eff589-b1c5-4e78-8bd6-b6a3ec598248",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256"
+        }
+    }
+]

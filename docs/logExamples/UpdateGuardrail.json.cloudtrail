@@ -1,0 +1,47 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "AssumedRole",
+            "principalId": "AROA****************:User",
+            "arn": "arn:aws:sts::111111111111:assumed-role/AWSReservedSSO_AdministratorAccess/TrailDiscover",
+            "accountId": "111111111111",
+            "accessKeyId": "AKIA****************",
+            "sessionContext": {
+                "sessionIssuer": {
+                    "type": "Role",
+                    "principalId": "AROA****************:User",
+                    "arn": "arn:aws:iam::111111111111:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AdministratorAccess",
+                    "accountId": "111111111111",
+                    "userName": "AWSReservedSSO_AdministratorAccess"
+                },
+                "attributes": {
+                    "creationDate": "2026-10-03T12:17:59Z",
+                    "mfaAuthenticated": "false"
+                }
+            }
+        },
+        "eventTime": "2026-10-03T12:27:34Z",
+        "eventSource": "bedrock.amazonaws.com",
+        "eventName": "UpdateGuardrail",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython exec-env/TrailDiscover-Capture m/n,Z,b,E cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#bedrock.update-guardrail",
+        "errorCode": "ValidationException",
+        "errorMessage": "1 validation error detected: Value 'TrailDiscoverNonexistent' at 'guardrailIdentifier' failed to satisfy constraint: Member must satisfy regular expression pattern: (([a-z0-9]+)|(arn:aws(-[^:]+)?:bedrock:[a-z0-9-]{1,20}:[0-9]{12}:guardrail/[a-z0-9]+))",
+        "requestParameters": null,
+        "responseElements": null,
+        "requestID": "de3e1699-7527-4e6d-8b56-b1c23a3aa6fa",
+        "eventID": "6a914673-e693-408b-878d-487b04639c59",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "bedrock.us-east-1.amazonaws.com"
+        }
+    }
+]
