@@ -30,10 +30,11 @@
                 <p class="tagline">CloudTrail events mapped to real-world incidents, research and MITRE ATT&amp;CK.</p>
                 <p class="stats" id="stats">&nbsp;</p>
             </div>
-            <nav class="site-nav" aria-label="Project">
+            <nav class="site-nav" aria-label="Site">
+                <a href="./" aria-current="page">Events</a>
+                <a href="insights.html">Insights</a>
                 <a href="https://github.com/adanalvarez/TrailDiscover">GitHub</a>
-                <a href="https://github.com/adanalvarez/TrailDiscover#mcp-server">MCP server</a>
-                <span class="site-nav__data">Data: <a href="events.json">JSON</a> <a href="events.csv">CSV</a></span>
+                <span class="site-nav__data">Data: <a href="events.json">JSON</a> <a href="events.csv">CSV</a> <a href="attack-layer.json" title="ATT&amp;CK Navigator layer">ATT&amp;CK layer</a></span>
             </nav>
         </div>
     </header>
@@ -69,6 +70,7 @@
                 <div class="tactics" role="group" aria-labelledby="tacticsLabel">
                     <span class="tactics__label" id="tacticsLabel">ATT&amp;CK tactic</span>
                     <div class="tactics__list" id="tacticFilter"></div>
+                    <a class="tactics__more" href="insights.html#techniques">Techniques by tactic</a>
                 </div>
             </div>
         </section>
@@ -92,6 +94,8 @@
                     </select>
                 </div>
             </div>
+
+            <div class="scope" id="scopeBar" aria-live="polite" hidden></div>
 
             <div class="table-card" id="tableCard" hidden>
                 <table class="events" id="eventsTable">
@@ -153,6 +157,7 @@
         <div class="drawer__body" id="drawerBody"></div>
     </dialog>
 
+    <script src="shared.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Where TrailDiscover's incident evidence comes from, which ATT&amp;CK techniques the catalogued CloudTrail events map to, and which AWS services they belong to.">
+    <meta name="author" content="Adan Alvarez">
+    <meta property="og:title" content="TrailDiscover Insights">
+    <meta property="og:description" content="Incident sources, ATT&amp;CK techniques and AWS services behind the TrailDiscover catalogue">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#8ECAE6">
+    <title>Insights - TrailDiscover</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <h1 class="brand">
+                <a href="./">
+                    <img src="logo.png" alt="TrailDiscover" class="brand__logo" width="509" height="210" loading="eager">
+                </a>
+            </h1>
+            <div class="site-header__text">
+                <p class="tagline">Insights: where the evidence comes from and how it maps to ATT&amp;CK.</p>
+                <p class="stats" id="stats">&nbsp;</p>
+            </div>
+            <nav class="site-nav" aria-label="Site">
+                <a href="./">Events</a>
+                <a href="insights.html" aria-current="page">Insights</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover">GitHub</a>
+                <span class="site-nav__data">Data: <a href="events.json">JSON</a> <a href="events.csv">CSV</a> <a href="attack-layer.json" title="ATT&amp;CK Navigator layer">ATT&amp;CK layer</a></span>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap insights">
+        <noscript>
+            <p class="noscript">This page needs JavaScript. The data is also available as <a href="events.json">JSON</a> and <a href="events.csv">CSV</a>.</p>
+        </noscript>
+
+        <section class="ins-card ins-intro" aria-labelledby="intro-title">
+            <h2 id="intro-title" class="ins-title">What the catalogue contains</h2>
+            <p class="ins-lede" id="introLede">Loading the catalogue…</p>
+            <div class="ins-intro__grid">
+                <div class="ins-howto" id="how-to-read">
+                    <h3>How to read these counts</h3>
+                    <p>They describe curation: which public documents were read and which CloudTrail API calls were taken from them. They do not say how often attackers use a call, how risky it is, or how well it can be detected. The data has no dates, so nothing here is a trend. AI-suggested ATT&amp;CK techniques are never used.</p>
+                    <p>Every number opens exactly the events behind it in the event table.</p>
+                </div>
+                <div class="ins-start">
+                    <h3>Start here</h3>
+                    <ul id="startHere"></ul>
+                </div>
+            </div>
+            <nav class="ins-toc" aria-label="Sections on this page">
+                <a href="#incident-sources">Incident sources</a>
+                <a href="#techniques">ATT&amp;CK techniques</a>
+                <a href="#services">AWS services</a>
+            </nav>
+        </section>
+
+        <section class="ins-card" id="incident-sources" aria-labelledby="src-title">
+            <div class="ins-head">
+                <h2 id="src-title" class="ins-title">Incident sources</h2>
+                <p class="ins-sub" id="srcLede"></p>
+            </div>
+            <div class="ins-controls">
+                <label for="srcFilter" class="visually-hidden">Filter incident sources</label>
+                <input id="srcFilter" class="ins-filter" type="search" autocomplete="off" spellcheck="false"
+                       placeholder="Filter by title, publisher, service or event">
+                <p class="ins-count" id="srcCount" aria-live="polite" tabindex="-1"></p>
+            </div>
+            <p class="ins-filter-note" id="srcServiceNote" hidden></p>
+            <p class="ins-legend"><span class="ins-swatch" aria-hidden="true">3</span> events from this source mapped to that tactic. Click a column header to sort.</p>
+            <div class="ins-scroll">
+                <table class="strip-table" id="srcTable">
+                    <caption class="visually-hidden">Incident sources with two or more catalogued events, and the number of events per ATT&amp;CK tactic</caption>
+                </table>
+            </div>
+            <div class="ins-more"><button type="button" class="button button--ghost" id="srcMore" aria-controls="srcTable"></button></div>
+            <details class="ins-singles" id="singles">
+                <summary id="singleSummary">Sources with a single catalogued event</summary>
+                <ul id="singleList"></ul>
+            </details>
+            <div class="ins-caveat">
+                <p>Each row is a document TrailDiscover cites as incident evidence, not an intrusion. Rows include single-incident write-ups, multi-case roundups, conference talks, legal filings, news and tweets, and one intrusion can appear in several rows.</p>
+                <p>A row lists only the calls curators catalogued from that document, so its size reflects how many calls the document names and how deeply it was read, not severity. Tactics use TrailDiscover's per-event mapping: an event mapped to two or three tactics counts in each, so a row's cells can add up to more than its event count. Columns follow ATT&amp;CK order, not time.</p>
+            </div>
+        </section>
+
+        <section class="ins-card" id="techniques" aria-labelledby="tech-title">
+            <div class="ins-head">
+                <h2 id="tech-title" class="ins-title">ATT&amp;CK techniques in the catalogue</h2>
+                <p class="ins-sub" id="techLede"></p>
+            </div>
+            <div class="ins-actions">
+                <a class="button" id="navigatorLink" href="https://mitre-attack.github.io/attack-navigator/" target="_blank" rel="noopener">Open in ATT&amp;CK Navigator</a>
+                <a class="button button--ghost" href="attack-layer.json" download>Download the layer</a>
+                <p class="ins-note">A presence-only layer: every technique a catalogued call maps to, without scores.</p>
+            </div>
+            <p class="ins-note" id="techMode"></p>
+            <div class="tech-index" id="techIndex"><p class="muted">Loading the ATT&amp;CK index…</p></div>
+            <div class="ins-more"><button type="button" class="button button--ghost" id="techMore" aria-controls="techIndex" hidden></button></div>
+            <div class="ins-caveat">
+                <p>Each row counts the CloudTrail API calls TrailDiscover has catalogued and mapped to the technique under that tactic, placed only where ATT&amp;CK itself lists the technique. That is documented API surface, not how often attackers use a technique, how risky it is, or how well it can be detected. Discovery is large because every Describe or List call is its own entry, and a call mapped to several techniques or tactics appears in each.</p>
+                <p id="techVersionNote"></p>
+            </div>
+        </section>
+
+        <section class="ins-card" id="services" aria-labelledby="svc-title">
+            <div class="ins-head">
+                <h2 id="svc-title" class="ins-title">AWS services by ATT&amp;CK tactic</h2>
+                <p class="ins-sub" id="svcLede"></p>
+            </div>
+            <p class="ins-legend"><span class="ins-swatch" aria-hidden="true">3</span> catalogued events of this service mapped to that tactic. Click a column header to sort.</p>
+            <div class="ins-scroll">
+                <table class="strip-table" id="svcTable">
+                    <caption class="visually-hidden">AWS services with catalogued events, and the number of events per ATT&amp;CK tactic</caption>
+                </table>
+            </div>
+            <div class="ins-more"><button type="button" class="button button--ghost" id="svcMore" aria-controls="svcTable"></button></div>
+            <div class="ins-caveat">
+                <p>Counts are events catalogued in TrailDiscover, not how often an API is abused or how risky a service is. A blank cell means nothing is catalogued for that pair yet. "Incident sources" counts the distinct public documents linked to any of the service's events; some are roundups or talks, and several can describe the same actor. "In the wild" is a curator judgement.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <p>TrailDiscover is an open-source project. ATT&amp;CK mappings are a best-effort interpretation of how each API can be used; check the linked sources.</p>
+            <p id="dataStamp"></p>
+            <p>
+                <a href="https://github.com/adanalvarez/TrailDiscover">Edit on GitHub</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover#how-to-contribute">How to contribute</a>
+                <a href="https://github.com/adanalvarez/TrailDiscover#mcp-server">MCP server</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="insights.js"></script>
+</body>
+</html>

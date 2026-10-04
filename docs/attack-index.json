@@ -1,0 +1,1578 @@
+{
+ "attackVersion": "18.1",
+ "dataVersion": "eea1f3dcdf59",
+ "tactics": [
+  {
+   "id": "TA0043",
+   "name": "Reconnaissance",
+   "shortname": "reconnaissance"
+  },
+  {
+   "id": "TA0042",
+   "name": "Resource Development",
+   "shortname": "resource-development"
+  },
+  {
+   "id": "TA0001",
+   "name": "Initial Access",
+   "shortname": "initial-access"
+  },
+  {
+   "id": "TA0002",
+   "name": "Execution",
+   "shortname": "execution"
+  },
+  {
+   "id": "TA0003",
+   "name": "Persistence",
+   "shortname": "persistence"
+  },
+  {
+   "id": "TA0004",
+   "name": "Privilege Escalation",
+   "shortname": "privilege-escalation"
+  },
+  {
+   "id": "TA0005",
+   "name": "Defense Evasion",
+   "shortname": "defense-evasion"
+  },
+  {
+   "id": "TA0006",
+   "name": "Credential Access",
+   "shortname": "credential-access"
+  },
+  {
+   "id": "TA0007",
+   "name": "Discovery",
+   "shortname": "discovery"
+  },
+  {
+   "id": "TA0008",
+   "name": "Lateral Movement",
+   "shortname": "lateral-movement"
+  },
+  {
+   "id": "TA0009",
+   "name": "Collection",
+   "shortname": "collection"
+  },
+  {
+   "id": "TA0011",
+   "name": "Command and Control",
+   "shortname": "command-and-control"
+  },
+  {
+   "id": "TA0010",
+   "name": "Exfiltration",
+   "shortname": "exfiltration"
+  },
+  {
+   "id": "TA0040",
+   "name": "Impact",
+   "shortname": "impact"
+  }
+ ],
+ "techniques": {
+  "T1005": {
+   "name": "Data from Local System",
+   "parent": null
+  },
+  "T1021": {
+   "name": "Remote Services",
+   "parent": null
+  },
+  "T1021.001": {
+   "name": "Remote Desktop Protocol",
+   "parent": "T1021"
+  },
+  "T1021.004": {
+   "name": "SSH",
+   "parent": "T1021"
+  },
+  "T1021.007": {
+   "name": "Cloud Services",
+   "parent": "T1021"
+  },
+  "T1021.008": {
+   "name": "Direct Cloud VM Connections",
+   "parent": "T1021"
+  },
+  "T1040": {
+   "name": "Network Sniffing",
+   "parent": null
+  },
+  "T1048": {
+   "name": "Exfiltration Over Alternative Protocol",
+   "parent": null
+  },
+  "T1059": {
+   "name": "Command and Scripting Interpreter",
+   "parent": null
+  },
+  "T1059.009": {
+   "name": "Cloud API",
+   "parent": "T1059"
+  },
+  "T1069": {
+   "name": "Permission Groups Discovery",
+   "parent": null
+  },
+  "T1070": {
+   "name": "Indicator Removal",
+   "parent": null
+  },
+  "T1070.004": {
+   "name": "File Deletion",
+   "parent": "T1070"
+  },
+  "T1074": {
+   "name": "Data Staged",
+   "parent": null
+  },
+  "T1074.002": {
+   "name": "Remote Data Staging",
+   "parent": "T1074"
+  },
+  "T1078": {
+   "name": "Valid Accounts",
+   "parent": null
+  },
+  "T1078.001": {
+   "name": "Default Accounts",
+   "parent": "T1078"
+  },
+  "T1078.002": {
+   "name": "Domain Accounts",
+   "parent": "T1078"
+  },
+  "T1078.003": {
+   "name": "Local Accounts",
+   "parent": "T1078"
+  },
+  "T1078.004": {
+   "name": "Cloud Accounts",
+   "parent": "T1078"
+  },
+  "T1087": {
+   "name": "Account Discovery",
+   "parent": null
+  },
+  "T1087.004": {
+   "name": "Cloud Account",
+   "parent": "T1087"
+  },
+  "T1098": {
+   "name": "Account Manipulation",
+   "parent": null
+  },
+  "T1098.001": {
+   "name": "Additional Cloud Credentials",
+   "parent": "T1098"
+  },
+  "T1098.003": {
+   "name": "Additional Cloud Roles",
+   "parent": "T1098"
+  },
+  "T1102": {
+   "name": "Web Service",
+   "parent": null
+  },
+  "T1119": {
+   "name": "Automated Collection",
+   "parent": null
+  },
+  "T1133": {
+   "name": "External Remote Services",
+   "parent": null
+  },
+  "T1136": {
+   "name": "Create Account",
+   "parent": null
+  },
+  "T1136.001": {
+   "name": "Local Account",
+   "parent": "T1136"
+  },
+  "T1136.003": {
+   "name": "Cloud Account",
+   "parent": "T1136"
+  },
+  "T1199": {
+   "name": "Trusted Relationship",
+   "parent": null
+  },
+  "T1485": {
+   "name": "Data Destruction",
+   "parent": null
+  },
+  "T1486": {
+   "name": "Data Encrypted for Impact",
+   "parent": null
+  },
+  "T1489": {
+   "name": "Service Stop",
+   "parent": null
+  },
+  "T1490": {
+   "name": "Inhibit System Recovery",
+   "parent": null
+  },
+  "T1496": {
+   "name": "Resource Hijacking",
+   "parent": null
+  },
+  "T1496.004": {
+   "name": "Cloud Service Hijacking",
+   "parent": "T1496"
+  },
+  "T1499": {
+   "name": "Endpoint Denial of Service",
+   "parent": null
+  },
+  "T1526": {
+   "name": "Cloud Service Discovery",
+   "parent": null
+  },
+  "T1528": {
+   "name": "Steal Application Access Token",
+   "parent": null
+  },
+  "T1530": {
+   "name": "Data from Cloud Storage",
+   "parent": null
+  },
+  "T1537": {
+   "name": "Transfer Data to Cloud Account",
+   "parent": null
+  },
+  "T1546": {
+   "name": "Event Triggered Execution",
+   "parent": null
+  },
+  "T1548": {
+   "name": "Abuse Elevation Control Mechanism",
+   "parent": null
+  },
+  "T1548.005": {
+   "name": "Temporary Elevated Cloud Access",
+   "parent": "T1548"
+  },
+  "T1550": {
+   "name": "Use Alternate Authentication Material",
+   "parent": null
+  },
+  "T1552": {
+   "name": "Unsecured Credentials",
+   "parent": null
+  },
+  "T1555": {
+   "name": "Credentials from Password Stores",
+   "parent": null
+  },
+  "T1555.006": {
+   "name": "Cloud Secrets Management Stores",
+   "parent": "T1555"
+  },
+  "T1556": {
+   "name": "Modify Authentication Process",
+   "parent": null
+  },
+  "T1562": {
+   "name": "Impair Defenses",
+   "parent": null
+  },
+  "T1562.001": {
+   "name": "Disable or Modify Tools",
+   "parent": "T1562"
+  },
+  "T1562.004": {
+   "name": "Disable or Modify System Firewall",
+   "parent": "T1562"
+  },
+  "T1562.006": {
+   "name": "Indicator Blocking",
+   "parent": "T1562"
+  },
+  "T1562.007": {
+   "name": "Disable or Modify Cloud Firewall",
+   "parent": "T1562"
+  },
+  "T1562.008": {
+   "name": "Disable or Modify Cloud Logs",
+   "parent": "T1562"
+  },
+  "T1565": {
+   "name": "Data Manipulation",
+   "parent": null
+  },
+  "T1565.001": {
+   "name": "Stored Data Manipulation",
+   "parent": "T1565"
+  },
+  "T1567": {
+   "name": "Exfiltration Over Web Service",
+   "parent": null
+  },
+  "T1578": {
+   "name": "Modify Cloud Compute Infrastructure",
+   "parent": null
+  },
+  "T1578.002": {
+   "name": "Create Cloud Instance",
+   "parent": "T1578"
+  },
+  "T1578.003": {
+   "name": "Delete Cloud Instance",
+   "parent": "T1578"
+  },
+  "T1578.005": {
+   "name": "Modify Cloud Compute Configurations",
+   "parent": "T1578"
+  },
+  "T1580": {
+   "name": "Cloud Infrastructure Discovery",
+   "parent": null
+  },
+  "T1583": {
+   "name": "Acquire Infrastructure",
+   "parent": null
+  },
+  "T1583.001": {
+   "name": "Domains",
+   "parent": "T1583"
+  },
+  "T1609": {
+   "name": "Container Administration Command",
+   "parent": null
+  },
+  "T1619": {
+   "name": "Cloud Storage Object Discovery",
+   "parent": null
+  },
+  "T1648": {
+   "name": "Serverless Execution",
+   "parent": null
+  },
+  "T1651": {
+   "name": "Cloud Administration Command",
+   "parent": null
+  },
+  "T1654": {
+   "name": "Log Enumeration",
+   "parent": null
+  },
+  "T1666": {
+   "name": "Modify Cloud Resource Hierarchy",
+   "parent": null
+  }
+ },
+ "cells": [
+  {
+   "tactic": "TA0042",
+   "technique": "T1583",
+   "events": [
+    "route53domains-RegisterDomain"
+   ]
+  },
+  {
+   "tactic": "TA0042",
+   "technique": "T1583.001",
+   "events": [
+    "route53domains-RegisterDomain"
+   ]
+  },
+  {
+   "tactic": "TA0001",
+   "technique": "T1078",
+   "events": [
+    "STS-AssumeRole",
+    "SignIn-AuthorizeOAuth2Access",
+    "SignIn-ConsoleLogin",
+    "SignIn-CreateOAuth2Token",
+    "SignIn-GetSigninToken",
+    "SignIn-PasswordRecoveryRequested"
+   ]
+  },
+  {
+   "tactic": "TA0001",
+   "technique": "T1078.004",
+   "events": [
+    "STS-AssumeRole",
+    "SignIn-AuthorizeOAuth2Access",
+    "SignIn-ConsoleLogin",
+    "SignIn-CreateOAuth2Token",
+    "SignIn-GetSigninToken"
+   ]
+  },
+  {
+   "tactic": "TA0001",
+   "technique": "T1133",
+   "events": [
+    "Lambda-CreateFunctionUrlConfig"
+   ]
+  },
+  {
+   "tactic": "TA0001",
+   "technique": "T1199",
+   "events": [
+    "STS-AssumeRole",
+    "STS-AssumeRoleWithSAML",
+    "STS-AssumeRoleWithWebIdentity",
+    "STS-GetSessionToken"
+   ]
+  },
+  {
+   "tactic": "TA0002",
+   "technique": "T1059",
+   "events": [
+    "CloudShell-CreateSession"
+   ]
+  },
+  {
+   "tactic": "TA0002",
+   "technique": "T1059.009",
+   "events": [
+    "CloudShell-CreateSession"
+   ]
+  },
+  {
+   "tactic": "TA0002",
+   "technique": "T1609",
+   "events": [
+    "ECS-ExecuteCommand"
+   ]
+  },
+  {
+   "tactic": "TA0002",
+   "technique": "T1648",
+   "events": [
+    "Bedrock-CreateAgent",
+    "Bedrock-CreateAgentActionGroup",
+    "Bedrock-InvokeAgent",
+    "Bedrock-PrepareAgent",
+    "Bedrock-UpdateAgent",
+    "Bedrock-UpdateFlow",
+    "Bedrock-UpdatePrompt",
+    "BedrockAgentCore-InvokeAgentRuntime",
+    "BedrockAgentCore-InvokeCodeInterpreter",
+    "Lambda-AddLayerVersionPermission20181031",
+    "Lambda-PublishLayerVersion20181031",
+    "SageMaker-CreateNotebookInstanceLifecycleConfig",
+    "SageMaker-StartNotebookInstance",
+    "SageMaker-StopNotebookInstance",
+    "SageMaker-UpdateNotebookInstance"
+   ]
+  },
+  {
+   "tactic": "TA0002",
+   "technique": "T1651",
+   "events": [
+    "SSM-ResumeSession",
+    "SSM-SendCommand",
+    "SSM-StartSession"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1078",
+   "events": [
+    "CognitoIdentityProvider-GetTokensFromRefreshToken",
+    "IAM-ChangePassword",
+    "IAM-CreateAccessKey",
+    "IAM-CreateLoginProfile",
+    "STS-AssumeRole",
+    "STS-GetFederationToken"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1078.001",
+   "events": [
+    "IAM-CreateLoginProfile"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1078.004",
+   "events": [
+    "CognitoIdentityProvider-GetTokensFromRefreshToken",
+    "IAM-ChangePassword",
+    "IAM-CreateAccessKey",
+    "IAM-CreateLoginProfile",
+    "STS-AssumeRole"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1098",
+   "events": [
+    "EC2-AuthorizeSecurityGroupIngress",
+    "EC2-CreateDefaultVpc",
+    "EC2-CreateKeyPair",
+    "EC2-CreateNetworkAclEntry",
+    "EC2-CreateSecurityGroup",
+    "EC2-ImportKeyPair",
+    "EC2-RunInstances",
+    "EC2-StartInstances",
+    "IAM-AttachUserPolicy",
+    "IAM-CreateLoginProfile",
+    "IAM-CreateServiceLinkedRole",
+    "IAM-CreateServiceSpecificCredential",
+    "IAM-PutUserPolicy",
+    "IAM-UpdateAccessKey",
+    "IAM-UpdateAssumeRolePolicy",
+    "IAM-UpdateLoginProfile",
+    "IAM-UpdateSAMLProvider",
+    "Lambda-AddPermission20150331v2",
+    "Lambda-CreateFunction20150331",
+    "Lambda-CreateFunctionUrlConfig",
+    "Lambda-UpdateFunctionCode20150331v2",
+    "Lambda-UpdateFunctionConfiguration20150331v2",
+    "Marketplace-AcceptAgreementRequest",
+    "Marketplace-CreateAgreementRequest",
+    "SSO-AddMemberToGroup",
+    "SSO-CreateAccountAssignment",
+    "SSO-CreateGroup",
+    "SSO-CreateUser",
+    "SSO-UpdateSsoConfiguration"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1098.001",
+   "events": [
+    "EC2-CreateKeyPair",
+    "EC2-ImportKeyPair",
+    "IAM-CreateLoginProfile",
+    "IAM-CreateServiceSpecificCredential",
+    "SSO-CreateUser"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1098.003",
+   "events": [
+    "IAM-AttachUserPolicy",
+    "IAM-PutUserPolicy",
+    "IAM-UpdateAssumeRolePolicy",
+    "SSO-AddMemberToGroup",
+    "SSO-CreateGroup"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1133",
+   "events": [
+    "EC2-CreateNetworkAclEntry",
+    "Lambda-CreateFunctionUrlConfig"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1136",
+   "events": [
+    "APIGateway-CreateApi",
+    "APIGateway-CreateIntegration",
+    "APIGateway-CreateRoute",
+    "APIGateway-CreateStage",
+    "IAM-ChangePassword",
+    "IAM-CreateAccessKey",
+    "IAM-CreateOpenIDConnectProvider",
+    "IAM-CreateRole",
+    "IAM-CreateSAMLProvider",
+    "IAM-CreateUser",
+    "Organizations-CreateAccount",
+    "SSO-StartSSO",
+    "WorkMail-CreateUser",
+    "WorkMail-RegisterToWorkMail"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1136.001",
+   "events": [
+    "IAM-CreateUser"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1136.003",
+   "events": [
+    "APIGateway-CreateApi",
+    "APIGateway-CreateIntegration",
+    "APIGateway-CreateRoute",
+    "APIGateway-CreateStage",
+    "IAM-CreateAccessKey",
+    "IAM-CreateOpenIDConnectProvider",
+    "IAM-CreateRole",
+    "IAM-CreateSAMLProvider",
+    "IAM-CreateUser",
+    "Organizations-CreateAccount",
+    "WorkMail-CreateUser",
+    "WorkMail-RegisterToWorkMail"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1546",
+   "events": [
+    "events-PutRule",
+    "events-PutTargets"
+   ]
+  },
+  {
+   "tactic": "TA0003",
+   "technique": "T1556",
+   "events": [
+    "AppSync-CreateApiKey",
+    "AppSync-UpdateGraphqlApi",
+    "AppSync-UpdateResolver"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1078",
+   "events": [
+    "CognitoIdentity-GetCredentialsForIdentity",
+    "CognitoIdentity-GetId",
+    "IAM-ChangePassword",
+    "IAM-CreateAccessKey",
+    "IAM-CreateLoginProfile",
+    "Redshift-GetClusterCredentials",
+    "SSO-GetRoleCredentials",
+    "STS-AssumeRole"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1078.001",
+   "events": [
+    "CognitoIdentity-GetCredentialsForIdentity",
+    "CognitoIdentity-GetId",
+    "IAM-CreateLoginProfile"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1078.002",
+   "events": [
+    "CognitoIdentity-GetCredentialsForIdentity",
+    "CognitoIdentity-GetId"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1078.003",
+   "events": [
+    "CognitoIdentity-GetCredentialsForIdentity"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1078.004",
+   "events": [
+    "CognitoIdentity-GetCredentialsForIdentity",
+    "CognitoIdentity-GetId",
+    "IAM-ChangePassword",
+    "IAM-CreateAccessKey",
+    "IAM-CreateLoginProfile",
+    "Redshift-GetClusterCredentials",
+    "SSO-GetRoleCredentials",
+    "STS-AssumeRole"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1098",
+   "events": [
+    "EC2-ModifyInstanceAttribute",
+    "EC2-ReplaceIamInstanceProfileAssociation",
+    "EKS-AssociateAccessPolicy",
+    "EKS-CreateAccessEntry",
+    "Glue-CreateDevEndpoint",
+    "Glue-CreateJob",
+    "Glue-UpdateDevEndpoint",
+    "Glue-UpdateJob",
+    "IAM-AddRoleToInstanceProfile",
+    "IAM-AddUserToGroup",
+    "IAM-AttachGroupPolicy",
+    "IAM-AttachRolePolicy",
+    "IAM-AttachUserPolicy",
+    "IAM-CreateGroup",
+    "IAM-CreateLoginProfile",
+    "IAM-CreatePolicy",
+    "IAM-CreatePolicyVersion",
+    "IAM-DeleteRolePermissionsBoundary",
+    "IAM-DeleteRolePolicy",
+    "IAM-DeleteUserPermissionsBoundary",
+    "IAM-DeleteUserPolicy",
+    "IAM-DetachRolePolicy",
+    "IAM-DetachUserPolicy",
+    "IAM-PutGroupPolicy",
+    "IAM-PutRolePermissionsBoundary",
+    "IAM-PutRolePolicy",
+    "IAM-PutUserPermissionsBoundary",
+    "IAM-PutUserPolicy",
+    "IAM-SetDefaultPolicyVersion",
+    "IAM-UpdateAssumeRolePolicy",
+    "IAM-UpdateLoginProfile",
+    "IAM-UpdateSAMLProvider",
+    "Lambda-AddPermission20150331v2",
+    "Lambda-CreateEventSourceMapping20150331",
+    "Lambda-CreateFunction20150331",
+    "Lambda-UpdateEventSourceMapping20150331"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1098.001",
+   "events": [
+    "IAM-AddRoleToInstanceProfile",
+    "IAM-CreateLoginProfile"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1098.003",
+   "events": [
+    "EC2-ReplaceIamInstanceProfileAssociation",
+    "IAM-AttachGroupPolicy",
+    "IAM-AttachUserPolicy",
+    "IAM-CreateGroup",
+    "IAM-CreatePolicy",
+    "IAM-CreatePolicyVersion",
+    "IAM-PutUserPolicy",
+    "IAM-UpdateAssumeRolePolicy"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1548",
+   "events": [
+    "STS-AssumeRoot"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "technique": "T1548.005",
+   "events": [
+    "STS-AssumeRoot"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1070",
+   "events": [
+    "EC2-TerminateInstances",
+    "IAM-DeleteAccessKey",
+    "IAM-DeleteLoginProfile",
+    "IAM-DeleteUser",
+    "Organizations-LeaveOrganization",
+    "SES-DeleteIdentity"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1070.004",
+   "events": [
+    "EC2-TerminateInstances"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1556",
+   "events": [
+    "AppSync-CreateApiKey",
+    "AppSync-UpdateGraphqlApi",
+    "AppSync-UpdateResolver"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562",
+   "events": [
+    "Bedrock-DeleteGuardrail",
+    "Bedrock-DeleteModelInvocationLoggingConfiguration",
+    "Bedrock-PutModelInvocationLoggingConfiguration",
+    "Bedrock-UpdateGuardrail",
+    "CloudTrail-CreateTrail",
+    "CloudTrail-DeleteTrail",
+    "CloudTrail-PutEventSelectors",
+    "CloudTrail-StopLogging",
+    "CloudTrail-UpdateTrail",
+    "CloudWatch-DeleteAlarms",
+    "CloudWatchLogs-CreateLogStream",
+    "CloudWatchLogs-DeleteLogGroup",
+    "CloudWatchLogs-DeleteLogStream",
+    "CloudWatchLogs-PutLogEvents",
+    "Config-DeleteConfigRule",
+    "Config-DeleteConfigurationRecorder",
+    "Config-DeleteDeliveryChannel",
+    "Config-StopConfigurationRecorder",
+    "EC2-DeleteFlowLogs",
+    "EC2-DeleteNetworkAcl",
+    "EC2-DeleteNetworkAclEntry",
+    "GuardDuty-CreateFilter",
+    "GuardDuty-CreateIPSet",
+    "GuardDuty-DeleteDetector",
+    "GuardDuty-DeleteInvitations",
+    "GuardDuty-DeleteMembers",
+    "GuardDuty-DeletePublishingDestination",
+    "GuardDuty-DisassociateFromMasterAccount",
+    "GuardDuty-DisassociateMembers",
+    "GuardDuty-StopMonitoringMembers",
+    "GuardDuty-UpdateDetector",
+    "GuardDuty-UpdateIPSet",
+    "IAM-DeactivateMFADevice",
+    "SecurityHub-DeleteMembers",
+    "WAFV2-DeleteRuleGroup",
+    "WAFV2-DeleteWebACL",
+    "WAFV2-UpdateIPSet"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562.001",
+   "events": [
+    "Bedrock-DeleteGuardrail",
+    "Bedrock-UpdateGuardrail",
+    "CloudTrail-DeleteTrail",
+    "CloudTrail-PutEventSelectors",
+    "CloudTrail-StopLogging",
+    "CloudTrail-UpdateTrail",
+    "CloudWatch-DeleteAlarms",
+    "CloudWatchLogs-CreateLogStream",
+    "CloudWatchLogs-DeleteLogGroup",
+    "CloudWatchLogs-DeleteLogStream",
+    "Config-DeleteConfigRule",
+    "Config-DeleteConfigurationRecorder",
+    "Config-DeleteDeliveryChannel",
+    "Config-StopConfigurationRecorder",
+    "EC2-DeleteNetworkAclEntry",
+    "GuardDuty-CreateFilter",
+    "GuardDuty-CreateIPSet",
+    "GuardDuty-DeleteDetector",
+    "GuardDuty-DeleteInvitations",
+    "GuardDuty-DeleteMembers",
+    "GuardDuty-DeletePublishingDestination",
+    "GuardDuty-DisassociateFromMasterAccount",
+    "GuardDuty-DisassociateMembers",
+    "GuardDuty-StopMonitoringMembers",
+    "GuardDuty-UpdateDetector",
+    "GuardDuty-UpdateIPSet",
+    "IAM-DeactivateMFADevice"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562.004",
+   "events": [
+    "EC2-DeleteNetworkAclEntry"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562.006",
+   "events": [
+    "CloudWatch-DeleteAlarms",
+    "GuardDuty-DeleteInvitations"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562.007",
+   "events": [
+    "EC2-DeleteNetworkAcl",
+    "WAFV2-DeleteRuleGroup",
+    "WAFV2-DeleteWebACL",
+    "WAFV2-UpdateIPSet"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1562.008",
+   "events": [
+    "Bedrock-DeleteModelInvocationLoggingConfiguration",
+    "Bedrock-PutModelInvocationLoggingConfiguration",
+    "CloudTrail-CreateTrail",
+    "CloudTrail-DeleteTrail",
+    "CloudTrail-StopLogging",
+    "CloudWatchLogs-PutLogEvents",
+    "EC2-DeleteFlowLogs",
+    "GuardDuty-StopMonitoringMembers"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1578",
+   "events": [
+    "AppSync-CreateApiKey",
+    "AppSync-UpdateGraphqlApi",
+    "AppSync-UpdateResolver",
+    "EC2-StopInstances",
+    "ELBv2-CreateRule",
+    "IAM-DeleteAccessKey",
+    "IAM-DeleteLoginProfile",
+    "IAM-DeleteUser",
+    "IAM-DeleteUserPolicy",
+    "IAM-DetachRolePolicy",
+    "IAM-DetachUserPolicy",
+    "Lightsail-CreateInstances",
+    "RDS-AuthorizeDBSecurityGroupIngress",
+    "RDS-ModifyActivityStream",
+    "RDS-ModifyDBCluster",
+    "Redshift-ModifyCluster",
+    "S3-DeleteBucketPolicy",
+    "SES-DeleteIdentity",
+    "SES-PutAccountDetails",
+    "Support-CreateCase",
+    "events-DeleteRule",
+    "events-DisableRule",
+    "events-PutRule",
+    "events-RemoveTargets"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1578.002",
+   "events": [
+    "Lightsail-CreateInstances"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1578.003",
+   "events": [
+    "EC2-StopInstances"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1578.005",
+   "events": [
+    "SES-PutAccountDetails",
+    "Support-CreateCase"
+   ]
+  },
+  {
+   "tactic": "TA0005",
+   "technique": "T1666",
+   "events": [
+    "Organizations-AcceptHandshake",
+    "Organizations-InviteAccountToOrganization"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "technique": "T1528",
+   "events": [
+    "CognitoIdentityProvider-GetTokensFromRefreshToken",
+    "ECR-GetAuthorizationToken",
+    "SSO-CreateTokenWithIAM",
+    "SignIn-AuthorizeOAuth2Access",
+    "SignIn-CreateOAuth2Token"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "technique": "T1552",
+   "events": [
+    "SSM-DescribeParameters",
+    "SSM-GetParameters"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "technique": "T1555",
+   "events": [
+    "EC2-GetPasswordData",
+    "SecretsManager-DescribeSecret",
+    "SecretsManager-GetSecretValue",
+    "SecretsManager-ListSecrets"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "technique": "T1555.006",
+   "events": [
+    "SecretsManager-DescribeSecret",
+    "SecretsManager-GetSecretValue"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "technique": "T1556",
+   "events": [
+    "RDS-ModifyDBInstance"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1040",
+   "events": [
+    "ACMPCA-GetCertificate",
+    "ACMPCA-IssueCertificate"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1069",
+   "events": [
+    "OpenSearchServerless-ListAccessPolicies"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1087",
+   "events": [
+    "IAM-GetAccountAuthorizationDetails",
+    "IAM-GetLoginProfile",
+    "IAM-GetUser",
+    "IAM-ListAccessKeys",
+    "IAM-ListAccountAliases",
+    "IAM-ListAttachedRolePolicies",
+    "IAM-ListAttachedUserPolicies",
+    "IAM-ListGroups",
+    "IAM-ListGroupsForUser",
+    "IAM-ListInstanceProfiles",
+    "IAM-ListOpenIDConnectProviders",
+    "IAM-ListRolePolicies",
+    "IAM-ListRoles",
+    "IAM-ListSAMLProviders",
+    "IAM-ListSSHPublicKeys",
+    "IAM-ListServiceSpecificCredentials",
+    "IAM-ListSigningCertificates",
+    "IAM-ListUserPolicies",
+    "IAM-ListUsers",
+    "IAM-SimulatePrincipalPolicy",
+    "ResourceExplorer-Search",
+    "SES-GetAccount",
+    "SES-GetAccountSendingEnabled",
+    "SES-ListEmailIdentities",
+    "SES-ListIdentities",
+    "SSO-ListAccountRoles",
+    "SSO-ListAccounts",
+    "STS-GetCallerIdentity"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1087.004",
+   "events": [
+    "IAM-GetAccountAuthorizationDetails",
+    "IAM-GetLoginProfile",
+    "IAM-GetUser",
+    "IAM-ListAccessKeys",
+    "IAM-ListAccountAliases",
+    "IAM-ListAttachedRolePolicies",
+    "IAM-ListAttachedUserPolicies",
+    "IAM-ListGroups",
+    "IAM-ListGroupsForUser",
+    "IAM-ListInstanceProfiles",
+    "IAM-ListUsers",
+    "SES-GetAccount",
+    "SSO-ListAccountRoles",
+    "SSO-ListAccounts",
+    "STS-GetCallerIdentity"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1526",
+   "events": [
+    "AppSync-GetIntrospectionSchema",
+    "CloudWatch-DescribeAlarms",
+    "CloudWatch-DescribeAlarmsForMetric",
+    "CostExplorer-GetCostAndUsage",
+    "CostExplorer-GetCostForecast",
+    "ECR-DescribeImages",
+    "ECR-DescribeRepositories",
+    "ELBv2-DescribeListeners",
+    "ELBv2-DescribeLoadBalancers",
+    "GuardDuty-GetDetector",
+    "GuardDuty-GetFindings",
+    "GuardDuty-ListDetectors",
+    "GuardDuty-ListFindings",
+    "GuardDuty-ListIPSets",
+    "Health-DescribeEventAggregates",
+    "Health-DescribeEvents",
+    "KMS-DescribeKey",
+    "Lambda-GetFunction20150331v2",
+    "Lambda-GetFunctionConfiguration20150331v2",
+    "Lambda-ListFunctions20150331",
+    "Organizations-DescribeOrganization",
+    "Organizations-ListAccounts",
+    "Organizations-ListOrganizationalUnitsForParent",
+    "S3-GetBucketAccelerateConfiguration",
+    "S3-GetBucketAcl",
+    "S3-GetBucketLifecycle",
+    "S3-GetBucketLocation",
+    "S3-GetBucketLogging",
+    "S3-GetBucketOwnershipControls",
+    "S3-GetBucketPolicy",
+    "S3-GetBucketPublicAccessBlock",
+    "S3-GetBucketReplication",
+    "S3-GetBucketRequestPayment",
+    "S3-GetBucketTagging",
+    "S3-GetBucketVersioning",
+    "S3-GetObjectLockConfiguration",
+    "S3-ListBuckets",
+    "SES-GetIdentityVerificationAttributes",
+    "SSM-DescribeParameters",
+    "SSM-GetParameters",
+    "ServiceCatalog-ListApplications",
+    "events-ListRules",
+    "events-ListTargetsByRule"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1580",
+   "events": [
+    "Athena-GetQueryResults",
+    "Bedrock-GetFoundationModelAvailability",
+    "Bedrock-GetKnowledgeBase",
+    "Bedrock-GetModelInvocationLoggingConfiguration",
+    "Bedrock-GetUseCaseForModelAccess",
+    "Bedrock-InvokeModel",
+    "Bedrock-ListAgents",
+    "Bedrock-ListCustomModels",
+    "Bedrock-ListFoundationModelAgreementOffers",
+    "Bedrock-ListFoundationModels",
+    "Bedrock-ListInferenceProfiles",
+    "Bedrock-ListKnowledgeBases",
+    "Bedrock-ListModelInvocationJobs",
+    "Bedrock-ListProvisionedModelThroughputs",
+    "BedrockAgentCore-GetMemory",
+    "CloudWatchLogs-DescribeLogGroups",
+    "CloudWatchLogs-DescribeLogStreams",
+    "CloudWatchLogs-DescribeSubscriptionFilters",
+    "CloudWatchLogs-GetLogRecord",
+    "EC2-DescribeAccountAttributes",
+    "EC2-DescribeAvailabilityZones",
+    "EC2-DescribeBundleTasks",
+    "EC2-DescribeCarrierGateways",
+    "EC2-DescribeClientVpnRoutes",
+    "EC2-DescribeDhcpOptions",
+    "EC2-DescribeFlowLogs",
+    "EC2-DescribeHosts",
+    "EC2-DescribeImages",
+    "EC2-DescribeInstanceAttribute",
+    "EC2-DescribeInstanceStatus",
+    "EC2-DescribeInstanceTypes",
+    "EC2-DescribeInstances",
+    "EC2-DescribeInternetGateways",
+    "EC2-DescribeKeyPairs",
+    "EC2-DescribeLaunchTemplates",
+    "EC2-DescribeNetworkInterfaces",
+    "EC2-DescribeRegions",
+    "EC2-DescribeRouteTables",
+    "EC2-DescribeSecurityGroups",
+    "EC2-DescribeSnapshotAttribute",
+    "EC2-DescribeSnapshotTierStatus",
+    "EC2-DescribeSnapshots",
+    "EC2-DescribeSubnets",
+    "EC2-DescribeTags",
+    "EC2-DescribeTransitGatewayMulticastDomains",
+    "EC2-DescribeVolumeStatus",
+    "EC2-DescribeVolumes",
+    "EC2-DescribeVolumesModifications",
+    "EC2-DescribeVpcEndpointConnectionNotifications",
+    "EC2-DescribeVpcs",
+    "EC2-GetConsoleScreenshot",
+    "EC2-GetEbsDefaultKmsKeyId",
+    "EC2-GetEbsEncryptionByDefault",
+    "EC2-GetFlowLogsIntegrationTemplate",
+    "EC2-GetLaunchTemplateData",
+    "EC2-GetTransitGatewayRouteTableAssociations",
+    "ECS-DescribeTaskDefinition",
+    "ECS-DescribeTasks",
+    "ECS-ListClusters",
+    "ECS-ListTaskDefinitions",
+    "ECS-ListTasks",
+    "EKS-DescribeAccessEntry",
+    "EKS-DescribeCluster",
+    "EKS-ListAssociatedAccessPolicies",
+    "EKS-ListClusters",
+    "LightSail-GetInstances",
+    "LightSail-GetRegions",
+    "Marketplace-GetListingView",
+    "Marketplace-SearchAgreements",
+    "OpenSearchServerless-ListCollections",
+    "RDS-DescribeBlueGreenDeployments",
+    "RDS-DescribeDBClusters",
+    "RDS-DescribeDBEngineVersions",
+    "RDS-DescribeDBInstances",
+    "RDS-DescribeDBProxies",
+    "RDS-DescribeDBSnapshots",
+    "RDS-DescribeDBSubnetGroups",
+    "RDS-DescribeExportTasks",
+    "RDS-DescribeGlobalClusters",
+    "RDS-DescribeOrderableDBInstanceOptions",
+    "RDS-DescribePendingMaintenanceActions",
+    "RDS-DescribeValidDBInstanceModifications",
+    "Route53-GetHostedZoneCount",
+    "Route53-ListHostedZones",
+    "S3Vectors-ListIndexes",
+    "S3Vectors-ListVectors",
+    "SES-GetSendQuota",
+    "SNS-GetSMSAttributes",
+    "SNS-GetSMSSandboxAccountStatus",
+    "SNS-GetTopicAttributes",
+    "SNS-ListOriginationNumbers",
+    "SNS-ListSubscriptions",
+    "SNS-ListTopics",
+    "SQS-GetQueueAttributes",
+    "SSM-DescribeInstanceInformation",
+    "SSO-ListInstances",
+    "SageMaker-ListEndpoints",
+    "SageMaker-ListModels",
+    "SageMaker-ListTrainingJobs",
+    "ServiceQuotas-GetServiceQuota",
+    "ServiceQuotas-ListServiceQuotas",
+    "route53domains-ListDomains"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1619",
+   "events": [
+    "S3-HeadObject",
+    "S3-ListObjects",
+    "S3-ListVaults"
+   ]
+  },
+  {
+   "tactic": "TA0007",
+   "technique": "T1654",
+   "events": [
+    "CloudTrail-LookupEvents"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1021",
+   "events": [
+    "EC2-AttachVolume",
+    "EC2-AuthorizeSecurityGroupIngress",
+    "EC2-CreateSecurityGroup",
+    "EC2-CreateSnapshot",
+    "EC2-CreateVolume",
+    "EC2-EnableSerialConsoleAccess",
+    "EC2-RunInstances",
+    "EC2InstanceConnect-SendSSHPublicKey",
+    "EC2InstanceConnect-SendSerialConsoleSSHPublicKey",
+    "ECS-ExecuteCommand",
+    "SSM-ResumeSession",
+    "SSM-SendCommand",
+    "SSM-StartSession",
+    "SignIn-SwitchRole"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1021.001",
+   "events": [
+    "EC2-CreateSecurityGroup"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1021.004",
+   "events": [
+    "EC2-AuthorizeSecurityGroupIngress",
+    "EC2-CreateSecurityGroup",
+    "EC2InstanceConnect-SendSSHPublicKey",
+    "EC2InstanceConnect-SendSerialConsoleSSHPublicKey"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1021.007",
+   "events": [
+    "EC2-AttachVolume",
+    "EC2-AuthorizeSecurityGroupIngress",
+    "EC2-CreateVolume"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1021.008",
+   "events": [
+    "EC2-EnableSerialConsoleAccess"
+   ]
+  },
+  {
+   "tactic": "TA0008",
+   "technique": "T1550",
+   "events": [
+    "RDS-ModifyDBInstance",
+    "STS-AssumeRoleWithWebIdentity"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "technique": "T1005",
+   "events": [
+    "EC2-CreateInstanceExportTask"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "technique": "T1074",
+   "events": [
+    "EC2-CreateRoute",
+    "EC2-CreateTrafficMirrorFilter",
+    "EC2-CreateTrafficMirrorFilterRule",
+    "EC2-CreateTrafficMirrorSession",
+    "EC2-CreateTrafficMirrorTarget"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "technique": "T1074.002",
+   "events": [
+    "EC2-CreateTrafficMirrorFilter"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "technique": "T1119",
+   "events": [
+    "CloudFront-CreateFunction",
+    "CloudFront-PublishFunction",
+    "CloudFront-UpdateDistribution",
+    "Lambda-UpdateFunctionCode20150331v2"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "technique": "T1530",
+   "events": [
+    "Bedrock-Retrieve",
+    "Bedrock-RetrieveAndGenerate",
+    "BedrockAgentCore-RetrieveMemoryRecords",
+    "ECR-BatchGetImage",
+    "KMS-Decrypt",
+    "RedshiftData-ExecuteStatement",
+    "S3Vectors-GetVectors",
+    "S3Vectors-QueryVectors"
+   ]
+  },
+  {
+   "tactic": "TA0011",
+   "technique": "T1102",
+   "events": [
+    "BedrockAgentCore-CreateAgentRuntime"
+   ]
+  },
+  {
+   "tactic": "TA0010",
+   "technique": "T1048",
+   "events": [
+    "EC2-AuthorizeSecurityGroupEgress",
+    "S3-GetObject",
+    "S3-PutBucketAcl",
+    "S3-PutBucketPolicy",
+    "S3Vectors-PutVectorBucketPolicy"
+   ]
+  },
+  {
+   "tactic": "TA0010",
+   "technique": "T1537",
+   "events": [
+    "EC2-CreateImage",
+    "EC2-CreateInstanceExportTask",
+    "EC2-CreateSnapshot",
+    "EC2-ModifyImageAttribute",
+    "EC2-ModifySnapshotAttribute",
+    "EC2-SharedSnapshotCopyInitiated",
+    "EC2-SharedSnapshotVolumeCreated",
+    "RDS-CreateDBSecurityGroup",
+    "RDS-CreateDBSnapshot",
+    "RDS-ModifyDBSnapshotAttribute",
+    "RDS-StartExportTask",
+    "S3-JobCreated",
+    "S3-PutBucketReplication",
+    "S3-PutBucketVersioning",
+    "TransferFamily-CreateServer",
+    "TransferFamily-CreateUser"
+   ]
+  },
+  {
+   "tactic": "TA0010",
+   "technique": "T1567",
+   "events": [
+    "BedrockAgentCore-UpdateAgentRuntime"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1485",
+   "events": [
+    "EC2-DeleteSnapshot",
+    "EC2-DeleteVolume",
+    "EC2-DeregisterImage",
+    "EC2-TerminateInstances",
+    "KMS-ScheduleKeyDeletion",
+    "RDS-DeleteDBCluster",
+    "RDS-DeleteDBInstance",
+    "RDS-DeleteGlobalCluster",
+    "S3-DeleteBucket",
+    "S3-DeleteObject",
+    "S3-PutBucketLifecycle",
+    "S3Vectors-DeleteVectorBucket",
+    "S3Vectors-DeleteVectors",
+    "SQS-PurgeQueue",
+    "elasticfilesystem-DeleteFileSystem",
+    "elasticfilesystem-DeleteMountTarget"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1486",
+   "events": [
+    "KMS-CreateKey",
+    "KMS-Encrypt",
+    "KMS-GenerateDataKey",
+    "KMS-GenerateDataKeyWithoutPlaintext",
+    "KMS-PutKeyPolicy",
+    "S3-PutBucketEncryption"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1489",
+   "events": [
+    "events-DeleteRule",
+    "events-DisableRule",
+    "events-PutRule",
+    "events-RemoveTargets"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1490",
+   "events": [
+    "S3-PutBucketVersioning"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1496",
+   "events": [
+    "Bedrock-CreateFoundationModelAgreement",
+    "Bedrock-InvokeModel",
+    "Bedrock-InvokeModelWithResponseStream",
+    "Bedrock-PutFoundationModelEntitlement",
+    "Bedrock-PutUseCaseForModelAccess",
+    "CloudFormation-CreateStack",
+    "DirectoryService-AuthorizeApplication",
+    "DirectoryService-CreateAlias",
+    "EC2-CreateAutoScalingGroup",
+    "EC2-CreateDefaultVpc",
+    "EC2-CreateLaunchTemplate",
+    "EC2-RunInstances",
+    "EC2-StartInstances",
+    "ECS-CreateCluster",
+    "ECS-CreateService",
+    "ECS-RegisterTaskDefinition",
+    "Lambda-CreateFunction20150331",
+    "Lambda-Invoke",
+    "Lambda-UpdateFunctionCode20150331v2",
+    "Lightsail-CreateInstances",
+    "Route53-ChangeResourceRecordSets",
+    "Route53-CreateHostedZone",
+    "SES-CreateEmailIdentity",
+    "SES-SendEmail",
+    "SES-SendRawEmail",
+    "SES-UpdateAccountSendingEnabled",
+    "SES-VerifyDomainDkim",
+    "SES-VerifyDomainIdentity",
+    "SES-VerifyEmailIdentity",
+    "SNS-Publish",
+    "ServiceQuotas-RequestServiceQuotaIncrease",
+    "WorkMail-CreateOrganization"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1496.004",
+   "events": [
+    "DirectoryService-AuthorizeApplication",
+    "DirectoryService-CreateAlias",
+    "SES-SendEmail",
+    "SES-SendRawEmail",
+    "SES-VerifyDomainDkim",
+    "SES-VerifyDomainIdentity",
+    "WorkMail-CreateOrganization"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1499",
+   "events": [
+    "EC2-StopInstances"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1565",
+   "events": [
+    "S3-PutObject",
+    "S3Vectors-PutVectors"
+   ]
+  },
+  {
+   "tactic": "TA0040",
+   "technique": "T1565.001",
+   "events": [
+    "S3-PutObject",
+    "S3Vectors-PutVectors"
+   ]
+  }
+ ],
+ "unplaced": [
+  {
+   "tactic": "TA0002",
+   "events": [
+    "EC2-CreateLaunchTemplate"
+   ]
+  },
+  {
+   "tactic": "TA0004",
+   "events": [
+    "BedrockAgentCore-InvokeCodeInterpreter",
+    "Lambda-Invoke",
+    "SageMaker-UpdateNotebookInstance"
+   ]
+  },
+  {
+   "tactic": "TA0006",
+   "events": [
+    "Lambda-GetFunctionConfiguration20150331v2"
+   ]
+  },
+  {
+   "tactic": "TA0009",
+   "events": [
+    "Lambda-GetFunction20150331v2",
+    "SES-SendEmail"
+   ]
+  },
+  {
+   "tactic": "TA0011",
+   "events": [
+    "SES-SendEmail"
+   ]
+  },
+  {
+   "tactic": "TA0010",
+   "events": [
+    "ECR-BatchGetImage"
+   ]
+  }
+ ],
+ "unknownTechniques": []
+}
