@@ -1,0 +1,31 @@
+{
+    "eventName": "GetKeyPolicy",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Gets a key policy attached to the specified KMS key.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetKeyPolicy to learn which principals can use or manage a KMS key, finding identities they can use to decrypt data or a policy they could change to lock the owner out.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms get-key-policy --key-id 1234abcd-12ab-34cd-56ef-1234567890ab --policy-name default"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-GetKeyPolicy"
+}

@@ -1,0 +1,52 @@
+{
+    "eventName": "Converse",
+    "eventSource": "bedrock.amazonaws.com",
+    "awsService": "Bedrock",
+    "description": "Sends messages to the specified Amazon Bedrock model. Converse provides a consistent interface that works with all models that support messages.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery",
+        "TA0040 - Impact"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery",
+        "T1496 - Resource Hijacking"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+            "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use Converse to test whether stolen credentials can invoke Bedrock models, sending a minimal prompt, and then to run inference at the victim's expense (LLMjacking).",
+    "alerting": [
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/discovery_bedrock_model_recon_and_invocation_via_long_term_key.toml"
+        },
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/credential_access_bedrock_invocation_high_number_of_countries.toml"
+        },
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/credential_access_bedrock_invocation_impossible_travel.toml"
+        },
+        {
+            "type": "elastic",
+            "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/exfiltration_bedrock_high_frequency_inference_api_probing.toml"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws bedrock-runtime converse --model-id amazon.nova-micro-v1:0 --messages '[{\"role\":\"user\",\"content\":[{\"text\":\"ping\"}]}]'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
+}

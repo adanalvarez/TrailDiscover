@@ -1,0 +1,31 @@
+{
+    "eventName": "GetDatabases",
+    "eventSource": "glue.amazonaws.com",
+    "awsService": "Glue",
+    "description": "Retrieves all databases defined in a given Data Catalog.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetDatabases to enumerate the databases in the Glue Data Catalog and locate the tables, and the S3 data behind them, worth collecting.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws glue get-databases"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/glue#glue-GetDatabases"
+}

@@ -26,6 +26,10 @@
         {
             "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        },
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
         }
     ],
     "researchLinks": [

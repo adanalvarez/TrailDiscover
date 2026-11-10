@@ -1,0 +1,38 @@
+{
+    "eventName": "FilterLogEvents",
+    "eventSource": "logs.amazonaws.com",
+    "awsService": "CloudWatchLogs",
+    "description": "Lists log events from the specified log group. You can list all the log events or filter the results using one or more of the following: a filter pattern, a time range, and the log stream name, or a log stream name prefix that matches multiple log streams.",
+    "mitreAttackTactics": [
+        "TA0006 - Credential Access",
+        "TA0009 - Collection"
+    ],
+    "mitreAttackTechniques": [
+        "T1552 - Unsecured Credentials",
+        "T1530 - Data from Cloud Storage"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use FilterLogEvents to search CloudWatch Logs for secrets such as access keys and passwords, presigned URLs, internal IP addresses or references to sensitive files, harvesting credentials and data that applications wrote to their logs.",
+    "alerting": [
+        {
+            "type": "splunk",
+            "value": "https://research.splunk.com/cloud/3f0ba9e1-c6cf-4317-a6bc-c4bcab2b5a06/"
+        }
+    ],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws logs filter-log-events --log-group-name TrailDiscover --filter-pattern AKIA"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/logs#logs-FilterLogEvents"
+}

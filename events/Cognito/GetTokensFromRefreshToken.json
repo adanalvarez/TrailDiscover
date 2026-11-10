@@ -20,6 +20,10 @@
         {
             "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
             "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+        },
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
         }
     ],
     "researchLinks": [],

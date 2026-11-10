@@ -1,0 +1,31 @@
+{
+    "eventName": "ListUserPools",
+    "eventSource": "cognito-idp.amazonaws.com",
+    "awsService": "CognitoIdentityProvider",
+    "description": "Lists user pools and their details in the current Amazon Web Services account.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListUserPools to enumerate the Cognito user pools in an account and find user directories and app clients to target for sign-up, sign-in or user enumeration.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cognito-idp list-user-pools --max-results 60"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-ListUserPools"
+}

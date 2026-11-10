@@ -6,7 +6,7 @@
   "layer": "4.5"
  },
  "domain": "enterprise-attack",
- "description": "ATT&CK techniques that TrailDiscover maps catalogued AWS CloudTrail API calls to. Presence only: it does not show how often attackers use a technique, risk, or detection coverage. Generated from events.json (data version eea1f3dcdf59), ATT&CK v18.1.",
+ "description": "ATT&CK techniques that TrailDiscover maps catalogued AWS CloudTrail API calls to. Presence only: it does not show how often attackers use a technique, risk, or detection coverage. Generated from events.json (data version 15143b8c1385), ATT&CK v18.1.",
  "sorting": 0,
  "layout": {
   "layout": "side",
@@ -61,12 +61,12 @@
    "techniqueID": "T1078",
    "tactic": "initial-access",
    "color": "#8ECAE6",
-   "comment": "6 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "comment": "9 catalogued CloudTrail events in TrailDiscover (7 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken, SignIn-PasswordRecoveryRequested"
+     "value": "CognitoIdentityProvider-InitiateAuth, CognitoIdentityProvider-RespondToAuthChallenge, CognitoIdentityProvider-SignUp, STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken, SignIn-PasswordRecoveryRequested"
     }
    ],
    "links": [
@@ -81,12 +81,12 @@
    "techniqueID": "T1078.004",
    "tactic": "initial-access",
    "color": "#8ECAE6",
-   "comment": "5 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (6 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken"
+     "value": "CognitoIdentityProvider-InitiateAuth, CognitoIdentityProvider-RespondToAuthChallenge, CognitoIdentityProvider-SignUp, STS-AssumeRole, SignIn-AuthorizeOAuth2Access, SignIn-ConsoleLogin, SignIn-CreateOAuth2Token, SignIn-GetSigninToken"
     }
    ],
    "links": [
@@ -241,12 +241,12 @@
    "techniqueID": "T1078",
    "tactic": "persistence",
    "color": "#8ECAE6",
-   "comment": "6 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
+   "comment": "7 catalogued CloudTrail events in TrailDiscover (6 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole, STS-GetFederationToken"
+     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, CognitoIdentityProvider-SignUp, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole, STS-GetFederationToken"
     }
    ],
    "links": [
@@ -281,12 +281,12 @@
    "techniqueID": "T1078.004",
    "tactic": "persistence",
    "color": "#8ECAE6",
-   "comment": "5 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "comment": "6 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole"
+     "value": "CognitoIdentityProvider-GetTokensFromRefreshToken, CognitoIdentityProvider-SignUp, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateLoginProfile, STS-AssumeRole"
     }
    ],
    "links": [
@@ -381,12 +381,12 @@
    "techniqueID": "T1136",
    "tactic": "persistence",
    "color": "#8ECAE6",
-   "comment": "14 catalogued CloudTrail events in TrailDiscover (13 seen in the wild)",
+   "comment": "15 catalogued CloudTrail events in TrailDiscover (14 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, SSO-StartSSO, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
+     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, CognitoIdentityProvider-SignUp, IAM-ChangePassword, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, SSO-StartSSO, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
     }
    ],
    "links": [
@@ -421,12 +421,12 @@
    "techniqueID": "T1136.003",
    "tactic": "persistence",
    "color": "#8ECAE6",
-   "comment": "12 catalogued CloudTrail events in TrailDiscover (12 seen in the wild)",
+   "comment": "13 catalogued CloudTrail events in TrailDiscover (13 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
+     "value": "APIGateway-CreateApi, APIGateway-CreateIntegration, APIGateway-CreateRoute, APIGateway-CreateStage, CognitoIdentityProvider-SignUp, IAM-CreateAccessKey, IAM-CreateOpenIDConnectProvider, IAM-CreateRole, IAM-CreateSAMLProvider, IAM-CreateUser, Organizations-CreateAccount, WorkMail-CreateUser, WorkMail-RegisterToWorkMail"
     }
    ],
    "links": [
@@ -981,12 +981,12 @@
    "techniqueID": "T1552",
    "tactic": "credential-access",
    "color": "#8ECAE6",
-   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "SSM-DescribeParameters, SSM-GetParameters"
+     "value": "CloudWatchLogs-FilterLogEvents, SSM-DescribeParameters, SSM-GetParameters"
     }
    ],
    "links": [
@@ -1001,12 +1001,12 @@
    "techniqueID": "T1555",
    "tactic": "credential-access",
    "color": "#8ECAE6",
-   "comment": "4 catalogued CloudTrail events in TrailDiscover (4 seen in the wild)",
+   "comment": "5 catalogued CloudTrail events in TrailDiscover (5 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "EC2-GetPasswordData, SecretsManager-DescribeSecret, SecretsManager-GetSecretValue, SecretsManager-ListSecrets"
+     "value": "EC2-GetPasswordData, SSM-GetParameter, SecretsManager-DescribeSecret, SecretsManager-GetSecretValue, SecretsManager-ListSecrets"
     }
    ],
    "links": [
@@ -1021,12 +1021,12 @@
    "techniqueID": "T1555.006",
    "tactic": "credential-access",
    "color": "#8ECAE6",
-   "comment": "2 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "comment": "3 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "SecretsManager-DescribeSecret, SecretsManager-GetSecretValue"
+     "value": "SSM-GetParameter, SecretsManager-DescribeSecret, SecretsManager-GetSecretValue"
     }
    ],
    "links": [
@@ -1101,12 +1101,12 @@
    "techniqueID": "T1087",
    "tactic": "discovery",
    "color": "#8ECAE6",
-   "comment": "28 catalogued CloudTrail events in TrailDiscover (25 seen in the wild)",
+   "comment": "29 catalogued CloudTrail events in TrailDiscover (26 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListOpenIDConnectProviders, IAM-ListRolePolicies, IAM-ListRoles, IAM-ListSAMLProviders, IAM-ListSSHPublicKeys, IAM-ListServiceSpecificCredentials, IAM-ListSigningCertificates, IAM-ListUserPolicies, IAM-ListUsers, IAM-SimulatePrincipalPolicy, ResourceExplorer-Search, SES-GetAccount, SES-GetAccountSendingEnabled, SES-ListEmailIdentities, SES-ListIdentities, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
+     "value": "CognitoIdentityProvider-GetUser, IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListOpenIDConnectProviders, IAM-ListRolePolicies, IAM-ListRoles, IAM-ListSAMLProviders, IAM-ListSSHPublicKeys, IAM-ListServiceSpecificCredentials, IAM-ListSigningCertificates, IAM-ListUserPolicies, IAM-ListUsers, IAM-SimulatePrincipalPolicy, ResourceExplorer-Search, SES-GetAccount, SES-GetAccountSendingEnabled, SES-ListEmailIdentities, SES-ListIdentities, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
     }
    ],
    "links": [
@@ -1121,12 +1121,12 @@
    "techniqueID": "T1087.004",
    "tactic": "discovery",
    "color": "#8ECAE6",
-   "comment": "15 catalogued CloudTrail events in TrailDiscover (12 seen in the wild)",
+   "comment": "16 catalogued CloudTrail events in TrailDiscover (13 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListUsers, SES-GetAccount, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
+     "value": "CognitoIdentityProvider-GetUser, IAM-GetAccountAuthorizationDetails, IAM-GetLoginProfile, IAM-GetUser, IAM-ListAccessKeys, IAM-ListAccountAliases, IAM-ListAttachedRolePolicies, IAM-ListAttachedUserPolicies, IAM-ListGroups, IAM-ListGroupsForUser, IAM-ListInstanceProfiles, IAM-ListUsers, SES-GetAccount, SSO-ListAccountRoles, SSO-ListAccounts, STS-GetCallerIdentity"
     }
    ],
    "links": [
@@ -1141,12 +1141,12 @@
    "techniqueID": "T1526",
    "tactic": "discovery",
    "color": "#8ECAE6",
-   "comment": "43 catalogued CloudTrail events in TrailDiscover (36 seen in the wild)",
+   "comment": "46 catalogued CloudTrail events in TrailDiscover (39 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "AppSync-GetIntrospectionSchema, CloudWatch-DescribeAlarms, CloudWatch-DescribeAlarmsForMetric, CostExplorer-GetCostAndUsage, CostExplorer-GetCostForecast, ECR-DescribeImages, ECR-DescribeRepositories, ELBv2-DescribeListeners, ELBv2-DescribeLoadBalancers, GuardDuty-GetDetector, GuardDuty-GetFindings, GuardDuty-ListDetectors, GuardDuty-ListFindings, GuardDuty-ListIPSets, Health-DescribeEventAggregates, Health-DescribeEvents, KMS-DescribeKey, Lambda-GetFunction20150331v2, Lambda-GetFunctionConfiguration20150331v2, Lambda-ListFunctions20150331, Organizations-DescribeOrganization, Organizations-ListAccounts, Organizations-ListOrganizationalUnitsForParent, S3-GetBucketAccelerateConfiguration, S3-GetBucketAcl, S3-GetBucketLifecycle, S3-GetBucketLocation, S3-GetBucketLogging, S3-GetBucketOwnershipControls, S3-GetBucketPolicy, S3-GetBucketPublicAccessBlock, S3-GetBucketReplication, S3-GetBucketRequestPayment, S3-GetBucketTagging, S3-GetBucketVersioning, S3-GetObjectLockConfiguration, S3-ListBuckets, SES-GetIdentityVerificationAttributes, SSM-DescribeParameters, SSM-GetParameters, ServiceCatalog-ListApplications, events-ListRules, events-ListTargetsByRule"
+     "value": "AppSync-GetIntrospectionSchema, Bedrock-Converse, Billing-GetCredits, CloudWatch-DescribeAlarms, CloudWatch-DescribeAlarmsForMetric, CostExplorer-GetCostAndUsage, CostExplorer-GetCostForecast, ECR-DescribeImages, ECR-DescribeRepositories, ELBv2-DescribeListeners, ELBv2-DescribeLoadBalancers, GuardDuty-GetDetector, GuardDuty-GetFindings, GuardDuty-ListDetectors, GuardDuty-ListFindings, GuardDuty-ListIPSets, Health-DescribeEventAggregates, Health-DescribeEvents, KMS-DescribeKey, KMS-GetKeyPolicy, Lambda-GetFunction20150331v2, Lambda-GetFunctionConfiguration20150331v2, Lambda-ListFunctions20150331, Organizations-DescribeOrganization, Organizations-ListAccounts, Organizations-ListOrganizationalUnitsForParent, S3-GetBucketAccelerateConfiguration, S3-GetBucketAcl, S3-GetBucketLifecycle, S3-GetBucketLocation, S3-GetBucketLogging, S3-GetBucketOwnershipControls, S3-GetBucketPolicy, S3-GetBucketPublicAccessBlock, S3-GetBucketReplication, S3-GetBucketRequestPayment, S3-GetBucketTagging, S3-GetBucketVersioning, S3-GetObjectLockConfiguration, S3-ListBuckets, SES-GetIdentityVerificationAttributes, SSM-DescribeParameters, SSM-GetParameters, ServiceCatalog-ListApplications, events-ListRules, events-ListTargetsByRule"
     }
    ],
    "links": [
@@ -1161,12 +1161,12 @@
    "techniqueID": "T1580",
    "tactic": "discovery",
    "color": "#8ECAE6",
-   "comment": "102 catalogued CloudTrail events in TrailDiscover (88 seen in the wild)",
+   "comment": "107 catalogued CloudTrail events in TrailDiscover (94 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "Athena-GetQueryResults, Bedrock-GetFoundationModelAvailability, Bedrock-GetKnowledgeBase, Bedrock-GetModelInvocationLoggingConfiguration, Bedrock-GetUseCaseForModelAccess, Bedrock-InvokeModel, Bedrock-ListAgents, Bedrock-ListCustomModels, Bedrock-ListFoundationModelAgreementOffers, Bedrock-ListFoundationModels, Bedrock-ListInferenceProfiles, Bedrock-ListKnowledgeBases, Bedrock-ListModelInvocationJobs, Bedrock-ListProvisionedModelThroughputs, BedrockAgentCore-GetMemory, CloudWatchLogs-DescribeLogGroups, CloudWatchLogs-DescribeLogStreams, CloudWatchLogs-DescribeSubscriptionFilters, CloudWatchLogs-GetLogRecord, EC2-DescribeAccountAttributes, EC2-DescribeAvailabilityZones, EC2-DescribeBundleTasks, EC2-DescribeCarrierGateways, EC2-DescribeClientVpnRoutes, EC2-DescribeDhcpOptions, EC2-DescribeFlowLogs, EC2-DescribeHosts, EC2-DescribeImages, EC2-DescribeInstanceAttribute, EC2-DescribeInstanceStatus, EC2-DescribeInstanceTypes, EC2-DescribeInstances, EC2-DescribeInternetGateways, EC2-DescribeKeyPairs, EC2-DescribeLaunchTemplates, EC2-DescribeNetworkInterfaces, EC2-DescribeRegions, EC2-DescribeRouteTables, EC2-DescribeSecurityGroups, EC2-DescribeSnapshotAttribute, EC2-DescribeSnapshotTierStatus, EC2-DescribeSnapshots, EC2-DescribeSubnets, EC2-DescribeTags, EC2-DescribeTransitGatewayMulticastDomains, EC2-DescribeVolumeStatus, EC2-DescribeVolumes, EC2-DescribeVolumesModifications, EC2-DescribeVpcEndpointConnectionNotifications, EC2-DescribeVpcs, EC2-GetConsoleScreenshot, EC2-GetEbsDefaultKmsKeyId, EC2-GetEbsEncryptionByDefault, EC2-GetFlowLogsIntegrationTemplate, EC2-GetLaunchTemplateData, EC2-GetTransitGatewayRouteTableAssociations, ECS-DescribeTaskDefinition, ECS-DescribeTasks, ECS-ListClusters, ECS-ListTaskDefinitions, ECS-ListTasks, EKS-DescribeAccessEntry, EKS-DescribeCluster, EKS-ListAssociatedAccessPolicies, EKS-ListClusters, LightSail-GetInstances, LightSail-GetRegions, Marketplace-GetListingView, Marketplace-SearchAgreements, OpenSearchServerless-ListCollections, RDS-DescribeBlueGreenDeployments, RDS-DescribeDBClusters, RDS-DescribeDBEngineVersions, RDS-DescribeDBInstances, RDS-DescribeDBProxies, RDS-DescribeDBSnapshots, RDS-DescribeDBSubnetGroups, RDS-DescribeExportTasks, RDS-DescribeGlobalClusters, RDS-DescribeOrderableDBInstanceOptions, RDS-DescribePendingMaintenanceActions, RDS-DescribeValidDBInstanceModifications, Route53-GetHostedZoneCount, Route53-ListHostedZones, S3Vectors-ListIndexes, S3Vectors-ListVectors, SES-GetSendQuota, SNS-GetSMSAttributes, SNS-GetSMSSandboxAccountStatus, SNS-GetTopicAttributes, SNS-ListOriginationNumbers, SNS-ListSubscriptions, SNS-ListTopics, SQS-GetQueueAttributes, SSM-DescribeInstanceInformation, SSO-ListInstances, SageMaker-ListEndpoints, SageMaker-ListModels, SageMaker-ListTrainingJobs, ServiceQuotas-GetServiceQuota, ServiceQuotas-ListServiceQuotas, route53domains-ListDomains"
+     "value": "APIGateway-GetRestApis, Athena-GetQueryResults, Bedrock-GetFoundationModelAvailability, Bedrock-GetKnowledgeBase, Bedrock-GetModelInvocationLoggingConfiguration, Bedrock-GetUseCaseForModelAccess, Bedrock-InvokeModel, Bedrock-ListAgents, Bedrock-ListCustomModels, Bedrock-ListFoundationModelAgreementOffers, Bedrock-ListFoundationModels, Bedrock-ListInferenceProfiles, Bedrock-ListKnowledgeBases, Bedrock-ListModelInvocationJobs, Bedrock-ListProvisionedModelThroughputs, BedrockAgentCore-GetMemory, CloudWatchLogs-DescribeLogGroups, CloudWatchLogs-DescribeLogStreams, CloudWatchLogs-DescribeSubscriptionFilters, CloudWatchLogs-GetLogRecord, CognitoIdentityProvider-ListUserPools, EC2-DescribeAccountAttributes, EC2-DescribeAvailabilityZones, EC2-DescribeBundleTasks, EC2-DescribeCarrierGateways, EC2-DescribeClientVpnRoutes, EC2-DescribeDhcpOptions, EC2-DescribeFlowLogs, EC2-DescribeHosts, EC2-DescribeImages, EC2-DescribeInstanceAttribute, EC2-DescribeInstanceStatus, EC2-DescribeInstanceTypes, EC2-DescribeInstances, EC2-DescribeInternetGateways, EC2-DescribeKeyPairs, EC2-DescribeLaunchTemplates, EC2-DescribeNetworkInterfaces, EC2-DescribeRegions, EC2-DescribeRouteTables, EC2-DescribeSecurityGroups, EC2-DescribeSnapshotAttribute, EC2-DescribeSnapshotTierStatus, EC2-DescribeSnapshots, EC2-DescribeSubnets, EC2-DescribeTags, EC2-DescribeTransitGatewayMulticastDomains, EC2-DescribeVolumeStatus, EC2-DescribeVolumes, EC2-DescribeVolumesModifications, EC2-DescribeVpcEndpointConnectionNotifications, EC2-DescribeVpcs, EC2-GetConsoleScreenshot, EC2-GetEbsDefaultKmsKeyId, EC2-GetEbsEncryptionByDefault, EC2-GetFlowLogsIntegrationTemplate, EC2-GetLaunchTemplateData, EC2-GetTransitGatewayRouteTableAssociations, ECS-DescribeTaskDefinition, ECS-DescribeTasks, ECS-ListClusters, ECS-ListTaskDefinitions, ECS-ListTasks, EKS-DescribeAccessEntry, EKS-DescribeCluster, EKS-ListAssociatedAccessPolicies, EKS-ListClusters, Glue-GetDatabases, KMS-ListAliases, KMS-ListKeys, LightSail-GetInstances, LightSail-GetRegions, Marketplace-GetListingView, Marketplace-SearchAgreements, OpenSearchServerless-ListCollections, RDS-DescribeBlueGreenDeployments, RDS-DescribeDBClusters, RDS-DescribeDBEngineVersions, RDS-DescribeDBInstances, RDS-DescribeDBProxies, RDS-DescribeDBSnapshots, RDS-DescribeDBSubnetGroups, RDS-DescribeExportTasks, RDS-DescribeGlobalClusters, RDS-DescribeOrderableDBInstanceOptions, RDS-DescribePendingMaintenanceActions, RDS-DescribeValidDBInstanceModifications, Route53-GetHostedZoneCount, Route53-ListHostedZones, S3Vectors-ListIndexes, S3Vectors-ListVectors, SES-GetSendQuota, SNS-GetSMSAttributes, SNS-GetSMSSandboxAccountStatus, SNS-GetTopicAttributes, SNS-ListOriginationNumbers, SNS-ListSubscriptions, SNS-ListTopics, SQS-GetQueueAttributes, SSM-DescribeInstanceInformation, SSO-ListInstances, SageMaker-ListEndpoints, SageMaker-ListModels, SageMaker-ListTrainingJobs, ServiceQuotas-GetServiceQuota, ServiceQuotas-ListServiceQuotas, route53domains-ListDomains"
     }
    ],
    "links": [
@@ -1421,12 +1421,12 @@
    "techniqueID": "T1530",
    "tactic": "collection",
    "color": "#8ECAE6",
-   "comment": "8 catalogued CloudTrail events in TrailDiscover (2 seen in the wild)",
+   "comment": "9 catalogued CloudTrail events in TrailDiscover (3 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "Bedrock-Retrieve, Bedrock-RetrieveAndGenerate, BedrockAgentCore-RetrieveMemoryRecords, ECR-BatchGetImage, KMS-Decrypt, RedshiftData-ExecuteStatement, S3Vectors-GetVectors, S3Vectors-QueryVectors"
+     "value": "Bedrock-Retrieve, Bedrock-RetrieveAndGenerate, BedrockAgentCore-RetrieveMemoryRecords, CloudWatchLogs-FilterLogEvents, ECR-BatchGetImage, KMS-Decrypt, RedshiftData-ExecuteStatement, S3Vectors-GetVectors, S3Vectors-QueryVectors"
     }
    ],
    "links": [
@@ -1481,12 +1481,12 @@
    "techniqueID": "T1537",
    "tactic": "exfiltration",
    "color": "#8ECAE6",
-   "comment": "16 catalogued CloudTrail events in TrailDiscover (10 seen in the wild)",
+   "comment": "18 catalogued CloudTrail events in TrailDiscover (10 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "EC2-CreateImage, EC2-CreateInstanceExportTask, EC2-CreateSnapshot, EC2-ModifyImageAttribute, EC2-ModifySnapshotAttribute, EC2-SharedSnapshotCopyInitiated, EC2-SharedSnapshotVolumeCreated, RDS-CreateDBSecurityGroup, RDS-CreateDBSnapshot, RDS-ModifyDBSnapshotAttribute, RDS-StartExportTask, S3-JobCreated, S3-PutBucketReplication, S3-PutBucketVersioning, TransferFamily-CreateServer, TransferFamily-CreateUser"
+     "value": "EC2-CopyVolumes, EC2-CreateImage, EC2-CreateInstanceExportTask, EC2-CreateSnapshot, EC2-ModifyImageAttribute, EC2-ModifySnapshotAttribute, EC2-SharedSnapshotCopyInitiated, EC2-SharedSnapshotVolumeCreated, RAM-AssociateResourceShare, RDS-CreateDBSecurityGroup, RDS-CreateDBSnapshot, RDS-ModifyDBSnapshotAttribute, RDS-StartExportTask, S3-JobCreated, S3-PutBucketReplication, S3-PutBucketVersioning, TransferFamily-CreateServer, TransferFamily-CreateUser"
     }
    ],
    "links": [
@@ -1601,12 +1601,12 @@
    "techniqueID": "T1496",
    "tactic": "impact",
    "color": "#8ECAE6",
-   "comment": "32 catalogued CloudTrail events in TrailDiscover (32 seen in the wild)",
+   "comment": "33 catalogued CloudTrail events in TrailDiscover (33 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "Bedrock-CreateFoundationModelAgreement, Bedrock-InvokeModel, Bedrock-InvokeModelWithResponseStream, Bedrock-PutFoundationModelEntitlement, Bedrock-PutUseCaseForModelAccess, CloudFormation-CreateStack, DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, EC2-CreateAutoScalingGroup, EC2-CreateDefaultVpc, EC2-CreateLaunchTemplate, EC2-RunInstances, EC2-StartInstances, ECS-CreateCluster, ECS-CreateService, ECS-RegisterTaskDefinition, Lambda-CreateFunction20150331, Lambda-Invoke, Lambda-UpdateFunctionCode20150331v2, Lightsail-CreateInstances, Route53-ChangeResourceRecordSets, Route53-CreateHostedZone, SES-CreateEmailIdentity, SES-SendEmail, SES-SendRawEmail, SES-UpdateAccountSendingEnabled, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, SES-VerifyEmailIdentity, SNS-Publish, ServiceQuotas-RequestServiceQuotaIncrease, WorkMail-CreateOrganization"
+     "value": "Bedrock-Converse, Bedrock-CreateFoundationModelAgreement, Bedrock-InvokeModel, Bedrock-InvokeModelWithResponseStream, Bedrock-PutFoundationModelEntitlement, Bedrock-PutUseCaseForModelAccess, CloudFormation-CreateStack, DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, EC2-CreateAutoScalingGroup, EC2-CreateDefaultVpc, EC2-CreateLaunchTemplate, EC2-RunInstances, EC2-StartInstances, ECS-CreateCluster, ECS-CreateService, ECS-RegisterTaskDefinition, Lambda-CreateFunction20150331, Lambda-Invoke, Lambda-UpdateFunctionCode20150331v2, Lightsail-CreateInstances, Route53-ChangeResourceRecordSets, Route53-CreateHostedZone, SES-CreateEmailIdentity, SES-SendEmail, SES-SendRawEmail, SES-UpdateAccountSendingEnabled, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, SES-VerifyEmailIdentity, SNS-Publish, ServiceQuotas-RequestServiceQuotaIncrease, WorkMail-CreateOrganization"
     }
    ],
    "links": [
@@ -1621,12 +1621,12 @@
    "techniqueID": "T1496.004",
    "tactic": "impact",
    "color": "#8ECAE6",
-   "comment": "7 catalogued CloudTrail events in TrailDiscover (7 seen in the wild)",
+   "comment": "8 catalogued CloudTrail events in TrailDiscover (8 seen in the wild)",
    "enabled": true,
    "metadata": [
     {
      "name": "Events",
-     "value": "DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, SES-SendEmail, SES-SendRawEmail, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, WorkMail-CreateOrganization"
+     "value": "Bedrock-Converse, DirectoryService-AuthorizeApplication, DirectoryService-CreateAlias, SES-SendEmail, SES-SendRawEmail, SES-VerifyDomainDkim, SES-VerifyDomainIdentity, WorkMail-CreateOrganization"
     }
    ],
    "links": [

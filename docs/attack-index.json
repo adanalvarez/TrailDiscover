@@ -1,6 +1,6 @@
 {
  "attackVersion": "18.1",
- "dataVersion": "eea1f3dcdf59",
+ "dataVersion": "15143b8c1385",
  "tactics": [
   {
    "id": "TA0043",
@@ -386,6 +386,9 @@
    "tactic": "TA0001",
    "technique": "T1078",
    "events": [
+    "CognitoIdentityProvider-InitiateAuth",
+    "CognitoIdentityProvider-RespondToAuthChallenge",
+    "CognitoIdentityProvider-SignUp",
     "STS-AssumeRole",
     "SignIn-AuthorizeOAuth2Access",
     "SignIn-ConsoleLogin",
@@ -398,6 +401,9 @@
    "tactic": "TA0001",
    "technique": "T1078.004",
    "events": [
+    "CognitoIdentityProvider-InitiateAuth",
+    "CognitoIdentityProvider-RespondToAuthChallenge",
+    "CognitoIdentityProvider-SignUp",
     "STS-AssumeRole",
     "SignIn-AuthorizeOAuth2Access",
     "SignIn-ConsoleLogin",
@@ -478,6 +484,7 @@
    "technique": "T1078",
    "events": [
     "CognitoIdentityProvider-GetTokensFromRefreshToken",
+    "CognitoIdentityProvider-SignUp",
     "IAM-ChangePassword",
     "IAM-CreateAccessKey",
     "IAM-CreateLoginProfile",
@@ -497,6 +504,7 @@
    "technique": "T1078.004",
    "events": [
     "CognitoIdentityProvider-GetTokensFromRefreshToken",
+    "CognitoIdentityProvider-SignUp",
     "IAM-ChangePassword",
     "IAM-CreateAccessKey",
     "IAM-CreateLoginProfile",
@@ -576,6 +584,7 @@
     "APIGateway-CreateIntegration",
     "APIGateway-CreateRoute",
     "APIGateway-CreateStage",
+    "CognitoIdentityProvider-SignUp",
     "IAM-ChangePassword",
     "IAM-CreateAccessKey",
     "IAM-CreateOpenIDConnectProvider",
@@ -603,6 +612,7 @@
     "APIGateway-CreateIntegration",
     "APIGateway-CreateRoute",
     "APIGateway-CreateStage",
+    "CognitoIdentityProvider-SignUp",
     "IAM-CreateAccessKey",
     "IAM-CreateOpenIDConnectProvider",
     "IAM-CreateRole",
@@ -978,6 +988,7 @@
    "tactic": "TA0006",
    "technique": "T1552",
    "events": [
+    "CloudWatchLogs-FilterLogEvents",
     "SSM-DescribeParameters",
     "SSM-GetParameters"
    ]
@@ -987,6 +998,7 @@
    "technique": "T1555",
    "events": [
     "EC2-GetPasswordData",
+    "SSM-GetParameter",
     "SecretsManager-DescribeSecret",
     "SecretsManager-GetSecretValue",
     "SecretsManager-ListSecrets"
@@ -996,6 +1008,7 @@
    "tactic": "TA0006",
    "technique": "T1555.006",
    "events": [
+    "SSM-GetParameter",
     "SecretsManager-DescribeSecret",
     "SecretsManager-GetSecretValue"
    ]
@@ -1026,6 +1039,7 @@
    "tactic": "TA0007",
    "technique": "T1087",
    "events": [
+    "CognitoIdentityProvider-GetUser",
     "IAM-GetAccountAuthorizationDetails",
     "IAM-GetLoginProfile",
     "IAM-GetUser",
@@ -1060,6 +1074,7 @@
    "tactic": "TA0007",
    "technique": "T1087.004",
    "events": [
+    "CognitoIdentityProvider-GetUser",
     "IAM-GetAccountAuthorizationDetails",
     "IAM-GetLoginProfile",
     "IAM-GetUser",
@@ -1082,6 +1097,8 @@
    "technique": "T1526",
    "events": [
     "AppSync-GetIntrospectionSchema",
+    "Bedrock-Converse",
+    "Billing-GetCredits",
     "CloudWatch-DescribeAlarms",
     "CloudWatch-DescribeAlarmsForMetric",
     "CostExplorer-GetCostAndUsage",
@@ -1098,6 +1115,7 @@
     "Health-DescribeEventAggregates",
     "Health-DescribeEvents",
     "KMS-DescribeKey",
+    "KMS-GetKeyPolicy",
     "Lambda-GetFunction20150331v2",
     "Lambda-GetFunctionConfiguration20150331v2",
     "Lambda-ListFunctions20150331",
@@ -1130,6 +1148,7 @@
    "tactic": "TA0007",
    "technique": "T1580",
    "events": [
+    "APIGateway-GetRestApis",
     "Athena-GetQueryResults",
     "Bedrock-GetFoundationModelAvailability",
     "Bedrock-GetKnowledgeBase",
@@ -1149,6 +1168,7 @@
     "CloudWatchLogs-DescribeLogStreams",
     "CloudWatchLogs-DescribeSubscriptionFilters",
     "CloudWatchLogs-GetLogRecord",
+    "CognitoIdentityProvider-ListUserPools",
     "EC2-DescribeAccountAttributes",
     "EC2-DescribeAvailabilityZones",
     "EC2-DescribeBundleTasks",
@@ -1195,6 +1215,9 @@
     "EKS-DescribeCluster",
     "EKS-ListAssociatedAccessPolicies",
     "EKS-ListClusters",
+    "Glue-GetDatabases",
+    "KMS-ListAliases",
+    "KMS-ListKeys",
     "LightSail-GetInstances",
     "LightSail-GetRegions",
     "Marketplace-GetListingView",
@@ -1353,6 +1376,7 @@
     "Bedrock-Retrieve",
     "Bedrock-RetrieveAndGenerate",
     "BedrockAgentCore-RetrieveMemoryRecords",
+    "CloudWatchLogs-FilterLogEvents",
     "ECR-BatchGetImage",
     "KMS-Decrypt",
     "RedshiftData-ExecuteStatement",
@@ -1382,6 +1406,7 @@
    "tactic": "TA0010",
    "technique": "T1537",
    "events": [
+    "EC2-CopyVolumes",
     "EC2-CreateImage",
     "EC2-CreateInstanceExportTask",
     "EC2-CreateSnapshot",
@@ -1389,6 +1414,7 @@
     "EC2-ModifySnapshotAttribute",
     "EC2-SharedSnapshotCopyInitiated",
     "EC2-SharedSnapshotVolumeCreated",
+    "RAM-AssociateResourceShare",
     "RDS-CreateDBSecurityGroup",
     "RDS-CreateDBSnapshot",
     "RDS-ModifyDBSnapshotAttribute",
@@ -1462,6 +1488,7 @@
    "tactic": "TA0040",
    "technique": "T1496",
    "events": [
+    "Bedrock-Converse",
     "Bedrock-CreateFoundationModelAgreement",
     "Bedrock-InvokeModel",
     "Bedrock-InvokeModelWithResponseStream",
@@ -1500,6 +1527,7 @@
    "tactic": "TA0040",
    "technique": "T1496.004",
    "events": [
+    "Bedrock-Converse",
     "DirectoryService-AuthorizeApplication",
     "DirectoryService-CreateAlias",
     "SES-SendEmail",

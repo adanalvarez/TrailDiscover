@@ -1,0 +1,33 @@
+{
+    "eventName": "InitiateAuth",
+    "eventSource": "cognito-idp.amazonaws.com",
+    "awsService": "CognitoIdentityProvider",
+    "description": "Declares an authentication flow and initiates sign-in for a user in the Amazon Cognito user directory. Amazon Cognito might respond with an additional challenge or an AuthenticationResult that contains the outcome of a successful authentication.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use InitiateAuth to sign in to a user pool with self-registered or stolen credentials and obtain ID, access and refresh tokens that grant access to the application and, through an identity pool, to AWS credentials.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cognito-idp initiate-auth --client-id TrailDiscoverClientId --auth-flow USER_PASSWORD_AUTH --auth-parameters 'USERNAME=TrailDiscover,PASSWORD=TrailDiscover1!'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-InitiateAuth"
+}
