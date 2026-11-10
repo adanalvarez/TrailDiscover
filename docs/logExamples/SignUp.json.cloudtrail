@@ -1,0 +1,39 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "Unknown",
+            "principalId": "AROA****************:User"
+        },
+        "eventTime": "2026-11-10T19:34:00Z",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "eventName": "SignUp",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython m/Z,E,n,b cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#cognito-idp.sign-up",
+        "requestParameters": {
+            "clientId": "TrailDiscoverClientId",
+            "username": "HIDDEN_DUE_TO_SECURITY_REASONS",
+            "password": "HIDDEN_DUE_TO_SECURITY_REASONS"
+        },
+        "responseElements": {
+            "userConfirmed": false,
+            "userSub": "11111111-1111-1111-1111-111111111111"
+        },
+        "additionalEventData": {
+            "sub": "11111111-1111-1111-1111-111111111111"
+        },
+        "requestID": "1726eda9-8696-4447-8630-cc24fbf9748c",
+        "eventID": "32983deb-4ced-41f2-aa67-66b046ac4dcc",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "cognito-idp.us-east-1.amazonaws.com"
+        }
+    }
+]
