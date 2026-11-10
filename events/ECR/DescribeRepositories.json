@@ -25,6 +25,10 @@
         {
             "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
             "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+        },
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
         }
     ],
     "researchLinks": [],

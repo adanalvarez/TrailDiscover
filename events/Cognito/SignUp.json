@@ -1,0 +1,36 @@
+{
+    "eventName": "SignUp",
+    "eventSource": "cognito-idp.amazonaws.com",
+    "awsService": "CognitoIdentityProvider",
+    "description": "Registers a user with an app client and requests a user name, password, and user attributes in the user pool.",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access",
+        "TA0003 - Persistence"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts",
+        "T1136 - Create Account"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts",
+        "T1136.003 - Create Account: Cloud Account"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use SignUp to self-register an account in a user pool that allows public sign-up, obtaining authenticated tokens that they can exchange for AWS credentials through an identity pool or use against the application's APIs.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cognito-idp sign-up --client-id TrailDiscoverClientId --username TrailDiscover --password 'TrailDiscover1!'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-SignUp"
+}

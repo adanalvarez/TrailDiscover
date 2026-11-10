@@ -1,0 +1,31 @@
+{
+    "eventName": "GetRestApis",
+    "eventSource": "apigateway.amazonaws.com",
+    "awsService": "APIGateway",
+    "description": "Lists the RestApis resources for your collection.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use GetRestApis to enumerate the REST APIs in an account and find exposed endpoints and backend integrations to target.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws apigateway get-rest-apis"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-GET"
+}

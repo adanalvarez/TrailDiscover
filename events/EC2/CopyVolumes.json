@@ -1,0 +1,31 @@
+{
+    "eventName": "CopyVolumes",
+    "eventSource": "ec2.amazonaws.com",
+    "awsService": "EC2",
+    "description": "Creates a crash-consistent, point-in-time copy of an existing Amazon EBS volume within the same Availability Zone. The volume copy can be attached to an Amazon EC2 instance once it reaches the available state.",
+    "mitreAttackTactics": [
+        "TA0010 - Exfiltration"
+    ],
+    "mitreAttackTechniques": [
+        "T1537 - Transfer Data to Cloud Account"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Share an EBS Volume for Cross-Account Cloning",
+            "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume/"
+        }
+    ],
+    "securityImplications": "Attackers might use CopyVolumes on an EBS volume shared with their account to clone the victim's data; the call is also logged in the owner's account, with the attacker's account as the caller.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws ec2 copy-volumes --source-volume-id vol-0123456789abcdef0"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CopyVolumes"
+}

@@ -1104,6 +1104,41 @@
         "permissions": "https://aws.permissions.cloud/iam/aoss#aoss-ListCollections"
     },
     {
+        "eventName": "AssociateResourceShare",
+        "eventSource": "ram.amazonaws.com",
+        "awsService": "RAM",
+        "description": "Adds the specified list of principals and list of resources to a resource share. Principals that already have access to this resource share immediately receive access to the added resources. Newly added principals immediately receive access to the resources shared in this resource share.",
+        "mitreAttackTactics": [
+            "TA0010 - Exfiltration"
+        ],
+        "mitreAttackTechniques": [
+            "T1537 - Transfer Data to Cloud Account"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Share an EBS Volume for Cross-Account Cloning",
+                "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume/"
+            }
+        ],
+        "securityImplications": "Attackers might use AssociateResourceShare to share resources such as EBS volumes with an AWS account they control through AWS RAM, letting them clone and read the data outside the victim account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ram associate-resource-share --resource-share-arn arn:aws:ram:us-east-1:111111111111:resource-share/TrailDiscover --principals 123456789012 --resource-arns arn:aws:ec2:us-east-1:111111111111:volume/vol-0123456789abcdef0"
+            },
+            {
+                "type": "stratusRedTeam",
+                "value": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ram#ram-AssociateResourceShare"
+    },
+    {
         "eventName": "CreateStack",
         "eventSource": "cloudformation.amazonaws.com",
         "awsService": "CloudFormation",
@@ -1190,6 +1225,10 @@
             {
                 "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
                 "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -1461,6 +1500,10 @@
             {
                 "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
                 "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -1487,6 +1530,10 @@
             {
                 "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
                 "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
+            },
+            {
+                "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+                "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
             }
         ],
         "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",
@@ -1853,8 +1900,13 @@
                 "reason": "The information retrieved via ListSubscriptions can reveal details about services in the AWS environment, helping an attacker understand available resources and configurations."
             }
         ],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",
@@ -2182,6 +2234,10 @@
             {
                 "description": "What the March 2026 Threat Technique Catalog update means for your AWS environment",
                 "link": "https://aws.amazon.com/blogs/security/what-the-march-2026-threat-technique-catalog-update-means-for-your-aws-environment/"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
             }
         ],
         "researchLinks": [],
@@ -2194,6 +2250,172 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-GetTokensFromRefreshToken"
+    },
+    {
+        "eventName": "GetUser",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Gets user attributes and MFA settings for the currently signed-in user.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1087 - Account Discovery"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1087.004 - Account Discovery: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetUser with a user pool access token to read the signed-in user's attributes, such as custom role or tenant attributes, and learn how the application authorizes users.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp get-user --access-token TrailDiscoverAccessToken"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-GetUser"
+    },
+    {
+        "eventName": "InitiateAuth",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Declares an authentication flow and initiates sign-in for a user in the Amazon Cognito user directory. Amazon Cognito might respond with an additional challenge or an AuthenticationResult that contains the outcome of a successful authentication.",
+        "mitreAttackTactics": [
+            "TA0001 - Initial Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use InitiateAuth to sign in to a user pool with self-registered or stolen credentials and obtain ID, access and refresh tokens that grant access to the application and, through an identity pool, to AWS credentials.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp initiate-auth --client-id TrailDiscoverClientId --auth-flow USER_PASSWORD_AUTH --auth-parameters 'USERNAME=TrailDiscover,PASSWORD=TrailDiscover1!'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-InitiateAuth"
+    },
+    {
+        "eventName": "ListUserPools",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Lists user pools and their details in the current Amazon Web Services account.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListUserPools to enumerate the Cognito user pools in an account and find user directories and app clients to target for sign-up, sign-in or user enumeration.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp list-user-pools --max-results 60"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-ListUserPools"
+    },
+    {
+        "eventName": "RespondToAuthChallenge",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Some API operations in a user pool generate a challenge, like a prompt for an MFA code, for device authentication that bypasses MFA, or for a custom authentication challenge. A RespondToAuthChallenge API request provides the answer to that challenge, like a code or a secure remote password (SRP).",
+        "mitreAttackTactics": [
+            "TA0001 - Initial Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use RespondToAuthChallenge to complete a user pool sign-in that requires an extra step, such as SRP, a new password or an MFA code, and obtain tokens for the account.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp respond-to-auth-challenge --client-id TrailDiscoverClientId --challenge-name NEW_PASSWORD_REQUIRED --session TrailDiscoverSession --challenge-responses 'USERNAME=TrailDiscover,NEW_PASSWORD=TrailDiscover2!'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-RespondToAuthChallenge"
+    },
+    {
+        "eventName": "SignUp",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "awsService": "CognitoIdentityProvider",
+        "description": "Registers a user with an app client and requests a user name, password, and user attributes in the user pool.",
+        "mitreAttackTactics": [
+            "TA0001 - Initial Access",
+            "TA0003 - Persistence"
+        ],
+        "mitreAttackTechniques": [
+            "T1078 - Valid Accounts",
+            "T1136 - Create Account"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1078.004 - Valid Accounts: Cloud Accounts",
+            "T1136.003 - Create Account: Cloud Account"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use SignUp to self-register an account in a user pool that allows public sign-up, obtaining authenticated tokens that they can exchange for AWS credentials through an identity pool or use against the application's APIs.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws cognito-idp sign-up --client-id TrailDiscoverClientId --username TrailDiscover --password 'TrailDiscover1!'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-SignUp"
     },
     {
         "eventName": "CreateLogStream",
@@ -2489,6 +2711,10 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
             }
         ],
         "researchLinks": [],
@@ -2605,6 +2831,44 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/logs#logs-DescribeSubscriptionFilters"
+    },
+    {
+        "eventName": "FilterLogEvents",
+        "eventSource": "logs.amazonaws.com",
+        "awsService": "CloudWatchLogs",
+        "description": "Lists log events from the specified log group. You can list all the log events or filter the results using one or more of the following: a filter pattern, a time range, and the log stream name, or a log stream name prefix that matches multiple log streams.",
+        "mitreAttackTactics": [
+            "TA0006 - Credential Access",
+            "TA0009 - Collection"
+        ],
+        "mitreAttackTechniques": [
+            "T1552 - Unsecured Credentials",
+            "T1530 - Data from Cloud Storage"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use FilterLogEvents to search CloudWatch Logs for secrets such as access keys and passwords, presigned URLs, internal IP addresses or references to sensitive files, harvesting credentials and data that applications wrote to their logs.",
+        "alerting": [
+            {
+                "type": "splunk",
+                "value": "https://research.splunk.com/cloud/3f0ba9e1-c6cf-4317-a6bc-c4bcab2b5a06/"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws logs filter-log-events --log-group-name TrailDiscover --filter-pattern AKIA"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/logs#logs-FilterLogEvents"
     },
     {
         "eventName": "GetLogRecord",
@@ -3357,6 +3621,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -3496,6 +3764,10 @@
             {
                 "description": "NATS-as-C2: Inside a new technique attackers are using to harvest cloud credentials and AI API keys",
                 "link": "https://www.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
             }
         ],
         "researchLinks": [
@@ -3853,6 +4125,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/workmail#workmail-RegisterToWorkMail"
+    },
+    {
+        "eventName": "GetCredits",
+        "eventSource": "billing.amazonaws.com",
+        "awsService": "Billing",
+        "description": "Returns the list of AWS account credits for the specified account. Each credit includes its identifier, type, monetary amounts, applicable products, expiration, sharing configuration, and current enabled status.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+                "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
+            }
+        ],
+        "securityImplications": "Attackers might use GetCredits to check how much promotional credit a compromised account has, picking accounts where LLMjacking or other resource hijacking is absorbed by credits and noticed later.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws billing get-credits --account-id 111111111111 --start-date 1767225600"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/billing#billing-GetCredits"
     },
     {
         "eventName": "GetQueryResults",
@@ -5304,6 +5607,10 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
             }
         ],
         "researchLinks": [],
@@ -7551,6 +7858,10 @@
             {
                 "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
                 "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -8570,6 +8881,10 @@
             {
                 "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
                 "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -8667,6 +8982,14 @@
             {
                 "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
                 "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -9358,8 +9681,13 @@
         ],
         "mitreAttackSubTechniques": [],
         "unverifiedMitreAttackTechniques": [],
-        "usedInWild": false,
-        "incidents": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
         "researchLinks": [
             {
                 "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",
@@ -9491,6 +9819,99 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/kms#kms-GenerateDataKeyWithoutPlaintext"
+    },
+    {
+        "eventName": "GetKeyPolicy",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Gets a key policy attached to the specified KMS key.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetKeyPolicy to learn which principals can use or manage a KMS key, finding identities they can use to decrypt data or a policy they could change to lock the owner out.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms get-key-policy --key-id 1234abcd-12ab-34cd-56ef-1234567890ab --policy-name default"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-GetKeyPolicy"
+    },
+    {
+        "eventName": "ListAliases",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Gets a list of aliases in the caller's Amazon Web Services account and region.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListAliases to map KMS key aliases to keys and find the keys that protect specific services or data.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms list-aliases"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-ListAliases"
+    },
+    {
+        "eventName": "ListKeys",
+        "eventSource": "kms.amazonaws.com",
+        "awsService": "KMS",
+        "description": "Gets a list of all KMS keys in the caller's Amazon Web Services account and Region.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use ListKeys to enumerate the KMS keys in an account and Region, identifying keys that protect data they want to decrypt or that could be abused in a ransomware attack.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws kms list-keys"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/kms#kms-ListKeys"
     },
     {
         "eventName": "PutKeyPolicy",
@@ -11085,6 +11506,14 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -11209,6 +11638,10 @@
             {
                 "description": "Tales from the cloud trenches: Amazon ECS is the new EC2 for crypto mining",
                 "link": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-ecs-crypto-mining/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -11377,6 +11810,14 @@
             {
                 "description": "From CI/CD to Cloud Data: How Shai Hulud Persistence Leads to Redshift Breach",
                 "link": "https://www.fortinet.com/blog/threat-research/from-ci-cd-to-cloud-data-how-shai-hulud-persistence-leads-to-redshift-breach"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -11443,6 +11884,14 @@
             {
                 "description": "Investigating Suspected DPRK-Linked Crypto Intrusions",
                 "link": "https://ctrlaltintel.com/threat%20research/DPRK-Crypto-Heist/"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -11917,6 +12366,58 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/s3#s3-PutObject"
+    },
+    {
+        "eventName": "Converse",
+        "eventSource": "bedrock.amazonaws.com",
+        "awsService": "Bedrock",
+        "description": "Sends messages to the specified Amazon Bedrock model. Converse provides a consistent interface that works with all models that support messages.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery",
+            "TA0040 - Impact"
+        ],
+        "mitreAttackTechniques": [
+            "T1526 - Cloud Service Discovery",
+            "T1496 - Resource Hijacking"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1496.004 - Resource Hijacking: Cloud Service Hijacking"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+                "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use Converse to test whether stolen credentials can invoke Bedrock models, sending a minimal prompt, and then to run inference at the victim's expense (LLMjacking).",
+        "alerting": [
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/discovery_bedrock_model_recon_and_invocation_via_long_term_key.toml"
+            },
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/credential_access_bedrock_invocation_high_number_of_countries.toml"
+            },
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/credential_access_bedrock_invocation_impossible_travel.toml"
+            },
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/exfiltration_bedrock_high_frequency_inference_api_probing.toml"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws bedrock-runtime converse --model-id amazon.nova-micro-v1:0 --messages '[{\"role\":\"user\",\"content\":[{\"text\":\"ping\"}]}]'"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/bedrock#bedrock-InvokeModel"
     },
     {
         "eventName": "CreateAgent",
@@ -12704,6 +13205,10 @@
             {
                 "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
                 "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
+            },
+            {
+                "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+                "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
             }
         ],
         "researchLinks": [
@@ -12757,6 +13262,10 @@
             {
                 "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
                 "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
+            },
+            {
+                "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+                "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
             }
         ],
         "researchLinks": [],
@@ -13556,6 +14065,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-AuthorizeSecurityGroupIngress"
+    },
+    {
+        "eventName": "CopyVolumes",
+        "eventSource": "ec2.amazonaws.com",
+        "awsService": "EC2",
+        "description": "Creates a crash-consistent, point-in-time copy of an existing Amazon EBS volume within the same Availability Zone. The volume copy can be attached to an Amazon EC2 instance once it reaches the available state.",
+        "mitreAttackTactics": [
+            "TA0010 - Exfiltration"
+        ],
+        "mitreAttackTechniques": [
+            "T1537 - Transfer Data to Cloud Account"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": false,
+        "incidents": [],
+        "researchLinks": [
+            {
+                "description": "Share an EBS Volume for Cross-Account Cloning",
+                "link": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.exfiltration.ec2-share-ebs-volume/"
+            }
+        ],
+        "securityImplications": "Attackers might use CopyVolumes on an EBS volume shared with their account to clone the victim's data; the call is also logged in the owner's account, with the attacker's account as the caller.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ec2 copy-volumes --source-volume-id vol-0123456789abcdef0"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ec2#ec2-CopyVolumes"
     },
     {
         "eventName": "CreateAutoScalingGroup",
@@ -15235,6 +15775,10 @@
             {
                 "description": "Compromised Cloud Compute Credentials: Case Studies From the Wild",
                 "link": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/#post-125981-_kdq0vw6banab"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -15486,6 +16030,10 @@
             {
                 "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
                 "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [
@@ -15797,6 +16345,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -16265,6 +16817,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -18233,6 +18789,10 @@
             {
                 "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
                 "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -18295,6 +18855,10 @@
             {
                 "description": "Crimson Collective: A New Threat Group Observed Operating in the Cloud",
                 "link": "https://www.rapid7.com/blog/post/tr-crimson-collective-a-new-threat-group-observed-operating-in-the-cloud/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -19011,6 +19575,37 @@
         "permissions": "https://aws.permissions.cloud/iam/glue#glue-CreateJob"
     },
     {
+        "eventName": "GetDatabases",
+        "eventSource": "glue.amazonaws.com",
+        "awsService": "Glue",
+        "description": "Retrieves all databases defined in a given Data Catalog.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetDatabases to enumerate the databases in the Glue Data Catalog and locate the tables, and the S3 data behind them, worth collecting.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws glue get-databases"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/glue#glue-GetDatabases"
+    },
+    {
         "eventName": "UpdateDevEndpoint",
         "eventSource": "glue.amazonaws.com",
         "awsService": "Glue",
@@ -19183,6 +19778,14 @@
             {
                 "description": "'ChainDrop' worm compromises hundreds of popular npm packages",
                 "link": "https://securitylabs.datadoghq.com/articles/npm-worm-compromises-popular-npm-packages/"
+            },
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            },
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
             }
         ],
         "researchLinks": [],
@@ -19195,6 +19798,48 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-DescribeParameters"
+    },
+    {
+        "eventName": "GetParameter",
+        "eventSource": "ssm.amazonaws.com",
+        "awsService": "SSM",
+        "description": "Get information about a single parameter by specifying the parameter name.",
+        "mitreAttackTactics": [
+            "TA0006 - Credential Access"
+        ],
+        "mitreAttackTechniques": [
+            "T1555 - Credentials from Password Stores"
+        ],
+        "mitreAttackSubTechniques": [
+            "T1555.006 - Credentials from Password Stores: Cloud Secrets Management Stores"
+        ],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+                "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetParameter with decryption to read SecureString parameters and harvest secrets such as API keys, database passwords or access keys stored in Parameter Store.",
+        "alerting": [
+            {
+                "type": "elastic",
+                "value": "https://github.com/elastic/detection-rules/blob/main/rules/integrations/aws/credential_access_retrieve_secure_string_parameters_via_ssm.toml"
+            },
+            {
+                "type": "panther",
+                "value": "https://github.com/panther-labs/panther-analysis/blob/develop/rules/aws_cloudtrail_rules/aws_ssm_decrypt_ssm_params.yml"
+            }
+        ],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws ssm get-parameter --name TrailDiscoverParameter --with-decryption"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/ssm#ssm-GetParameter"
     },
     {
         "eventName": "GetParameters",
@@ -21580,6 +22225,37 @@
             }
         ],
         "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-POST"
+    },
+    {
+        "eventName": "GetRestApis",
+        "eventSource": "apigateway.amazonaws.com",
+        "awsService": "APIGateway",
+        "description": "Lists the RestApis resources for your collection.",
+        "mitreAttackTactics": [
+            "TA0007 - Discovery"
+        ],
+        "mitreAttackTechniques": [
+            "T1580 - Cloud Infrastructure Discovery"
+        ],
+        "mitreAttackSubTechniques": [],
+        "unverifiedMitreAttackTechniques": [],
+        "usedInWild": true,
+        "incidents": [
+            {
+                "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+                "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+            }
+        ],
+        "researchLinks": [],
+        "securityImplications": "Attackers might use GetRestApis to enumerate the REST APIs in an account and find exposed endpoints and backend integrations to target.",
+        "alerting": [],
+        "simulation": [
+            {
+                "type": "commandLine",
+                "value": "aws apigateway get-rest-apis"
+            }
+        ],
+        "permissions": "https://aws.permissions.cloud/iam/apigateway#apigateway-GET"
     },
     {
         "eventName": "CreateAgentRuntime",

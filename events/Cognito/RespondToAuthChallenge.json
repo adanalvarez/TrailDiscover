@@ -1,0 +1,33 @@
+{
+    "eventName": "RespondToAuthChallenge",
+    "eventSource": "cognito-idp.amazonaws.com",
+    "awsService": "CognitoIdentityProvider",
+    "description": "Some API operations in a user pool generate a challenge, like a prompt for an MFA code, for device authentication that bypasses MFA, or for a custom authentication challenge. A RespondToAuthChallenge API request provides the answer to that challenge, like a code or a secure remote password (SRP).",
+    "mitreAttackTactics": [
+        "TA0001 - Initial Access"
+    ],
+    "mitreAttackTechniques": [
+        "T1078 - Valid Accounts"
+    ],
+    "mitreAttackSubTechniques": [
+        "T1078.004 - Valid Accounts: Cloud Accounts"
+    ],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use RespondToAuthChallenge to complete a user pool sign-in that requires an extra step, such as SRP, a new password or an MFA code, and obtain tokens for the account.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws cognito-idp respond-to-auth-challenge --client-id TrailDiscoverClientId --challenge-name NEW_PASSWORD_REQUIRED --session TrailDiscoverSession --challenge-responses 'USERNAME=TrailDiscover,NEW_PASSWORD=TrailDiscover2!'"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/cognito-idp#cognito-idp-RespondToAuthChallenge"
+}

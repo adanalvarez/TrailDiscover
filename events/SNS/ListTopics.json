@@ -20,8 +20,13 @@
             "reason": "The information retrieved via ListSubscriptions can reveal details about services in the AWS environment, helping an attacker understand available resources and configurations."
         }
     ],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+            "link": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/"
+        }
+    ],
     "researchLinks": [
         {
             "description": "NEW PHONE, WHO DIS? HOW CLOUD ENVIRONMENTS ARE EXPLOITED FOR SMISHING CAMPAIGNS",

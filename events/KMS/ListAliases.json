@@ -1,0 +1,31 @@
+{
+    "eventName": "ListAliases",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Gets a list of aliases in the caller's Amazon Web Services account and region.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListAliases to map KMS key aliases to keys and find the keys that protect specific services or data.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms list-aliases"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-ListAliases"
+}

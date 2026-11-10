@@ -41,6 +41,10 @@
         {
             "description": "The Blue Agent POV: Investigating Multi-Platform Data Exfiltration Across AWS and GitHub",
             "link": "https://www.wiz.io/blog/blue-agent-data-exfiltration-investigation"
+        },
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
         }
     ],
     "researchLinks": [

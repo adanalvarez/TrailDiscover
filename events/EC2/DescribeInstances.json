@@ -69,6 +69,10 @@
         {
             "description": "Machine speed, hold the AI: Hand-rolled marimo CVE-2026-39987 exploit",
             "link": "https://www.sysdig.com/blog/machine-speed-hold-the-ai-hand-rolled-marimo-cve-2026-39987-exploit"
+        },
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
         }
     ],
     "researchLinks": [

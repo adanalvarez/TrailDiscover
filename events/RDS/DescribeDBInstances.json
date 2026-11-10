@@ -24,6 +24,10 @@
         {
             "description": "Tracking TeamPCP: Investigating Post-Compromise Attacks Seen in the Wild",
             "link": "https://www.wiz.io/blog/tracking-teampcp-investigating-post-compromise-attacks-seen-in-the-wild"
+        },
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
         }
     ],
     "researchLinks": [],

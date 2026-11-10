@@ -1,0 +1,31 @@
+{
+    "eventName": "ListKeys",
+    "eventSource": "kms.amazonaws.com",
+    "awsService": "KMS",
+    "description": "Gets a list of all KMS keys in the caller's Amazon Web Services account and Region.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1580 - Cloud Infrastructure Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+        }
+    ],
+    "researchLinks": [],
+    "securityImplications": "Attackers might use ListKeys to enumerate the KMS keys in an account and Region, identifying keys that protect data they want to decrypt or that could be abused in a ransomware attack.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws kms list-keys"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/kms#kms-ListKeys"
+}

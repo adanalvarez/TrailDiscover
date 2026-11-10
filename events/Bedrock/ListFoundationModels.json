@@ -49,6 +49,10 @@
         {
             "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
             "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
+        },
+        {
+            "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+            "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
         }
     ],
     "researchLinks": [

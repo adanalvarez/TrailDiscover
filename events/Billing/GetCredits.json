@@ -1,0 +1,31 @@
+{
+    "eventName": "GetCredits",
+    "eventSource": "billing.amazonaws.com",
+    "awsService": "Billing",
+    "description": "Returns the list of AWS account credits for the specified account. Each credit includes its identifier, type, monetary amounts, applicable products, expiration, sharing configuration, and current enabled status.",
+    "mitreAttackTactics": [
+        "TA0007 - Discovery"
+    ],
+    "mitreAttackTechniques": [
+        "T1526 - Cloud Service Discovery"
+    ],
+    "mitreAttackSubTechniques": [],
+    "unverifiedMitreAttackTechniques": [],
+    "usedInWild": false,
+    "incidents": [],
+    "researchLinks": [
+        {
+            "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+            "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
+        }
+    ],
+    "securityImplications": "Attackers might use GetCredits to check how much promotional credit a compromised account has, picking accounts where LLMjacking or other resource hijacking is absorbed by credits and noticed later.",
+    "alerting": [],
+    "simulation": [
+        {
+            "type": "commandLine",
+            "value": "aws billing get-credits --account-id 111111111111 --start-date 1767225600"
+        }
+    ],
+    "permissions": "https://aws.permissions.cloud/iam/billing#billing-GetCredits"
+}

@@ -11,8 +11,13 @@
     ],
     "mitreAttackSubTechniques": [],
     "unverifiedMitreAttackTechniques": [],
-    "usedInWild": false,
-    "incidents": [],
+    "usedInWild": true,
+    "incidents": [
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
+        }
+    ],
     "researchLinks": [
         {
             "description": "Encrypting buckets for compliance and ransom - How Attackers Can Use KMS to Ransomware S3 Buckets",

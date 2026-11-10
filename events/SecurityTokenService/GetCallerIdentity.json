@@ -107,6 +107,10 @@
         {
             "description": "Attacker infrastructure, but vibe-coded: tracking the evolution of credential harvesting platforms",
             "link": "https://securitylabs.datadoghq.com/articles/attacker-infrastructure-but-vibe-coded/"
+        },
+        {
+            "description": "Trusted by Default: Qubole Cross-Account Access Abused in the Wild",
+            "link": "https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild"
         }
     ],
     "researchLinks": [
@@ -133,6 +137,10 @@
         {
             "description": "Detecting multi-stage attacks on AWS: A guide to cross-service signal correlation",
             "link": "https://aws.amazon.com/blogs/security/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/"
+        },
+        {
+            "description": "Beyond valid credentials: How exposed AWS keys are tested for Amazon Bedrock access",
+            "link": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/"
         }
     ],
     "securityImplications": "Attackers might use GetCallerIdentity to know what user or role are they using. This request does not need any permission.",
