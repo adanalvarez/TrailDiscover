@@ -1,0 +1,46 @@
+[
+    {
+        "eventVersion": "1.11",
+        "userIdentity": {
+            "type": "Unknown",
+            "principalId": "AROA****************:User"
+        },
+        "eventTime": "2026-11-10T19:34:10Z",
+        "eventSource": "cognito-idp.amazonaws.com",
+        "eventName": "RespondToAuthChallenge",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "0.0.0.0",
+        "userAgent": "aws-cli/2.32.3 md/awscrt#0.28.4 ua/2.1 os/linux#0.0.0.0-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.9 md/pyimpl#CPython m/b,E,n,Z cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 md/prompt#off md/command#cognito-idp.respond-to-auth-challenge",
+        "requestParameters": {
+            "clientId": "TrailDiscoverClientId",
+            "challengeName": "NEW_PASSWORD_REQUIRED",
+            "session": "TrailDiscoverSession",
+            "challengeResponses": "HIDDEN_DUE_TO_SECURITY_REASONS"
+        },
+        "responseElements": {
+            "challengeParameters": "HIDDEN_DUE_TO_SECURITY_REASONS",
+            "authenticationResult": {
+                "accessToken": "HIDDEN_DUE_TO_SECURITY_REASONS",
+                "expiresIn": 3600,
+                "tokenType": "Bearer",
+                "refreshToken": "HIDDEN_DUE_TO_SECURITY_REASONS",
+                "idToken": "HIDDEN_DUE_TO_SECURITY_REASONS"
+            }
+        },
+        "additionalEventData": {
+            "sub": "11111111-1111-1111-1111-111111111111"
+        },
+        "requestID": "9282dc74-1109-4c92-a7ef-803a98831698",
+        "eventID": "0184b920-0a65-43b4-b4d8-674b45ea2af0",
+        "readOnly": false,
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111111111111",
+        "eventCategory": "Management",
+        "tlsDetails": {
+            "tlsVersion": "TLSv1.3",
+            "cipherSuite": "TLS_AES_128_GCM_SHA256",
+            "clientProvidedHostHeader": "cognito-idp.us-east-1.amazonaws.com"
+        }
+    }
+]
